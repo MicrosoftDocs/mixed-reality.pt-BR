@@ -1,0 +1,66 @@
+---
+title: Focar
+description: Olhar é o primeiro formulário de entrada e um formulário principal de direcionamento de dentro de realidade misturada.
+author: thetuvix
+ms.author: alexturn
+ms.date: 02/24/2019
+ms.topic: article
+keywords: Realidade misturada, olhar, interação, de design
+ms.openlocfilehash: 9a12a5a3b3a583477fd98caeaa2f6890c67e2655
+ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59590994"
+---
+# <a name="gaze"></a>Focar
+
+**Mantenha o foco** é o primeiro formulário de entrada e é uma forma principal de direcionamento dentro de realidade misturada. Olhar informa onde o usuário está procurando no mundo e permite que você determine sua intenção. No mundo real, você geralmente verá um objeto que você pretende interagir com. Isso é o mesmo com olhar.
+
+Realidade misturada headsets usarem a posição e orientação da cabeça do usuário para determinar seu vetor olhar principal. Você pode pensar esse vetor como um ponteiro a laser diretamente para frente da diretamente entre a atenção do usuário. Como o usuário procura ao redor de sala, seu aplicativo pode se cruzar essa ray com seus próprio hologramas e com o [mapeamento espacial](spatial-mapping.md) malha para determinar que o usuário pode estar olhando de objeto reais ou virtual.
+
+Em 2 HoloLens, interações podem ser alvo de olhar de principal do usuário ou por meio de perto ou muito entregar interações.  No HoloLens (1º gen), as interações geralmente devem derivar seu direcionamento de olhar de principal do usuário, em vez de tentar renderizar ou interagir diretamente no local da mão. Após o início de uma interação relativos movimentos da mão podem ser usado para controlar a [gesto](gestures.md), assim como acontece com as [manipulação ou navegação](gestures.md#composite-gestures) gesto. Com fones imersivos em exposição, você pode direcionar usando qualquer um dos olhar ou compatíveis com apontando [controladores de movimento](motion-controllers.md).
+
+<br>
+
+>[!VIDEO https://www.youtube.com/embed/zCPiZlWdVws]
+
+## <a name="device-support"></a>Suporte a dispositivos
+
+<table>
+<tr>
+<th>Recurso</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens (1ª geração)</a></th><th style="width:150px">HoloLens 2</th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Fones imersivos em exposição</a></th>
+</tr><tr>
+<td> Mantenha o foco principal</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
+</tr><tr>
+<td> Olhar olho</td><td></td><td style="text-align: center;">✔️</td><td></td>
+</tr>
+</table>
+
+> [!NOTE]
+> Mais orientações específicas para 2 HoloLens [em breve](index.md#news-and-notes).
+
+
+## <a name="uses-of-gaze"></a>Usos de olhar
+
+Como um desenvolvedor de realidade misturada, você pode fazer muito com olhar:
+* Seu aplicativo pode se cruzar olhar com os hologramas na sua cena para determinar onde está a atenção do usuário.
+* Seu aplicativo pode direcionar gestos e pressionamentos de controlador com base em olhar do usuário, permitindo que o usuário selecione, ativar, pegue, role ou caso contrário, interagir com seus hologramas.
+* Seu aplicativo pode permitir que o usuário coloque hologramas em superfícies do mundo real, por meio de interseção seu ray olhar com a malha de mapeamento espacial.
+* Seu aplicativo possa saber quando o usuário estiver *não* procurando na direção de um objeto importante, que pode levar seu aplicativo para dar indicações de áudio e vídeo para ativar em direção esse objeto.
+
+## <a name="cursor"></a>Cursor
+
+A maioria dos aplicativos deve usar um [cursor](cursors.md) (ou outra indicação auditivo/visual) para dar a confiança do usuário no que está prestes a interagir com. Você normalmente posicionar esse cursor no mundo onde seu ray olhar interage primeiro um objeto, que pode ser um holograma ou uma superfície do mundo real.
+
+![Um cursor visual de exemplo para mostrar a olhar](images/cursor.jpg)<br>
+*Um cursor visual de exemplo para mostrar a olhar*
+
+## <a name="giving-action-to-the-users-gaze"></a>Dando a ação para olhar do usuário
+
+Depois que o usuário direcionou um holograma ou o objeto real usando seu olhar, sua próxima etapa é executar ação no objeto. As formas básicas para um usuário tomar medidas são feitas por meio [gestos](gestures.md), [controladores de movimento](motion-controllers.md) e [voz](voice-input.md).
+
+## <a name="see-also"></a>Consulte também
+* [Entrada MR 210: Gaze](holograms-210.md)
+* [Olhar, gestos e controladores de movimento no DirectX](gaze,-gestures,-and-motion-controllers-in-directx.md)
+* [Mantenha o foco no Unity](gaze-in-unity.md)
