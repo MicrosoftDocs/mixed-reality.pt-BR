@@ -6,12 +6,12 @@ ms.author: ericrehm
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Realidade mista do Windows, HoloLens, janela mágica, parallax
-ms.openlocfilehash: 0c0828a6ebbefdcff7f0a66f48469007c5c532df
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 945a09614fbc77400825b524f4e0b591bf7b1f6b
+ms.sourcegitcommit: 90ce9415889e7121dd2fd76a893dc3734672881b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59589722"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64873934"
 ---
 # <a name="case-study---looking-through-holes-in-your-reality"></a>Estudo de caso - examinando buracos na sua realidade
 
@@ -93,7 +93,7 @@ Ter um HoloLens e deseja testar o efeito para si mesmo? A coisa mais fácil, voc
 
 Exibindo a esse modelo em seu editor do Unity mostrará uma caixa preta grande em torno de flowerpot. Em HoloLens, a caixa desaparece, dando a maneira como um efeito de janela mágico.
 
-Se você quiser criar um aplicativo que usa essa técnica, confira a [tutorial MR fundamentos 101](holograms-101.md) na [Academy de realidade mista](academy.md). Capítulo 7 termina com uma explosão em suas instalações que revela um mundo virtual oculto (como na imagem acima). Quem disse tutoriais tinham que ser sem graça?
+Se você quiser criar um aplicativo que usa essa técnica, confira a [tutorial MR fundamentos 101](holograms-101.md) na [tutoriais de realidade misturada](tutorials.md). Capítulo 7 termina com uma explosão em suas instalações que revela um mundo virtual oculto (como na imagem acima). Quem disse tutoriais tinham que ser sem graça?
 
 Aqui estão algumas ideias de onde você pode pegar essa ideia Avançar:
 * Pensamos em maneiras de tornar o conteúdo dentro de buraco virtual interativo. Permitindo que os usuários ter algum impacto além dos seus murais realmente pode melhorar o sentido de se estranhar que esse truque pode fornecer.
@@ -109,7 +109,7 @@ Aqui estão algumas ideias de onde você pode pegar essa ideia Avançar:
 </table>
 
 ## <a name="see-also"></a>Consulte também
-* [Noções básicas sobre MR 101: Projeto completo do dispositivo](holograms-101.md)
+* [Noções básicas do MR 101: projeto completo com dispositivo](holograms-101.md)
 * [Sistemas de coordenadas](coordinate-systems.md)
 * [Âncoras espaciais](spatial-anchors.md)
 * [Mapeamento espacial](spatial-mapping.md)

@@ -6,12 +6,12 @@ ms.author: kurtie
 ms.date: 03/21/2018
 ms.topic: article
 keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit unity, academy, tutorial, mapeamento espacial, superfície reconstrução, malha
-ms.openlocfilehash: 8d5715337ddd20e9868b18fdf0c63c704f584972
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: ed58676a0fda660cc6b4c197239aeb53166baa4d
+ms.sourcegitcommit: aa88f6b42aa8d83e43104b78964afb506a368fb4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59589757"
+ms.lasthandoff: 05/02/2019
+ms.locfileid: "64993556"
 ---
 >[!NOTE]
 >Os tutoriais da academia de realidade mista foram criados com o HoloLens (1º gen) e misto realidade fones Imersivos em exposição em mente.  Como tal, achamos que é importante deixar esses tutoriais em vigor para os desenvolvedores que ainda estiver procurando por orientação no desenvolvimento para esses dispositivos.  Esses tutoriais serão **_não_** ser atualizados com os conjuntos de ferramentas ou interações que está sendo usadas para o HoloLens 2 a mais recente.  Eles serão mantidos para continuar trabalhando nos dispositivos com suporte. Haverá uma nova série de tutoriais que serão lançados no futuro e que demonstra como desenvolver para o HoloLens 2.  Este aviso será atualizado com um link para esses tutoriais quando são lançadas.
@@ -85,7 +85,7 @@ ms.locfileid: "59589757"
     * Microfone
     * SpatialPerception
 * Vá para **Editar > configurações do projeto > qualidade**
-* No **Inspector** do painel, sob o ícone do Windows Store, selecione a seta suspensa preta sob a linha de 'Default' e altere a configuração padrão para **mais rápido**.
+* No **Inspector** do painel, sob o ícone do Windows Store, selecione a seta suspensa preta sob a linha de 'Default' e altere a configuração padrão para **muito baixa**.
 * Vá para **ativos > Importar pacote > pacote personalizado**.
 * Navegue até a **...\HolographicAcademy-Holograms-230-SpatialMapping\Starting** pasta.
 * Clique em **Planetarium.unitypackage**.

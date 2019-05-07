@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 09/27/2018
 ms.topic: article
 keywords: HoloLens, wifi, wireless, internet, ip, ip address
-ms.openlocfilehash: 0440c3dad48d73db51e7d730e79d6eb1e74a5694
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: b064514124d861c0734ca51b3878d4a68b592fab
+ms.sourcegitcommit: f5c1dedb3b9e29f27f627025b9e7613931a7ce18
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59590816"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64670112"
 ---
 # <a name="connecting-to-wi-fi-on-hololens"></a>Conectar-se ao Wi-Fi em HoloLens
 
@@ -40,7 +40,7 @@ HoloLens contém um 802.11ac-capaz, 2 x 2 rádio de Wi-Fi. Conectar o HoloLens a
 5. Selecione a opção de controle deslizante de Wi-Fi para movê-lo para a posição "Desativado". Isso irá desativar os componentes de RF do rádio Wi-Fi e desabilitar todas as funcionalidades de Wi-Fi em HoloLens. 
 
     >[!WARNING]
-    >HoloLens não poderão carregar automaticamente seus [espaços](environment-considerations-for-hololens.md#spaces) quando a opção de Wi-Fi está desabilitada.
+    >HoloLens não poderão carregar automaticamente seus [espaços](environment-considerations-for-hololens.md#WiFi fingerprint considerations) quando a opção de Wi-Fi está desabilitada.
     
 6. Mova a opção de controle deslizante para a posição de "On" para ativar a opção de Wi-Fi e restaurar a funcionalidade de Wi-Fi no Microsoft HoloLens. O estado de rádio Wi-Fi selecionado ("ligado" de "Desativado") será mantido entre as reinicializações.
 

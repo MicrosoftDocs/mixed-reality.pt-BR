@@ -6,12 +6,12 @@ ms.author: grbury
 ms.date: 02/10/2019
 ms.topic: article
 keywords: ao obter Introdução, Noções básicas, HoloLens, HoloLens 2, fone de ouvido imersivo, unity, o visual studio
-ms.openlocfilehash: 1d23e458477cc23252ccd4c44f67c400aa356965
-ms.sourcegitcommit: f7fc9afdf4632dd9e59bd5493e974e4fec412fc4
+ms.openlocfilehash: 23bd173f89a468b4403d44236534bfe811a968dd
+ms.sourcegitcommit: 90ce9415889e7121dd2fd76a893dc3734672881b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2019
-ms.locfileid: "59591022"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64873985"
 ---
 # <a name="development-overview"></a>Visão geral de desenvolvimento
 
@@ -41,7 +41,7 @@ Estes são os principais blocos de construção para o desenvolvimento de realid
 </tr><tr>
 <td> <a href="hardware-accessories.md">Gamepad</a></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td>
 </tr><tr>
-<td> <a href="motion-controllers.md">Controladores de movimento</a></td><td></td><td></td><td style="text-align: center;">✔️</td>
+<td> <a href="motion-controllers.md">Controladores de movimentos</a></td><td></td><td></td><td style="text-align: center;">✔️</td>
 </tr><tr>
 <th> Percepção e recursos espaciais</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens (1ª geração)</a></th><th style="width:150px">HoloLens 2</th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Fones imersivos em exposição</a></th>
 </tr><tr>
@@ -80,8 +80,8 @@ Independentemente do tipo de aplicativo que você está compilando, essas ferram
 ## <a name="see-also"></a>Consulte também
 * [Instalar as ferramentas](install-the-tools.md)
 * <a href="https://azure.microsoft.com/topic/mixed-reality" target="_blank">Serviços de realidade misturada</a>
-* [Tutoriais de realidade mistas](academy.md)
+* [Tutoriais de realidade mistas](tutorials.md)
 * [Projetos de software livre](open-source-projects.md)
-* [Noções básicas sobre MR 100: Guia de Introdução com o Unity](holograms-100.md)
+* [Noções básicas do MR 100: introdução ao Unity](holograms-100.md)
 * [Diretrizes de compatibilidade de hardware do Windows Mixed Reality mínimas PC](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/windows-mixed-reality-minimum-pc-hardware-compatibility-guidelines)
 * [Enviar um aplicativo para a Windows Store](submitting-an-app-to-the-microsoft-store.md)

@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 08/06/2018
 ms.topic: article
 keywords: começar a usar, básico, HoloLens, fone de ouvido imersivo, ar, vr, unity, o visual studio, início rápido, como
-ms.openlocfilehash: 92fbc6eee227da571ff36401f84cf81a093062d7
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 4277de37ffe4a7ab03f382626452b96bf9157634
+ms.sourcegitcommit: 90ce9415889e7121dd2fd76a893dc3734672881b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59589841"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64873967"
 ---
 # <a name="get-started"></a>Introdução
 
@@ -63,7 +63,7 @@ Agora que seu PC e dispositivo (s) são configurados, você está pronto para cr
 
 Agora que você criou seu primeiro projeto MR com êxito, você está provavelmente famintos para obter mais informações! Aqui estão alguns recursos que devem ajudar a:
 * [Misto de documentação do desenvolvedor realidade](mixed-reality.md) - que já está aqui, mas há muito mais fazer check-out, incluindo documentação técnica, diretrizes de design, os projetos de exemplo e estudos de caso.
-* [Academia de realidade misturada](academy.md) -siga tutoriais abrangendo tudo, desde como configurar projetos para implementar os principais blocos de construção MR, para a integração do Azure serviços de nuvem em seu aplicativo MR.
+* [Misto tutoriais realidade](tutorials.md) -siga tutoriais abrangendo tudo, desde como configurar projetos para implementar os principais blocos de construção MR, para a integração do Azure serviços de nuvem em seu aplicativo MR.
 * [Saiba o Unity](https://unity3d.com/learn) -site do Unity oferece tutoriais, projetos e sessões de treinamento ao vivo para os criadores de cada estágio de aprendizado.
 
 Você também pode obter ajuda desses recursos de comunidade excelentes:

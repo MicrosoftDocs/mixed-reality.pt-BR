@@ -6,12 +6,12 @@ ms.author: trferrel
 ms.date: 03/26/2019
 ms.topic: article
 keywords: Unity, configurações, realidade mista
-ms.openlocfilehash: a67c3a65819855be6d43941c05f9a0027abf2f6d
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: c7029f2dfaf246db9f972c7d89b46e4fb9b5f1a1
+ms.sourcegitcommit: aa88f6b42aa8d83e43104b78964afb506a368fb4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59589603"
+ms.lasthandoff: 05/02/2019
+ms.locfileid: "64993608"
 ---
 # <a name="recommended-settings-for-unity"></a>Configurações recomendadas para Unity
 
@@ -19,13 +19,24 @@ Unity fornece um conjunto de opções padrão que são geralmente o caso médio 
 
 ## <a name="performant-environment-set-up"></a>Configuração do ambiente de alto desempenho
 
-### <a name="low-quality-setting"></a>Configuração de baixa qualidade
+### <a name="low-quality-settings"></a>Configurações de baixa qualidade
 
-É importante modificar a **configurações de qualidade do Unity** para seu ambiente **"rápido"**. Isso ajudará a garantir que seu aplicativo está executando performantly na taxa de quadros apropriada. Isso é extremamente significativo para o desenvolvimento Hololens. Para o desenvolvimento em fones imersivos em exposição, dependendo das especificações da área de trabalho, capacitar a experiência VR, um ainda pode obter a taxa de quadros sem os parâmetros de qualidade mais baixas. 
+É importante modificar a **configurações de qualidade do Unity** para seu ambiente **muito baixa**. Isso ajudará a garantir que seu aplicativo está executando performantly na taxa de quadros apropriada. Isso é extremamente significativo para o desenvolvimento Hololens. Para o desenvolvimento em fones imersivos em exposição, dependendo das especificações da área de trabalho, capacitar a experiência VR, um ainda pode obter a taxa de quadros sem os parâmetros de qualidade mais baixas. 
 
 No Unity 2018 LTS +, o nível de qualidade do projeto pode ser definido:
 
-Sob **editar** > **configurações do projeto** > **qualidade** > definir a **padrão** clicando no seta para baixo para o **mais rápido** nível de qualidade
+Sob **editar** > **configurações do projeto** > **qualidade** > definir a **padrão** clicando no seta para baixo para o **muito baixa** nível de qualidade
+
+### <a name="lighting-settings"></a>Configurações de iluminação
+
+Semelhante às configurações de cena de qualidade, é importante definir as configurações de iluminação ideais para seu aplicativo de realidade misturada. No Unity, é a configuração de iluminação que geralmente terá maior impacto no desempenho na sua cena **em tempo real de iluminação Global**. Isso pode ser desativado indo **janela** > **renderização** > **configurações de iluminação** > **em tempo real Iluminação global**. 
+
+Não há outra configuração de iluminação **incorporada Global iluminação**. Essa configuração pode fornecer resultados visualmente surpreendentes e com bom desempenho em fones imersivos em exposição, mas geralmente não é aplicável para o desenvolvimento HoloLens. **Incorporada Global Illumniation** é calculada apenas para GameObjects estático que não costumam ser encontrados em cenas HoloLens devido à natureza de um ambiente desconhecido e de alteração.
+
+Leia [iluminação Global do Unity](https://docs.unity3d.com/Manual/GIIntro.html) para obter mais informações. 
+
+>[!NOTE]
+> **Iluminação de Global em tempo real** está definida **por cena** e, portanto, os desenvolvedores devem salvar essa propriedade para cada cena do Unity em seu projeto. 
 
 ### <a name="single-pass-instancing-rendering-path"></a>Caminho de renderização instanciação única passagem
 
@@ -139,6 +150,6 @@ Os recursos aplicáveis para habilitar as APIs usadas para aplicativos holográf
 |  InternetClient  |  DictationRecognizer (e usar o Profiler Unity) | 
 
 ## <a name="see-also"></a>Consulte também
-* [Visão geral de desenvolvimento do Unity](unity-development-overview.md)
+* [Visão geral do desenvolvimento do Unity](unity-development-overview.md)
 * [Desempenho Understaing para realidade misturada](understanding-performance-for-mixed-reality.md)
 * [Recomendações de desempenho para Unity](performance-recommendations-for-unity.md)

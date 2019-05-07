@@ -7,12 +7,12 @@ ms.author: grbury
 ms.date: 02/12/2019
 ms.topic: article
 keywords: Realidade misturada, desenvolver, desenvolvimento, HoloLens, unity, o directx
-ms.openlocfilehash: e48a1cbfbe084de9382b9fa1104b2d5fc0f68fcc
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: b4fa41171fff1f1fdc10359c93f4d1e7e4a84867
+ms.sourcegitcommit: aa88f6b42aa8d83e43104b78964afb506a368fb4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59589072"
+ms.lasthandoff: 05/02/2019
+ms.locfileid: "64993588"
 ---
 # <a name="development-launchpad"></a>Barra inicial do desenvolvimento
 
@@ -38,7 +38,7 @@ ms.locfileid: "59589072"
                             <a href="install-the-tools.md">Instalar as ferramentas</a>
                         </p>
                         <p>
-                            <a href="holograms-100.md">Aplicativos de exemplo e tutoriais</a>
+                            <a href="mrlearning-base-ch1.md">MR de aprendizado: HoloLens 2 e MRTK v2</a>
                         </p>
                     </div>
                 </div>
@@ -132,10 +132,10 @@ Unreal - em breve!
                     <div class="cardText">
                         <h3>Guias de portabilidade</h3>
                         <p>
-                            <a href="mrtk-porting-guide.md">Atualizando para o mais recente misto<br>Kit de ferramentas de realidade (MRTK)</a>
+                            <a href="mrtk-porting-guide.md">Atualização de aplicativos para o HoloLens 2<br>do HoloLens (1ª geração)</a>
                         </p>
                         <p>
-HoloLens (1º gen) para o HoloLens 2<br>- Em breve!
+                            <a href="https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/HTKToMRTKPortingGuide.html">Kit de ferramentas de realidade misturada (MRTK)<br>Guia de portabilidade de API</a>
                         </p>
                         <p>
                             <a href="porting-guides.md">Aplicativos imersivos fone de ouvido</a>
@@ -202,7 +202,7 @@ Estes são os principais blocos de construção para o desenvolvimento de realid
 </tr><tr>
 <td> <a href="hardware-accessories.md">Gamepad</a></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td>
 </tr><tr>
-<td> <a href="motion-controllers.md">Controladores de movimento</a></td><td></td><td></td><td style="text-align: center;">✔️</td>
+<td> <a href="motion-controllers.md">Controladores de movimentos</a></td><td></td><td></td><td style="text-align: center;">✔️</td>
 </tr><tr>
 <th style="width:175px">Percepção e recursos espaciais</th><th style="width:125px; text-align: center;"><a href="hololens-hardware-details.md">HoloLens (1ª geração)</a></th><th style="width:125px; text-align: center;">HoloLens 2</a></th><th style="width:125px; text-align: center;"> <a href="immersive-headset-hardware-details.md">Fones imersivos em exposição</a></th>
 </tr><tr>

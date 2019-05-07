@@ -6,12 +6,12 @@ ms.author: kurtie
 ms.date: 03/21/2018
 ms.topic: article
 keywords: misto realidade, realidade mista do Windows, HoloLens, vr de imersão, mr, começar a usar, holograma, academy, tutorial
-ms.openlocfilehash: 1f4a5490383671fba694b386015ff6742d37241b
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: fd3bed955e80ec18b7be500adbdb0fcb7062d129
+ms.sourcegitcommit: aa88f6b42aa8d83e43104b78964afb506a368fb4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59589084"
+ms.lasthandoff: 05/02/2019
+ms.locfileid: "64993618"
 ---
 >[!NOTE]
 >Os tutoriais da academia de realidade mista foram criados com o HoloLens (1º gen) e misto realidade fones Imersivos em exposição em mente.  Como tal, achamos que é importante deixar esses tutoriais em vigor para os desenvolvedores que ainda estiver procurando por orientação no desenvolvimento para esses dispositivos.  Esses tutoriais serão **_não_** ser atualizados com os conjuntos de ferramentas ou interações que está sendo usadas para o HoloLens 2 a mais recente.  Eles serão mantidos para continuar trabalhando nos dispositivos com suporte. Haverá uma nova série de tutoriais que serão lançados no futuro e que demonstra como desenvolver para o HoloLens 2.  Este aviso será atualizado com um link para esses tutoriais quando são lançadas.
@@ -97,7 +97,7 @@ Neste capítulo, definiremos algumas configurações de projeto do Unity que aju
 
 Uma vez que é tão importante manter a alta taxa de quadros no HoloLens, queremos que as configurações de qualidade ajustadas para desempenho mais rápido. Para obter mais informações de desempenho [recomendações de desempenho para o Unity](performance-recommendations-for-unity.md).
 1. Selecione **Editar > configurações do projeto > qualidade**
-2. Selecione o **lista suspensa** sob o **Windows Store** logotipo e selecione **muito baixa**. Você saberá que a configuração seja aplicada corretamente quando a caixa na coluna da Windows Store e na linha mais rápida está verde.
+2. Selecione o **lista suspensa** sob o **Windows Store** logotipo e selecione **muito baixa**. Você saberá que a configuração seja aplicada corretamente quando a caixa na coluna Windows Store e **muito baixa** linha está verde.
 
 **Para aplicativos de realidade misturada direcionados ao obstruídos exibe**, você pode deixar as configurações de qualidade para seus valores padrão.
 
@@ -219,7 +219,7 @@ Certifique-se de o dispositivo está conectado por meio do cabo USB.
 Agora que seu aplicativo é implantado, tente mover em todo o cubo e observe que ele permaneça no mundo na sua frente.
 
 ## <a name="see-also"></a>Consulte também
-* [Visão geral de desenvolvimento do Unity](unity-development-overview.md)
-* [Práticas recomendadas para trabalhar com o Unity e Visual Studio](best-practices-for-working-with-unity-and-visual-studio.md)
+* [Visão geral do desenvolvimento do Unity](unity-development-overview.md)
+* [Melhores práticas para trabalhar com o Unity e o Visual Studio](best-practices-for-working-with-unity-and-visual-studio.md)
 * [Noções básicas do MR 101](holograms-101.md)
 * [Noções básicas do MR 101E](holograms-101e.md)

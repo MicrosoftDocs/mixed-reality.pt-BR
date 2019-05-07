@@ -1,21 +1,21 @@
 ---
 title: Preparar seu aplicativo para o HoloLens 2
 description: Destinado a desenvolvedores que têm um aplicativo existente no HoloLens (1º gen) e/ou mais antiga MRTK e procurando portar para MRTK versão 2 e HoloLens 2.
-author: author:grbury
+author: grbury
 ms.author: grbury
 ms.date: 04/12/19
 ms.topic: article
 keywords: Windows Mixed Reality, testar, MRTK, MRTK versão 2, 2 HoloLens
-ms.openlocfilehash: a5a329f69f5f9cc64666483adc92786ae8910b2f
-ms.sourcegitcommit: 07773e094ace2e828e329bd55da759983be3b8c1
+ms.openlocfilehash: 369470326d815ee711e96264939dd2e0487879b6
+ms.sourcegitcommit: 90ce9415889e7121dd2fd76a893dc3734672881b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59591057"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64873909"
 ---
 # <a name="getting-your-existing-app-ready-for-hololens-2"></a>Preparar seu aplicativo existente para o HoloLens 2
 
-Este guia especificamente projetado para ajudar os desenvolvedores que têm um aplicativo existente do Unity para HoloLens 1 portar seu aplicativo para o novo dispositivo 2 HoloLens. Há quatro etapas principais para portabilidade de um aplicativo do Unity do HoloLens 1 para 2 HoloLens. As seções a seguir detalha informações para cada estágio. 
+Este guia especificamente projetado para ajudar os desenvolvedores que têm um aplicativo existente do Unity para HoloLens (1º gen) portar seu aplicativo para o novo dispositivo 2 HoloLens. Há quatro etapas principais para portar um HoloLens (1º gen) o aplicativo do Unity para HoloLens 2. As seções a seguir detalha informações para cada estágio. 
 
 | Etapa 1 | Etapa 2 | Etapa 3 | Etapa 4 |
 |----------|-------------------|-------------------|-------------------|
@@ -31,11 +31,12 @@ Vale **altamente recomendado** que, antes de iniciar o processo de portabilidade
 
 ## <a name="migrate-project-to-latest-version-of-unity"></a>Migrar o projeto para a versão mais recente do Unity
 
-A primeira etapa para portar seu aplicativo do Unity será para abri-lo na versão mais recente do Unity. Atualmente, há duas opções para escolher: Unity 2018.3.x ou Unity 2019.1.x beta. Há várias vantagens e desvantagens entre essas duas versões, mas a principal diferença de significância é a capacidade de compilar para ARM64 no Unity 2019 +. 
+Se usar o v2 MRTK, Unity 2018 LTS será o melhor caminho de suporte sem alterações significativas no Unity ou no MRTK.  A compilação recomendada do Unity, pelo acima "instalar as ferramentas" é 2018.3 do Unity, que se tornará a versão de LTS de Unity 2018.  Além disso, o v2 MRTK será sempre garantir suporte para Unity 2018 LTS, mas não necessariamente garantir suporte para cada iteração do Unity 2019.x. 
 
-Os desenvolvedores devem avaliar qualquer [dependências de plug-in](https://docs.unity3d.com/Manual/Plugins.html) que existem atualmente no seu projeto e se essas DLLs podem ser criadas para ARM64. Se um plug-in forte dependência não pode ser criado para ARM64, um terá utilizar Unity 2018 LTS. Portabilidade para ARM64 é geralmente desejada, se possível, pois há muitas melhorias de desempenho vistas no dispositivo em comparação com ARM32.
+Para ajudar a esclarecer outras diferenças entre o Unity 2018.3.x ou Unity 2019.1.x abaixo descreve as vantagens e desvantagens entre essas duas versões, com a principal diferença de significância sendo a capacidade de compilar para ARM64 em Unity de 2019. 
 
-Além disso, a realidade Toolkit V2 misto será sempre garantir suporte para Unity 2018 LTS, mas não necessariamente garante suporte para cada iteração do Unity 2019.x+. 
+Os desenvolvedores devem avaliar qualquer [dependências de plug-in](https://docs.unity3d.com/Manual/Plugins.html) que existem atualmente no seu projeto e se essas DLLs podem ser criadas para ARM64. Se um plug-in forte dependência não pode ser criado para ARM64, um terá utilizar Unity 2018 LTS.
+
 
 | Unity 2018.3.x | Unity 2019.1 + |
 |----------|-------------------|
@@ -131,6 +132,6 @@ O desafio surge quando o aplicativo do Unity usa o plug-ins nativo.  Todos os pl
 * [Introdução ao MRTK versão 2](mrtk-getting-started.md)
 * [MRTK versão 2 HowTo](https://microsoft.github.io/MixedRealityToolkit-Unity/External/HowTo/README.html)
 * [Instalar as ferramentas](install-the-tools.md)
-* [Configurações recomendadas para Unity](recommended-settings-for-unity.md)
+* [Configurações recomendadas do Unity](recommended-settings-for-unity.md)
 * [Noções básicas sobre desempenho para realidade misturada](understanding-performance-for-mixed-reality.md)
 

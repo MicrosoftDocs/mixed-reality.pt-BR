@@ -1,17 +1,17 @@
 ---
 title: Usar o simulador de realidade mista do Windows
 description: O simulador de realidade mista do Windows permite que você teste aplicativos de realidade misturada em seu computador sem um fone de ouvido Windows Mixed Reality envolvente.
-author: JonMLyons
-ms.author: jlyons
-ms.date: 03/21/2018
+author: pbarnettms
+ms.author: pbarnett
+ms.date: 04/25/2019
 ms.topic: article
 keywords: Windows misto realidade, o simulador, testando
-ms.openlocfilehash: 782cab85f163edd2afc4251210b7596c73dcc8b8
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: a7cbd5b5ca1c0ed0e4f81715d337d5eec68117f0
+ms.sourcegitcommit: f5c1dedb3b9e29f27f627025b9e7613931a7ce18
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59590698"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64580699"
 ---
 # <a name="using-the-windows-mixed-reality-simulator"></a>Usar o simulador de realidade mista do Windows
 
@@ -28,7 +28,7 @@ O simulador de realidade mista do Windows permite que você teste aplicativos de
    4. Clique em **configurar** para confirmar sua escolha
 4. Clique o **para os desenvolvedores** botão no lado esquerdo do Portal de realidade mista
 5. Mude a opção de alternância de simulação para **em**
-   * Isso requer permissões de administrador e você deve aceitar a caixa de diálogo de controle de conta de usuário que é exibido
+   * Habilitando a simulação instala e habilita o controlador de 6-DOF simulado à esquerda por padrão.  Antes do Windows 10 de maio de 2019 a atualização, instalar um controlador de 6-DOF simulado requer permissões de administrador.  Você deve aceitar a caixa de diálogo controle de conta de usuário, se houver um.
 
 Agora, você deve estar executando com simulação!
 
@@ -50,11 +50,13 @@ Você pode controlar o simulador, direcionando as ações de um usuário simulad
 ## <a name="tracked-controllers"></a>Controladores controladas
 
 O simulador de realidade misturada pode simular até dois controladores de bolso movimento controladas. Habilitá-las usando os comutadores de alternância no Portal de realidade mista. Cada controlador simulado tem:
-* Posição no espaço
+* Posição e orientação no espaço
 * Botão Início
 * Botão Menu
 * Botão da alça
 * Touchpad
+* Direcional
+* Nível de bateria
 
 ## <a name="see-also"></a>Consulte também
 * [Usando o emulador do HoloLens](using-the-hololens-emulator.md)

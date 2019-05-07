@@ -1,138 +1,187 @@
 ---
-title: Conceitos básicos de interação
-description: Como criamos experiências em HoloLens (1º gen), 2 HoloLens e fones imersivos em exposição, iniciamos anotar algumas coisas que encontramos útil para compartilhar.
-author: rwinj
-ms.author: jennyk
-ms.date: 02/24/2019
+title: Visão geral de interação multimodal
+description: Visão geral da interação multimodal
+author: shengkait
+ms.author: shengkait
+ms.date: 04/11/2019
 ms.topic: article
-keywords: Misto realidade, interação, de design
-ms.openlocfilehash: d594126529b6314a4706f8b6b6af856058c3280a
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+keywords: Misto realidade, olhar, olhar direcionamento, interação, de design
+ms.openlocfilehash: f52a0cd8ec53bfe0f4c5da2c054c538eda1c93ca
+ms.sourcegitcommit: aa88f6b42aa8d83e43104b78964afb506a368fb4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59589082"
+ms.lasthandoff: 05/02/2019
+ms.locfileid: "64993597"
 ---
-# <a name="interaction-fundamentals"></a>Conceitos básicos de interação
+# <a name="introducing-instinctual-interactions"></a>Introdução ao instinctual interações
+A filosofia de interações simples, instinctual entrelaçada-se em toda a plataforma Microsoft de realidade misturada.  Pegamos três etapas para garantir que os desenvolvedores e designers de aplicativos podem fornecer as interações e intuitivas para seus clientes. 
 
-Como criamos experiências em HoloLens e fones imersivos em exposição, começamos a escrever algumas coisas que encontramos útil para compartilhar. Pense nisso como blocos de construção fundamentais para o design de interação de realidade misturada.
+Primeiro, tornamos-se de que nosso sensores incríveis e a tecnologia de entrada, incluindo o acompanhamento de mão, acompanhamento a olho nu e linguagem natural, combinam em modelos de interação multimodal contínuo.  Com base em nossa pesquisa, projetar e desenvolver multimodally – e não com base em entradas únicas--é a chave para a criação de experiências instinctual.
 
-## <a name="device-support"></a>Suporte a dispositivos
+Em segundo lugar, reconhecemos que muitos desenvolvedores direcionar vários dispositivos, se isso significa que 2 HoloLens e HoloLens (1º gen) ou HoloLens e VR.  Portanto, criamos nossos modelos de interação funcione em todos os dispositivos (mesmo que a tecnologia de entrada varia em cada dispositivo).  Por exemplo, interação mais distante em um fone de ouvido imersão do Windows com um controlador 6DOF e interação mais distante em um 2 HoloLens os dois usam as capacidades idênticas e os padrões, tornando mais fácil para aplicativos entre dispositivos. Não é apenas nesse conveniente para desenvolvedores e designers, mas ele parece natural para os usuários finais. 
 
-Aqui está uma estrutura de tópicos de artigos de design de interação disponíveis e o tipo de dispositivo ou tipos que se aplicam a.
+Por fim, reconhecemos que há milhares de eficaz, envolventes, e interações de mágicas possíveis no MR, descobrimos que intencionalmente empregar um modelo de interação única ponta a ponta em um aplicativo é a melhor maneira de garantir que os usuários forem bem-sucedidas e tenha uma ótima experiência.  Para esse fim, incluímos três coisas neste guia de interação:
+* Podemos estruturou essa orientação sobre os três modelos de interação primário e os componentes e os padrões de para cada
+* Incluímos orientação complementar sobre os outros benefícios de nossa plataforma fornece
+* Incluímos orientação para ajudar a selecionar o modelo de interação apropriado para seu cenário
+
+
+## <a name="three-multimodal-interaction-models"></a>Três modelos de interação multimodal
+Com base em nossa pesquisa e trabalho com clientes até o momento, descobrimos que três modelos de interação primário atender a maioria das experiências de realidade misturada.
+
+Em muitos aspectos, o modelo de interação é o modelo mental do usuário para concluir seus fluxos.  Cada um desses modelos de interação é otimizada para um conjunto de necessidades do cliente, e cada um é conveniente, potente e pode ser usada em seus próprios méritos. 
+
+O gráfico abaixo é uma visão geral simplificada.  Informações detalhadas de uso de cada modelo de interação é vinculadas nas páginas abaixo com imagens e exemplos de código.  
+
 <br>
 
 <table>
+    <colgroup>
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+    </colgroup>
+    <tr>
+        <td><strong>Modelo</strong></td>
+        <td><strong>Cenários de exemplo</strong></td>
+        <td><strong>ajustar</strong></td>
+        <td><strong>Hardware</strong></td>
+    </tr>
+    <tr>
+        <td><a href="hands-and-tools.md">Mãos e ferramentas</a></td>
+        <td>Experiências espaciais 3D<br>Por exemplo, espacial layout e design, manipulação de conteúdo ou simulação</td>
+        <td>Ótimo para novos usuários<br>Baixa curva de aprendizado<br>Com base na fácil capacidades visual<br>Experiência do usuário consistente em mão de acompanhamento e controladores de DoF 6<br>Olhares excelente quando combinado com voz, de acompanhamento a olho nu ou head</td>
+        <td>HoloLens 2<br>Windows envolventes com controladores 6DOF</td>
+    </tr>
+    <tr>
+        <td><a href="hands-free.md">Mãos livres</a></td>
+        <td>Experiências contextuais, onde as mãos do usuário estiverem ocupadas, por exemplo, sobre o trabalho de aprendizado, manutenção</td>
+        <td>Alguns de aprendizado necessário<br>Se não estiverem disponíveis intervenção<br>pares bem com voz e de linguagem natural</td>
+        <td>HoloLens 2<br>HoloLens (1ª geração)<br> Imersão do Windows</td>
+    </tr>
+    <tr>
+        <td><a href="gaze-and-commit.md">Olhar head e confirmar</a></td>
+        <td>Por exemplo, 3D apresentações, demonstrações experiências de Clickthrough</td>
+        <td>Requer treinamento em HMDs, mas não em dispositivos móveis<br>Melhor para controladores acessíveis<br>Melhor para HoloLens (1ª geração)</td>
+        <td>HoloLens 2<br>HoloLens (1ª geração)<br> Imersão do Windows<br> Mobile AR</td>
+    </tr>
+</table>
+<br>
 
-<th>
-<tr>
+A melhor maneira de garantir que não existem lacunas ou buracos na interação para a sua experiência é seguir as diretrizes para um único modelo do início ao fim. 
 
-<td style="width:150px;"><strong>entrada</strong></td>
-<td style="width:150px; text-align: center;"><a href="hololens-hardware-details.md"><strong>HoloLens (1ª geração)</strong></a></td>
-<td style="width:150px; text-align: center;"><strong>HoloLens 2</strong></td>
-<td style="width:150px; text-align: center;"><a href="immersive-headset-hardware-details.md"><strong>Fones imersivos em exposição</strong></a></td>
-</tr>
-</th>
+Para acelerar o desenvolvimento e design, incluímos informações detalhadas e links para exemplos de código e imagens dentro de nossa cobertura de cada modelo.
+
+Mas primeiro, as seções a seguir siga as etapas de seleção e implementação de um desses modelos de interação.  
  
-<tr>
-<td> <a href="gestures.md">Mãos articuladas</a></td><td style="text-align: center;"></td><td style="text-align: center;">✔️</td><td></td>
+### <a name="by-the-end-of-this-page-you-will-understand-our-guidance-on"></a>No final desta página, você entenderá nossas diretrizes em:
+ 
+* Escolhendo um modelo de interação para seu cliente
+* Usando as diretrizes de modelo de interação
+* A transição entre os modelos de interação
+* Próximas etapas de design
 
-</tr><tr>
-<td> <a href="gaze-targeting.md">Direcionamento de olhos</a></td><td style="text-align: center;"></td><td style="text-align: center;">✔️</td><td style="text-align: center;"></td>
-</tr><tr>
-<td> <a href="gaze-targeting.md">Mantenha o foco de direcionamento</a></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td>
-</tr><tr>
-<td> <a href="gestures.md">Gestos</a></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td></td>
-</tr><tr>
-<td> <a href="voice-design.md">Design de voz</a></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td>
-</tr><tr>
-<td> Gamepad</td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td>
-</tr>
-<tr>
-<td> <a href="motion-controllers.md">Controladores de movimento</a></td><td></td><td style="text-align: center;"></td><td style="text-align: center;">✔️</td>
+## <a name="choosing-an-interaction-model-for-your-customer"></a>Escolhendo um modelo de interação para seu cliente
 
-</tr>
-<th>
-<tr>
-<td style="width:150px;"><strong>Percepção e recursos espaciais</strong></td>
-<td style="width:150px; text-align: center;"><a href="hololens-hardware-details.md"><strong>HoloLens (1ª geração)</strong></a></td>
-<td style="width:150px; text-align: center;"><strong>HoloLens 2</strong></td>
-<td style="width:150px; text-align: center;"><a href="immersive-headset-hardware-details.md"><strong>Fones imersivos em exposição</strong></a></td>
-</tr>
-</th>
-<tr>
+Provavelmente, os desenvolvedores e os criadores já tem algumas ideias em mente dos tipos de experiência de interação que desejarem para seus usuários.
+Para incentivar uma abordagem voltada para projetar, é recomendável seguir as diretrizes abaixo para selecionar o modelo de interação é otimizado para seu cliente.
 
-<td> <a href="spatial-sound-design.md">Design de som espacial</a></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td>
-</tr><tr>
-<td> <a href="spatial-mapping-design.md">Design de mapeamento espacial</a></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td></td>
-</tr><tr>
-<td> <a href="hologram.md">Hologramas</a></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td></td>
-</tr>
+### <a name="why-follow-this-guidance"></a>Por que siga esta orientação?
 
+* Nossos modelos de interação são testados para o objetivo e critérios subjetivos como físico e cognitivo esforço, intuitiveness e learnability. 
+* Como interação é diferente, as capacidades de áudio e vídeo e o comportamento de objeto também podem ser diferentes entre os modelos de interação.  
+* Combinar partes de vários modelos de interação, cria o risco de capacidades de concorrentes, como raios de mão simultâneas e um cursor de olhar, que sobrecarregar e confundir os usuários.
+
+Aqui estão alguns exemplos de como as capacidades e comportamentos são otimizados para cada modelo de interação.  Vemos com frequência novos usuários como perguntas semelhantes, como "como faço para saber se o sistema estiver funcionando, como saber o que posso fazer, e como saber se é compreender o que eu acabei de fazer?"
+
+<br>
+
+<table>
+    <colgroup>
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+    </colgroup>
+    <tr>
+        <td><strong>Modelo</strong></td>
+        <td><strong>Como sabê-lo está funcionando?</strong></td>
+        <td><strong>Como saber o que posso fazer?</strong></td>
+        <td><strong>Como saber o que eu acabei de fazer?</strong></td>
+    </tr>
+    <tr>
+        <td><a href="hands-and-tools.md">Mãos e ferramentas</a></td>
+        <td>Eu vejo uma mão de malha, vejo uma funcionalidade de ponta do dedo ou mão / controlador raios.</td>
+        <td>Eu vejo uma caixa delimitadora que aparecem quando a minha mão está próximo ou identificadores grabbable.</td>
+        <td>Posso ouvir sons e ver animações na captura e versão.</td>
+    </tr>
+    <tr>
+        <td><a href="gaze-and-commit.md">Olhar head e confirmar</a></td>
+        <td>Eu vejo um cursor no centro do meu campo de visão.</td>
+        <td>O cursor de olhar muda de estado quando estiver sobre determinados objetos.</td>
+        <td>Posso ver / ouvir confirmações visuais e audíveis quando eu executar ação.</td>
+    </tr>   
+    <tr>
+        <td><a href="hands-free.md">Viva-voz (olhar e duração)</a></td>
+        <td>Eu vejo um cursor no centro do meu campo de visão.</td>
+        <td>Eu vejo um indicador de progresso quando eu lidam bem com um objeto interagível.</td>
+        <td>Posso ver / ouvir confirmações visuais e audíveis quando eu executar ação.</td>
+    </tr>
+    <tr>
+        <td><a href="hands-free.md">Viva-voz (comandos de voz)</a></td>
+        <td>Eu vejo um indicador de escutando e legendas que mostram o que o sistema ouvido.</td>
+        <td>Posso obter prompts de voz e dicas.  Quando eu digo "o que posso dizer?" Posso ver comentários.</td>
+        <td>Posso ver / ouvir confirmações visuais e audíveis quando emitir um comando, ou obter Desambiguidade UX quando necessário.</a></td>
+    </tr>
 </table>
 
-## <a name="the-user-is-the-camera"></a>O usuário é a câmera
+### <a name="below-are-the-questions-that-weve-found-help-teams-select-an-interaction-model"></a>Veja as perguntas que descobrimos que as equipes de ajudar a selecionar um modelo de interação a seguir:
+ 
+1.  P:  Meus usuários deseja tocar hologramas e executar manipulações de holográfica precisão?
+R:  Nesse caso, confira o modelo de interação de mãos e ferramentas para direcionamento de precisão e a manipulação com mãos ou controladores de movimento.
+ 
+2.  P:  Meus usuários precisam manter suas mãos livres para tarefas do mundo real?
+R:  Nesse caso, examine o modelo de interação viva-voz, que fornece uma ótima experiência viva-voz por meio de interações baseadas em olhar e voz.
+ 
+3.  P:  Meus usuários têm tempo para aprender as interações para meu aplicativo de realidade misturada, ou eles precisam as interações com a curva de aprendizado mais baixa possível?
+R:  É recomendável o modelo de mãos e ferramentas para a mais baixa curva de aprendizado e interações mais intuitivas, desde que os usuários são capazes de usar suas mãos para interação.
+ 
+4.  P:  Fazer meus usuários usar controladores de movimento para a manipulação e apontando?
+R:  O modelo de mãos e de ferramentas inclui todas as diretrizes para uma ótima experiência com os controladores de movimento.
+ 
+5.  P:  Fazer meus usuários usar um controlador de acessibilidade ou um controlador de Bluetooth comuns, como um clicker?
+R:  Recomendamos que o modelo de olhar Head e confirmação para todos os controladores não controladas.  Ele foi projetado para permitir que um usuário percorrer toda a experiência com um mecânico simple de "destino e confirmação". 
+ 
+6.  P: Meus usuários somente de progresso por meio de uma experiência clicando em"por meio de" (por exemplo, em um apresentação de slides como ambiente 3d), em vez de navegar densos layouts de controles de interface do usuário?
+R:  Se os usuários precisam controlar muitas da interface do usuário, o Head olhar e confirmação oferece uma opção de learnable em que os usuários não precisam se preocupar sobre direcionamento. 
+ 
+7.  P:  Fazer meus usuários usar ambos os HoloLens (1º gen) e HoloLens 2 / r Windows imersivo (headsets VR):  Uma vez que o Head olhar e a confirmação é o modelo de interação para HoloLens (1º gen), é recomendável que criadores que oferecem suporte a HoloLens (1º gen) usar olhar Head e de confirmação para quaisquer recursos ou os modos de que os usuários podem enfrentar em um HoloLens (1º gen) fone de ouvido.  Consulte a próxima seção abaixo em *fazendo a transição de modelos de interação* para obter detalhes sobre como tornar uma ótima experiência para várias gerações HoloLens.
+ 
+8.  P: E quanto para usuários que são geralmente móveis (que abrangem um grande espaço ou movendo entre espaços), em comparação com os usuários que tendem a funcionar em um único espaço?  
+R:  Qualquer um dos modelos de interação funcionará para esses usuários.  
 
-![Usuário é a câmera](images/useriscamera-640px.jpg)
+> [!NOTE]
+> Mais orientações específicas para o design de aplicativos [em breve](index.md#news-and-notes).
 
-Sempre pense sobre design para o ponto de vista do seu usuário quando eles passam sobre seus mundos reais e virtuais.
 
-**Algumas perguntas a serem feitas**
-* É o usuário sentado, reclinável, aguardando ou percorrer durante o uso de sua experiência?
-* Como o seu conteúdo se ajustará para posições diferentes?
-* O usuário poderá ajustá-lo?
-* O usuário estará familiarizado com o uso de seu aplicativo?
+## <a name="transition-interaction-models"></a>Modelos de interação de transição
+Também há casos em que seus casos de uso podem exigir que utiliza mais de um modelo de interação.  Por exemplo, o fluxo do aplicativo"criação" utiliza o modelo de interação de mãos e ferramentas, mas você deseja empregar um modo assistido para técnicos de campo.  
 
-**Práticas recomendadas**
-* O usuário é a câmera e eles controlam a movimentação. Deixe-os da unidade.
-* Se você precisar praticamente o usuário de transporte, se sensível a problemas de discomfort vestibular.
-* Usar animações mais curtas
-* Animar de inferior/esquerda/direita ou aplicar fade-in, em vez de Z
-* Reduzir a velocidade de medição de tempo
-* Permitir que o usuário ver o mundo em segundo plano
+Se precisar de sua experiência de vários modelos de interação, descobrimos que muitos usuários finais podem encontrar dificuldade para fazer a transição de um modelo para outro – especialmente os usuários finais não familiarizados com MR.
 
-**O que evitar**
-* Não shake a câmera ou propositadamente bloqueá-la para 3DOF (apenas orientação, nenhuma conversão), ele pode fazer com que os usuários não se sinta confortável.
-* Nenhum movimento abrupto. Se você precisar levar conteúdo de ou para o usuário, movê-lo lentamente e sem problemas em direção a eles para máximo conforto. Os usuários serão reagir a menus grandes, chegando até eles.
-* Não acelerar ou ativar a câmera do usuário. Os usuários são sensíveis a aceleração (angular e conversão).
-
-## <a name="leverage-the-users-perspective"></a>Aproveite a perspectiva do usuário
-
-Os usuários veem o mundo da realidade misturada por meio de exibições em dispositivos envolventes e holographic. Em HoloLens, essa exibição é chamada a [quadro holográfico](holographic-frame.md).
-
-No desenvolvimento de 2D, configurações e conteúdo acessado com frequência podem ser colocadas nos cantos de uma tela para torná-los facilmente acessíveis. No entanto, nos aplicativos holográfico, o conteúdo nos cantos do modo de exibição do usuário pode ser desconfortável para acesso. Nesse caso, o centro do quadro holográfico é o local principal para o conteúdo.
-
-O usuário talvez precise ser guiado para ajudar a localizar os eventos importantes ou objetos além do modo de exibição de imediato. Você pode usar as setas, trilhas de luz, movimentação do cabeçote de caractere, balões de pensamento, ponteiros, som espacial e prompts de voz para ajudar a orientar o usuário ao conteúdo importante em seu aplicativo.
-
-É recomendável não bloqueio de conteúdo na tela de conforto do usuário. Se você precisar manter o conteúdo no modo de exibição, coloque-o no mundo e tornar o conteúdo "tag-along" como o menu Iniciar. Conteúdo que é retirado, juntamente com a perspectiva do usuário se sentirão mais natural no ambiente.
-
-![No menu Iniciar segue o modo de exibição do usuário quando ele atinge a borda do quadro](images/tagalong-1000px.jpg)<br>
-*No menu Iniciar segue o modo de exibição do usuário quando ele atinge a borda do quadro*
-
-Em HoloLens, hologramas se sentir reais quando eles se ajustarem dentro do quadro holográfico, pois eles não sejam cortados. Os usuários se moverá para ver os limites de um holograma dentro do quadro. Em HoloLens, é importante simplificar sua interface do usuário para se ajustar no modo de exibição do usuário e mantém o foco na ação principal. Para fones imersivos em exposição, é importante manter a ilusão de um mundo virtual persistente dentro do campo de visão do dispositivo.
-
-## <a name="user-comfort"></a>Conforto do usuário
-
-Para garantir a máxima [conforto](comfort.md) em telas de fone de ouvido, é importante para designers e desenvolvedores criar e apresentar o conteúdo de uma maneira que simule como humanos interpretam formas 3D e a posição relativa dos objetos no natural mundo. De uma perspectiva de física, também é importante projetar o conteúdo que não exija fatiguing movimentos do pescoço ou braços.
-
-Desenvolvendo para HoloLens ou fones imersivos em exposição, é importante renderizar elementos visuais para ambos os olhos. Renderizar uma exibição de alerta em um olho só pode fazer uma interface difíceis de entender, bem como causando uneasiness olho e o cérebro do usuário.
-
-## <a name="share-your-experience"></a>Compartilhe sua experiência
-
-Usando o [misto captura realidade](mixed-reality-capture.md), os usuários podem capturar uma foto ou vídeo de sua experiência a qualquer momento. Considere a possibilidade de experiências em seu aplicativo em que você talvez queira incentivar instantâneos ou vídeos.
-
-## <a name="leverage-basic-ui-elements-of-the-windows-mixed-reality-home"></a>Aproveite os elementos de interface do usuário básicos do Windows Mixed Reality inicial
-
-Assim como a experiência de PC do Windows é iniciado com a área de trabalho, Windows Mixed Reality começa com a página inicial. O [Windows Mixed Reality doméstica](navigating-the-windows-mixed-reality-home.md) usa nossa capacidade inata para compreender e navegar lugares 3D. Com o HoloLens, sua página inicial é o espaço físico. Com fones imersivos em exposição, sua página inicial é um lugar virtual.
-
-Sua casa também é onde você usará o menu Iniciar para abrir e colocar aplicativos e conteúdo. Você pode preencher sua casa com conteúdo de realidade mista e multitarefa com o uso de vários aplicativos ao mesmo tempo. As coisas que você coloca na sua casa permanecem lá, mesmo se você reiniciar seu dispositivo.
+> [!Note]
+> Para ajudar os designers de guia e desenvolvedores por meio de opções que podem ser difíceis em MR, estamos trabalhando para obter mais diretrizes para usar vários modelos de interação.
+ 
 
 ## <a name="see-also"></a>Consulte também
-* [Mantenha o foco de direcionamento](gaze-targeting.md)
+* [Olhar head e confirmar](gaze-and-commit.md)
+* [Manipulação direta](direct-manipulation.md)
+* [Ponto e confirmar](point-and-commit.md)
+* [Focar direcionamento](gaze-targeting.md)
 * [Gestos](gestures.md)
 * [Design de voz](voice-design.md)
-* [Controladores de movimento](motion-controllers.md)
-* [Design de som espacial](spatial-sound-design.md)
-* [Design de mapeamento espacial](spatial-mapping-design.md)
+* [Controladores de movimentos](motion-controllers.md)
+* [Projeto de som espacial](spatial-sound-design.md)
+* [Projeto de mapeamento espacial](spatial-mapping-design.md)
 * [Conforto](comfort.md)
-* [Navegando o Windows Mixed Reality inicial](navigating-the-windows-mixed-reality-home.md)

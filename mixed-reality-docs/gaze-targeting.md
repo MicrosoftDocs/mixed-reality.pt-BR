@@ -6,13 +6,31 @@ ms.author: jennyk
 ms.date: 02/24/2019
 ms.topic: article
 keywords: Misto realidade, olhar, olhar direcionamento, interação, de design
-ms.openlocfilehash: c3225e27331f8afcda65469eb84fe5470bf6ee8c
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 1ac4f06208a7574fced0a7e27e93469ec93bf6e0
+ms.sourcegitcommit: 90ce9415889e7121dd2fd76a893dc3734672881b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59589708"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64873920"
 ---
+# <a name="gaze-and-dwell"></a>Olhar e duração
+Há muitas maneiras diferentes para confirmar uma _confirmação_ , como a combinação de olhar com _voz_ ou _gestos de mão_.
+Há vários cenários de usuário, no qual mãos dos usuários podem estar ocupadas ou não podem ser rastreadas (por exemplo, operadores de fábrica com luvas pesadas muito grandes). Entrada de voz também pode estar disponível devido a preferências do usuário, contexto social ou ambientes de altos não.
+Como uma solução de fallback, outra opção para executar uma _confirmação_ é simplesmente manter diante de um elemento de interface do usuário que chamamos _lidam bem com_.
+Um _lidam bem com_ podem ser executadas com o cabeçalho ou olho olhar. A ideia é simple e pode ser dividida nas seguintes fases: 
+1. Usuário começa a observação em um botão holographic
+
+2. Após um atraso de início breve (por exemplo, 150 ms) animação alguns comentários visuais é iniciada. O atraso de início é usado para evitar sobrecarregar o usuário pelo imediatamente pop-up de comentários sobre o tempo todo.
+    - Para _olhar olho_, recomendamos o seguinte para o design do visual lidam bem com comentários:
+      - **Mesclá-la**: Mistura perfeitamente os comentários dos quase não visíveis no primeiro para completamente opaco. Isso torna os comentários menos causa distração e overwhleming e alinha-se perfeitamente com a confiança de que o sistema tem que o usuário realmente quer interagir com esse botão.
+      - **Usá-la**: Crie um feedback visual que diminui de tamanho e a move para o centro do destino, extraindo a atenção do usuário visual. 
+
+3. Após um período de duração predefinidos (por exemplo, 800 ms), a duração for concluída e um evento associado é disparado.
+    - Forneça alguns finalizando auditivos ou comentários visuais para realmente colocar página inicial que o item foi selecionado agora.
+
+![Estados de duração da pesquisa](images/eyes_dwellstate_recommendation.png)
+
+
 # <a name="gaze-targeting"></a>Mantenha o foco de direcionamento
 
 Todas as interações baseiam-se a capacidade de um usuário para o elemento que eles querem interagir, independentemente da modalidade de entrada de destino. Na realidade mista do Windows, isso geralmente é feito usando olhar do usuário.
@@ -32,7 +50,7 @@ Para habilitar um usuário trabalhar com uma experiência com êxito, as Noçõe
 </table>
 
 > [!NOTE]
-> Mais orientações específicas para 2 HoloLens [em breve](index.md#news-and-notes).
+> Mais orientações específicas para 2 HoloLens [em breve](index.md).
 
 ## <a name="target-sizing-and-feedback"></a>Comentários e dimensionamento de destino
 
