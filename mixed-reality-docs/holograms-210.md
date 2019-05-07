@@ -6,12 +6,12 @@ ms.author: kurtie
 ms.date: 03/21/2018
 ms.topic: article
 keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit-unity, academy, tutorial, gaze
-ms.openlocfilehash: 63c55e8a7a348f2a3e0cc29a9795d7fabcef5df0
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 076314389ec5ed70347c26d50c6a993f55da0758
+ms.sourcegitcommit: aa88f6b42aa8d83e43104b78964afb506a368fb4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59589447"
+ms.lasthandoff: 05/02/2019
+ms.locfileid: "64993554"
 ---
 >[!NOTE]
 >Os tutoriais da academia de realidade mista foram criados com o HoloLens (1º gen) e misto realidade fones Imersivos em exposição em mente.  Como tal, achamos que é importante deixar esses tutoriais em vigor para os desenvolvedores que ainda estiver procurando por orientação no desenvolvimento para esses dispositivos.  Esses tutoriais serão **_não_** ser atualizados com os conjuntos de ferramentas ou interações que está sendo usadas para o HoloLens 2 a mais recente.  Eles serão mantidos para continuar trabalhando nos dispositivos com suporte. Haverá uma nova série de tutoriais que serão lançados no futuro e que demonstra como desenvolver para o HoloLens 2.  Este aviso será atualizado com um link para esses tutoriais quando são lançadas.
@@ -103,7 +103,7 @@ Por fim, atualizaremos nossas configurações de qualidade para alcançar um des
 
 1. Vá para **Editar > configurações do projeto > qualidade**.
 2. Clique na seta apontando para baixo na **padrão** linha sob o ícone do Windows Store.
-3. Selecione **mais rápido** para **aplicativos da Windows Store**.
+3. Selecione **muito baixa** para **aplicativos da Windows Store**.
 
 ### <a name="import-project-assets"></a>Importar ativos do projeto
 
