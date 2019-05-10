@@ -8,7 +8,7 @@ ms.topic: article
 keywords: modo de exibição imersivo, aplicativo de exibição 2D, o slate,
 ms.openlocfilehash: 2cf65941616ac6906d40e4b4616311317ac705d3
 ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/12/2019
 ms.locfileid: "59590946"
@@ -41,7 +41,7 @@ Um Headset da área de trabalho, você pode executar todos os aplicativos Univer
 
 Um dos modos de exibição 2D do uso da chave é mostrar um formulário de entrada de texto que pode tornar o uso de teclado sistema. Porque o shell não é possível renderizar na parte superior de uma exibição imersiva, o aplicativo deve alternar para uma exibição em 2D para mostrar o teclado do sistema. Aplicativos que deseja aceitar a entrada de texto podem alternar para uma exibição 2D com uma caixa de texto. Enquanto essa caixa de texto tem o foco, o sistema mostrará o teclado do sistema, permitindo que o usuário insira texto.
 
-Observe que, em um computador desktop, um aplicativo pode ter modos de exibição 2D no monitor da área de trabalho e um Headset anexado. Por exemplo, você pode procurar o Edge no monitor da área de trabalho usando o modo de exibição principal 2D para localizar um vídeo de 360 graus. Quando você executa esse vídeo, borda iniciará uma exibição secundária imersiva dentro o fone de ouvido para exibir o conteúdo de vídeo envolvente.
+Observe que, em um computador desktop, um aplicativo pode ter modos de exibição 2D no monitor da área de trabalho e um Headset anexado. Por exemplo, você pode procurar o Microsoft Edge no monitor da área de trabalho usando o modo de exibição principal 2D para localizar um vídeo de 360 graus. Quando você executa esse vídeo, borda iniciará uma exibição secundária imersiva dentro o fone de ouvido para exibir o conteúdo de vídeo envolvente.
 
 ## <a name="see-also"></a>Consulte também
 

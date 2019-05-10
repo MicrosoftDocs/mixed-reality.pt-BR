@@ -1,21 +1,21 @@
 ---
-title: Design de voz
+title: Olhar e voz
 description: Olhar, gesto e voz (GGV) são o principal meio de interação em HoloLens. Este artigo fornece orientação sobre design de voz.
-author: rwinj
-ms.author: randyw
-ms.date: 03/21/2018
+author: grbury
+ms.author: grbury
+ms.date: 04/21/2019
 ms.topic: article
 keywords: Windows Mixed Reality, design, interação de voz
-ms.openlocfilehash: 2df0e15c66891b08577fcf203d11f7c7008247f1
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 35e4c72026acaa36e5fd686cf892dd602f6626d6
+ms.sourcegitcommit: a4a53e6772805d89a47588857e3e8fb1fd8d9710
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59590824"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469080"
 ---
-# <a name="voice-design"></a>Design de voz
+# <a name="gaze-and-voice"></a>Olhar e voz
 
-Olhar, gesto e voz (GGV) são o principal meio de interação em HoloLens. [Olhares](gaze.md) usado com um [cursor](cursors.md) é o mecanismo para direcionar o conteúdo que eles estão prontos para interagir com um usuário. [Gesto](gestures.md) ou [voz](voice-input.md) são os mecanismos de intenção. Olhar pode ser usado com o gesto ou de voz para concluir uma interação.
+Olhar, gesto e voz (GGV) são o principal meio de interação em HoloLens (1º gen). [Olhares](gaze.md) usado com um [cursor](cursors.md) é o mecanismo para direcionar o conteúdo que eles estão prontos para interagir com um usuário. [Gesto](gestures.md) ou [voz](voice-input.md) são os mecanismos de intenção. Olhar pode ser usado com o gesto ou de voz para concluir uma interação.
 
 Em fones imersivos em exposição, o principal meio de interação é olhar e confirmação e ponto-e-confirmação (com um [controlador de movimento](motion-controllers.md)). Se o usuário tiver um fone de ouvido com funcionalidades de voz, voz pode ser usado em combinação com olhar ou ponto para completar uma ação.
 
@@ -27,7 +27,7 @@ Durante a criação de aplicativos, você deve considerar como você pode tornar
 <tr>
 <th>Recurso</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens (1ª geração)</a></th><th style="width:150px">HoloLens 2</th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Fones imersivos em exposição</a></th>
 </tr><tr>
-<td> Voz</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️ (com fone de ouvido anexado)</td>
+<td>Olhar e voz</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️ (com fone de ouvido anexado)</td>
 </tr>
 </table>
 
@@ -102,4 +102,4 @@ Quando a voz é aplicada corretamente, o usuário compreenderá **o que eles pod
 
 ## <a name="see-also"></a>Consulte também
 * [Gestos](gestures.md)
-* [Mantenha o foco de direcionamento](gaze-targeting.md)
+* [Focar direcionamento](gaze-targeting.md)

@@ -6,12 +6,12 @@ ms.author: liamar
 ms.date: 03/31/2019
 ms.topic: article
 keywords: Misto realidade, olhar, duração, interação, de design
-ms.openlocfilehash: a50ae948a351f5152ebb98778da9be8c08090d72
-ms.sourcegitcommit: 222cba2d622b47f75949bf8af80d5c62de4dceab
+ms.openlocfilehash: d99180b6eb278eb6d7bf322c01a1c7cceb7fad1f
+ms.sourcegitcommit: a4a53e6772805d89a47588857e3e8fb1fd8d9710
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2019
-ms.locfileid: "64914616"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469059"
 ---
 # <a name="gaze-and-dwell"></a>Olhar e duração
 
@@ -43,7 +43,7 @@ Fornece um mecanismo para interações assistido completo, sem o uso de voz.
   * Pré-preenchimento de atraso muito curto (buffer de cintilação popups)
   * Botões maiores são mais fáceis de atingir com olhar
   * BOM para mantê-los na altura de olho para que não haja pressão para interagir
-  * Região de duração pode ser maior que o ícone de inativo para torná-lo mais fácil de usar (VERSO)
+  * Região de duração pode ser maior que o ícone de inativo para torná-lo mais fácil de usar (verso)
 
 ### <a name="low-frequency-buttons"></a>Botões de baixa frequência
     
@@ -128,7 +128,7 @@ Fornece um mecanismo para interações assistido completo, sem o uso de voz.
  
  ## <a name="see-also"></a>Consulte também
 * [Manipulação direta](direct-manipulation.md)
-* [Ponto e confirmar](point-and-commit.md)
+* [Apontar e confirmar](point-and-commit.md)
 * [Conceitos básicos de interação](interaction-fundamentals.md)
-* [Olhar head e confirmar](gaze-and-commit.md)
-* [Olhar e voz](voice-design.md)
+* [Focar com a cabeça e confirmar](gaze-and-commit.md)
+* [Foco e voz](voice-design.md)

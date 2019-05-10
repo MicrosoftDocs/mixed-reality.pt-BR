@@ -8,7 +8,7 @@ ms.topic: article
 keywords: anotações, versão, windows 10, compilação, rs3, sistema operacional de versão
 ms.openlocfilehash: 7274dcf1db449fa35981eb72192fea9873fcc90a
 ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/12/2019
 ms.locfileid: "59589138"
@@ -86,7 +86,7 @@ Trabalhamos muito para fornecer uma ótima experiência de realidade mista do Wi
 * Se você colocou um grande número de hologramas no seu Windows Mixed Reality inicial, alguns podem desaparecer e reaparecer conforme você olha ao redor. Para evitar isso, remova algumas das hologramas o naquela área do Windows Mixed Reality inicial.
 
 ### <a name="motion-controllers"></a>Controladores de movimento
-* Ocasionalmente, se você clicar em uma página da Web no Edge, o conteúdo será zoom em vez de clique.
+* Ocasionalmente, se você clicar em uma página da Web no Microsoft Edge, o conteúdo será zoom em vez de clique.
 * Às vezes, quando você clica em um link na borda, a seleção não funcionará.
 
 ## <a name="prior-release-notes"></a>Notas de versão prévia

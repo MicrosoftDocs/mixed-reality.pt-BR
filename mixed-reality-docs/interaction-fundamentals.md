@@ -6,12 +6,12 @@ ms.author: shengkait
 ms.date: 04/11/2019
 ms.topic: article
 keywords: Misto realidade, olhar, olhar direcionamento, interação, de design
-ms.openlocfilehash: f52a0cd8ec53bfe0f4c5da2c054c538eda1c93ca
-ms.sourcegitcommit: aa88f6b42aa8d83e43104b78964afb506a368fb4
+ms.openlocfilehash: c762518a224138dab248670eaef23ccb92016fce
+ms.sourcegitcommit: a4a53e6772805d89a47588857e3e8fb1fd8d9710
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/02/2019
-ms.locfileid: "64993597"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469102"
 ---
 # <a name="introducing-instinctual-interactions"></a>Introdução ao instinctual interações
 A filosofia de interações simples, instinctual entrelaçada-se em toda a plataforma Microsoft de realidade misturada.  Pegamos três etapas para garantir que os desenvolvedores e designers de aplicativos podem fornecer as interações e intuitivas para seus clientes. 
@@ -61,7 +61,7 @@ O gráfico abaixo é uma visão geral simplificada.  Informações detalhadas de
         <td>HoloLens 2<br>HoloLens (1ª geração)<br> Imersão do Windows</td>
     </tr>
     <tr>
-        <td><a href="gaze-and-commit.md">Olhar head e confirmar</a></td>
+        <td><a href="gaze-and-commit.md">Focar com a cabeça e confirmar</a></td>
         <td>Por exemplo, 3D apresentações, demonstrações experiências de Clickthrough</td>
         <td>Requer treinamento em HMDs, mas não em dispositivos móveis<br>Melhor para controladores acessíveis<br>Melhor para HoloLens (1ª geração)</td>
         <td>HoloLens 2<br>HoloLens (1ª geração)<br> Imersão do Windows<br> Mobile AR</td>
@@ -117,7 +117,7 @@ Aqui estão alguns exemplos de como as capacidades e comportamentos são otimiza
         <td>Posso ouvir sons e ver animações na captura e versão.</td>
     </tr>
     <tr>
-        <td><a href="gaze-and-commit.md">Olhar head e confirmar</a></td>
+        <td><a href="gaze-and-commit.md">Focar com a cabeça e confirmar</a></td>
         <td>Eu vejo um cursor no centro do meu campo de visão.</td>
         <td>O cursor de olhar muda de estado quando estiver sobre determinados objetos.</td>
         <td>Posso ver / ouvir confirmações visuais e audíveis quando eu executar ação.</td>
@@ -175,9 +175,9 @@ Se precisar de sua experiência de vários modelos de interação, descobrimos q
  
 
 ## <a name="see-also"></a>Consulte também
-* [Olhar head e confirmar](gaze-and-commit.md)
+* [Focar com a cabeça e confirmar](gaze-and-commit.md)
 * [Manipulação direta](direct-manipulation.md)
-* [Ponto e confirmar](point-and-commit.md)
+* [Apontar e confirmar](point-and-commit.md)
 * [Focar direcionamento](gaze-targeting.md)
 * [Gestos](gestures.md)
 * [Design de voz](voice-design.md)

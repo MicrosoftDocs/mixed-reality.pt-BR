@@ -8,7 +8,7 @@ ms.topic: article
 keywords: HoloLens, notas de versão do sistema operacional, recursos, compilação, de plataforma
 ms.openlocfilehash: bc4e09c36a3ab6643be1144873a624fc5ed66e37
 ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/12/2019
 ms.locfileid: "59590737"
@@ -43,7 +43,7 @@ Para atualizar para a versão atual, abra o *as configurações* aplicativo, vá
   A barra de aplicativo pode ser ocultada para aplicativos com uma exibição 2D, como fotos
   
 * **Seletor de arquivos** funciona exatamente como esperado em HoloLens.
-* Atualizado **navegador Edge** para mapear a experiência do usuário unificada com área de trabalho e telefone. Habilitamos a várias instâncias do seu navegador, personalizado HoloLens nova página da guia, inspeção de guia e abra em novas janelas, junto com os aprimoramentos de desempenho e energia.
+* Atualizado **navegador Microsoft Edge** para mapear a experiência do usuário unificada com área de trabalho e telefone. Habilitamos a várias instâncias do seu navegador, personalizado HoloLens nova página da guia, inspeção de guia e abra em novas janelas, junto com os aprimoramentos de desempenho e energia.
 * **Groove música** aplicativo agora está em HoloLens. Visite a store para baixá-lo e tente reproduzir em segundo plano.
 * Você pode personalizar facilmente como os aplicativos são organizados no seu mundo. Tente **girando seu hologramas** no ajuste o modo, basta clicar e arrastar no círculo nos wireframes verticais intermediários. Você pode notar hologramas têm **mais rigoroso ajustados caixas delimitadoras** para garantir a interação maximizada. Você também pode redimensionar todos os aplicativos simples verticalmente (exceto fotos e holograma aplicativos).
 
