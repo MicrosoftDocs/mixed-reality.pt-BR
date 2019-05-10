@@ -7,12 +7,12 @@ ms.author: randyw
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, design, interação, estilo, cor, padrões de aplicativo, controles, aplicativos de exemplo, o Kit de ferramentas de realidade misturada, MRTK
-ms.openlocfilehash: 470dff4319abded630e084f46193dcc79531aa54
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 8d5618b6f01f379b70f95e6493bdc670a1338e4c
+ms.sourcegitcommit: a4a53e6772805d89a47588857e3e8fb1fd8d9710
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59590715"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469091"
 ---
 # <a name="design-for-mixed-reality"></a>Design para realidade misturada
 
@@ -66,19 +66,19 @@ Essa orientação é criada pela Microsoft designers, desenvolvedores, gerentes 
                     <div class="cardText">
                         <h3>Design de interação</h3>
                         <p>
-                            <a href="interaction-fundamentals.md">Conceitos básicos de interação</a>
-                        </p>
-                        <p>
                             <a href="comfort.md">Conforto</a>
                         </p>
-                        <p>
-                            <a href="gaze-targeting.md">Mantenha o foco de direcionamento</a>
+            <p>
+                            <a href="interaction-fundamentals.md">Interações instinctual</a>
                         </p>
                         <p>
-                            <a href="gestures.md">Gestos</a>
+                            <a href="hands-and-tools.md">Mãos e controladores</a>
+                        </p>
+                        <p>
+                            <a href="hands-free.md">Mãos livres</a>
                         </p>
                          <p>
-                            <a href="voice-design.md">Design de voz</a>
+                            <a href="gaze-and-commit.md">Olhar head e confirmar</a>
                         </p>
                     </div>
                 </div>
