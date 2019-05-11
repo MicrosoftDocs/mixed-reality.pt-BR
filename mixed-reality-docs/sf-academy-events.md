@@ -6,12 +6,12 @@ ms.author: daescu
 ms.date: 02/24/2019
 ms.topic: article
 keywords: eventos, calendário, academy, agendamento, sf, são francisco, reator
-ms.openlocfilehash: c896cf398bd10fc12e5afed6313cbd95e5370c31
-ms.sourcegitcommit: f5c1dedb3b9e29f27f627025b9e7613931a7ce18
+ms.openlocfilehash: 15867ebd15406741d96ea5f61a66b5d80fcfde6a
+ms.sourcegitcommit: 37b628d6e24377ffc8fe9a09750fc0033107d151
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64670125"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65536099"
 ---
 # <a name="microsoft-mixed-reality-events"></a>Microsoft misturadas realidade eventos
 
@@ -21,23 +21,6 @@ Junte-se a equipe de realidade misturada da Microsoft nesses eventos futuros!
 680 Folsom St.<br>
 San Francisco, CA 94107
 
-
-
----
-## <a name="mixed-reality-dev-days-seattlehttpsdocsmicrosoftcomen-uswindowsmixed-realitymr-dev-days"></a>**[Dias de desenvolvimento de realidade misturada, Seattle](https://docs.microsoft.com/en-us/windows/mixed-reality/mr-dev-days)**
-### <a name="may-2-3-2019"></a>2 a 3 de maio de 2019
-Dias de desenvolvimento de realidade mista, você criará as habilidades, rede e ideias que você precisa levar seus aplicativos de realidade mista para o próximo nível.
-
-**[Mais informações aqui](https://docs.microsoft.com/en-us/windows/mixed-reality/mr-dev-days)**
-
-
-
----
-## <a name="microsoft-build-seattlehttpsemea01safelinksprotectionoutlookcomurlhttps3a2f2fwwwmicrosoftcom2fen-us2fbuilddata027c017cdaescu40microsoftcom7ca8ddee063b7949a9992308d6903e62b07c72f988bf86f141af91ab2d7cd011db477c17c07c636854994961104348sdatahozczluhbppxuyjak5i802k6bej5flmn0gek7c12bihw3dreserved0"></a>**[Microsoft / / Seattle, criar](https://emea01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.microsoft.com%2Fen-us%2Fbuild&data=02%7C01%7Cdaescu%40microsoft.com%7Ca8ddee063b7949a9992308d6903e62b0%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C636854994961104348&sdata=hozCZlUHbpPxuYJaK5i802K6beJ5flmN0gEK7C1%2BIHw%3D&reserved=0)**
-### <a name="may-6-10-2019"></a>6 a 10 de maio de 2019
-Junte-se em Seattle para eventos de premier da Microsoft para desenvolvedores. Venha e experimentar as tecnologias e ferramentas de desenvolvedor mais recentes. Imagine novas maneiras de criar software Obtendo informações do setor para o futuro do desenvolvimento de software. Conecte-se com sua comunidade entender novas tendências de desenvolvimento e formas inovadoras de código.
-
-**Inscreva-se Microsoft //Build 2019 [aqui](https://emea01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.microsoft.com%2Fen-us%2Fbuild&data=02%7C01%7Cdaescu%40microsoft.com%7Ca8ddee063b7949a9992308d6903e62b0%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C636854994961104348&sdata=hozCZlUHbpPxuYJaK5i802K6beJ5flmN0gEK7C1%2BIHw%3D&reserved=0)**
 
 
 ---
