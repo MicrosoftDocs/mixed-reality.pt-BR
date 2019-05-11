@@ -6,19 +6,19 @@ ms.author: shengkait
 ms.date: 04/11/2019
 ms.topic: article
 keywords: Misto realidade, olhar, olhar direcionamento, interação, de design
-ms.openlocfilehash: c762518a224138dab248670eaef23ccb92016fce
-ms.sourcegitcommit: a4a53e6772805d89a47588857e3e8fb1fd8d9710
+ms.openlocfilehash: 8c578d9a67f6809df69fb132f4c46a381726596e
+ms.sourcegitcommit: d6d96d552ec10cd7e6502fbbc1905432e2878325
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65469102"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65524338"
 ---
 # <a name="introducing-instinctual-interactions"></a>Introdução ao instinctual interações
 A filosofia de interações simples, instinctual entrelaçada-se em toda a plataforma Microsoft de realidade misturada.  Pegamos três etapas para garantir que os desenvolvedores e designers de aplicativos podem fornecer as interações e intuitivas para seus clientes. 
 
 Primeiro, tornamos-se de que nosso sensores incríveis e a tecnologia de entrada, incluindo o acompanhamento de mão, acompanhamento a olho nu e linguagem natural, combinam em modelos de interação multimodal contínuo.  Com base em nossa pesquisa, projetar e desenvolver multimodally – e não com base em entradas únicas--é a chave para a criação de experiências instinctual.
 
-Em segundo lugar, reconhecemos que muitos desenvolvedores direcionar vários dispositivos, se isso significa que 2 HoloLens e HoloLens (1º gen) ou HoloLens e VR.  Portanto, criamos nossos modelos de interação funcione em todos os dispositivos (mesmo que a tecnologia de entrada varia em cada dispositivo).  Por exemplo, interação mais distante em um fone de ouvido imersão do Windows com um controlador 6DOF e interação mais distante em um 2 HoloLens os dois usam as capacidades idênticas e os padrões, tornando mais fácil para aplicativos entre dispositivos. Não é apenas nesse conveniente para desenvolvedores e designers, mas ele parece natural para os usuários finais. 
+Em segundo lugar, reconhecemos que muitos desenvolvedores direcionar vários dispositivos, se isso significa que 2 HoloLens e HoloLens (1º gen) ou HoloLens e VR.  Portanto, criamos nossos modelos de interação funcione em todos os dispositivos (mesmo que a tecnologia de entrada varia em cada dispositivo).  Por exemplo, interação mais distante em um fone de ouvido imersão do Windows com um controlador 6DoF e interação mais distante em um 2 HoloLens os dois usam as capacidades idênticas e os padrões, tornando mais fácil para aplicativos entre dispositivos. Não é apenas nesse conveniente para desenvolvedores e designers, mas ele parece natural para os usuários finais. 
 
 Por fim, reconhecemos que há milhares de eficaz, envolventes, e interações de mágicas possíveis no MR, descobrimos que intencionalmente empregar um modelo de interação única ponta a ponta em um aplicativo é a melhor maneira de garantir que os usuários forem bem-sucedidas e tenha uma ótima experiência.  Para esse fim, incluímos três coisas neste guia de interação:
 * Podemos estruturou essa orientação sobre os três modelos de interação primário e os componentes e os padrões de para cada
@@ -51,8 +51,8 @@ O gráfico abaixo é uma visão geral simplificada.  Informações detalhadas de
     <tr>
         <td><a href="hands-and-tools.md">Mãos e ferramentas</a></td>
         <td>Experiências espaciais 3D<br>Por exemplo, espacial layout e design, manipulação de conteúdo ou simulação</td>
-        <td>Ótimo para novos usuários<br>Baixa curva de aprendizado<br>Com base na fácil capacidades visual<br>Experiência do usuário consistente em mão de acompanhamento e controladores de DoF 6<br>Olhares excelente quando combinado com voz, de acompanhamento a olho nu ou head</td>
-        <td>HoloLens 2<br>Windows envolventes com controladores 6DOF</td>
+        <td>Ótimo para novos usuários<br>Baixa curva de aprendizado<br>Com base na fácil capacidades visual<br>Experiência do usuário consistente em mão de acompanhamento e 6DoF controladores<br>Olhares excelente quando combinado com voz, de acompanhamento a olho nu ou head</td>
+        <td>HoloLens 2<br>Windows envolventes com controladores 6DoF</td>
     </tr>
     <tr>
         <td><a href="hands-free.md">Mãos livres</a></td>

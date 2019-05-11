@@ -6,12 +6,12 @@ ms.author: liamar
 ms.date: 04/20/2019
 ms.topic: article
 keywords: Realidade misturada, viva-voz, mantenha o foco, olhares direcionamento, interação, design
-ms.openlocfilehash: b64dec802d8ed2886021a54f302ba4a948c4f5b9
-ms.sourcegitcommit: f5c1dedb3b9e29f27f627025b9e7613931a7ce18
+ms.openlocfilehash: f39a9524831161997b59be6cf89b124fa5b29c78
+ms.sourcegitcommit: d6d96d552ec10cd7e6502fbbc1905432e2878325
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2019
-ms.locfileid: "64581026"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65524326"
 ---
 # <a name="optimizing-your-app-for-hands-free"></a>Otimizando seu aplicativo para mãos livres
 
@@ -42,7 +42,7 @@ Usando a voz para comando e controle de que uma interface pode não apenas permi
 
 Em algumas situações viva-voz, usando a voz não é ideal ou até mesmo possível. Ambientes fabris alto, privacidade ou sociais normas podem ser restrições. O cabeçalho olhares + lidam bem com modelo permite que o usuário navegue o aplicativo usando seu principal vetor para apontar ao remanescentes, ou dwelling em um botão irá ativá-lo após um determinado período de tempo (normalmente, de cerca de 1 segundo ou menos). 
 
-* [Olhar e duração](gaze-and-dwell.md)
+* [Focar e esperar](gaze-and-dwell.md)
 
 ## <a name="transitioning-in-and-out-of-hands-free"></a>A transição para dentro e fora de mãos livres
 
@@ -97,6 +97,6 @@ O usuário entender...
 
 
 ## <a name="see-also"></a>Consulte também
-* [Olhar e confirmar](gaze-and-commit.md)
+* [Focar com a cabeça e confirmar](gaze-and-commit.md)
 * [Manipulação direta](direct-manipulation.md)
-* [Ponto e confirmar](point-and-commit.md)
+* [Apontar e confirmar](point-and-commit.md)
