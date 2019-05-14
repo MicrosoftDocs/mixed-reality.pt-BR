@@ -48,11 +48,13 @@
 ### [Processo do AfterNow – previsão, criação de protótipos, criação](case-study-afternows-process-envisioning,-prototyping,-building.md)
 ### [Como criar o HoloSketch, um aplicativo de esboço de experiência do usuário e de layout espacial para HoloLens](case-study-building-holosketch,-a-spatial-layout-and-ux-sketching-app-for-hololens.md)
 ### [Como capturar e criar conteúdo para HoloTour](case-study-capturing-and-creating-content-for-holotour.md)
-### [Como criar uma galáxia em realidade misturada](case-study-creating-a-galaxy-in-mixed-reality.md)
 ### [Como criar uma experiência imersiva em Fragmentos](case-study-creating-an-immersive-experience-in-fragments.md)
 ### [Como criar perspectivas impossíveis para HoloTour](case-study-creating-impossible-perspectives-for-holotour.md)
 ### [Como expandir o processo de criação para realidade misturada](case-study-expanding-the-design-process-for-mixed-reality.md)
 ### [Como expandir as funcionalidades de mapeamento espacial do HoloLens](case-study-expanding-the-spatial-mapping-capabilities-of-hololens.md)
+### Gerenciador do Galaxy
+#### [Como criar uma galáxia em realidade misturada para HoloLens (1ª geração)](case-study-creating-a-galaxy-in-mixed-reality.md)
+#### [Atualizando o Gerenciador do Galaxy para HoloLens 2](galaxy-explorer-update.md)
 ### [Conhecimentos do projeto de interação e de interface do usuário do HoloStudio](case-study-3-holostudio-ui-and-interaction-design-learnings.md)
 ### [Lições da cozinha do Lowe](case-study-lessons-from-the-lowes-kitchen.md)
 ### [Como olhar através dos buracos na sua realidade](case-study-looking-through-holes-in-your-reality.md)
@@ -190,7 +192,8 @@
 ### Unity
 #### Módulos de aprendizado MR
 ##### HoloLens 2
-###### [Módulo básico – visão geral e objetivos](mrlearning-base.md)
+###### Módulo básico
+####### [Módulo básico – visão geral e objetivos](mrlearning-base.md)
 ####### [Inicialização de projeto e primeiro aplicativo](mrlearning-base-ch1.md)
 ####### [Interface do usuário, acompanhamento de mão e configuração do Kit de Ferramentas de Realidade Misturada](mrlearning-base-ch2.md)
 ####### [Solucionadores e posicionamento de conteúdo dinâmico](mrlearning-base-ch3.md)
