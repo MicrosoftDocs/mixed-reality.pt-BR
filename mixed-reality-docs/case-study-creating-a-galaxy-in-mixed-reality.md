@@ -8,7 +8,7 @@ ms.topic: article
 keywords: Explorer Galaxy, HoloLens, Windows Mixed Reality, compartilhe sua ideia, estudo de caso
 ms.openlocfilehash: a478eaa35144a8ee0fbeaeb43cec4b9f901890ab
 ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/12/2019
 ms.locfileid: "59590966"
@@ -147,7 +147,7 @@ Fazendo nuvens de tela inteira e tentando desfoque-los seria uma boa ideia, ent�
 
 ### <a name="a-bit-of-context-first"></a>Um pouco de contexto pela primeira vez
 
-Ao usar texturas em um jogo o tamanho da textura raramente corresponderá a área que desejamos usá-lo no, mas podemos usar diferentes tipos de filtragem para obter a placa gráfica para interpolar a cor que queremos por meio de pixels da textura de textura ([filtragemdetextura<C3/>). É a filtragem de seu interesse nos [filtragem bilinear](https://msdn.microsoft.com/library/windows/desktop/bb172357.aspx) que irá calcular o valor de qualquer pixel usando o 4 vizinhos.
+Ao usar texturas em um jogo o tamanho da textura raramente corresponderá a área que desejamos usá-lo no, mas podemos usar diferentes tipos de filtragem para obter a placa gráfica para interpolar a cor que queremos por meio de pixels da textura de textura ([filtragemdetextura](https://msdn.microsoft.com/library/dn642451.aspx)). É a filtragem de seu interesse nos [filtragem bilinear](https://msdn.microsoft.com/library/windows/desktop/bb172357.aspx) que irá calcular o valor de qualquer pixel usando o 4 vizinhos.
 
 ![Original antes de filtragem](images/texture-1.png)
 
