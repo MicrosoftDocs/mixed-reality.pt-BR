@@ -90,20 +90,17 @@
 ### [Como expandir o processo de criação para realidade misturada](case-study-expanding-the-design-process-for-mixed-reality.md)
 ### [A busca de uma computação mais pessoal](case-study-the-pursuit-of-more-personal-computing.md)
 ### [Processo do AfterNow – previsão, criação de protótipos, criação](case-study-afternows-process-envisioning,-prototyping,-building.md)
-## Ferramentas e sistema de design MR
-### [Interações instinctuais](Interaction-fundamentals.md)
-#### [Controladores de movimentos e mãos](hands-and-tools.md)
-##### [Manipulação direta](direct-manipulation.md)
-##### [Apontar e confirmar](point-and-commit.md)
-##### [Controladores de movimentos](Motion-controllers.md)
-#### [Mãos livres](hands-free.md)
-##### [Focar e esperar](Gaze-and-dwell.md)
-##### [Foco e voz](Voice-design.md)
-#### [Focar com a cabeça e confirmar](gaze-and-commit.md)
+## [Interações instinctuais](Interaction-fundamentals.md)
+### [Controladores de movimentos e mãos](hands-and-tools.md)
+#### [Manipulação direta com as mãos](direct-manipulation.md)
+#### [Apontar e confirmar com as mãos](point-and-commit.md)
+#### [Controladores de movimentos](Motion-controllers.md)
+### [Mãos livres](hands-free.md)
+#### [Comando de voz](Voice-design.md)
+#### [Focar com a cabeça e esperar](Gaze-and-dwell.md)
+### [Focar com a cabeça e confirmar](gaze-and-commit.md)
 ### Interações complementares
-#### [Foco com o olhar](eye-tracking.md)
-#### [Focar direcionamento](Gaze-targeting.md)
-#### [Gestos](Gestures.md)
+#### [Olhar fixo](eye-tracking.md)
 ## Estilo
 ### [Cor, luz e materiais](color,-light-and-materials.md)
 ### [Projeto de som espacial](spatial-sound-design.md)
@@ -175,7 +172,8 @@
 #### [Como renderizar no DirectX](rendering-in-directx.md)
 ### Blocos principais de construção
 #### [Sistemas de coordenadas no DirectX](coordinate-systems-in-directx.md)
-#### [Foco, gestos e controladores de movimento no DirectX](gaze,-gestures,-and-motion-controllers-in-directx.md)
+#### [Olhar fixo com cabeça e olhos no DirectX](gaze-in-directx.md)
+#### [Controladores de mãos e emovimento no DirectX](hands-and-motion-controllers-in-directx.md)
 #### [Entrada de voz no DirectX](voice-input-in-directx.md)
 #### [Som espacial no DirectX](spatial-sound-in-directx.md)
 #### [Mapeamento espacial no DirectX](spatial-mapping-in-directx.md)
@@ -186,6 +184,7 @@
 ### Tópicos avançados
 #### [Como usar o XAML com aplicativos DirectX holográficos](using-xaml-with-holographic-directx-apps.md)
 #### [Adicionar comunicação remota holográfica](add-holographic-remoting.md)
+### [OpenXR](openxr.md)
 ## WebVR
 ### [Como usar o WebVR na borda com o Windows Mixed Reality](using-webvr-in-edge-with-windows-mixed-reality.md)
 ## [Aplicativos de exemplo e tutoriais](tutorials.md)
