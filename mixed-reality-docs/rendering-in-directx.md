@@ -6,12 +6,12 @@ ms.author: mriches
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, hologramas, renderização, gráficos 3D, HolographicFrame, renderizar loop, o loop de atualização, o passo a passo, o código de exemplo
-ms.openlocfilehash: fd35f971af4c3c9dfd7f21ee396c92216b3246e9
-ms.sourcegitcommit: f7fc9afdf4632dd9e59bd5493e974e4fec412fc4
+ms.openlocfilehash: 6edcaf808f2d7d48f480169e5579adb8984678a0
+ms.sourcegitcommit: 45676da11ebe33a2aa3dccec0e8ad7d714420853
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2019
-ms.locfileid: "59591032"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65629032"
 ---
 # <a name="rendering-in-directx"></a>Processamento no DirectX
 
@@ -89,7 +89,7 @@ auto viewTransformContainer = cameraPose.TryGetViewTransform(coordinateSystem);
 
 ### <a name="process-gaze-and-gesture-input"></a>Olhar de processo e o gesto de entrada
 
-[Olhares](gaze.md) e [gesto](gestures.md) não são baseados em tempo de entrada e, portanto, não precisa atualizar no **StepTimer** função. No entanto [essa entrada](gaze,-gestures,-and-motion-controllers-in-directx.md) é algo que o aplicativo precisa examinar cada quadro.
+[Olhares](gaze-in-directx.md) e [mão](hands-and-motion-controllers-in-directx.md) não são baseados em tempo de entrada e, portanto, não precisa atualizar no **StepTimer** função. No entanto, essa entrada é algo que o aplicativo precisa examinar cada quadro.
 
 ### <a name="process-time-based-updates"></a>Processar atualizações baseadas em tempo
 

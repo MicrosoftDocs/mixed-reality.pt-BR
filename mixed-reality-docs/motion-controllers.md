@@ -6,12 +6,12 @@ ms.author: wguyman
 ms.date: 03/21/2018
 ms.topic: article
 keywords: 6dof controladores, controladores de movimento
-ms.openlocfilehash: b44964ab872bd080349ecf1b04b3f7082b521a24
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 7db1c16f8243081dc8f53e8722391f102c38e0d3
+ms.sourcegitcommit: 45676da11ebe33a2aa3dccec0e8ad7d714420853
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59590992"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65629119"
 ---
 # <a name="motion-controllers"></a>Controladores de movimento
 
@@ -231,9 +231,9 @@ Ver [solução de problemas do controlador de movimento](https://docs.microsoft.
 
 ## <a name="see-also"></a>Consulte também
 * [Gestos e controladores de movimento no Unity](gestures-and-motion-controllers-in-unity.md)
-* [Olhar, gestos e controladores de movimento no DirectX](gaze,-gestures,-and-motion-controllers-in-directx.md)
+* [Mãos e controladores de movimento no DirectX](hands-and-motion-controllers-in-directx.md)
 * [Gestos](gestures.md)
-* [Entrada MR 213: Controladores de movimento](mixed-reality-213.md)
+* [Entrada do MR 213: controladores de movimentos](mixed-reality-213.md)
 * [Guia do entusiasta: O Windows Mixed Reality inicial](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/your-mixed-reality-home)
 * [Guia do entusiasta: Usando aplicativos e jogos no Windows Mixed Reality](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/using-games-and-apps-in-windows-mixed-reality)
 * [Como funciona o controle de dentro para fora](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/tracking-system)

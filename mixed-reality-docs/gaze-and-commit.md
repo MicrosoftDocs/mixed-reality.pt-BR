@@ -1,17 +1,18 @@
 ---
-title: Olhar e confirmar
-description: Visão geral do modelo de entrada olhar e confirmar
+title: Olhar head e confirmar
+description: Visão geral do modelo de entrada olhar head e confirmar
 author: caseymeekhof
 ms.author: cmeekhof
 ms.date: 03/31/2019
 ms.topic: article
+ms.localizationpriority: high
 keywords: Misto realidade, olhar, olhar direcionamento, interação, de design
-ms.openlocfilehash: 7bce18853e46d71d963574b35c393e5a5dbf2cd0
-ms.sourcegitcommit: 90ce9415889e7121dd2fd76a893dc3734672881b
+ms.openlocfilehash: 95f2cef8c10ce3d0d2a218953613fef6f0a00362
+ms.sourcegitcommit: 1c0fbee8fa887525af6ed92174edc42c05b25f90
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64873983"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65730815"
 ---
 # <a name="head-gaze-and-commit"></a>Olhar head e confirmar
 Olhar head e confirmação é um modelo de entrada que envolve o direcionamento de um objeto com a direção da sua cabeça que aponta para a frente (head-direção), e, em seguida, agir sobre eles com um secundário de entrada, como o gesto de mão ar toque ou a voz de comando "Select". Ele é considerado um modelo de "agora" entrado com a manipulação indireta, ou seja, que ele é mais adequado para interagir com o conteúdo que está além do braços atingir.
@@ -53,14 +54,14 @@ Depois de direcionar um objeto ou um elemento de interface do usuário, o usuár
 - Pressione o botão 'A' em um Xbox Gamepad
 - Pressione o botão 'A' em um controlador adaptável do Xbox
 
-### <a name="gaze-and-air-tap-gesture"></a>Gesto de toque de olhar e ar
+### <a name="head-gaze-and-air-tap-gesture"></a>Gesto de toque de olhar head e ar
 Indicador e polegar é um gesto de tocar com a mão na vertical. Para executar um indicador e polegar, acionar o dedo para a posição de pronto, em seguida, aperto com o dedo e acionar seu dedo fazer backup para liberar. Em HoloLens 1, o indicador e polegar é a entrada de secundária mais comuns.
 
 ![Com o dedo na posição pronta e, em seguida, um movimento de toque ou clique em](images/readyandpress.jpg)<br>
 
 Indicador e polegar também está disponível em HoloLens 2 e foi abrandado da versão original. Quase todos os tipos de pinches agora têm suporte, desde que a mão é ainda vertical e a espera. Isso torna muito mais fácil para os usuários a aprender e faça o gesto.  Esse novo indicador e polegar substitui o antigo por meio da API do mesma, para que os aplicativos existentes obterão o novo comportamento automaticamente após a recompilação do HoloLens 2.
 
-### <a name="gaze-and-select-voice-command"></a>Mantenha o foco e "Selecionar" comando de voz
+### <a name="head-gaze-and-select-voice-command"></a>"Select" e HEAD olhar o comando de voz
 Comandos de voz são um dos métodos de interação primário na realidade misturada. Ele fornece um mecanismo muito eficiente "Mãos livre" para o sistema de controle. Há tipos diferente dos modelos de interação de voz:
 
 - O comando genérico "Selecionar" que permite executar uma confirmação como uma entrada secundária ou acionar "clique".
@@ -72,7 +73,7 @@ Comandos de voz são um dos métodos de interação primário na realidade mistu
 Para encontrar mais detalhes e uma lista de comprenhesive de comandos disponíveis e como usar, Confira nossos [design de voz](voice-design.md) diretrizes.
 
 
-### <a name="gaze-and-hololens-clicker"></a>Olhar e HoloLens Clicker
+### <a name="head-gaze-and-hololens-clicker"></a>Olhar head e HoloLens Clicker
 O HoloLens Clicker é o primeiro dispositivo periférico criado especificamente para o HoloLens e está incluído com a edição de desenvolvimento HoloLens 1. O HoloLens Clicker permite que um usuário clicar com o movimento de mão mínima e confirmadas como uma entrada secundária. O HoloLens clicker conecta-se para o HoloLens 1 ou 2 usando Bluetooth baixa energia (BTLE).
 
 ![](images/hololens-clicker-500px.jpg)<br>
@@ -83,7 +84,7 @@ Mais informações e instruções para emparelhar o dispositivo podem ser encont
 
 
 
-### <a name="gaze-and-xbox-wireless-controller"></a>Olhar e controlador sem fio do Xbox
+### <a name="head-gaze-and-xbox-wireless-controller"></a>Olhar head e o controlador de sem fio do Xbox
 O controlador do Xbox sem fio permite executar acionar um "clique" como um secundário, usando o botão de entrada. O dispositivo é mapeado para um conjunto padrão de ações que ajudam a navegar e controlar o sistema. Se você desejar personalizar o controlador, use o Xbox Accesories App para configurar seu controlador do Xbox sem fio.
 
 ![](images/xboxcontroller.jpg)<br>
@@ -92,7 +93,7 @@ Controlador sem fio do Xbox
 [Emparelhamento de um controlador do Xbox com seu PC](hardware-accessories.md#pairing-bluetooth-accessories)
 
 
-### <a name="gaze-and-xbox-adaptive-controller"></a>Controlador adaptável olhar e Xbox
+### <a name="head-gaze-and-xbox-adaptive-controller"></a>Controlador adaptável olhar head e Xbox
 O controlador do Xbox adaptável projetado principalmente para atender às necessidades de jogadores com mobilidade limitada, é um hub unificado para dispositivos que ajuda a tornar realidade misturada mais acessível.
 
 O controlador de adaptável do Xbox permite executar acionar um "clique" como um secundário, usando o botão de entrada. O dispositivo é mapeado para um conjunto padrão de ações que ajudam a navegar e controlar o sistema. Se você desejar personalizar o controlador, use o Xbox Accesories App para configurar seu controlador adaptável do Xbox.
@@ -110,16 +111,11 @@ Portas de controle adaptável do Xbox
 <a href=https://www.xbox.com/en-US/xbox-one/accessories/controllers/xbox-adaptive-controller>Mais informações disponíveis no site do Xbox</a>
 
 
-# <a name="device-support"></a>Suporte a dispositivos
-Mantenha o foco principal e confirmação está disponível em todos os fones de ouvido de realidade misturada. É o modelo de entrada primário em HoloLens v1. Outros headsets normalmente incluem um mecanismo apontador com base em mãos, de como os controladores de movimento ou articulada mão de acompanhamento. Nesses dispositivos, aplicativos devem preferir [ponto-e-confirmação](point-and-commit.md) para interações mais distantes quando possível.
-
-Olhar olho e confirmação está disponível em HoloLens 2, mas não é o modelo de entrada principal. Vá para a seção de "Diretrizes de design de olhar olho" para uma discussão sobre isso fizer sentido para seu aplicativo.
-
-# <a name="head-gaze-design-guidelines"></a>Diretrizes de design de olhares head
+# <a name="head-gaze-design-guidelines"></a>Diretrizes de design de olhar head
 > [!NOTE]
 > Orientação mais específica para design de olhares [em breve](index.md).
 
-## <a name="gaze-targeting"></a>Mantenha o foco de direcionamento
+## <a name="head-gaze-targeting"></a>Direcionamento de olhar de cabeça
 Todas as interações baseiam-se a capacidade de um usuário para o elemento que eles querem interagir, independentemente da modalidade de entrada de destino. Na realidade mista do Windows, isso geralmente é feito usando olhar do usuário.
 Para habilitar um usuário trabalhar com uma experiência com êxito, as Noções básicas sobre calculado do sistema de intenção do usuário e a intenção do usuário real, deve se alinhar o mais próximo possível. Para o grau que o sistema interpreta as ações do usuário pretendida corretamente, aumenta a satisfação e o desempenho melhora.
 
@@ -142,7 +138,7 @@ Os usuários geralmente não encontrarão encontrar elementos de interface do us
 ## <a name="improving-targeting-behaviors"></a>Melhorando a comportamentos de direcionamento
 Se a intenção do usuário para algo de destino pode ser determinada (ou aproximada de perto), ele pode ser muito útil aceitar "near Srta" tenta a interação como se eles foram direcionados corretamente. Há um punhado de métodos bem-sucedidas que podem ser incorporados em experiências de realidade mista:
 
-### <a name="gaze-stabilization-gravity-wells"></a>Estabilização olhar ("wells gravidade")
+### <a name="head-gaze-stabilization-gravity-wells"></a>Estabilização olhar head ("wells gravidade")
 Essa deve ser ligado a maioria ou todos do tempo. Essa técnica remove os jitters head/pescoço natural que os usuários podem ter. Também movimento devido a comportamentos de busca/falando.
 
 ### <a name="closest-link-algorithms"></a>Algoritmos mais próximo do link
@@ -209,10 +205,10 @@ Há três coisas que você deve considerar:
 
 ## <a name="see-also"></a>Consulte também
 * [Manipulação direta](direct-manipulation.md)
-* [Ponto e confirmar](point-and-commit.md)
+* [Apontar e confirmar](point-and-commit.md)
 * [Conceitos básicos de interação](interaction-fundamentals.md)
-* [Olhar e duração](gaze-targeting.md)
-* [Olhar e voz](voice-design.md)
+* [Focar e esperar](gaze-targeting.md)
+* [Foco e voz](voice-design.md)
 
 
 

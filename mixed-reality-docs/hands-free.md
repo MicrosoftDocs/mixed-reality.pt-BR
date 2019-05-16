@@ -1,19 +1,19 @@
 ---
-title: Otimizando seu aplicativo para mãos livres
+title: Viva voz
 description: Otimizando seu aplicativo para mãos livres
 author: liamar
 ms.author: liamar
 ms.date: 04/20/2019
 ms.topic: article
 keywords: Realidade misturada, viva-voz, mantenha o foco, olhares direcionamento, interação, design
-ms.openlocfilehash: f39a9524831161997b59be6cf89b124fa5b29c78
-ms.sourcegitcommit: d6d96d552ec10cd7e6502fbbc1905432e2878325
+ms.openlocfilehash: 59a460a0c46ace7e633381019d29af54b1061695
+ms.sourcegitcommit: 45676da11ebe33a2aa3dccec0e8ad7d714420853
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65524326"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65629016"
 ---
-# <a name="optimizing-your-app-for-hands-free"></a>Otimizando seu aplicativo para mãos livres
+# <a name="hands-free"></a>Viva voz
 
 
 
@@ -31,18 +31,16 @@ Alguns cenários específicos podem ser:
 
 ## <a name="hands-free-modalities"></a>Viva-voz modalidades
 
-### <a name="voice-commanding"></a>Comandos de voz
+### <a name="voice-commandingvoice-designmd"></a>[Comandos de voz](voice-design.md)
 
 Usando a voz para comando e controle de que uma interface pode não apenas permitir que o usuário opere para mãos livres, mas também ignorar várias etapas. O uso desse modalidade pode variar de permitindo que o usuário simplesmente lê o nome do qualquer botão em voz alta para ativá-lo, como em Consulte-it-say-it, para conversar com um agente que pode realizar tarefas para você.
 
-* [Design de voz](voice-design.md)
 
 
-### <a name="head-gaze-and-dwell"></a>Olhar head e duração
+### <a name="head-gaze-and-dwellgaze-and-dwellmd"></a>[Olhar head e duração](gaze-and-dwell.md)
 
 Em algumas situações viva-voz, usando a voz não é ideal ou até mesmo possível. Ambientes fabris alto, privacidade ou sociais normas podem ser restrições. O cabeçalho olhares + lidam bem com modelo permite que o usuário navegue o aplicativo usando seu principal vetor para apontar ao remanescentes, ou dwelling em um botão irá ativá-lo após um determinado período de tempo (normalmente, de cerca de 1 segundo ou menos). 
 
-* [Focar e esperar](gaze-and-dwell.md)
 
 ## <a name="transitioning-in-and-out-of-hands-free"></a>A transição para dentro e fora de mãos livres
 

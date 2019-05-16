@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
 keywords: Realidade misturada, olhar, interação, de design
-ms.openlocfilehash: 9a12a5a3b3a583477fd98caeaa2f6890c67e2655
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 738ba9063a5d00f3bbedce989d93076d56ad1a44
+ms.sourcegitcommit: 45676da11ebe33a2aa3dccec0e8ad7d714420853
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59590994"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65629101"
 ---
 # <a name="gaze"></a>Focar
 
@@ -61,6 +61,6 @@ A maioria dos aplicativos deve usar um [cursor](cursors.md) (ou outra indicaçã
 Depois que o usuário direcionou um holograma ou o objeto real usando seu olhar, sua próxima etapa é executar ação no objeto. As formas básicas para um usuário tomar medidas são feitas por meio [gestos](gestures.md), [controladores de movimento](motion-controllers.md) e [voz](voice-input.md).
 
 ## <a name="see-also"></a>Consulte também
-* [Entrada MR 210: Gaze](holograms-210.md)
-* [Olhar, gestos e controladores de movimento no DirectX](gaze,-gestures,-and-motion-controllers-in-directx.md)
-* [Mantenha o foco no Unity](gaze-in-unity.md)
+* [Entrada do MR 210: foco](holograms-210.md)
+* [Cabeçalho e olho olhar no DirectX](gaze-in-directx.md)
+* [Foco no Unity](gaze-in-unity.md)

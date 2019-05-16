@@ -1,25 +1,23 @@
 ---
-title: Olhar e voz
+title: Comandos de voz
 description: Olhar, gesto e voz (GGV) são o principal meio de interação em HoloLens. Este artigo fornece orientação sobre design de voz.
-author: grbury
-ms.author: grbury
+author: shentan
+ms.author: shentan
 ms.date: 04/21/2019
 ms.topic: article
+ms.localizationpriority: high
 keywords: Windows Mixed Reality, design, interação de voz
-ms.openlocfilehash: 35e4c72026acaa36e5fd686cf892dd602f6626d6
-ms.sourcegitcommit: a4a53e6772805d89a47588857e3e8fb1fd8d9710
+ms.openlocfilehash: 49fa199b2656db95b15583ccfbee39f33942f180
+ms.sourcegitcommit: 1c0fbee8fa887525af6ed92174edc42c05b25f90
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65469080"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65730796"
 ---
-# <a name="gaze-and-voice"></a>Olhar e voz
+# <a name="voice-commanding"></a>Comandos de voz
 
-Olhar, gesto e voz (GGV) são o principal meio de interação em HoloLens (1º gen). [Olhares](gaze.md) usado com um [cursor](cursors.md) é o mecanismo para direcionar o conteúdo que eles estão prontos para interagir com um usuário. [Gesto](gestures.md) ou [voz](voice-input.md) são os mecanismos de intenção. Olhar pode ser usado com o gesto ou de voz para concluir uma interação.
+Ao usar comandos de voz, olhar normalmente é usado como o direcionamento mechaninism, seja como um ponteiro ("select") ou para direcionar o comando para um aplicativo ("vê-lo, diga"). Obviamente, alguns comandos de voz não exigem um destino, como "Ir para iniciar o" ou "Ei, Cortana."
 
-Em fones imersivos em exposição, o principal meio de interação é olhar e confirmação e ponto-e-confirmação (com um [controlador de movimento](motion-controllers.md)). Se o usuário tiver um fone de ouvido com funcionalidades de voz, voz pode ser usado em combinação com olhar ou ponto para completar uma ação.
-
-Durante a criação de aplicativos, você deve considerar como você pode tornar essas interações funcionam bem juntos.
 
 ## <a name="device-support"></a>Suporte a dispositivos
 
@@ -27,7 +25,7 @@ Durante a criação de aplicativos, você deve considerar como você pode tornar
 <tr>
 <th>Recurso</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens (1ª geração)</a></th><th style="width:150px">HoloLens 2</th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Fones imersivos em exposição</a></th>
 </tr><tr>
-<td>Olhar e voz</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️ (com fone de ouvido anexado)</td>
+<td></td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️ (com fone de ouvido anexado)</td>
 </tr>
 </table>
 
@@ -51,13 +49,16 @@ Abaixo estão algumas práticas que auxiliará no reconhecimento de fala suave.
    * "Hey Cortana"
    * "Selecionar"
 
-### <a name="what-users-can-say"></a>O que dizer aos usuários
+### <a name="select"></a>"Selecionar"
 
-Como um usuário for destinado a qualquer botão por meio de olhar ou apontando, eles podem dizer a palavra **"Selecionar"** para ativar aquele botão. "Select" é uma das palavras-chave baixo consumo de energia que sempre é ouvida para. Indo mais além, um usuário também pode usar "gramática do botão" em todo o sistema ou em aplicativos. Por exemplo, ao examinar um aplicativo, um usuário pode dizer o comando "Remover" (que é na barra de aplicativos) para remover o aplicativo do mundo.
+Dizer "selecionar" a qualquer momento ativará a tudo o que o cursor de olhar está apontando. 
+
+>Observação: No HoloLens 2, o cursor olhar precisa primeiro ser invocado por informando que a palavra "select". Por exemplo, "select" novamente para ativar. Para ocultar o cursor de olhar, use suas mãos – airtap ou um objeto de toque. 
 
 ### <a name="see-it-say-it"></a>Veja, digamos que ele
 
 Windows Mixed Reality contratou um modelo de voz "vê-lo, diga" onde **rótulos nos botões são idênticos aos comandos de voz associado**. Como não há qualquer dissonance entre o rótulo e o comando de voz, os usuários podem compreender melhor o que dizer para o sistema de controle. Para reforçar isso, enquanto dwelling em um botão, uma **"voz lidam bem com dica"** aparece para se comunicar quais botões são habilitados por voz.
+
 
 ![Vê-lo a dizer a ele exemplo 1](images/voice-seeitsayit1-640px.jpg)
 

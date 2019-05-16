@@ -6,13 +6,14 @@ author: varnauld
 ms.author: vanesa
 ms.date: 02/24/2019
 ms.topic: article
+ms.localizationpriority: high
 keywords: Mixed Reality, discover, distribute, index, landing page, design, development, tutorials, sample apps, fundamentals, case studies, resources, HoloLens how-to, Open source projects
-ms.openlocfilehash: e36c903f93cc13d941a93331164cff6b4db4980e
-ms.sourcegitcommit: ff7eb8b92170eb8107935de4bd96b236087395ac
+ms.openlocfilehash: ed319e2abf61caed5f36b425a4cc609ca9501dec
+ms.sourcegitcommit: 1c0fbee8fa887525af6ed92174edc42c05b25f90
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/02/2019
-ms.locfileid: "65030571"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65730888"
 ---
 # <a name="mixed-reality-documentation"></a>Documentação da Realidade Misturada
 

@@ -5,13 +5,14 @@ author: grbury
 ms.author: grbury
 ms.date: 04/12/19
 ms.topic: article
+ms.localizationpriority: high
 keywords: Windows Mixed Reality, testar, MRTK, MRTK versão 2, 2 HoloLens
-ms.openlocfilehash: 369470326d815ee711e96264939dd2e0487879b6
-ms.sourcegitcommit: 90ce9415889e7121dd2fd76a893dc3734672881b
+ms.openlocfilehash: 98fde1a597bcc20b14037176748258d35ef99ab9
+ms.sourcegitcommit: 1c0fbee8fa887525af6ed92174edc42c05b25f90
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64873909"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65730864"
 ---
 # <a name="getting-your-existing-app-ready-for-hololens-2"></a>Preparar seu aplicativo existente para o HoloLens 2
 

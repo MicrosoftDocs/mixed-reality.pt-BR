@@ -6,13 +6,14 @@ author: rwinj
 ms.author: randyw
 ms.date: 03/21/2018
 ms.topic: article
+ms.localizationpriority: high
 keywords: Windows Mixed Reality, design, interação, estilo, cor, padrões de aplicativo, controles, aplicativos de exemplo, o Kit de ferramentas de realidade misturada, MRTK
-ms.openlocfilehash: aa7b1ba42823324bf247580781b46a4f4c885d99
-ms.sourcegitcommit: d6d96d552ec10cd7e6502fbbc1905432e2878325
+ms.openlocfilehash: 1a0c8c2f5fa6aac7c4f5b8f574cd617193e9d943
+ms.sourcegitcommit: 1c0fbee8fa887525af6ed92174edc42c05b25f90
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65524349"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65730840"
 ---
 # <a name="design-for-mixed-reality"></a>Design para realidade misturada
 
@@ -230,7 +231,7 @@ Crie grandes experiências de exemplos projetado e criado pela nossa equipe.
                             </div>
                         </div>
                         <div class="cardText">
-                            <h3>Galaxy Explorer</h3>
+                            <h3>Gerenciador do Galaxy</h3>
                             <p>O Galaxy Explorador de projeto está pronto. Você compartilhou suas ideias com a comunidade, escolheu um aplicativo, assisti uma equipe compilá-lo e agora pode obter o código-fonte.</p>
                         </div>
                     </div>

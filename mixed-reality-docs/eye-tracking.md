@@ -5,13 +5,14 @@ author: sostel
 ms.author: sostel
 ms.date: 04/05/2019
 ms.topic: article
+ms.localizationpriority: high
 keywords: Acompanhamento de olhos, misturadas realidade, entrada, olhar olho
-ms.openlocfilehash: 75cbba9048b620e4b00492ad3f71315fabf86677
-ms.sourcegitcommit: f5c1dedb3b9e29f27f627025b9e7613931a7ce18
+ms.openlocfilehash: f61f813c702cbeaa03ddc50c6a1958af3566bc1c
+ms.sourcegitcommit: 1c0fbee8fa887525af6ed92174edc42c05b25f90
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2019
-ms.locfileid: "64581046"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65730763"
 ---
 # <a name="eye-tracking-on-hololens-2"></a>Acompanhamento em HoloLens 2 a olho nu
 HoloLens 2 permite a um nível totalmente novo de contexto e o entendimento humanos dentro de Holographic experiência ao fornecer aos desenvolvedores a incrível capacidade de uso das informações sobre o que os usuários estão vendo. Esta página fornece uma visão geral de como os desenvolvedores podem se beneficiar de acompanhamento de olho para vários casos de uso e o que procurar durante a criação de interfaces do usuário com base em olhar olho. 

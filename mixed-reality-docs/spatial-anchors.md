@@ -5,13 +5,14 @@ author: thetuvix
 ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
+ms.localizationpriority: high
 keywords: sistema de coordenadas, sistema de coordenadas espacial, dimensionamento do mundo, mundo, escala, posição, orientação, âncora, âncora espacial, bloqueado pelo mundo, bloqueio de mundo, persistência, compartilhamento
-ms.openlocfilehash: eb0fae7881f1b6517da57305ef2fa3cb1ed78648
-ms.sourcegitcommit: f7fc9afdf4632dd9e59bd5493e974e4fec412fc4
+ms.openlocfilehash: 16165194d040ad22f7885897eddcc65cf9dcaec3
+ms.sourcegitcommit: 1c0fbee8fa887525af6ed92174edc42c05b25f90
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2019
-ms.locfileid: "59591021"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65730857"
 ---
 # <a name="spatial-anchors"></a>Âncoras espaciais
 
@@ -74,8 +75,8 @@ Para âncoras espacial de nuvem, o armazenamento pode dimensionar conforme seu c
 
 ## <a name="see-also"></a>Consulte também
 * [Sistemas de coordenadas](coordinate-systems.md)
-* [Compartilhado experiências na realidade mista](shared-experiences-in-mixed-reality.md)
-* <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">Âncoras espaciais do Azure</a>
+* [Experiências compartilhadas em realidade misturada](shared-experiences-in-mixed-reality.md)
+* <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">Âncoras Espaciais do Azure</a>
 * [Persistência no Unity](persistence-in-unity.md)
 * [Âncoras espaciais no DirectX](coordinate-systems-in-directx.md#place-holograms-in-the-world-using-spatial-anchors)
 * [Estudo de caso - examinando buracos na sua realidade](case-study-looking-through-holes-in-your-reality.md)

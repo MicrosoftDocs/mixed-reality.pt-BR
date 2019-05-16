@@ -6,12 +6,12 @@ ms.author: crderr
 ms.date: 03/21/2018
 ms.topic: article
 keywords: critérios de qualidade do aplicativo, realidade, misturada misto de aplicativo de realidade
-ms.openlocfilehash: 8070a434be462a636b314527c59f299ca77fb6d4
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: e9f6cd5a6017e11cd167c8141d29b82f89af08e4
+ms.sourcegitcommit: 45676da11ebe33a2aa3dccec0e8ad7d714420853
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59590413"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65628985"
 ---
 # <a name="app-quality-criteria"></a>Critérios de qualidade do aplicativo
 
@@ -173,7 +173,7 @@ Misalignments de hologramas com objetos físicos (se se destina a ser colocado e
 
 #### <a name="tools-and-tutorials"></a>Ferramentas e tutoriais
 
-* [MR Spatial 230: Mapeamento espacial](holograms-230.md)
+* [MR Espacial 230: mapeamento espacial](holograms-230.md)
 * [MR o Kit de ferramentas, bibliotecas de mapeamento espacial](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit/SpatialMapping/README.md)
 * [Kit de complementar MR, exemplo de calibragem de pôster](https://github.com/Microsoft/MixedRealityCompanionKit/tree/master/PosterCalibrationSample)
 * [Kit de complementar MR, Kinect IPD](https://github.com/Microsoft/MixedRealityCompanionKit/tree/master/KinectIPD)
@@ -301,14 +301,14 @@ Na realidade mista do Windows, o mecanismo de áudio fornece o componente auricu
 #### <a name="documentation"></a>Documentação
 
 * [Som espacial](spatial-sound.md)
-* [Design de som espacial](spatial-sound-design.md)
+* [Projeto de som espacial](spatial-sound-design.md)
 * [Som espacial no Unity](spatial-sound-in-unity.md)
 * [Estudo de caso, espacial som para HoloTour](case-study-spatial-sound-design-for-holotour.md)
 * [Estudo de caso, usando o som espacial RoboRaid](case-study-using-spatial-sound-in-roboraid.md)
 
 #### <a name="tools-and-tutorials"></a>Ferramentas e tutoriais
 
-* [MR Spatial 220: Som espacial](holograms-220.md)
+* [MR Espacial 220: som espacial](holograms-220.md)
 * [MRToolkit, áudio espacial](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit/SpatialSound/README.md)
 
 ## <a name="focus-on-holographic-frame-fov-boundaries"></a>Concentre-se em limites de quadro holográfica (FOV)
@@ -402,13 +402,13 @@ Hologramas devem reagir para a posição do usuário aproximadamente da mesma ma
 
 * [Design de interação](hologram.md)
 * [Cor, luz e material](color,-light-and-materials.md)
-* [Billboarding e tag-along](billboarding-and-tag-along.md)
+* [Mural e tag-along](billboarding-and-tag-along.md)
 * [Conceitos básicos de interação](interaction-fundamentals.md)
 * [O motion Self e locomotion do usuário](comfort.md#self-motion-and-user-locomotion)
 
 #### <a name="tools-and-tutorials"></a>Ferramentas e tutoriais
 
-* [Entrada MR 210: Gaze](holograms-210.md)
+* [Entrada do MR 210: foco](holograms-210.md)
 
 ## <a name="input-interaction-clarity"></a>Clareza de interação de entrada
 
@@ -453,20 +453,21 @@ Clareza de interação de entrada é essencial para facilidade de uso do aplicat
 
 * [Conceitos básicos de interação de Windows MR](interaction-fundamentals.md)
 * [Objetos interagível](interactable-object.md)
-* [Mantenha o foco de direcionamento](gaze-targeting.md)
+* [Focar direcionamento](gaze-targeting.md)
 * [Cursores](cursors.md)
 * [Conforto e olhar](comfort.md#gaze-direction)
 * [Gestos](gestures.md)
 * [Entrada de voz](voice-input.md)
 * [Design de voz](voice-design.md)
-* [Controladores de movimento](motion-controllers.md)
-* [Entrada de portabilidade de guia para Unity](input-porting-guide-for-unity.md)
+* [Controladores de movimentos](motion-controllers.md)
+* [Guia de portabilidade de entrada para Unity](input-porting-guide-for-unity.md)
 * [Entrada do teclado no Unity](keyboard-input-in-unity.md)
-* [Mantenha o foco no Unity](gaze-in-unity.md)
+* [Foco no Unity](gaze-in-unity.md)
 * [Gestos e controladores de movimento no Unity](gestures-and-motion-controllers-in-unity.md)
 * [Entrada de voz no Unity](voice-input-in-unity.md)
-* [Teclado, mouse e entrada do controlador em DirectX](keyboard,-mouse,-and-controller-input-in-directx.md)
-* [Olhar, gesto e controladores de movimento no DirectX](gaze,-gestures,-and-motion-controllers-in-directx.md)
+* [Teclado, mouse e entrada do controlador no DirectX](keyboard,-mouse,-and-controller-input-in-directx.md)
+* [Cabeçalho e olho olhar no DirectX](gaze-in-directx.md)
+* [Mãos e controladores de movimento no DirectX](hands-and-motion-controllers-in-directx.md)
 * [Entrada de voz no DirectX](voice-input-in-directx.md)
 
 #### <a name="tools-and-tutorials"></a>Ferramentas e tutoriais
@@ -475,9 +476,9 @@ Clareza de interação de entrada é essencial para facilidade de uso do aplicat
 * [Estudo de conversão: UI HoloStudio e lições aprendidas de design de interação](case-study-3-holostudio-ui-and-interaction-design-learnings.md)
 * [Aplicativo de exemplo: Tabela periódica dos elementos](periodic-table-of-the-elements.md)
 * [Aplicativo de exemplo: Módulo Lunar](lunar-module.md)
-* [Entrada MR 210: Gaze](holograms-210.md)
-* [Entrada MR 211: Gestos](holograms-211.md)
-* [Entrada MR 212: Voz](holograms-212.md)
+* [Entrada do MR 210: foco](holograms-210.md)
+* [Entrada do MR 211: Gestos](holograms-211.md)
+* [Entrada do MR 212: voz](holograms-212.md)
 
 ## <a name="interactable-objects"></a>Objetos interagível
 
@@ -515,9 +516,9 @@ Um botão tem sido uma metáfora usada para disparar um evento no mundo abstrato
 
 #### <a name="documentation"></a>Documentação
 
-* [Objeto interagível](interactable-object.md)
+* [Objeto interativo](interactable-object.md)
 * [Texto no Unity](text-in-unity.md)
-* [Barra de aplicativo e a caixa delimitadora](app-bar-and-bounding-box.md)
+* [Barra de aplicativos e caixa delimitadora](app-bar-and-bounding-box.md)
 * [Design de voz](voice-design.md)
 
 #### <a name="tools-and-tutorials"></a>Ferramentas e tutoriais
@@ -560,7 +561,7 @@ Aplicativos que exigem que os dados de mapeamento espacial se baseiam no disposi
 
 #### <a name="documentation"></a>Documentação
 
-* [Visualização de verificação de espaço](room-scan-visualization.md)
+* [Visualização de varredura do ambiente](room-scan-visualization.md)
 * [Estudo de caso: Expandindo os recursos de mapeamento espacial do HoloLens](case-study-expanding-the-spatial-mapping-capabilities-of-hololens.md)
 * [Estudo de caso: Projeto de som espacial para HoloTour](case-study-spatial-sound-design-for-holotour.md)
 * [Estudo de caso: Criando uma experiência imersiva em fragmentos](case-study-creating-an-immersive-experience-in-fragments.md)

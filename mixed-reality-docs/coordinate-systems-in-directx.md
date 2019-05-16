@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
 keywords: Misto realidade, o localizador espacial, quadro de referência espacial, o sistema de coordenadas espacial, estágio espacial, de exemplo código, estabilização da imagem, âncora espacial, armazenamento espacial de âncora, perda de acompanhamento, passo a passo
-ms.openlocfilehash: c8cdb39cbf4634edb4ed0a595381fc70f1388ce4
-ms.sourcegitcommit: f7fc9afdf4632dd9e59bd5493e974e4fec412fc4
+ms.openlocfilehash: 5a48e0a829ba8647718e28ec20760d8a764b13fe
+ms.sourcegitcommit: 45676da11ebe33a2aa3dccec0e8ad7d714420853
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2019
-ms.locfileid: "59591030"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65628979"
 ---
 # <a name="coordinate-systems-in-directx"></a>Sistemas de coordenadas no DirectX
 
@@ -622,7 +622,7 @@ Queremos que nosso holograma de exemplo a seguir do usuário [olhares](gaze.md),
 SpatialPointerPose^ pose = SpatialPointerPose::TryGetAtTimestamp(currentCoordinateSystem, prediction->Timestamp);
 ```
 
-Este SpatialPointerPose tem as informações necessárias para posicionar o holograma de acordo com o [rumo atual do usuário](gaze,-gestures,-and-motion-controllers-in-directx.md).
+Este SpatialPointerPose tem as informações necessárias para posicionar o holograma de acordo com o [rumo atual do usuário](gaze-in-directx.md).
 
 Por motivos de conforto de usuário, podemos usar interpolação linear ("lerp") para suavizar a alteração na posição, de modo que ele ocorre durante um período de tempo. Isso é mais à vontade para o usuário que o holograma para seu olhar o bloqueio. Lerping que posição do holograma de tag-along também nos permite estabilizar o holograma por retardamento movimentação; Se não fizermos essa interrupção, o usuário veria o holograma tremulação devido a que normalmente é considerado como sendo imperceptível movimentos da cabeça do usuário.
 
@@ -797,6 +797,7 @@ O [mapeamento espacial](spatial-mapping-in-directx.md) APIs tornam o uso de sist
 ## <a name="see-also"></a>Consulte também
 * [Sistemas de coordenadas](coordinate-systems.md)
 * [Âncoras espaciais](spatial-anchors.md)
-* <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">Âncoras espaciais do Azure</a>
-* [Olhar, gestos e controladores de movimento no DirectX](gaze,-gestures,-and-motion-controllers-in-directx.md)
+* <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">Âncoras Espaciais do Azure</a>
+* [Cabeçalho e olho olhar no DirectX](gaze-in-directx.md)
+* [Mãos e controladores de movimento no DirectX](hands-and-motion-controllers-in-directx.md)
 * [Mapeamento espacial no DirectX](spatial-mapping-in-directx.md)
