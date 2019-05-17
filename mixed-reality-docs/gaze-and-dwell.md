@@ -7,12 +7,12 @@ ms.date: 05/13/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Misto realidade, olhar, duração, interação, de design
-ms.openlocfilehash: 9f9fa89d7730e21e89bd24ce3b483d129c8a16db
-ms.sourcegitcommit: 1c0fbee8fa887525af6ed92174edc42c05b25f90
+ms.openlocfilehash: 05457b35c13422c8aa6663bdf52a489a4f5afdaa
+ms.sourcegitcommit: b5bad4eeb5cdd0c2a7b639442656c306e8b5853b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/16/2019
-ms.locfileid: "65730776"
+ms.locfileid: "65813989"
 ---
 # <a name="head-gaze-and-dwell"></a>Olhar head e duração
 
@@ -92,9 +92,9 @@ Use um pequeno atraso antes de iniciar o feedback visual para evitar a cintilaç
 ### <a name="high-frequency-buttons"></a>Botões de alta frequência
 ![Botão Avançar de guias do Microsoft Dynamics 365](images/GuideNextButton.png "botão Avançar de guias do Microsoft Dynamics 365") os botões de alta frequência são aqueles que são usados normalmente em um aplicativo. Um bom exemplo de estes são os botões Voltar e Avançar no Microsoft Dynamics 365 guias.
 
-* Botões de alta frequência devem...
-  * botões maiores, mais fácil de atingir com olhar head
-  * Mantenha-se quase altura de olho para evitar sobrecarregar ergonômicos.
+Botões de alta frequência devem...
+* botões maiores, mais fácil de atingir com olhar head
+* Mantenha-se quase altura de olho para evitar sobrecarregar ergonômicos.
 
 ### <a name="low-frequency-buttons"></a>Botões de baixa frequência
 Botões de baixa frequência são aqueles que não são interagido como regularmente em todo o aplicativo. Um bom exemplo pode ser um botão para acessar o menu de configurações, ou um botão para limpar todo o trabalho.

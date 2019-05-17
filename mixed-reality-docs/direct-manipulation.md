@@ -7,17 +7,17 @@ ms.date: 04/02/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Misto realidade, olhar, olhar direcionamento, interação, de design, mãos perto, HoloLens
-ms.openlocfilehash: e241e13a778de0889942a3643246e087a107db86
-ms.sourcegitcommit: 1c0fbee8fa887525af6ed92174edc42c05b25f90
+ms.openlocfilehash: 5952d2ecb75f7addacffcec2776f34289abda6cf
+ms.sourcegitcommit: b5bad4eeb5cdd0c2a7b639442656c306e8b5853b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/16/2019
-ms.locfileid: "65730746"
+ms.locfileid: "65814005"
 ---
 # <a name="direct-manipulation-with-hands"></a>Manipulação direta com mãos
 A manipulação direta é um modelo de entrada que envolve a tocar hologramas diretamente com suas mãos. O objetivo com a manipulação direta é objetos se comportam exatamente como funcionaria no mundo real. Botões podem ser ativada simplesmente pressionando-los, objetos possam ser retirados captando-los e conteúdo 2D se comporta como uma tela de toque virtual.  Por isso, direta manipulação é mais fácil para os usuários saber mais, e isso divertido muito.  Ele é considerado um modelo de entrada "próximo", que significa que ele é mais adequado para interagir com o conteúdo que está dentro de braços atingir.
 
-O HoloLens 2 tem um modelo de entrada de manipulação direta que permite que você toque hologramas dircly com suas mãos. O objetivo com a manipulação direta é para os objetos se comportam exatamente como funcionaria no mundo real. Você pode ativar botões, simplesmente pressionando-los e até mesmo pegar, pegar e mover objetos. Nesses cenários, o conteúdo 2D se comporta como uma tela de toque virtual.
+O HoloLens 2 tem um modelo de entrada de manipulação direta que permite que você toque hologramas diretamente com suas mãos. O objetivo com a manipulação direta é para os objetos se comportam exatamente como funcionaria no mundo real. Você pode ativar botões, simplesmente pressionando-los e até mesmo pegar, pegar e mover objetos. Nesses cenários, o conteúdo 2D se comporta como uma tela de toque virtual.
 
 Direcionar a manipulação é mais fácil para os usuários saber mais, e tem divertidos muito. Ele é considerado um modelo de entrada "entrega perto de", que significa que ele é mais adequado para interagir com o conteúdo que está dentro do alcance do arm.
 

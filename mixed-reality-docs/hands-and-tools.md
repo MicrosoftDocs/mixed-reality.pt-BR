@@ -6,12 +6,12 @@ ms.author: shengkait
 ms.date: 04/26/2019
 ms.topic: article
 keywords: Misto realidade, mãos, controles de animação, interação, de design
-ms.openlocfilehash: 4f4231dd816dc71e42d16aca1b518ad03440116e
-ms.sourcegitcommit: 45676da11ebe33a2aa3dccec0e8ad7d714420853
+ms.openlocfilehash: b13efadd111ca970abe625221fb8045644822c37
+ms.sourcegitcommit: b5bad4eeb5cdd0c2a7b639442656c306e8b5853b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65629024"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65813976"
 ---
 # <a name="hands-and-motion-controllers"></a>Mãos e controladores de movimento
 ## <a name="scenarios"></a>Cenários
@@ -25,10 +25,10 @@ Alguns cenários específicos podem ser:
 * Criar local com base em serviços e jogos usando o mundo real, como plano de fundo
 
 ## <a name="hands-and-motion-controllers-modalities"></a>Mãos e modalidades de controladores de movimento
-### <a name="direct-manipulation-with-handsdirect-manipulationmd"></a>[Manipulação direta com mãos](direct-manipulation.md)
+### <a name="direct-manipulation-with-handsdirect-manipulationmd"></a>[Manipulação direta com as mãos](direct-manipulation.md)
 Essa é uma modalidade aproveitando o poder de mãos, com a qual os usuários são capazes de tocar e manipulando as hologramas diretamente. Por leaveraging experiências de vida diária e fornecer capacidades de visual adequadas, os usuários são capazes de usar da mesma forma de manipulação de objetos do mundo real para interagir com aquelas virtuais.   
 
-### <a name="point-and-commit-with-handspoint-and-commitmd"></a>[Ponto e o modo de confirmação com mãos](point-and-commit.md)
+### <a name="point-and-commit-with-handspoint-and-commitmd"></a>[Apontar e confirmar com as mãos](point-and-commit.md)
 Este modalidade capacita os usuários interajam com hologramas em uma distância. Ele permite aos usuários fazer o melhor uso do ambiente. Os usuários podem colocar hologramas em qualquer lugar e ainda podem acessá-los de qualquer distâncias. Os modelos mentais e os gestos de controle e manipulando hologramas 2D e 3D são altamente em sincronia com aqueles do manipulação direta.
 
 ### <a name="motion-controllersmotion-controllersmd"></a>[Controladores de movimentos](motion-controllers.md)

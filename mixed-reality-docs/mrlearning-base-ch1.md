@@ -7,12 +7,12 @@ ms.date: 02/26/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: realidade misturada, hololens de tutoriais, unity,
-ms.openlocfilehash: 4546e4c8d973cbd4ce4190a974a4de9c01197e56
-ms.sourcegitcommit: 1c0fbee8fa887525af6ed92174edc42c05b25f90
+ms.openlocfilehash: c5490e6a3b542a5ca677b309e5ed1171f8666fe7
+ms.sourcegitcommit: b5bad4eeb5cdd0c2a7b639442656c306e8b5853b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/16/2019
-ms.locfileid: "65730934"
+ms.locfileid: "65814007"
 ---
 # <a name="mr-learning-base-module---project-initialization-and-first-application"></a>Módulo MR Learning Base - a inicialização de projeto e o primeiro aplicativo
 
@@ -83,7 +83,7 @@ Nesta primeira lição, você aprenderá alguns dos recursos que o Kit de ferram
 4. Crie e nomeie uma nova pasta para o seu aplicativo. Na imagem abaixo, uma pasta com o nome "Aplicativo" foi criado para conter o aplicativo. Clique em "Selecionar pasta" para começar a criar a pasta recém-criada. Após a compilação, você pode fechar a janela "Configurações de Build" no Unity. 
     ![Etapa 4 do Chapter5 lição 1](images/Lesson1Chapter5Step4.JPG)
 
-  > OBSERVAÇÃO: Se a compilação falhar, tente compilar novamente ou reiniciar o Unity e compilar novamente. Se você vir um erro, como "Erro: Erro CS0246 = o nome do namespace ou digite "XX" não pôde ser encontrado (está faltando um usando diretiva ou uma referência de assembly?) ", em seguida, você talvez precise instalar [Windows 10 SDK (10.0.18362.0)](<https://developer.microsoft.com/en-us/windows/downloads/windows-10-sdk>)
+  > OBSERVAÇÃO: Se a compilação falhar, tente compilar novamente ou reiniciar o Unity e compilar novamente. Se você vir um erro, como "Erro: Erro CS0246 = o nome do tipo ou namespace "XX" não pôde ser encontrado (está faltando um usando diretiva ou uma referência de assembly?) ", em seguida, você talvez precise instalar [Windows 10 SDK (10.0.18362.0)](<https://developer.microsoft.com/en-us/windows/downloads/windows-10-sdk>)
   >
 
 5. Depois que a compilação for concluída, abra a pasta de recém-criado que contém os arquivos do aplicativo recém-criado. Clique duas vezes na solução "MixedRealityBase.sln" (ou o nome correspondente, se você usou um nome alternativo para o seu projeto) para abrir o arquivo de solução no Visual Studio.
