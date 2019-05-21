@@ -8,7 +8,7 @@ ms.topic: article
 keywords: realidade mista, Azure, academy, unity, tutorial, api, funções, armazenamento, hololens, vr imersivo,
 ms.openlocfilehash: a828c7f0ac3016462f5c7e874545bf50a2db6771
 ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/12/2019
 ms.locfileid: "59589232"
@@ -469,7 +469,7 @@ Para importar o SDK no seu próprio projeto, verifique se você baixou a versão
 
 1.  Adicione a **unitypackage** arquivo para o Unity, usando o **ativos > Importar pacote > pacote personalizado** opção de menu.
 
-2.  No **Importar pacote do Unity** caixa que é exibida, você pode selecionar tudo sob **plug-in* > * * * de armazenamento. Desmarque todas as outras, como ele não é necessário para este curso.
+2.  No **Importar pacote do Unity** caixa que é exibida, você pode selecionar tudo sob **plug-in* > *de armazenamento**. Desmarque todas as outras, como ele não é necessário para este curso.
 
     ![Importar pacote](images/AzureLabs-Lab5-45.png)
 

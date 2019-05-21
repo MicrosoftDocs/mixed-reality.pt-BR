@@ -8,7 +8,7 @@ ms.topic: article
 keywords: Azure, misto realidade, academy, unity, tutorial, api, o reconhecimento, hololens, vr de imersão, facial
 ms.openlocfilehash: 6330d3e5c51d6b2cbc43ea795a3f953a5b14d6f1
 ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/12/2019
 ms.locfileid: "59590741"
@@ -112,11 +112,11 @@ Para usar o *API de detecção facial* serviço no Azure, você precisará confi
 
     6. Você também precisará confirmar que compreendeu os termos e condições aplicadas a esse serviço.
 
-    7. Selecione **criar *.**
+    7. Selecione **criar*.**
 
         ![Criar enfrentam o serviço de api](images/AzureLabs-Lab4-03.png)
 
-5.  Depois de clicar em **criar *** você terá que aguardar o serviço a ser criado, isso pode levar um minuto.
+5.  Depois de clicar em **criar*** você terá que aguardar o serviço a ser criado, isso pode levar um minuto.
 
 6.  Uma notificação será exibida no portal depois que a instância do serviço é criada.
 
