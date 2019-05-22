@@ -7,12 +7,12 @@ ms.date: 03/31/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Misto realidade, olhar, olhar direcionamento, interação, de design
-ms.openlocfilehash: 95f2cef8c10ce3d0d2a218953613fef6f0a00362
-ms.sourcegitcommit: 1c0fbee8fa887525af6ed92174edc42c05b25f90
+ms.openlocfilehash: a84465de3479bf3da2131b94dd522539cd7de6e9
+ms.sourcegitcommit: c20563b8195c0c374a927b96708d958b127ffc8f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65730815"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65974875"
 ---
 # <a name="head-gaze-and-commit"></a>Olhar head e confirmar
 Olhar head e confirmação é um modelo de entrada que envolve o direcionamento de um objeto com a direção da sua cabeça que aponta para a frente (head-direção), e, em seguida, agir sobre eles com um secundário de entrada, como o gesto de mão ar toque ou a voz de comando "Select". Ele é considerado um modelo de "agora" entrado com a manipulação indireta, ou seja, que ele é mais adequado para interagir com o conteúdo que está além do braços atingir.
@@ -70,7 +70,7 @@ Comandos de voz são um dos métodos de interação primário na realidade mistu
 - Interfaces de usuário de conversa ou entidades, como Cortana que têm um recurso de linguagem Natural de inteligência Artificial.
 - Commnads personalizado
 
-Para encontrar mais detalhes e uma lista de comprenhesive de comandos disponíveis e como usar, Confira nossos [design de voz](voice-design.md) diretrizes.
+Para encontrar mais detalhes e uma lista de comprenhesive de comandos disponíveis e como usar, Confira nossos [comandos de voz](voice-design.md) diretrizes.
 
 
 ### <a name="head-gaze-and-hololens-clicker"></a>Olhar head e HoloLens Clicker
@@ -204,11 +204,11 @@ Há três coisas que você deve considerar:
 
 
 ## <a name="see-also"></a>Consulte também
-* [Manipulação direta](direct-manipulation.md)
-* [Apontar e confirmar](point-and-commit.md)
-* [Conceitos básicos de interação](interaction-fundamentals.md)
-* [Focar e esperar](gaze-targeting.md)
-* [Foco e voz](voice-design.md)
+* [Manipulação direta com as mãos](direct-manipulation.md)
+* [Apontar e confirmar com as mãos](point-and-commit.md)
+* [Interações instinctuais](interaction-fundamentals.md)
+* [Focar com a cabeça e esperar](gaze-and-dwell.md)
+* [Comando de voz](voice-design.md)
 
 
 

@@ -160,6 +160,7 @@
 #### [Entrada do teclado no Unity](keyboard-input-in-unity.md)
 ### Tópicos avançados
 #### [Como usar o namespace do Windows com aplicativos Unity para HoloLens](using-the-windows-namespace-with-unity-apps-for-hololens.md)
+#### [Objetos nativos de realidade misturada no Unity](unity-xrdevice-advanced.md)
 #### [Como usar o Vuforia com o Unity](vuforia-development-overview.md)
 ### Documentos herdados (Unity 2017.4/HTK/MRTK v1)
 ## Unreal

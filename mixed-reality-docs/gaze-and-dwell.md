@@ -7,12 +7,12 @@ ms.date: 05/13/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Misto realidade, olhar, duração, interação, de design
-ms.openlocfilehash: 05457b35c13422c8aa6663bdf52a489a4f5afdaa
-ms.sourcegitcommit: b5bad4eeb5cdd0c2a7b639442656c306e8b5853b
+ms.openlocfilehash: aa4713407f14e94c88e654ae6648c4949f98e580
+ms.sourcegitcommit: c20563b8195c0c374a927b96708d958b127ffc8f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65813989"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65974862"
 ---
 # <a name="head-gaze-and-dwell"></a>Olhar head e duração
 
@@ -124,8 +124,8 @@ Algumas dicas para criar exibições de lista:
 * reutilizar o mesmo padrão sempre que possível para estabelecer a familiaridade da experiência do usuário
  
  ## <a name="see-also"></a>Consulte também
-* [Manipulação direta](direct-manipulation.md)
-* [Apontar e confirmar](point-and-commit.md)
-* [Conceitos básicos de interação](interaction-fundamentals.md)
+* [Manipulação direta com as mãos](direct-manipulation.md)
+* [Apontar e confirmar com as mãos](point-and-commit.md)
+* [Interações instinctuais](interaction-fundamentals.md)
 * [Focar com a cabeça e confirmar](gaze-and-commit.md)
-* [Foco e voz](voice-design.md)
+* [Comando de voz](voice-design.md)

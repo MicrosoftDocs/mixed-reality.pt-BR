@@ -8,7 +8,7 @@ ms.topic: article
 keywords: realidade mista, Azure, academy, unity, tutorial, api, serviços de mídia, streaming de vídeo, 360, imersivo, vr
 ms.openlocfilehash: f6974ab6a72828a557649d5dc65b4e505a7484ff
 ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/12/2019
 ms.locfileid: "59589469"
@@ -96,7 +96,7 @@ Para usar o **serviço de armazenamento do Azure**, você precisará criar e con
 
     3.  Para **tipo de conta**, selecione **(uso geral v1) de armazenamento**.
 
-    4.  Para **desempenho**, selecione **padrão *.**
+    4.  Para **desempenho**, selecione **padrão*.**
 
     5.  Para **replicação** selecionar **armazenamento localmente redundante (LRS)**.
 
@@ -226,7 +226,7 @@ Para usar o serviço de mídia do Azure, você precisará configurar uma instân
 
     ![O Portal do Azure](images/AzureLabs-Lab6-21.png)
 
-20. Você verá seu vídeo, juntamente com outra, o que é do * * tipo de ativo * múltiplas taxas de bits MP4 * * *.
+20. Você verá seu vídeo, juntamente com outra, o que é do **tipo de ativo *múltiplas taxas de bits MP4***.
 
     ![O Portal do Azure](images/AzureLabs-Lab6-22.png)
 
@@ -329,7 +329,7 @@ A seguir é um conjunto típico backup para o desenvolvimento com a realidade mi
 
 8.  Depois de fazer essas alterações, fechar o **configurações de Build** janela.
 
-9.  Salve seu projeto **arquivo* * Salvar projeto * *.
+9.  Salve seu projeto **arquivo* *Salvar projeto**.
 
 
 
@@ -625,7 +625,7 @@ Para criar essa classe:
 
 1.  Vá para o **Scripts** pasta que você criou anteriormente.
 
-2.  Clique com botão direito no **Project** painel, **crie* * C\# Script * *. Nomeie o script **olhares**.
+2.  Clique com botão direito no **Project** painel, **crie* *C\# Script**. Nomeie o script **olhares**.
 
 3.  Clique duas vezes na nova ***olhares*** script para abri-lo com **Visual Studio 2017.**
 

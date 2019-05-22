@@ -8,7 +8,7 @@ ms.topic: article
 keywords: realidade mista, Azure, academy, unity, tutorial, api, o microsoft graph, hololens, imersivo, vr
 ms.openlocfilehash: 98fe2c872f332a21fff3af6751ae555968073a24
 ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/12/2019
 ms.locfileid: "59589104"
@@ -266,12 +266,12 @@ Durante este capítulo, você definirá a câmera principal da sua cena:
 
 Para criar essa classe:
 
-1.  Clique com botão direito no **ativos** pasta na *painel projeto*, em seguida, selecione **criar* > * pasta * *. Nomeie a pasta **Scripts**.
+1.  Clique com botão direito no **ativos** pasta na *painel projeto*, em seguida, selecione **criar* > *pasta**. Nomeie a pasta **Scripts**.
 
     ![](images/AzureLabs-Lab311-26.png)
     ![](images/AzureLabs-Lab311-27.png)
 
-2.  Abra o **Scripts** pasta em seguida, dentro dessa pasta, clique com botão direito, **Create* > * C\# Script * *. Nomeie o script **MeetingsUI.**
+2.  Abra o **Scripts** pasta em seguida, dentro dessa pasta, clique com botão direito, **Create* > *C\# Script**. Nomeie o script **MeetingsUI.**
 
     ![](images/AzureLabs-Lab311-28.png)
 
@@ -377,7 +377,7 @@ Para criar essa classe:
 
 1.  Clique duas vezes no **Scripts** pasta para abri-lo.
 
-2.  Clique com botão direito dentro de **Scripts** pasta, clique em **Create**  >   **C# Script**. Nomeie o script **Graph**.
+2.  Clique com botão direito dentro de **Scripts** pasta, clique em **Create** >  **C# Script**. Nomeie o script **Graph**.
 
 3.  Clique duas vezes no script para abri-lo com o Visual Studio.
 
@@ -624,7 +624,7 @@ Para criar o script:
 
 1.  Clique duas vezes no **Scripts** pasta para abri-lo.
 
-2.  Clique com botão direito dentro de **Scripts** pasta, clique em **Create**  >   **C# Script**. Nomeie o script **GazeInput**.
+2.  Clique com botão direito dentro de **Scripts** pasta, clique em **Create** >  **C# Script**. Nomeie o script **GazeInput**.
 
 3.  Clique duas vezes no script para abri-lo com o Visual Studio.
 
@@ -818,7 +818,7 @@ Para criar o script:
 
 1.  Clique duas vezes no **Scripts** pasta para abri-lo.
 
-2.  Clique com botão direito dentro de **Scripts** pasta, clique em **Create**  >   **C# Script**. Nomeie o script **interações**.
+2.  Clique com botão direito dentro de **Scripts** pasta, clique em **Create** >  **C# Script**. Nomeie o script **interações**.
 
 3.  Clique duas vezes no script para abri-lo com o Visual Studio.
 
@@ -939,7 +939,7 @@ Para criar a marca:
 
 Todos os componentes necessários para a seção de Unity desse projeto agora foi concluído, portanto, é hora de criá-lo do Unity.
 
-1.  Navegue até *configurações de Build* (**arquivo* > * Compilar configurações * *).
+1.  Navegue até *configurações de Build* (**arquivo* > *Compilar configurações**).
 
     ![](images/AzureLabs-Lab311-33.png)
 

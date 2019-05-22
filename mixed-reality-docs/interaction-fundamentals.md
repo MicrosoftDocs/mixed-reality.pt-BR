@@ -7,12 +7,12 @@ ms.date: 04/11/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Misto realidade, olhar, olhar direcionamento, interação, de design, hololens, MMR, multimodal
-ms.openlocfilehash: 771ebe44dc984c9d4550638bef405810d86b8d69
-ms.sourcegitcommit: 1c0fbee8fa887525af6ed92174edc42c05b25f90
+ms.openlocfilehash: 9d0e639d7474c7e8728282acfa8d288cfeec7043
+ms.sourcegitcommit: c20563b8195c0c374a927b96708d958b127ffc8f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65730828"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65974902"
 ---
 # <a name="introducing-instinctual-interactions"></a>Introdução ao instinctual interações
 
@@ -141,12 +141,13 @@ Se precisar de sua experiência de vários modelos de interação, descobrimos q
 
 ## <a name="see-also"></a>Consulte também
 * [Focar com a cabeça e confirmar](gaze-and-commit.md)
-* [Manipulação direta](direct-manipulation.md)
-* [Apontar e confirmar](point-and-commit.md)
-* [Focar direcionamento](gaze-targeting.md)
+* [Focar com a cabeça e esperar](gaze-and-dwell.md)
+* [Manipulação direta com as mãos](direct-manipulation.md)
+* [Apontar e confirmar com as mãos](point-and-commit.md)
 * [Gestos](gestures.md)
-* [Design de voz](voice-design.md)
+* [Comando de voz](voice-design.md)
 * [Controladores de movimentos](motion-controllers.md)
 * [Projeto de som espacial](spatial-sound-design.md)
 * [Projeto de mapeamento espacial](spatial-mapping-design.md)
 * [Conforto](comfort.md)
+

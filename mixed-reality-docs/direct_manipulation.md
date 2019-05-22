@@ -6,12 +6,12 @@ ms.author: cmeekhof
 ms.date: 04/02/2019
 ms.topic: article
 keywords: Misto realidade, olhar, olhar direcionamento, interação, de design, mãos perto, HoloLens
-ms.openlocfilehash: 803157bb248a5541ed524ac4f828ccbba9d59ce1
-ms.sourcegitcommit: 82d4e5cf4ad46bfdc44d0606844e28c75b6e67ce
+ms.openlocfilehash: a9e67f21587381dbc1090f89935eaa2b88630dae
+ms.sourcegitcommit: c20563b8195c0c374a927b96708d958b127ffc8f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65730502"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65974751"
 ---
 # <a name="direct-manipulation"></a>Manipulação direta
 
@@ -143,6 +143,6 @@ Por exemplo, imagine que você está lendo por meio de um texto (instrutivos) ho
 
 ## <a name="see-also"></a>Consulte também
 
-* [Olhar e confirmar](gaze-and-commit.md)
-* [Apontar e confirmar](point-and-commit.md)
-* [Conceitos básicos de interação](interaction-fundamentals.md)
+* [Focar com a cabeça e confirmar](gaze-and-commit.md)
+* [Apontar e confirmar com as mãos](point-and-commit.md)
+* [Interações instinctuais](interaction-fundamentals.md)

@@ -344,8 +344,8 @@ O **InteractibleAction.cs** script, emparelhado com **Interactible.cs** executa 
   * Na parte superior do **hierarquia**, no tipo de barra de pesquisa **ChestButton_Center** e selecione o resultado.
   * No **Inspector** do painel, clique no **adicionar componente** botão.
   * No menu, digite na caixa de pesquisa **que ação**. Selecione o resultado da pesquisa.
-  * Na **hologramas** localizar pasta o ativo. ****
-  * Selecione o **ChestButton_Center** do objeto na **hierarquia**. Arrastar e soltar o  do objeto do **projeto** do painel para o **Inspetor** no **objeto** a que propriedade. ****
+  * Na **hologramas** localizar pasta o ativo.  ****
+  * Selecione o **ChestButton_Center** do objeto na **hierarquia**. Arrastar e soltar o  do objeto do **projeto** do painel para o **Inspetor** no **objeto** a que propriedade.  ****
   * Arraste o **que ação** do objeto do **Inspetor** no **ação Interactible** campo o **Interactible** script.
 * Clique duas vezes o **TagalongAction** script para abri-lo no Visual Studio.
 

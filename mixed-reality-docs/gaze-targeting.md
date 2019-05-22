@@ -6,12 +6,12 @@ ms.author: jennyk
 ms.date: 02/24/2019
 ms.topic: article
 keywords: Misto realidade, olhar, olhar direcionamento, interação, de design
-ms.openlocfilehash: 1ac4f06208a7574fced0a7e27e93469ec93bf6e0
-ms.sourcegitcommit: 90ce9415889e7121dd2fd76a893dc3734672881b
+ms.openlocfilehash: bbacf9bc0039280b9944f2ad6616108d9ceae1cd
+ms.sourcegitcommit: c20563b8195c0c374a927b96708d958b127ffc8f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64873920"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65974924"
 ---
 # <a name="gaze-and-dwell"></a>Olhar e duração
 Há muitas maneiras diferentes para confirmar uma _confirmação_ , como a combinação de olhar com _voz_ ou _gestos de mão_.
@@ -99,5 +99,5 @@ Ao determinar qual próximos elementos interativos para dar o foco para o, forne
 
 ## <a name="see-also"></a>Consulte também
 * [Gestos](gestures.md)
-* [Design de voz](voice-design.md)
+* [Comando de voz](voice-design.md)
 * [Cursores](cursors.md)

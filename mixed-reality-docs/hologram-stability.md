@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
 keywords: hologramas, estabilidade, hololens
-ms.openlocfilehash: 9b0227102934650d5640a4ac1c4d6f59ecd8e6dd
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: b35b904e3c662c5ebd0670a98044706fe208e348
+ms.sourcegitcommit: c20563b8195c0c374a927b96708d958b127ffc8f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59589726"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65974933"
 ---
 # <a name="hologram-stability"></a>Estabilidade holograma
 
@@ -148,4 +148,4 @@ Como antes, renderização de 60 FPS e definir o plano de estabilização são a
 ## <a name="see-also"></a>Consulte também
 * [Noções básicas sobre desempenho para realidade misturada](understanding-performance-for-mixed-reality.md)
 * [Cor, luz e materiais](color,-light-and-materials.md)
-* [Conceitos básicos de interação](interaction-fundamentals.md)
+* [Interações instinctuais](interaction-fundamentals.md)

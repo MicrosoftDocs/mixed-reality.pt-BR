@@ -6,12 +6,12 @@ ms.author: mavitazk
 ms.date: 03/21/2018
 ms.topic: article
 keywords: HoloLens, Windows Mixed Reality, quadro holográfico, de campo de visão
-ms.openlocfilehash: 6773bc03dea471c97d0c6006d2ab7853a5ef3669
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: c505eadbc16bb59143313aa62dd7c9d95384e0c8
+ms.sourcegitcommit: c20563b8195c0c374a927b96708d958b127ffc8f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59589330"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65974922"
 ---
 # <a name="holographic-frame"></a>Quadro holográfico
 
@@ -127,8 +127,8 @@ Como uma experiência imersiva, esses usuários foram incentivados a olhar em vo
 A representação realista alvoroço fornecido um poderoso ponto focal, completo com técnicas sutis para ativar a agitação em direção ao usuário para se sentir como se ele está lá, fala para você. Quando o usuário se move sobre a experiência, repercussões mudará em direção a você para um limite antes de retornar a um estado neutro, se o usuário vai muito além do seu periferia. Se o usuário tiver a aparência de agitação completamente (por exemplo, para olhar para algo em outro lugar na cena), em seguida, voltar ao repercussões, uma vez será de posição direcional do narrator novamente se concentrar no usuário. Técnicas como este fornecem uma noção poderosa de imersão e criar um ponto focal dentro do quadro holográfico, reduzindo a movimentação do cabeçote excessiva e promovendo [conforto](comfort.md).
 
 ## <a name="see-also"></a>Consulte também
-* [Conceitos básicos de interação](interaction-fundamentals.md)
+* [Interações instinctuais](interaction-fundamentals.md)
 * [Conforto](comfort.md)
 * [Escala](scale.md)
-* [Mantenha o foco de direcionamento](gaze-targeting.md)
-* [Estabilidade holograma](hologram-stability.md)
+* [Focar com a cabeça e esperar](gaze-and-dwell.md)
+* [Estabilidade do holograma](hologram-stability.md)

@@ -6,12 +6,12 @@ ms.author: crderr
 ms.date: 03/21/2018
 ms.topic: article
 keywords: critérios de qualidade do aplicativo, realidade, misturada misto de aplicativo de realidade
-ms.openlocfilehash: e9f6cd5a6017e11cd167c8141d29b82f89af08e4
-ms.sourcegitcommit: 45676da11ebe33a2aa3dccec0e8ad7d714420853
+ms.openlocfilehash: 756bc148f290aa3406c9ac8bb7003d463c62772c
+ms.sourcegitcommit: c20563b8195c0c374a927b96708d958b127ffc8f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65628985"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65974744"
 ---
 # <a name="app-quality-criteria"></a>Critérios de qualidade do aplicativo
 
@@ -403,7 +403,7 @@ Hologramas devem reagir para a posição do usuário aproximadamente da mesma ma
 * [Design de interação](hologram.md)
 * [Cor, luz e material](color,-light-and-materials.md)
 * [Mural e tag-along](billboarding-and-tag-along.md)
-* [Conceitos básicos de interação](interaction-fundamentals.md)
+* [Interações instinctuais](interaction-fundamentals.md)
 * [O motion Self e locomotion do usuário](comfort.md#self-motion-and-user-locomotion)
 
 #### <a name="tools-and-tutorials"></a>Ferramentas e tutoriais
@@ -451,14 +451,14 @@ Clareza de interação de entrada é essencial para facilidade de uso do aplicat
 
 #### <a name="documentation"></a>Documentação
 
-* [Conceitos básicos de interação de Windows MR](interaction-fundamentals.md)
+* [Interações instinctuais](interaction-fundamentals.md)
 * [Objetos interagível](interactable-object.md)
-* [Focar direcionamento](gaze-targeting.md)
+* [Focar com a cabeça e esperar](gaze-and-dwell.md)
 * [Cursores](cursors.md)
 * [Conforto e olhar](comfort.md#gaze-direction)
 * [Gestos](gestures.md)
 * [Entrada de voz](voice-input.md)
-* [Design de voz](voice-design.md)
+* [Comando de voz](voice-design.md)
 * [Controladores de movimentos](motion-controllers.md)
 * [Guia de portabilidade de entrada para Unity](input-porting-guide-for-unity.md)
 * [Entrada do teclado no Unity](keyboard-input-in-unity.md)
@@ -466,8 +466,8 @@ Clareza de interação de entrada é essencial para facilidade de uso do aplicat
 * [Gestos e controladores de movimento no Unity](gestures-and-motion-controllers-in-unity.md)
 * [Entrada de voz no Unity](voice-input-in-unity.md)
 * [Teclado, mouse e entrada do controlador no DirectX](keyboard,-mouse,-and-controller-input-in-directx.md)
-* [Cabeçalho e olho olhar no DirectX](gaze-in-directx.md)
-* [Mãos e controladores de movimento no DirectX](hands-and-motion-controllers-in-directx.md)
+* [Olhar fixo com cabeça e olhos no DirectX](gaze-in-directx.md)
+* [Controladores de mãos e emovimento no DirectX](hands-and-motion-controllers-in-directx.md)
 * [Entrada de voz no DirectX](voice-input-in-directx.md)
 
 #### <a name="tools-and-tutorials"></a>Ferramentas e tutoriais
@@ -519,7 +519,7 @@ Um botão tem sido uma metáfora usada para disparar um evento no mundo abstrato
 * [Objeto interativo](interactable-object.md)
 * [Texto no Unity](text-in-unity.md)
 * [Barra de aplicativos e caixa delimitadora](app-bar-and-bounding-box.md)
-* [Design de voz](voice-design.md)
+* [Comando de voz](voice-design.md)
 
 #### <a name="tools-and-tutorials"></a>Ferramentas e tutoriais
 

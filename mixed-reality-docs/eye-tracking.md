@@ -7,12 +7,12 @@ ms.date: 04/05/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Acompanhamento de olhos, misturadas realidade, entrada, olhar olho
-ms.openlocfilehash: f61f813c702cbeaa03ddc50c6a1958af3566bc1c
-ms.sourcegitcommit: 1c0fbee8fa887525af6ed92174edc42c05b25f90
+ms.openlocfilehash: 948d6ad36bfa3f7b179268a8e6241c9a2ce8e732
+ms.sourcegitcommit: c20563b8195c0c374a927b96708d958b127ffc8f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65730763"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65974762"
 ---
 # <a name="eye-tracking-on-hololens-2"></a>Acompanhamento em HoloLens 2 a olho nu
 HoloLens 2 permite a um nível totalmente novo de contexto e o entendimento humanos dentro de Holographic experiência ao fornecer aos desenvolvedores a incrível capacidade de uso das informações sobre o que os usuários estão vendo. Esta página fornece uma visão geral de como os desenvolvedores podem se beneficiar de acompanhamento de olho para vários casos de uso e o que procurar durante a criação de interfaces do usuário com base em olhar olho. 
@@ -127,7 +127,7 @@ No caso de um cursor, isso pode resultar no efeito "fleeing cursor" devido à pe
 5. **Conta para imprecisions:** Fazemos distinção dois tipos de imprecisions que são perceptíveis aos usuários: Deslocamento e variação. A maneira mais fácil para os deslocamentos de endereço é fornecer destinos grandes o suficiente para interagir com (> 2° em ângulo visual – como referência: sua miniatura é aproximadamente 2° em ângulo visual quando você se estendem o arm (1)). Isso leva as seguintes diretrizes:
     - Não force os usuários para selecionar destinos pequenos: Pesquisas mostram que, se os destinos são suficientemente grandes (e o sistema é muito bem projetado), os usuários descrevem a interação como mágica e sem nenhum esforço. Se os destinos de se tornar muito pequenos, os usuários descrevem a experiência como fatiguing e frustrante.
     
-# <a name="eye-gaze-design-guidelines-placeholder"></a>Diretrizes de design de olhar olho (espaço reservado)
+# <a name="eye-gaze-design-guidelines"></a>Diretrizes de design de olhar olho
 
 Com o HoloLens 2, temos a excelente oportunidade de tornar olhar & confirmação mais rápida e mais confortável usando olhar de olho em vez de olhar principal. No entanto, a olhar de olho se comporta de forma muito diferente para olhar principal de determinadas maneiras e, portanto, é fornecido com um número de desafios únicos. Diretrizes de Design olhares olho, resumimos vantagens gerais e os desafios a serem considerados ao usar o acompanhamento de olho como um meio de entrada em seu aplicativo holographic. Nesta seção, abordaremos as considerações de design específicas para olhar olho & confirmação. Primeiro, seus olhos mover incrivelmente rápida e, portanto, são ótimos para direcionamento rapidamente no modo de exibição. Isso torna o olho olhares ideal para olhar rápido & ações, especialmente quando combinadas com confirmações rápidas como um pressionamento de botão-indicador e polegar de confirmação.
 
@@ -138,9 +138,8 @@ Se esforçam para comentários de focalização combinada sutil: O que parece ó
 Fique atento sinais olhar e confirmação de sincronização: A sincronização de sinais de entrada pode ser menor do desafio para olhar simple e a confirmação, portanto, não se preocupe! É algo que você fique atento caso você deseje usar ações de confirmação mais complicadas, embora o que pode envolver a comandos de voz longo ou gestos de mão complicada. Imagine que você examinar o destino e emitido um comando de voz longo. Levadas em conta o tempo necessário para falar e a hora em que o sistema precisava para detectar o que você disse, seu foco de olho geralmente tempo passou a algum novo destino na cena. Portanto, torne seus usuários cientes de que eles podem precisar continuar procurando em um destino até que o comando foi reconhecido ou lidar com a entrada de uma maneira para determinar o início do comando e que o usuário tivesse sido observando naquela época.
 
 ## <a name="see-also"></a>Consulte também
-* [Olhar e confirmar](gaze-and-commit.md)
-* [Direcionamento de olhar de cabeça](gaze-targeting.md)
+* [Focar com a cabeça e confirmar](gaze-and-commit.md)
 * [Gestos](gestures.md)
-* [Design de voz](voice-design.md)
+* [Comando de voz](voice-design.md)
 * [Controladores de movimentos](motion-controllers.md)
 * [Conforto](comfort.md)
