@@ -24,6 +24,7 @@
 #### [Ver suas fotos](see-your-photos.md)
 #### [Ajuste do sensor](sensor-tuning.md)
 #### [Como atualizar o HoloLens](updating-hololens.md)
+#### [Compartilhamento de dispositivos](device-sharing.md)
 #### [Guia de limpeza e ajuste de demonstração do HoloLens](hololens-demo-guide.md)
 ### Headsets imersivos
 #### [Detalhes de hardware do headset imersivo](immersive-headset-hardware-details.md)
