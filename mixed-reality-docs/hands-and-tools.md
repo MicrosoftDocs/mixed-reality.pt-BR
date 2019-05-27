@@ -6,12 +6,12 @@ ms.author: shengkait
 ms.date: 04/26/2019
 ms.topic: article
 keywords: Misto realidade, mãos, controles de animação, interação, de design
-ms.openlocfilehash: b13efadd111ca970abe625221fb8045644822c37
-ms.sourcegitcommit: b5bad4eeb5cdd0c2a7b639442656c306e8b5853b
+ms.openlocfilehash: d0e54c71ab42a09f2f9c6063a85441b98e729af1
+ms.sourcegitcommit: 8d6e5723283c03f984f1fafef81afa5aab5d04bc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65813976"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66039173"
 ---
 # <a name="hands-and-motion-controllers"></a>Mãos e controladores de movimento
 ## <a name="scenarios"></a>Cenários
@@ -38,7 +38,7 @@ Controladores de movimento são ferramentas que estendem os recursos físicos do
 
 ## <a name="see-also"></a>Consulte também
 * [Focar com a cabeça e confirmar](gaze-and-commit.md)
-* [Manipulação direta (próximo interação disponível)](direct-manipulation.md)
-* [Ponto e confirmação (interação de mão Ásia)](point-and-commit.md)
+* [Focar com a cabeça e esperar](gaze-and-dwell.md)
+* [Manipulação direta com as mãos](direct-manipulation.md)
+* [Apontar e confirmar com as mãos](point-and-commit.md)
 * [Mãos livres](hands-free.md)
-* [Focar e esperar](gaze-targeting.md)

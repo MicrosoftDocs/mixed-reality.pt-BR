@@ -7,12 +7,12 @@ ms.date: 04/21/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Windows Mixed Reality, design, interação de voz
-ms.openlocfilehash: 49fa199b2656db95b15583ccfbee39f33942f180
-ms.sourcegitcommit: 1c0fbee8fa887525af6ed92174edc42c05b25f90
+ms.openlocfilehash: 084c1228d17c3e23b38d9b8918c13080598aea98
+ms.sourcegitcommit: 8d6e5723283c03f984f1fafef81afa5aab5d04bc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65730796"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66039185"
 ---
 # <a name="voice-commanding"></a>Comandos de voz
 
@@ -103,4 +103,4 @@ Quando a voz é aplicada corretamente, o usuário compreenderá **o que eles pod
 
 ## <a name="see-also"></a>Consulte também
 * [Gestos](gestures.md)
-* [Focar direcionamento](gaze-targeting.md)
+* [Focar com a cabeça e esperar](gaze-and-dwell.md)
