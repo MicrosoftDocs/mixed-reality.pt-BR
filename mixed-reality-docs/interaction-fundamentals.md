@@ -7,12 +7,12 @@ ms.date: 04/11/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Misto realidade, olhar, olhar direcionamento, interação, de design, hololens, MMR, multimodal
-ms.openlocfilehash: 9d0e639d7474c7e8728282acfa8d288cfeec7043
-ms.sourcegitcommit: c20563b8195c0c374a927b96708d958b127ffc8f
+ms.openlocfilehash: d018179e20d26ee8b7b24bc74d7c1711bc788282
+ms.sourcegitcommit: aba33a8ad1416f7598048ac35ae9ab1734bd5c37
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65974902"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66270380"
 ---
 # <a name="introducing-instinctual-interactions"></a>Introdução ao instinctual interações
 
@@ -36,11 +36,11 @@ Considere esses modelos de interação como modelo mental do usuário para concl
 
 Cada um desses modelos de interação é conveniente, potente e pode ser usada em seus próprios méritos e todos são otimizados para um conjunto de necessidades do cliente. Exiba o gráfico abaixo, para benefícios de cada modelo de interação, exemplos e cenários.  
 
-**Modelo** | **[Mãos e ferramentas](https://docs.microsoft.com/en-us/windows/mixed-reality/hands-and-tools)** | **[Mãos livres](https://docs.microsoft.com/en-us/windows/mixed-reality/hands-free)** | **[Mantenha o foco e confirmar](https://docs.microsoft.com/en-us/windows/mixed-reality/gaze-and-commit?)**
+**Modelo** | **[Mãos e controladores de movimento](hands-and-tools.md)** | **[Mãos livres](hands-free.md)** | **[Olhar head e confirmar](gaze-and-commit.md)**
 |--------- | --------------| ------------| ---------|
 **Cenários de exemplo** | Experiências espaciais 3D, espacial, por exemplo, layout e design, manipulação ou simulação de conteúdo | Experiências contextuais, onde as mãos de um usuário estiverem ocupadas, por exemplo, em que o trabalho de aprendizado, manutenção| Clique no experiências, por exemplo, 3D apresentações, demonstrações
-**ajustar** | Muito bem para novos usuários, voz wit acopladas, olho olhar principal ou de rastreamento. Baixa curva de aprendizado. Experiência do usuário consistente entre controladores de DoF 6 e acompanhamento de mão. | Algumas de aprendizado necessário. Se as mãos são pares indisponíveis bem com voz e de linguagem natural | Requer treinamento em HMDs, mas não em dispositivos móveis. Melhor para controladores acessíveis melhor para HoloLens (1ª geração) |
-**Hardware** | HoloLens 2 imersivo fones de ouvido | HoloLens 2 HoloLens (1º gen) fones Imersivos em exposição | HoloLens 2 imersivo fones de ouvido | HoloLens 2 HoloLens (1º gen) fones Imersivos em exposição Mobile AR |
+**ajustar** | Muito bem para novos usuários, voz wit acopladas, olho olhar principal ou de rastreamento. Baixa curva de aprendizado. Experiência do usuário consistente entre controladores de DoF 6 e acompanhamento de mão. | Algumas de aprendizado necessário. Se as mãos são pares indisponíveis bem com voz e de linguagem natural | Requer treinamento em HMDs, mas não em dispositivos móveis. Melhor para controladores acessíveis. Melhor para HoloLens (1º gen). |
+**Hardware** | HoloLens 2 <br>Headsets imersivos | HoloLens 2 <br>HoloLens (1ª geração) <br>Headsets imersivos | HoloLens 2 <br>Headsets imersivos | HoloLens 2 <br>HoloLens (1ª geração) <br>Headsets imersivos <br>Mobile AR |
 
 Informações detalhadas para usar todas as entradas disponíveis perfeitamente em conjunto em cada modelo de interação são nas páginas a seguem, bem como as ilustrações e links para conteúdo de exemplo do nosso MRTK do Unity.
 
@@ -75,7 +75,7 @@ Aqui estão alguns exemplos de como as capacidades e comportamentos são otimiza
         <td><strong>Como saber o que eu acabei de fazer?</strong></td>
     </tr>
     <tr>
-        <td><a href="hands-and-tools.md">Mãos e ferramentas</a></td>
+        <td><a href="hands-and-tools.md">Controladores de movimentos e mãos</a></td>
         <td>Eu vejo uma mão de malha, vejo uma funcionalidade de ponta do dedo ou mão / controlador raios.</td>
         <td>Eu vejo uma caixa delimitadora que aparecem quando a minha mão está próximo ou identificadores grabbable.</td>
         <td>Posso ouvir sons e ver animações na captura e versão.</td>

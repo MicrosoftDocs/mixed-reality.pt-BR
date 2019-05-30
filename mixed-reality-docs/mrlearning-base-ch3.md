@@ -7,12 +7,12 @@ ms.date: 02/26/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: realidade misturada, hololens de tutoriais, unity,
-ms.openlocfilehash: 04ed2217c473c5649c1850fcc757d866e23b9b56
-ms.sourcegitcommit: 1c0fbee8fa887525af6ed92174edc42c05b25f90
+ms.openlocfilehash: 6f05b2cecd388b1b2f13e7e5228bc90091eee3bd
+ms.sourcegitcommit: aba33a8ad1416f7598048ac35ae9ab1734bd5c37
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65730901"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66270405"
 ---
 # <a name="mr-learning-base-module---dynamic-content-placement-and-solvers"></a>Módulo MR Learning Base - Solvers e o posicionamento de conteúdo dinâmico
 
@@ -48,7 +48,7 @@ O objetivo deste capítulo é aprimorar a coleção de botões criada anteriorme
 
 3. Para configurar a coleção de botões para seguir o usuário, precisamos implementar os seguintes ajustes (também consulte a imagem abaixo):
 - No script Orbital, defina a lista suspensa "tipo de orientação" para "Somente Yaw." Isso permite que, para que apenas um eixo do objeto gira conforme ele segue o usuário.
-- Defina o deslocamento local como 0 em todos os eixos. Definir o deslocamento do mundo para x = 0, y =-0.1 e z = 0.6. Isso bloqueia a movimentação do objeto, de modo que quando o usuário altera a altura, o objeto permanecerá uma altura fixa no ambiente físico, enquanto ainda permite que ele siga o usuário quando o usuário se move sobre o ambiente. Esses valores podem ser ajustados para atingir um intervalo de wade de comportamentos.
+- Defina o deslocamento local como 0 em todos os eixos. Definir o deslocamento do mundo para x = 0, y =-0.1 e z = 0.6. Isso bloqueia a movimentação do objeto, de modo que quando o usuário altera a altura, o objeto permanecerá uma altura fixa no ambiente físico, enquanto ainda permite que ele siga o usuário quando o usuário se move sobre o ambiente. Esses valores podem ser ajustados para obter uma ampla variedade de comportamentos.
 - Para um comportamento de acompanhamento na qual os botões apenas siga a visão do usuário depois que o usuário virar a cabeça seu suficientemente bem, você pode selecionar a caixa de seleção "Usar a revisão de ângulo do deslocamento de mundo" (Observação: Este título pode ser truncado em algumas telas, como ele está na imagem abaixo.) Por exemplo, para que o objeto siga o usuário apenas a cada 90 graus, defina o número de etapas igual a 4 (marcado por uma seta verde no exemplo à esquerda). 
 
 ![Lição 3 Chapter2 Step3im](images/Lesson3_chapter2_step3im.PNG)

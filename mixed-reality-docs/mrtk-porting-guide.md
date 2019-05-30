@@ -7,12 +7,12 @@ ms.date: 04/12/19
 ms.topic: article
 ms.localizationpriority: high
 keywords: Windows Mixed Reality, testar, MRTK, MRTK versão 2, 2 HoloLens
-ms.openlocfilehash: 98fde1a597bcc20b14037176748258d35ef99ab9
-ms.sourcegitcommit: 1c0fbee8fa887525af6ed92174edc42c05b25f90
+ms.openlocfilehash: 02dabd21b7a6add2ce53fe291a447e49057184d0
+ms.sourcegitcommit: aba33a8ad1416f7598048ac35ae9ab1734bd5c37
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65730864"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66270391"
 ---
 # <a name="getting-your-existing-app-ready-for-hololens-2"></a>Preparar seu aplicativo existente para o HoloLens 2
 
@@ -48,12 +48,13 @@ Os desenvolvedores devem avaliar qualquer [dependências de plug-in](https://doc
 
 ## <a name="update-sceneproject-settings-in-unity"></a>Atualizar as configurações de projeto/cena no Unity
 
-Depois de atualizar para o Unity 2018.3.x ou Unity 2019 +, é recomendável atualizar as configurações de determinado no Unity para obter melhores resultados no dispositivo. Essas configurações são descritas em detalhes sob  **[configurações recomendadas para Unity](Recommended-settings-for-Unity.md)**.
+Depois de atualizar para o Unity 2018.3.x ou Unity 2019 +, é recomendável atualizar as configurações de determinado no Unity para obter melhores resultados no dispositivo. Essas configurações são descritas em detalhes sob  **[configurações recomendadas para Unity](Recommended-settings-for-Unity.md)** .
 
 Ele deve ser iterado novamente que o [back-end .NET de script](https://docs.unity3d.com/Manual/windowsstore-dotnet.html) está sendo substituído no Unity 2018 e *removido* em Unity 2019 e, assim, os desenvolvedores fortemente considere alternar seu projeto para [ IL2CPP](https://docs.unity3d.com/Manual/IL2CPP.html). 
 
 > [!NOTE]
 > Back-end IL2CPP script pode causar tempos de build do Unity para Visual Studio e, portanto, os desenvolvedores devem configurar sua máquina de desenvolvedor para [otimizando tempos de build IL2CPP](https://docs.unity3d.com/Manual/IL2CPP-OptimizingBuildTimes.html).
+> Além disso, pode ser benéfico para configurar uma [servidor de Cache](https://docs.unity3d.com/Manual/CacheServer.html), especialmente para projetos do Unity com uma grande quantidade de ativos (excluindo os arquivos de script) ou constantemente mudando cenas/ativos. Ao abrir um projeto, o Unity armazena qualificados ativos em um formato de cache interno no computador do desenvolvedor. Itens devem ser importados novamente e, portanto, processados novamente quando modificado. Esse processo pode ser feito uma vez e salvo em um servidor de Cache e, consequentemente, compartilhado com outros desenvolvedores para economizar tempo, em vez de todos os desenvolvedores de processar a nova importação de novas alterações localmente.
 
 Depois de abordar quaisquer alterações interruptivas após a mudança para a versão atualizada do Unity, os desenvolvedores devem compilar e testar seus aplicativos atuais no HoloLens (1º gen). Além disso, isso é um bom ponto para criar e salvar uma confirmação para o controle do código-fonte. 
 

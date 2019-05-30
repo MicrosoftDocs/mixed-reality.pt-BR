@@ -6,12 +6,12 @@ ms.author: jlyons
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Comunicação remota do HoloLens, comunicação remota, Holographic
-ms.openlocfilehash: 16add6c72b594822cacbef6c92ce196ab9b13429
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 24213444686dd2e5dbda4016dd551a8ead8f305a
+ms.sourcegitcommit: aba33a8ad1416f7598048ac35ae9ab1734bd5c37
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59591000"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66270312"
 ---
 # <a name="holographic-remoting-player"></a>Comunicação remota holográfica Player
 
@@ -19,8 +19,7 @@ O Player holográfica de comunicação remota é um aplicativo complementar que 
 
 O Player de comunicação remota holográfica só pode ser usado com aplicativos de PC projetados especificamente para dar suporte à comunicação remota holográfica.
 
-> [!NOTE]
-> Mais orientações específicas para 2 HoloLens [em breve](index.md#news-and-notes).
+O Player de comunicação remota holográfica está disponível para o HoloLens e HoloLens 2.  Aplicativos para PCs que suporte a comunicação remota Holographic com o HoloLens precisam ser atualizados para dar suporte a Remtoing Holographic com o HoloLens 2.  Entre em contato com seu provedor de aplicativo se você tiver dúvidas sobre quais versões têm suporte.
 
 ## <a name="connecting-to-the-holographic-remoting-player"></a>Conectar-se para o Player de comunicação remota holográfica
 
@@ -48,7 +47,7 @@ Para medir a qualidade da sua conexão, digamos **"Ativar diagnóstico"** enquan
 Enquanto estiver na tela principal, você pode dizer **"desabilitar o diagnóstico"** para desativar o diagnóstico.
 
 ## <a name="pc-system-requirements"></a>Requisitos do sistema de PC
-* Seu PC **deve** estar executando a atualização de aniversário do Windows 10.
+* Seu PC **deve** estar executando a atualização de aniversário do Windows 10 ou mais recente.
 * É recomendável um GeForce GTX 970 ou AMD Radeon R9 290 ou placa de vídeo melhor.
 * É recomendável que você conecte seu PC à sua rede por meio de ethernet para reduzir o número de saltos de sem fio.
 

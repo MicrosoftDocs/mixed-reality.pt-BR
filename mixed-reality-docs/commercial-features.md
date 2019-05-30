@@ -1,23 +1,25 @@
 ---
 title: Recursos comerciais
-description: O Microsoft HoloLens Commercial Suite inclui recursos que tornam mais fácil para as empresas gerenciem dispositivos HoloLens.
-author: xerxesb85
-ms.author: xerxesb
-ms.date: 03/21/2018
+description: O Microsoft HoloLens Commercial Suite inclui recursos que tornam mais fácil para as empresas gerenciem dispositivos HoloLens.  HoloLens 2 são equipt com recursos comerciais por padrão.
+author: scooley
+ms.author: scooley
+ms.date: 05/23/2019
 ms.topic: article
 keywords: HoloLens, comercial, recursos, mdm, gerenciamento de dispositivo móvel, o modo de quiosque
-ms.openlocfilehash: 5fd5c56983fb3e94376fac08c6e96510bccc0002
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 4da540072fd32ac99692f0a13eb5852337c493bb
+ms.sourcegitcommit: aba33a8ad1416f7598048ac35ae9ab1734bd5c37
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59590998"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66270367"
 ---
 # <a name="commercial-features"></a>Recursos comerciais
 
-O Microsoft HoloLens Commercial Suite inclui recursos que tornam mais fácil para as empresas gerenciem dispositivos HoloLens. Recursos comerciais estão incluídos no sistema operacional Windows, mas elas são habilitadas por uma licença. Em quase todos os casos, a licença está habilitada pelo gerenciamento de dispositivos da Microsoft quando o HoloLens é registrado em uma organização. Entre em contato com seu gerente de conta da Microsoft local para adquirir o Commercial Suite do Microsoft HoloLens.
+O Microsoft HoloLens Commercial Suite inclui recursos que tornam mais fácil para as empresas gerenciem dispositivos HoloLens.
 
-&nbsp;
+HoloLens fornecida com duas opções de licenciamento, a licença de desenvolvedor e uma licença comercial.  Atualização do liense desenvolvedor para uma licença comercial para desbloquear capabilitis de comercial do HoloLens.  Entre em contato com seu gerente de conta da Microsoft local para adquirir o Commercial Suite do Microsoft HoloLens.
+
+**Novo no HoloLens 2** -HoloLens 2 todos os acompanham recursos comerciais disponíveis em cada dispositivo.
 
 >[!VIDEO https://www.youtube.com/embed/tNd0e2CiAkE]
 
@@ -30,7 +32,7 @@ O Microsoft HoloLens Commercial Suite inclui recursos que tornam mais fácil par
 * **Gerenciamento de dispositivo móvel (MDM) para o HoloLens.** O departamento de TI pode gerenciar vários dispositivos HoloLens simultaneamente usando soluções como o Microsoft Intune. Você poderá gerenciar as configurações, selecionar aplicativos para instalar e configurar as configurações de segurança personalizadas às necessidades da organização.
 
   ![Gerenciamento de dispositivo móvel em HoloLens fornece gerenciamento de dispositivo de nível empresarial em vários dispositivos.](images/201608-enterprisemanagement-400px.png)
-  
+   
 * **Windows Update for Business.** Controlado atualizações do sistema operacional em dispositivos e suporte para o branch de manutenção de longo prazo.
 * **Segurança de dados.** Criptografia de dados do BitLocker é habilitada no HoloLens para fornecer o mesmo nível de proteção de segurança como qualquer outro dispositivo do Windows.
 * **Acesso de trabalho.** Qualquer pessoa em sua organização pode se conectar remotamente à rede corporativa por meio de uma rede virtual privada em um HoloLens. HoloLens também podem acessar as redes Wi-Fi que exijam credenciais.
@@ -84,7 +86,7 @@ O Microsoft HoloLens Commercial Suite inclui recursos que tornam mais fácil par
 
 ## <a name="enabling-commercial-features"></a>Habilitando recursos comerciais
 
-Recursos comerciais, como a Microsoft Store para empresas, o modo de quiosque, e acesso de Wi-Fi da empresa são configuradas por uma organização administrador de TI. O [Centro de TI do Windows para o HoloLens](https://technet.microsoft.com/itpro/hololens/index) fornece instruções passo a passo para registro de dispositivo e instalar aplicativos da Microsoft Store para empresas.
+Recursos comerciais, como a Microsoft Store para empresas, o modo de quiosque, e acesso de Wi-Fi da empresa são configuradas por uma organização administrador de TI. O [Centro de TI do Windows para o HoloLens](https://docs.microsoft.com/hololens) fornece instruções passo a passo para registro de dispositivo e instalar aplicativos da Microsoft Store para empresas.
 
 ## <a name="see-also"></a>Consulte também
 * [IT Pro guia para HoloLens](https://technet.microsoft.com/itpro/hololens/index)
