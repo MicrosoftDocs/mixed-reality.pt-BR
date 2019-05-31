@@ -7,12 +7,12 @@ ms.date: 04/05/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Misto realidade, interação, design, hololens, mãos, agora, aponte e confirmar
-ms.openlocfilehash: e69c8ff2091beff7d8fbbde4e6f24d909302290a
-ms.sourcegitcommit: 1c0fbee8fa887525af6ed92174edc42c05b25f90
+ms.openlocfilehash: 30f85d2bb455abab3a533e0a829b4fba8cea0a7a
+ms.sourcegitcommit: 5b4292ef786447549c0199003e041ca48bb454cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65730812"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66402378"
 ---
 # <a name="point-and-commit-with-hands"></a>Ponto e o modo de confirmação com mãos
 Ponto e o modo de confirmação com mãos é um modelo de entrada que permite aos usuários de destino, selecione e manipular objetos 3D e conteúdos 2D na distância. Essa técnica de interação "agora" é exclusiva para a realidade misturada e não é um humanos de maneira naturalmente intereact com o mundo real. Por exemplo, no filme super hero *X-homens*, o caractere [Magneto](https://en.wikipedia.org/wiki/Magneto_(comics)) é capaz de contatar e manipular um objeto mais distante na distância com suas mãos. Isso não é algo que os humanos podem fazer na realidade. No HoloLens (AR) e realidade mista (VR), nós equipar os usuários com esse poder mágica, quebrando a restrição física do mundo real não apenas para ter uma experiência e interessantes com conteúdo holográfica, mas também para tornar a interação mais eficaz e eficiente.
@@ -21,7 +21,7 @@ Ponto e o modo de confirmação com mãos é um modelo de entrada que permite ao
 
 Modelo de entrada | [HoloLens (1ª geração)](https://docs.microsoft.com/en-us/windows/mixed-reality/hololens-hardware-details) | HoloLens 2 | [Fones imersivos em exposição](https://docs.microsoft.com/en-us/windows/mixed-reality/immersive-headset-hardware-details) |
 | ---------| -----| ----- | ---------|
-Ponto e confirmação (interação mão distante) | ❌ Não tem suportada | ✔️ Recomendado | ✔️ Recomendado
+Ponto e o modo de confirmação com mãos | ❌ Não tem suportada | ✔️ Recomendado | ✔️ Recomendado
 
 Ponto e a confirmação, também conhecido como mãos agora, é um dos novos recursos que utiliza o novo sistema de controle de mão articulado. Esse modelo de entrada também é o modelo de entrada primário em fones imersivos em exposição com o uso de controladores de movimento.
 
@@ -92,6 +92,6 @@ O conceito de ponto e confirmação de interação mais distante foi inicialment
 
 ## <a name="see-also"></a>Consulte também
 * [Focar com a cabeça e confirmar](gaze-and-commit.md)
-* [Manipulação direta com mãos](direct-manipulation.md)
+* [Manipulação direta com as mãos](direct-manipulation.md)
 * [Interações instinctuais](interaction-fundamentals.md)
 

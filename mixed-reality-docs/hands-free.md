@@ -6,12 +6,12 @@ ms.author: liamar
 ms.date: 04/20/2019
 ms.topic: article
 keywords: Realidade misturada, viva-voz, mantenha o foco, olhares direcionamento, interação, design
-ms.openlocfilehash: 59a460a0c46ace7e633381019d29af54b1061695
-ms.sourcegitcommit: 45676da11ebe33a2aa3dccec0e8ad7d714420853
+ms.openlocfilehash: 23b1def15c4ad900265fab2a2c8757cf96706fbc
+ms.sourcegitcommit: 5b4292ef786447549c0199003e041ca48bb454cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65629016"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66402341"
 ---
 # <a name="hands-free"></a>Viva voz
 
@@ -31,13 +31,13 @@ Alguns cenários específicos podem ser:
 
 ## <a name="hands-free-modalities"></a>Viva-voz modalidades
 
-### <a name="voice-commandingvoice-designmd"></a>[Comandos de voz](voice-design.md)
+### <a name="voice-commandingvoice-designmd"></a>[Comando de voz](voice-design.md)
 
 Usando a voz para comando e controle de que uma interface pode não apenas permitir que o usuário opere para mãos livres, mas também ignorar várias etapas. O uso desse modalidade pode variar de permitindo que o usuário simplesmente lê o nome do qualquer botão em voz alta para ativá-lo, como em Consulte-it-say-it, para conversar com um agente que pode realizar tarefas para você.
 
 
 
-### <a name="head-gaze-and-dwellgaze-and-dwellmd"></a>[Olhar head e duração](gaze-and-dwell.md)
+### <a name="head-gaze-and-dwellgaze-and-dwellmd"></a>[Focar com a cabeça e esperar](gaze-and-dwell.md)
 
 Em algumas situações viva-voz, usando a voz não é ideal ou até mesmo possível. Ambientes fabris alto, privacidade ou sociais normas podem ser restrições. O cabeçalho olhares + lidam bem com modelo permite que o usuário navegue o aplicativo usando seu principal vetor para apontar ao remanescentes, ou dwelling em um botão irá ativá-lo após um determinado período de tempo (normalmente, de cerca de 1 segundo ou menos). 
 
@@ -96,5 +96,5 @@ O usuário entender...
 
 ## <a name="see-also"></a>Consulte também
 * [Focar com a cabeça e confirmar](gaze-and-commit.md)
-* [Manipulação direta](direct-manipulation.md)
-* [Apontar e confirmar](point-and-commit.md)
+* [Manipulação direta com as mãos](direct-manipulation.md)
+* [Apontar e confirmar com as mãos](point-and-commit.md)

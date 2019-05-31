@@ -6,12 +6,12 @@ ms.author: cmeekhof
 ms.date: 04/02/2019
 ms.topic: article
 keywords: Misto realidade, olhar, olhar direcionamento, interação, de design, mãos perto, HoloLens
-ms.openlocfilehash: a9e67f21587381dbc1090f89935eaa2b88630dae
-ms.sourcegitcommit: c20563b8195c0c374a927b96708d958b127ffc8f
+ms.openlocfilehash: bb44244a3cb932a56703f84ba129def5ee5f9b67
+ms.sourcegitcommit: 5b4292ef786447549c0199003e041ca48bb454cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65974751"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66402364"
 ---
 # <a name="direct-manipulation"></a>Manipulação direta
 
@@ -25,7 +25,7 @@ A manipulação direta é baseado em funcionalidade, que significa amigável do 
 
 | Modelo de entrada | [HoloLens (1st Gen)](https://review.docs.microsoft.com/en-us/windows/mixed-reality/hololens-hardware-details?branch=master) | HoloLens 2 |[Fones imersivos em exposição](https://review.docs.microsoft.com/en-us/windows/mixed-reality/immersive-headset-hardware-details?branch=master)|
 |:-------- | :-------| :--------| :------------|
-| Manipulação direta | ❌ Não tem suportada | ✔️ Recomendado | Uma alternativa ➕ [aponte e confirmar](https://review.docs.microsoft.com/en-us/windows/mixed-reality/point-and-commit?branch=master) é recomendado.
+| Manipulação direta | ❌ Não tem suportada | ✔️ Recomendado | ➕ Uma alternativa, [aponte e confirmar com mãos](point-and-commit.md) é recomendado.
 
 A manipulação direta é um modelo de entrada primário em 2 HoloLens e utiliza o novo sistema de controle de mão articulado. O modelo de entrada também está disponível no fones imersivos em exposição com o uso de controladores de movimento, mas não é recomendado como o principal meio de interação fora de manipulação de objetos.  Manipluation direto não está disponível no HoloLens v1.
 

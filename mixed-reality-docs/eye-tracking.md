@@ -7,12 +7,12 @@ ms.date: 04/05/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Acompanhamento de olhos, misturadas realidade, entrada, olhar olho
-ms.openlocfilehash: 948d6ad36bfa3f7b179268a8e6241c9a2ce8e732
-ms.sourcegitcommit: c20563b8195c0c374a927b96708d958b127ffc8f
+ms.openlocfilehash: d41b9973ede323e842d7187becb1220ba9980a5d
+ms.sourcegitcommit: 5b4292ef786447549c0199003e041ca48bb454cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65974762"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66402347"
 ---
 # <a name="eye-tracking-on-hololens-2"></a>Acompanhamento em HoloLens 2 a olho nu
 HoloLens 2 permite a um nível totalmente novo de contexto e o entendimento humanos dentro de Holographic experiência ao fornecer aos desenvolvedores a incrível capacidade de uso das informações sobre o que os usuários estão vendo. Esta página fornece uma visão geral de como os desenvolvedores podem se beneficiar de acompanhamento de olho para vários casos de uso e o que procurar durante a criação de interfaces do usuário com base em olhar olho. 
@@ -127,7 +127,7 @@ No caso de um cursor, isso pode resultar no efeito "fleeing cursor" devido à pe
 5. **Conta para imprecisions:** Fazemos distinção dois tipos de imprecisions que são perceptíveis aos usuários: Deslocamento e variação. A maneira mais fácil para os deslocamentos de endereço é fornecer destinos grandes o suficiente para interagir com (> 2° em ângulo visual – como referência: sua miniatura é aproximadamente 2° em ângulo visual quando você se estendem o arm (1)). Isso leva as seguintes diretrizes:
     - Não force os usuários para selecionar destinos pequenos: Pesquisas mostram que, se os destinos são suficientemente grandes (e o sistema é muito bem projetado), os usuários descrevem a interação como mágica e sem nenhum esforço. Se os destinos de se tornar muito pequenos, os usuários descrevem a experiência como fatiguing e frustrante.
     
-# <a name="eye-gaze-design-guidelines"></a>Diretrizes de design de olhar olho
+## <a name="eye-gaze-design-guidelines"></a>Diretrizes de design de olhar olho
 
 Com o HoloLens 2, temos a excelente oportunidade de tornar olhar & confirmação mais rápida e mais confortável usando olhar de olho em vez de olhar principal. No entanto, a olhar de olho se comporta de forma muito diferente para olhar principal de determinadas maneiras e, portanto, é fornecido com um número de desafios únicos. Diretrizes de Design olhares olho, resumimos vantagens gerais e os desafios a serem considerados ao usar o acompanhamento de olho como um meio de entrada em seu aplicativo holographic. Nesta seção, abordaremos as considerações de design específicas para olhar olho & confirmação. Primeiro, seus olhos mover incrivelmente rápida e, portanto, são ótimos para direcionamento rapidamente no modo de exibição. Isso torna o olho olhares ideal para olhar rápido & ações, especialmente quando combinadas com confirmações rápidas como um pressionamento de botão-indicador e polegar de confirmação.
 
