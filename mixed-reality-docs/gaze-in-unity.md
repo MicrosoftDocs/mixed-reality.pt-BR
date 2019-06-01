@@ -2,28 +2,29 @@
 title: Mantenha o foco no Unity
 description: Olhar é dos principais meios para que os usuários as hologramas que seu aplicativo cria na realidade mista de destino.
 author: thetuvix
-ms.author: alexturn
+ms.author: yoyoz
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Mantenha o foco, unity, holograma, realidade mista
-ms.openlocfilehash: 09915479a9eef95c5ce4533371e113ab6191a331
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: b2cc86db156a1e97b013e4cd6debe3abe5ffb6dd
+ms.sourcegitcommit: 60060386305eabfac2758a2c861a43c36286b151
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59590960"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66453724"
 ---
-# <a name="gaze-in-unity"></a>Mantenha o foco no Unity
+# <a name="head-gaze-in-unity"></a>Head olhar no Unity
 
 [Olhares](gaze.md) é dos principais meios para que os usuários de destino do [hologramas](hologram.md) seu aplicativo cria no [realidade misturada](mixed-reality.md).
 
-## <a name="implementing-gaze"></a>Implementando olhar
+
+## <a name="implementing-head-gaze"></a>Implementação de olhar principal
 
 Conceitualmente, [olhares](gaze.md) é implementado com a projeção de um raio de cabeça do usuário em que é o fone de ouvido, da direção para frente estão enfrentando e determinar o que ray colide com. No Unity, a posição do usuário principal e direção são expostas por meio de principal do Unity [câmera](camera-in-unity.md), especificamente [UnityEngine.Camera.main](http://docs.unity3d.com/ScriptReference/Camera-main.html).[ Transform.Forward](http://docs.unity3d.com/ScriptReference/Transform-forward.html) e [UnityEngine.Camera.main](http://docs.unity3d.com/ScriptReference/Camera-main.html).[ Transform](http://docs.unity3d.com/ScriptReference/Transform-position.html).
 
 Chamando [Physics.RayCast](http://docs.unity3d.com/ScriptReference/Physics.Raycast.html) resulta em uma [RaycastHit](http://docs.unity3d.com/ScriptReference/RaycastHit.html) estrutura que contém informações sobre a colisão, incluindo o ponto 3D em que ocorreu a colisão e o outro GameObject raio olhar colidiram com.
 
-### <a name="example-implement-gaze"></a>Exemplo: Implemente olhar
+### <a name="example-implement-head-gaze"></a>Exemplo: Implemente olhar de cabeçalho
 
 ```cs
 void Update()
@@ -51,22 +52,11 @@ Embora o exemplo acima demonstra como fazer uma única raycast em um loop de atu
 
 Assim como na área de trabalho onde você usa um ponteiro do mouse para direcionar e interagir com o conteúdo, você deve implementar uma [cursor](cursors.md) que representa a olhar do usuário. Isso dá a confiança do usuário no qual ele estão prestes a interagir com.
 
-## <a name="gaze-in-mixed-reality-toolkit"></a>Mantenha o foco no Kit de ferramentas de realidade misturada
-Quando você importa [MRTK liberar pacotes do Unity](https://github.com/Microsoft/MixedRealityToolkit-Unity/releases) ou clonar o projeto a partir o [repositório GitHub](https://github.com/Microsoft/MixedRealityToolkit-Unity), você vai encontrar um novo menu 'Toolkit de realidade mista' no Unity. No menu 'Configurar', você verá o menu 'Aplicar misto realidade cena configurações'. Quando você clica nele, ele remove a câmera padrão e adiciona os componentes básicos - [InputManager](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit/Input/Prefabs/InputManager.prefab), [MixedRealityCameraParent](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit/Input/Prefabs/MixedRealityCameraParent.prefab), e [DefaultCursor](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit/Input/Prefabs/Cursor/DefaultCursor.prefab).
-
-![Menu MRTK para a instalação de cena](images/MRTK_Input_Menu.png)<br>
-*Menu MRTK para a instalação de cena*
-
-![Instalação automática de cena no MRTK](images/MRTK_HowTo_Input1.png)<br>
-*Instalação automática de cena no MRTK*
-
-### <a name="gaze-related-scripts-in-mixed-reality-toolkit"></a>Mantenha o foco de scripts relacionados no Kit de ferramentas de realidade mista
-Misto do Kit de ferramentas da realidade InputManager pré-fabricado inclui [GazeManager.cs](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit/Input/Scripts/Gaze/GazeManager.cs) e [olhares estabilizador](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit/Input/Scripts/Gaze/GazeStabilizer.cs). Sob [SimpleSinglePointerSelector](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit/Input/Scripts/Focus/SimpleSinglePointerSelector.cs), você pode atribuir o Cursor personalizado. Em default, animados [DefaultCursor](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit/Input/Prefabs/Cursor/DefaultCursor.prefab) é atribuído.
-
-[Cursor.prefab](https://github.com/Microsoft/MixedRealityToolkit-Unity/tree/htk_release/Assets/HoloToolkit/Input/Prefabs/Cursor) e [CursorWithFeedback.prefab](https://github.com/Microsoft/MixedRealityToolkit-Unity/tree/htk_release/Assets/HoloToolkit/Input/Prefabs/Cursor) mostra como visualizar o seu foco no uso de cursores.
+## <a name="gaze-in-mixed-reality-toolkit-v2"></a>Mantenha o foco na realidade mista Toolkit v2
+Você pode acessar um olhar do [Gerenciador de entrada](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Input/Overview.html) no MRTK v2.
 
 ## <a name="see-also"></a>Consulte também
 * [Câmera](camera-in-unity.md)
-* [Gaze](gaze.md)
+* [Olhar entrada](gaze.md)
 * [Cursores](cursors.md)
-* [Mantenha o foco de direcionamento](gaze-targeting.md)
+* [Focar direcionamento](gaze-targeting.md)
