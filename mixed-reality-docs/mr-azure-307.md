@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: realidade mista, Azure, academy, unity, tutorial, api, aprendizado de máquina, AM, o estúdio de machine learning, hololens, envolventes e vr
-ms.openlocfilehash: 726a6cce91d46ad878f8502381d085fb979ac72a
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 93263817df0fd809a09b32c1b34a636eab7026a1
+ms.sourcegitcommit: 9b6949d7cd2e67e6bde9b32aebeaeea325baa6c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59589628"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66516036"
 ---
 >[!NOTE]
 >Os tutoriais da academia de realidade mista foram criados com o HoloLens (1º gen) e misto realidade fones Imersivos em exposição em mente.  Como tal, achamos que é importante deixar esses tutoriais em vigor para os desenvolvedores que ainda estiver procurando por orientação no desenvolvimento para esses dispositivos.  Esses tutoriais serão **_não_** ser atualizados com os conjuntos de ferramentas ou interações que está sendo usadas para o HoloLens 2 a mais recente.  Eles serão mantidos para continuar trabalhando nos dispositivos com suporte. Haverá uma nova série de tutoriais que serão lançados no futuro e que demonstra como desenvolver para o HoloLens 2.  Este aviso será atualizado com um link para esses tutoriais quando são lançadas.
@@ -204,7 +204,7 @@ Esta tabela de exemplo contém 9998 entradas.
 
     3.  No campo de texto abaixo, insira **ProductsTableCSV.csv** como o nome do conjunto de dados (embora deve ser adicionado automaticamente).
 
-    4.  Usando o menu suspenso para **tipo**, selecione **arquivo CSV genérico com um cabeçalho (. csv)**.
+    4.  Usando o menu suspenso para **tipo**, selecione **arquivo CSV genérico com um cabeçalho (. csv)** .
 
     5.  Pressione a escala na parte inferior direita da janela de carregamento e seu **conjunto de dados** será carregado.
 
@@ -220,23 +220,23 @@ Para iniciar a criação de um experimento:
 
 2.  Uma nova página será exibida com um teste em branco:
 
-3.  No painel esquerdo expandir **conjuntos de dados salvos* > * Meus conjuntos de dados * * e arraste a **ProductsTableCSV** para o **tela do experimento**.
+3.  No painel à esquerda, expanda **conjuntos de dados salvos* > *Meus conjuntos de dados** e arraste o **ProductsTableCSV** para o **Tela de experimento**.
 
     ![O Machine Learning Studio: O experimento](images/AzureLabs-Lab7-16.png)
 
-4.  No painel à esquerda, expanda **Data Transformation** > **exemplo e dividir**. Em seguida, arraste a **dividir dados** item para o **tela do experimento**. O item de dados de divisão irá dividir o conjunto de dados em duas partes. Uma parte que você usará para treinar o algoritmo de aprendizado de máquina. A segunda parte será usada para avaliar a precisão do algoritmo gerado.
+4.  No painel à esquerda, expanda **Data Transformation** > **exemplo e dividir**. Em seguida, arraste a **dividir dados** item para o **tela do experimento**. O item de dados de divisão irá dividir o conjunto de dados em duas partes. Uma parte que você usará para treinar o algoritmo de aprendizado de máquina. A segunda parte será usada para avaliar a precisão do algoritmo gerado.
 
     ![O Machine Learning Studio: O experimento](images/AzureLabs-Lab7-17.png)
 
-5.  No painel à direita (enquanto os dados de divisão item na tela é selecionado), edite o **fração de linhas no primeiro conjunto de dados de saída** à **0,7**. Isso dividirá os dados em duas partes, a primeira parte será 70% dos dados e a segunda parte será de 30% restantes. Para garantir que os dados são divididos aleatoriamente, verifique se o **divisão aleatória** caixa de seleção permanece marcada.
+5.  No painel à direita (enquanto os dados de divisão item na tela é selecionado), edite o **fração de linhas no primeiro conjunto de dados de saída** à **0,7**. Isso dividirá os dados em duas partes, a primeira parte será 70% dos dados e a segunda parte será de 30% restantes. Para garantir que os dados são divididos aleatoriamente, verifique se o **divisão aleatória** caixa de seleção permanece marcada.
 
     ![O Machine Learning Studio: O experimento](images/AzureLabs-Lab7-18.png)
 
-6.  Arraste uma conexão da base do **ProductsTableCSV** item na tela para a parte superior do item de dados de divisão. Isso se conectará os itens e enviar o **ProductsTableCSV** saída do conjunto de dados (os dados) para a entrada de dados de divisão.  
+6.  Arraste uma conexão da base do **ProductsTableCSV** item na tela para a parte superior do item de dados de divisão. Isso se conectará os itens e enviar o **ProductsTableCSV** saída do conjunto de dados (os dados) para a entrada de dados de divisão.  
 
     ![O Machine Learning Studio: O experimento](images/AzureLabs-Lab7-19.png)
 
-7.  No **experimentos** do painel no lado esquerdo, expanda **Machine Learning* > * Train **. Arraste o **treinar modelo * * item out em à tela do experimento. Sua tela deve ser o mesmo que o abaixo.
+7.  No **experimentos** do painel no lado esquerdo, expanda **Machine Learning* > * Train * *. Arraste o **modelo de treinamento** item fora à tela do experimento. Sua tela deve ser o mesmo que o abaixo.
 
     ![O Machine Learning Studio: O experimento](images/AzureLabs-Lab7-20.png)
 
@@ -244,31 +244,31 @@ Para iniciar a criação de um experimento:
 
     ![O Machine Learning Studio: O experimento](images/AzureLabs-Lab7-21.png)
 
-9.  Selecione o **modelo de treinamento** item na tela e, no **propriedades** painel (no lado direito da janela do navegador), clique o **iniciar seletor de coluna**  botão.
+9.  Selecione o **modelo de treinamento** item na tela e, no **propriedades** painel (no lado direito da janela do navegador), clique o **iniciar seletor de coluna** botão.
 
 10. Na caixa de texto Digite **produto** e, em seguida, pressione **Enter**, *produto* será definido como uma coluna para treinar previsões. Depois disso, clique no **escala** no canto inferior direito para fechar a caixa de diálogo de seleção.
 
     ![O Machine Learning Studio: O experimento](images/AzureLabs-Lab7-22.png)
 
-11. Você pretende treinar uma **Regressão logística Multiclasse** algoritmo para prever mais vendidos **produto** com base na hora do dia e a data. Ele está além do escopo deste documento para explicar os detalhes dos diferentes algoritmos fornecidos pelo Azure Machine Learning studio, no entanto, você pode descobrir mais sobre o [folha de consulta de algoritmo do Machine Learning](https://docs.microsoft.com/azure/machine-learning/studio/algorithm-cheat-sheet)
+11. Você pretende treinar uma **Regressão logística Multiclasse** algoritmo para prever mais vendidos **produto** com base na hora do dia e a data. Ele está além do escopo deste documento para explicar os detalhes dos diferentes algoritmos fornecidos pelo Azure Machine Learning studio, no entanto, você pode descobrir mais sobre o [folha de consulta de algoritmo do Machine Learning](https://docs.microsoft.com/azure/machine-learning/studio/algorithm-cheat-sheet)
 
-12. No painel de itens de teste à esquerda, expanda * **Machine Learning* > *inicializar modelo* > * classificação ***e arraste o **Multiclasse Logística regressão * * item para a tela do experimento.
+12. No painel de itens de teste à esquerda, expanda * **Machine Learning* > *inicializar modelo* > * classificação * * * e arraste o **Regressão logística Multiclasse**  item para a tela do experimento.
 
 13. Conecte a saída, da parte inferior da **Regressão logística Multiclasse**, com a entrada do canto superior esquerdo do **treinar modelo** item.
 
     ![O Machine Learning Studio: O experimento](images/AzureLabs-Lab7-23.png)
 
-14. Na lista de itens do experimento no painel à esquerda, expanda **Machine Learning* > * pontuação**e arraste o **item de modelo de pontuação * * na tela de desenho.
+14. Na lista de itens do experimento no painel à esquerda, expanda **Machine Learning* > * pontuação * * e arraste a **modelo de pontuação** item na tela de desenho.
 
-15. Conecte a saída, da parte inferior da **modelo de treinamento**, com a entrada do canto superior esquerdo do **modelo de pontuação**.
+15. Conecte a saída, da parte inferior da **modelo de treinamento**, com a entrada do canto superior esquerdo do **modelo de pontuação**.
 
-16. Conecte a saída do canto inferior direito da **dividir dados**, com a entrada do canto superior direito do **modelo de pontuação* item *.
+16. Conecte a saída do canto inferior direito da **dividir dados**, à entrada do canto superior direito do  **modelo de pontuação* item*.
 
     ![O Machine Learning Studio: O experimento](images/AzureLabs-Lab7-24.png)
 
-17. Na lista de **experimento** itens no painel à esquerda, expanda * **Machine Learning* > * * Evaluate**e arraste o **avaliar modelo * * item para a tela.
+17. Na lista de **experimento** itens no painel à esquerda, expanda * **Machine Learning* > * avaliar * * * e arraste o **avaliar modelo** item para a tela.
 
-18. Conecte a saída do **modelo de pontuação** para a entrada do canto superior esquerdo do **avaliar modelo**.
+18. Conecte a saída do **modelo de pontuação** à entrada do canto superior esquerdo a **avaliar modelo**.
 
     ![O Machine Learning Studio: O experimento](images/AzureLabs-Lab7-25.png)
 
@@ -278,11 +278,11 @@ Para iniciar a criação de um experimento:
 
 20. Você pode ver os **status** do experimento no canto superior direito da tela. Aguarde alguns instantes para que o teste a fim de concluir.
 
-    > Se você tiver um conjunto de dados grande (reais), é provável que o teste pode levar horas para ser executado.
+    > Se você tiver um conjunto de dados grande (reais), é provável que o teste pode levar horas para ser executado.
 
     ![O Machine Learning Studio: O experimento](images/AzureLabs-Lab7-27.png)
 
-21. Clique com botão direito do **avaliar modelo** item na tela e de passagem do menu de contexto o mouse sobre **resultados da avaliação**, em seguida, selecione **visualizar**.
+21. Clique com botão direito do **avaliar modelo** item na tela e de passagem do menu de contexto o mouse sobre **resultados da avaliação**, em seguida, selecione **visualizar**.
 
     ![O Machine Learning Studio: O experimento](images/AzureLabs-Lab7-28.png)
 
@@ -292,17 +292,17 @@ Para iniciar a criação de um experimento:
 
 23. Fechar o **resultados**.
 
-24. Usar o modelo de Machine Learning treinado recentemente, você precisa para expô-lo como um **serviço Web**. Para fazer isso, clique no **configurar o serviço Web** menu item no menu na parte inferior da página e clique em **serviço Web preditivo**.
+24. Usar o modelo de Machine Learning treinado recentemente, você precisa para expô-lo como um **serviço Web**. Para fazer isso, clique no **configurar o serviço Web** menu item no menu na parte inferior da página e clique em **serviço Web preditivo**.
 
     ![O Machine Learning Studio: O experimento](images/AzureLabs-Lab7-30.png)
 
 25. Uma nova guia será criada e o modelo de treinamento são mesclados para criar o novo serviço web. 
 
-26. No menu na parte inferior da página, clique em **salve**, em seguida, clique em **executar**. Você verá o status seja atualizado no canto superior direito da tela do experimento.
+26. No menu na parte inferior da página, clique em **salve**, em seguida, clique em **executar**. Você verá o status seja atualizado no canto superior direito da tela do experimento.
 
     ![O Machine Learning Studio: O experimento](images/AzureLabs-Lab7-31.png)
 
-27. Depois de terminar a execução, uma **implantar serviço Web** botão será exibido na parte inferior da página. Você está pronto para implantar o serviço web. Clique em **implantar serviço Web** (clássico) no menu na parte inferior da página.
+27. Depois de terminar a execução, uma **implantar serviço Web** botão será exibido na parte inferior da página. Você está pronto para implantar o serviço web. Clique em **implantar serviço Web** (clássico) no menu na parte inferior da página.
 
     ![O Machine Learning Studio: O experimento](images/AzureLabs-Lab7-32.png)
 
@@ -313,7 +313,7 @@ Para iniciar a criação de um experimento:
     ![O Machine Learning Studio: O experimento](images/AzureLabs-Lab7-33.png)
 
     > [!NOTE] 
-    > Se você clicar em teste nesta página, você poderá inserir dados de entrada e exibir a saída. Insira o **dia** e **hora**. Deixe o **produto** entrada em branco. Em seguida, clique o **confirmar** botão. A saída na parte inferior da página mostrará o JSON que representa a probabilidade de cada produto que está sendo a escolha.
+    > Se você clicar em teste nesta página, você poderá inserir dados de entrada e exibir a saída. Insira o **dia** e **hora**. Deixe o **produto** entrada em branco. Em seguida, clique o **confirmar** botão. A saída na parte inferior da página mostrará o JSON que representa a probabilidade de cada produto que está sendo a escolha.
 
 29. Uma nova página da web será aberta, exibindo as instruções e alguns exemplos sobre a estrutura de solicitação necessários para o Machine Learning Studio. Cópia de **URI de solicitação** exibidos nesta página, no seu bloco de notas.
 
@@ -500,7 +500,7 @@ Como parte do pacote importado, você será receberam essa classe, embora ele es
     ![Criar a classe ShelfKeeper](images/AzureLabs-Lab7-51.png)
 
     > [!IMPORTANT]
-    > Se o seu script não tem os destinos de referência (ou seja, *Data (texto de malha)*), basta arrastar os objetos correspondentes do **painel de hierarquia**, nos campos de destino. Veja a seguir para obter explicação, se necessário:
+    > Se o seu script não tem os destinos de referência (ou seja, *Data (texto de malha)* ), basta arrastar os objetos correspondentes do **painel de hierarquia**, nos campos de destino. Veja a seguir para obter explicação, se necessário:
     > 
     > 1.  Abra o **ponto Spawn** dentro da matriz a **ShelfKeeper** por left-clicking-lo de script do componente. Uma subseção será exibida chamada **tamanho**, que indica o tamanho da matriz. Tipo de **3** na caixa de texto próximo a **tamanho** e pressione **Enter**, e três slots serão criadas abaixo.
     > 2. Dentro de **hierarquia** expandir a **exibição de tempo** objeto (por left-clicking na seta ao lado dela). Em seguida clique o ***câmera principal*** de dentro a **hierarquia**, de modo que o **Inspetor** mostra suas informações.
@@ -811,7 +811,7 @@ Para criar essa classe:
 
 14. Arraste o **ProductPrediction** script a partir de classe a **Script** pasta, para o **câmera principal** objeto.
 
-15. Salvar sua cena e seu projeto **arquivo** > ***salvar cena* / *arquivo***   >  **Salvar projeto**.
+15. Salvar sua cena e seu projeto **arquivo** >  ***salvar cena* / *arquivo***   >  **Salvar projeto**.
 
 ## <a name="chapter-10---build-the-uwp-solution"></a>Capítulo 10 - Compile a solução UWP
 
