@@ -6,12 +6,12 @@ ms.author: thmignon
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Limites de modelagem 3D, orientação, requisitos de ativo, criação de diretrizes, iniciador, iniciador 3D, texturas, materiais, complexidade, triângulos, malha, polígonos, polycount, de modelagem
-ms.openlocfilehash: 209a92a8e7070ca23bcb9402d8716f3f91747a96
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 73af40cf2915742cab612625c8243a36ee74d748
+ms.sourcegitcommit: f20beea6a539d04e1d1fc98116f7601137eebebe
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59589347"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66692287"
 ---
 # <a name="create-3d-models-for-use-in-the-home"></a>Criar modelos 3D para uso em casa
 
@@ -29,11 +29,11 @@ O restante deste artigo inclui uma visão geral detalhada desses requisitos, bem
 
 ## <a name="detailed-guidance"></a>Orientação detalhada
 
-## <a name="exporting-models"></a>Exportando modelos
+### <a name="exporting-models"></a>Exportando modelos
 
 O Windows Mixed Reality doméstica espera ativos 3D para ser fornecidas usando o formato de arquivo .glb com imagens inseridas e dados binários. Glb é a versão binária do formato glTF que é um royalty de padrão aberto gratuito para entrega de ativos 3D mantido pelo grupo Khronos. À medida que glTF evolui como um padrão do setor para conteúdo 3D interoperável assim será suporte da Microsoft para o formato em aplicativos do Windows e experiências. Se você não tiver criado um ativo de glTF antes que você pode encontrar uma [lista de Exportadores com suporte e conversores](https://github.com/KhronosGroup/glTF/blob/master/README.md#converters-and-exporters) na página do github glTF trabalho grupo.  
 
-## <a name="modeling-guidelines"></a>Diretrizes de modelagem
+### <a name="modeling-guidelines"></a>Diretrizes de modelagem
 
 Windows espera ativos a ser gerado usando as seguintes diretrizes de modelagem para garantir a compatibilidade com a experiência inicial de realidade misturada. Durante a modelagem em seu programa de sua escolha tenha em mente as seguintes recomendações e limitações:
 1. O eixo vertical deve ser definido como "Y".
@@ -57,7 +57,7 @@ O Windows Mixed Reality inicial não oferece suporte a modelos com mais de 10.00
 |  LOD 1 |  5,000  |  10,000 | 
 |  LOD 2 |  2,500  |  10,000 | 
 
-### <a name="node-counts-and-submesh-limits"></a>Limites de contagens de nó e submalha realçada
+### <a name="node-counts-and-submesh-limits"></a>Contagens de nó e limites de submalha realçada
 O Windows Mixed Reality inicial não oferece suporte a modelos com mais de 64 nós ou 32 submeshes por LOD. Nós são um conceito a [glTF especificação](https://github.com/KhronosGroup/glTF/tree/master/specification/2.0#nodes-and-hierarchy) que definem os objetos na cena. Submeshes são definidos na matriz de [primitivos](https://github.com/KhronosGroup/glTF/tree/master/specification/2.0#meshes) da malha no objeto. 
 
 |  Recurso |  Descrição  |  Máximo com suporte | Documentação |
@@ -279,6 +279,6 @@ Há suporte para apenas um único atributo de vértice de UV.
 
 ## <a name="see-also"></a>Consulte também
 
-* [Implementar iniciadores de aplicativo 3D (aplicativos UWP)](implementing-3d-app-launchers.md)
-* [Implementar iniciadores de aplicativo 3D (aplicativos Win32)](implementing-3d-app-launchers-win32.md)
-* [Navegando o Windows Mixed Reality inicial](navigating-the-windows-mixed-reality-home.md)
+* [Implementar inicializadores de aplicativos 3D (aplicativos UWP)](implementing-3d-app-launchers.md)
+* [Implementar inicializadores de aplicativos 3D (aplicativos Win32)](implementing-3d-app-launchers-win32.md)
+* [Como navegar na página inicial do Windows Mixed Reality](navigating-the-windows-mixed-reality-home.md)
