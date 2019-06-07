@@ -6,12 +6,12 @@ ms.author: joekelly
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, som espacial, design, estilo
-ms.openlocfilehash: c8f5268faf5eef779401c046947c3137d177cb89
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: c758037300392d9365c16933677fb0f026976c2a
+ms.sourcegitcommit: c2a5bff423feba7d29d5431c870b6017c2fe1bc2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59589094"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66750310"
 ---
 # <a name="spatial-sound-design"></a>Design de som espacial
 
@@ -26,12 +26,23 @@ Se você nunca foram executados [Marco Polo](https://en.wikipedia.org/wiki/Marco
 ## <a name="device-support"></a>Suporte a dispositivos
 
 <table>
-<tr>
-<th>Recurso</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Fones imersivos em exposição</a></th>
-</tr><tr>
-<td> Som espacial</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
-</tr>
+    <colgroup>
+    <col width="33%" />
+    <col width="33%" />
+    <col width="33%" />
+    </colgroup>
+    <tr>
+        <td><strong>Recurso</strong></td>
+        <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Fones imersivos em exposição</strong></a></td>
+    </tr>
+     <tr>
+        <td>Design de som espacial</td>
+        <td>✔️</td>
+        <td>✔️</td>
+    </tr>
 </table>
+
 
 ## <a name="four-key-things-spatial-sound-does-for-mixed-reality-development"></a>Quatro coisas principais som espacial faz para o desenvolvimento de realidade misturada
 

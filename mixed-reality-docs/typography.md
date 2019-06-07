@@ -6,12 +6,12 @@ ms.author: dongpark
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, design, estilo, fonte, tipografia, interface do usuário, experiência do usuário
-ms.openlocfilehash: debf125a7f82ac79fe3ad776ba9c8c0b69396848
-ms.sourcegitcommit: f20beea6a539d04e1d1fc98116f7601137eebebe
+ms.openlocfilehash: 6371aa9b12b61d12acdaaae5f7730ff2ae9757f0
+ms.sourcegitcommit: c2a5bff423feba7d29d5431c870b6017c2fe1bc2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66692383"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66750341"
 ---
 # <a name="typography"></a>Tipografia
 
@@ -67,9 +67,9 @@ Para usar texto escuro, você deve usar um prato back brilhante para torná-lo m
 
 ## <a name="recommended-font-size"></a>Tamanho da fonte recomendado
 
-Como você pode esperar, tamanhos de tipo que usamos em um computador ou um dispositivo de tablet (normalmente entre 12 – 32 pt) parecer muito pequenos em uma distância de 2 metros. Ele depende das características de cada fonte, mas em geral, são o mínimo recomendado, exibindo o ângulo e a altura da fonte para manter a legibilidade em torno de 0.35°-0.4°/12.21-13.97mm com base em nossos estudos de pesquisa do usuário. Trata-se 35 40pt com o fator de escala apresentado acima. 
+Como você pode esperar, tamanhos de tipo que usamos em um computador ou um dispositivo de tablet (normalmente entre 12 – 32 pt) parecer muito pequenos em uma distância de 2 metros. Ele depende das características de cada fonte, mas em geral, são o mínimo recomendado, exibindo o ângulo e a altura da fonte para manter a legibilidade em torno de 0.35°-0.4°/12.21-13.97mm com base em nossos estudos de pesquisa do usuário. Trata-se de 35 40pt com o fator de escala introduzido no [texto no Unity](text-in-unity.md) página. 
 
-Para a interação quase em 0.45m(45cm), ângulo de exibição da fonte legível mínima e a altura são 0.4 °-0,5 ° / 3.14 – 3.9 mm. Trata-se 9-12 pt com o fator de escala apresentado acima.
+Para a interação quase em 0.45m(45cm), ângulo de exibição da fonte legível mínima e a altura são 0.4 °-0,5 ° / 3.14 – 3.9 mm. Trata-se de 9-12 pt com o fator de escala introduzido no [texto no Unity](text-in-unity.md).
 
 ![Próximo e longe intervalo interação](images/typography-distance-1000px.jpg)
 *intervalo de interação de conteúdo no próximo e distante*
