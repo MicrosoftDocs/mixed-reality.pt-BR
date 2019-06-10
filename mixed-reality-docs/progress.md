@@ -6,18 +6,18 @@ ms.author: dongpark
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, design, controles da interface do usuário, experiência do usuário
-ms.openlocfilehash: 9edddc7800f0d7334d1ceba97b9a06fd6d4580ac
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: d62d86c690233f351b6c156c66eba33cb2687ea6
+ms.sourcegitcommit: c6b59f532a9c5818d9b25c355a174a231f5fa943
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59590592"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66813737"
 ---
 # <a name="displaying-progress"></a>Exibindo o progresso
 
 Um controle de progresso oferece feedback ao usuário que uma operação de execução longa está em andamento. Isso pode significar que o usuário não pode interagir com o aplicativo quando o indicador de progresso está visível e também pode indicar a duração do tempo de espera, dependendo do indicador usado.
 
-![Exemplo de anel de progresso no HoloLens](images/640px-progress-hero.jpg)<br>
+![Exemplo de anel de progresso no HoloLens](images/HoloLens2_Loader.gif)<br>
 *Exemplo de anel de progresso no HoloLens*
 
 ## <a name="types-of-progress"></a>Tipo de progresso
@@ -47,7 +47,8 @@ Você pode adicionar a personalidade e uma identidade visual do seu aplicativo, 
 * É sempre bom fornecer informações de status sobre o que está acontecendo para o usuário. Pré-fabricado andamento fornece diversos estilos visuais, incluindo o progresso de padrão de tipo de anel do Windows para fornecer o status. Você também pode usar uma malha personalizada com uma animação, se você deseja que o estilo de seu progresso para alinhar à marca do seu aplicativo.
 
 ## <a name="see-also"></a>Consulte também
-* [Pré-fabricados para o progresso no Kit de ferramentas de realidade mista e scripts](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit-Examples/UX/Readme/README_ProgressExample.md)
-* [Objeto interagível](interactable-object.md)
+* [Pré-fabricados no Kit de ferramentas de realidade mista e scripts de progresso](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MixedRealityToolkit.SDK/Features/UX/Prefabs/Loader)
+* [Caixa delimitadora](app-bar-and-bounding-box.md)
+* [Objeto interativo](interactable-object.md)
 * [Coleção de objetos](object-collection.md)
-* [Billboarding e tag-along](billboarding-and-tag-along.md)
+* [Mural e tag-along](billboarding-and-tag-along.md)
