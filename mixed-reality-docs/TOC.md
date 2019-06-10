@@ -133,7 +133,7 @@
 ## Serviços de nuvem de realidade misturada
 ### [Âncoras Espaciais do Azure](https://docs.microsoft.com/azure/spatial-anchors)
 ### [Player de Comunicação Remota Holográfica](holographic-remoting-player.md)
-### [Termos de licença de software de comunicação remota holográfica](microsoft-holographic-remoting-software-license-terms.md)
+### [Termos de licença de software de comunicação remota holográfica](https://docs.microsoft.com/en-us/legal/mixed-reality/microsoft-holographic-remoting-software-license-terms)
 ## Unity
 ### [Visão geral do desenvolvimento do Unity](unity-development-overview.md)
 ### Introdução
