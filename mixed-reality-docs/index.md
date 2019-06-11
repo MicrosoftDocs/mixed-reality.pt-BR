@@ -8,12 +8,12 @@ ms.date: 02/24/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Mixed Reality, discover, distribute, index, landing page, design, development, tutorials, sample apps, fundamentals, case studies, resources, HoloLens how-to, Open source projects
-ms.openlocfilehash: ed319e2abf61caed5f36b425a4cc609ca9501dec
-ms.sourcegitcommit: 1c0fbee8fa887525af6ed92174edc42c05b25f90
+ms.openlocfilehash: 810d9846fd217cd1acb3ae0060c11f5c9173191e
+ms.sourcegitcommit: c6b59f532a9c5818d9b25c355a174a231f5fa943
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65730888"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66813750"
 ---
 # <a name="mixed-reality-documentation"></a>Documentação da Realidade Misturada
 
@@ -171,10 +171,10 @@ Conforme prometido, estamos felizes em compartilhar mais adequação da realidad
 <td>Visualize as novas funcionalidades em MRTK para HoloLens 2</td><td>Abril de 2019</td><td> <ul><li><a href=https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/GettingStartedWithTheMRTK.html>Docs de MRTK</a><li><a href=https://docs.microsoft.com/en-us/windows/mixed-reality/mrtk-getting-started>Introdução ao MRTK v2</a></td>
 </tr>
 <tr>
-<td>Diretrizes de criação e de desenvolvimento para HoloLens 2</td><td>Abril de 2019</td><td> <ul><li><a href=https://docs.microsoft.com/en-us/windows/mixed-reality/install-the-tools>Instalar as ferramentas</a><li><a href=https://docs.microsoft.com/en-us/windows/mixed-reality/using-the-hololens-emulator>Emulador do HoloLens 2</a><li><a href=https://docs.microsoft.com/en-us/windows/mixed-reality/interaction-fundamentals>Diretrizes de design de interações instintuais</a>
+<td>Diretrizes de criação e de desenvolvimento para HoloLens 2</td><td>Abril de 2019</td><td> <ul><li><a href=https://docs.microsoft.com/en-us/windows/mixed-reality/install-the-tools>Instalar as ferramentas</a><li><a href=https://docs.microsoft.com/en-us/windows/mixed-reality/using-the-hololens-emulator>Emulador do HoloLens 2</a><li><a href=https://docs.microsoft.com/en-us/windows/mixed-reality/interaction-fundamentals>Diretrizes de design de interações instintivas</a></td>
 </tr>
 <tr>
-  <td>Mais informações sobre o Unreal</td><td>Maio de 2019</td><td></td>
+  <td>Mais informações sobre o Unreal</td><td>Maio de 2019</td><td> <ul><li><a href=https://www.unrealengine.com/en-US/blog/unreal-engine-4-support-for-hololens-2-released-in-early-access>Acesso antecipado do Unreal Engine 4</a></td>
 </tr>
 </table>
 
