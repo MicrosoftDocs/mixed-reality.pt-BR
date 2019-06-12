@@ -119,7 +119,7 @@
 ### [Objeto interativo](interactable-object.md)
 ### [Coleção de objetos](object-collection.md)
 ### [Exibindo o progresso](progress.md)
-### [Barra de aplicativos e caixa delimitadora](app-bar-and-bounding-box.md)
+### [Caixa delimitadora e barra de aplicativos](app-bar-and-bounding-box.md)
 ## Como criar para o ambiente de realidade misturada
 ### [Diretrizes de projeto do inicializador de aplicativos 3D](3d-app-launcher-design-guidance.md)
 ### [Criar modelos 3D para uso em casa](creating-3d-models-for-use-in-the-windows-mixed-reality-home.md)
