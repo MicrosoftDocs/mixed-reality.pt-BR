@@ -6,12 +6,12 @@ ms.author: dgedye
 ms.date: 05/03/2018
 ms.topic: article
 keywords: modo de pesquisa, cv, rs4, pesquisa Visual computacional, pesquisa, HoloLens
-ms.openlocfilehash: 5feda021bd6a1a90fd98c751b1cea768eed980af
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: e9a7683f8d582b459185066e74655e8f2b236db4
+ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59589074"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66829936"
 ---
 # <a name="hololens-research-mode"></a>Modo de pesquisa do HoloLens
 
@@ -29,11 +29,21 @@ Modo de pesquisa é uma nova funcionalidade do HoloLens que fornece acesso a apl
 ## <a name="device-support"></a>Suporte a dispositivos
 
 <table>
-<tr>
-<th>Recurso</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Fones imersivos em exposição</a></th>
-</tr><tr>
-<td> Modo de pesquisa</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"></td>
-</tr>
+    <colgroup>
+    <col width="33%" />
+    <col width="33%" />
+    <col width="33%" />
+    </colgroup>
+    <tr>
+        <td><strong>Recurso</strong></td>
+        <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Fones imersivos em exposição</strong></a></td>
+    </tr>
+     <tr>
+        <td>Modo de pesquisa</td>
+        <td>✔️</td>
+        <td>❌</td>
+    </tr>
 </table>
 
 ## <a name="before-using-research-mode"></a>Antes de usar o modo de pesquisa
@@ -72,4 +82,4 @@ Consulte a [rastreador de problemas](https://github.com/Microsoft/HololensForCV/
 
 * [Microsoft Media Foundation](https://msdn.microsoft.com/library/windows/desktop/ms694197)
 * [Repositório HoloLensForCV GitHub](https://github.com/Microsoft/HoloLensForCV)
-* [Usando o Windows Device Portal](using-the-windows-device-portal.md)
+* [Como usar o Portal de Dispositivos do Windows](using-the-windows-device-portal.md)

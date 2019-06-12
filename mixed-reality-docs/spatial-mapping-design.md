@@ -6,12 +6,12 @@ ms.author: dongpark
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Mapeamento de Windows Mixed Reality, design, espacial, HoloLens, surface reconstrução, da malha
-ms.openlocfilehash: d2ddcbf9458769a60cd3ed2871c5f3405c75f10c
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 451213a79e1d482d64725ce750065611830beec3
+ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59589149"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66829966"
 ---
 # <a name="spatial-mapping-design"></a>Design de mapeamento espacial
 
@@ -20,11 +20,21 @@ Uso eficiente do mapeamento espacial dentro do HoloLens requer uma consideraçã
 ## <a name="device-support"></a>Suporte a dispositivos
 
 <table>
-<tr>
-<th>Recurso</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Fones imersivos em exposição</a></th>
-</tr><tr>
-<td> Mapeamento espacial</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"></td>
-</tr>
+    <colgroup>
+    <col width="33%" />
+    <col width="33%" />
+    <col width="33%" />
+    </colgroup>
+    <tr>
+        <td><strong>Recurso</strong></td>
+        <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Fones imersivos em exposição</strong></a></td>
+    </tr>
+     <tr>
+        <td>Design de mapeamento espacial</td>
+        <td>✔️</td>
+        <td>❌</td>
+    </tr>
 </table>
 
 ## <a name="why-is-spatial-mapping-important"></a>Por que o mapeamento espacial é importante?
@@ -196,6 +206,6 @@ Aqui estão alguns exemplos de diferentes tipos de processamento de malha que po
 * É uma boa ideia para executar o teste com usuários reais (e o ideal é que não coached), pois eles não podem usar o HoloLens ou seu aplicativo exatamente da mesma maneira que você faz. Na verdade, talvez você se surpreenda comportamento das pessoas como divergentes, suposições e dados de Conhecimento podem ser!
 
 ## <a name="see-also"></a>Consulte também
-* [Visualização de verificação de espaço](room-scan-visualization.md)
-* [Design de som espacial](spatial-sound-design.md)
+* [Visualização de varredura do ambiente](room-scan-visualization.md)
+* [Projeto de som espacial](spatial-sound-design.md)
 * [Persistência no Unity](persistence-in-unity.md)

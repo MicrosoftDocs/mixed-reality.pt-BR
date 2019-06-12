@@ -6,12 +6,12 @@ ms.author: thmignon
 ms.date: 05/04/2018
 ms.topic: article
 keywords: 3D, modelo, local na página inicial, local, mundo, modelagem, realidade misturada doméstica, web, aplicativo
-ms.openlocfilehash: 3a50353aae8e03c3ebb3ee9ec2f642f21836e925
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 954086b79e3614e1b75ceb7560f9fc87435530fa
+ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59591004"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66829728"
 ---
 # <a name="enable-placement-of-3d-models-in-the-mixed-reality-home"></a>Ativar a colocação de modelos 3D na realidade misturada inicial
 
@@ -25,11 +25,21 @@ Por exemplo, se você estiver desenvolvendo um aplicativo que exiba um catálogo
 ## <a name="device-support"></a>Suporte a dispositivos
 
 <table>
-<tr>
-<th>Recurso</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Fones imersivos em exposição</a></th>
-</tr><tr>
-<td>Adicionar modelo de protocolo</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
-</tr>
+    <colgroup>
+    <col width="33%" />
+    <col width="33%" />
+    <col width="33%" />
+    </colgroup>
+    <tr>
+        <td><strong>Recurso</strong></td>
+        <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Fones imersivos em exposição</strong></a></td>
+    </tr>
+     <tr>
+        <td>Adicionar modelo de protocolo</td>
+        <td>✔️</td>
+        <td>✔️</td>
+    </tr>
 </table>
 
 ## <a name="overview"></a>Visão geral
@@ -84,4 +94,4 @@ private async void launchURI_Click(object sender, RoutedEventArgs e)
 ## <a name="see-also"></a>Consulte também
 
 * [Criar modelos 3D para uso no ambiente doméstico Windows Mixed Reality](creating-3d-models-for-use-in-the-windows-mixed-reality-home.md)
-* [Navegando o Windows Mixed Reality inicial](navigating-the-windows-mixed-reality-home.md)
+* [Como navegar na página inicial do Windows Mixed Reality](navigating-the-windows-mixed-reality-home.md)

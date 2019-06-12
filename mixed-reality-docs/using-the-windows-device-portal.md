@@ -6,12 +6,12 @@ ms.author: jlyons
 ms.date: 02/24/2019
 ms.topic: article
 keywords: Windows Device Portal, HoloLens
-ms.openlocfilehash: 8b9935d6b64abfd22e2e856e0142c953a6366008
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: f4319e1efa94d90bfb8cc4e5815ffa87fc865a7f
+ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59589765"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66830002"
 ---
 # <a name="using-the-windows-device-portal"></a>Usando o Windows Device Portal
 
@@ -36,7 +36,7 @@ Esta documentação é especificamente sobre a do Windows Device Portal para Hol
 5. Selecione o item de menu **Para desenvolvedores**.
 6. Habilite o **Modo de Desenvolvedor**.
 7. [Role para baixo](gestures.md#composite-gestures) e habilite **Portal do dispositivo**.
-8. Se você estiver configurando o Windows Device Portal que você possa implantar aplicativos para este HoloLens via USB ou Wi-Fi, clique em **par** à [gerar um PIN de emparelhamento](using-visual-studio.md#pairing-your-device-hololens). Deixe o aplicativo de configurações com o pop-up do PIN até que você insira o PIN para o Visual Studio durante a primeira implantação.
+8. Se você estiver configurando o Windows Device Portal que você possa implantar aplicativos para este HoloLens via USB ou Wi-Fi, clique em **par** à [gerar um PIN de emparelhamento](using-visual-studio.md). Deixe o aplicativo de configurações com o pop-up do PIN até que você insira o PIN para o Visual Studio durante a primeira implantação.
 
    ![Habilitando o modo de desenvolvedor no aplicativo de configurações para o Windows Holographic](images/deviceportalsettings.png)
 
@@ -56,7 +56,7 @@ Esta documentação é especificamente sobre a do Windows Device Portal para Hol
 
 ## <a name="connecting-to-an-emulator"></a>Conectar-se em um emulador
 
-Você também pode usar o Device Portal com seu emulador. Para se conectar ao Portal do dispositivo, use o [barra de ferramentas](using-the-hololens-emulator.md#anatomy-of-the-hololens-emulator). Clique neste ícone: ![Ícone do Portal do dispositivo aberto](images/emulator-deviceportal.png) **abrir Portal de dispositivo**: Abra o Windows Device Portal para o sistema de operacional HoloLens no emulador.
+Você também pode usar o Device Portal com seu emulador. Para se conectar ao Portal do dispositivo, use o [barra de ferramentas](using-the-hololens-emulator.md). Clique neste ícone: ![Ícone do Portal do dispositivo aberto](images/emulator-deviceportal.png) **abrir Portal de dispositivo**: Abra o Windows Device Portal para o sistema de operacional HoloLens no emulador.
 
 ## <a name="creating-a-username-and-password"></a>Criar um nome de usuário e senha
 
@@ -71,7 +71,7 @@ Na primeira vez que se conectar ao Device Portal em seu HoloLens, você precisar
 5. Insira uma senha e confirme-a. A senha deve ter pelo menos sete caracteres de comprimento. Não é necessário ser uma senha de MSA ou de domínio.
 6. Clique em **par** para se conectar ao Windows Device Portal sobre o HoloLens.
 
-Se você quiser alterar este nome de usuário ou senha a qualquer momento, você pode repetir esse processo, visitando a página de segurança do dispositivo clicando o **segurança** link na parte superior direita ou navegação para: https://<YOUR_HOLOLENS_IP_ ENDEREÇO > / devicesecurity.htm.
+Se você quiser alterar este nome de usuário ou senha a qualquer momento, você pode repetir esse processo, visitando a página de segurança de dispositivo, navegando até: https://<YOUR_HOLOLENS_IP_ADDRESS>/devicepair.htm.
 
 ## <a name="security-certificate"></a>Certificado de segurança
 
@@ -80,7 +80,7 @@ Se você vir um "erro de certificado" no navegador, poderá corrigi-lo criando u
 Cada HoloLens gera um certificado autoassinado exclusivo para sua conexão SSL. Por padrão, esse certificado não é confiável pelo navegador da Web do seu computador e você poderá receber um "erro de certificado". Ao baixar esse certificado do seu HoloLens (por USB ou uma rede Wi-Fi confiável) e torná-lo confiável em seu computador, você poderá se conectar com segurança ao seu dispositivo.
 1. **Verifique se que você estiver usando uma rede segura (USB ou uma rede Wi-Fi que você confia).**
 2. Baixe o certificado do dispositivo da página "Segurança" no Portal do dispositivo.
-   * Clique no **segurança** link na lista à direita superior dos ícones ou navegue até: https://<YOUR_HOLOLENS_IP_ADDRESS>/devicesecurity.htm
+   * Navegue até: https://<YOUR_HOLOLENS_IP_ADDRESS>/devicepair.htm
 3. Instale o certificado na "raiz autoridades de certificação confiáveis" armazenar em seu computador.
    * No menu do Windows, digite: Gerenciar certificados de computador e inicie o miniaplicativo.
    * Expanda o **autoridade de certificação raiz confiável** pasta.

@@ -6,12 +6,12 @@ ms.author: thmignon
 ms.date: 04/30/2018
 ms.topic: article
 keywords: Windows Mixed Reality, realidade mista, realidade Virtual, VR, MR, Home, ambientes personalizados, lugares, casa cliff, skyloft, usuário, criar
-ms.openlocfilehash: ef140efd88aa0d3329ae2aa7e5b202c3bfe77c0a
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
-ms.translationtype: MT
+ms.openlocfilehash: 8f5a3a1bdf5728260b0b7717c74a50f3356ca04a
+ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59589076"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66829644"
 ---
 # <a name="add-custom-home-environments"></a>Adicionar ambientes domésticos personalizados
 
@@ -25,11 +25,21 @@ Ao usar um ambiente personalizado, você observará que teleporting, interagir c
 ## <a name="device-support"></a>Suporte a dispositivos
 
 <table>
-<tr>
-<th>Recurso</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Fones imersivos em exposição</a></th>
-</tr><tr>
-<td> Ambientes domésticos personalizados</td><td style="text-align: center;"></td><td style="text-align: center;"> ✔️</td>
-</tr>
+    <colgroup>
+    <col width="33%" />
+    <col width="33%" />
+    <col width="33%" />
+    </colgroup>
+    <tr>
+        <td><strong>Recurso</strong></td>
+        <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Fones imersivos em exposição</strong></a></td>
+    </tr>
+     <tr>
+        <td>Ambientes domésticos personalizados</td>
+        <td>❌</td>
+        <td>✔️</td>
+    </tr>
 </table>
 
 ## <a name="trying-a-sample-environment"></a>Tentativa de um ambiente de exemplo

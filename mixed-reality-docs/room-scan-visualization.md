@@ -6,12 +6,12 @@ ms.author: alexpf
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, padrões de aplicativo, design, HoloLens, verificação de espaço, espacial de mapeamento, superfície reconstrução, da malha
-ms.openlocfilehash: 8ffde9d476e25016f986321377dce8125ee3a596
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 09df4464ea4dac01dfad637886b07b861f468d4d
+ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59590929"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66829909"
 ---
 # <a name="room-scan-visualization"></a>Visualização de verificação de espaço
 
@@ -27,11 +27,21 @@ Observe que em todos esses casos, os dados reais coletados durante a exploraçã
 ## <a name="device-support"></a>Suporte a dispositivos
 
 <table>
-<tr>
-<th>Recurso</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Fones imersivos em exposição</a></th>
-</tr><tr>
-<td> Visualização de verificação de espaço</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"></td>
-</tr>
+    <colgroup>
+    <col width="33%" />
+    <col width="33%" />
+    <col width="33%" />
+    </colgroup>
+    <tr>
+        <td><strong>Recurso</strong></td>
+        <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Fones imersivos em exposição</strong></a></td>
+    </tr>
+     <tr>
+        <td>Visualização de verificação de espaço</td>
+        <td>✔️</td>
+        <td>❌</td>
+    </tr>
 </table>
 
 
@@ -83,6 +93,6 @@ Determinados aplicativos podem se basear em continua a varredura para atualizar 
 Um bom caso para esse método é que um onde hologramas devem interagir com a movimentação de objetos, por exemplo, um carro holográfico unidades no chão talvez queira corretamente se deparar com uma porta dependendo se ele for aberto ou fechado.
 
 ## <a name="see-also"></a>Consulte também
-* [Design de mapeamento espacial](spatial-mapping-design.md)
+* [Projeto de mapeamento espacial](spatial-mapping-design.md)
 * [Sistemas de coordenadas](coordinate-systems.md)
-* [Design de som espacial](spatial-sound-design.md)
+* [Projeto de som espacial](spatial-sound-design.md)

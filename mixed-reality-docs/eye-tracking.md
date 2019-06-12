@@ -1,137 +1,137 @@
 ---
-title: Acompanhamento a olho nu
-description: Acompanhamento a olho nu
+title: Acompanhamento ocular
+description: Acompanhamento ocular
 author: sostel
 ms.author: sostel
 ms.date: 04/05/2019
 ms.topic: article
 ms.localizationpriority: high
-keywords: Acompanhamento de olhos, misturadas realidade, entrada, olhar olho
+keywords: Acompanhamento ocular, realidade misturada, entrada, foco com o olhar
 ms.openlocfilehash: 7298a34a946f86aaf789cfe44ad971169fc8ece3
-ms.sourcegitcommit: 60060386305eabfac2758a2c861a43c36286b151
-ms.translationtype: MT
+ms.sourcegitcommit: f20beea6a539d04e1d1fc98116f7601137eebebe
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/31/2019
+ms.lasthandoff: 06/05/2019
 ms.locfileid: "66453697"
 ---
-# <a name="eye-tracking-on-hololens-2"></a>Acompanhamento em HoloLens 2 a olho nu
-HoloLens 2 permite um nível totalmente novo de contexto e o entendimento humanos dentro a experiência holográfica, fornecendo aos desenvolvedores com a incrível capacidade de uso das informações sobre o que os usuários estão vendo. Esta página fornece uma visão geral de como os desenvolvedores podem se beneficiar de acompanhamento de olho para vários casos de uso e o que procurar durante a criação de interfaces do usuário com base em olhar olho. 
+# <a name="eye-tracking-on-hololens-2"></a>Acompanhamento ocular no HoloLens 2
+O HoloLens 2 permite um nível totalmente novo de contexto e entendimento humano dentro da experiência holográfica, fornecendo aos desenvolvedores a incrível capacidade de usar as informações sobre o que os usuários estão vendo. Esta página fornece uma visão geral de como os desenvolvedores podem se beneficiar do acompanhamento ocular para vários casos de uso e as considerações mais importantes durante a criação de interfaces do usuário baseadas no foco com o olhar. 
 
 ## <a name="use-cases"></a>Casos de uso
-Acompanhamento a olho nu permite que os aplicativos controlar onde o usuário está procurando em tempo real. Esta seção descreve algumas das possíveis casos de uso e novas interações que se tornam possíveis com os olhos de acompanhamento na realidade mista.
-Antes de começar, no seguinte mencionaremos a [Kit de ferramentas de realidade misturada](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_Main.html) várias vezes, pois ele fornece vários exemplos de interessantes e potente para usar o rastreamento de olho como destino com suporte de olho rápido e fácil as seleções e automaticamente rolar por texto com base em onde o usuário levar analisando. 
+O acompanhamento ocular permite que os aplicativos acompanhem para que local o usuário está olhando em tempo real. Esta seção descreve alguns dos possíveis casos de uso e novas interações que se tornam possíveis com o acompanhamento ocular na realidade misturada.
+Antes de começar, a seguir, mencionaremos o [Kit de Ferramentas de Realidade Misturada](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_Main.html) várias vezes, pois ele fornece vários exemplos interessantes e avançados para uso do acompanhamento ocular, como seleções rápidas e fáceis de alvo com suporte ocular e rolagem automática pelo texto com base no local para o qual o usuário olha. 
 
 ### <a name="user-intent"></a>Intenção do usuário    
-Informações sobre onde um usuário examina fornecem um poderoso **contexto para outras entradas**, como voz, mãos e controladores.
+As informações sobre o local para o qual um usuário olha fornecem um **contexto avançado para outras entradas**, como voz, mãos e controles.
 Isso pode ser usado para várias tarefas.
-Por exemplo, isso pode variar de forma rápida e facilmente **direcionamento** entre a cena simplesmente observando um holograma e dizendo "selecionar" (Consulte também [olhar Head e confirmação](gaze-and-commit.md)) ou dizendo "colocar isso...", em seguida, procurando para onde deseja colocar o holograma e dizer "... There". Exemplos para isso podem ser encontrados em [Toolkit de realidade misturada - seleção de destino com suporte de olho](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_TargetSelection.html) e [Kit de ferramentas realidade misturada - posicionamento de destino com suporte de olho](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_Positioning.html).
+Por exemplo, isso pode variar do **direcionamento** de forma rápida e fácil pela cena simplesmente observando um holograma e falando "selecionar" (confira também [Foco com a cabeça e confirmação](gaze-and-commit.md)) ou falando "coloque isto..." e, em seguida, procurando o local em que você deseja colocar o holograma e dizendo "...lá". Exemplos para esse caso podem ser encontrados em [Kit de Ferramentas de Realidade Misturada – Seleção de alvo com suporte ocular](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_TargetSelection.html) e [Kit de Ferramentas de Realidade Misturada – Posicionamento de alvo com suporte ocular](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_Positioning.html).
 
-Um exemplo adicional de intenção do usuário pode incluir usando informações sobre o que os usuários se examinar para melhorar o engajamento com agentes virtuais embodied e hologramas interativas. Por exemplo, agentes virtuais poderão adaptar as opções disponíveis e seu comportamento com base em atualmente exibido o conteúdo. 
+Outro exemplo de intenção do usuário pode incluir o uso de informações sobre para o que os usuários olham a fim de melhorar o envolvimento com agentes virtuais personificados e hologramas interativos. Por exemplo, os agentes virtuais poderão adaptar as opções disponíveis e seu comportamento com base no conteúdo atualmente exibido. 
 
 ### <a name="implicit-actions"></a>Ações implícitas
-A categoria de ações implícitas está intimamente relacionado à intenção do usuário.
-A ideia é hologramas ou elementos de interface do usuário reagem de forma um pouco instinctual pode não até mesmo parecer que você está interagindo com o sistema em todos os, mas em vez disso, o sistema e o usuário estão em sincronia. Por exemplo, é um exemplo bastante bem-sucedida **rolagem automática com base em olhar olho**. A ideia é simple: O usuário lê um texto e pode apenas continue lendo. O texto gradualmente move para manter os usuários em seu fluxo de leitura. Um aspecto importante é que a velocidade de rolagem se adapta à velocidade de leitura do usuário.
-Outro exemplo é **suporte de olho zoom e panorâmica** para que o usuário pode parecer mergulhar exatamente em direção a que ele tem se concentrado em. Disparando o zoom e controlar a velocidade de zoom podem ser controlados por meio de voz ou entregar a entrada que é importante sobre como fornecer a sensação de controle e evitar sobrecarregar o usuário (falaremos sobre essas diretrizes de design em mais detalhes abaixo). Depois de ampliar, o usuário pode perfeitamente seguir, por exemplo, o curso de uma rua para explorar seu ambiente usando simplesmente olhar seus olhos.
-Exemplos de demonstração para esses tipos de interações podem ser encontrados na [Toolkit de realidade mista - navegação com suporte de olho](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_Navigation.html) exemplo.
+A categoria de ações implícitas está intimamente relacionada à intenção do usuário.
+A ideia é que os hologramas ou os elementos de interface do usuário reagem de forma um tanto instintiva que pode até mesmo parecer que você não está interagindo com o sistema, mas, pelo contrário, o sistema e o usuário estão em sincronia. Por exemplo, um exemplo extremamente bem-sucedido é a **rolagem automática baseada no foco com o olhar**. A ideia é simples assim: O usuário lê um texto e pode simplesmente continuar lendo. O texto gradualmente se move para cima para manter os usuários em seus fluxos de leitura. Um aspecto importante é que a velocidade da rolagem se adapta à velocidade de leitura do usuário.
+Outro exemplo é o **zoom e a panorâmica com suporte ocular** para os quais o usuário pode parecer estar mergulhando exatamente no que está focando. O gatilho do zoom e o controle da velocidade de zoom podem ser obtidos por meio da entrada de voz ou de mão, que é importante para fornecer a sensação de controle e evitar sobrecarregar o usuário (falaremos sobre essas diretrizes de design mais detalhadamente abaixo). Depois de ampliar, o usuário pode seguir suavemente, por exemplo, o curso de uma rua para explorar a vizinhança simplesmente usando o foco com o olhar.
+Exemplos de demonstração para esses tipos de interações podem ser encontrados na amostra do [Kit de Ferramentas de Realidade Misturada – Navegação com suporte ocular](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_Navigation.html).
 
-Casos para usar o adicionais _implícitas ações_ podem incluir:
-- **Notificações inteligentes:** Nunca obter incomodar com notificações pop-up de direita onde você foram concentrando-se? Levando em conta em que um usuário no momento, está prestando atenção à, você pode torná-lo melhor! Mostre notificações de deslocamento a partir de onde o usuário atualmente está procurando para limitar distrações e ignorá-las de uma vez automaticamente terminar de ler. 
-- **Hologramas atenciosos:** Hologramas que sutilmente reagem quando está sendo analisado. Isso pode variar de elementos de interface do usuário ligeiramente brilhantes, uma flor blooming lentamente a uma inicialização animais de estimação virtual examinar novamente a você ou tentando evitar seu foco de olho após um olhando prolongado. Isso pode fornecer um senso interessante de conectividade e a satisfação em seu aplicativo.
+Casos de uso adicionais para _ações implícitas_ podem incluir:
+- **Notificações inteligentes:** Já ficou incomodado com notificações aparecendo exatamente no local em que você está focado? Levando em conta o local em que um usuário está concentrado no momento, você pode torná-lo melhor. Mostre o deslocamento de notificações para o local em que o usuário está olhando no momento a fim de limitar distrações e ignorá-las automaticamente após o término da leitura. 
+- **Hologramas atentos:** Hologramas que reagem de forma sutil quando são observados. Isso pode variar de elementos de interface do usuário ligeiramente brilhantes, uma flor desabrochando lentamente a um animal de estimação virtual começando a olhar para você novamente ou tentando evitar seu foco com o olhar após um olhar prolongado. Isso pode fornecer um senso interessante de conectividade e satisfação em seu aplicativo.
 
 ### <a name="attention-tracking"></a>Acompanhamento de atenção   
-Informações sobre onde os usuários procuram no são uma ferramenta e poderosa para avaliar a usabilidade dos designs e para identificar problemas em fluxos de trabalho eficientes. Agora, a visualização e análise de acompanhamento a olho nu já é uma prática comum em várias áreas do aplicativo. Com o HoloLens 2, fornecemos uma nova dimensão para essa compreensão conforme hologramas 3D podem ser colocadas em contextos do mundo real e avaliadas junto com o. O [Kit de ferramentas de realidade misturada](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_Main.html) fornece exemplos básicos para registro em log e carregar dados de acompanhamento a olho nu e como visualizá-las.
+As informações sobre o local para o qual os usuários olham são uma ferramenta imensamente avançada para avaliar a usabilidade dos designs e identificar problemas em fluxos de trabalho eficientes. Por enquanto, a visualização e a análise de acompanhamento ocular já é uma prática comum em várias áreas do aplicativo. Com o HoloLens 2, fornecemos uma nova dimensão para essa compreensão, já que os hologramas 3D podem ser colocados em contextos do mundo real e avaliados juntos. O [Kit de Ferramentas de Realidade Misturada](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_Main.html) fornece exemplos básicos para log e carregamento de dados de acompanhamento ocular e de como visualizá-los.
 
 Outros aplicativos nessa área podem incluir: 
--   **Visualização de olhar olho remoto:** Visualizar o que os colaboradores remotos estão vendo, por exemplo, verifique se as instruções são compreendidas e seguidas corretamente.
--   **Estudos de pesquisa de usuário:** Atenção de controle pode ser usada para explorar a maneira de iniciante versus usuários especialistas analisar visualmente o conteúdo ou a sua coordenação mão de olho em tarefas complexas (por exemplo, para análise de dados médicos ou enquanto estiver operando máquinas).
--   **Simulações de treinamento e monitoramento de desempenho:** Pratique e otimizar a execução de tarefas, identificando gargalos com mais eficiência no fluxo de execução.
--   **As avaliações, o anúncio e a pesquisa de marketing de design:** Acompanhamento a olho nu é uma ferramenta comum para pesquisa de mercado avaliar os designs de site e o produto.
+-   **Visualização de foco com o olhar remoto:** A visualização do que os colaboradores remotos estão olhando, por exemplo, verifica se as instruções foram compreendidas e seguidas corretamente.
+-   **Estudos de pesquisa de usuário:** O acompanhamento de atenção pode ser usado para explorar a maneira com os usuários iniciantes vs. experientes analisam visualmente o conteúdo ou sua coordenação mão-olho em tarefas complexas (por exemplo, para análise de dados médicos ou durante a operação de máquinas).
+-   **Simulações de treinamento e monitoramento de desempenho:** Pratique e otimize a execução de tarefas identificando gargalos com mais eficiência no fluxo de execução.
+-   **Avaliações de design, anúncio e pesquisa de marketing:** O acompanhamento ocular é uma ferramenta comum para a pesquisa de mercado avaliar os designs de sites e produtos.
 
 ### <a name="additional-use-cases"></a>Casos de uso adicionais
-- **Jogos:** Você já quis ter superpoderes? Esta é sua chance! Levitate hologramas por olhando-los. Envie a laser emissões de seus olhos. Transformar inimigos em pedra ou congele! Use sua visão de raios-x para explorar os prédios. O limite é de sua imaginação!  
+- **Jogos:** Você já quis ter superpoderes? Esta é a sua chance! Faça hologramas levitarem apenas por meio de seu olhar. Lance raios laser de seus olhos. Transforme inimigos em pedras ou congele-os. Use sua visão de raios X para explorar prédios. O limite é sua imaginação.  
 
-- **Avatares expressivas:** Acompanhamento a olho nu auxilia na mais expressivos avatares 3D usando Data do rastreamento de olho em tempo real para animar os olhos do avatar para indicar o que o usuário atualmente está procurando. Ele também adiciona mais expressividade adicionando winks e pisca. 
+- **Avatars expressivos:** O acompanhamento ocular auxilia na exibição de avatars 3D mais expressivos usando a data de acompanhamento ocular em tempo real para animar os olhos do avatar a fim de indicar para o que o usuário está olhando. Ele também adiciona mais expressividade adicionando piscadinhas. 
 
-- **Entrada de texto:** Acompanhamento a olho nu pode ser usado como uma alternativa interessante para entrada de texto de baixo esforço, especialmente quando se fala ou mãos são inconvenientes para uso. 
-
-
-## <a name="eye-tracking-api"></a>API de acompanhamento de olhos
-Antes de entrar em detalhes sobre as diretrizes de design específicas para interação de olho olhar, queremos brevemente apontar para os recursos que o rastreador de olho HoloLens 2 está fornecendo. O [olho que acompanha a API](https://docs.microsoft.com/en-us/uwp/api/windows.perception.people.eyespose) pode ser acessado por meio de: `Windows.Perception.People.EyesPose`. Ele fornece um raio de olhar olho único (origem olhar e direção) para desenvolvedores.
-O rastreador de olho fornece dados sobre _30 FPS_.
-Olhar o olho previsto está dentro de autoridade de certificação. 1.0-1,5 graus ângulo visual em torno de real procurados no destino. Como pequenas imprecisions forem esperados, você deve planejar alguma margem em torno desse valor de limite inferior. Falaremos sobre isso mais abaixo. Para acompanhamento a olho nu para trabalhar com precisão, cada usuário é necessário para percorrer uma calibração de usuário de acompanhamento a olho nu. 
-
-![Tamanho de destino ideal a distância do medidor 2](images/gazetargeting-size-1000px.jpg)<br>
-*Tamanho de destino ideal a distância do medidor 2*
+- **Entrada de texto:** O acompanhamento ocular pode ser usado como uma alternativa interessante para a entrada de texto de baixo esforço, especialmente quando a fala ou as mãos são inconvenientes de serem usadas. 
 
 
-## <a name="eye-gaze-design-guidelines"></a>Diretrizes de design de olhar olho
-Criar uma interação que tira proveito do direcionamento de olho movimentação rápida pode ser um desafio. Nesta seção, resumimos os desafios a serem considerados ao projetar seu aplicativo e as principais vantagens. 
+## <a name="eye-tracking-api"></a>API de acompanhamento ocular
+Antes de entrar em detalhes sobre as diretrizes de design específicas para a interação de foco com o olhar, queremos brevemente nos voltar para as funcionalidades oferecidas pelo HoloLens 2 Eye Tracker. A [API de acompanhamento ocular](https://docs.microsoft.com/en-us/uwp/api/windows.perception.people.eyespose) pode ser acessada por meio de: `Windows.Perception.People.EyesPose`. Ela fornece um raio de foco com o olhar único (origem e direção do foco) para desenvolvedores.
+O rastreador ocular fornece dados sobre _30 FPS_.
+O foco com o olhar está dentro de aproximadamente 1,0 – 1,5 grau no ângulo visual em torno do alvo real focado. Como pequenas imprecisões são esperadas, você deve planejar alguma margem em torno desse valor de limite inferior. Falaremos sobre isso mais abaixo. Para que o acompanhamento ocular funcione com precisão, cada usuário deve passar por uma calibração de usuário de acompanhamento ocular. 
 
-### <a name="benefits-of-eye-gaze-input"></a>Benefícios de olho olhar entrada
-- **Apontando de alta velocidade.** O músculo olhos é o mais rápido reacting músculo no nosso corpo. 
-
-- **Pouco esforço.** Quase nenhum movimentos físicos são necessários. 
-
-- **Implicitness.** Geralmente descrita por usuários como "Lembre-se de leitura", informações sobre os movimentos de olho de um usuário permite que o sistema sabe que se envolver com os planos de usuário de destino. 
-
-- **Canal de entrada alternativo.** Olhar olho pode fornecer uma entrada de suporte eficiente para mão e voz entrada criando em anos de experiência dos usuários com base em sua coordenação de olho-de-mão.
-
-- **Atenção Visual.** Outro importante benefício é a possibilidade de inferir o que um usuário é prestar atenção. Isso pode ajudar em várias áreas do aplicativo, variando de mais efetivamente avaliando designs diferentes para ajudar a Interfaces de usuário mais inteligentes e aprimorado indicações sociais para comunicação remota.
-
-Em resumo, usando olhar olho como uma entrada potencialmente oferece um sinal contextual rápido e fácil – isso é especialmente eficiente em combinação com outras entradas, como *voz* e *manual* a entrada para Confirme se a intenção do usuário.
+![Tamanho ideal do alvo em uma distância de 2 metros](images/gazetargeting-size-1000px.jpg)<br>
+*Tamanho ideal do alvo em uma distância de 2 metros*
 
 
-### <a name="challenges-of-eye-gaze-as-an-input"></a>Desafios de olho olhares como uma entrada
-Com muita energia, vem muita responsabilidade: Ao olhar olho pode ser usado para criar experiências de usuário mágico pareçam uma super-herói, também é importante saber o que isso não é bom na conta para este adequadamente. A seguir, discutiremos alguns *desafios* levar em conta e como resolvê-los ao trabalhar com olhos olhar entrada: 
+## <a name="eye-gaze-design-guidelines"></a>Diretrizes de design de foco com o olhar
+A criação de uma interação que aproveita o direcionamento ocular com movimentação rápida pode ser um desafio. Nesta seção, resumimos as principais vantagens e os desafios a serem considerados ao projetar seu aplicativo. 
 
-- **Seu foco de olho é "sempre ativado"** no momento em que você abrir tampas seus olhos, seus olhos iniciar fixating coisas em seu ambiente. Reagindo a cada procure a marca e ações de emissão potencialmente acidentalmente, porque você observou algo por muito tempo resultaria em uma experiência terrível!
-Isso é por isso, recomendamos a combinação de olho olhar com um *comando de voz*, *entregar gesto*, *clique de botão* ou duração estendida para disparar a seleção de um destino.
-Essa solução também permite que um modo no qual o usuário pode livremente olhar em volta sem a incrível sensação de disparo involuntariamente algo. Esse problema também deve ser levado em conta durante a criação de comentários visuais e auditivos ao examinar apenas um destino.
-Não sobrecarregar o usuário com efeitos de pop-out imediatos ou passe o mouse sons. Sutileza é a chave! Vamos discutir algumas práticas recomendadas para a seguir quando falamos sobre recomendações de design.
+### <a name="benefits-of-eye-gaze-input"></a>Benefícios da entrada do foco com o olhar
+- **Apontar com alta velocidade.** O músculo ocular é o músculo de reação mais rápida em nosso corpo. 
 
-- **Observação versus controle** Imagine que você deseja alinhar precisamente uma fotografia no seu mural. Examinar suas bordas e seu entorno para ver se ele se alinhe bem. Agora imagine como você faria isso quando ao mesmo tempo que você deseja usar seu foco de olho como uma entrada para mover a imagem. Difícil, não é mesmo? Isso descreve a função dupla de olhar de olho quando for necessário tanto para entrada e controle. 
+- **Pouco esforço.** Quase nenhum movimento físico é necessário. 
 
-- **Sair antes de clique:** Para seleções de destino rápida pesquisa mostrou que olhar de olho de um usuário pode passar antes de concluir um manual clique (por exemplo, um airtap). Portanto, atenção especial deve ser dada para sincronizar o sinal de olhar olho rápido com a entrada de controle mais lenta (por exemplo, voz, mãos, controlador).
+- **Capacidade de ser implícito.** Geralmente descrito pelos usuários como "leitura da mente", as informações sobre os movimentos oculares de um usuário permitem que o sistema saiba com qual alvo o usuário pretende interagir. 
 
-- **Destinos pequeno:** Você sabe a sensação ao tentar ler o texto que é apenas um pouco muito pequeno para ler confortavelmente? Essa sensação de sobrecarregar os olhos que fazem com que você se sinta cansados e gasta out porque tentar reajustar seus olhos para focar melhor?
-Isso é uma sensação que você pode invocar seus usuários quando forçá-los para selecionar destinos muito pequenos em seu aplicativo usando o direcionamento de olho.
-Para o seu design, para criar uma experiência agradável e à vontade para seus usuários, é recomendável que os destinos devem ser pelo menos 2° em ângulo visual, preferencialmente maior.
+- **Canal de entrada alternativo.** O foco com o olhar pode fornecer uma entrada de suporte eficiente para a entrada de mãos e voz baseada em vários anos de experiência dos usuários com base em sua coordenação mão-olho.
 
-- **Irregular movimentos de olhar olho** olhos realizar movimentações rápidas de fixação para fixação da. Se você examinar os caminhos de varredura de movimentações de olho gravados, você pode ver que eles parecem irregulares. Seus olhos mover rapidamente e em saltos espontâneas em comparação com *olhar principal* ou *entregar movimentos*.  
+- **Atenção visual.** Outro importante benefício é a possibilidade de inferir o que um usuário está prestando atenção. Isso pode ajudar em várias áreas do aplicativo, que vão da avaliação mais efetiva de diferentes designs ao auxílio na criação de interfaces do usuário mais inteligentes e indicações sociais aprimoradas para comunicação remota.
 
-- **Confiabilidade de rastreamento:** Precisão de acompanhamento a olho nu pode diminuir um pouco na luz e alterado conforme seus olhos ajustar para as novas condições.
-Embora isso necessariamente não deve afetar o design de aplicativo, como a precisão deve estar dentro a limitação mencionada acima de 2°. Pode significar que o usuário tem que executar calibragem do outro. 
+Em resumo, o uso do foco com o olhar como uma entrada potencialmente oferece um sinal contextual rápido e fácil – isso é especialmente eficiente em combinação com outras entradas, como a entrada de *voz* e *manual* para confirmar a intenção do usuário.
 
 
-### <a name="design-recommendations"></a>Recomendações de design
-A seguir, listamos as recomendações de design específicas com base nas vantagens descritas e desafios para olho mantenha o foco de entrada:
+### <a name="challenges-of-eye-gaze-as-an-input"></a>Desafios do foco com o olhar como entrada
+Muito poder pressupõe muita responsabilidade: Embora o foco com o olhar possa ser usado para criar experiências mágicas para o usuário, parecidas com as de um super-herói, também é importante saber suas desvantagens para considerá-lo adequadamente. A seguir, abordaremos alguns *desafios* que devem ser levados em conta e como resolvê-los ao trabalhar com a entrada de foco com o olhar: 
 
-1. **Olhar olho! = olhar Head:**
-    - **Considere se rápido ainda movimentos de olho desbalanceadas ajustar sua tarefa de entrada:** Embora nosso movimentos de olho rápida e irregulares são ótimos selecionar rapidamente os destinos em nosso campo de visão, é menos aplicável para tarefas que exigem smooth trajetórias de entrada (por exemplo, para desenhar ou encircling anotações). Nesse caso, manualmente ou head apontando deve ser preferencial.
+- **Seu foco com o olhar está "sempre ativado"** No momento em que você abre os olhos, eles começam a se fixar nas coisas do ambiente. Uma reação a cada olhar seu e a emissão de ações potencialmente feitas de maneira acidental por olhar para algo por muito tempo resultará em uma experiência terrível.
+É por isso que recomendamos a combinação do foco com o olhar com um *comando de voz*, um *gesto com as mãos*, um *clique de botão* ou uma espera estendida para disparar a seleção de um alvo.
+Essa solução também permite um modo no qual o usuário possa olhar livremente em volta sem a sensação desesperadora de disparar algo involuntariamente. Esse problema também deve ser levado em conta durante o design de comentários visuais e auditivos ao simplesmente olhar para um alvo.
+Não sobrecarregue o usuário com efeitos de desencaixe imediatos ou sons de foco. O segredo é empregar a sutileza. Abordaremos algumas melhores práticas para isso mais adiante quando falarmos a respeito de recomendações sobre design.
+
+- **Observação vs. controle** Imagine que você deseje alinhar com precisão uma fotografia em seu mural. Você olha para as bordas da fotografia e em volta dela para ver se ela fica bem alinhada. Agora imagine como você fará isso quando, ao mesmo tempo, você deseja usar seu foco com o olhar como entrada para mover a imagem. Difícil, não é mesmo? Isso descreve a função dupla do foco com o olhar quando ele é necessário tanto para a entrada quanto para o controle. 
+
+- **Sair antes de clicar:** Para seleções de alvo rápidas, as pesquisas mostram que o foco com o olhar de um usuário pode passar para outra coisa antes de concluir um clique manual (por exemplo, um gesto de fechar e abrir dedos indicador e polegar). Portanto, atenção especial deve ser dada à sincronização do sinal de foco com o olhar rápido com uma entrada de controle mais lenta (por exemplo, voz, mãos, controle).
+
+- **Alvos pequenos:** Você já teve a sensação de tentar ler um texto que é muito pequeno para uma leitura confortável? Essa sensação de sobrecarregar os olhos que faz com que você se sinta exausto porque tenta reajustar seus olhos para focar melhor?
+Essa é uma sensação que você poderá invocar nos usuários quando forçá-los a selecionar alvos muito pequenos no aplicativo usando o direcionamento ocular.
+Para o design, visando criar uma experiência agradável e confortável para seus usuários, recomendamos que os alvos tenham um ângulo visual de, pelo menos, 2°, preferencialmente maior.
+
+- **Movimentos irregulares do foco com o olhar** Nossos olhos fazem movimentações rápidas de fixação em fixação. Se você examinar os caminhos de exame dos movimentos oculares registrados, poderá ver que eles parecem irregulares. Seus olhos se movem rapidamente e em saltos espontâneos comparado ao *foco com a cabeça* ou aos *movimentos com as mãos*.  
+
+- **Confiabilidade de acompanhamento:** A precisão do acompanhamento ocular pode diminuir um pouco sob iluminação em constante mudança, pois o olho se ajusta às novas condições.
+Embora isso necessariamente não deva afetar o design do aplicativo, pois a precisão deve estar dentro da limitação mencionada acima de 2°. Isso pode significar que o usuário precise executar outra calibragem. 
+
+
+### <a name="design-recommendations"></a>Recomendações sobre design
+A seguir, listamos recomendações sobre design específicas de acordo com as vantagens e os desafios descritos sobre a entrada de foco com o olhar:
+
+1. **Foco com o olhar! = foco com a cabeça:**
+    - **Considere se movimentos oculares rápidos, ainda que irregulares, se ajustam à sua tarefa de entrada:** Embora nossos movimentos oculares rápidos e irregulares sejam ótimos para selecionar alvos rapidamente em nosso campo de visão, eles são menos aplicáveis a tarefas que exigem trajetórias de entrada suave (por exemplo, para desenhar ou circular anotações). Nesse caso, apontar com a mão ou a cabeça deve ser preferencial.
   
-    - **Evite anexando algo diretamente ao olhar de olho do usuário (por exemplo, um controle deslizante ou cursor).**
-No caso de um cursor, isso pode resultar no efeito "fleeing cursor" devido à pequenas deslocamentos no sinal de olhar olho projetado. No caso de um controle deslizante, ele entra em conflito com a função dupla de controlar o controle deslizante com seus olhos, apesar de desejarem também verificar se o objeto está no local correto. Em resumo, os usuários podem se sentir sobrecarregado e distraído, especialmente se o sinal é impreciso para esse usuário. 
+    - **Evite anexar algo diretamente ao foco com o olhar do usuário (por exemplo, um controle deslizante ou um cursor).**
+No caso de um cursor, isso poderá resultar no efeito de “um cursor fugindo” devido a leves deslocamentos no sinal de foco com o olhar projetado. No caso de um controle deslizante, ele entra em conflito com a função dupla de controlar o controle deslizante com seus olhos, embora também deseje verificar se o objeto está na localização correta. Em resumo, os usuários poderão se sentir sobrecarregados e distraídos, especialmente se o sinal for impreciso para esse usuário. 
   
-2. **Combine olho olhar com outras entradas:** A integração do controle de olho com outras entradas, como gestos de mão, comandos de voz ou pressionamentos de botão, tem várias vantagens:
-    - **Permitir a Observação gratuitamente:** Considerando que a função principal da seus olhos é observar o nosso ambiente, é importante permitir que usuários olhar em volta sem disparar qualquer (visuais, auditivas,...) comentários ou ações. 
-    Combinar ET com outro controle de entrada permite fazer a transição suave entre os modos de controle de entrada e de Observação ET.
+2. **Combinar o foco com o olhar com outras entradas:** A integração do acompanhamento ocular a outras entradas, como gestos com as mãos, comandos de voz ou pressionamentos de botão, traz várias vantagens:
+    - **Permitir a observação livre:** Considerando que a função principal de nossos olhos seja observar o ambiente, é importante permitir que os usuários olhem em volta sem disparar nenhum comentário (visual, auditivo ou outro) nem ação. 
+    A combinação do ET com outro controle de entrada permite fazer a transição suave entre a observação do ET e os modos de controle de entrada.
   
-    - **Provedor de contexto avançados:** Usando informações sobre onde o usuário está observando ao mesmo tempo em que dizer a um comando de voz ou executar um gesto de mão permite facilmente canalização de entrada entre o campo de visualização. Os exemplos incluem: "Put que lá" em rapidamente fluentemente e selecione posicionar um holograma entre a cena examinando simplesmente um alvo e de destino. 
+    - **Provedor de contexto avançado:** O uso das informações sobre o ponto para o qual o usuário está olhando, ao mesmo tempo em que ele emite um comando de voz ou executa um gesto com as mãos, permite uma canalização fácil da entrada no campo de visão. Os exemplos incluem: “Coloque isso lá” para selecionar rápida e fluentemente um holograma e posicioná-lo na cena apenas olhando um alvo e o destino. 
 
-    - **Necessidade de sincronizar entradas multimodais (problema de "deixe antes de clicar em"):** Combinação de movimentações de olho rápida com mais complexas entradas adicionais (por exemplo, comandos de voz longo ou gestos de mão) guarda o risco de avançarmos com seu foco de olho antes de concluir o comando de entrada adicional. Portanto, se você criar seus próprios controles de entrada (por exemplo, gestos de mão personalizado), certifique-se fazer logon do início desta duração aproximada ou de entrada para correlacioná-los com o que um usuário tinha concentrada no passado.
+    - **Necessidade de sincronizar entradas multimodais (problema de “sair antes de clicar”):** A combinação de movimentos oculares rápidos com entradas adicionais mais complexas (por exemplo, comandos de voz longos ou gestos com as mãos) traz o risco de prosseguirmos com o foco com o olhar antes de concluirmos o comando de entrada adicional. Portanto, se você criar seus próprios controles de entrada (por exemplo, gestos com as mãos personalizados), lembre-se de registrar a ocorrência dessa entrada ou sua duração aproximada para correlacioná-la ao que um usuário tinha se fixado no passado.
     
-3. **Comentários sutis para entrada de acompanhamento a olho nu:** É útil fornecer comentários, se um destino examinou (para indicar que o sistema está funcionando conforme o esperado), mas deve ser mantido sutil. Isso pode incluir combinação lentamente de entrada/saída destaques do visual ou executar outros comportamentos de destino sutis, como movimentos lenta (por exemplo, aumentando ligeiramente o destino) para indicar que o sistema detectou corretamente que o usuário está observando um destino, no entanto, sem interromper o fluxo de trabalho atual do usuário desnecessariamente. 
+3. **Comentários sutis para a entrada de acompanhamento ocular:** É útil fornecer comentários se um alvo é observado (para indicar que o sistema está funcionando conforme o esperado), mas isso deve ser sutil. Isso pode incluir a mistura/o desaparecimento lentos de destaques visuais ou a execução de outros comportamentos sutis de alvo, como movimentos lentos (por exemplo, um pequeno aumento do alvo) para indicar que o sistema detectou corretamente que o usuário está olhando para um alvo, no entanto, sem desnecessariamente interromper o fluxo de trabalho atual do usuário. 
 
-4. **Evite a imposição de movimentações de olho artificial como entrada:** Não force os usuários realizem movimentos de olho específico (gestos de olhar) para disparar ações em seu aplicativo.
+4. **Evitar a imposição de movimentos oculares artificiais como entrada:** Não force os usuários a realizarem movimentos oculares específicos (gestos com o olhar) para disparar ações em seu aplicativo.
 
-5. **Conta para imprecisions:** Fazemos distinção dois tipos de imprecisions que são perceptíveis aos usuários: Deslocamento e variação. A maneira mais fácil para os deslocamentos de endereço é fornecer destinos grandes o suficiente para interagir com (> 2° em ângulo visual – como referência: sua miniatura é aproximadamente 2° em ângulo visual quando você se estendem o arm (1)). Isso leva as seguintes diretrizes:
-    - Não force os usuários para selecionar destinos pequenos: Pesquisas mostram que, se os destinos são suficientemente grandes (e o sistema é muito bem projetado), os usuários descrevem a interação como mágica e sem nenhum esforço. Se os destinos de se tornar muito pequenos, os usuários descrevem a experiência como fatiguing e frustrante.
+5. **Levar em conta as imprecisões:** Fazemos distinção de dois tipos de imprecisões que são perceptíveis aos usuários: Deslocamento e tremulação. A maneira mais fácil de lidar com os deslocamentos é fornecer alvos grandes o suficiente para interação [ângulo visual de > 2° – como referência: sua miniatura tem um ângulo visual de aproximadamente 2° quando você estende o braço (1)]. Isso resulta nas seguintes diretrizes:
+    - Não force os usuários a selecionar alvos minúsculos: As pesquisas mostram que, se os alvos forem suficientemente grandes (e o sistema for muito bem projetado), os usuários descreverão a interação como mágica e sem esforço. Se os alvos ficarem muito pequenos, os usuários descreverão a experiência como cansativa e frustrante.
    
 
 ## <a name="see-also"></a>Consulte também
 * [Focar com a cabeça e confirmar](gaze-and-commit.md)
 * [Olhar fixo com cabeça e olhos no DirectX](gaze-in-directx.md)
-* [Olhar de olho no Unity (Toolkit de realidade mista)](https://aka.ms/mrtk-eyes)
+* [Foco com o olhar no Unity (Kit de Ferramentas de Realidade Misturada)](https://aka.ms/mrtk-eyes)
 * [Gestos de mão](gestures.md)
 * [Entrada de voz](voice-design.md)
 * [Controladores de movimentos](motion-controllers.md)

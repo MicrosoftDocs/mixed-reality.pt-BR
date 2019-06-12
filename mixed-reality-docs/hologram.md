@@ -6,12 +6,12 @@ ms.author: befolsom
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Realidade mista do Windows, HoloLens, hologramas, design e interação
-ms.openlocfilehash: 5a6cc4df764b1f92f6bea2d7d6e6effe2164e4d6
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 714b08db23aa641252291aebe89fa3059c209a6f
+ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59589139"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66829786"
 ---
 # <a name="what-is-a-hologram"></a>O que é um holograma?
 
@@ -24,11 +24,24 @@ HoloLens permite que você crie **hologramas**, feita de objetos de luz e som qu
 ## <a name="device-support"></a>Suporte a dispositivos
 
 <table>
-<tr>
-<th>Recurso</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens (1ª geração)</a></th><th style="width:150px">HoloLens 2</th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Fones imersivos em exposição</a></th>
-</tr><tr>
-<td> Hologramas</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"></td>
-</tr>
+    <colgroup>
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+    </colgroup>
+    <tr>
+        <td><strong>Recurso</strong></td>
+        <td><a href="hololens-hardware-details.md"><strong>HoloLens (1ª geração)</strong></a></td>
+        <td><strong>HoloLens 2</strong></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Fones imersivos em exposição</strong></a></td>
+    </tr>
+     <tr>
+        <td>Hologramas</td>
+        <td>✔️</td>
+        <td>✔️</td>
+        <td>❌</td>
+    </tr>
 </table>
 
 ## <a name="a-hologram-is-made-of-light-and-sound"></a>Um holograma é feito da luz e som
@@ -50,7 +63,7 @@ Quando você tem um local específico em que você deseja um holograma, você po
 Alguns hologramas siga o usuário em vez disso. Esses hologramas tag-along posicionam por conta própria em relação ao usuário, não importa onde eles percorrer. Você ainda pode optar por trazer um holograma com você por um tempo e, em seguida, coloque-o na parede depois de abrir outra sala.
 
 **Práticas recomendadas**
-* Alguns cenários podem exigir que hologramas permanecem visível em toda a experiência ou facilmente identificável. Há duas abordagens de alto nível para esse tipo de posicionamento. Vamos chamá-los **"exibição bloqueada"** e **"corpo bloqueada"**.
+* Alguns cenários podem exigir que hologramas permanecem visível em toda a experiência ou facilmente identificável. Há duas abordagens de alto nível para esse tipo de posicionamento. Vamos chamá-los **"exibição bloqueada"** e **"corpo bloqueada"** .
    * Bloqueado para exibição de conteúdo é posições "bloqueado" para a tela do dispositivo. Isso é complicado de inúmeros motivos, incluindo uma sensação artificial de "clingyness" que faz com que muitos usuários frustrados e desejam "livrá-lo." Em geral, muitos designers encontrá-lo melhor evitar o bloqueio de exibição de conteúdo.
    * A abordagem de bloqueado o corpo é muito mais forgivable. Bloqueio de corpo é quando um holograma é vinculado ao corpo do usuário ou olhar vetor, mas está posicionado no espaço 3d em torno do usuário. Muitas experiências adotaram um comportamento de bloqueio de corpo onde o holograma "segue" olhar a usuários, que permite ao usuário girar o corpo e percorrer o espaço sem perder o holograma. Incorporar um atraso ajuda a movimentação de holograma parecer mais natural. Por exemplo, alguns principais da interface do usuário do SO Windows Holographic usa uma variação no corpo de bloqueio que segue a olhar do usuário com um atraso suave, semelhante ao Elástico, enquanto o usuário virar suas cabeças.
 * Coloque o holograma em uma distância de visualização confortável normalmente cerca de 1 a 2 metros longe no cabeçalho.

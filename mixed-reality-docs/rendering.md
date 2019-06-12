@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
 keywords: renderização, holograma
-ms.openlocfilehash: 9d87af1b445bc6f730dd02bd7bd7f3aefe7f53db
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 5271e94521b99e76998c2cbb43475a5f3f847917
+ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59590964"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66829906"
 ---
 # <a name="rendering"></a>Renderização
 
@@ -20,11 +20,24 @@ Renderização holográfica permite que seu aplicativo desenhar um holograma em 
 ## <a name="device-support"></a>Suporte a dispositivos
 
 <table>
-<tr>
-<th>Recurso</th><th style="width:150px"><a href="hololens-hardware-details.md">HoloLens (1ª geração)</a></th><th style="width:150px">HoloLens 2</th><th style="width:150px"><a href="immersive-headset-hardware-details.md">Fones imersivos em exposição</a></th>
-</tr><tr>
-<td>nome do artigo</td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td>
-</tr>
+    <colgroup>
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+    </colgroup>
+    <tr>
+        <td><strong>Recurso</strong></td>
+        <td><a href="hololens-hardware-details.md"><strong>HoloLens (1ª geração)</strong></a></td>
+        <td><strong>HoloLens 2</strong></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Fones imersivos em exposição</strong></a></td>
+    </tr>
+     <tr>
+        <td>Renderização</td>
+        <td>✔️</td>
+        <td>✔️</td>
+        <td>✔️</td>
+    </tr>
 </table>
 
 ## <a name="holographic-rendering"></a>Renderização holográfica
@@ -84,5 +97,5 @@ Durante a renderização de médicos MRI ou volumes em 3D, de engenharia [render
 
 
 ## <a name="see-also"></a>Consulte também
-* [Estabilidade holograma](hologram-stability.md)
-* [Processamento no DirectX](rendering-in-directx.md)
+* [Estabilidade do holograma](hologram-stability.md)
+* [Como renderizar no DirectX](rendering-in-directx.md)

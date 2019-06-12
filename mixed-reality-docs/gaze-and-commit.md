@@ -1,21 +1,21 @@
 ---
-title: Olhar head e confirmar
-description: Visão geral do modelo de entrada olhar head e confirmar
+title: Foco com a cabeça e confirmação
+description: Visão geral do modelo de entrada de foco com a cabeça e confirmação
 author: caseymeekhof
 ms.author: cmeekhof
 ms.date: 03/31/2019
 ms.topic: article
 ms.localizationpriority: high
-keywords: Misto realidade, olhar, olhar direcionamento, interação, de design
-ms.openlocfilehash: a84465de3479bf3da2131b94dd522539cd7de6e9
-ms.sourcegitcommit: c20563b8195c0c374a927b96708d958b127ffc8f
-ms.translationtype: MT
+keywords: Realidade Misturada, foco, direcionamento do foco, interação, design
+ms.openlocfilehash: d9eae3c0cfceba7c2c31425941dfce865f3aa609
+ms.sourcegitcommit: f20beea6a539d04e1d1fc98116f7601137eebebe
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65974875"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66692307"
 ---
-# <a name="head-gaze-and-commit"></a>Olhar head e confirmar
-Olhar head e confirmação é um modelo de entrada que envolve o direcionamento de um objeto com a direção da sua cabeça que aponta para a frente (head-direção), e, em seguida, agir sobre eles com um secundário de entrada, como o gesto de mão ar toque ou a voz de comando "Select". Ele é considerado um modelo de "agora" entrado com a manipulação indireta, ou seja, que ele é mais adequado para interagir com o conteúdo que está além do braços atingir.
+# <a name="head-gaze-and-commit"></a>Foco com a cabeça e confirmação
+O foco com a cabeça e confirmação é um modelo de entrada que envolve o direcionamento do foco para um objeto com a cabeça apontando para a frente (direção da cabeça) e, em seguida, a execução de uma ação baseada nela com uma entrada secundária, como o gesto com a mão de fechar e abrir dedos indicador e polegar ou o comando de voz “Selecionar”. Ele é considerado um modelo de entrada "distante" com manipulação indireta, ou seja, é mais adequado para interagir com o conteúdo que está além do alcance dos braços.
 
 ## <a name="device-support"></a>Suporte a dispositivos
 
@@ -30,177 +30,177 @@ Olhar head e confirmação é um modelo de entrada que envolve o direcionamento 
         <td><strong>Modelo de entrada</strong></td>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens (1ª geração)</strong></a></td>
         <td><strong>HoloLens 2</strong></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>Fones imersivos em exposição</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Headsets imersivos</strong></a></td>
     </tr>
      <tr>
-        <td>Olhar head e confirmar</td>
+        <td>Foco com a cabeça e confirmação</td>
         <td>✔️ Recomendado</td>
-        <td>✔️ Recomendado (terceira opção - <a href="interaction-fundamentals.md">ver as outras opções</a>)</td>
-        <td>Opção alternativa de ➕</td>
+        <td>✔️ Recomendado (terceira opção – <a href="interaction-fundamentals.md">confira as outras opções</a>)</td>
+        <td>➕ Opção alternativa</td>
     </tr>
 </table>
 
-## <a name="head-gaze"></a>Olhar head
-Realidade misturada headsets usarem a posição e orientação da cabeça do usuário para determinar seu vetor de direção principal. Você pode pensar isso como um laser que aponte diretamente para frente do diretamente entre a atenção do usuário. Isso é bastante grosso aproximação de onde o usuário está procurando. Seu aplicativo pode se cruzam esse ray com objetos reais ou virtuais e desenhar um cursor nesse local para que o usuário saiba o que eles estão visando atualmente.
+## <a name="head-gaze"></a>Foco com a cabeça
+Os headsets de realidade misturada usam a posição e a orientação da cabeça do usuário para determinar seu vetor de direção da cabeça. Você pode considerar isso como um laser que aponta para a frente, diretamente entre os olhos do usuário. Essa é uma aproximação bastante grosseira da direção para a qual o usuário está olhando. Seu aplicativo pode interseccionar esse raio com objetos virtuais ou do mundo real e desenhar um cursor nessa localização para informar o usuário do que ele está direcionando o foco.
 
-Além de olhar principal, alguns fones de ouvido de realidade misturada, como o HoloLens 2 incluem sistemas que produzem um vetor de olho olhar de acompanhamento a olho nu. Isso fornece uma medida refinada de onde o usuário está procurando. É possível compilar olhar e interações de olhar de olho de confirmação, mas isso vem com um conjunto muito diferente das restrições de design, que será abordado em separadamente a [artigo de acompanhamento a olho nu](eye-tracking.md).
+Além do foco com a cabeça, alguns headsets de realidade misturada, como o HoloLens 2, incluem sistemas de acompanhamento ocular que produzem um vetor de foco com o olhar. Isso fornece uma medida refinada da direção para a qual o usuário está olhando. É possível criar interações de foco e confirmação usando o foco com o olhar, mas isso vem com um conjunto muito diferente de restrições de design, que será abordado separadamente no [artigo sobre acompanhamento ocular](eye-tracking.md).
 
 ## <a name="commit"></a>Confirmação
-Depois de direcionar um objeto ou um elemento de interface do usuário, o usuário pode interagir ou "click" nele usando uma entrada secundária. Isso é conhecido como a etapa de confirmação do modelo. Há suporte para os seguintes métodos de confirmação:
+Depois de direcionar o foco para um objeto ou um elemento de interface do usuário, o usuário pode interagir com ele ou "clicar" nele usando uma entrada secundária. Isso é conhecido como a etapa de confirmação do modelo. Os seguintes métodos de confirmação são compatíveis:
 
-- Gesto de ar
-- Fale o comando de voz "Select" ou um dos comandos de voz de destino
-- Pressione o botão único um [HoloLens Clicker](hardware-accessories.md#hololens-clicker)
-- Pressione o botão 'A' em um Xbox Gamepad
-- Pressione o botão 'A' em um controlador adaptável do Xbox
+- Gesto de fechar e abrir dedos indicador e polegar
+- Emitir o comando de voz "Selecionar" ou um dos comandos de voz direcionados
+- Pressionar o único botão em um [HoloLens Clicker](hardware-accessories.md#hololens-clicker)
+- Pressionar o botão 'A' em um gamepad Xbox
+- Pressionar o botão 'A' em um Controle Adaptável Xbox
 
-### <a name="head-gaze-and-air-tap-gesture"></a>Gesto de toque de olhar head e ar
-Indicador e polegar é um gesto de tocar com a mão na vertical. Para executar um indicador e polegar, acionar o dedo para a posição de pronto, em seguida, aperto com o dedo e acionar seu dedo fazer backup para liberar. Em HoloLens 1, o indicador e polegar é a entrada de secundária mais comuns.
+### <a name="head-gaze-and-air-tap-gesture"></a>Foco com a cabeça e gesto de fechar e abrir dedos indicador e polegar
+Fechar e abrir dedos indicador e polegar é um gesto de tocar feito com a mão levantada. Para fazer um gesto de fechar e abrir dedos indicador e polegar, levante o dedo indicador apontando-o para cima e, em seguida, faça um gesto de pinçagem com o polegar e levante o dedo indicador novamente para soltá-lo. No HoloLens 1, o gesto de fechar e abrir dedos indicador e polegar é a entrada secundária mais comum.
 
-![Com o dedo na posição pronta e, em seguida, um movimento de toque ou clique em](images/readyandpress.jpg)<br>
+![Dedo apontado para cima e, em seguida, um movimento de toque ou clique](images/readyandpress.jpg)<br>
 
-Indicador e polegar também está disponível em HoloLens 2 e foi abrandado da versão original. Quase todos os tipos de pinches agora têm suporte, desde que a mão é ainda vertical e a espera. Isso torna muito mais fácil para os usuários a aprender e faça o gesto.  Esse novo indicador e polegar substitui o antigo por meio da API do mesma, para que os aplicativos existentes obterão o novo comportamento automaticamente após a recompilação do HoloLens 2.
+O gesto de fechar e abrir dedos indicador e polegar também está disponível no HoloLens 2 e foi suavizado comparado à versão original. Agora quase todos os tipos de gestos de pinçagem são compatíveis, desde que a mão esteja levantada e parada. Isso facilita muito para os usuários aprenderem e fazerem o gesto.  Esse novo gesto de fechar e abrir dedos indicador e polegar substitui o antigo por meio da mesma API e, portanto, os aplicativos existentes obterão o novo comportamento automaticamente após a recompilação para o HoloLens 2.
 
-### <a name="head-gaze-and-select-voice-command"></a>"Select" e HEAD olhar o comando de voz
-Comandos de voz são um dos métodos de interação primário na realidade misturada. Ele fornece um mecanismo muito eficiente "Mãos livre" para o sistema de controle. Há tipos diferente dos modelos de interação de voz:
+### <a name="head-gaze-and-select-voice-command"></a>Foco com a cabeça e comando de voz "Selecionar"
+Os comandos de voz são um dos principais métodos de interação de Realidade Misturada. Eles fornecem um mecanismo muito eficiente de "mãos livres" para controlar o sistema. Há diferentes tipos de modelos de interação de voz:
 
-- O comando genérico "Selecionar" que permite executar uma confirmação como uma entrada secundária ou acionar "clique".
-- Comandos de objeto, como "Fechar" ou "Aumentá-lo", que permitem executar e confirmar a uma ação como uma entrada secundária.
-- Commnads globais, como "Ir para iniciar" que não exigem um destino.
-- Interfaces de usuário de conversa ou entidades, como Cortana que têm um recurso de linguagem Natural de inteligência Artificial.
-- Commnads personalizado
+- O comando genérico "Selecionar", que permite executar um acionamento ou uma confirmação por "clique" como uma entrada secundária.
+- Comandos de objeto, como "Fechar" ou "Aumentar", que permitem executar e confirmar uma ação como uma entrada secundária.
+- Comandos globais, como "Ir para o início", que não exigem um alvo.
+- Interfaces de usuário de conversa ou entidades, como a Cortana, que têm uma funcionalidade de Idioma Natural de IA.
+- Comandos personalizados
 
-Para encontrar mais detalhes e uma lista de comprenhesive de comandos disponíveis e como usar, Confira nossos [comandos de voz](voice-design.md) diretrizes.
-
-
-### <a name="head-gaze-and-hololens-clicker"></a>Olhar head e HoloLens Clicker
-O HoloLens Clicker é o primeiro dispositivo periférico criado especificamente para o HoloLens e está incluído com a edição de desenvolvimento HoloLens 1. O HoloLens Clicker permite que um usuário clicar com o movimento de mão mínima e confirmadas como uma entrada secundária. O HoloLens clicker conecta-se para o HoloLens 1 ou 2 usando Bluetooth baixa energia (BTLE).
-
-![](images/hololens-clicker-500px.jpg)<br>
-HoloLens Clicker
-
-Mais informações e instruções para emparelhar o dispositivo podem ser encontradas [aqui](hardware-accessories.md#pairing-bluetooth-accessories)
+Para encontrar mais detalhes e uma lista abrangente de comandos disponíveis e como usá-los, confira nossas diretrizes de [comandos de voz](voice-design.md).
 
 
+### <a name="head-gaze-and-hololens-clicker"></a>Foco com a cabeça e HoloLens Clicker
+O HoloLens Clicker é o primeiro dispositivo periférico criado especificamente para o HoloLens e está incluído no HoloLens 1 Development Edition. O HoloLens Clicker permite que um usuário faça um clique com movimentos mínimos com as mãos e uma confirmação como uma entrada secundária. O HoloLens Clicker conecta-se ao HoloLens 1 ou 2 usando o BTLE (Bluetooth de Baixa Energia).
+
+![HoloLens Clicker](images/hololens-clicker-500px.jpg)<br>
+*HoloLens Clicker*
+
+Mais informações e instruções sobre como emparelhar o dispositivo podem ser encontradas [aqui](hardware-accessories.md#pairing-bluetooth-accessories)
 
 
-### <a name="head-gaze-and-xbox-wireless-controller"></a>Olhar head e o controlador de sem fio do Xbox
-O controlador do Xbox sem fio permite executar acionar um "clique" como um secundário, usando o botão de entrada. O dispositivo é mapeado para um conjunto padrão de ações que ajudam a navegar e controlar o sistema. Se você desejar personalizar o controlador, use o Xbox Accesories App para configurar seu controlador do Xbox sem fio.
-
-![](images/xboxcontroller.jpg)<br>
-Controlador sem fio do Xbox
-
-[Emparelhamento de um controlador do Xbox com seu PC](hardware-accessories.md#pairing-bluetooth-accessories)
 
 
-### <a name="head-gaze-and-xbox-adaptive-controller"></a>Controlador adaptável olhar head e Xbox
-O controlador do Xbox adaptável projetado principalmente para atender às necessidades de jogadores com mobilidade limitada, é um hub unificado para dispositivos que ajuda a tornar realidade misturada mais acessível.
+### <a name="head-gaze-and-xbox-wireless-controller"></a>Foco com a cabeça e Controle sem Fio Xbox
+O Controle sem Fio Xbox permite executar um acionamento por "clique" como uma entrada secundária usando o botão A. O dispositivo é mapeado para um conjunto padrão de ações que ajudam a navegar pelo sistema e controlá-lo. Caso você deseje personalizar o controle, use o Aplicativo de Acessórios Xbox para configurar o Controle sem Fio Xbox.
 
-O controlador de adaptável do Xbox permite executar acionar um "clique" como um secundário, usando o botão de entrada. O dispositivo é mapeado para um conjunto padrão de ações que ajudam a navegar e controlar o sistema. Se você desejar personalizar o controlador, use o Xbox Accesories App para configurar seu controlador adaptável do Xbox.
+![Controle sem Fio Xbox](images/xboxcontroller.jpg)<br>
+*Controle sem Fio Xbox*
 
-![](images/xbox-adaptive-controller-devices.jpg)<br>
-Controlador do Xbox adaptável
+[Como emparelhar um controle Xbox com o computador](hardware-accessories.md#pairing-bluetooth-accessories)
 
-Conecte dispositivos externos, como comutadores, botões, montagens e joysticks para criar uma experiência personalizada de controladores que é exclusivamente sua. Entradas de botão, direcional e disparador são controladas com dispositivos assistenciais conectados por meio de tomadas de 3,5 mm e portas USB.
 
-![](images/xbox-adaptive-controller-ports.jpg)<br>
-Portas de controle adaptável do Xbox
+### <a name="head-gaze-and-xbox-adaptive-controller"></a>Foco com a cabeça e Controle Adaptável Xbox
+Desenvolvido principalmente para atender às necessidades de jogadores com mobilidade limitada, o Controle Adaptável Xbox é um hub unificado para dispositivos que ajuda a tornar a Realidade Misturada mais acessível.
+
+O Controle Adaptável Xbox permite executar um acionamento por "clique" como uma entrada secundária usando o botão A. O dispositivo é mapeado para um conjunto padrão de ações que ajudam a navegar pelo sistema e controlá-lo. Caso você deseje personalizar o controle, use o Aplicativo de Acessórios Xbox para configurar o Controle Adaptável Xbox.
+
+![Controle Adaptável Xbox](images/xbox-adaptive-controller-devices.jpg)<br>
+*Controle Adaptável Xbox*
+
+Conecte dispositivos externos, como comutadores, botões, montagens e joysticks, para criar uma experiência personalizada de controles exclusivamente sua. As entradas de botão, thumbstick e gatilho são controladas com dispositivos adaptativos conectados por meio de entradas de 3,5 mm e portas USB.
+
+![Portas do Controle Adaptável Xbox](images/xbox-adaptive-controller-ports.jpg)<br>
+*Portas do Controle Adaptável Xbox*
 
 [Instruções para emparelhar o dispositivo](hardware-accessories.md#pairing-bluetooth-accessories)
 
 <a href=https://www.xbox.com/en-US/xbox-one/accessories/controllers/xbox-adaptive-controller>Mais informações disponíveis no site do Xbox</a>
 
 
-# <a name="head-gaze-design-guidelines"></a>Diretrizes de design de olhar head
+## <a name="design-guidelines"></a>Diretrizes de design
 > [!NOTE]
-> Orientação mais específica para design de olhares [em breve](index.md).
+> Mais diretrizes específicas ao design de foco [em breve](index.md).
 
-## <a name="head-gaze-targeting"></a>Direcionamento de olhar de cabeça
-Todas as interações baseiam-se a capacidade de um usuário para o elemento que eles querem interagir, independentemente da modalidade de entrada de destino. Na realidade mista do Windows, isso geralmente é feito usando olhar do usuário.
-Para habilitar um usuário trabalhar com uma experiência com êxito, as Noções básicas sobre calculado do sistema de intenção do usuário e a intenção do usuário real, deve se alinhar o mais próximo possível. Para o grau que o sistema interpreta as ações do usuário pretendida corretamente, aumenta a satisfação e o desempenho melhora.
+## <a name="head-gaze-targeting"></a>Direcionamento de foco com a cabeça
+Todas as interações baseiam-se na capacidade de um usuário direcionar seu foco para o elemento com o qual deseja interagir, independentemente da modalidade de entrada. No Windows Mixed Reality, isso geralmente é feito com o foco do usuário.
+Para permitir que um usuário trabalhe com uma experiência bem-sucedida, o entendimento calculado do sistema da intenção de um usuário e a intenção real do usuário devem estar os mais alinhados possíveis. Na medida em que o sistema interpreta as ações pretendidas do usuário corretamente, a satisfação e o desempenho melhoram.
 
 
-## <a name="target-sizing-and-feedback"></a>Comentários e dimensionamento de destino
-O vetor de olhar mostrado repetidamente para ser usado para direcionar tudo bem, mas geralmente funciona melhor para brutos direcionamento (ao adquirir um pouco maiores destinos). Tamanhos de destino mínimo de 1 a 1,5 graus devem permitir que as ações do usuário bem-sucedida na maioria dos cenários, embora normalmente permitem destinos de graus de 3 para maior velocidade. Observe que o tamanho que os destinos de usuário é efetivamente uma área 2D até mesmo para elementos 3D – qualquer projeção é voltado para a eles deve ser a área a ser direcionada. Fornecer alguma indicação evidente que um elemento está "ativo" (que o usuário está direcionando-la) é extremamente útil – isso pode incluir tratamentos como efeitos de "passagem" visível, destaques de áudio ou cliques ou desmarque o alinhamento de um cursor com um elemento.
+## <a name="target-sizing-and-feedback"></a>Dimensionamento e comentários sobre o alvo
+O vetor de foco demonstrou repetidamente ser utilizável para o direcionamento refinado, mas geralmente funciona melhor para o direcionamento bruto (adquirindo, de certa forma, alvos maiores). Os tamanhos mínimos do alvo de 1 a 1,5 grau devem permitir ações bem-sucedidas do usuário na maioria dos cenários, embora os alvos de 3 graus normalmente permitam uma maior velocidade. Observe que o tamanho do alvo escolhido pelo usuário é efetivamente uma área 2D até mesmo para elementos 3D – qualquer que seja a projeção que esteja voltada para eles deverá ser a área de alvo. O fornecimento de alguma indicação evidente de que um elemento está "ativo" (ao qual o usuário está direcionando o foco) é extremamente útil – isso pode incluir tratamentos como efeitos de "focalização" visíveis, destaques de áudio ou cliques ou alinhamento claro de um cursor com um elemento.
 
-![Tamanho de destino ideal a distância do medidor 2](images/gazetargeting-size-1000px.jpg)<br>
-*Tamanho de destino ideal a distância do medidor 2*
+![Tamanho ideal do alvo em uma distância de 2 metros](images/gazetargeting-size-1000px.jpg)<br>
+*Tamanho ideal do alvo em uma distância de 2 metros*
 
-![Um exemplo de realce de um objeto de destino de olhar](images/gazetargeting-highlighting-640px.jpg)<br>
-*Um exemplo de realce de um objeto de destino de olhar*
+![Um exemplo de realce de um objeto direcionado por foco](images/gazetargeting-highlighting-640px.jpg)<br>
+*Um exemplo de realce de um objeto direcionado por foco*
 
-## <a name="target-placement"></a>Posicionamento de destino
-Os usuários geralmente não encontrarão encontrar elementos de interface do usuário são posicionados muito alto ou muito baixo em seu campo de visão, concentrando-se a maior parte de sua atenção nas áreas em torno de seu foco principal (geralmente aproximadamente nível dos olhos). Pode ajudar a colocar a maioria dos destinos em alguns banda razoável em torno do nível dos olhos. Dada a tendência para os usuários para se concentrar em uma área visual relativamente pequena a qualquer momento (attentional cone de visão é aproximadamente 10 graus), agrupar elementos de interface do usuário para o grau que elas estão relacionadas conceitualmente pode aproveitar comportamentos de encadeamento de atenção do item a item como um usuário move seu olhar por meio de uma área. Ao projetar a interface do usuário, tenha em mente a variação grande potencial no campo de exibição entre HoloLens e fones imersivos em exposição.
+## <a name="target-placement"></a>Posicionamento do alvo
+Em geral, os usuários não encontrarão elementos de interface do usuário posicionados muito acima ou muito abaixo de seu campo de visão, concentrando a maior parte de sua atenção nas áreas em torno de seu foco principal (em geral, aproximadamente no nível dos olhos). O posicionamento da maioria dos alvos em uma faixa razoável em torno do nível dos olhos pode ajudar. Dada a tendência dos usuários de se concentrarem em uma área visual relativamente pequena a qualquer momento (o cone de atenção da visão é de aproximadamente 10 graus), o agrupamento de elementos de interface do usuário na medida em que eles estejam relacionados conceitualmente pode aproveitar os comportamentos de encadeamento da atenção de item a item conforme um usuário move o foco por uma área. Ao projetar a interface do usuário, tenha em mente a grande variação potencial no campo de visão entre o HoloLens e os headsets imersivos.
 
-![Um exemplo dos elementos de interface do usuário agrupados para olhar mais fáceis de direcionamento no Explorer Galaxy](images/gazetargeting-grouping-1000px.jpg)<br>
-*Um exemplo dos elementos de interface do usuário agrupados para olhar mais fáceis de direcionamento no Explorer Galaxy*
+![Um exemplo de elementos de interface do usuário agrupados para um direcionamento do foco mais fácil no Galaxy Explorer](images/gazetargeting-grouping-1000px.jpg)<br>
+*Um exemplo de elementos de interface do usuário agrupados para um direcionamento do foco mais fácil no Galaxy Explorer*
 
-## <a name="improving-targeting-behaviors"></a>Melhorando a comportamentos de direcionamento
-Se a intenção do usuário para algo de destino pode ser determinada (ou aproximada de perto), ele pode ser muito útil aceitar "near Srta" tenta a interação como se eles foram direcionados corretamente. Há um punhado de métodos bem-sucedidas que podem ser incorporados em experiências de realidade mista:
+## <a name="improving-targeting-behaviors"></a>Como melhorar os comportamentos de direcionamento
+Se a intenção do usuário de direcionar o foco para algo puder ser determinada (ou aproximada), poderá ser muito útil aceitar tentativas "quase certas" na interação como se elas tivessem sido direcionadas corretamente. Há diversos métodos bem-sucedidos que podem ser incorporados em experiências de realidade misturada:
 
-### <a name="head-gaze-stabilization-gravity-wells"></a>Estabilização olhar head ("wells gravidade")
-Essa deve ser ligado a maioria ou todos do tempo. Essa técnica remove os jitters head/pescoço natural que os usuários podem ter. Também movimento devido a comportamentos de busca/falando.
+### <a name="head-gaze-stabilization-gravity-wells"></a>Estabilização do foco com a cabeça ("poços gravitacionais")
+Isso deve estar ligado na maior parte do tempo ou todo o tempo. Essa técnica remove as tremulações naturais da cabeça/do pescoço que os usuários possam ter. Além disso, o movimento devido a comportamentos de visão/fala.
 
-### <a name="closest-link-algorithms"></a>Algoritmos mais próximo do link
-Eles funcionam melhor em áreas com conteúdo interativo esparsa. Se houver uma grande probabilidade de que você pode determinar o que um usuário estava tentando interagir com, você pode complementar suas habilidades de direcionamento por simplesmente supondo que algum nível de intenção.
+### <a name="closest-link-algorithms"></a>Algoritmos de vínculo mais próximo
+Eles funcionam melhor em áreas com conteúdo interativo esparso. Se houver uma grande probabilidade de que você determine com o que um usuário estava tentando interagir, você poderá complementar suas habilidades de direcionamento apenas supondo algum nível de intenção.
 
-### <a name="backdatingpostdating-actions"></a>Ações backdating/postdating
-Esse mecanismo é útil para tarefas que precisam de velocidade. Quando um usuário está movendo por meio de uma série de direcionamento/ativação evasivas na velocidade, pode ser útil a assumir alguns intenção e permitir etapas ausentes atuar em destinos que o usuário tinha em foco um pouco antes ou depois de um pouco o tap (50 ms antes/depois foi eficaz em no início de teste).
+### <a name="backdatingpostdating-actions"></a>Ações de antedatar/pós-datar
+Esse mecanismo é útil para tarefas que exigem velocidade. Quando um usuário se move por uma série de manobras de direcionamento/ativação com velocidade, pode ser útil supor uma intenção e permitir etapas ausentes para executar ações em alvos que o usuário tinha em foco um pouco antes ou depois do toque (50 ms antes/depois do que foi eficaz no início do teste).
 
 ### <a name="smoothing"></a>Suavização
-Esse mecanismo é útil para movimentos de caminhos, reduzindo a tremulação/wobble pequena devido às características de movimentação do cabeçote natural. Quando a suavização ao longo de movimentos de caminhos, suaves por tamanho/distância de movimentos em vez de ao longo do tempo
+Esse mecanismo é útil para movimentos de caminhos, reduzindo leve tremulação/tremor devido às características de movimentação natural da cabeça. Durante a suavização em movimentos de caminhos, aplique a suavização por tamanho/distância de movimentos em vez de ao longo do tempo
 
-### <a name="magnetism"></a>Magnetism
-Esse mecanismo pode ser pensado como uma versão mais geral de algoritmos "Vincular mais próximo" - desenhar um cursor em direção a um destino ou simplesmente aumentar hitboxes (seja visivelmente ou não) como os usuários provavelmente destinos de abordagem, usando algum conhecimento sobre o layout interativo para intenção do usuário abordagem melhor. Isso pode ser particularmente poderoso para destinos pequeno.
+### <a name="magnetism"></a>Magnetismo
+Esse mecanismo pode ser considerado uma versão mais geral dos algoritmos de "Vínculo mais próximo" – desenhar um cursor em direção a um alvo ou apenas aumentar os hitboxes (seja visivelmente ou não) conforme os usuários se aproximam de prováveis alvos, usando algum conhecimento sobre o layout interativo para uma melhor abordagem da intenção do usuário. Isso pode ser particularmente eficiente para alvos pequenos.
 
-### <a name="focus-stickiness"></a>Adesão de foco
-Ao determinar qual próximos elementos interativos para dar o foco para o, forneça uma tendência para o elemento que tem o foco. Isso ajudará a reduzir o foco irregular alternância comportamentos quando flutuante em um ponto médio entre dois elementos com ruído natural.
+### <a name="focus-stickiness"></a>Adesão do foco
+Ao determinar a quais elementos interativos nas proximidades o foco deve ser dado, forneça um desvio para o elemento que tem o foco atualmente. Isso ajudará a reduzir os comportamentos de alternância de foco instável durante a flutuação em um ponto médio entre dois elementos com ruído natural.
 
 
-## <a name="composite-gestures"></a>Gestos de composição
-Aplicativos podem reconhecer os toques de mais de apenas individuais. Pela combinação de toque, mantenha e de versão com o movimento da mão, gestos de composição mais complexos podem ser executados. Esses gestos de alto nível ou compostos dependem de baixo nível entrados dados espaciais (de indicador e polegar e Bloom) que os desenvolvedores têm acesso ao.
+## <a name="composite-gestures"></a>Gestos compostos
+Os aplicativos podem reconhecer mais do que apenas toques individuais. Pela combinação do toque, do gesto de manter e de soltar com o movimento da mão, gestos compostos mais complexos podem ser feitos. Esses gestos compostos ou de alto nível baseiam-se nos dados de entrada espaciais de baixo nível (do fechar e abrir dedos indicador e polegar ao abrir a mão) aos quais os desenvolvedores têm acesso.
 
-### <a name="air-tap"></a>Indicador e polegar
-O gesto de toque de ar (bem como outros gestos abaixo) reage somente a um toque específico. Para detectar outras toques, como o Menu ou compreensão, seu aplicativo deve usar diretamente as interações de baixo nível descritas na seção de gestos de dois componentes principais acima.
+### <a name="air-tap"></a>Fechar e abrir dedos indicador e polegar
+O gesto de fechar e abrir dedos indicador e polegar (bem como os outros gestos abaixo) responde somente a um toque específico. Para detectar outros toques, como menu ou segurar, o aplicativo precisa usar diretamente as interações de baixo nível descritas na seção de gestos de dois componentes principais acima.
 
-### <a name="tap-and-hold"></a>Tap e hold
-Espera é simplesmente manter a posição do dedo para baixo do indicador e polegar. A combinação de ar tap e hold permite uma variedade de interações mais complexas de "clique e arraste" quando combinado com a movimentação do arm como pegar um objeto em vez de ativá-la ou interações de secundário "mousedown" como mostrar um menu de contexto.
-Tenha cuidado ao projetar para esse gesto no entanto, como os usuários pode estar sujeita a relaxar postures suas mãos no decorrer de quaisquer gesto estendido.
+### <a name="tap-and-hold"></a>Fechar e abrir dedos indicador e polegar e manter
+Manter é simplesmente manter a posição do dedo para baixo no gesto de fechar e abrir dedos indicador e polegar. A combinação dos gestos de fechar e abrir dedos indicador e polegar e manter permite uma variedade de interações mais complexas de "clicar e arrastar" quando usada em conjunto com a movimentação do braço, como pegar um objeto em vez de ativá-lo, ou interações secundárias "mousedown", como mostrar um menu de contexto.
+No entanto, tenha cuidado ao projetar o uso desse gesto, pois os usuários podem estar propensos a relaxar suas posturas de mão no decorrer de qualquer gesto estendido.
 
 ### <a name="manipulation"></a>Manipulação
-Gestos de manipulação podem ser usados para mover, redimensionar ou girar um holograma quando desejar que o holograma reagir 1:1 para movimentações de mão do usuário. Um uso para tais movimentações de 1:1 é permitir que o usuário desenha ou pintar no mundo.
-O direcionamento inicial um gesto de manipulação de deve ser feito pelo olhar ou apontando. Depois que o tap e hold é iniciado, qualquer manipulação do objeto, em seguida, é tratada manualmente os movimentos, liberando o usuário para olhar em volta, embora eles manipulam.
+Os gestos de manipulação poderão ser usados para mover, redimensionar ou girar um holograma quando você desejar que o holograma responda com uma proporção 1:1 às movimentações de mão do usuário. Um uso para essas movimentações de 1:1 é permitir que o usuário desenhe ou pinte no mundo.
+O direcionamento inicial de um gesto de manipulação deve ser feito pelo foco ou apontando. Depois que o gesto de fechar e abrir dedos indicador e polegar e manter for iniciado, qualquer manipulação do objeto será tratada pelos movimentos da mão, liberando o usuário para olhar em volta durante a manipulação.
 
 ### <a name="navigation"></a>Navegação
-Gestos de navegação funcionam como um joystick virtual e podem ser usados para navegar de widgets de interface do usuário, como menus radiais. Toque e segure para iniciar o gesto e, em seguida, mova a mão dentro de um cubo 3D normalizado, centralizada em torno de imprensa inicial. Você pode mover sua mão ao longo do eixo X, Y ou Z de um valor de -1 para 1 com 0 sendo o ponto de partida.
-Navegação pode ser usada para criar com base em velocidade de rolagem contínua ou gestos de zoom, semelhantes a uma interface do usuário de 2D de rolagem clicando no botão do meio do mouse e, em seguida, mover o mouse para cima para baixo.
+Os gestos de navegação funcionam como um joystick virtual e podem ser usados para navegar por widgets de interface do usuário, como menus radiais. Feche e abra os dedos indicador e polegar e mantenha para iniciar o gesto e, em seguida, mova a mão dentro de um cubo 3D normalizado, centralizado em torno do pressionamento inicial. Você pode mover a mão ao longo do eixo X, Y ou Z de um valor -1 a 1, sendo 0 o ponto de partida.
+A navegação pode ser usada para criar gestos de rolagem ou zoom contínuo baseados em velocidade, semelhante à rolagem de uma interface do usuário 2D com um clique no botão do meio do mouse e, em seguida, a movimentação do mouse para cima e para baixo.
 
-A navegação com o rails refere-se à capacidade de reconhecer os movimentos no certo eixo até certo limite é atingido naquele eixo. Isso só é útil, quando o movimento em mais de um eixo está habilitado em um aplicativo pelo desenvolvedor, por exemplo, se um aplicativo é configurado para reconhecer gestos de navegação em X, eixo Y, mas também especificado eixo com trilhos X. Nesse caso, sistema reconhecerá movimentos de mão em eixo X, desde que eles permaneçam dentro de um imaginário rails (guia) no eixo, X se o movimento de mão também ocorre eixo Y.
+A navegação com trilhos refere-se à capacidade de reconhecer movimentos em determinado eixo até certo limite ser atingido nesse eixo. Isso só é útil quando o movimento em mais de um eixo é habilitado em um aplicativo pelo desenvolvedor, por exemplo, se um aplicativo é configurado para reconhecer gestos de navegação nos eixos X e Y, mas também no eixo X especificado com trilhos. Nesse caso, o sistema reconhecerá os movimentos de mão no eixo X, desde que eles permaneçam dentro de um trilho imaginário (guia) no eixo, X caso o movimento de mão também ocorra no eixo Y.
 
-Em aplicativos 2D, os usuários podem usar gestos de navegação vertical para rolar, aplicar zoom ou arraste dentro do aplicativo. Isso injeta toques de dedo virtual para o aplicativo para simular os gestos de toque do mesmo tipo. Os usuários podem selecionar qual das seguintes ações ocorrem alternando entre as ferramentas na barra de acima do aplicativo, selecionando o botão ou dizendo '< rolagem/arrastar/Zoom > ferramenta'.
+Em aplicativos 2D, os usuários podem usar gestos de navegação vertical para rolagem, zoom ou operações de arrastar dentro do aplicativo. Isso injeta toques de dedo virtuais no aplicativo para simular gestos de toque do mesmo tipo. Os usuários podem selecionar quais dessas ações ocorrem alternando entre as ferramentas na barra acima do aplicativo, selecionando o botão ou falando 'Ferramenta de <Rolagem/Arrastar/Zoom>'.
 
-[Mais informações sobre gestos de composição](gestures.md#composite-gestures)
+[Mais informações sobre gestos compostos](gestures.md#composite-gestures)
 
 ## <a name="gesture-recognizers"></a>Reconhecedores de gestos
 
-Uma vantagem de usar o reconhecimento de gesto é que você pode configurar um reconhecedor de gestos apenas para os gestos que de destino atual holograma pode aceitar. A plataforma fará apenas a necessário para distinguir os gestos com suporte específicos de Desambiguidade. Dessa forma, um holograma que suporta apenas o polegar pode aceitar qualquer período de tempo entre press e versão, enquanto um holograma que dá suporte tanto tocar e segurar pode promover o tap a uma isenção após o limite de tempo de espera.
+Uma vantagem do uso do reconhecimento de gestos é que você pode configurar um reconhecedor de gestos apenas para os gestos que o holograma direcionado atualmente pode aceitar. A plataforma fará apenas a desambiguidade necessária para distinguir esses gestos compatíveis específicos. Dessa forma, um holograma que só é compatível com o gesto de fechar e abrir dedos indicador e polegar pode aceitar qualquer período de tempo entre o pressionamento e a liberação, enquanto um holograma que é compatível com o gesto de fechar e abrir dedos indicador e polegar e manter pode promover o toque a um gesto de manter após o limite de tempo em que o toque é mantido.
 
 ## <a name="hand-recognition"></a>Reconhecimento de mão
-HoloLens reconhece gestos de mão acompanhando a posição de uma ou ambas as mãos que são visíveis para o dispositivo. HoloLens vê mãos quando estiverem no estado pronto (parte posterior a mão voltada para o usuário com o dedo para cima) ou no estado pressionado (parte posterior a mão voltada para o usuário com o dedo para baixo). Quando as mãos estiverem em outras poses, o HoloLens irá ignorá-los.
-Para cada mão que HoloLens detecta, você pode acessar sua posição (sem orientação) e seu estado pressionado. Como a mão se aproximar a borda do quadro de gesto, também são fornecidas com um vetor de direção, você pode mostrar ao usuário para que eles saibam como mover sua mão para obtê-lo novamente no qual o HoloLens podem vê-lo.
+O HoloLens reconhece gestos de mão acompanhando a posição de uma ou das duas mãos visíveis para o dispositivo. O HoloLens vê as mãos quando elas estão no estado pronto (parte posterior da mão voltada para você com o dedo indicador para cima) ou no estado pressionado (parte posterior da mão voltada para você com o dedo indicador para baixo). Quando as mãos estiverem em outras poses, o HoloLens as ignorará.
+Para cada mão detectada pelo HoloLens, você pode acessar sua posição (sem orientação) e seu estado pressionado. Conforme a mão se aproxima da borda do quadro de gesto, você também recebe um vetor de direção, que você pode mostrar ao usuário para que ele saiba como mover a mão para retorná-la ao local em que o HoloLens possa vê-la.
 
 ## <a name="gesture-frame"></a>Quadro de gesto
-Para gestos em HoloLens, a mão deve estar em um "gesto quadro", em um intervalo em que a detecção de gesto câmeras podem ver adequadamente (muito aproximadamente de nariz para foi muito e entre os ombros). Os usuários precisam ser treinados para essa área de reconhecimento para o sucesso da ação e para seu próprios conforto (muitos usuários inicialmente pressupor que o quadro de gesto deve ser dentro de sua exibição por meio do HoloLens e mantenha a manter-se uncomfortably para interagir). Ao usar o HoloLens Clicker, suas mãos não precisa estar dentro do quadro de gesto.
+Para os gestos no HoloLens, a mão precisa estar em um “quadro de gesto”, em um alcance no qual as câmeras de detecção de gesto possam vê-la de forma adequada (muito aproximadamente, do nariz até a cintura e entre os ombros). Os usuários precisam ser treinados nessa área de reconhecimento para o sucesso da ação e para seu próprio conforto (muitos usuários inicialmente presumirão que o quadro de gesto está dentro de sua visão por meio do HoloLens e manterão os braços levantados de forma desconfortável para interagir com ele). Ao usar o HoloLens Clicker, suas mãos não precisam estar dentro do quadro de gesto.
 
-No caso de gestos contínuos em particular, há alguns riscos de usuários movendo suas mãos fora do quadro de gesto no gesto intermediário (ao mover um objeto holográfico, por exemplo) e perder seu resultado pretendido.
+No caso de gestos contínuos em particular, há algum risco de que os usuários movam as mãos para fora do quadro de gesto durante o gesto intermediário (ao mover um objeto holográfico, por exemplo) e percam seu resultado pretendido.
 
 Há três coisas que você deve considerar:
 
-- Formação do usuário sobre o quadro de gesto existência e limites aproximados (Isso é ministrado durante a instalação do HoloLens).
+- Educação do usuário sobre a existência do quadro de gesto e os limites aproximados (isso é ensinado durante a instalação do HoloLens).
 
-- Notificar os usuários quando seus gestos estão se aproximando/últimas os limites do quadro de gesto dentro de um aplicativo, para o grau que um gesto perdido leva a resultados indesejados. Pesquisas mostram as qualidades principais de tal um sistema de notificação e o shell do HoloLens oferece um bom exemplo desse tipo de notificação (visual, no cursor central, que indica a direção em limites em que está ocorrendo cruzamento).
+- Notificação dos usuários quando seus gestos estiverem se aproximando ou saírem dos limites do quadro de gesto em um aplicativo, na medida em que um gesto perdido levará a resultados indesejados. As pesquisas mostram as principais qualidades de um sistema de notificação como esse e o shell do HoloLens oferece um bom exemplo desse tipo de notificação (visual, no cursor central, indicando a direção na qual o limite está sendo ultrapassado).
 
-- Consequências de quebrar os limites de quadro do gesto devem ser minimizadas. Em geral, isso significa que o resultado de um gesto deve ser interrompido no limite, mas não invertido. Por exemplo, se um usuário está mudando algum objeto holographic em uma sala, movimentação deve parar quando o quadro de gesto for ultrapassado, mas não ser retornado para o ponto de partida. O usuário pode experimentar alguns frustração em seguida, mas pode mais rapidamente entender os limites e não precisa reiniciar suas ações pretendidas completas de cada vez.
+- As consequências de sair dos limites do quadro do gesto deverão ser minimizadas. Em geral, isso significa que o resultado de um gesto deve ser interrompido no limite, mas não revertido. Por exemplo, se um usuário estiver movendo algum objeto holográfico em uma sala, a movimentação deverá parar quando o quadro de gesto for ultrapassado, mas não retornar ao ponto de partida. Assim, o usuário poderá se frustrar, mas poderá mais rapidamente entender os limites e não precisar reiniciar suas ações pretendidas completas sempre.
 
 
 ## <a name="see-also"></a>Consulte também

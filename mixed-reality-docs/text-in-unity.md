@@ -3,15 +3,15 @@ title: Texto no Unity
 description: Para exibir o texto no Unity, há dois tipos de componentes de texto, você pode usar — o texto de interface do usuário e o texto 3D de malha.
 author: cre8ivepark
 ms.author: dongpark
-ms.date: 03/21/2018
+ms.date: 06/03/2019
 ms.topic: article
 keywords: Windows Mixed Reality, design, controles, fonte, tipografia, interface do usuário, experiência do usuário
-ms.openlocfilehash: a601ab5ab5168f286a0935ca06eeec13022e1eee
-ms.sourcegitcommit: f20beea6a539d04e1d1fc98116f7601137eebebe
+ms.openlocfilehash: 7d40db2e0571e835e28e444c7921e1a086800936
+ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66692349"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66829971"
 ---
 # <a name="text-in-unity"></a>Texto no Unity
 

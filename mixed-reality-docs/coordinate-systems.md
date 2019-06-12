@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
 keywords: sistema de coordenadas, sistema de coordenadas espacial, somente orientação, encaixado em escala, escala de pé, sala de escala, escala mundial, 360 graus, encaixado, permanente, sala, mundo, escala, posição, orientação, parado, anexado, estágio, âncora, âncora espacial, bloqueado pelo mundo, bloqueando o mundo, bloqueado de corpo, bloqueio de corpo, limites, persistência, compartilhamento, controlando a perda, espacial âncora de nuvem
-ms.openlocfilehash: fc76a30895a85ab5ca8396540a82965cc35c494e
-ms.sourcegitcommit: f7fc9afdf4632dd9e59bd5493e974e4fec412fc4
+ms.openlocfilehash: f4b945a3ffb83b9ac0a94e0d793a19939aece3bb
+ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2019
-ms.locfileid: "59591029"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66829865"
 ---
 # <a name="coordinate-systems"></a>Sistemas de coordenadas
 
@@ -24,19 +24,48 @@ Em sua essência, misto local de aplicativos de realidade [hologramas](hologram.
 ## <a name="device-support"></a>Suporte a dispositivos
 
 <table>
-<tr>
-<th>Recurso</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens (1ª geração)</a></th><th style="width:150px">HoloLens 2</th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Fones imersivos em exposição</a></th>
-</tr><tr>
-<td> <a href="coordinate-systems.md#stationary-frame-of-reference">Quadro estacionário de referência</a></td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
-</tr><tr>
-<td> <a href="coordinate-systems.md#attached-frame-of-reference">Quadro de referência anexado</a></td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
-</tr><tr>
-<td> <a href="coordinate-systems.md#stage-frame-of-reference">Estágio de quadro de referência</a></td><td style="text-align: center;"> Ainda não tem suporte</td><td style="text-align: center;"> Ainda não tem suporte</td><td style="text-align: center;"> ✔️</td>
-</tr><tr>
-<td> <a href="coordinate-systems.md#spatial-anchors">Âncoras espaciais</a></td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
-</tr><tr>
-<td> <a href="spatial-mapping.md">Mapeamento espacial</a></td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"></td>
-</tr>
+    <colgroup>
+    <col width="40%" />
+    <col width="20%" />
+    <col width="20%" />
+    <col width="20%" />
+    </colgroup>
+    <tr>
+        <td><strong>Recurso</strong></td>
+        <td><a href="hololens-hardware-details.md"><strong>HoloLens (1ª geração)</strong></a></td>
+        <td><strong>HoloLens 2</strong></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Fones imersivos em exposição</strong></a></td>
+    </tr>
+     <tr>
+        <td><a href="coordinate-systems.md#stationary-frame-of-reference">Quadro estacionário de referência</a></td>
+        <td>✔️</td>
+        <td>✔️</td>
+        <td>✔️</td>
+    </tr>
+    <tr>
+        <td><a href="coordinate-systems.md#attached-frame-of-reference">Quadro de referência anexado</a></td>
+        <td>✔️</td>
+        <td>✔️</td>
+        <td>✔️</td>
+    </tr>
+    <tr>
+        <td><a href="coordinate-systems.md#stage-frame-of-reference">Estágio de quadro de referência</a></td>
+        <td>Ainda não tem suporte</td>
+        <td>Ainda não tem suporte</td>
+        <td>✔️</td>
+    </tr>
+    <tr>
+        <td><a href="coordinate-systems.md#spatial-anchors">Âncoras espaciais</a></td>
+        <td>✔️</td>
+        <td>✔️</td>
+        <td>✔️</td>
+    </tr>
+    <tr>
+        <td><a href="spatial-mapping.md">Mapeamento espacial</a></td>
+        <td>✔️</td>
+        <td>✔️</td>
+        <td>❌</td>
+    </tr>
 </table>
 
 ## <a name="mixed-reality-experience-scales"></a>Escalas de experiência de realidade misturada
@@ -197,6 +226,6 @@ Seu aplicativo deve informar ao usuário como obter posicionais de acompanhament
 * [Sistemas de coordenadas no Unity](coordinate-systems-in-unity.md)
 * [Sistemas de coordenadas no DirectX](coordinate-systems-in-directx.md)
 * [Âncoras espaciais](spatial-anchors.md)
-* [Compartilhado experiências na realidade mista](shared-experiences-in-mixed-reality.md)
-* <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">Âncoras espaciais do Azure</a>
+* [Experiências compartilhadas em realidade misturada](shared-experiences-in-mixed-reality.md)
+* <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">Âncoras Espaciais do Azure</a>
 * [Estudo de caso - examinando buracos na sua realidade](case-study-looking-through-holes-in-your-reality.md)
