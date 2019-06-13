@@ -6,12 +6,12 @@ ms.author: pbarnett
 ms.date: 4/25/2019
 ms.topic: article
 keywords: HoloLens, emulador, Builds, versões
-ms.openlocfilehash: 75ea6d1ab3f949d28364baca408d79ec9e4bb846
-ms.sourcegitcommit: 222cba2d622b47f75949bf8af80d5c62de4dceab
+ms.openlocfilehash: 017193756b5c57c5bb45351db208533f980701a7
+ms.sourcegitcommit: 150d258a23130026c8792da383a3993657841fb4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2019
-ms.locfileid: "64914635"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67024479"
 ---
 Emulador do HoloLens (1º Gen) e instale o emulador do HoloLens 2 compilações lado a lado. Geralmente, recomendamos o uso a compilação mais recente, mas pode haver casos em que você deseja ou precisa testar um aplicativo em um emulador antigo. Esta página inclui links para versões lançadas.
 
@@ -21,7 +21,8 @@ Emulador do HoloLens (1º Gen) e instale o emulador do HoloLens 2 compilações 
 
 |  Compilação |  Data de lançamento |  Observações | 
 |----------|----------|----------|
-|  [HoloLens 2 emulador build 10.0.18362.1005](https://go.microsoft.com/fwlink/?linkid=2087187) | 16 de abril de 2019 | Compilação mais recente do HoloLens 2. |
+|  [HoloLens 2 emulador build 10.0.18362.1019](https://go.microsoft.com/fwlink/?linkid=2095316) | 11 de junho de 2019 | Compilação mais recente do HoloLens 2.  Não precisa mais ser executado como administrador.  Inicie o atalho de menu adicionado. |
+|  [HoloLens 2 emulador build 10.0.18362.1005](https://go.microsoft.com/fwlink/?linkid=2087187) | 16 de abril de 2019 |  |
 
 
 # <a name="hololens-emulator-1st-gen-archive"></a>Emulador do HoloLens (1º Gen) arquivamento

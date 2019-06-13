@@ -6,12 +6,12 @@ ms.author: crderr
 ms.date: 03/21/2018
 ms.topic: article
 keywords: critérios de qualidade do aplicativo, realidade, misturada misto de aplicativo de realidade
-ms.openlocfilehash: dfa1390190fad8d84982171dfbcfa101b20501dc
-ms.sourcegitcommit: c2a5bff423feba7d29d5431c870b6017c2fe1bc2
+ms.openlocfilehash: 8e635585c0981d81bf71fb5577232af28f2a0fdd
+ms.sourcegitcommit: 150d258a23130026c8792da383a3993657841fb4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66750323"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67024489"
 ---
 # <a name="app-quality-criteria"></a>Critérios de qualidade do aplicativo
 
@@ -37,7 +37,7 @@ Taxa de quadros é o primeiro pilar de conforto holograma de estabilidade e o us
     </colgroup>
     <tr>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>Fones imersivos em exposição</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Headsets imersivos</strong></a></td>
         <td></td>
     </tr>
      <tr>
@@ -100,7 +100,7 @@ Hologramas estáveis aumentar a usabilidade e a credibilidade do seu aplicativo 
     </colgroup>
     <tr>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>Fones imersivos em exposição</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Headsets imersivos</strong></a></td>
         <td></td>
     </tr>
      <tr>
@@ -162,7 +162,7 @@ Misalignments de hologramas com objetos físicos (se se destina a ser colocado e
     </colgroup>
     <tr>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>Fones imersivos em exposição</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Headsets imersivos</strong></a></td>
         <td></td>
     </tr>
      <tr>
@@ -226,7 +226,7 @@ Os desenvolvedores de aplicativos controlam onde os olhos dos usuários convergi
     </colgroup>
     <tr>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>Fones imersivos em exposição</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Headsets imersivos</strong></a></td>
         <td></td>
     </tr>
      <tr>
@@ -283,7 +283,7 @@ Independentemente da zona de exibição de problemas de conforto, as exigências
     </colgroup>
     <tr>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>Fones imersivos em exposição</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Headsets imersivos</strong></a></td>
         <td></td>
     </tr>
      <tr>
@@ -326,7 +326,7 @@ Na realidade mista do Windows, o mecanismo de áudio fornece o componente auricu
     </colgroup>
     <tr>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>Fones imersivos em exposição</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Headsets imersivos</strong></a></td>
         <td></td>
     </tr>
      <tr>
@@ -385,7 +385,7 @@ Experiências de usuário bem projetado podem criar e manter o contexto úteis d
     </colgroup>
     <tr>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>Fones imersivos em exposição</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Headsets imersivos</strong></a></td>
         <td></td>
     </tr>
      <tr>
@@ -441,7 +441,7 @@ Hologramas devem reagir para a posição do usuário aproximadamente da mesma ma
     </colgroup>
     <tr>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>Fones imersivos em exposição</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Headsets imersivos</strong></a></td>
         <td></td>
     </tr>
      <tr>
@@ -504,7 +504,7 @@ Clareza de interação de entrada é essencial para facilidade de uso do aplicat
     </colgroup>
     <tr>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>Fones imersivos em exposição</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Headsets imersivos</strong></a></td>
         <td></td>
     </tr>
      <tr>
@@ -584,7 +584,7 @@ Um botão tem sido uma metáfora usada para disparar um evento no mundo abstrato
     </colgroup>
     <tr>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>Fones imersivos em exposição</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Headsets imersivos</strong></a></td>
         <td></td>
     </tr>
      <tr>
@@ -618,7 +618,7 @@ Um botão tem sido uma metáfora usada para disparar um evento no mundo abstrato
 
 * [Objeto interativo](interactable-object.md)
 * [Texto no Unity](text-in-unity.md)
-* [Barra de aplicativos e caixa delimitadora](app-bar-and-bounding-box.md)
+* [Caixa delimitadora e barra de aplicativos](app-bar-and-bounding-box.md)
 * [Comando de voz](voice-design.md)
 
 #### <a name="tools-and-tutorials"></a>Ferramentas e tutoriais
@@ -639,7 +639,7 @@ Aplicativos que exigem que os dados de mapeamento espacial se baseiam no disposi
     </colgroup>
     <tr>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>Fones imersivos em exposição</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Headsets imersivos</strong></a></td>
         <td></td>
     </tr>
      <tr>
@@ -694,7 +694,7 @@ Em um aplicativo de realidade misturada, o conteúdo pode estar fora de vista do
     </colgroup>
     <tr>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>Fones imersivos em exposição</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Headsets imersivos</strong></a></td>
         <td></td>
     </tr>
      <tr>
@@ -737,7 +737,7 @@ Um controle de progresso oferece feedback ao usuário que uma operação de exec
     </colgroup>
     <tr>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>Fones imersivos em exposição</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Headsets imersivos</strong></a></td>
         <td></td>
     </tr>
      <tr>

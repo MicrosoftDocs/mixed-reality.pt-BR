@@ -6,12 +6,12 @@ ms.author: wguyman
 ms.date: 03/21/2018
 ms.topic: article
 keywords: 6dof controladores, controladores de movimento
-ms.openlocfilehash: 7db1c16f8243081dc8f53e8722391f102c38e0d3
-ms.sourcegitcommit: 45676da11ebe33a2aa3dccec0e8ad7d714420853
+ms.openlocfilehash: fc6b0dcf7f338224af9ea9bc59e07187c33adda2
+ms.sourcegitcommit: 150d258a23130026c8792da383a3993657841fb4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65629119"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67024554"
 ---
 # <a name="motion-controllers"></a>Controladores de movimento
 
@@ -23,10 +23,23 @@ Controladores de movimento [Acessórios de hardware](hardware-accessories.md) qu
 ## <a name="device-support"></a>Suporte a dispositivos
 
 <table>
+<colgroup>
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+</colgroup>
 <tr>
-<th>Recurso</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens (1ª geração)</a></th><th style="width:150px">HoloLens 2</th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Fones imersivos em exposição</a></th>
-</tr><tr>
-<td> Controladores de movimento</td><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"> ✔️</td>
+     <td><strong>Recurso</strong></td>
+     <td><a href="hololens-hardware-details.md"><strong>HoloLens (1ª geração)</strong></a></td>
+     <td><strong>HoloLens 2</strong></td>
+     <td><a href="immersive-headset-hardware-details.md"><strong>Headsets imersivos</strong></a></td>
+</tr>
+<tr>
+     <td>Controladores de movimento</td>
+     <td>❌</td>
+     <td>❌</td>
+     <td>✔️</td>
 </tr>
 </table>
 
@@ -185,7 +198,7 @@ São as interações de núcleo em mãos e controladores de movimento **selecion
 
 ## <a name="composite-gestures-high-level-spatial-input"></a>Gestos de composição: Entrada espacial de alto nível
 
-Ambos [gestos de mão](gestures.md) e controladores de movimento podem ser acompanhados ao longo do tempo para detectar um conjunto comum de alto nível  **[gestos compostos](gestures.md#composite-gestures)**. Isso permite que seu aplicativo detectar um alto nível **toque**, **mantenha**, **manipulação** e **navegação** gestos, se os usuários acabam usando mãos ou controladores.
+Ambos [gestos de mão](gestures.md) e controladores de movimento podem ser acompanhados ao longo do tempo para detectar um conjunto comum de alto nível  **[gestos compostos](gestures.md#composite-gestures)** . Isso permite que seu aplicativo detectar um alto nível **toque**, **mantenha**, **manipulação** e **navegação** gestos, se os usuários acabam usando mãos ou controladores.
 
 ## <a name="rendering-the-motion-controller-model"></a>O modelo de controlador de movimento de renderização
 
@@ -231,7 +244,7 @@ Ver [solução de problemas do controlador de movimento](https://docs.microsoft.
 
 ## <a name="see-also"></a>Consulte também
 * [Gestos e controladores de movimento no Unity](gestures-and-motion-controllers-in-unity.md)
-* [Mãos e controladores de movimento no DirectX](hands-and-motion-controllers-in-directx.md)
+* [Controladores de mãos e emovimento no DirectX](hands-and-motion-controllers-in-directx.md)
 * [Gestos](gestures.md)
 * [Entrada do MR 213: controladores de movimentos](mixed-reality-213.md)
 * [Guia do entusiasta: O Windows Mixed Reality inicial](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/your-mixed-reality-home)

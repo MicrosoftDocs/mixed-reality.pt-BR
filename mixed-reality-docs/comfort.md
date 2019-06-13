@@ -6,12 +6,12 @@ ms.author: erpau
 ms.date: 04/5/2019
 ms.topic: article
 keywords: Realidade, design, misturada conforto, HoloLens 2, HoloLens (1ª geração)
-ms.openlocfilehash: 8dea3765f01a6a82fccc002d1cd5c7c9c77d0980
-ms.sourcegitcommit: c20563b8195c0c374a927b96708d958b127ffc8f
+ms.openlocfilehash: e3a78e9a990d207b19b287e1897897a5d6dee3ca
+ms.sourcegitcommit: 150d258a23130026c8792da383a3993657841fb4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65974774"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67024447"
 ---
 # <a name="comfort"></a>Conforto
 
@@ -126,6 +126,8 @@ Tiro em pessoa primeiro videogames, heads-up exibe (HUDs) persistentemente apres
 Legibilidade do texto ideal pode ajudar a reduzir os olhos e manter o conforto do usuário, especialmente em cenários que exigem que os usuários ler enquanto estiver em um HMD ou aplicativos. Depende de legibilidade do texto em uma variedade de fatores, incluindo várias propriedades de exibição (por exemplo, densidade de pixels, brilho, contraste), propriedades de lente (por exemplo, o desvio cromático) e propriedades de fonte do texto (por exemplo, a fonte específica características, como peso, espaçamento, serifas, etc., cor da fonte, cor do plano de fundo).  
 
 Em geral, é recomendável testar aplicativos específicos para manter a legibilidade e tornando os tamanhos de fonte tão grande quanto for viável para uma experiência confortável. Abaixo, oferecemos orientações gerais como ponto de partida para o desenvolvimento. Observe que todos os tamanhos de fonte são relatados em graus [ângulo visual](https://en.wikipedia.org/wiki/Visual_angle) em vez de tamanhos específicos de físicos, que fornece diretrizes para qualquer distância dentro da zona de posicionamento holograma ideal porque ela é considerada para os dois o tamanho das texto e a distância é exibida no visualizador. 
+
+Ver [tipografia](typography.md) e [texto no Unity](text-in-unity.md) páginas para obter diretrizes mais detalhadas.
 
 ### <a name="guidance-for-holographic-devices"></a>Diretrizes para dispositivos holographic
 

@@ -6,12 +6,12 @@ ms.author: thmignon
 ms.date: 04/30/2018
 ms.topic: article
 keywords: Windows Mixed Reality, realidade mista, realidade Virtual, VR, MR, Home, ambientes personalizados, lugares, casa cliff, skyloft, usuário, criar
-ms.openlocfilehash: 8f5a3a1bdf5728260b0b7717c74a50f3356ca04a
-ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
-ms.translationtype: HT
+ms.openlocfilehash: d0cdb878f1994cb5f898f06b98d74dee3dd4fdf1
+ms.sourcegitcommit: 150d258a23130026c8792da383a3993657841fb4
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66829644"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67024535"
 ---
 # <a name="add-custom-home-environments"></a>Adicionar ambientes domésticos personalizados
 
@@ -33,7 +33,7 @@ Ao usar um ambiente personalizado, você observará que teleporting, interagir c
     <tr>
         <td><strong>Recurso</strong></td>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>Fones imersivos em exposição</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Headsets imersivos</strong></a></td>
     </tr>
      <tr>
         <td>Ambientes domésticos personalizados</td>
@@ -150,6 +150,5 @@ O local de spawn padrão está localizado em 0, 0,0 no ambiente. Seu não no mom
 Quando você cria seu ambiente personalizado, ele usará uma simulação de renderização acústica que não coincide com o espaço físico que você criou. Pode parecer e podem ser provenientes de direções erradas de som muffled. 
 
 ## <a name="see-also"></a>Consulte também
-* [Navegar o Windows misto realidade Home](#navigating-the-windows-mixed-reality-home.md)
 * [Windows misturadas realidade conversor de ativo (no GitHub)](https://github.com/Microsoft/glTF-Toolkit/releases)
 
