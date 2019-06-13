@@ -1,92 +1,92 @@
 ---
-title: Ponto e o modo de confirmação com mãos
-description: Visão geral do modelo confirmação e de ponto de entrada
+title: Apontar e confirmar com as mãos
+description: Visão geral do modelo de entrada de apontar e confirmar
 author: caseymeekhof
 ms.author: cmeekhof
 ms.date: 04/05/2019
 ms.topic: article
 ms.localizationpriority: high
-keywords: Misto realidade, interação, design, hololens, mãos, agora, aponte e confirmar
+keywords: Realidade misturada, interação, design, hololens, mãos, à distância, apontar e confirmar
 ms.openlocfilehash: 30f85d2bb455abab3a533e0a829b4fba8cea0a7a
-ms.sourcegitcommit: 5b4292ef786447549c0199003e041ca48bb454cd
-ms.translationtype: MT
+ms.sourcegitcommit: f20beea6a539d04e1d1fc98116f7601137eebebe
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/30/2019
+ms.lasthandoff: 06/05/2019
 ms.locfileid: "66402378"
 ---
-# <a name="point-and-commit-with-hands"></a>Ponto e o modo de confirmação com mãos
-Ponto e o modo de confirmação com mãos é um modelo de entrada que permite aos usuários de destino, selecione e manipular objetos 3D e conteúdos 2D na distância. Essa técnica de interação "agora" é exclusiva para a realidade misturada e não é um humanos de maneira naturalmente intereact com o mundo real. Por exemplo, no filme super hero *X-homens*, o caractere [Magneto](https://en.wikipedia.org/wiki/Magneto_(comics)) é capaz de contatar e manipular um objeto mais distante na distância com suas mãos. Isso não é algo que os humanos podem fazer na realidade. No HoloLens (AR) e realidade mista (VR), nós equipar os usuários com esse poder mágica, quebrando a restrição física do mundo real não apenas para ter uma experiência e interessantes com conteúdo holográfica, mas também para tornar a interação mais eficaz e eficiente.
+# <a name="point-and-commit-with-hands"></a>Apontar e confirmar com as mãos
+Apontar e confirmar com as mãos é um modelo de entrada que permite aos usuários focalizar, selecionar e manipular objetos 3D e conteúdo 2D à distância. Essa técnica de interação "à distância" é exclusiva da realidade misturada e não é uma forma natural de interação humana com o mundo real. Por exemplo, no filme de super-heróis *X-Men*, o personagem [Magneto](https://en.wikipedia.org/wiki/Magneto_(comics)) é capaz de pegar e manipular um objeto à distância com suas mãos. Isso não é algo que os humanos podem fazer na realidade. No HoloLens (RA) e na Realidade misturada (VR), nós equipamos os usuários com esse poder mágico, quebrando a restrição física do mundo real para não somente permitir uma experiência divertida com o conteúdo holográfico, como também tornar a interação mais eficaz e eficiente.
 
 ## <a name="device-support"></a>Suporte a dispositivos
 
-Modelo de entrada | [HoloLens (1ª geração)](https://docs.microsoft.com/en-us/windows/mixed-reality/hololens-hardware-details) | HoloLens 2 | [Fones imersivos em exposição](https://docs.microsoft.com/en-us/windows/mixed-reality/immersive-headset-hardware-details) |
+Modelo de entrada | [HoloLens (1ª geração)](https://docs.microsoft.com/en-us/windows/mixed-reality/hololens-hardware-details) | HoloLens 2 | [Headsets imersivos](https://docs.microsoft.com/en-us/windows/mixed-reality/immersive-headset-hardware-details) |
 | ---------| -----| ----- | ---------|
-Ponto e o modo de confirmação com mãos | ❌ Não tem suportada | ✔️ Recomendado | ✔️ Recomendado
+Apontar e confirmar com as mãos | ❌ Sem suporte | ✔️ Recomendado | ✔️ Recomendado
 
-Ponto e a confirmação, também conhecido como mãos agora, é um dos novos recursos que utiliza o novo sistema de controle de mão articulado. Esse modelo de entrada também é o modelo de entrada primário em fones imersivos em exposição com o uso de controladores de movimento.
+O modelo Apontar e confirmar, também conhecido como mãos à distância, é um dos novos recursos que utiliza o novo sistema articulado de acompanhamento da mão. Esse modelo de entrada também é o modelo de entrada primário em headsets imersivos com o uso de controladores de movimento.
 
 ## <a name="hand-rays"></a>Raios de mão
 
-Em 2 HoloLens, criamos um raio de mão Atira do Centro de um palm. Este ray é tratado como uma extensão da mão. Um cursor em forma de rosca é anexado ao final do raio para indicar o local onde o raio cruza com um objeto de destino. O objeto que o cursor chega à, em seguida, pode receber comandos gestual de mão.
+No HoloLens 2, criamos um raio de mão que é disparado do centro da palma da mão. Este raio é tratado como uma extensão da mão. Um cursor em forma de rosca é anexado ao final do raio para indicar o local onde o raio cruza com um objeto-alvo. O objeto sobre o cursor pode receber comandos gestuais da mão.
 
-Esse comando gestual básico é disparado, usando o polegar e o dedo para executar a ação de toque de ar. Usando o raio de mão para apontar e polegar para confirmar, os usuários podem ativar um botão ou um hiperlink em um conteúdo da web. Com os gestos de composição mais, os usuários são capazes de navegar o conteúdo da web e manipular objetos 3D à distância. O design visual do raio mão também deve reagir a esses estados de confirmação e de ponto, como descrito e mostrado abaixo: 
+Esse comando gestual básico é disparado usando o polegar e o dedo indicador para executar uma ação de fechar e abrir os dedos indicador e polegar. Usando o raio de mão para apontar e a ação de fechar e abrir os dedos indicador e polegar para confirmar, os usuários podem ativar um botão ou um hiperlink em um conteúdo da Web. Com gestos mais complexos, os usuários podem navegar pelo conteúdo da Web e manipular objetos 3D à distância. O design visual do raio de mão também deve reagir com esses estados de apontar e confirmar, conforme descrito e mostrado abaixo: 
 
-* No *apontando* de estado, o raio é uma linha de traço e o cursor é uma forma de rosca.
-* No *confirmação* de estado, o raio se transforma em uma linha sólida e reduz o cursor para um ponto.
+* Ao *apontar*, o raio é mostrado como uma linha tracejada e o cursor assume a forma de uma rosca.
+* Ao *confirmar*, o raio se transforma em uma linha sólida e o cursor se reduz a um ponto.
 
 ![](images/Hand-Rays-720px.jpg)
 
-## <a name="transition-between-near-and-far"></a>Faça a transição entre próximo e distante
+## <a name="transition-between-near-and-far"></a>Transição entre próximo e distante
 
-Em vez de usar o gesto específico, como "apontando com dedo indicador" para direcionar o raio, projetamos o raio provenientes de fora do centro do palm, liberando e reservar os cinco dedos para gestos manipulative mais, como aperto e pegar. Com esse design, podemos criar apenas um modelo mental, que dão suporte a exatamente o mesmo conjunto de gestos de mão para interação próxima e distante. Você pode usar o mesmo gesto de captura para manipular objetos em distâncias diferentes. A invocação dos raios é automático e a proximidade com base em:
+Em vez de usar um gesto específico, como "apontar com o dedo indicador" para direcionar o raio, projetamos o raio de modo a sair do centro da palma da mão, liberando e reservando os cinco dedos para gestos mais manipulativos, como pinçar e segurar. Com esse design, podemos criar um só modelo mental, dando suporte a exatamente o mesmo conjunto de gestos de mão para uma interação próxima e distante. Você pode usar o mesmo gesto de captura para manipular objetos em distâncias diferentes. A invocação dos raios é automática e baseada na proximidade:
 
-*  Quando um objeto está dentro do arm atingido distância (aproximadamente 50 cm), os raios são desativados automaticamente incentivando para interação com o próxima.
-*  Quando o objeto está mais distante 50 cm, raios são ativados. A transição deve ser simples e direta.
+*  Quando um objeto está dentro da distância de alcance do braço (aproximadamente 50 cm), os raios são desativados automaticamente, incentivando a interação próxima.
+*  Quando o objeto está mais distante do que 50 cm, os raios são ativados. A transição deve ser simples e direta.
 
 ![](images/Transition-Between-Near-And-Far-720px.jpg)
 
-## <a name="2d-slate-interaction"></a>Interação slate 2D
+## <a name="2d-slate-interaction"></a>Interação do slate 2D
 
-Um Slate 2D é um contêiner de holográfico hospedando conteúdo do aplicativo 2D, como o navegador da web. O conceito de design para o momento interagir com um slate 2D é usar os raios de mão para tap de destino e ar para selecionar. Após o direcionamento com um raio de mão, os usuários podem polegar para disparar um hiperlink ou um botão. Eles podem usar uma mão para "ar tocar e arrastar" rolar um slate conteúdo para cima para baixo. O movimento relativo da usando duas mãos para tocar e arrastar de ar pode aplicar zoom e o conteúdo de imagem fixa.
+Um slate 2D é um contêiner holográfico que hospeda o conteúdo do aplicativo 2D, como um navegador da Web. O conceito de design da interação distante com um slate 2D é usar os raios de mão para focalizar e fechar e abrir os dedos indicador e polegar para selecionar. Após focalizar com um raio de mão, os usuários podem fechar e abrir os dedos indicador e polegar para disparar um hiperlink ou um botão. Eles podem usar uma mão para "fechar e abrir os dedos indicador e polegar" para rolar o conteúdo de um slate para cima e para baixo. O movimento relativo do uso das duas mãos para fechar e abrir os dedos indicador e polegar e arrastar pode aumentar e diminuir o zoom do conteúdo do slate.
 
-Direcionar o raio de mão nos cantos e bordas revela a funcionalidade de manipulação mais próximo. Por "captura e arrastar" as capacidades de manipulação, os usuários podem executar uniforme de dimensionamento por meio de capacidades de canto e pode refluir o slate por meio de capacidades de borda. Pegando e arrastando o holobar na parte superior do slate 2D a usuários podem mover o slate inteiro.
+Focalizar o raio de mão nos cantos e bordas revela a funcionalidade de manipulação mais próxima. Ao "segurar e arrastar" as funcionalidades de manipulação, os usuários podem realizar o dimensionamento uniforme utilizando as funcionalidades de canto, e refluir o slate utilizando as funcionalidades de borda. Ao segurar e arrastar a barra holográfica na parte superior do slate 2D, os usuários podem mover todo o slate.
 
 ![](images/2D-Slate-Interaction-Far-720px.jpg)
 
-Para a manipulação de 2D de imagem fixa em si:<br>
+Para manipular o slate 2D em si:<br>
 
-* Os usuários apontam o raio de mão nos cantos ou bordas para revelar a funcionalidade de manipulação mais próximo. 
-* Aplicando um gesto de manipulação de funcionalidade, os usuários podem executar a escala uniforme por meio da funcionalidade de canto e podem refluir o slate via a funcionalidade de borda. 
-* Aplicando um gesto de manipulação de holobar na parte superior do slate 2D, os usuários podem mover o slate inteiro.<br>
+* Os usuários apontam o raio de mão para os cantos ou bordas para revelar a funcionalidade de manipulação mais próxima. 
+* Aplicando um gesto de manipulação na funcionalidade, os usuários podem realizar o dimensionamento uniforme utilizando a funcionalidade de canto, e podem refluir o slate utilizando a funcionalidade de borda. 
+* Aplicando um gesto de manipulação na barra holográfica na parte superior do slate 2D, os usuários podem mover todo o slate.<br>
 
 <br>
 
 ## <a name="3d-object-manipulation"></a>Manipulação de objetos 3D
 
-Na manipulação direta, há duas maneiras para os usuários manipular o objeto 3D, manipulação de funcionalidade e manipulação de não-funcionalidade com base. No modelo de ponto e a confirmação, os usuários são capazes de alcançar o exatamente as mesmas tarefas por meio de raios de mão. Nenhum aprendizado adicional é necessária.<br>
+Na manipulação direta, há duas maneiras de os usuários manipularem o objeto 3D: a manipulação baseada em funcionalidade e a manipulação não baseada em funcionalidade. No modelo de apontar e confirmar, os usuários podem realizar exatamente as mesmas tarefas utilizando os raios de mão. Nenhum aprendizado adicional é necessário.<br>
 
-### <a name="affordance-based-manipulation"></a>Manipulação de funcionalidade
-Os usuários usar raios de mão para apontar e revelar a caixa delimitadora e capacidades de manipulação. Os usuários podem aplicar o gesto de manipulação na caixa delimitadora para mover o objeto inteiro, nas capacidades de borda para girar e em coner de capacidades para dimensionar de maneira uniforme. <br>
+### <a name="affordance-based-manipulation"></a>Manipulação baseada em funcionalidade
+Os usuários podem usar os raios de mão para apontar e revelar a caixa delimitadora e as funcionalidades de manipulação. Os usuários podem aplicar o gesto de manipulação na caixa delimitadora para mover todo o objeto, nas funcionalidades de borda para girá-lo e nas funcionalidades de canto para dimensioná-lo de maneira uniforme. <br>
 
 ![](images/3D-Object-Manipulation-Far-720px.jpg) <br>
 
 
-### <a name="non-affordance-based-manipulation"></a>Funcionalidade não com base em manipulação
-Ponto de usuários com raios de mão para revelar a caixa delimitadora e em seguida, aplicar diretamente a gestos de manipulação nele. Com um lado, a translação e rotação do objeto são associados ao movimento e a orientação da mão. Com duas mãos, os usuários podem traduzir, dimensionar e girá-lo de acordo com os movimentos relativos de duas mãos.<br>
+### <a name="non-affordance-based-manipulation"></a>Manipulação não baseada em funcionalidade
+Os usuários apontam com os raios de mão para revelar a caixa delimitadora e aplicam gestos de manipulação diretamente nela. Com uma mão, a translação e a rotação do objeto estão associadas ao movimento e à orientação da mão. Com as duas mãos, os usuários podem transladar, dimensionar e girar o objeto de acordo com os movimentos relativos das duas mãos.<br>
 
 <br>
 
-## <a name="instinctual-gesturers"></a>Gesturers instinctual
-O conceito de gestos instinctual para ponto e a confirmação é semelhante de manipulação direta. Os gestos os usuários são suponha que para executar em um objeto 3D são orientados pelo design de capacidades de interface do usuário. Por exemplo, um ponto de controle pequeno pode motivar usuários aperto com seus polegar e o dedo, enquanto um usuário pode querer obter um objeto maior usando todos os 5 dedos.
+## <a name="instinctual-gesturers"></a>Gestos instintuais
+O conceito de gestos instintuais para a ação de apontar e confirmar é semelhante ao da manipulação direta. Os gestos que os usuários devem realizar em um objeto 3D são orientados pelo design de funcionalidades da interface do usuário. Por exemplo, um ponto de controle pequeno pode motivar os usuários a pinçar com o polegar e o dedo indicador, enquanto que, para um objeto maior, os usuários podem preferir segurar usando todos os 5 dedos.
 
 ![](images/Instinctual-Gestures-Far-720px.jpg)<br>
 
-## <a name="symmetric-design-between-hands-and-6-dof-controller"></a>Design simétrica entre mãos e controlador de DoF 6 
-O conceito de ponto e confirmação de interação mais distante foi inicialmente criado e definido para misto realidade Portal (MRP), onde um usuário executa um fone de ouvido envolvente e interage com objetos 3D por meio de controladores de movimento. Os controladores de movimento envie out raios para apontando e manipular objetos distantes. Existem botões nos controladores para confirmar ainda mais ações diferentes. Podemos aproveitar o modelo de interação de raios e anexados-los para ambas as mãos. Com esse design simétrica, o que os usuários que estão familiarizados com MRP não precisarão aprender outro modelo de interação que aponta para o momento e a manipulação de quando eles usam HoloLen 2 e vice-versa.    
+## <a name="symmetric-design-between-hands-and-6-dof-controller"></a>Design simétrico entre os controladores de mão e DoF 6 
+O conceito de apontar e confirmar para interações à distância foi inicialmente criado e definido para o Portal de Realidade Misturada (MRP), no qual um usuário usa um headset imersivo e interage com objetos 3D por meio de controladores de movimento. Os controladores de movimento disparam raios para apontar e manipular objetos distantes. Existem botões nos controladores para confirmar diferentes ações. Utilizamos o modelo de interação de raios e os anexamos às duas mãos. Com esse design simétrico, os usuários que estão familiarizados com o MRP não precisarão aprender a usar outro modelo de interação para apontar e manipular à distância quando usarem o HoloLen 2 e vice-versa.    
 
 ![](images/Symmetric-Design-For-Rays-720px.jpg)<br>
 
-## <a name="instinctual-gestures"></a>Gestos instinctual
+## <a name="instinctual-gestures"></a>Gestos instintuais
 
 ![](images/Instinctual-Gestures-Far-720px.jpg)
 

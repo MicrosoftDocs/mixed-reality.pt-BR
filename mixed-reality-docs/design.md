@@ -1,25 +1,25 @@
 ---
 layout: LandingPage
 title: Criar
-description: Essa orientação é criada pela Microsoft designers, desenvolvedores, gerentes de programa e pesquisadores, cujo trabalho abrange holográfico dispositivos (como HoloLens) e imersivos dispositivos (como headsets Acer e HP Windows Mixed Reality). Portanto, considere esse trabalho como um conjunto de tópicos 'como projetar para monitores de fone de ouvido do Windows'.
+description: Essa orientação foi criada pelos designers, desenvolvedores, gerentes de programa e pesquisadores da Microsoft, cujo trabalho abrange dispositivos holográficos (como o HoloLens) e dispositivos imersivos (como os headsets Windows Mixed Reality da Acer e da HP). Portanto, considere esse trabalho como um conjunto de tópicos sobre "como projetar capacetes de realidade virtual do Windows".
 author: rwinj
 ms.author: randyw
 ms.date: 03/21/2018
 ms.topic: article
 ms.localizationpriority: high
-keywords: Windows Mixed Reality, design, interação, estilo, cor, padrões de aplicativo, controles, aplicativos de exemplo, o Kit de ferramentas de realidade misturada, MRTK
+keywords: Windows Mixed Reality, design, interação, estilo, cor, padrões de aplicativo, controles, exemplos de aplicativos, Kit de ferramentas de realidade misturada, MRTK
 ms.openlocfilehash: 88de9008dbea6cce3b980bbbe3d0f45b7818e7c9
-ms.sourcegitcommit: 8d6e5723283c03f984f1fafef81afa5aab5d04bc
-ms.translationtype: MT
+ms.sourcegitcommit: f20beea6a539d04e1d1fc98116f7601137eebebe
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/05/2019
 ms.locfileid: "66039207"
 ---
 # <a name="design-for-mixed-reality"></a>Design para realidade misturada
 
 ![Design para realidade misturada](images/Bicycle-Leschi10.gif)
 
-Essa orientação é criada pela Microsoft designers, desenvolvedores, gerentes de programa e pesquisadores, cujo trabalho abrange holográfico dispositivos (como HoloLens) e imersivos dispositivos (como headsets Acer e HP Windows Mixed Reality). Portanto, considere esse trabalho como um conjunto de tópicos 'como projetar para monitores de fone de ouvido do Windows'.
+Essa orientação foi criada pelos designers, desenvolvedores, gerentes de programa e pesquisadores da Microsoft, cujo trabalho abrange dispositivos holográficos (como o HoloLens) e dispositivos imersivos (como os headsets Windows Mixed Reality da Acer e da HP). Portanto, considere esse trabalho como um conjunto de tópicos sobre "como projetar capacetes de realidade virtual do Windows".
 
 ## <a name="article-categories"></a>Categorias de artigo
 
@@ -34,21 +34,21 @@ Essa orientação é criada pela Microsoft designers, desenvolvedores, gerentes 
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Introdução ao Design</h3>
+                        <h3>Introdução ao design</h3>
                         <p>
-                            <a href="mixed-reality.md">O que é a realidade misturado?</a>
+                            <a href="mixed-reality.md">O que é realidade misturada?</a>
                         </p>
                         <p>
-                            <a href="about-this-design-guidance.md">Sobre esta diretriz</a>
+                            <a href="about-this-design-guidance.md">Sobre esta orientação</a>
                         </p>
                         <p>
-                            <a href="case-study-my-first-year-on-the-hololens-design-team.md">Meu primeiro ano da equipe de design</a>
+                            <a href="case-study-my-first-year-on-the-hololens-design-team.md">Meu primeiro ano na equipe de design</a>
                         </p>
                         <p>
-                            <a href="case-study-expanding-the-design-process-for-mixed-reality.md">Expandindo o processo de design para realidade misturada</a>
+                            <a href="case-study-expanding-the-design-process-for-mixed-reality.md">Como expandir o processo de criação para realidade misturada</a>
                         </p>
                         <p>
-                            <a href="case-study-the-pursuit-of-more-personal-computing.md">A busca de computação mais pessoais</a>
+                            <a href="case-study-the-pursuit-of-more-personal-computing.md">A busca de uma computação mais pessoal</a>
                         </p>
                     </div>
                 </div>
@@ -70,16 +70,16 @@ Essa orientação é criada pela Microsoft designers, desenvolvedores, gerentes 
                             <a href="comfort.md">Conforto</a>
                         </p>
             <p>
-                            <a href="interaction-fundamentals.md">Interações instinctual</a>
+                            <a href="interaction-fundamentals.md">Interações instintivas</a>
                         </p>
                         <p>
-                            <a href="hands-and-tools.md">Mãos e controladores de movimento</a>
+                            <a href="hands-and-tools.md">Controladores de movimentos e mãos</a>
                         </p>
                         <p>
                             <a href="hands-free.md">Mãos livres</a>
                         </p>
                          <p>
-                            <a href="gaze-and-commit.md">Olhar head e confirmar</a>
+                            <a href="gaze-and-commit.md">Focar com a cabeça e confirmar</a>
                         </p>
                     </div>
                 </div>
@@ -101,7 +101,7 @@ Essa orientação é criada pela Microsoft designers, desenvolvedores, gerentes 
                             <a href="color,-light-and-materials.md">Cor, luz e materiais</a>
                         </p>
                          <p>
-                            <a href="spatial-sound-design.md">Design de som espacial</a>
+                            <a href="spatial-sound-design.md">Projeto de som espacial</a>
                         </p>
                         <p>
                             <a href="typography.md">Tipografia</a>
@@ -129,13 +129,13 @@ Essa orientação é criada pela Microsoft designers, desenvolvedores, gerentes 
                             <a href="types-of-mixed-reality-apps.md">Tipos de aplicativos de realidade misturada</a>
                         </p>
                         <p>
-                            <a href="room-scan-visualization.md">Visualização de verificação de espaço</a>
+                            <a href="room-scan-visualization.md">Visualização de varredura do ambiente</a>
                         </p>
                         <p>
                             <a href="cursors.md">Cursores</a>
                         </p>
                         <p>
-                            <a href="billboarding-and-tag-along.md">Billboarding e tag-along</a>
+                            <a href="billboarding-and-tag-along.md">Mural e tag-along</a>
                         </p>
                     </div>
                 </div>
@@ -157,7 +157,7 @@ Essa orientação é criada pela Microsoft designers, desenvolvedores, gerentes 
                             <a href="text-in-unity.md">Texto no Unity</a>
                         </p>
                         <p>
-                            <a href="interactable-object.md">Objeto interagível</a>
+                            <a href="interactable-object.md">Objeto interativo</a>
                         </p>
                         <p>
                             <a href="object-collection.md">Coleção de objetos</a>
@@ -166,7 +166,7 @@ Essa orientação é criada pela Microsoft designers, desenvolvedores, gerentes 
                             <a href="progress.md">Exibindo o progresso</a>
                         </p>
                         <p>
-                            <a href="app-bar-and-bounding-box.md">Barra de aplicativo e a caixa delimitadora</a>
+                            <a href="app-bar-and-bounding-box.md">Barra de aplicativos e caixa delimitadora</a>
                         </p>
                     </div>
                 </div>
@@ -178,7 +178,7 @@ Essa orientação é criada pela Microsoft designers, desenvolvedores, gerentes 
 
 ## <a name="sample-apps"></a>Exemplos de aplicativos
 
-Crie grandes experiências de exemplos projetado e criado pela nossa equipe.
+Crie grandes experiências a partir dos exemplos projetados e criados pela nossa equipe.
 
 <br>
 <ul id="cardtypes-W" class="cardsW panelContent" style="display: flex; margin-top: 0px;">
@@ -202,7 +202,7 @@ Crie grandes experiências de exemplos projetado e criado pela nossa equipe.
         </a>        
     </li>
     <li>
-        <a href="lunar-module.md" title="Módulo Lunar" data-linktype="absolute-path">
+        <a href="lunar-module.md" title="Módulo lunar" data-linktype="absolute-path">
             <div class="cardSize">
                 <div class="cardPadding">
                     <div class="card">
@@ -212,8 +212,8 @@ Crie grandes experiências de exemplos projetado e criado pela nossa equipe.
                             </div>
                         </div>
                         <div class="cardText">
-                            <h3>Módulo Lunar</h3>
-                            <p>Saiba como estender o HoloLens gestos de base com acompanhamento duas mãos e entrada de controlador do Xbox.</p>
+                            <h3>Módulo lunar</h3>
+                            <p>Saiba como estender os gestos básicos do HoloLens com acompanhamento de duas mãos e entrada de controlador do Xbox.</p>
                         </div>
                     </div>
                 </div>
@@ -221,7 +221,7 @@ Crie grandes experiências de exemplos projetado e criado pela nossa equipe.
         </a>
     </li>
     <li>
-        <a href="galaxy-explorer.md" title="Galaxy Explorer" data-linktype="absolute-path">
+        <a href="galaxy-explorer.md" title="Gerenciador do Galaxy" data-linktype="absolute-path">
             <div class="cardSize">
                 <div class="cardPadding">
                     <div class="card">
@@ -232,7 +232,7 @@ Crie grandes experiências de exemplos projetado e criado pela nossa equipe.
                         </div>
                         <div class="cardText">
                             <h3>Gerenciador do Galaxy</h3>
-                            <p>O Galaxy Explorador de projeto está pronto. Você compartilhou suas ideias com a comunidade, escolheu um aplicativo, assisti uma equipe compilá-lo e agora pode obter o código-fonte.</p>
+                            <p>O projeto Gerenciador do Galaxy está pronto. Vocês compartilharam suas ideias com a comunidade, escolheram um aplicativo, viram uma equipe compilá-lo e agora podem obter o código-fonte.</p>
                         </div>
                     </div>
                 </div>
@@ -330,7 +330,7 @@ Crie grandes experiências de exemplos projetado e criado pela nossa equipe.
 
 <ul id="cardtypes-D" class="cardsD panelContent" style="display: flex; margin-top: 0px;">
     <li>
-    <a href="http://fluent.microsoft.com" title="Sistema de Design Fluent" data-linktype="absolute-path">
+    <a href="http://fluent.microsoft.com" title="Sistema de Design Fluente" data-linktype="absolute-path">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -368,7 +368,7 @@ Crie grandes experiências de exemplos projetado e criado pela nossa equipe.
       </a>  
     </li>   
         <li>
-    <a href="https://developer.microsoft.com/windows/apps/design" title="Design de aplicativos universal Windows Platform (UWP)" data-linktype="absolute-path">
+    <a href="https://developer.microsoft.com/windows/apps/design" title="Criação de aplicativos da Plataforma Universal do Windows (UWP)" data-linktype="absolute-path">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -378,7 +378,7 @@ Crie grandes experiências de exemplos projetado e criado pela nossa equipe.
                         </div>
                     </div>                    
             <div class="cardText">
-                        <h3>Design de aplicativos universal Windows Platform (UWP)</h3>
+                        <h3>Criação de aplicativos da Plataforma Universal do Windows (UWP)</h3>
                         <p> </p>
                     </div>
                 </div>

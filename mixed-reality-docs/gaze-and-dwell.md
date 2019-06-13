@@ -1,26 +1,26 @@
 ---
-title: Olhar head e duração
-description: Visão geral do modelo de entrada olhar head e duração
+title: Focar com a cabeça e esperar
+description: Visão geral do modelo de entrada de focar com a cabeça e esperar
 author: liamartinez
 ms.author: liamar
 ms.date: 05/13/2019
 ms.topic: article
 ms.localizationpriority: high
-keywords: Misto realidade, olhar, duração, interação, de design
-ms.openlocfilehash: ae4688da791fd3afb7be66069049bbe51102dd7e
-ms.sourcegitcommit: 8d6e5723283c03f984f1fafef81afa5aab5d04bc
-ms.translationtype: MT
+keywords: Realidade Misturada, focar, esperar, interação, design
+ms.openlocfilehash: 70b25949380679d2edc81b07ab54f24fa20e3f3d
+ms.sourcegitcommit: 9b6949d7cd2e67e6bde9b32aebeaeea325baa6c4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66039196"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66516014"
 ---
-# <a name="head-gaze-and-dwell"></a>Olhar head e duração
+# <a name="head-gaze-and-dwell"></a>Focar com a cabeça e esperar
 
-Quando prático está ocupados com partes e as ferramentas, gestos podem ser entediante ou impossível. Os comandos de voz, como gestos, podem não ser confiáveis em determinados contextos, por exemplo, sob condições excessivamente altos. Além disso, usando a voz para controlar computadores não universalmente comum, mas certamente está ganhando steam! Olhar head e duração oferece o mecanismo mais familiar e fácil em mestre para trabalho heads-up e viva-voz em HoloLens. Além disso, o head-olhar e a duração é 100% confiável independentes de restrições de interferência nem de silêncio de ruído no ambiente operacional.
+Quando as mãos estão ocupadas com ferramentas e peças, os gestos podem ser entediantes ou impossíveis. Os comandos de voz, assim como os gestos, podem não ser confiáveis em determinados contextos (por exemplo, em ambientes excessivamente barulhentos). Além disso, usar a voz para controlar computadores não é universalmente comum, mas certamente está ganhando força! O modelo de focar com a cabeça e esperar oferece o mecanismo mais familiar e fácil de dominar para trabalhar sem utilizar as mãos no HoloLens. Além disso, esse modelo é 100% confiável, independentemente da interferência de ruído e das restrições de silêncio do ambiente operacional.
 
 ## <a name="scenarios"></a>Cenários
 
-Olhar head e duração se destaca em cenários onde as mãos de uma pessoa estão ocupadas com outras tarefas e voz não for 100% confiáveis nem Enable devido a restrições de redes sociais ou ambientais. Um bom exemplo é uma pessoa use um HoloLens para informações de referência durante a correção de um mecanismo de carro de sobreposição. Laboratórios práticos estão ocupados com ferramentas ou dar suporte a seu corpo conforme elas lean no compartimento de mecanismo. O espaço de garagem é alto, com a constante quebrar e zumbido das ferramentas, dificultando a comandos de voz. Olhar head e duração permite que a pessoa o HoloLens para navegar com confiança sua material de referência sem interromper seu fluxo de trabalho. 
+O modelo de Focar coma cabeça e esperar se destaca em cenários em que as mãos de uma pessoa estão ocupadas com outras tarefas e a voz não é 100% confiável ou não está disponível devido a restrições sociais ou ambientais. Um bom exemplo é uma pessoa que usa o HoloLens para sobrepor informações de referência ao realizar reparos no motor de um carro. Suas mãos estão ocupadas com ferramentas ou para apoiar o corpo conforme acessa o compartimento do motor. O ambiente da garagem é barulhento, com estrondos e zumbidos constantes de ferramentas, o que dificulta os comandos de voz. O modelo de Focar com a cabeça e esperar permite que a pessoa que utiliza o HoloLens navegue com confiança pelo material de referência, sem interromper seu fluxo de trabalho. 
 
 ## <a name="device-support"></a>Suporte a dispositivos
 
@@ -35,10 +35,10 @@ Olhar head e duração se destaca em cenários onde as mãos de uma pessoa estã
         <td><strong>Modelo de entrada</strong></td>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens (1ª geração)</strong></a></td>
         <td><strong>HoloLens 2</strong></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>Fones imersivos em exposição</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Headsets imersivos</strong></a></td>
     </tr>
      <tr>
-        <td>Olhar head e duração</td>
+        <td>Focar com a cabeça e esperar</td>
         <td>✔️ Recomendado</td>
         <td>✔️ Recomendado</td>
         <td>✔️ Recomendado</td>
@@ -47,81 +47,81 @@ Olhar head e duração se destaca em cenários onde as mãos de uma pessoa estã
 
 ## <a name="goals"></a>Metas
 
-Fornece um mecanismo para interações totalmente viva-voz, sem o uso de voz.
+Fornecer um mecanismo para interações totalmente autônomas, sem o uso de voz.
 
 ## <a name="design-principles"></a>Princípios de design
 
-1. Evitar "Olhares como uma arma"
+1. Evitar "Mirar como uma arma"
 
-    Olhar head e duração requer comentários visuais para que seja intuitiva, mas muitos comentários podem induzir a ansiedade. Os comentários devem ajudar um usuário sabe o que direcionada, mas a seleção automática não-lo em relação a sua intenção. Ler texto, ícones e rótulos requer uma consideração extra para fornecer uma sala de pessoa para absorver as informações antes de selecionar.
+    A ação de focar com a cabeça e esperar exige que o retorno visual seja intuitivo, mas seu excesso pode induzir a ansiedade. Os retornos devem ajudar um usuário a saber o que está sendo focalizando, mas não selecionar automaticamente se essa não for sua intenção. Ler textos, ícones e rótulos exige consideração adicional para dar tempo para a pessoa absorver as informações antes de selecionar.
     
-2. Busca de velocidade Cachinhos Dourados
+2. Buscar a velocidade ideal
     
-    Interações de duração de exibição podem ter temporizadores diferentes com base no impacto do painel de navegação - funções usadas com mais frequência geralmente se beneficiará tempos mais rápidos de preenchimento, enquanto as funções mais CONSEQUENCIAIS podem se beneficiar de tempos de preenchimento. Ao usar um efeito de preenchimento para mostrar esses temporizadores, curvas de animação da cor de preenchimento positivamente podem influenciar uma sensação de tempos mais rápidos de preenchimento. Consideração deve ser tomada para habilitar a decisão de usuário do fast/médio/lento preencher substituições de velocidade.
+    As interações de espera podem ter tempos diferentes com base no impacto na navegação: as funções usadas com mais frequência geralmente se beneficiam de tempos de preenchimento mais rápidos, enquanto que as funções mais consequentes podem se beneficiar de tempos de preenchimento mais longos. Ao usar um efeito de preenchimento para mostrar esses tempos, curvas de animação da cor de preenchimento podem influenciar positivamente uma sensação de tempo mais rápido. Consideração deve ser tomada para permitir a decisão do usuário a partir de substituições das velocidades de preenchimento rápidas/médias/lentas.
     
-3. Digamos que pseudocódigos para efeito de yo-yo
+3. Acabar com o efeito ioiô
 
-    O efeito de yo-yo é um padrão desconfortável de movimentação do cabeçote que pode surgir quando o posicionamento de controles de conteúdo e olhar head e duração força pessoas constantemente procurar e reduzir verticalmente várias vezes. Por exemplo, uma barra de navegação da lista com o botão de olhar head e duração de exibição na parte inferior induz um loop do - aparência para baixo lidam bem com, pesquisar em resultados, procure lidam bem com, etc. Esse padrão resultante é desconfortável e deve ser evitado, colocando os controles de navegação em um local centralizado que exige menos back bidirecional. Posicionamento dos botões de duração em relação a seus efeitos se torna importante de conforto.
+    O efeito ioiô é um padrão desconfortável de movimentação da cabeça que pode surgir quando o posicionamento do conteúdo e dos controles de focar com a cabeça e esperar força as pessoas a olharem para cima e para baixo repetidamente. Por exemplo, uma navegação de lista com o botão de focar com a cabeça e esperar localizado na parte inferior induz a um ciclo de "olhar para baixo para esperar", "olhar para cima para analisar os resultados" e "olhar para baixo para esperar" etc. O padrão resultante é desconfortável e deve ser evitado, posicionando os controles de navegação em um local centralizado que exija menos movimentos de vai e vem. O posicionamento dos botões de espera próximo aos seus efeitos é importante para o conforto.
 
-## <a name="ux-guidelines-and-best-practices"></a>Práticas recomendadas e diretrizes de experiência do usuário
+## <a name="ux-guidelines-and-best-practices"></a>Diretrizes e práticas recomendadas para a experiência do usuário
 
 ### <a name="target-sizes"></a>Tamanhos do alvo
-  Para ser facilmente acessível, olhar head e lidam bem com destinos precisam ser grande o suficiente para o destino comforatably e mantenha de um cabeçalho stabily no destino por período determinado. É recomendável um tamanho de destino mínimo de 2 graus para alcançar a experiência mais confortável. 
+  Para serem facilmente acessados, os alvos da ação de focar com a cabeça e esperar precisam ser grandes o suficiente para serem focalizados com conforto e manter a estabilidade da cabeça no alvo pelo tempo determinado. Recomendamos um tamanho mínimo de 2 graus para alcançar a experiência mais confortável. 
 
 ### <a name="visual-feedback"></a>Feedback visual
 
-Ao usar um preenchimento radial para representar o temporizador de duração, inicie-o do centro do botão. Uma resposta consistente é menos confusa que todas as direções diferentes nos botões diferentes. 
+Ao usar um preenchimento radial para representar o tempo de espera, comece do centro do botão. Uma resposta consistente é menos confusa que diferentes direções em botões diferentes. 
 
-  * Essa regra pode ser interrompida para interações direcionais (por exemplo, etc. para cima/baixo/esquerda/direita, nav.). Por exemplo, Microsoft Dynamics 365 guias faz uma exceção em Avançar/voltar sendo deixado preenche à direita.
-  * Considere a possibilidade de inversão de preenchimento radial de fora, para cenários como ativar/desativar um botão de logoff. A inversa sensação de apertar um botão é um bom padrão visual para manter. 
+  * Essa regra não precisa ser seguida para interações direcionais (por exemplo, navegação para cima/para baixo/para a esquerda/para a direita etc.). Por exemplo, os Guias do Microsoft Dynamics 365 fazem uma exceção a essa regra nos botões AVANÇAR/VOLTAR, que são preenchidos da esquerda para a direita.
+  * Considere a possibilidade de inverter o preenchimento radial, de fora para dentro, em cenários que exigem a ativação/desativação de um botão de alternância, por exemplo. A sensação inversa de apertar um botão é um padrão visual adequado para manter. 
 
 ### <a name="progressive-disclosure"></a>Divulgação progressiva
 
-Divulgação progressiva significa, mostrando apenas a quantidade de detalhes é relevante em cada estágio de uma interação. Para a duração, isso significa que o destino de duração é revelado no realce (por exemplo, em um controle de lista).
+A divulgação progressiva significa mostrar apenas a quantidade de detalhes relevante em cada estágio de uma interação. Para a espera, isso significa que o alvo é revelado no realce (por exemplo, em um controle de lista).
 
- ### <a name="oversized-targets"></a>Destinos muito grandes
-Região de duração de exibição pode ser maior do que o ícone de inativo para torná-lo mais fácil de usar, como o botão Voltar no Microsoft Dynamics 365 guias.
+ ### <a name="oversized-targets"></a>Alvos muito grandes
+A região de espera pode ser maior do que o ícone inativo para facilitar o uso, como o botão Voltar nos Guias do Microsoft Dynamics 365.
 
-### <a name="prevent-flickering-with-delayed-feedback"></a>Evitar a cintilação com comentários atrasado
-Use um pequeno atraso antes de iniciar o feedback visual para evitar a cintilação quando alguém passa sobre um destino de duração.
-* Para botões inteacted com frequência, mantenha o atraso muito curto para que o aplicativo parece reativo.
-* Para os botões são interagidos infrequenctly um atraso maior pode ser apropriados para evitar a interface se sentindo twitchy.
+### <a name="prevent-flickering-with-delayed-feedback"></a>Evite a cintilação usando retornos atrasados
+Aplique um pequeno atraso antes de iniciar o retorno visual para evitar cintilação ao passar sobre um alvo de espera.
+* Para botões usados com frequência, aplique um pequeno atraso para que o aplicativo pareça reativo.
+* Para botões usados com pouca frequência, um atraso maior pode ser apropriado para evitar que a interface pareça acelerada.
 
-## <a name="ui-patterns"></a>Padrões de interface do usuário
+## <a name="ui-patterns"></a>Padrões da interface do usuário
 
 ### <a name="high-frequency-buttons"></a>Botões de alta frequência
-![Botão Avançar de guias do Microsoft Dynamics 365](images/GuideNextButton.png "botão Avançar de guias do Microsoft Dynamics 365") os botões de alta frequência são aqueles que são usados normalmente em um aplicativo. Um bom exemplo de estes são os botões Voltar e Avançar no Microsoft Dynamics 365 guias.
+![Botão de Avançar dos Guias do Microsoft Dynamics 365](images/GuideNextButton.png "Botão de Avançar dos Guias do Microsoft Dynamics 365") Botões de alta frequência são botões comumente usados em um aplicativo. Um bom exemplo são os botões Voltar e Avançar nos Guias do Microsoft Dynamics 365.
 
 Botões de alta frequência devem...
-* botões maiores, mais fácil de atingir com olhar head
-* Mantenha-se quase altura de olho para evitar sobrecarregar ergonômicos.
+* ser maiores e mais fáceis de acionar com o foco com a cabeça
+* estar aproximadamente na altura dos olhos para evitar problemas ergonômicos.
 
 ### <a name="low-frequency-buttons"></a>Botões de baixa frequência
-Botões de baixa frequência são aqueles que não são interagido como regularmente em todo o aplicativo. Um bom exemplo pode ser um botão para acessar o menu de configurações, ou um botão para limpar todo o trabalho.
+Botões de baixa frequência são botões que não são regularmente usados no aplicativo. Um bom exemplo é um botão para acessar o menu de configurações ou um botão para limpar toda a tarefa.
 
-* Tente manter esses botões fora frequentes caminhos head olhar para evitar a ativação acidental. 
+* Tente manter esses botões longe dos caminhos de ações frequentes de focar com a cabeça para evitar ativação acidental. 
 
 ### <a name="confirmations"></a>Confirmações
-![Caixa de diálogo de confirmação do Microsoft Dynamics 365 guias](images/GuidesConfirmation.png "caixa de diálogo de confirmação do Microsoft Dynamics 365 guias")
+![Diálogo de confirmação dos Guias do Microsoft Dynamics 365](images/GuidesConfirmation.png "Diálogo de confirmação dos Guias do Microsoft Dynamics 365")
 
-Quando uma ação tem um impacto significativo, como cobrar dinheiro, excluindo o trabalho ou iniciar um processo longo, ele é útil confirmar que uma pessoa deve selecionar um botão. Para olhar head e duração há interfaces de usuário são alguns padrões e considerações para caixas de diálogo de confirmação:
+Quando uma ação tem um impacto significativo, como cobrar dinheiro, excluir uma tarefa ou iniciar um processo longo, é útil confirmar se a pessoa teve a intenção de selecionar o botão. Em interfaces do usuário habilitadas para focar com a cabeça e esperar, há alguns padrões e considerações para diálogos de confirmação:
 
-  * Mostre realce de seleção no botão principal.
-  * Revelar lidam bem com destino ao mesmo tempo que o realce de seleção.
-  * Para o botão secundário, revele o destino de duração na cabeça olhar.
+  * Mostre o realce de seleção no botão principal.
+  * Revele o alvo da espera ao mesmo tempo que o realce da seleção.
+  * Para o botão secundário, revele o alvo da espera ao focar com a cabeça.
         
 ### <a name="toggle-buttons"></a>Botões de alternância
-Botões de alternância exigem alguma lógica sutil funcione corretamente. Quando uma pessoa dwells em um botão de alternância e ativos-la, eles precisarão sair do botão e, em seguida, retornar para reiniciar a lógica de duração. É importante que o alternáveis botões têm um ativo não criptografado versus estado inativo. 
+Botões de alternância exigem uma lógica sutil para funcionarem corretamente. Quando uma pessoa olha fixo para um botão de alternância e o ativa, ela precisa sair do botão e retornar para reiniciar a lógica de espera. É importante que os botões de alternância tenham estados ativo e inativo claros. 
 
 ### <a name="list-views"></a>Modos de exibição de lista
-![Diálogo de confirmação de guias do Microsoft Dynamics 365](images/GuidesListView.png "diálogo de confirmação de guias do Microsoft Dynamics 365") modos de exibição de lista um desafio específico para olhar head e lidam bem com a entrada. As pessoas precisam ser capaz de examinar o conteúdo sem se sentindo como que precise tiptoe em torno de destinos de duração. 
+![Diálogo de confirmação dos Guias do Microsoft Dynamics 365](images/GuidesListView.png "Diálogo de confirmação dos Guias do Microsoft Dynamics 365") As exibições de lista são um desafio especial para a entrada de focar com a cabeça e esperar. As pessoas devem poder verificar o conteúdo sem sentirem que precisam tomar cuidado com os alvos de espera. 
 
-Algumas dicas para criar exibições de lista:
-* ter toda a linha realçar quando gazed a cabeça, mas não começa a duração, a menos que seja de cabeça olhar no destino de duração de exibição específico.
-* mostra o duração de destino somente quando a linha é realçada para reduzir o ruído visual.
-* ser claro e consistente com a posição de destinos de duração.
-* Não mostrar que todos os destinos de uma vez para evitar repetitiva da interface do usuário de duração da pesquisa
-* reutilizar o mesmo padrão sempre que possível para estabelecer a familiaridade da experiência do usuário
+Algumas dicas para projetar exibições de lista:
+* realce toda a linha ao focar com a cabeça, mas não comece a esperar, a menos que o foco com a cabeça esteja fixado no alvo específico.
+* somente mostre o alvo quando a linha estiver realçada para reduzir o ruído visual.
+* seja claro e consistente com a posição dos alvos.
+* não mostre todos os alvos de uma vez para evitar uma interface do usuário repetitiva.
+* reutilize um mesmo padrão sempre que possível para estabelecer familiaridade na experiência do usuário.
  
  ## <a name="see-also"></a>Consulte também
 * [Manipulação direta com as mãos](direct-manipulation.md)
