@@ -1,107 +1,107 @@
 ---
 title: Instalar as ferramentas
-description: Comece aqui para se preparar para o desenvolvimento de realidade misturada. Este artigo sempre deve refletir as versões mais recentes do Unity, Visual Studio e outras ferramentas recomendadas para o desenvolvimento de fone de ouvido imersivo HoloLens e realidade mista do Windows.
+description: Comece aqui para se preparar para o desenvolvimento de realidade misturada. Este artigo sempre deve refletir as versões mais recentes do Unity, do Visual Studio e das outras ferramentas recomendadas para o desenvolvimento de headset imersivo do HoloLens e do Windows Mixed Reality.
 author: yoyozilla
 ms.author: yoyozilla
 ms.date: 2/11/2019
 ms.topic: article
 ms.localizationpriority: high
-keywords: atualizados, ferramentas, começar a usar, Noções básicas, o unity, o visual studio, o Kit de ferramentas
+keywords: atualizado, ferramentas, começar, noções básicas, unity, visual studio, kit de ferramentas
 ms.openlocfilehash: 32dcda0eceb8d3717de7b2502d86f03cda975b8f
-ms.sourcegitcommit: 60060386305eabfac2758a2c861a43c36286b151
-ms.translationtype: MT
+ms.sourcegitcommit: f20beea6a539d04e1d1fc98116f7601137eebebe
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/31/2019
+ms.lasthandoff: 06/05/2019
 ms.locfileid: "66453731"
 ---
 # <a name="install-the-tools"></a>Instalar as ferramentas
 
-Obtenha as ferramentas que necessárias para criar aplicativos para o Microsoft HoloLens e fones de ouvido Windows Mixed Reality de imersão (VR). Não há nenhuma separação de desenvolvimento do SDK para Windows Mixed Reality; Você usará o Visual Studio com o SDK do Windows 10.
+Obtenha as ferramentas necessárias para criar aplicativos para os headsets imersivos (VR) do Microsoft HoloLens e do Windows Mixed Reality. Não há nenhum SDK separado para o desenvolvimento no Windows Mixed Reality; você usará o Visual Studio com o SDK do Windows 10.
 
-Você não tem um dispositivo de realidade misturada? Você pode instalar o [HoloLens emulador](using-the-hololens-emulator.md) para testar algumas funcionalidades de aplicativos de realidade misturada sem um HoloLens. Você também pode usar o [simulador do Windows Mixed Reality](using-the-windows-mixed-reality-simulator.md) para testar seus aplicativos de realidade misturada fones imersivos em exposição.
+Não tem um dispositivo de realidade misturada? Você pode instalar o [emulador do HoloLens](using-the-hololens-emulator.md) para testar algumas funcionalidades de aplicativos de realidade misturada sem um HoloLens. Você também pode usar o [simulador do Windows Mixed Reality](using-the-windows-mixed-reality-simulator.md) para testar seus aplicativos de realidade misturada para headsets imersivos.
 
-É recomendável instalar o mecanismo de jogos do Unity como aplicativos de realidade mista de maneira mais fácil de começar a criar, no entanto, você também pode compilar em relação a DirectX se você quiser usar um mecanismo personalizado.
+É recomendável instalar o mecanismo de jogos do Unity, pois é a maneira mais fácil de começar a criar aplicativos de realidade misturada; no entanto, você também pode compilar com DirectX se quiser usar um mecanismo personalizado.
 
 >[!TIP]
->Marque esta página e verifique-o regularmente para manter atualizado sobre a versão mais recente de cada ferramenta recomendada para desenvolvimento de realidade misturada.
+>Adicione esta página aos favoritos e acesse-a regularmente para se manter atualizado sobre a versão mais recente de cada ferramenta recomendada para o desenvolvimento de realidade misturada.
 
 <br>
 
 >[!VIDEO https://www.youtube.com/embed/3l20TWhw4S8]
 
-## <a name="installation-checklist"></a>Lista de verificação de instalação
+## <a name="installation-checklist"></a>Lista de verificação da instalação
 
 
 | Ferramenta | Descrição | Observações |
 |---------|---------|---------|
-| ![Logotipo do Windows](images/Windows10_logo.png)<br><br><a href="https://www.microsoft.com/software-download/windows10" target="_blank">**Windows 10**<br>(Link de instalação manual)</a> | Instale a versão mais recente do Windows 10 para que o sistema operacional do seu PC corresponda à plataforma para a qual você está criando aplicativos de realidade misturada. | **Instalação do Windows 10** <br> <ul><li>Você pode instalar a versão mais recente do Windows 10 via Windows Update em configurações ou criando mídia de instalação (usando o link na coluna à esquerda).<li>Ver [notas de versão atuais](release-notes-october-2018.md) para obter informações sobre os mais recentes recursos de realidade disponíveis mistos com cada versão do Windows 10.</ul> **Habilitar o modo de desenvolvedor em seu PC** em Configurações > atualização e segurança > para desenvolvedores. <br><br> **Observação para enterprise e computadores corporativos gerenciados:** se seu PC for gerenciado por da sua organização departamento de TI, talvez seja necessário entrar em contato com eles para atualizar. <br><br> **Versões de ' n' do Windows:** Fones de ouvido Windows Mixed Reality de imersão (VR) não têm suporte em versões de ' n' do Windows. |
-| ![Logotipo do Visual Studio](images/visualstudio_logo.png)<br><br><a href="https://visualstudio.microsoft.com/downloads/" target="_blank">**Visual Studio 2017**<br>(Link de instalação)</a> | Ambiente completo de desenvolvimento integrado (IDE) para Windows e muito mais. Você usará o Visual Studio para escrever código, depurar, testar e implantar. | **Cargas de trabalho para instalar:** <ul><li>Desenvolvimento para desktop com C++</li><li>Desenvolvimento na plataforma Windows universal</li></ul>**Observação sobre o Unity:** A menos que intencionalmente, você está tentando instalar uma versão (não-LTS) mais recente do Unity para uma finalidade específica, recomendamos *não* instalando a carga de trabalho do Unity como parte da instalação do Visual Studio e, em vez disso, instalando os 2018.4 LTS fluxo do Unity conforme indicado abaixo.<br> <br>**Observação:** Há alguns problemas conhecidos com o desenvolvimento de realidade misturada no Visual Studio de 2019 no momento.  Por enquanto, é recomendável que você continue usando o Visual Studio 2017. |
-| ![Logotipo do Windows](images/Windows10_logo.png)<br><br><a href="https://developer.microsoft.com/en-US/windows/downloads/windows-10-sdk" target="_blank">**Windows 10 SDK (10.0.18362.0)**<br>(Link de instalação manual)</a> | Fornece os cabeçalhos, bibliotecas, metadados e ferramentas mais recentes para a criação de aplicativos do Windows 10 em HoloLens 2. | Para compilar aplicativos HoloLens 2, você precisará instalar o Windows SDK, build 18362 ou posterior.<br> <br> Se você só estiver desenvolvendo aplicativos para desktops fones de ouvido Windows Mixed Reality ou HoloLens (1º gen), você pode usar o SDK do Windows instalado pelo Visual Studio 2017. |
-| ![Logotipo do Visual Studio](images/HoloLensIcon.jpg)<br><br><a href="https://go.microsoft.com/fwlink/?linkid=2087187" target="_blank">**Emulador do HoloLens 2**<br>(Link de instalação: 10.0.18362.1005)</a><br> <br><a href="https://go.microsoft.com/fwlink/?linkid=2065980" target="_blank">**HoloLens (1º gen) emulador**<br>(Link de instalação: 10.0.17763.253)</a> | O emulador permite que você execute aplicativos em uma imagem de máquina virtual do HoloLens sem um HoloLens físico.<br> <br> Este pacote também inclui modelos de projetos DirectX holographic para o Visual Studio. | Ver [usando o emulador do HoloLens](using-the-hololens-emulator.md) para obter mais informações sobre como começar com o emulador.<br> <br> **O sistema deve dar suporte a Hyper-V** para a instalação do emulador para ter êxito. Consulte a seção de requisitos de sistema abaixo para obter detalhes. Se desejar, você pode selecionar instalar apenas os modelos sem o emulador.<br>|
-| ![Logotipo do Unity](images/unity_logo.png)<br><br><a href="https://unity3d.com/unity/qa/lts-releases?version=2018.4" target="_blank">**2018.4 do Unity**<br>(Link de instalação)</a> | O mecanismo de jogos do Unity é a maneira mais fácil para criar experiências de realidade misturada, com suporte interno para recursos do Windows Mixed Reality. | É recomendável normalmente o fluxo do Unity LTS (suporte a longo prazo) como a melhor versão na qual iniciar novos projetos, atualizar para sua revisão mais recente para acompanhar as correções estáveis mais recentes.<br> <br>A recomendação atual é usar **Unity 2018.4.x**, que é a compilação LTS necessária para MRTK v2 abaixo.<br> <br>Alguns desenvolvedores talvez queira usar uma versão diferente do Unity por razões específicas. Para esses casos, o Unity oferece suporte a instalações lado a lado de versões diferentes. |
-| ![Logotipo MRTK](images/MRTKIcon.jpg)<br><br><a href="https://github.com/Microsoft/MixedRealityToolkit-Unity/releases" target="_blank">**Toolkit de realidade misturada (MRTK v2) para o Unity**</a> | MRTK v2 para Unity é um kit de desenvolvimento de plataforma cruzada do código-fonte aberto para aplicativos de realidade misturada.<br><br> MRTK v2 destina-se a acelerar o desenvolvimento de aplicativos voltados para o Microsoft HoloLens, headsets do Windows Mixed Reality imersivos (VR) e a plataforma de OpenVR. O projeto é voltado para reduzir as barreiras à entrada para criar aplicativos de realidade mista e contribuir com a comunidade como todos nós crescer. | Saiba mais sobre MRTK v2 visitando o projeto <a href="https://github.com/Microsoft/MixedRealityToolkit-Unity/wiki" target="_blank">wiki do GitHub</a>. |
+| ![Logotipo do Windows](images/Windows10_logo.png)<br><br><a href="https://www.microsoft.com/software-download/windows10" target="_blank">**Windows 10**<br>(Link de instalação manual)</a> | Instale a versão mais recente do Windows 10, para que o sistema operacional do seu computador corresponda à plataforma para a qual você está compilando aplicativos de realidade misturada. | **Instalação do Windows 10** <br> <ul><li>Você pode instalar a versão mais recente do Windows 10 via Windows Update nas Configurações ou criando uma mídia de instalação (usando o link na coluna à esquerda).<li>Veja as [notas de versão atuais](release-notes-october-2018.md) para obter informações sobre os recursos mais recentes de realidade misturada disponíveis em cada versão do Windows 10.</ul> **Ative o modo de desenvolvedor no seu computador** em Configurações > Atualização e Segurança > Para Desenvolvedores. <br><br> **Observação para computadores empresariais e corporativos:** se o computador for gerenciado pelo departamento de TI da sua organização, talvez seja necessário entrar em contato com eles para atualizar. <br><br> **"N" versões do Windows:** Headsets imersivos (VR) do Windows Mixed Reality não são compatíveis com as versões "N" do Windows. |
+| ![Logotipo do Visual Studio](images/visualstudio_logo.png)<br><br><a href="https://visualstudio.microsoft.com/downloads/" target="_blank">**Visual Studio 2017**<br>(Link de instalação)</a> | Ambiente de desenvolvimento integrado (IDE) completo para Windows e muito mais. Você usará o Visual Studio para escrever o código, depurar, testar e implantar. | **Cargas de trabalho a instalar:** <ul><li>Desenvolvimento para desktop com C++</li><li>Desenvolvimento para a Plataforma Universal do Windows</li></ul>**Observação sobre o Unity:** a menos que você esteja tentando instalar intencionalmente uma versão (não LTS) mais recente do Unity para uma finalidade específica, recomendamos *não* instalar a carga de trabalho do Unity como parte da instalação do Visual Studio. Em vez disso, instale o fluxo 2018.4 LTS do Unity, conforme indicado abaixo.<br> <br>**Observação:** há alguns problemas conhecidos com o desenvolvimento de realidade misturada no Visual Studio de 2019 no momento.  Por enquanto, é recomendável continuar usando o Visual Studio 2017. |
+| ![Logotipo do Windows](images/Windows10_logo.png)<br><br><a href="https://developer.microsoft.com/en-US/windows/downloads/windows-10-sdk" target="_blank">**SDK do Windows 10 (10.0.18362.0)**<br>(Link de instalação manual)</a> | Fornece os cabeçalhos, bibliotecas, metadados e ferramentas mais recentes para a compilação de aplicativos do Windows 10 no HoloLens 2. | Para compilar aplicativos do HoloLens 2, você precisará instalar o SDK do Windows, build 18362 ou posterior.<br> <br> Se você estiver desenvolvendo aplicativos somente para headsets do Windows Mixed Reality ou HoloLens (1º geração), poderá usar o SDK do Windows instalado pelo Visual Studio 2017. |
+| ![Logotipo do Visual Studio](images/HoloLensIcon.jpg)<br><br><a href="https://go.microsoft.com/fwlink/?linkid=2087187" target="_blank">**Emulador do HoloLens 2**<br>(Link de instalação: 10.0.18362.1005)</a><br> <br><a href="https://go.microsoft.com/fwlink/?linkid=2065980" target="_blank">**Emulador do HoloLens (1ª geração)**<br>(Link de instalação: 10.0.17763.253)</a> | O emulador permite executar aplicativos em uma imagem de máquina virtual do HoloLens sem um HoloLens físico.<br> <br> Esse pacote também inclui modelos de projeto holográfico do DirectX para o Visual Studio. | Veja [Usando o emulador do HoloLens](using-the-hololens-emulator.md) para obter mais informações sobre como começar a usar o emulador.<br> <br> **O sistema deve ser compatível com Hyper-V** para a instalação do emulador ser bem-sucedida. Consulte a seção de Requisitos de sistema abaixo para obter detalhes. Se desejar, você pode instalar apenas os modelos sem o emulador.<br>|
+| ![Logotipo do Unity](images/unity_logo.png)<br><br><a href="https://unity3d.com/unity/qa/lts-releases?version=2018.4" target="_blank">**Unity 2018.4**<br>(Link de instalação)</a> | O mecanismo de jogos do Unity é a maneira mais fácil de criar experiências de realidade misturada, com suporte integrado aos recursos do Windows Mixed Reality. | É recomendável usar o fluxo LTS (suporte a longo prazo) do Unity, que é a melhor versão para iniciar novos projetos. Atualize para a revisão mais recente para obter as correções estáveis mais recentes.<br> <br>A recomendação atual é usar o **Unity 2018.4.x**, que é a compilação LTS necessária para o MRTK v2 abaixo.<br> <br>Alguns desenvolvedores talvez queiram usar uma versão diferente do Unity por motivos específicos. Nesses casos, o Unity oferece suporte a instalações lado a lado de versões diferentes. |
+| ![Logotipo do MRTK](images/MRTKIcon.jpg)<br><br><a href="https://github.com/Microsoft/MixedRealityToolkit-Unity/releases" target="_blank">**Kit de ferramentas de realidade misturada (MRTK v2) para Unity**</a> | O MRTK v2 para Unity é um kit de desenvolvimento multiplataforma com código aberto para aplicativos de realidade misturada.<br><br> O MRTK v2 destina-se a acelerar o desenvolvimento de aplicativos voltados para o Microsoft HoloLens, os headsets imersivos (VR) do Windows Mixed Reality e a plataforma OpenVR. O projeto visa reduzir as barreiras de entrada para criar aplicativos de realidade misturada e contribuir com a comunidade à medida que todos nós crescemos. | Saiba mais sobre o MRTK v2 visitando o <a href="https://github.com/Microsoft/MixedRealityToolkit-Unity/wiki" target="_blank">wiki do GitHub</a> do projeto. |
 
 
 ## <a name="mixed-reality-toolkit"></a>Kit de ferramentas de realidade misturada
 
-O Kit de ferramentas de realidade misturada fornece componentes e recursos que se destinam a acelerar o desenvolvimento de aplicativos voltados para o Microsoft HoloLens, headsets Windows Mixed Reality e OpenVR plataforma. O projeto é voltado para reduzir as barreiras à entrada para criar aplicativos de realidade mista e contribuem na comunidade, como todos nós crescer.
+O Kit de ferramentas de realidade misturada fornece componentes e recursos para acelerar o desenvolvimento de aplicativos voltados para o Microsoft HoloLens, os headsets imersivos (VR) do Windows Mixed Reality e a plataforma OpenVR. O projeto visa reduzir as barreiras de entrada para criar aplicativos de realidade misturada e contribuir com a comunidade à medida que todos nós crescemos.
 * <a href="https://github.com/Microsoft/MixedRealityToolkit" target="_blank">MixedRealityToolkit</a>
-* <a href="https://github.com/Microsoft/MixedRealityToolkit-Unity" target="_blank">Unity MixedRealityToolkit</a> – usa o código do Kit de ferramentas base e torna mais fácil de consumir no Unity.
-* <a href="https://github.com/Microsoft/MixedRealityCompanionKit" target="_blank">MixedRealityCompanionKit</a> - bits e componentes que não podem ser executados diretamente em HoloLens ou fones imersivos em exposição (VR) de código, mas em vez disso, o par com eles para criar experiências visando o Windows Mixed Reality.
+* <a href="https://github.com/Microsoft/MixedRealityToolkit-Unity" target="_blank">MixedRealityToolkit-Unity</a> - usa o código do Kit de ferramentas básico e facilita sua utilização no Unity.
+* <a href="https://github.com/Microsoft/MixedRealityCompanionKit" target="_blank">MixedRealityCompanionKit</a> - bits de código e componentes que não podem ser executados diretamente no HoloLens ou nos headsets imersivos (VR), mas que se emparelham com eles para criar experiências visando o Windows Mixed Reality.
 
 ## <a name="setting-up-your-pc-for-mixed-reality-development"></a>Como configurar seu computador para o desenvolvimento de realidade misturada
 
-SDK do Windows 10 funciona melhor no sistema operacional Windows 10. Esse SDK também é compatível com Windows 8.1, Windows 8, Windows 7, Windows Server 2012, Windows Server 2008 R2. Observe que nem todas as ferramentas têm suporte em sistemas operacionais mais antigos. 
+O SDK do Windows 10 funciona melhor no sistema operacional Windows 10. Esse SDK também é compatível com: Windows 8.1, Windows 8, Windows 7, Windows Server 2012, Windows Server 2008 R2. Observe que nem todas as ferramentas são compatíveis com sistemas operacionais mais antigos. 
 
-### <a name="for-hololens-development"></a>Para o desenvolvimento HoloLens
+### <a name="for-hololens-development"></a>Desenvolvimento para o HoloLens
 
-Ao configurar seu computador de desenvolvimento para desenvolvimento HoloLens, verifique se ele atende aos requisitos do sistema para ambos <a href="https://unity3d.com/unity/system-requirements" target="_blank">Unity</a> e <a href="https://www.visualstudio.com/productinfo/vs2017-system-requirements-vs" target="_blank">Visual Studio</a>. Se você planeja usar o HoloLens (1º gen) emulador, você vai querer garantir seu PC atende a [requisitos de sistema do emulador HoloLens](using-the-hololens-emulator.md#hololens-emulator-system-requirements) também.
+Ao configurar seu computador para o desenvolvimento para o HoloLens, verifique se ele atende aos requisitos de sistema do <a href="https://unity3d.com/unity/system-requirements" target="_blank">Unity</a> e o <a href="https://www.visualstudio.com/productinfo/vs2017-system-requirements-vs" target="_blank">Visual Studio</a>. Se você planeja usar o emulador do HoloLens (1º geração), verifique se o computador também atende aos [requisitos de sistema do emulador do HoloLens](using-the-hololens-emulator.md#hololens-emulator-system-requirements).
 
-Para se familiarizar com o emulador do HoloLens, consulte [usando o emulador do HoloLens](using-the-hololens-emulator.md).
+Para começar a usar o emulador do HoloLens, veja [Usando o emulador do HoloLens](using-the-hololens-emulator.md).
 
-Se você planeja desenvolver para o HoloLens e o Windows Mixed Reality headsets (VR) imersivos, use as recomendações de sistema e os requisitos na seção a seguir.
+Se você planeja desenvolver para headsets imersivos (VR) do HoloLens e do Windows Mixed Reality, use as recomendações e requisitos de sistema descritos na próxima seção.
 
-### <a name="for-immersive-vr-headset-development"></a>Para desenvolvimento de fone de ouvido imersivo (VR)
+### <a name="for-immersive-vr-headset-development"></a>Desenvolvimento para headset imersivo (VR)
 
 >[!NOTE]
->As diretrizes a seguir são as especificações atuais de mínimas e recomendadas para fone de ouvido (VR) imersivo *computador de desenvolvimento*e pode ser atualizada regularmente.
+>As diretrizes a seguir são as especificações atuais mínimas e recomendadas para seu *computador de desenvolvimento* para headset imersivo (VR) e podem ser atualizadas regularmente.
 
 >[!WARNING]
->Não confunda isso com o [diretrizes de compatibilidade de hardware de PC mínimas](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/windows-mixed-reality-minimum-pc-hardware-compatibility-guidelines), que descreve ao *especificações de consumidor PC* aos quais você deve direcionar seu aplicativo profunda de fone de ouvido (VR) ou um jogo.
+>Não confunda essas informações com as [diretrizes de compatibilidade mínima de hardware do computador](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/windows-mixed-reality-minimum-pc-hardware-compatibility-guidelines), que descreve as *especificações do computador do consumidor*, que é o alvo do seu jogo ou aplicativo de headset imersivo (VR).
 
-Se seu computador de desenvolvimento imersivo fone de ouvido não tem portas HDMI e/ou USB 3.0 em tamanho normal, você precisará [adaptadores](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/recommended-adapters-for-windows-mixed-reality-capable-pcs) para se conectar a seu fone de ouvido.
+Se seu computador de desenvolvimento de headset imersivo não tiver portas HDMI e/ou USB 3.0 padrão, você precisará de [adaptadores](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/recommended-adapters-for-windows-mixed-reality-capable-pcs) para conectar o headset.
 
-Atualmente, há [problemas conhecidos](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/troubleshooting-windows-mixed-reality) com algumas configurações de hardware, especialmente com blocos de anotações com gráficos híbridos.
+Atualmente, há [problemas conhecidos](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/troubleshooting-windows-mixed-reality) com algumas configurações de hardware, especialmente em notebooks com gráficos híbridos.
 
 <table>
 <tr>
-<th></th><th> Mínimo</th><th> Recomendado</th>
+<th></th><th> Mínimo</th><th> Recomendações</th>
 </tr><tr>
-<td> Processador</td><td> <b>Bloco de anotações:</b> Intel Mobile Core i5 7ª geração de CPU, Dual-Core com Hyper Threading <b>área de trabalho:</b> Área de trabalho do Intel i5 6ª geração de CPU, Dual-Core com Hyper Threading <b>ou</b> AMD FX4350 equivalente do 4.2 Ghz Quad-Core</td><td> <b>Área de trabalho:</b> Área de trabalho do Intel i7 6ª geração (6 núcleos) <b>ou</b> AMD Ryzen 1600 5 (6 núcleos, 12 threads)</td>
+<td> Processador</td><td> <b>Notebook:</b> CPU Intel Mobile Core i5 de 7ª geração, Dual-Core com Hyper Threading <b>Área de trabalho:</b> CPU Intel i5 de 6ª geração, Dual-Core com Hyper Threading <b>OU</b> equivalente a AMD FX4350 4,2Ghz Quad-Core</td><td> <b>Área de trabalho</b>: Intel i7 de 6ª geração (6 núcleos) <b>OU</b> GPU AMD Ryzen 5 1600 (6 núcleos, 12 threads)</td>
 </tr><tr>
-<td> GPU</td><td> <b>Bloco de anotações:</b> NVIDIA GTX 965M, AMD RX 460M (2GB) equivalente ou superior DX12 GPU compatível com <b>área de trabalho:</b> NVIDIA GTX 960/1050, AMD Radeon RX 460 (2GB) equivalente ou superior DX12 GPU compatível com</td><td><b>Área de trabalho:</b> NVIDIA GTX 980/1060, AMD Radeon RX 480 (2GB) equivalente ou superior DX12 GPU compatível com</td>
+<td> GPU</td><td> <b>Notebook:</b> NVIDIA GTX 965M, GPU equivalente ou superior a AMD RX 460M (2GB) com capacidade DX12 <b>Computador:</b> NVIDIA GTX 960/1050, GPU equivalente ou superior a AMD Radeon RX 460 (2GB) com capacidade DX12</td><td><b>Área de trabalho</b>: NVIDIA GTX 980/1060, GPU equivalente ou superior a AMD Radeon RX 480 (2GB) com capacidade DX12</td>
 </tr><tr>
-<td> Versão do GPU driver WDDM</td><td colspan="2"> Driver WDDM 2.2</td>
+<td> Versão WDDM do driver da GPU</td><td colspan="2"> Driver WDDM 2.2</td>
 </tr><tr>
-<td> Potência do Design térmico</td><td colspan="2"> 15W ou maior</td>
+<td> Potência do design térmico</td><td colspan="2"> 15W ou mais</td>
 </tr><tr>
-<td> Portas de exibição de gráficos</td><td colspan="2"> 1 x gráfica disponível da tela de porta para o&#160;fone de ouvido (1.4 HDMI ou DisplayPort 1.2 para fones de ouvido 60Hz, 2.0 HDMI ou DisplayPort 1.2 para headsets Hz 90)</td>
+<td> Portas de vídeo</td><td colspan="2"> 1 x porta de vídeo disponível para headset (HDMI 1.4 ou DisplayPort 1.2 para headsets de 60Hz, HDMI 2.0 ou DisplayPort 1.2 para headsets de 90Hz)</td>
 </tr><tr>
-<td> Resolução de vídeo</td><td colspan="2"> Resolução: SVGA (800 x 600) ou maior profundidade de bits: 32 bits de cores por pixel</td>
+<td> Resolução da tela</td><td colspan="2"> Resolução: SVGA (800 x 600) ou maior Profundidade de bits: 32 bits de cores por pixel</td>
 </tr><tr>
-<td> Memória</td><td> 8&#160;GB de RAM ou superior</td><td> 16 GB de RAM ou superior</td>
+<td> Memória</td><td> 8 GB de RAM ou mais</td><td> 16 GB de RAM ou mais</td>
 </tr><tr>
-<td> Armazenamento</td><td colspan="2"> &gt;Espaço livre adicional de 10 GB</td>
+<td> Armazenamento</td><td colspan="2"> &gt;10 GB de espaço livre adicional</td>
 </tr><tr>
-<td> Portas USB</td><td colspan="2"> 1 x USB disponível da porta para o fone de ouvido (USB 3.0 Type-A) <b>Observação: USB deve fornecer um mínimo de 900mA</b></td>
+<td> Portas USB</td><td colspan="2"> 1 x porta USB disponível para headset (USB 3.0 Tipo A) <b>Observação: a USB deve fornecer um mínimo de 900mA</b></td>
 </tr><tr>
-<td> Bluetooth</td><td colspan="2"> Bluetooth 4.0 (para conectividade de acessório)</td>
+<td> Bluetooth</td><td colspan="2"> Bluetooth 4.0 (para conexão de acessórios)</td>
 </tr>
 </table>
 
 ## <a name="see-also"></a>Consulte também
 
-* [Visão geral de desenvolvimento](development-overview.md)
+* [Visão geral do desenvolvimento](development-overview.md)
 * [Usando o emulador do HoloLens](using-the-hololens-emulator.md)
 * [Como usar o simulador do Windows Mixed Reality](using-the-windows-mixed-reality-simulator.md)
 * [Visão geral do desenvolvimento do Unity](unity-development-overview.md)
