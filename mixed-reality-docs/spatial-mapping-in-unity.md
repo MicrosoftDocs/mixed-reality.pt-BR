@@ -1,17 +1,17 @@
 ---
 title: Mapeamento espacial no Unity
 description: Renderização e colidam a geometria do mundo real ao seu redor no Unity.
-author: thetuvix
-ms.author: alexturn
+author: davidkline-ms
+ms.author: davidkl
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Unity, mapeamento espacial, processador, colisor, malha, varredura, componente
-ms.openlocfilehash: f938f5921cb2c06342a9ebcd376d690c10584df9
-ms.sourcegitcommit: f7fc9afdf4632dd9e59bd5493e974e4fec412fc4
+ms.openlocfilehash: 8f7bad1651ab31b2e83ad9d9c8f465547fbbdc5a
+ms.sourcegitcommit: 2f600e5ad00cd447b180b0f89192b4b9d86bbc7e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2019
-ms.locfileid: "59591031"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67148646"
 ---
 # <a name="spatial-mapping-in-unity"></a>Mapeamento espacial no Unity
 
@@ -455,7 +455,7 @@ A dll de Noções básicas sobre armazena internamente o playspace como uma grad
 Para obter mais informações sobre como usar o mapeamento espacial com o Kit de ferramentas de realidade misturada v2, consulte o <a href="https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/SpatialAwareness/SpatialAwarenessGettingStarted.html" target="_blank">seção reconhecimento espacial</a> do docs MRTK.
 
 ## <a name="see-also"></a>Consulte também
-* [MR Spatial 230: Mapeamento espacial](holograms-230.md)
+* [MR Espacial 230: mapeamento espacial](holograms-230.md)
 * [Sistemas de coordenadas](coordinate-systems.md)
 * [Sistemas de coordenadas no Unity](coordinate-systems-in-unity.md)
 * <a href="https://github.com/Microsoft/MixedRealityToolkit-Unity" target="_blank">MixedRealityToolkit</a>

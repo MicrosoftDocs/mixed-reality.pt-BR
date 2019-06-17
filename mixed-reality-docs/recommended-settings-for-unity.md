@@ -6,12 +6,12 @@ ms.author: trferrel
 ms.date: 03/26/2019
 ms.topic: article
 keywords: Unity, configurações, realidade mista
-ms.openlocfilehash: a26dbdb63c8bad9bb9659a6a3303c0b0ab418580
-ms.sourcegitcommit: aba33a8ad1416f7598048ac35ae9ab1734bd5c37
+ms.openlocfilehash: c8b5598fa702954ca14b9b013e44ed38cf6075c2
+ms.sourcegitcommit: 2f600e5ad00cd447b180b0f89192b4b9d86bbc7e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66270372"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67148667"
 ---
 # <a name="recommended-settings-for-unity"></a>Configurações recomendadas para Unity
 
@@ -65,6 +65,12 @@ Para habilitar esse recurso em seu projeto do Unity
 
 Além disso, é recomendável selecionar **profundidade de 16 bits** sob o **formato profundidade** configuração neste painel, especialmente para desenvolvimento Hololens. Seleção de 16 bits em comparação com 24 bits reduzirá significativamente os requisitos de largura de banda conforme menos dados precisará ser movidos/processado.
 
+Em ordem para a plataforma Windows Mixed Reality otimizar a estabilidade holograma, ele se baseia no buffer de profundidade para ser preciso e corresponder qualquer hologramas renderizadas na tela. Assim, com o compartilhamento em um buffer de profundidade, é importante quando a renderização de cor, também processam profundidade. No Unity, a maioria dos materiais opaco ou TransparentCutout renderizará profundidade, por padrão, mas transparente e objetos de texto geralmente não serão renderizado profundidade Embora isso seja dependente do sombreador, etc. 
+
+Se estiver usando o sombreador padrão do Kit de ferramentas de realidade misturada, para renderizar a profundidade para objetos transparentes:
+1) Selecione o material transparente que usa o sombreador padrão MRTK e abra a janela do editor de Inspetor
+2) Definir **modo de renderização** ao **personalizado** , em seguida, defina **modo** para **Transparent** e, finalmente, defina **profundidade gravar**para **em**
+
 >[!NOTE]
 > Os desenvolvedores devem tenha cuidado com Z fighting ao alterar esses valores junto com as configurações de plano quase/distante da câmera. Z Fighting ocorre quando dois gameobjects tenta processar para o mesmo pixel e devido a limitações de fidelidade do buffer de profundidade (ou seja profundidade z), Unity não é possível distinguir qual objeto está na frente do outro. Os desenvolvedores observarão uma cintilação entre dois objetos de jogos como eles *lutar contra* para o mesmo valor de profundidade z. Isso pode ser resolvido ao alternar para o formato de 24 bits profundidade, haverá um intervalo maior de valores para cada objeto calcular após a sua profundidade de z da câmera.
 >
@@ -85,7 +91,7 @@ Unity preteriu o suporte para o .NET scripting back-end e, portanto, é recomend
 Leia [otimizando tempos de compilação para IL2CPP](https://docs.unity3d.com/Manual/IL2CPP-OptimizingBuildTimes.html) para obter mais informações.
 
 > [!NOTE]
-> Além disso, pode ser benéfico para configurar uma [servidor de Cache](https://docs.unity3d.com/Manual/CacheServer.html), especialmente para projetos do Unity com uma grande quantidade de ativos (excluindo os arquivos de script) ou constantemente mudando cenas/ativos. Ao abrir um projeto, o Unity armazena qualificados ativos em um formato de cache interno no computador do desenvolvedor. Itens devem ser importados novamente e, portanto, processados novamente quando modificado. Esse processo pode ser feito uma vez e salvo em um servidor de Cache e, consequentemente, compartilhado com outros desenvolvedores para economizar tempo, em vez de todos os desenvolvedores de processar a nova importação de novas alterações localmente.
+> Além disso, pode ser benéfico configurar um [Servidor de Cache](https://docs.unity3d.com/Manual/CacheServer.html), especialmente para projetos do Unity com uma grande quantidade de ativos (excluindo arquivos de script) ou que estejam constantemente alterando cenas/ativos. Ao abrir um projeto, o Unity armazena os ativos qualificados em um formato de cache interno no computador do desenvolvedor. Os itens precisam ser importados novamente e, assim, processados novamente quando modificados. Esse processo pode ser feito uma vez e salvo em um Servidor de Cache e, consequentemente, compartilhado com outros desenvolvedores para economizar tempo, em vez de todos os desenvolvedores processarem a nova importação de novas alterações localmente.
 
 ## <a name="publishing-properties"></a>Propriedades de publicação
 

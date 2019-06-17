@@ -6,20 +6,37 @@ ms.author: mazeller
 ms.date: 04/1/2019
 ms.topic: article
 keywords: solucionar problemas, problema conhecido, ajuda
-ms.openlocfilehash: a92ab52c899de44f9c5c8c86ebb6f9cd8433d395
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 2423c7292e453d97461c299e8bddfa063a29d3cd
+ms.sourcegitcommit: 2f600e5ad00cd447b180b0f89192b4b9d86bbc7e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59590990"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67148702"
 ---
 # <a name="hololens-known-issues"></a>Problemas conhecidos do HoloLens
 
 Esta é a lista atual de problemas conhecidos que afetam os desenvolvedores de HoloLens. Verifique aqui primeiro se você estiver vendo um comportamento estranho. Essa lista será mantida atualizada à medida que novos problemas são descobertos ou relatados, ou os problemas sejam resolvidos em futuras atualizações de software do HoloLens.
 
+## <a name="unable-to-connect-and-deploy-to-hololens-through-visual-studio"></a>Não é possível conectar-se e implante em HoloLens através do Visual Studio
+
+>[!NOTE]
+>Última atualização: 6/14 @ às 18H - problema sob investigação.
+
+As equipes HoloLens e o Visual Studio estiver investigando um problema que pode impedir que os usuários da implantação de dispositivo do HoloLens por meio do Visual Studio.
+ 
+Durante o estágio de implantação, os usuários relatarem a seguinte mensagem de erro, apesar dos dispositivos HoloLens e precisar de máquina do desenvolvedor *modo de desenvolvedor* habilitado:
+
+*DEP0100: Certifique-se de que esse dispositivo de destino tem o modo de desenvolvedor habilitado. Não foi possível obter uma licença de desenvolvedor no <device IP> devido ao erro 80004005.*
+ 
+**Solução do problema**: 
+ 
+Os usuários de relatório que a redefinição do dispositivo resolve o problema, mas não podemos garantir que isso funcionará em todos os casos. Você pode encontrar instruções para redefinir seu dispositivo [aqui](https://support.microsoft.com/en-us/help/13452/hololens-restart-reset-or-recover-hololens).
+ 
+Forneceremos uma atualização, assim que o problema é causado de raiz. 
+
 ## <a name="issues-launching-the-microsoft-store-and-apps-on-hololens"></a>Problemas ao iniciar o Microsoft Store e aplicativos no HoloLens
 
->[!IMPORTANT]
+>[!NOTE]
 >Última atualização: 4 2 @ 10h - problema resolvido. 
 
 Você pode enfrentar problemas ao tentar iniciar o Microsoft Store e aplicativos no HoloLens. Determinamos que o problema ocorre quando as atualizações de aplicativo em segundo plano implantem uma versão mais recente dos pacotes de estrutura em sequências específicas enquanto um ou mais dos seus aplicativos dependentes ainda estão em execução. Nesse caso, uma atualização de aplicativo automáticos entregue a uma nova versão do .NET Native Framework (versão 10.0.25531 para 10.0.27413) causou os aplicativos em execução não está corretamente a atualização para todos os aplicativos em execução, consumindo a versão anterior do framework.  O fluxo para atualizar o framework é o seguinte:-
@@ -74,7 +91,7 @@ Durante o OOBE & configurações, há um tempo limite de credencial de 2 minutos
 
 ## <a name="visual-studio"></a>Visual Studio
 * Ver [instalar as ferramentas](install-the-tools.md) para a versão mais recente do Visual Studio recomendado para desenvolvimento HoloLens.
-* Ao implantar um aplicativo do Visual Studio para o HoloLens, você poderá ver o erro: **A operação solicitada não pode ser executada em um arquivo com um usuário mapeado seção aberto. (Exceção de HRESULT: 0x800704C8)**. Se isso acontecer, tente novamente e sua implantação geralmente será bem-sucedida.
+* Ao implantar um aplicativo do Visual Studio para o HoloLens, você poderá ver o erro: **A operação solicitada não pode ser executada em um arquivo com um usuário mapeado seção aberto. (Exceção de HRESULT: 0x800704C8)** . Se isso acontecer, tente novamente e sua implantação geralmente será bem-sucedida.
 
 ## <a name="emulator"></a>Emulador
 * Nem todos os aplicativos em que a Microsoft Store são compatíveis com o emulador. Por exemplo, Conker Young e fragmentos não são reproduzidos no emulador.
