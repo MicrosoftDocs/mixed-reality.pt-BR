@@ -1,9 +1,9 @@
 # [Instalar as ferramentas](install-the-tools.md)
 # [Prepare seu aplicativo para HL2](mrtk-porting-guide.md)
-# [Descobrir](index.md)
+# Descobrir
+## [Documentação do Realidade Misturada](index.md)
 ## [O que é realidade misturada?](mixed-reality.md)
 ## [O que é um holograma?](hologram.md)
-
 ## Hardware
 ### HoloLens
 #### [Detalhes de hardware do HoloLens 2](https://www.microsoft.com/hololens/hardware)
@@ -78,7 +78,8 @@
 ### [Notas sobre a versão – maio de 2016](release-notes-may-2016.md)
 ### [Notas sobre a versão – março de 2016](release-notes-march-2016.md)
 
-# [Projetar](design.md)
+# Criar
+## [Design para realidade misturada](design.md)
 ## [Sobre a diretriz deste projeto](about-this-design-guidance.md)
 ## Introdução ao projeto
 ### [O que é realidade misturada?](mixed-reality.md)
@@ -129,7 +130,8 @@
 ### [HoloSketch](case-study-building-holosketch,-a-spatial-layout-and-ux-sketching-app-for-hololens.md)
 ### [Processo de criação do ativo](asset-creation-process.md)
 
-# [Desenvolver](development.md)
+# Desenvolver
+## [Barra inicial de desenvolvimento](development.md)
 ## Serviços de nuvem de realidade misturada
 ### [Âncoras Espaciais do Azure](https://docs.microsoft.com/azure/spatial-anchors)
 ### [Player de Comunicação Remota Holográfica](holographic-remoting-player.md)
