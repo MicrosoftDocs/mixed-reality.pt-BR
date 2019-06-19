@@ -145,6 +145,7 @@
 #### [Modo de reprodução do Unity](unity-play-mode.md)
 #### [Como exportar e criar uma solução do Visual Studio do Unity](exporting-and-building-a-unity-visual-studio-solution.md)
 #### [Melhores práticas para trabalhar com o Unity e o Visual Studio](best-practices-for-working-with-unity-and-visual-studio.md)
+#### [Depuração gerenciada com o Unity IL2CPP](managed-debugging-with-unity-il2cpp.md)
 ### Blocos principais de construção
 #### [Câmera no Unity](camera-in-unity.md)
 #### [Sistemas de coordenadas no Unity](coordinate-systems-in-unity.md)
