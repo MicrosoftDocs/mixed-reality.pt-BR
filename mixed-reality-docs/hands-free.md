@@ -6,12 +6,12 @@ ms.author: liamar
 ms.date: 04/20/2019
 ms.topic: article
 keywords: Realidade misturada, viva-voz, mantenha o foco, olhares direcionamento, interação, design
-ms.openlocfilehash: 23b1def15c4ad900265fab2a2c8757cf96706fbc
-ms.sourcegitcommit: 5b4292ef786447549c0199003e041ca48bb454cd
+ms.openlocfilehash: 4d21fa10eabb446565bddebccdbde5e2e7bcc72a
+ms.sourcegitcommit: 30246ab9b9be44a3c707061753e53d4bf401eb6b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66402341"
+ms.lasthandoff: 06/22/2019
+ms.locfileid: "67326149"
 ---
 # <a name="hands-free"></a>Viva voz
 
@@ -19,7 +19,7 @@ ms.locfileid: "66402341"
 
 ## <a name="scenarios"></a>Cenários
 
-Conforme descrito na [visão geral do modelo de interação](interaction-fundamentals.md), depois de você ter identificado os usuários e suas metas, pergunte-se que desafios ambientais ou situacional eles poderá enfrentar como eles trabalham para realizar suas tarefas. Por exemplo, muitos usuários precisam usar suas mãos para alcançar seus objetivos do mundo real e será ter dificuldade para interagir com uma interface com base prática e controladores. 
+Conforme descrito na [visão geral do modelo de interação](interaction-fundamentals.md), depois de você ter identificado os usuários e suas metas, pergunte-se que desafios ambientais ou situacional eles poderá enfrentar como eles trabalham para realizar suas tarefas. Por exemplo, muitos usuários precisam usar suas mãos atingir seus objetivos do mundo real e terá dificuldade para interagir com uma interface com base prática e controladores. 
 
 Alguns cenários específicos podem ser: 
 * Que está sendo guiado por meio de uma tarefa, enquanto as mãos estão ocupadas
@@ -33,25 +33,25 @@ Alguns cenários específicos podem ser:
 
 ### <a name="voice-commandingvoice-designmd"></a>[Comando de voz](voice-design.md)
 
-Usando a voz para comando e controle de que uma interface pode não apenas permitir que o usuário opere para mãos livres, mas também ignorar várias etapas. O uso desse modalidade pode variar de permitindo que o usuário simplesmente lê o nome do qualquer botão em voz alta para ativá-lo, como em Consulte-it-say-it, para conversar com um agente que pode realizar tarefas para você.
+Usando a voz para comando e controle de que uma interface pode não apenas permitir que o usuário opere para mãos livres, mas também ignorar várias etapas. O uso desse modalidade pode variar de permitindo que o usuário simplesmente ler nome do qualquer botão em voz alta para ativá-lo, como em Consulte-it-say-it, para conversar com um agente que pode realizar tarefas para você.
 
 
 
 ### <a name="head-gaze-and-dwellgaze-and-dwellmd"></a>[Focar com a cabeça e esperar](gaze-and-dwell.md)
 
-Em algumas situações viva-voz, usando a voz não é ideal ou até mesmo possível. Ambientes fabris alto, privacidade ou sociais normas podem ser restrições. O cabeçalho olhares + lidam bem com modelo permite que o usuário navegue o aplicativo usando seu principal vetor para apontar ao remanescentes, ou dwelling em um botão irá ativá-lo após um determinado período de tempo (normalmente, de cerca de 1 segundo ou menos). 
+Em algumas situações viva-voz, usando a voz não é ideal ou até mesmo possível. Ambientes fabris alto, privacidade ou sociais normas podem ser restrições. O cabeçalho olhares + lidam bem com modelo permite que o usuário navegue o aplicativo usando seu principal vetor para apontar ao remanescentes, ou dwelling em um botão irá ativá-lo após um determinado período de tempo, tpically aproximadamente 1 segundo mais ou menos. 
 
 
-## <a name="transitioning-in-and-out-of-hands-free"></a>A transição para dentro e fora de mãos livres
+## <a name="transitioning-in-and-out-of-hands-freey"></a>A transição para dentro e fora de mãos freey
 
-Liberar as mãos de interagir com hologramas para comandos e navegação pode variar para esses cenários, seja um requisito absoluto para operar o aplicativo, de ponta a ponta para uma conveniência adicional que o usuário pode fazer a transição da qualquer momento. 
+Para esses cenários, liberar as mãos de interagir com hologramas para comandos e navegação pode variar de sendo um requisito absoluto para operar o aplicativo ponta a ponta, para uma conveniência adicional que o usuário pode fazer a transição do qualquer tempo. 
 
 Se o requisito do aplicativo é que ela será sempre usada viva-voz, usando o único comando de voz, comandos de voz ou duração, "select" e, em seguida, certifique-se de fazer as acomodações apropriadas em sua interface do usuário. 
 
-Se o usuário de destino precisa ser capaz de alternar de mãos para mãos livres a seu critério, é importante levar esses princípios em conta:
+Se o usuário de destino precisa ser capaz de alternar de mãos para mãos livres a seu critério, em seguida, é importante considerar os seguintes princípios.
 
 ### <a name="assume-the-user-is-already-in-the-mode-that-they-want-to-switch-to"></a>Suponha que o usuário já está no modo que eles desejam mudar para
-Por exemplo, se o usuário estiver no chão de fábrica, assistindo a uma referência de vídeo em seu Hololens e decide pegar uma chave inglesa para começar a trabalhar, ela provavelmente gostaria de começar a trabalhar para mãos livres sem a necessidade de criar a chave inglesa ao pressionar um botão. Ela deve ser capaz de invocar uma sessão de voz com um comando de voz, lidam bem com já visíveis da interface do usuário para começar a duração ou, digamos que a palavra "select".
+Por exemplo, se o usuário está no chão de fábrica, assistir a uma referência de vídeo no seu Hololens e decide pegar uma chave inglesa para começar a trabalhar, ela provavelmente seria começar a trabalhar para mãos livres sem a necessidade de criar a chave inglesa ao pressionar um botão. Ela deve ser capaz de invocar uma sessão de voz com um comando de voz, lidam bem com uma interface do usuário já visível para começar a duração ou, digamos que a palavra "select".
 
 O usuário deve ter a capacidade de: 
 * Alterne para mãos livres, enquanto para mãos livres
@@ -66,7 +66,7 @@ Alguns exemplos seriam:
 * Um comando de voz para fazer a transição usando olhar + duração
 
 ### <a name="add-a-dash-of-drama"></a>Adicionar um traço de drama
-Uma opção do modo é muito importante – é importante que quando ocorrem essas transições, que eles sejam uma opção explícita, até mesmo dramática, para que o usuário saiba o que aconteceu. 
+Uma opção do modo é muito importante – é importante que quando essas transições acontecem que eles sejam uma opção explícita, até mesmo dramática, para que o usuário saiba o que aconteceu. 
 
 
 ## <a name="usability-checklist"></a>Lista de verificação de usabilidade
@@ -74,7 +74,7 @@ Uma opção do modo é muito importante – é importante que quando ocorrem ess
 **O usuário pode fazer tudo e qualquer coisa viva-voz, de ponta a ponta?**
 * Cada interactible deve ser acessível viva-voz
 * Certifique-se de que há uma substituição para todos os gestos personalizados, como o redimensionamento, colocando, dedo, toques, etc.
-* Certifique-se de que o usuário tem certeza de controle de presença de interface do usuário, o posicionamento, o detalhamento em todos os momentos
+* Certifique-se de que o usuário tem certeza de controle de presença, posicionamento e detalhamento da interface do usuário em todos os momentos
     * Obtendo a interface do usuário do caminho
     * Endereçamento de interface do usuário que está fora do campo de exibição (FOV)
     * Quanto eu vejo, onde, quando
@@ -89,12 +89,12 @@ O usuário entender...
     
 **É a interface do usuário otimizada para mãos livres?**   
 
-* Ex. Capacidades de duração não são recursos internas para os padrões típicos de 2D
-* Ex. O direcionamento de voz é melhor com realce de objeto
-* Ex. Interações de voz são melhores com legendas que precisam ser ligado
+* Exemplo: Capacidades de duração não são recursos internas para os padrões típicos de 2D
+* Exemplo: O direcionamento de voz é melhor com realce de objeto
+* Exemplo: Interações de voz são melhores com legendas que precisam ser ligado
 
 
 ## <a name="see-also"></a>Consulte também
 * [Focar com a cabeça e confirmar](gaze-and-commit.md)
-* [Manipulação direta com as mãos](direct-manipulation.md)
-* [Apontar e confirmar com as mãos](point-and-commit.md)
+* [Manipulação direta](direct-manipulation.md)
+* [Apontar e confirmar](point-and-commit.md)

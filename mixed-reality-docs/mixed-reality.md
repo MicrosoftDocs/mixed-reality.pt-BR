@@ -6,36 +6,36 @@ ms.author: branbray
 ms.date: 03/21/2018
 ms.topic: article
 keywords: realidade misturada, holográfica, ar, vr, mr, xr, realidade aumentada, de realidade virtual, explicação
-ms.openlocfilehash: 3f6000b3d700d7c13f1efa13a81561464f8fdad1
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: fbac8176b36cf28673dd9633cc059e5856a50296
+ms.sourcegitcommit: 30246ab9b9be44a3c707061753e53d4bf401eb6b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59590962"
+ms.lasthandoff: 06/22/2019
+ms.locfileid: "67326308"
 ---
 # <a name="what-is-mixed-reality"></a>O que é a realidade misturado?
 
-Realidade mista é o resultado da combinação do mundo físico com o mundo digital. Realidade misturada é a próxima evolução na interação humana, o computador e o ambiente e desbloqueia as possibilidades que antes eram restritas a nossa imaginação. Ele é possibilitado por avanços na pesquisa Visual computacional, poder de processamento de gráficos, tecnologia de exibição e sistemas de entrada. O termo *realidade misturada* foi originariamente introduzido em um documento de 1994, Paul Milgram e Fumio Kishino, "[uma taxonomia de Mixed exibe Visual da realidade](http://etclab.mie.utoronto.ca/people/paul_dir/IEICE94/ieice.html)." Seu papel introduziu o conceito do *continuum virtuality* e focado em como a categorização de taxonomia aplicada a exibe. Desde então, o aplicativo de realidade misturada vai além dele exibe, mas também inclui a entrada ambiental, som espacial e local.
+Realidade mista é o resultado da combinação do mundo físico com o mundo digital. Realidade misturada é a próxima evolução na interação humana, o computador e o ambiente e desbloqueia as possibilidades que antes eram restritas a nossa imaginação. Ele é possibilitado por avanços na pesquisa Visual computacional, poder de processamento de gráficos, tecnologia de exibição e sistemas de entrada. O termo *realidade misturada* foi originariamente introduzido em um documento de 1994, Paul Milgram e Fumio Kishino, "[uma taxonomia de Mixed exibe Visual da realidade](http://etclab.mie.utoronto.ca/people/paul_dir/IEICE94/ieice.html)." Seu papel introduziu o conceito do *continuum virtuality*e focado em como a categorização de taxonomia aplicada a exibe. Desde então, o aplicativo de realidade misturada vai além da exibe. Ele também inclui a entrada ambiental, som espacial e local.
 
 ## <a name="environmental-input-and-perception"></a>Percepção e entrada ambiental
 
 ![Diagrama de Venn mostrando as interações entre computadores, seres humanos e ambientes](images/mixed-reality-venn-diagram-300px.png)<br> 
 
-Ao longo dos últimas décadas, a relação entre a entrada de computador e informações humanas tem sido bem explorada. Ele tem até mesmo uma disciplina estudada amplamente conhecida como *interação humana computador* ou HCI. Informações humanas ocorre por meio de uma variedade de meios incluindo teclados, mouses, toque, tinta, voz e até mesmo acompanhamento de esqueleto Kinect.
+Ao longo dos últimas décadas, a relação entre o homem e o computador de entrada tem sido bem explorada. Ele tem até mesmo uma disciplina estudada amplamente conhecida como *interação humana computador* ou HCI. Informações humanas ocorre por meio de uma variedade de maneiras, incluindo teclados, mouses, toque, tinta, voz e até mesmo acompanhamento de esqueleto Kinect.
 
-Avanços em sensores e processamento permitirá que o aumento para uma nova área de entrada do computador de ambientes. A interação entre os computadores e ambientes é efetivamente ambiental compreensão, ou *percepção*. Portanto, os nomes de API no Windows que revelam informações sobre o ambiente são chamados a [percepção APIs](https://docs.microsoft.com/uwp/api/Windows.Perception). Entrada ambiental captura coisas como a posição de uma pessoa no mundo (, por exemplo, [acompanhamento principal](coordinate-systems.md)), superfícies e os limites (por exemplo, [mapeamento espacial](spatial-mapping.md) e [espacial Noções básicas sobre](case-study-expanding-the-spatial-mapping-capabilities-of-hololens.md)), luz ambiente, som ambiental, reconhecimento de objeto e local.
+Avanços em sensores e processamento permitirá que o aumento para uma nova área de entrada do computador de ambientes. A interação entre os computadores e ambientes é efetivamente ambiental Noções básicas sobre ou *percepção*. Portanto, os nomes de API no Windows que revelam informações sobre o ambiente são chamados a [percepção APIs](https://docs.microsoft.com/uwp/api/Windows.Perception). Entrada ambiental captura coisas como a posição de uma pessoa no mundo (, por exemplo, [acompanhamento principal](coordinate-systems.md)), superfícies e os limites (por exemplo, [mapeamento espacial](spatial-mapping.md) e [espacial Noções básicas sobre](case-study-expanding-the-spatial-mapping-capabilities-of-hololens.md)), luz ambiente, som ambiental, reconhecimento de objeto e local.
 
-Agora, a combinação de todos os três – de processamento do computador, informações humanas e entrada ambiental – define a oportunidade de criar experiências de realidade misturada true. Movimento no mundo físico pode traduzir a movimentação do mundo digital. Os limites no mundo físico podem influenciar as experiências de aplicativos, como o jogo no mundo digital. Sem entrada ambiental, experiências não é possível misturar entre as realidades digitais e físicas.
+Agora, a combinação de todos os três – de processamento do computador, informações humanas e entrada ambiental – define a oportunidade de criar experiências de realidade misturada true. Movimento no mundo físico pode traduzir a movimentação do mundo digital. Os limites no mundo físico podem influenciar as experiências de aplicativos, como o jogo no mundo digital. Sem entrada ambiental, experiências não é possível misturar entre realidades digitais e físicas.
 
 ## <a name="the-mixed-reality-spectrum"></a>O espectro de realidade misturada
 
-Como realidade misturada é a combinação do mundo físico e do mundo digital, essas duas realidades definem as extremidades polares de um espectro conhecido como o continuum virtuality. Para manter a simplicidade, nos referimos a isso como o *espectro de realidade misturada*. No lado esquerdo, temos realidade física em que nós, humanos, existem. Em seguida, no lado direito, temos a realidade digital correspondente.
+Pois a realidade mista que combina os mundos físicos e digitais, essas duas realidades definem as extremidades polares de um espectro conhecido como o continuum virtuality. Para manter a simplicidade, nos referimos a isso como o *espectro de realidade misturada*. No lado esquerdo, temos realidade física em que nós, humanos, existem; no lado direito, temos a realidade digital correspondente.
 
 <br>
 
 >[!VIDEO https://www.youtube.com/embed/_xpI0JosYUk]
 
-A maioria dos celulares no mercado atualmente não têm pouco ou nenhum recursos ambientais Noções básicas sobre. Assim, as experiências que eles oferecem não é possível misturar entre realidades digitais e físicas. São as experiências pelas quais elementos gráficos em fluxos de vídeo do mundo físico de sobreposição *aumentada realidade*, e as experiências pelas quais occlude sua exibição para apresentar uma experiência digital são *realidade virtual*. Como você pode ver, as experiências habilitadas entre esses dois extremos está *realidade misturada*:
+A maioria dos celulares no mercado atualmente não têm pouco ou nenhum recursos ambientais Noções básicas sobre. Assim, as experiências que eles oferecem não é possível misturar entre realidades digitais e físicas. São as experiências pelas quais elementos gráficos em fluxos de vídeo do mundo físico de sobreposição *aumentada realidade*. As experiências pelas quais occlude sua exibição para apresentar uma experiência digital estão *realidade virtual*. Como você pode ver, as experiências habilitadas entre esses dois extremos está *realidade misturada*:
 * Começando com o mundo físico, colocar um objeto digital, como um holograma, como se fosse realmente existe.
 * Começando com o mundo físico, uma representação digital de outra pessoa – um avatar – mostra o local em que estavam aguardando ao sair de notas. Em outras palavras, experiências que representam a colaboração assíncrona em diferentes pontos no tempo.
 * Os limites físicos do mundo físico, como paredes e móveis, começando com um mundo digital, aparecem digitalmente dentro a experiência para ajudar os usuários a evitar objetos físicos.
@@ -48,7 +48,7 @@ Mais realidade aumentada e ofertas de realidade virtual disponíveis hoje repres
 
 Há dois tipos principais de dispositivos que oferecem experiências de realidade mista do Windows:
 1. **Dispositivos holographic.** Essas são caracterizadas por capacidade do dispositivo para colocar conteúdo digital no mundo real, como se fosse realmente existe.
-2. **Dispositivos envolventes.** Essas são caracterizadas por capacidade do dispositivo para criar uma noção de "presença" – ocultando mundo físico e substituí-la com uma experiência digital.
+2. **Dispositivos envolventes.** Essas são caracterizadas por capacidade do dispositivo para criar uma noção de "presença" – Ocultar mundo físico e substituí-la por uma experiência digital.
 
 <table>
 <tr>
@@ -62,18 +62,18 @@ Há dois tipos principais de dispositivos que oferecem experiências de realidad
 </tr>
 </table>
 
-Observe que, se um dispositivo está conectado ao ou vinculado a um PC separado (via cabo USB ou WiFi) ou autocontido faz (ilimitado) não reflete se um dispositivo é holographic ou imersivos. Certamente, recursos que melhoram a líder de mobilidade para dispositivos de holographic e envolventes e experiências melhores pode ser vinculados ou ilimitados.
+Observe que, se um dispositivo está conectado ao ou vinculado a um PC separado (via cabo USB ou WiFi) ou autocontido faz (ilimitado) não reflete se um dispositivo é holographic ou imersivos. Certamente, recursos que melhoram a mobilidade levam a experiências melhores, e dispositivos holográfico e envolventes pode ser vinculados ou ilimitados.
 
 ## <a name="devices-and-experiences"></a>Dispositivos e experiências
 
-Avanço tecnológico é o que tiver habilitado as experiências de realidade misturada. Não existem dispositivos hoje que podem ser executados experiências por todo o espectro; No entanto, o Windows 10 fornece uma plataforma comum de realidade mista para fabricantes de dispositivos e desenvolvedores. Dispositivos hoje podem dar suporte a um intervalo específico dentro do espectro de realidade mista e ao longo do tempo novos dispositivos devem expandir nesse intervalo. No futuro, dispositivos holográfico se tornará mais envolventes e imersivos dispositivos se tornará mais holographic.
+Avanço tecnológico é o que tiver habilitado as experiências de realidade misturada. Não há nenhum dispositivo hoje que pode ser executados experiências por todo o espectro. No entanto, o Windows 10 fornece uma plataforma comum de realidade mista para fabricantes de dispositivos e desenvolvedores. Dispositivos hoje podem dar suporte a um intervalo específico dentro do espectro de realidade misturada. Ao longo do tempo, novos dispositivos expandirá nesse intervalo. No futuro, dispositivos holográfico se tornará mais envolventes e imersivos dispositivos se tornará mais holographic.
 
 ![Em que os dispositivos dispor no espectro de realidade misturada](images/mixed-reality-spectrum-device-placement-550px.png)
 
 Muitas vezes, é melhor considerar que tipo de experiência de um aplicativo ou jogo desenvolvedor quer criar. As experiências geralmente serão direcionada a um ponto específico ou a parte no espectro. Em seguida, os desenvolvedores devem considerar os recursos dos dispositivos que eles desejam de destino. Por exemplo, experiências que se baseiam no mundo físico executará melhor em HoloLens.
 * **Para a esquerda (próximo da realidade física).** Os usuários permanecem presentes em seus ambientes físicos e nunca são feitos para acreditar que eles têm restantes nesse ambiente.
-* **No meio (realidade misturada totalmente).** Essas experiências do mundo real e o mundo digital blend perfeitamente. Os visualizadores que acompanham o filme [Jumanji](https://en.wikipedia.org/wiki/Jumanji) pode reconciliar como a estrutura física da casa onde ocorreu a história foi combinada com um ambiente de floresta.
-* **Para a direita (próximo da realidade digital).** Os usuários a experiência de um ambiente completamente digital e são alheios a que ocorre no ambiente físico em torno deles.
+* **No meio (realidade misturada totalmente).** Essas experiências do mundo real e o mundo digital blend. Os visualizadores que acompanham o filme [Jumanji](https://en.wikipedia.org/wiki/Jumanji) pode reconciliar como a estrutura física da casa onde ocorreu a história foi combinada com um ambiente de floresta.
+* **Para a direita (próximo da realidade digital).** Os usuários a experiência de um ambiente completamente digital e não estão cientes do que ocorre no ambiente físico em torno deles.
 
 
 ## <a name="see-also"></a>Consulte também
