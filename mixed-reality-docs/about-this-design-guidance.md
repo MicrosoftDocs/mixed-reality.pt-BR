@@ -6,12 +6,12 @@ ms.author: jonwie
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, design, introdução, diretrizes
-ms.openlocfilehash: 6173f7cd2bcc4280f86f8f5ecaae1e90e01b62a0
-ms.sourcegitcommit: 30246ab9b9be44a3c707061753e53d4bf401eb6b
+ms.openlocfilehash: 0e5601898c2b1f351b5ab2aaa491a7c64ae57f7e
+ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/22/2019
-ms.locfileid: "67326125"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67414158"
 ---
 # <a name="about-this-design-guidance"></a>Sobre este guia de design
 
@@ -33,7 +33,7 @@ Aqui está uma visão geral de como essas diretrizes de design é organizado. Vo
 * **[Introdução ao design](mixed-reality.md)**  - leia nossos pensamentos de alto nível e entender os princípios que seguimos.
 * **[Interações instinctual](interaction-fundamentals.md)**  -Saiba mais sobre a entrada, comandando, navegação e outros conceitos básicos de interação para a criação de seus aplicativos.
 * **[Estilo](typography.md)**  -tornar seu aplicativo e interessantes, usando a cor, a tipografia e movimento.
-* **[Padrões de aplicativo](types-of-mixed-reality-apps.md)**  -Saiba como aplicativo; ications pode abranger cenários em ambientes imersivos e reais.
+* **[Padrões de aplicativo](types-of-mixed-reality-apps.md)**  -Saiba como aplicativos podem abranger cenários em ambientes imersivos e reais.
 * **[Controles](interactable-object.md)**  -usar controles e padrões como blocos de construção para criar sua própria experiência de aplicativo.
 * **[Aplicativos de exemplo](design.md#sample-apps)**  -criar grandes experiências de exemplos projetado e criado pela nossa equipe.
 * **[Ferramentas e recursos de design](design.md#design-tools)**  -iniciar rapidamente seu projeto com modelos de design e ferramentas.

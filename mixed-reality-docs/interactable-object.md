@@ -6,12 +6,12 @@ ms.author: jennyk
 ms.date: 06/06/2019
 ms.topic: article
 keywords: Realidade misturada, controles, interação, interface do usuário, experiência do usuário
-ms.openlocfilehash: b0397e00763f70e4caf55a84b6541085e56fafd4
-ms.sourcegitcommit: 2f600e5ad00cd447b180b0f89192b4b9d86bbc7e
+ms.openlocfilehash: 57299cbb758a69603fc68ad5d43af8f2216e5104
+ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "67148750"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67415358"
 ---
 # <a name="interactable-object"></a>Objeto interagível
 
@@ -85,12 +85,12 @@ Para todos os objetos interagível, é importante dar suporte a opções alterna
 <img src="images/640px-interactibleobject-voicecommand.jpg" alt="Tooltip for the voice command" title="Dica de ferramenta para o comando de voz" width="350"><br/>*Dica de ferramenta para o comando de voz*
 
 ## <a name="sizing"></a>Dimensionamento
-Para garantir que todos os objetos interagível podem ser facilmente tocadas pelos usuários, sugerimos garantindo o interagível atende um tamanho mínimo (geralmente medido em graus de ângulo visual), com base na distância em que ele é colocado do usuário. Ângulo de graus visual baseia-se na distância entre o usuário e o objeto e permanece constante, enquanto o tamanho físico do destino pode alterar como a distância das alterações do usuário. Para determinar o tamanho necessário físico de um objeto com base na distância de uma certeza e pelo grau ângulo visual tente usar uma calculadora, como: http://elvers.us/perception/visualAngle/
+Para garantir que todos os objetos interagível podem facilmente ser tocados pelos usuários, é recomendável que você verifique se atende a interagível um tamanho mínimo (o ângulo de visual, sendo geralmente medido em graus do arco visual) com base na distância em que ele é colocado do usuário. Ângulo Visual baseia-se na distância entre a atenção do usuário e o objeto e permanece constante, enquanto o tamanho físico do destino pode alterar como a distância das alterações do usuário. Para determinar o tamanho necessário físico de um objeto com base na distância do usuário, tente usar uma calculadora de ângulo visual, como [este](http://elvers.us/perception/visualAngle/).
 
-Abaixo estão as recomendações para os tamanhos mínimos de conteúdo interagível
+Abaixo estão as recomendações para os tamanhos mínimos de conteúdo interagível.
 
 ### <a name="target-size-for-direct-hand-interaction"></a>Tamanho de destino para a interação direta de mão
-| distância | Ângulo de exibição | Tamanho |
+| distância | Ângulo de exibição | Size |
 |---------|---------|---------|
 | 45cm  | não menor do que 2° | 1.6 x 1,6 cm |
 
@@ -108,7 +108,7 @@ Ao criar botões para interação direta, recomendamos um tamanho mínimo maior 
 
 
 ### <a name="target-size-for-hand-ray-or-gaze-interaction"></a>Tamanho de ray mão do destino ou mantenha o foco de interação
-| distância | Ângulo de exibição | Tamanho |
+| distância | Ângulo de exibição | Size |
 |---------|---------|---------|
 | 2 min  | não menor do que 1° | 3.5 3,5 cm |
 

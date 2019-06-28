@@ -7,12 +7,12 @@ ms.author: kurtie
 ms.date: 03/21/2018
 ms.topic: article
 keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit unity, academy, tutorial
-ms.openlocfilehash: b94f1be256d3373deb5f177be0ee9bc0c8be3180
-ms.sourcegitcommit: 90ce9415889e7121dd2fd76a893dc3734672881b
+ms.openlocfilehash: 4f1402cb9b91e0d0619c0516de9120302323b799
+ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64874048"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67415401"
 ---
 # <a name="tutorials-and-sample-apps"></a>Aplicativos de exemplo e tutoriais
 
@@ -253,7 +253,7 @@ Academia de realidade mista é um conjunto de tutoriais passo a passo online com
 
 ## <a name="mixed-reality-and-azure-services-tutorials"></a>Tutoriais de Realidade Misturada e dos Serviços do Azure
 
-Esses tutoriais autônomos são ótimos para aprender a implementar diferentes serviços do Azure em seu projeto do Unity.  Esses tutoriais são todos baseados em qualquer um dos HoloLens (1º Gen) ou nosso fones Imersivos em exposição, mas as lições sobre como usar os serviços devem ser transferíveis para praticamente qualquer dispositivo.
+Esses tutoriais autônomos são ótimos para aprender a implementar diferentes serviços do Azure em seu projeto do Unity.  Esses tutoriais são todos baseados em qualquer um dos HoloLens (1º gen) ou nosso fones Imersivos em exposição, mas as lições sobre como usar os serviços devem ser transferíveis para praticamente qualquer dispositivo.
 
 <ul id="cardtypes-W" class="cardsW panelContent" style="display: flex; margin-top: 0px;">
     <li>

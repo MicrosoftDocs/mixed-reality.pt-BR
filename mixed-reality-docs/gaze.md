@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
 keywords: Misto realidade, olhar, interação, de design
-ms.openlocfilehash: e0c1a925f6faeb37ec35e511cef36f9c06672c8a
-ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
+ms.openlocfilehash: 7e65d26d3e9edabbd01d35a887ffc8622a3c6337
+ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66829744"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67414375"
 ---
 # <a name="gaze"></a>Focar
 
@@ -39,7 +39,7 @@ No HoloLens (1º gen), as interações geralmente devem derivar seu direcionamen
         <td><strong>Recurso</strong></td>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens (1ª geração)</strong></a></td>
         <td><strong>HoloLens 2</strong></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>Fones imersivos em exposição</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Headsets imersivos</strong></a></td>
     </tr>
      <tr>
         <td>Mantenha o foco principal</td>
@@ -84,5 +84,5 @@ Depois que o usuário direcionou um holograma ou o objeto real usando seu olhar,
 * [Entrada do MR 210: Mantenha o foco principal](holograms-210.md)
 * [Olhar fixo com cabeça e olhos no DirectX](gaze-in-directx.md)
 * [Head olhar no Unity](gaze-in-unity.md)
-* [Acompanhamento em HoloLens 2 a olho nu](eye-tracking.md)
+* [Eye-gaze on HoloLens 2](eye-tracking.md)
 * [Olhar de olho no Unity usando o Kit de ferramentas de realidade mista](https://aka.ms/mrtk-eyes)

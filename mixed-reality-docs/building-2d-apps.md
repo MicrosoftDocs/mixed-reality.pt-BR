@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Fazer o headset imersivo 2D app, UWP, aplicativo simples, HoloLens, modelo de aplicativo, botão, barra de aplicativo, dpi, resolução, escala
-ms.openlocfilehash: 35a2e7774a79e35893821467f7e9ef8c004efa20
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: f9792a7e5fd9729bf9f5f632c699c74c58c10ddf
+ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59590009"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67414217"
 ---
 # <a name="updating-2d-uwp-apps-for-mixed-reality"></a>Atualizando aplicativos da UWP 2D para realidade misturada
 
@@ -147,7 +147,7 @@ Modos de exibição 2D são decorados com uma barra de aplicativo acima de seu c
 
 **Título:** exibe as *displayname* do bloco associado com a instância do aplicativo
 
-**Botão Voltar:** gera a *[BackRequested](https://msdn.microsoft.com/library/windows/apps/windows.ui.core.systemnavigationmanager.backrequested.aspx)* eventos quando pressionado. Visibilidade do botão Voltar é controlada pelo  *[SystemNavigationManager.AppViewBackButtonVisibility](https://msdn.microsoft.com/library/windows/apps/windows.ui.core.systemnavigationmanager.aspx)*.
+**Botão Voltar:** gera a *[BackRequested](https://msdn.microsoft.com/library/windows/apps/windows.ui.core.systemnavigationmanager.backrequested.aspx)* eventos quando pressionado. Visibilidade do botão Voltar é controlada pelo  *[SystemNavigationManager.AppViewBackButtonVisibility](https://msdn.microsoft.com/library/windows/apps/windows.ui.core.systemnavigationmanager.aspx)* .
 
 ![Aplicativo da barra da interface do usuário no modo de exibição do aplicativo 2D](images/12697297-10104100857470613-1470416918759008487-o-500px.jpg)<br>
 *Aplicativo da barra da interface do usuário no modo de exibição do aplicativo 2D*
@@ -177,9 +177,9 @@ Depois que seu aplicativo está em execução, seu aplicativo do pacote [enviá-
 
 ## <a name="see-also"></a>Consulte também
 * [Modelo de aplicativo](app-model.md)
-* [Gaze](gaze.md)
+* [Foco](gaze.md)
 * [Gesto](gestures.md)
-* [Controladores de movimento](motion-controllers.md)
-* [Voz](voice-input.md)
-* [Enviar um aplicativo para a Microsoft Store](submitting-an-app-to-the-microsoft-store.md)
+* [Controladores de movimentos](motion-controllers.md)
+* [Entrada de voz](voice-input.md)
+* [Como enviar um aplicativo para a Microsoft Store](submitting-an-app-to-the-microsoft-store.md)
 * [Usando o emulador do HoloLens](using-the-hololens-emulator.md)

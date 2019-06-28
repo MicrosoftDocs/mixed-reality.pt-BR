@@ -6,12 +6,12 @@ ms.author: cmeekhof
 ms.date: 05/09/2019
 ms.topic: article
 keywords: olhar, olhar cabeçalho, controle de cabeçalho, acompanhamento a olho nu, directx, entrada, hologramas
-ms.openlocfilehash: ac72c5305527ed2d68945aeb32051cf2246a736e
-ms.sourcegitcommit: 60060386305eabfac2758a2c861a43c36286b151
+ms.openlocfilehash: edf20a621178d76bfc97477f9f9b2eca200f1318
+ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66453736"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67414415"
 ---
 # <a name="head-and-eye-gaze-input-in-directx"></a>Cabeçalho e olho olhares entrada no DirectX
 
@@ -149,7 +149,7 @@ No entanto, para a entrada que roteia por meio de SpatialInteractionManager, há
 
 ## <a name="see-also"></a>Consulte também
 * [Olhar de cabeçalho e confirmar o modelo de entrada](gaze-and-commit.md)
-* [Acompanhamento em HoloLens 2 a olho nu](eye-tracking.md)
+* [Eye-gaze on HoloLens 2](eye-tracking.md)
 * [Sistemas de coordenadas no DirectX](coordinate-systems-in-directx.md)
 * [Entrada de voz no DirectX](voice-input-in-directx.md)
 * [Controladores de mãos e emovimento no DirectX](hands-and-motion-controllers-in-directx.md)

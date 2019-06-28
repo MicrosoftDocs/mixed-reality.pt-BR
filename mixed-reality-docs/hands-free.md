@@ -6,12 +6,12 @@ ms.author: liamar
 ms.date: 04/20/2019
 ms.topic: article
 keywords: Realidade misturada, viva-voz, mantenha o foco, olhares direcionamento, interação, design
-ms.openlocfilehash: 4d21fa10eabb446565bddebccdbde5e2e7bcc72a
-ms.sourcegitcommit: 30246ab9b9be44a3c707061753e53d4bf401eb6b
+ms.openlocfilehash: 7942192f644a7133335f089cfaaccfaebdd9292e
+ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/22/2019
-ms.locfileid: "67326149"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67414391"
 ---
 # <a name="hands-free"></a>Viva voz
 
@@ -39,10 +39,10 @@ Usando a voz para comando e controle de que uma interface pode não apenas permi
 
 ### <a name="head-gaze-and-dwellgaze-and-dwellmd"></a>[Focar com a cabeça e esperar](gaze-and-dwell.md)
 
-Em algumas situações viva-voz, usando a voz não é ideal ou até mesmo possível. Ambientes fabris alto, privacidade ou sociais normas podem ser restrições. O cabeçalho olhares + lidam bem com modelo permite que o usuário navegue o aplicativo usando seu principal vetor para apontar ao remanescentes, ou dwelling em um botão irá ativá-lo após um determinado período de tempo, tpically aproximadamente 1 segundo mais ou menos. 
+Em algumas situações viva-voz, usando a voz não é ideal ou até mesmo possível. Ambientes fabris alto, privacidade ou sociais normas podem ser restrições. O cabeçalho olhares + lidam bem com modelo permite que o usuário navegue o aplicativo usando seu principal vetor para apontar ao remanescentes, ou dwelling em um botão irá ativá-lo após um determinado período de tempo, normalmente cerca de 1 segundo ou isso. 
 
 
-## <a name="transitioning-in-and-out-of-hands-freey"></a>A transição para dentro e fora de mãos freey
+## <a name="transitioning-in-and-out-of-hands-free"></a>A transição para dentro e fora de mãos livres
 
 Para esses cenários, liberar as mãos de interagir com hologramas para comandos e navegação pode variar de sendo um requisito absoluto para operar o aplicativo ponta a ponta, para uma conveniência adicional que o usuário pode fazer a transição do qualquer tempo. 
 
@@ -54,7 +54,7 @@ Se o usuário de destino precisa ser capaz de alternar de mãos para mãos livre
 Por exemplo, se o usuário está no chão de fábrica, assistir a uma referência de vídeo no seu Hololens e decide pegar uma chave inglesa para começar a trabalhar, ela provavelmente seria começar a trabalhar para mãos livres sem a necessidade de criar a chave inglesa ao pressionar um botão. Ela deve ser capaz de invocar uma sessão de voz com um comando de voz, lidam bem com uma interface do usuário já visível para começar a duração ou, digamos que a palavra "select".
 
 O usuário deve ter a capacidade de: 
-* Alterne para mãos livres, enquanto para mãos livres
+* Alternar para mãos livres enquanto viva-voz
 * Alterne para mãos com suas mãos
 * Alterne para o controlador usando um controlador 
 
@@ -96,5 +96,5 @@ O usuário entender...
 
 ## <a name="see-also"></a>Consulte também
 * [Focar com a cabeça e confirmar](gaze-and-commit.md)
-* [Manipulação direta](direct-manipulation.md)
-* [Apontar e confirmar](point-and-commit.md)
+* [Manipulação direta com as mãos](direct-manipulation.md)
+* [Apontar e confirmar com as mãos](point-and-commit.md)

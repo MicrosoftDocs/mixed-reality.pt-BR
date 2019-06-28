@@ -5,13 +5,13 @@ author: cdedmonds
 ms.author: wguyman, cdedmonds
 ms.date: 06/12/2019
 ms.topic: article
-keywords: voltado para o front-câmera, hololens, câmera de cor
-ms.openlocfilehash: f661fc82fbeab9a870e8ccf7044c9bb375bed7e3
-ms.sourcegitcommit: 30246ab9b9be44a3c707061753e53d4bf401eb6b
+keywords: câmera, hololens, câmera de cor, voltadas para, hololens, 2, VC, pesquisa Visual computacional, fiducial frente, marcadores, código qr, qr, fotos, vídeo
+ms.openlocfilehash: e4e7fce50ec2865650b6b7cbafa59af8819d220c
+ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/22/2019
-ms.locfileid: "67326286"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67415266"
 ---
 # <a name="locatable-camera"></a>Câmera localizáveis
 
@@ -21,7 +21,7 @@ HoloLens incluem uma câmera voltados para o mundo montada na parte frontal do d
 
 ### <a name="hololens-first-generation"></a>HoloLens (first-generation)
 
-* Câmera de foto/vídeo (PV) foco fixa, com o balanço automático branca, exposição automática e pipe de processamento de imagem completa
+* Câmera de foto/vídeo (PV) foco fixo com o balanço automático branca, exposição automática e pipeline de processamento de imagem completa.
 * LED de privacidade em branco voltados para o mundo acenderá sempre que a câmera está ativa
 * A câmera suporta os seguintes modos (todos os modos são a taxa de proporção de 16:9) em 5 de fps, 24, 20, 15 e 30:
 
@@ -35,20 +35,32 @@ HoloLens incluem uma câmera voltados para o mundo montada na parte frontal do d
 
 ### <a name="hololens-2"></a>HoloLens 2
 
-* Câmera de foto/vídeo (PV) foco automático, com o balanço automático branca, exposição automática e pipe de processamento de imagem completa
-* LED de privacidade em branco voltados para o mundo acenderá sempre que a câmera está ativa
-* A câmera dá suporte a modos a seguir (todos os modos de vídeos são a taxa de proporção de 16:9):
+* Câmera de foto/vídeo (PV) foco automático com o balanço automático branca, exposição automática e pipeline de processamento de imagem completa.
+* LED de privacidade em branco voltados para o mundo acenderá sempre que a câmera está ativa.
+* HoloLens 2 dá suporte a perfis de câmera diferente. Saiba como [descobrir e selecionar recursos de câmera](https://docs.microsoft.com/en-us/windows/uwp/audio-video-camera/camera-profiles).
+* A câmera suporta os seguintes perfis e resoluções (todos os modos de vídeos são a taxa de proporção de 16:9):
+  
+  | Perfil                                         | Vídeo     | Visualizar   | Ainda     | Taxas de quadros | Campo de exibição horizontal (H-FOV) | Uso sugerido                             |
+  |-------------------------------------------------|-----------|-----------|-----------|-------------|----------------------------------|---------------------------------------------|
+  | Legacy,0  BalancedVideoAndPhoto,100             | 2272x1278 | 2272x1278 |           | 15,30       | 64.69                            | Gravação de vídeo de alta qualidade                |
+  | Legacy,0  BalancedVideoAndPhoto,100             |           |           | 3904x2196 |             | 64.69                            | Captura de fotos de alta qualidade                  |
+  | BalancedVideoAndPhoto,120                       | 1952x1100 | 1952x1100 | 1952x1100 | 15,30       | 64.69                            | Cenários de longa duração                     |
+  | BalancedVideoAndPhoto,120                       | 1504x846  | 1504x846  |           | 15,30       | 64.69                            | Cenários de longa duração                     |
+  | Videoconferência, 100                           | 1952x1100 | 1952x1100 | 1952x1100 | 15,30,60    | 64.69                            | Conferência de vídeo, cenários de longa duração |
+  | Videoconferência, 100                           | 1504x846  | 1504x846  |           | 5,15,30,60  | 64.69                            | Conferência de vídeo, cenários de longa duração |
+  | Videoconferencing,100 BalancedVideoAndPhoto,120 | 1920x1080 | 1920x1080 | 1920x1080 | 15,30       | 64.69                            | Conferência de vídeo, cenários de longa duração |
+  | Videoconferencing,100 BalancedVideoAndPhoto,120 | 1280x720  | 1280x720  | 1280x720  | 15,30       | 64.69                            | Conferência de vídeo, cenários de longa duração |
+  | Videoconferencing,100 BalancedVideoAndPhoto,120 | 1128x635  |           |           | 15,30       | 64.69                            | Conferência de vídeo, cenários de longa duração |
+  | Videoconferencing,100 BalancedVideoAndPhoto,120 | 960 x 540   |           |           | 15,30       | 64.69                            | Conferência de vídeo, cenários de longa duração |
+  | Videoconferencing,100 BalancedVideoAndPhoto,120 | 760x428   |           |           | 15,30       | 64.69                            | Conferência de vídeo, cenários de longa duração |
+  | Videoconferencing,100 BalancedVideoAndPhoto,120 | 640x360   |           |           | 15,30       | 64.69                            | Conferência de vídeo, cenários de longa duração |
+  | Videoconferencing,100 BalancedVideoAndPhoto,120 | 500x282   |           |           | 15,30       | 64.69                            | Conferência de vídeo, cenários de longa duração |
+  | Videoconferencing,100 BalancedVideoAndPhoto,120 | 424x240   |           |           | 15,30       | 64.69                            | Conferência de vídeo, cenários de longa duração |
 
-  >[!NOTE]
-  >Esses modos estão sujeitos a alterações antes da disponibilidade geral do HoloLens 2.
-
-  |  Vídeo  |  Visualizar  |  Ainda  |  Taxas de quadros  |  Campo de exibição horizontal (H-FOV) |  Uso sugerido | 
-  |----------|----------|----------|----------|----------|----------|
-  |  1920x1080 |  1920x1080 |  N/D |  30, 15 fps  |  54deg  |  (modo de padrão com estabilização do vídeo) | 
-  |  N/D |  N/D |  3904X2196 |  N/D  |  64deg |  Imagem estática de resolução mais alta | 
-  |  2272x1278 |  2272x1278 |  N/D |  30, 15 fps  |  64deg |  Excedem resolução (preenchimento) antes de estabilização do vídeo | 
-  |  1952x1100 |  1952x1100 |  1952x1100  |  30, 15 fps  |  64deg |  Fluxo de alta qualidade | 
-  |  1280x720 |  1280x720 |  N/D |  30, 15, 5 fps  |  64deg |  Modo de baixa energia/resolução para streaming e tarefas de processamento de imagens | 
+>[!NOTE]
+>Os clientes podem aproveitar [misto captura realidade](mixed-reality-capture.md) para tirar fotos do seu aplicativo, que incluem hologramas e estabilização de vídeo ou vídeos.
+>
+>Como desenvolvedor, há considerações que você deve levar em conta ao criar seu aplicativo, se você deseja que ele ser tão bom quanto possível quando um cliente captura o conteúdo. Você pode também habilitar (e personalizar) captura de realidade mista de dentro de seu aplicativo. Saiba mais em [misto captura realidade para os desenvolvedores](mixed-reality-capture-for-developers.md).
 
 ## <a name="locating-the-device-camera-in-the-world"></a>Localizando a câmera do dispositivo no mundo
 
