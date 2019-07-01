@@ -8,12 +8,12 @@ ms.date: 02/24/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Mixed Reality, discover, distribute, index, landing page, design, development, tutorials, sample apps, fundamentals, case studies, resources, HoloLens how-to, Open source projects
-ms.openlocfilehash: 810d9846fd217cd1acb3ae0060c11f5c9173191e
-ms.sourcegitcommit: c6b59f532a9c5818d9b25c355a174a231f5fa943
+ms.openlocfilehash: cf513cebbbf4f05721811cb82d584f9039e378b7
+ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66813750"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67415393"
 ---
 # <a name="mixed-reality-documentation"></a>Documentação da Realidade Misturada
 
@@ -96,7 +96,7 @@ A Realidade misturada combina conteúdo real e virtual em ambientes híbridos em
                                                 </div>
                                                 <div class="cardText">
                                                     <h3 class="x-hidden-focus">Âncoras Espaciais do Azure</h3>
-                                                  <p>O Âncoras Espaciais é um serviço de desenvolvedor multiplataforma que permite que você crie experiências de Realidade Misturada usando objetos que mantêm seu local em todos os dispositivos com o tempo.</p>
+                                                  <p>O Âncoras Espaciais é um serviço multiplataforma para desenvolvedores que permite criar experiências de realidade misturada usando objetos que persistem nos locais, em todos os dispositivos ao longo do tempo.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -115,7 +115,7 @@ A Realidade misturada combina conteúdo real e virtual em ambientes híbridos em
                                                 </div>
                                                 <div class="cardText">
                                                     <h3 class="x-hidden-focus">Serviços de fala</h3>
-                                                  <p>Descubra e integre as funcionalidades de fala habilitadas para Azure como conversão de fala em texto, reconhecimento de locutor ou tradução de fala em seu aplicativo.</p>
+                                                  <p>Descubra as funcionalidades de fala da plataforma Azure, como conversão de fala em texto, reconhecimento de locutor ou tradução de fala, e integre-as em seu aplicativo.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -134,7 +134,7 @@ A Realidade misturada combina conteúdo real e virtual em ambientes híbridos em
                                                 </div>
                                                 <div class="cardText">
                                                     <h3 class="x-hidden-focus">Serviços de Visão</h3>
-                                                  <p>Identifique e analise seu conteúdo de imagem ou de vídeo usando os Serviços de Visão como pesquisa visual computacional, detecção facial, reconhecimento de emoções ou video indexer.</p>
+                                                  <p>Identifique e analise seu conteúdo de imagem ou de vídeo usando os Serviços de Pesquisa Visual, como a pesquisa visual computacional, a detecção facial, o reconhecimento de emoções ou o Video Indexer.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -147,11 +147,11 @@ A Realidade misturada combina conteúdo real e virtual em ambientes híbridos em
 
 [![HoloLens 2](images/hololens2.jpg)](https://www.microsoft.com/hololens/hardware)
 
-O [HoloLens 2](https://www.microsoft.com/hololens/hardware) oferece a experiência mais confortável e imersiva de realidade misturada disponível, com soluções líderes no setor que entregam valor em minutos, tudo com suporte da confiabilidade, segurança e escalabilidade de serviços de nuvem e de IA da Microsoft. O [HoloLens 2 Development Edition](https://www.microsoft.com/en-us/hololens/developers) ajuda você a começar a seus planos de realidade misturada com uma oferta que combina o HoloLens 2 com avaliações gratuitas de software do Unity e créditos do Azure para serviços de nuvem.
+O [HoloLens 2](https://www.microsoft.com/hololens/hardware) oferece a experiência mais confortável e imersiva de realidade misturada disponível, com soluções líderes do mercado que agregam valor em minutos. Tudo isso com o suporte da confiabilidade, da segurança e da escalabilidade de nuvem dos serviços de IA da Microsoft. O [HoloLens 2 Development Edition](https://www.microsoft.com/en-us/hololens/developers) ajuda você a começar a seus planos de realidade misturada com uma oferta que combina o HoloLens 2 com avaliações gratuitas de software do Unity e créditos do Azure para serviços de nuvem.
 
 <h2>Notícias e notas</h2>
 
-<h3>Abril de 2019</h3>
+<h3>Junho de 2019</h3>
 
 Conforme prometido, estamos felizes em compartilhar mais adequação da realidade misturada com você! Estamos ansiosos para ouvir seus comentários e de convidar você para [participar da conversa](https://holodevelopersslack.azurewebsites.net/) sobre tópicos nossos que você gostaria de ver, pessoas com quem você gostaria de conversar, tutoriais ou instruções de que você precisaria… Também é possível nos contatar pelo [Twitter](https://twitter.com/MxdRealityDev) e [participar do nosso programa de desenvolvedor](https://aka.ms/iwantmr) para receber atualizações diretas sobre novos documentos, ferramentas, eventos e muito mais. Fique atento, há mais por vir!
 
@@ -162,7 +162,7 @@ Conforme prometido, estamos felizes em compartilhar mais adequação da realidad
 <tr>
 <td><b>Guias de portabilidade</b> <br>1. HTK (HoloToolKit)/MRTK (Toolkit de Realidade Misturada) para MRTK Versão 2
 <br>2. HoloLens (1ª geração) para HoloLens 2 (x86 para ARM, recomendações de interação e criação)
-</td></td><td>Março a maio de 2019</td><td> <ul><li><a href=https://docs.microsoft.com/en-us/windows/mixed-reality/mrtk-porting-guide>Preparar seu aplicativo existente para o HoloLens 2</a><li><a href=https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/HTKToMRTKPortingGuide.html>HoloToolKit para APIs MRTK</a></td>
+</td></td><td>Março a maio de 2019</td><td> <ul><li><a href=https://docs.microsoft.com/en-us/windows/mixed-reality/mrtk-porting-guide>Como preparar o aplicativo existente para o HoloLens 2</a><li><a href=https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/HTKToMRTKPortingGuide.html>HoloToolKit para APIs MRTK</a></td>
 </tr>
 <tr>
 <td>Módulos mensais do desenvolvedor de software livre (aplicativos de tutoriais/de exemplo)</td><td>Março a junho de 2019</td><td> <ul><li><a href=https://docs.microsoft.com/en-us/windows/mixed-reality/mrlearning-base-ch1>Módulo básico de aprendizado de MR</a></td>
@@ -183,4 +183,4 @@ Conforme prometido, estamos felizes em compartilhar mais adequação da realidad
 
 
 >[!IMPORTANT]
->Todos os materiais de desenvolvimento de realidade misturada são fornecidos neste site somente para referência. Seu aplicativo, seu uso e seu efeito sobre os usuários finais é de sua exclusiva responsabilidade como desenvolvedor do aplicativo, incluindo a garantia de que ele não causará desconforto, lesão nem nenhum outro dano a um usuário final, incluindo as garantias e isenções de responsabilidade apropriadas. É necessário seguir sempre as etapas adequadas no desenvolvimento e na publicação de seu aplicativo para garantir que ele seja seguro e atenda a todas as obrigações em seu [Contrato de Desenvolvedor de Aplicativos com a Microsoft](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement). 
+>Todos os materiais de desenvolvimento de realidade misturada são fornecidos neste site somente para referência. Seu aplicativo, seu uso e seu efeito sobre os usuários finais é de sua responsabilidade exclusiva como desenvolvedor do aplicativo, incluindo as garantias e isenções de responsabilidade apropriadas e também a garantia de que o aplicativo não causará desconforto, lesão ou nenhum outro dano ao usuário final. É necessário sempre seguir as etapas apropriadas no desenvolvimento e na publicação do seu aplicativo para garantir que ele seja seguro e atenda a todas as obrigações do [Contrato de Desenvolvedor de Aplicativos com a Microsoft](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement). 
