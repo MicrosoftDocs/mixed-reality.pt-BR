@@ -6,16 +6,16 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realidade misturada, unity, tutorial, hololens
-ms.openlocfilehash: b729de818dfa21df8fbce782a24a611a365ac795
-ms.sourcegitcommit: 78e21e887bf4357c96c9ab2164559d610e8c041e
+ms.openlocfilehash: 2a4ea599fd4887f30589c2d839be305d3dc8d1bd
+ms.sourcegitcommit: cf9f8ebbca0301e9d277853771ff6e47701ba1c1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67465221"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67523197"
 ---
-# <a name="synchronizing-shared-object-movements"></a>Sincronizando as movimentações de objeto compartilhadas
+# <a name="4-sharing-object-movements-with-multiple-users"></a>4. Compartilhamento de movimentações de objeto com vários usuários
 
-Nesta lição, aprendemos como compartilhar os movimentos de objetos para que todos os participantes de uma sessão compartilhada podem colaborar em conjunto e exibir as interações uns dos outros. Essa lição aproveita o iniciador Lunar que foi criado como parte do [base de dados de módulo tutoriais](mrlearning-base.md).
+Neste tutorial, aprendemos como compartilhar os movimentos de objetos para que todos os participantes de uma sessão compartilhada podem colaborar em conjunto e exibir as interações uns dos outros. Essa lição aproveita o iniciador Lunar que foi criado como parte do [base de dados de módulo tutoriais](mrlearning-base.md).
 
 Objetivos:
 
@@ -26,7 +26,7 @@ Objetivos:
 ### <a name="instructions"></a>Instruções
 
 
-1. Salve a cena da lição anterior (CTRL + + S). Você pode chamá-lo HLSharedProjectMainPart4.unity para que ele seja mais fácil de encontrar quando necessário.
+1. Salve a cena da lição anterior (CTRL + + S). Você pode nomeá-, HLSharedProjectMainPart4.unity, para que ele seja mais fácil de encontrar quando necessário.
 
 2. Na janela do projeto, nos ativos -> pasta de Scripts, clique duas vezes em GenericNetSync para abri-lo no Visual Studio ou que nunca code editor que você está usando.  ![](images/module3chapter4updatestep2.png)
 

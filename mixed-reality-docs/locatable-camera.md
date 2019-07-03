@@ -6,12 +6,12 @@ ms.author: wguyman, cdedmonds
 ms.date: 06/12/2019
 ms.topic: article
 keywords: câmera, hololens, câmera de cor, voltadas para, hololens, 2, VC, pesquisa Visual computacional, fiducial frente, marcadores, código qr, qr, fotos, vídeo
-ms.openlocfilehash: e4e7fce50ec2865650b6b7cbafa59af8819d220c
-ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
+ms.openlocfilehash: 323c05ca01e000942a6f8ee6dc82de7546578324
+ms.sourcegitcommit: cf9f8ebbca0301e9d277853771ff6e47701ba1c1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67415266"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67523317"
 ---
 # <a name="locatable-camera"></a>Câmera localizáveis
 
@@ -43,6 +43,7 @@ HoloLens incluem uma câmera voltados para o mundo montada na parte frontal do d
   | Perfil                                         | Vídeo     | Visualizar   | Ainda     | Taxas de quadros | Campo de exibição horizontal (H-FOV) | Uso sugerido                             |
   |-------------------------------------------------|-----------|-----------|-----------|-------------|----------------------------------|---------------------------------------------|
   | Legacy,0  BalancedVideoAndPhoto,100             | 2272x1278 | 2272x1278 |           | 15,30       | 64.69                            | Gravação de vídeo de alta qualidade                |
+  | Legacy,0  BalancedVideoAndPhoto,100             | 896x504   | 896x504   |           | 15,30       | 64.69                            | Gravação de vídeo de alta qualidade                |
   | Legacy,0  BalancedVideoAndPhoto,100             |           |           | 3904x2196 |             | 64.69                            | Captura de fotos de alta qualidade                  |
   | BalancedVideoAndPhoto,120                       | 1952x1100 | 1952x1100 | 1952x1100 | 15,30       | 64.69                            | Cenários de longa duração                     |
   | BalancedVideoAndPhoto,120                       | 1504x846  | 1504x846  |           | 15,30       | 64.69                            | Cenários de longa duração                     |

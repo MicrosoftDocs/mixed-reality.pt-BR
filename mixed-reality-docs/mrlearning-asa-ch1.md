@@ -6,16 +6,16 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realidade misturada, unity, tutorial, hololens
-ms.openlocfilehash: c120d22f955d366042bbcb9ac73eaa4f13dc20e9
-ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
+ms.openlocfilehash: fcca828fa228894e0e60986c6c7fd0053b210357
+ms.sourcegitcommit: cf9f8ebbca0301e9d277853771ff6e47701ba1c1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67415268"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67523239"
 ---
-# <a name="getting-started-with-azure-spatial-anchors-on-hololens-2"></a>Introdução ao Azure âncoras espacial HoloLens 2
+# <a name="1-getting-started-with-azure-spatial-anchors"></a>1. Guia de Introdução âncoras espacial do Azure
 
-Bem-vindo ao segundo módulo do Tutorial 2 HoloLens. Antes de começar, certifique-se que todos do [pré-requisitos](https://docs.microsoft.com/en-us/azure/spatial-anchors/quickstarts/get-started-unity-hololens) forem concluídas. Se você não tiver concluído a primeira [módulo Base](mrlearning-base.md) ainda, é recomendável que você conclua esse módulo primeiro. Se você estiver começando um novo projeto do Unity, siga as etapas de criação de projeto novo na [módulo Base](mrlearning-base.md). 
+Bem-vindo ao segundo módulo dos tutoriais do HoloLens 2. Antes de começar, certifique-se que todos do [pré-requisitos](https://docs.microsoft.com/en-us/azure/spatial-anchors/quickstarts/get-started-unity-hololens) forem concluídas. Se você não tiver concluído a primeira [módulo Base](mrlearning-base.md) ainda, é recomendável que você conclua esse módulo primeiro. Se você estiver começando um novo projeto do Unity, siga as etapas de criação de projeto novo na [módulo Base](mrlearning-base.md). 
 
 ## <a name="objectives"></a>Objetivos
 
@@ -40,7 +40,7 @@ Antes de começar, baixe e importe os seguintes ativos:
 
 > Observação: Consulte a etapa 5 para obter instruções específicas sobre como importar âncoras espacial do Azure, etapa 6 para obter instruções específicas sobre o pacote de ativos do módulo MR Base e as etapas 3 e 4 para obter instruções específicas no Kit de ferramentas de realidade mista (MRKT).
 
-1. Crie uma nova cena no seu projeto. Clique com botão direito no sua pasta de cena, clique em "Criar", e em seguida cena. Nomeie a nova cena ASALearningmodule.
+1. Crie uma nova cena no seu projeto. Clique com botão direito no sua pasta de cena, clique em criar, e em seguida cena. Nomeie a nova cena ASALearningmodule.
 
 ![module2chapter1step1im](images/module2chapter1step1im.PNG)
 
@@ -49,7 +49,7 @@ Antes de começar, baixe e importe os seguintes ativos:
 
 ![module2chapter1step3im](images/module2chapter1step3im.PNG)
 
-> Observação: Você verá um pop-up que diz, "Você deve escolher um arquivo para o Kit de ferramentas de realidade misturada." Clicar em Okey leva você para a etapa 4.
+> Observação: Você verá um pop-up que diz, você deve escolher um arquivo para o Kit de ferramentas de realidade mista. Clicar em Okey leva você para a etapa 4.
 
 4. Ao escolher um arquivo para o MRTK, selecione, DefaultMixedRealityToolkitConfigurationProfile.
 
@@ -153,7 +153,7 @@ Agora que sua cena está configurada para demonstrar os conceitos básicos das �
 
 7. Antes de compilar para seu dispositivo, verifique se ele está no Modo de Desenvolvedor. Se for a primeira vez que você implanta o HoloLens 2, o Visual Studio pode solicitar o emparelhamento do seu HoloLens 2 com um pin. Siga [estas instruções](https://docs.microsoft.com/en-us/windows/mixed-reality/using-visual-studio) se você precisar habilitar o modo de desenvolvedor ou emparelhar com o Visual Studio.
 
-8. Configure o Visual Studio para compilar seu 2 HoloLens, selecionando a configuração de versão e a arquitetura de "RM".
+8. Configure o Visual Studio para compilar seu 2 HoloLens, selecionando a configuração de versão, bem como a arquitetura do RM.
     ![Lesson1Chapter5Step8](images/Lesson1Chapter5Step8.JPG)
    
 9. A etapa final é criar ao seu dispositivo, selecionando Depurar > Iniciar sem depuração. Selecione Iniciar sem depuração faz com que o aplicativo para iniciar imediatamente em seu dispositivo após um informações de depuração de ithout compilação bem-sucedida que aparecem no Visual Studio. Isso também significa que você pode desconectar o cabo USB enquanto o aplicativo estiver em execução no HoloLens 2 sem interromper o aplicativo. Você também pode selecionar Build > implantar a solução para implantar seu dispositivo sem a necessidade do aplicativo for iniciado automaticamente.
@@ -176,9 +176,9 @@ Agora que sua cena está configurada para demonstrar os conceitos básicos das �
     
     7. Inicie sessão âncoras espacial do Azure.
     
-    8. Encontre aachors espacial do Azure. 
+    8. Encontre âncoras espaciais do Azure. 
     
-    e você deve voltar para o local original é colocá-lo quando você criou a âncora).
+    e você deve voltar para o local original é colocá-lo quando você criou a âncora.
     9. Exclua âncora espacial do Azure.
     
     10. Pare a sessão do Azure.
@@ -198,7 +198,7 @@ Nas seções anteriores, você aprendeu os conceitos básicos das âncoras espac
    > Observação: Há uma variedade de fluxos de experiência do usuário para reposicionamento experiências, incluindo o uso de um botão para alternar uma caixa delimitadora que circunda a experiência, o uso de um objeto repositioning (como o cubo usado nesta etapa), o uso de utensílios de posição e rotação e muito mais.
 
 ## <a name="congratulations"></a>Parabéns
-Nesta lição, você aprendeu os conceitos básicos das âncoras espacial do Azure. Este esson fornecido a você com vários botões que permitem que você explore as várias etapas necessárias para iniciar e interromper uma sessão do Azure e criar, carregar e baixar as âncoras do azure em um único dispositivo. Na próxima lição, aprenderemos como salvar as IDs de âncora do Azure em sua 2 HoloLens para recuperação, mesmo depois que o aplicativo for reiniciado. Durante a série, você também aprenderá como transferir os IDs de âncora entre vários dispositivos para alcançar o alinhamento espacial e saiba mais sobre os vários usuários, sessões (em breve como parte do módulo de compartilhamento) compartilhados
+Neste tutorial, você aprendeu os conceitos básicos das âncoras espacial do Azure. Este esson fornecido a você com vários botões que permitem que você explore as várias etapas necessárias para iniciar e interromper uma sessão do Azure e criar, carregar e baixar as âncoras do azure em um único dispositivo. Na próxima lição, aprenderemos como salvar as IDs de âncora do Azure em sua 2 HoloLens para recuperação, mesmo depois que o aplicativo for reiniciado. Durante a série, você também aprenderá como transferir os IDs de âncora entre vários dispositivos para obter o alinhamento espacial e saiba mais sobre os vários usuários, sessões, compartilhados serão lançados em breve como parte do tutorial de compartilhamento.
 
 [Próxima lição: Lição 2 para ASA](mrlearning-asa-ch2.md)
 

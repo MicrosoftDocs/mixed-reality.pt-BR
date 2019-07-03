@@ -6,14 +6,14 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realidade misturada, unity, tutorial, hololens
-ms.openlocfilehash: 4625acfcb3353e9537961a444012452139705359
-ms.sourcegitcommit: 78e21e887bf4357c96c9ab2164559d610e8c041e
+ms.openlocfilehash: 44cc41b10ed79d3085ec601ec9cf21af47b0fea5
+ms.sourcegitcommit: cf9f8ebbca0301e9d277853771ff6e47701ba1c1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67465210"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67523310"
 ---
-# <a name="connecting-multiple-users"></a>**Conectar-se vários usuários** 
+# <a name="connecting-multiple-users"></a>Conectar-se vários usuários
 
 Nesta lição, aprendemos como se conectar a vários usuários como parte de uma experiência de compartilhada em tempo real. No final desta lição, você poderá abrir o aplicativo em vários dispositivos e ver o avatar, representado por uma esfera, representações de cada pessoa que une. 
 
