@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/11/2018
 ms.topic: article
 keywords: realidade mista, Azure, academy, borda, iot edge, tutorial, api, notificação, funções, tabelas, imersivo, hololens, vr, iot, máquina virtual, ubuntu, python
-ms.openlocfilehash: 1ab7c48ac3cff1cb2283cadb171098af9e148628
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 93f7dc64426360d2e02b0ee0a9b1796fc8f2b469
+ms.sourcegitcommit: 06ac2200d10b50fb5bcc413ce2a839e0ab6d6ed1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59589086"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67694596"
 ---
 >[!NOTE]
 >Os tutoriais da academia de realidade mista foram criados com o HoloLens (1º gen) e misto realidade fones Imersivos em exposição em mente.  Como tal, achamos que é importante deixar esses tutoriais em vigor para os desenvolvedores que ainda estiver procurando por orientação no desenvolvimento para esses dispositivos.  Esses tutoriais serão **_não_** ser atualizados com os conjuntos de ferramentas ou interações que está sendo usadas para o HoloLens 2 a mais recente.  Eles serão mantidos para continuar trabalhando nos dispositivos com suporte. Haverá uma nova série de tutoriais que serão lançados no futuro e que demonstra como desenvolver para o HoloLens 2.  Este aviso será atualizado com um link para esses tutoriais quando são lançadas.
@@ -49,7 +49,7 @@ Este curso ensinará como configurar e usar o serviço de Hub IoT e, em seguida,
 
 <table>
 <tr>
-<th>Curso</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Fones imersivos em exposição</a></th>
+<th>Curso</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Headsets imersivos</a></th>
 </tr><tr>
 <td> MR e o Azure 313: Serviço do Hub IoT</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
 </tr>
@@ -91,7 +91,7 @@ Para obter ajuda sobre ajuste de Sensor, siga este [link para o artigo de ajuste
 3. Configurar seu **Máquina Virtual Ubuntu** usando **Hyper-V**. Os recursos a seguir ajudará você com o processo.
     1.  Primeiro, siga este link para [Baixe o ISO do Ubuntu 16.04.4 LTS (Xenial Xerus)](http://au.releases.ubuntu.com/16.04/). Selecione o **imagem da área de trabalho do PC (AMD64) de 64 bits**.
     2.  Certifique-se **Hyper-V** está habilitado no seu computador Windows 10. Você pode seguir este link para obter orientação sobre [instalar e habilitar o Hyper-V no Windows 10](https://docs.microsoft.com/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v).
-    3.  Inicie o Hyper-V e criar uma nova VM do Ubuntu. Você pode seguir este link para um [guia passo a passo sobre como criar uma VM com o Hyper-V](https://docs.microsoft.com/virtualization/hyper-v-on-windows/quick-start/create-virtual-machine). Quando solicitado **"Instalar um sistema operacional de um arquivo de imagem inicializável"**, selecione o **Ubuntu ISO** tem o download anteriormente.
+    3.  Inicie o Hyper-V e criar uma nova VM do Ubuntu. Você pode seguir este link para um [guia passo a passo sobre como criar uma VM com o Hyper-V](https://docs.microsoft.com/virtualization/hyper-v-on-windows/quick-start/create-virtual-machine). Quando solicitado **"Instalar um sistema operacional de um arquivo de imagem inicializável"** , selecione o **Ubuntu ISO** tem o download anteriormente.
 
     > [!NOTE]
     > Usando o **criação rápida do Hyper-V** não é sugerida.  
@@ -320,7 +320,7 @@ Agora você pode prosseguir com a configuração do dispositivo **executando o s
 
     1.  Use as teclas de direção no teclado para rolar para baixo (você precisará rolar para baixo de maneira um pouco), para alcançar a linha que contém ":
 
-        "**\<ADICIONAR CADEIA DE CONEXÃO DO DISPOSITIVO AQUI &GT;**".
+        " **\<ADICIONAR CADEIA DE CONEXÃO DO DISPOSITIVO AQUI >** ".
 
     2. Substitua a linha, **incluindo os colchetes**, com o **cadeia de Conexão do dispositivo** anotados anteriormente.
 
@@ -370,7 +370,7 @@ Agora você pode prosseguir com a configuração do dispositivo **executando o s
 
 4. Depois que as extensões são instaladas, feche e abra novamente o VS Code.
 
-5. Com o VS Code, abra mais uma vez, navegue até **Exibir > terminal integrado**.
+5. Com o VS Code, abra mais uma vez, navegue até **modo de exibição** > **terminal integrado**.
 
 6. Você instalará **Cookiecutter**. No terminal, execute o seguinte comando do bash:
 
@@ -390,7 +390,7 @@ Agora você pode prosseguir com a configuração do dispositivo **executando o s
 
 Neste ponto, você precisará criar o contêiner, com o módulo, para ser enviados por push para o *registro de contêiner*. Depois que você tiver enviado por push seu contêiner, você usará o *IoT Hub de borda* serviço implantá-lo em seu dispositivo, que está executando o *tempo de execução do IoT Edge*.
 
-1. No VS Code, clique em **exibição > Paleta de comandos**.
+1. No VS Code, clique em **modo de exibição** > **paleta de comandos**.
 
 2. Na paleta, pesquisar e executar **Azure IoT Edge: Nova solução de Iot Edge**.
 
@@ -404,7 +404,7 @@ Neste ponto, você precisará criar o contêiner, com o módulo, para ser enviad
 
 7. Você observará uma pré-criados *repositório de imagens do Docker* endereço aparecerá na paleta. Ele se parecerá com:
 
-    **localhost:5000/carros / – o nome do módulo -**. 
+    **localhost:5000/carros / – o nome do módulo -** . 
 
 8. Exclua **localhost:5000/carros**e em seu lugar insert a *registro de contêiner* **servidor de logon** endereço, que você anotou ao criar o **contêiner Serviço de registro** ([na etapa 8, capítulo 2](#chapter-2---the-container-registry-service)). Pressione a **Enter** chave, para confirmar o endereço.
 
@@ -744,7 +744,7 @@ Em seguida, você criará a *imagens* pasta, usada pelo script do python para ve
 
 ## <a name="chapter-9---package-the-solution-as-a-container"></a>Capítulo 9 - a solução como um contêiner de pacote
 
-1.  Agora você está pronto "pacotes" de arquivos como um contêiner e enviá-los para seu **registro de contêiner do Azure**. Dentro do VS Code, abra o *Terminal integrado* (**Exibir > Terminal integrado / CTRL + '**) e use a seguinte linha para fazer logon **Docker** (substitua os valores da comando com as credenciais de sua **registro de contêiner do Azure (ACR)**):
+1.  Agora você está pronto "pacotes" de arquivos como um contêiner e enviá-los para seu **registro de contêiner do Azure**. Dentro do VS Code, abra o *Terminal integrado* (**exibição** > **Terminal integrado** ou **Ctrl** + **\`** ) e use a seguinte linha para o login **Docker** (substitua os valores do comando com as credenciais do seu **do registro de contêiner do Azure (ACR)** ):
 
     ```bash
         docker login -u <ACR username> -p <ACR password> <ACR login server>
@@ -916,7 +916,7 @@ Agora que sua **serviço tabela** conta de armazenamento tiver sido configurado,
 
 1. Abra **Visual Studio** (**não** Visual Studio Code).
 
-2. No menu, clique em **exibição > Gerenciador de nuvem**.
+2. No menu, clique em **modo de exibição** > **Cloud Explorer**.
 
     ![Abra o cloud explorer](images/AzureLabs-Lab313-45.png)
 
@@ -1047,7 +1047,7 @@ Primeiro, você precisa criar um arquivo que permitirá que sua função do Azur
 
     ![função personalizada](images/AzureLabs-Lab313-59.png)
 
-13. Role para baixo próxima página, até encontrar **IoT Hub (Hub de eventos)**, em seguida, clique nele.
+13. Role para baixo próxima página, até encontrar **IoT Hub (Hub de eventos)** , em seguida, clique nele.
 
     ![função personalizada](images/AzureLabs-Lab313-60.png)
 

@@ -6,12 +6,12 @@ ms.author: pbarnett
 ms.date: 4/25/2019
 ms.topic: article
 keywords: HoloLens, emulador, Builds, versões
-ms.openlocfilehash: 34aee87310cbdfed4e209fbba955db9cf3ff722f
-ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
+ms.openlocfilehash: b209e444c223c3183d2680976f68c33a3b6ed79b
+ms.sourcegitcommit: 06ac2200d10b50fb5bcc413ce2a839e0ab6d6ed1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67414397"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67694428"
 ---
 Emulador do HoloLens (1º gen) e instale o emulador do HoloLens 2 compilações lado a lado. Geralmente, recomendamos o uso a compilação mais recente, mas pode haver casos em que você deseja ou precisa testar um aplicativo em um emulador antigo. Esta página inclui links para versões lançadas.
 
@@ -21,7 +21,8 @@ Emulador do HoloLens (1º gen) e instale o emulador do HoloLens 2 compilações 
 
 |  Compilação |  Data de lançamento |  Observações | 
 |----------|----------|----------|
-|  [HoloLens 2 emulador build 10.0.18362.1019](https://go.microsoft.com/fwlink/?linkid=2095316) | 11 de junho de 2019 | Compilação mais recente do HoloLens 2.  Não precisa mais ser executado como administrador.  Inicie o atalho de menu adicionado. |
+|  [HoloLens 2 emulador build 10.0.18362.1021](https://go.microsoft.com/fwlink/?linkid=2098508) | 8 de julho de 2019 | Compilação mais recente do HoloLens 2.  Resolve um problema de assinatura com DiskStream.dll |
+|  [HoloLens 2 emulador build 10.0.18362.1019](https://go.microsoft.com/fwlink/?linkid=2095316) | 11 de junho de 2019 | Não precisa mais ser executado como administrador.  Inicie o atalho de menu adicionado. |
 |  [HoloLens 2 emulador build 10.0.18362.1005](https://go.microsoft.com/fwlink/?linkid=2087187) | 16 de abril de 2019 |  |
 
 

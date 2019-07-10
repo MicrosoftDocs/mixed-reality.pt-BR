@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: realidade mista, Azure, academy, unity, tutorial, api, aprendizado de máquina, AM, o estúdio de machine learning, hololens, envolventes e vr
-ms.openlocfilehash: 93263817df0fd809a09b32c1b34a636eab7026a1
-ms.sourcegitcommit: 9b6949d7cd2e67e6bde9b32aebeaeea325baa6c4
+ms.openlocfilehash: 89d9758dedb6a2389644dda887bfadf5b28f6dd2
+ms.sourcegitcommit: 06ac2200d10b50fb5bcc413ce2a839e0ab6d6ed1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66516036"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67694550"
 ---
 >[!NOTE]
 >Os tutoriais da academia de realidade mista foram criados com o HoloLens (1º gen) e misto realidade fones Imersivos em exposição em mente.  Como tal, achamos que é importante deixar esses tutoriais em vigor para os desenvolvedores que ainda estiver procurando por orientação no desenvolvimento para esses dispositivos.  Esses tutoriais serão **_não_** ser atualizados com os conjuntos de ferramentas ou interações que está sendo usadas para o HoloLens 2 a mais recente.  Eles serão mantidos para continuar trabalhando nos dispositivos com suporte. Haverá uma nova série de tutoriais que serão lançados no futuro e que demonstra como desenvolver para o HoloLens 2.  Este aviso será atualizado com um link para esses tutoriais quando são lançadas.
@@ -40,7 +40,7 @@ Este curso é um tutorial independente, o que não envolvem diretamente quaisque
 
 <table>
 <tr>
-<th>Curso</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Fones imersivos em exposição</a></th>
+<th>Curso</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Headsets imersivos</a></th>
 </tr><tr>
 <td> MR e o Azure 307: Aprendizado de máquina</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
 </tr>
@@ -220,7 +220,7 @@ Para iniciar a criação de um experimento:
 
 2.  Uma nova página será exibida com um teste em branco:
 
-3.  No painel à esquerda, expanda **conjuntos de dados salvos* > *Meus conjuntos de dados** e arraste o **ProductsTableCSV** para o **Tela de experimento**.
+3.  No painel à esquerda, expanda **conjuntos de dados salvos** > **Meus conjuntos de dados** e arraste o **ProductsTableCSV** para o **astelasdoexperimento**.
 
     ![O Machine Learning Studio: O experimento](images/AzureLabs-Lab7-16.png)
 
@@ -236,7 +236,7 @@ Para iniciar a criação de um experimento:
 
     ![O Machine Learning Studio: O experimento](images/AzureLabs-Lab7-19.png)
 
-7.  No **experimentos** do painel no lado esquerdo, expanda **Machine Learning* > * Train * *. Arraste o **modelo de treinamento** item fora à tela do experimento. Sua tela deve ser o mesmo que o abaixo.
+7.  No **experimentos** do painel no lado esquerdo, expanda **Machine Learning** > **Train**. Arraste o **modelo de treinamento** item fora à tela do experimento. Sua tela deve ser o mesmo que o abaixo.
 
     ![O Machine Learning Studio: O experimento](images/AzureLabs-Lab7-20.png)
 
@@ -252,21 +252,21 @@ Para iniciar a criação de um experimento:
 
 11. Você pretende treinar uma **Regressão logística Multiclasse** algoritmo para prever mais vendidos **produto** com base na hora do dia e a data. Ele está além do escopo deste documento para explicar os detalhes dos diferentes algoritmos fornecidos pelo Azure Machine Learning studio, no entanto, você pode descobrir mais sobre o [folha de consulta de algoritmo do Machine Learning](https://docs.microsoft.com/azure/machine-learning/studio/algorithm-cheat-sheet)
 
-12. No painel de itens de teste à esquerda, expanda * **Machine Learning* > *inicializar modelo* > * classificação * * * e arraste o **Regressão logística Multiclasse**  item para a tela do experimento.
+12. No painel de itens de teste à esquerda, expanda **Machine Learning** > **inicializar modelo** > **classificação**e arraste o  **Regressão logística multiclasse** item para a tela do experimento.
 
 13. Conecte a saída, da parte inferior da **Regressão logística Multiclasse**, com a entrada do canto superior esquerdo do **treinar modelo** item.
 
     ![O Machine Learning Studio: O experimento](images/AzureLabs-Lab7-23.png)
 
-14. Na lista de itens do experimento no painel à esquerda, expanda **Machine Learning* > * pontuação * * e arraste a **modelo de pontuação** item na tela de desenho.
+14. Na lista de itens do experimento no painel à esquerda, expanda **Machine Learning** > **pontuação**e arraste o **modelo de pontuação** item na tela de desenho.
 
 15. Conecte a saída, da parte inferior da **modelo de treinamento**, com a entrada do canto superior esquerdo do **modelo de pontuação**.
 
-16. Conecte a saída do canto inferior direito da **dividir dados**, à entrada do canto superior direito do  **modelo de pontuação* item*.
+16. Conecte a saída do canto inferior direito da **dividir dados**, à entrada do canto superior direito do **modelo de pontuação** item.
 
     ![O Machine Learning Studio: O experimento](images/AzureLabs-Lab7-24.png)
 
-17. Na lista de **experimento** itens no painel à esquerda, expanda * **Machine Learning* > * avaliar * * * e arraste o **avaliar modelo** item para a tela.
+17. Na lista de **experimento** itens no painel à esquerda, expanda **Machine Learning** > **Evaluate**e arraste o **avaliar modelo** item para a tela.
 
 18. Conecte a saída do **modelo de pontuação** à entrada do canto superior esquerdo a **avaliar modelo**.
 
@@ -334,9 +334,9 @@ Configurar e testar o fone imersivo realidade mista.
 
 1.  Abra **Unity** e crie um novo projeto do Unity chamada **MR\_MachineLearning.** Verifique se o tipo de projeto é definido como **3D**.
 
-2.  Com o Unity aberta, vale a pena verificar o padrão **Editor de scripts** é definido como **Visual Studio**. Vá para ***edite* > *preferências*** e, em seguida, na nova janela, navegue até **ferramentas externas**. Alteração **Editor de Script externo** à **Visual Studio 2017**. Fechar o **preferências** janela.
+2.  Com o Unity aberta, vale a pena verificar o padrão **Editor de scripts** é definido como **Visual Studio**. Vá para **edite** > **preferências** e, em seguida, na nova janela, navegue até **ferramentas externas**. Alteração **Editor de Script externo** à **Visual Studio 2017**. Fechar o **preferências** janela.
 
-3.  Em seguida, vá para ***arquivo* > *configurações de Build*** e alternar a plataforma **plataforma Universal do Windows**, clicando em o ***alternar plataforma*** botão.
+3.  Em seguida, vá para **arquivo** > **configurações de Build** e alternar a plataforma **plataforma Universal do Windows**, clicando no ***alternar plataforma***  botão.
 
 4.  Também verifique se:
 
@@ -527,7 +527,7 @@ Para criar essa classe:
 
 1.  Vá para o **Scripts** pasta, no **painel projeto**.
 
-2.  Clique com botão direito dentro da pasta **Create** > **C\# Script**. Chame o script **ProductPrediction**.
+2.  Clique com botão direito dentro da pasta **Create**  >   **C# Script**. Chame o script **ProductPrediction**.
 
 3.  Clique duas vezes na nova **ProductPrediction** script para abri-lo com **Visual Studio 2017**.
 
@@ -811,7 +811,7 @@ Para criar essa classe:
 
 14. Arraste o **ProductPrediction** script a partir de classe a **Script** pasta, para o **câmera principal** objeto.
 
-15. Salvar sua cena e seu projeto **arquivo** >  ***salvar cena* / *arquivo***   >  **Salvar projeto**.
+15. Salvar sua cena e seu projeto **arquivo** > **salvar/arquivo de cena** > **Salvar projeto**.
 
 ## <a name="chapter-10---build-the-uwp-solution"></a>Capítulo 10 - Compile a solução UWP
 
@@ -819,11 +819,11 @@ Agora é hora de criar seu projeto como uma solução UWP, para que ele pode ser
 
 Para construir:
 
-1.  Salve a cena atual clicando em **arquivo** **cenas salvar**.
+1.  Salve a cena atual clicando em **arquivo** > **salvar cenas**.
 
-2.  Vá para **arquivo** **configurações de Build**
+2.  Vá para **arquivo** > **configurações de Build**
 
-3.  Marque a caixa denominada **Unity C\# projetos** (Isso é importante porque ele permitirá que você editar as classes após a compilação for concluída).
+3.  Marque a caixa denominada **Unity C# projetos** (Isso é importante porque ele permitirá que você editar as classes após a compilação for concluída).
 
 4.  Clique em **adicionar cenas abertas**,
 
