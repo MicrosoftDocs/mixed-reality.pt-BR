@@ -207,6 +207,7 @@
 ##### Tutoriais de Âncora Espacial do Azure
 ###### [1. Introdução às Âncoras Espaciais do Azure](mrlearning-asa-ch1.md)
 ###### [2. Salvar, recuperar e compartilhar Âncoras Espaciais do Azure](mrlearning-asa-ch2.md)
+###### [3. Exibindo comentários de âncora espacial do Azure](mrlearning-asa-ch3.md)
 ##### Tutoriais de Serviços de Fala do Azure
 ###### [1. Integrar e usar a transcrição e o reconhecimento de fala](mrlearning-speechSDK-ch1.md)
 ###### [2. Adicionar um modo offline para tradução de fala em texto local](mrlearning-speechSDK-ch2.md)
