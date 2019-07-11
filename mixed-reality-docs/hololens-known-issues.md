@@ -3,15 +3,15 @@ title: Problemas conhecidos do HoloLens
 description: Esta é a lista dos problemas conhecidos que podem afetar os desenvolvedores do HoloLens.
 author: mattzmsft
 ms.author: mazeller
-ms.date: 06/14/2019
+ms.date: 07/10/2019
 ms.topic: article
 keywords: solucionar problemas, problema conhecido, ajuda
-ms.openlocfilehash: fd70171a908dab016b375e2207436dc11d625af9
-ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
+ms.openlocfilehash: 1ef9e9f411e16d2f604930f3146ede1d03d7c0f6
+ms.sourcegitcommit: c36b8c8573f51afa79504c4a17084e4f55d2f664
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67414348"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67789486"
 ---
 # <a name="hololens-known-issues"></a>Problemas conhecidos do HoloLens
 
@@ -20,19 +20,61 @@ Esta é a lista atual de problemas conhecidos que afetam os desenvolvedores de H
 ## <a name="unable-to-connect-and-deploy-to-hololens-through-visual-studio"></a>Não é possível conectar-se e implante em HoloLens através do Visual Studio
 
 >[!NOTE]
->Última atualização: 6/14 @ às 18H - problema sob investigação.
+>Última atualização: 7/8 @ 7:25 PM - a equipe identificou a causa raiz e atualmente está trabalhando em corrigir. Solução alternativa disponível abaixo. 
 
-As equipes HoloLens e o Visual Studio estiver investigando um problema que pode impedir que os usuários da implantação de dispositivo do HoloLens por meio do Visual Studio.
- 
-Durante o estágio de implantação, os usuários relatarem a seguinte mensagem de erro, apesar dos dispositivos HoloLens e precisar de máquina do desenvolvedor *modo de desenvolvedor* habilitado:
+Fomos capazes de identificar a causa raiz desse problema. Os usuários que é usado o Visual Studio 2015 ou versões anteriores do Visual Studio 2017 para implantar e depurar aplicativos em seus HoloLens e usadas subsequentemente as versões mais recentes do Visual Studio 2017 ou Visual Studio de 2019 com o mesmo HoloLens serão afetados. 
 
-*DEP0100: Certifique-se de que esse dispositivo de destino tem o modo de desenvolvedor habilitado. Não foi possível obter uma licença de desenvolvedor no <device IP> devido ao erro 80004005.*
+As versões mais recentes do Visual Studio implantem uma nova versão de um componente, mas os arquivos da versão mais antiga restantes no dispositivo, fazendo com que a versão mais recente falhe.  Isso faz com que a mensagem de erro a seguir: DEP0100: Certifique-se de que esse dispositivo de destino tem o modo de desenvolvedor habilitado. Não foi possível obter uma licença de desenvolvedor no <ip> devido ao erro 80004005.
  
-**Solução do problema**: 
+**Solução alternativa**: 
+
+No momento, nossa equipe está trabalhando em uma correção. Enquanto isso, você pode usar as seguintes etapas para contornar o problema e ajudar a desbloquear a implantação e depuração:  
+1. Abrir o Visual Studio
+2. Arquivo -> Novo -> projeto
+3. O Visual C# -> Windows Desktop -> aplicativo de Console (.NET Framework)
+4. Dê ao projeto um nome (por exemplo, HoloLensDeploymentFix) e verifique se a estrutura é definida pelo menos .NET Framework 4.5, em seguida, clique em Okey.
+5. Clique com botão direito no nó referências no Gerenciador de soluções e adicione as seguintes referências (clique para a seção 'Procurar' e ' Procurar... ' botão):
+    ```
+    C:\Program Files (x86)\Windows Kits\10\bin\10.0.18362.0\x86\Microsoft.Tools.Deploy.dll
+    C:\Program Files (x86)\Windows Kits\10\bin\10.0.18362.0\x86\Microsoft.Tools.Connectivity.dll
+    C:\Program Files (x86)\Windows Kits\10\bin\10.0.18362.0\x86\SirepInterop.dll
+    ```
+    >[!NOTE]
+    >Se você não tiver 10.0.18362.0 instalado, use a versão mais recente que você tem.
  
-Os usuários de relatório que a redefinição do dispositivo resolve o problema, mas não podemos garantir que isso funcionará em todos os casos. Você pode encontrar instruções para redefinir seu dispositivo [aqui](https://support.microsoft.com/en-us/help/13452/hololens-restart-reset-or-recover-hololens).
+6. Clique com botão direito no projeto no Gerenciador de soluções e escolha Adicionar -> Item existente.
  
-Forneceremos uma atualização, assim que o problema é causado de raiz. 
+7. Navegue até C:\Program Files (x86) \Windows Kits\10\bin\10.0.18362.0\x86 e altere o filtro "todos os arquivos (\*.\*)"
+ 
+8. Selecione SirepClient.dll e SshClient.dll e clique em "Adicionar".
+ 
+9. Localize e selecione os dois arquivos no Gerenciador de soluções (eles devem estar na parte inferior da lista de arquivos) e altere "Copiar para diretório de saída" na janela Propriedades para "Copiar sempre"
+ 
+10. Na parte superior do arquivo, adicione o seguinte à lista existente de instruções 'using': 
+    ```
+    using Microsoft.Tools.Deploy;
+    using System.Net;
+    ```
+ 
+11. Dentro de "static void Main(...)", adicione o seguinte código:
+    ```
+    RemoteDeployClient client = RemoteDeployClient.CreateRemoteDeployClient();
+    client.Connect(new ConnectionOptions()
+    {
+        Credentials = new NetworkCredential("DevToolsUser", string.Empty),
+        IPAddress = IPAddress.Parse(args[0])
+    });
+    client.RemoteDevice.DeleteFile(@"C:\Data\Users\DefaultAccount\AppData\Local\DevelopmentFiles\VSRemoteTools\x86\CoreCLR\mscorlib.ni.dll");
+    ```
+12. Compilar -> a solução de Build
+ 
+13. Abra um prompt de comando para a pasta que contém o .exe compilado (por exemplo, C:\MyProjects\HoloLensDeploymentFix\bin\Debug)
+ 
+14. Execute o executável e forneça o endereço IP do dispositivo como um argumento de linha de comando.  (Se estiver conectado via USB, você pode usar 127.0.0.1, caso contrário, use o endereço IP de WiFi do dispositivo.)  Por exemplo, "HoloLensDeploymentFix 127.0.0.1"
+ 
+15. Depois que a ferramenta foi encerrado sem todas as mensagens (isso deve levar somente alguns segundos), você agora será capaz de implantar e depurar no Visual Studio 2017 ou mais recente.  O uso contínuo da ferramenta não é necessário.
+
+Forneceremos mais atualizações à medida que elas forem disponibilizadas.
 
 ## <a name="issues-launching-the-microsoft-store-and-apps-on-hololens"></a>Problemas ao iniciar o Microsoft Store e aplicativos no HoloLens
 
