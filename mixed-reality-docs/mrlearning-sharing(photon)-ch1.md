@@ -1,75 +1,73 @@
 ---
-title: MR aprendizado compartilhando módulo para HoloLens 2
-description: Conclua este curso para saber como implementar a experiências compartilhadas com vários usuários dentro de um aplicativo de 2 HoloLens.
+title: Módulo de compartilhamento de aprendizagem do MR para o HoloLens 2
+description: Conclua este curso para aprender a implementar experiências compartilhadas de vários usuários em um aplicativo do HoloLens 2.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realidade misturada, unity, tutorial, hololens
-ms.openlocfilehash: 80cefb36ec1944ec6f537aafcbf4b63f7f812d26
-ms.sourcegitcommit: cf9f8ebbca0301e9d277853771ff6e47701ba1c1
+ms.openlocfilehash: e40cd50f75ca509c601d215cb865161ea3596565
+ms.sourcegitcommit: 611af6ff7a2412abad80c0c7d4decfc0c3a0e8c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67523293"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68293650"
 ---
-#  <a name="setting-up-photon-unity-networking"></a>Configuração de rede de Unity Photon
+#  <a name="setting-up-photon-unity-networking"></a>Configurando a rede do Photon Unity
 
-Neste tutorial, aprendemos como se preparar para a criação de uma experiência de compartilhado com a importação de sistema de rede de Unity Photon (TROCADILHO) no projeto do Unity. Photon é uma das várias opções de rede disponíveis para desenvolvedores de realidade mista para criar experiências compartilhadas. Podemos, aprenderemos a criar uma conta de Photon, importar Photon e criar um servidor de local opcional
+Neste tutorial, aprenderemos como preparar-se para criar uma experiência compartilhada importando o trocadilho (Photon Unity Networking) para seu projeto do Unity. O Photon é uma das várias opções de rede disponíveis para que os desenvolvedores de realidade mista criem experiências compartilhadas. Nós aprenderemos como criar uma conta do Photon, importar Photon e criar um servidor local opcional
 
-Objetivos:
+Seus
 
-* Saiba como criar uma conta de Photon
+* Saiba como criar uma conta do Photon
 
-* Saiba como localizar e importar Photon Unity de rede
+* Saiba como localizar e importar a rede Photon Unity
 
-* Configurar um servidor local do Photon
+* Configurar um servidor Photon local
 
   
 
-### <a name="setting-up-photon"></a>Configurando Photon
+### <a name="setting-up-photon"></a>Configurando o Photon
 
-1. Configurar uma [Photon](https://dashboard.photonengine.com/en-US/Account/SignUp) conta. Navegue até a página de inscrição Photon clicando em [esse link](https://dashboard.photonengine.com/en-US/Account/SignUp). Siga as instruções na página de inscrição para criar a conta. 
+1. Configure uma conta do [Photon](https://dashboard.photonengine.com/en-US/Account/SignUp) . Navegue até a página de inscrição do Photon clicando neste [link](https://dashboard.photonengine.com/en-US/Account/SignUp). Siga as instruções na página de inscrição para criar a conta. 
    
 
 ![Module3Chapter1step1im](images/module3chapter1step1im.PNG)
 
-
-
 ![Module3Chapter1step6im](images/module3chapter1step6im.PNG)
 
-2. Crie uma ID de aplicativo, clicando em criar um botão novo aplicativo.
+2. Crie uma ID de aplicativo clicando no botão criar um novo aplicativo.
 
 ![Module3Chapter1step7aim](images/module3chapter1step7aim.PNG)
 
-3. Selecione o TROCADILHO Photon no menu suspenso em tipo Photon. Em seguida, dê um nome. Neste exemplo, nomeamos a ele HoloLensPhotonProject. Quando terminar, clique no botão Criar.
+3. Selecione Photon trocadilho no menu suspenso, em Photon Type. Em seguida, dê um nome a ele. Neste exemplo, nomeamos HoloLensPhotonProject. Quando terminar, clique no botão criar.
 
 ![Module3Chapter1step7bim](images/module3chapter1step7bim.PNG)
 
-4. Depois disso, retornar à página de seus aplicativos e você deverá ver algo semelhante à imagem abaixo. Clique na ID do aplicativo e copie-o. Colar é em algum lugar, que você pode acessar facilmente.  
+4. Depois disso, volte para a página de aplicativos e você verá algo semelhante à imagem abaixo. Clique na ID do aplicativo e copie-a. Cole em algum lugar que você possa acessar facilmente.  
 
 ![Module3Chapter1step8im](images/module3chapter1step8im.PNG)
 
-5. Crie um novo projeto do unity e nomeie-a como HLSharingProject. Para obter instruções sobre como criar um novo projeto do Unity, consulte [seção de "Criar o projeto do Unity" Base do módulo](https://docs.microsoft.com/en-us/windows/mixed-reality/mrlearning-base-ch1#create-new-unity-project). 
+5. Crie um novo projeto do Unity e nomeie-o HLSharingProject. Para obter instruções sobre como criar um novo projeto do Unity, consulte [a seção "criar projeto do Unity" do módulo base](https://docs.microsoft.com/en-us/windows/mixed-reality/mrlearning-base-ch1#create-new-unity-project). 
 
-6. Depois que o projeto é carregado, clique na guia Store ativos, conforme mostrado na imagem abaixo. Em seguida, na caixa de pesquisa realçada na imagem abaixo, digite TROCADILHO e selecione 2 o TROCADILHO Photon - FRE"ativo dos resultados da pesquisa. 
+6. Depois que o projeto for carregado, clique na guia repositório de ativos, conforme mostrado na imagem abaixo. Em seguida, na caixa de pesquisa realçada na imagem abaixo, digite trocadilho e selecione o ativo Photon trocadilho 2-FREE "nos resultados da pesquisa. 
 
 ![Module3Chapter1step10im](images/module3chapter1step10im.PNG)
 
-7. Baixe e importe este ativo ao pressionar os botões baixar e importar.
+7. Baixe e importe esse ativo pressionando os botões baixar e importar.
 
 ![Module3Chapter1step11im](images/module3chapter1step11im.PNG)
 
-8. Depois de Photon tiver concluído o processo de importação, o Assistente de trocadilho é exibido. Levar a ID do aplicativo (que deve estar na sua área de transferência) da etapa 4 e cole-o na caixa de AppID e pressione o botão de projeto de instalação. 
+8. Depois que o Photon tiver concluído o processo de importação, o assistente de trocadilho será exibido. Pegue a ID do aplicativo (que deve estar na área de transferência) da etapa 4 e cole-a na caixa AppID e pressione o botão configurar projeto. 
 ![module3chapter1step12im](images/module3chapter1step12im.PNG)
 
-9. Depois de adicionar com êxito o AppID, navegue até Photon -> PhotonUnityNetworking -> recursos -> PhotonServerSettings em ativos. Selecione a opção de usar o servidor de nome e defina a região fixa conosco ou a região do serviço yourPphoton.
+9. Depois de adicionar o AppID com êxito, navegue até Photon-> PhotonUnityNetworking-> recursos-> PhotonServerSettings em ativos. Selecione a opção usar servidor de nomes e defina a região fixa como US ou sua região de serviço Photon.
 
-   ![module3chapter1step13im](images/module3chapter1step13im.PNG)
+![module3chapter1step13im](images/module3chapter1step13im.PNG)
 
 ## <a name="congratulations"></a>Parabéns
 
-Com êxito ter criado uma conta de Photon, configurar um servidor local do Photon e importados TROCADILHO para Unity. A próxima etapa é configurar o projeto e, em seguida, permitir conexões com outros usuários para que vários usuários podem ver seu trabalho. 
+Você criou uma conta do Photon com êxito, configurou um servidor Photon local e importou o trocadilho para o Unity. A próxima etapa é configurar o projeto e, em seguida, permitir conexões com outros usuários para que vários usuários possam ver seu trabalho. 
 
-[Próximo tutorial: Preparando para o desenvolvimento do Unity](mrlearning-sharing(photon)-ch2.md)
+[Próximo tutorial: Preparar o Unity para o desenvolvimento](mrlearning-sharing(photon)-ch2.md)
 
