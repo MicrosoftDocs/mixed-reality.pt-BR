@@ -939,7 +939,7 @@ Para criar a marca:
 
 Todos os componentes necessários para a seção de Unity desse projeto agora foi concluído, portanto, é hora de criá-lo do Unity.
 
-1.  Navegue até *configurações de Build* (**arquivo* >* Compilar configurações**).
+1.  Navegue até *configurações de Build* (**arquivo*>*Compilar configurações**).
 
     ![](images/AzureLabs-Lab311-33.png)
 
