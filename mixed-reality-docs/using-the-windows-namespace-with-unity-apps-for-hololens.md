@@ -1,27 +1,32 @@
 ---
-title: Usando o namespace do Windows com aplicativos do Unity para HoloLens
-description: Explica como usar APIs do WinRT no seu projeto do Unity para HoloLens.
+title: Usando o namespace do Windows com aplicativos do Unity para o HoloLens
+description: Explica como fazer uso de APIs do WinRT em seu projeto do Unity para o HoloLens.
 author: MikeRiches
 ms.author: mriches
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Passo a passo do Unity, WinRT, windows realidade misturada, API,
-ms.openlocfilehash: ed65b5995d74c54057a49b878c1206d0f06394ca
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+keywords: Unity, WinRT, realidade do Windows Mixed, API, passo a passos
+ms.openlocfilehash: fd25548de8eeb3c8157a3f9de283dc5004ed1180
+ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59589546"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63548724"
 ---
-# <a name="using-the-windows-namespace-with-unity-apps-for-hololens"></a><span data-ttu-id="dddeb-104">Usando o namespace do Windows com aplicativos do Unity para HoloLens</span><span class="sxs-lookup"><span data-stu-id="dddeb-104">Using the Windows namespace with Unity apps for HoloLens</span></span>
+# <a name="using-the-windows-namespace-with-unity-apps-for-hololens"></a><span data-ttu-id="94813-104">Usando o namespace do Windows com aplicativos do Unity para o HoloLens</span><span class="sxs-lookup"><span data-stu-id="94813-104">Using the Windows namespace with Unity apps for HoloLens</span></span>
 
-<span data-ttu-id="dddeb-105">Esta página descreve como usar APIs do WinRT no seu projeto do Unity para HoloLens.</span><span class="sxs-lookup"><span data-stu-id="dddeb-105">This page describes how to make use of WinRT APIs in your Unity project for HoloLens.</span></span>
+<span data-ttu-id="94813-105">Esta página descreve como fazer uso de APIs do WinRT em seu projeto do Unity para o HoloLens.</span><span class="sxs-lookup"><span data-stu-id="94813-105">This page describes how to make use of WinRT APIs in your Unity project for HoloLens.</span></span>
 
-## <a name="conditionally-include-winrt-api-calls"></a><span data-ttu-id="dddeb-106">Incluir condicionalmente chamadas à API do WinRT</span><span class="sxs-lookup"><span data-stu-id="dddeb-106">Conditionally include WinRT API calls</span></span>
+## <a name="conditionally-include-winrt-api-calls"></a><span data-ttu-id="94813-106">Incluir condicionalmente chamadas à API do WinRT</span><span class="sxs-lookup"><span data-stu-id="94813-106">Conditionally include WinRT API calls</span></span>
 
-<span data-ttu-id="dddeb-107">APIs do WinRT será usado apenas em builds de projeto do Unity que direcionam o Windows 8, Windows 8.1 ou a plataforma Universal do Windows; qualquer código que você escreve em scripts do Unity que tem como alvo a APIs do WinRT deve ser incluído condicionalmente para apenas esses builds.</span><span class="sxs-lookup"><span data-stu-id="dddeb-107">WinRT APIs will only be used in Unity project builds that target Windows 8, Windows 8.1, or the Universal Windows Platform; any code that you write in Unity scripts that targets WinRT APIs must be conditionally included for only those builds.</span></span> <span data-ttu-id="dddeb-108">Isso é feito usando as definições de pré-processador NETFX_CORE ou WINDOWS_UWP.</span><span class="sxs-lookup"><span data-stu-id="dddeb-108">This is done using the NETFX_CORE or WINDOWS_UWP preprocessor definitions.</span></span> <span data-ttu-id="dddeb-109">Essa regra se aplica ao uso de instruções, bem como outro código.</span><span class="sxs-lookup"><span data-stu-id="dddeb-109">This rule applies to using statements, as well as other code.</span></span>
+<span data-ttu-id="94813-107">As APIs do WinRT podem ser aproveitadas para projetos do Unity criados para o Plataforma Universal do Windows e para o Xbox One Platform; qualquer código que você escreve em scripts do Unity que visam APIs do WinRT deve ser incluído condicionalmente somente para as compilações.</span><span class="sxs-lookup"><span data-stu-id="94813-107">WinRT APIs can be leveraged for Unity projects built for the Universal Windows Platform and Xbox One platform; any code that you write in Unity scripts that target WinRT APIs must be conditionally included for only those builds.</span></span> 
 
-<span data-ttu-id="dddeb-110">O trecho de código a seguir é da página de manual do Unity para [plataforma Universal do Windows: API do WinRT no C# scripts](http://docs.unity3d.com/Manual/windowsstore-scripts.html).</span><span class="sxs-lookup"><span data-stu-id="dddeb-110">The following code snippet is from the Unity manual page for [Universal Windows Platform: WinRT API in C# scripts](http://docs.unity3d.com/Manual/windowsstore-scripts.html).</span></span> <span data-ttu-id="dddeb-111">Neste exemplo, uma ID de anúncio for retornado, mas somente no Windows 8.0 ou superior destino compilações:</span><span class="sxs-lookup"><span data-stu-id="dddeb-111">In this example, an advertising ID is returned, but only on Windows 8.0 or higher target builds:</span></span>
+<span data-ttu-id="94813-108">Isso pode ser feito por meio de duas etapas no Unity:</span><span class="sxs-lookup"><span data-stu-id="94813-108">This can be done via two steps in Unity:</span></span>
+1) <span data-ttu-id="94813-109">O nível de compatibilidade da API deve ser definido como **.net 4,6** ou **.net Standard 2,0** nas configurações do Player</span><span class="sxs-lookup"><span data-stu-id="94813-109">API compatibility level must be set to **.NET 4.6** or **.NET Standard 2.0** in the player settings</span></span>
+    - <span data-ttu-id="94813-110">**Editar** >  >    configurações do projeto nível de compatibilidade da API de configuração do Player para .NET 4,6 ou .net Standard 2,0 >  > </span><span class="sxs-lookup"><span data-stu-id="94813-110">**Edit** > **Project Settings** > **Player** > **Configuration** > **Api Compatibility Level** to **.NET 4.6** or **.NET Standard 2.0**</span></span>
+2) <span data-ttu-id="94813-111">A diretiva de pré-processador **ENABLE_WINMD_SUPPORT** deve ser encapsulada em torno de qualquer código aproveitado por WinRT</span><span class="sxs-lookup"><span data-stu-id="94813-111">The preprocessor directive **ENABLE_WINMD_SUPPORT** must be wrapped around any WinRT-leveraged code</span></span>
+
+<span data-ttu-id="94813-112">O trecho de código a seguir é da página manual do [Unity para plataforma universal do Windows: API do WinRT C# em](http://docs.unity3d.com/Manual/windowsstore-scripts.html)scripts.</span><span class="sxs-lookup"><span data-stu-id="94813-112">The following code snippet is from the Unity manual page for [Universal Windows Platform: WinRT API in C# scripts](http://docs.unity3d.com/Manual/windowsstore-scripts.html).</span></span> <span data-ttu-id="94813-113">Neste exemplo, uma ID de anúncio é retornada, mas somente no UWP e no Xbox, uma compila:</span><span class="sxs-lookup"><span data-stu-id="94813-113">In this example, an advertising ID is returned, but only on UWP and Xbox One builds:</span></span>
 
 ```
 using UnityEngine;
@@ -32,7 +37,7 @@ public class WinRTAPI : MonoBehaviour {
     }
 
     string GetAdvertisingId() {
-        #if NETFX_CORE
+        #if ENABLE_WINMD_SUPPORT
             return Windows.System.UserProfile.AdvertisingManager.AdvertisingId;
         #else
             return "";
@@ -41,11 +46,10 @@ public class WinRTAPI : MonoBehaviour {
 }
 ```
 
-## <a name="edit-your-scripts-in-a-unity-c-project"></a><span data-ttu-id="dddeb-112">Editar seus scripts em um Unity C# projeto</span><span class="sxs-lookup"><span data-stu-id="dddeb-112">Edit your scripts in a Unity C# project</span></span>
+## <a name="edit-your-scripts-in-a-unity-c-project"></a><span data-ttu-id="94813-114">Editar seus scripts em um projeto C# do Unity</span><span class="sxs-lookup"><span data-stu-id="94813-114">Edit your scripts in a Unity C# project</span></span>
 
-<span data-ttu-id="dddeb-113">Quando você clica duas vezes um script no editor do Unity, ele por padrão iniciará o script em um projeto do editor.</span><span class="sxs-lookup"><span data-stu-id="dddeb-113">When you double-click a script in the Unity editor, it will by default launch your script in an editor project.</span></span> <span data-ttu-id="dddeb-114">As APIs do WinRT parecerá ser desconhecido por dois motivos: NETFX_CORE não está definido nesse ambiente, e o projeto não faz referência a tempo de execução do Windows.</span><span class="sxs-lookup"><span data-stu-id="dddeb-114">The WinRT APIs will appear to be unknown for two reasons: NETFX_CORE is not defined in this environment, and the project does not reference the Windows Runtime.</span></span> <span data-ttu-id="dddeb-115">Se você usar o [recomendado de exportação e criado as configurações de](exporting-and-building-a-unity-visual-studio-solution.md)e editar os scripts nesse projeto em vez disso, ele será definir NETFX_CORE e também incluir uma referência para o tempo de execução do Windows; com essa configuração em vigor, APIs do WinRT será disponível para o IntelliSense.</span><span class="sxs-lookup"><span data-stu-id="dddeb-115">If you use the [recommended export and built settings](exporting-and-building-a-unity-visual-studio-solution.md), and edit the scripts in that project instead, it will define NETFX_CORE and also include a reference to the Windows Runtime; with this configuration in place, WinRT APIs will be available for IntelliSense.</span></span>
+<span data-ttu-id="94813-115">Quando você clica duas vezes em um script no editor do Unity, ele inicia o script por padrão em um projeto do editor.</span><span class="sxs-lookup"><span data-stu-id="94813-115">When you double-click a script in the Unity editor, it will by default launch your script in an editor project.</span></span> <span data-ttu-id="94813-116">As APIs do WinRT parecerão desconhecidas, pois o projeto do Visual Studio não faz referência à Windows Runtime.</span><span class="sxs-lookup"><span data-stu-id="94813-116">The WinRT APIs will appear to be unknown because the Visual Studio project does not reference the Windows Runtime.</span></span> <span data-ttu-id="94813-117">Além disso, a diretiva **ENALBE_WINMD_SUPPORT** será indefinida e qualquer *#if* código encapsulado será ignorado até que você compile seu projeto em uma solução UWP do Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="94813-117">Further, the **ENALBE_WINMD_SUPPORT** directive will be undefined and any *#if* wrapped code will be ignored until you build your project into a UWP Visual Studio solution.</span></span>
 
-<span data-ttu-id="dddeb-116">Observe que o Unity C# projeto também pode ser usado para depurar por meio de seus scripts usando F5 no Visual Studio de depuração remota.</span><span class="sxs-lookup"><span data-stu-id="dddeb-116">Note that your Unity C# project can also be used to debug through your scripts using F5 remote debugging in Visual Studio.</span></span> <span data-ttu-id="dddeb-117">Se você não vir a trabalhar na primeira vez que você abre a Unity do IntelliSense C# do projeto, feche o projeto e abra-o novamente.</span><span class="sxs-lookup"><span data-stu-id="dddeb-117">If you do not see IntelliSense working the first time that you open your Unity C# project, close the project and re-open it.</span></span> <span data-ttu-id="dddeb-118">IntelliSense deve começar a trabalhar.</span><span class="sxs-lookup"><span data-stu-id="dddeb-118">IntelliSense should start working.</span></span>
-
-## <a name="see-also"></a><span data-ttu-id="dddeb-119">Consulte também</span><span class="sxs-lookup"><span data-stu-id="dddeb-119">See also</span></span>
-* [<span data-ttu-id="dddeb-120">Exportando e criando uma solução do Visual Studio do Unity</span><span class="sxs-lookup"><span data-stu-id="dddeb-120">Exporting and building a Unity Visual Studio solution</span></span>](exporting-and-building-a-unity-visual-studio-solution.md)
+## <a name="see-also"></a><span data-ttu-id="94813-118">Consulte também</span><span class="sxs-lookup"><span data-stu-id="94813-118">See also</span></span>
+* [<span data-ttu-id="94813-119">Como exportar e criar uma solução do Visual Studio do Unity</span><span class="sxs-lookup"><span data-stu-id="94813-119">Exporting and building a Unity Visual Studio solution</span></span>](exporting-and-building-a-unity-visual-studio-solution.md)
+* [<span data-ttu-id="94813-120">Windows Runtime Unity de suporte</span><span class="sxs-lookup"><span data-stu-id="94813-120">Windows Runtime Support Unity</span></span>](https://docs.unity3d.com/Manual/IL2CPP-WindowsRuntimeSupport.html)
