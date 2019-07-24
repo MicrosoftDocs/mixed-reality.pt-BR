@@ -1,109 +1,109 @@
 ---
-title: Módulo Lunar
-description: LunarModule é um aplicativo de exemplo de código-fonte aberto de laboratórios de Design de realidade misturada da Microsoft. Com este projeto, você pode aprender como estender os gestos de base dos Hololens com o acompanhamento de duas mãos e controlador do Xbox de entrada, criar objetos que são reativos para mapeamento de superfície e localização do plano e implementar sistemas de menu simples.
+title: Módulo lunar
+description: O LunarModule é um aplicativo de exemplo de software livre dos laboratórios de design de realidade misturada da Microsoft. Com este projeto, você pode aprender a estender os gestos de base do Hololens com o acompanhamento de duas mãos e a entrada do controlador Xbox, criar objetos reativos para o mapeamento de superfície e o plano, localizando e implementando sistemas de menu simples.
 author: radicalad
 ms.author: adlinv
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Windows misto realidade, HoloLens de aplicativos, Design, de exemplo
+keywords: Realidade mista do Windows, aplicativos de exemplo, design, HoloLens
 ms.openlocfilehash: 38f70d78b5572930b874e221fa4a85572c07b342
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59590434"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63516030"
 ---
-# <a name="lunar-module"></a>Módulo Lunar
+# <a name="lunar-module"></a>Módulo lunar
 
 >[!NOTE]
->Este artigo descreve um exemplo de análise exploratório que criamos na [laboratórios de Design de realidade misturada](https://github.com/Microsoft/MRDesignLabs_Unity), um lugar onde podemos compartilhar nossos aprendizados sobre e sugestões para desenvolvimento de aplicativos de realidade de misto. Nossos artigos relacionados ao design e código evolui à medida que fizermos novas descobertas.
+>Este artigo discute um exemplo exploratório que criamos nos laboratórios de [design de realidade misturada](https://github.com/Microsoft/MRDesignLabs_Unity), um lugar onde compartilhamos nossas aprendeções e sugestões para o desenvolvimento de aplicativos de realidade misturada. Nossos artigos e códigos relacionados ao design irão evoluir à medida que fizermos novas descobertas.
 
-[Módulo Lunar](https://github.com/Microsoft/MRDesignLabs_Unity_LunarModule) é um aplicativo de exemplo de código-fonte aberto de laboratórios de Design de realidade misturada da Microsoft. Com este projeto, você pode aprender como estender os gestos de base dos Hololens com o acompanhamento de duas mãos e controlador do Xbox de entrada, criar objetos que são reativos para mapeamento de superfície e localização do plano e implementar sistemas de menu simples. Todos os componentes do projeto estão disponíveis para uso em suas próprias experiências de aplicativo de realidade misturada.
+O [módulo lunar](https://github.com/Microsoft/MRDesignLabs_Unity_LunarModule) é um aplicativo de exemplo de código-fonte aberto dos laboratórios de design de realidade misturada da Microsoft. Com este projeto, você pode aprender a estender os gestos de base do Hololens com o acompanhamento de duas mãos e a entrada do controlador Xbox, criar objetos reativos para o mapeamento de superfície e o plano, localizando e implementando sistemas de menu simples. Todos os componentes do projeto estão disponíveis para uso em suas próprias experiências de aplicativo de realidade misturada.
 
-## <a name="rethinking-classic-experiences-for-windows-mixed-reality"></a>Repensando experiências clássicas para o Windows Mixed Reality
+## <a name="rethinking-classic-experiences-for-windows-mixed-reality"></a>Reconsiderando experiências clássicas para a realidade mista do Windows
 
-Up alta na atmosfera, um navio pequeno que sobrou do módulo Apollo metodicamente pesquisas denteado terreno abaixo. Nosso projeto-piloto fearless identifica uma área de aterrissagem adequado. O descendente é árdua, mas felizmente, essa jornada foi feita antes de muitas vezes...
+Alto na atmosfera, uma pequena que sobrou de remessa do módulo Apollo pesquisa metodicamente o terreno irregular abaixo. Nosso piloto Fearless é uma área de aterrissagem adequada. A descendente é árdua, mas felizmente, essa jornada foi feita muitas vezes antes...
 
-![Interface original do 1979 Lunar Lander do Atari](images/640px-atari-lunar-lander.png)<br>
-*Interface original do 1979 Lunar Lander do Atari*
+![Interface original da Atari lander lunar 1979](images/640px-atari-lunar-lander.png)<br>
+*Interface original da Atari lander lunar 1979*
 
-[Lander Lunar](https://en.wikipedia.org/wiki/Lunar_Lander_(1979_video_game)) é uma clássico arcade onde jogadores tentam criar um piloto um lander lua em um simples ponto de terreno lunar. Alguém nasceu na década de 1970 provavelmente passou horas em um arcade com seus olhos colados para esta remessa de vetor decaindo rapidamente do céu. Como um player navega seu ship em direção a uma área de aterrissagem desejada o terreno é dimensionado para revelar progressivamente mais detalhadamente. O sucesso significa inicial dentro do limite seguro de velocidade horizontal e vertical. Os pontos são concedidos para o tempo gasto inicial e o restante de combustível, com um multiplicador de acordo com o tamanho da área de aterrissagem.
+[Lunar Lander](https://en.wikipedia.org/wiki/Lunar_Lander_(1979_video_game)) é um clássico, em que os jogadores tentam fazer um piloto de uma lua Lander em um ponto simples de terreno lunar. Qualquer pessoa nasceu na 70 tem mais chances de horas em um horário comercial com seus olhos colados com esse vetor entregue plummeting do céu. Como um player navega pelo seu envio para uma área de aterrissagem desejada, o terreno é dimensionado para revelar cada vez mais detalhes. Sucesso significa o patamar dentro do limite seguro de velocidade horizontal e vertical. Os pontos são concedidos para o tempo gasto e o combustível restante, com um multiplicador com base no tamanho da área de aterrissagem.
 
-Além do jogo, era de jogos arcade trouxe constante inovação de esquemas de controle. Das configurações mais simples de joystick e botão de 4 vias (visto no icônico [Pac-Man](https://en.wikipedia.org/wiki/Pac-Man)) para os esquemas altamente específicos e complicados vistos no final dos anos 90 e 00s (como aqueles em simuladores de Golfe e atiradores de trilho). O esquema de entrada usado na máquina Lander Lunar é particularmente interessante por dois motivos: moderar imersão e apelo.
+Além do jogo, a época de partida dos jogos trouxe inovação constante de esquemas de controle. Do joystick e das configurações de botão mais simples de 4 vias (visto no icônico [Pac-Man](https://en.wikipedia.org/wiki/Pac-Man)) para os esquemas altamente específicos e complicados vistos no final anos 90 e 00s (como aqueles em simuladores de golfe e emissores de trilho). O esquema de entrada usado na máquina lander lunar é particularmente intrigante por dois motivos: moderação e imersão.
 
-![Console do Lunar Lander do Atari arcade](images/atariconsole.png)<br>
-*Console do Atari Lunar Lander arcade*
+![Console de Atari lunar Lander](images/atariconsole.png)<br>
+*Console Atari lunar Lander*
 
-Por que Atari e muitas outras empresas jogos decidiu repensar a entrada?
+Por que Atari e tantas outras empresas de jogos decidem reconsiderar a entrada?
 
-Uma criança percorrendo um arcade naturalmente será ser intrigada com os mais recente e flashiest de máquina. Mas Lander Lunar apresenta uma oficina de entrada novel que me chamou a atenção na multidão.
+Um criança percorrendo um intrigada será naturalmente o mais novo computador flashiest. Mas o lunar Lander apresenta um mecânico de entrada romance que me esgotou da sua escala.
 
-Lander Lunar usa dois botões para trocar a nave esquerda e direita e um **foco alavanca** para controlar a quantidade de foco que produz a nave. Essa alavanca oferece aos usuários um certo nível de sofisticação que um joystick regular não pode fornecer. Também é um componente comum para cabines de aviação modernos. Atari queria Lunar Lander para que o usuário na sensação de que eles foram de fato um piloto de um módulo lunar. Esse conceito é conhecido como **imersão táteis**.
+O lander lunar usa dois botões para girar o envio para a esquerda e para a direita e uma **alavanca de Thrustmaster** para controlar a quantidade de Thrustmaster que o navio produz. Essa alavanca dá aos usuários um determinado nível de astúcia que um joystick regular não pode fornecer. Também é um componente comum às ferramentas cockpit de aviação modernas. Atari queria lander lunar para aprofundar o usuário na sensação de que eles estavam na verdade, realizando um piloto de um módulo lunar. Esse conceito é conhecido como **tactile imersão**.
 
-Imersão táteis é a experiência de comentários de aparelhos de executar ações repetitivas. Nesse caso, a ação repetitiva de ajustar a alavanca de limitação e a rotação que seus olhos veriam e ouvir nossos ouvidos, ajuda a conectar-se o jogador para o ato de um navio de aterrissagem na superfície da lua. Esse conceito pode ser vinculado ao psicológico conceito de "fluxo". Em que um usuário é totalmente absorvido em uma tarefa que tem a mistura certa de desafio e a recompensa, ou em termos mais simples, eles são "na"zona.
+TACTILE imersão é a experiência de comentários de sensor de execução de ações de redundante. Nesse caso, a ação repetitiva de ajustar a alavanca de limitação e a rotação que nossos olhos veem e nossos ouvidos ouvem, ajuda a conectar o jogador ao ato de pouso de uma entrega na superfície da lua. Esse conceito pode ser vinculado ao conceito de psicológica de "Flow". Onde um usuário é totalmente absorvido em uma tarefa que tem a combinação certa de desafio e recompensa, ou ainda mais simplesmente, eles estão "na zona".
 
-Sem dúvida, o tipo mais proeminente de imersão na realidade mista é imersão espacial. O ponto de realidade misturada é enganar sozinhos acreditar que esses objetos digitais existem no mundo real. Podemos estiver sintetizar hologramas em nossos arredores espacialmente imersos no experiências e ambientes inteiros. Isso não significa que podemos ainda não é possível empregar outros tipos de imersão em nossas experiências assim como Atari fez com táteis imersão no Lander Lunar.
+De forma improvada, o tipo mais proeminente de imersão em realidade misturada é imersão espacial. O ponto total da realidade misturada é nos enganar a acreditar que esses objetos digitais existem no mundo real. Estamos sintetizando hologramas em nossos arredores, imersos espacialmente em ambientes e experiências inteiros. Isso não significa que ainda podemos empregar outros tipos de imersão em nossas experiências, assim como Atari fez com tactile imersão no lunar Lander.
 
-## <a name="designing-with-immersion"></a>Criação de imersão
+## <a name="designing-with-immersion"></a>Criando com imersão
 
-Como talvez aplicamos táteis imersão para uma continuação atualizada, volumétricas o Atari clássico? Antes de lidar com o esquema de entrada, a construção de jogo para espaço dimensional de 3 precisa ser resolvida.
+Como podemos aplicar tactile imersão a uma atualização volumétricos sequência para o Atari clássico? Antes de lidar com o esquema de entrada, a construção de jogos para espaço tridimensional precisa ser resolvida.
 
 ![Visualizando o mapeamento de superfície no HoloLens](images/surfacemapping.png)<br>
 *Visualizando o mapeamento espacial no HoloLens*
 
-Aproveitando o ambiente do usuário, temos efetivamente opções de terreno infinito para nosso módulo lunar de aterrissagem. Para tornar o jogo mais parecido com o título original, um usuário poderia potencialmente manipular e colocar os painéis de aterrissagem das dificuldades de variáveis em seu ambiente.
+Aproveitando o ambiente de um usuário, nós efetivamente temos opções de terrenos infinitas para o patamar do nosso módulo lunar. Para tornar o jogo mais parecido com o título original, um usuário poderia potencialmente manipular e colocar os pads de pouso de diversas dificuldades em seu ambiente.
 
-![Pilotando o módulo Lunar](images/640px-lm-hero.jpg)<br>
-*Pilotando o módulo Lunar*
+![Pilotando o módulo lunar](images/640px-lm-hero.jpg)<br>
+*Pilotando o módulo lunar*
 
-Exigir que o usuário saiba o esquema de entrada, controlar a nave e ter um destino pequeno cheguem em é pedir muito. Uma experiência de jogo bem-sucedida de recursos a combinação certa de desafio e a recompensa. O usuário deve ser capaz de escolher um nível de dificuldade, com o modo mais fácil simplesmente exigir que o usuário com êxito cheguem em uma área definida pelo usuário em uma superfície verificados pelo HoloLens. Depois que um usuário obtém o travamento do jogo, eles podem, em seguida, ligue a dificuldade como acharem melhor.
+Exigir que o usuário Aprenda o esquema de entrada, controle a remessa e faça com que um pequeno destino seja um grande alvo é muito a ser solicitado. Uma experiência de jogo bem-sucedida apresenta a combinação certa de desafio e recompensa. O usuário deve ser capaz de escolher um nível de dificuldade, com o modo mais fácil simplesmente exigir que o usuário alcance com êxito uma área definida pelo usuário em uma superfície verificada pelo HoloLens. Quando um usuário sai do jogo, ele pode então se ajustar à dificuldade que eles veem.
 
 ### <a name="adding-input-for-hand-gestures"></a>Adicionando entrada para gestos de mão
 
-Entrada de base do HoloLens tem apenas dois gestos - [ar toque e Bloom](gestures.md). Os usuários não precisam se lembrar de nuances contextuais ou uma lista de gestos específicos que torna a interface da plataforma versátil e fácil de aprender. Enquanto o sistema só pode expor esses gestos de dois, HoloLens, como um dispositivo é capaz de controlar duas mãos ao mesmo tempo. Nossos ode para Lander Lunar é um [aplicativo imersivo](app-model.md) que significa que temos a capacidade de estender o conjunto de gestos para aproveitar duas mãos e adicionar nossos própria fantasticamente táteis meios para navegação de módulo lunar base.
+A entrada base do HoloLens tem apenas dois gestos – [toque e flor](gestures.md). Os usuários não precisam lembrar nuances contextuais ou uma lista lavanderia de gestos específicos que tornam a interface da plataforma versátil e fácil de aprender. Embora o sistema possa expor apenas esses dois gestos, o HoloLens como um dispositivo é capaz de rastrear duas mãos ao mesmo tempo. Nosso ode para lunar Lander é um [aplicativo de imersão](app-model.md) que significa que temos a capacidade de estender o conjunto base de gestos para aproveitar duas mãos e adicionar nossa própria agradavelmente tactile significa para a navegação de módulo lunar.
 
-Examinando o esquema de controle original, **precisávamos resolver para o foco e a rotação**. A limitação é a rotação no novo contexto adiciona um eixo adicional (tecnicamente, duas, mas o eixo Y é menos importante para inicial). Os movimentos de remessa distintos duas naturalmente se presta a ser mapeado para cada mão:
+Voltando ao esquema de controle original, **precisávamos resolver para Thrustmaster e Rotation**. A limitação é a rotação no novo contexto adiciona um eixo adicional (tecnicamente, dois, mas o eixo Y é menos importante para a aterrissagem). Os dois movimentos de envio distintos naturalmente se prestam para serem mapeados para cada mão:
 
-![Toque e gesto para girar lander em todos os três eixos de arrastar](images/module-handdrag.gif)<br>
-*Toque e gesto para girar lander em todos os três eixos de arrastar*
+![Gesto de tocar e arrastar para girar Lander em todos os três eixos](images/module-handdrag.gif)<br>
+*Gesto de tocar e arrastar para girar Lander em todos os três eixos*
 
-**Foco**
+**Thrustmaster**
 
-A alavanca na máquina arcade original mapeada para uma escala de valores, maior será a alavanca foi movida o foco mais foi aplicado à nave. Uma nuance importante ressaltar aqui é que o usuário pode levar sua mão do controle e manter um valor desejado. Podemos efetivamente usar o comportamento de toque e arraste para alcançar o mesmo resultado. O valor de foco começa em zero. O usuário tocar e arrasta para aumentar o valor. Nesse ponto pode permitir que vá para mantê-lo. Qualquer alteração de valor de gesto de tocar e arrastar seria o delta do valor original.
+A alavanca no computador original de alta prioridade mapeada para uma escala de valores, quanto mais alta a alavanca foi movida, mais o ThrustMaster foi aplicado à remessa. Uma nuance importante para destacar aqui é que o usuário pode tirar seu alcance do controle e manter um valor desejado. Podemos usar efetivamente o comportamento de toque e arrastar para obter o mesmo resultado. O valor de Thrustmaster começa em zero. O usuário toca e arrasta para aumentar o valor. Nesse ponto, eles poderiam deixar de continuar a mantê-lo. Qualquer alteração de valor de gesto de toque e arrastar seria o Delta do valor original.
 
 **Rotação**
 
-Isso é um pouco mais complicado. Tendo holográfica botões "girar" tocar o faz para obter uma experiência terrível. Há não um controle físico aproveitar, portanto, o comportamento deve vir de manipulação de um objeto que representa o lander, ou com o lander em si. Criamos um método usando o toque e arrastar que permite que um usuário efetivamente "push e pull"-lo na direção eles querem enfrentam. Qualquer momento em que um usuário toca e segura, o ponto no espaço em que o gesto foi iniciado se torna a origem para a rotação. Arrastando da origem converte o delta de tradução da mão (X, Y, Z) e aplica-se para o delta dos valores de rotação do lander. Ou, mais simplesmente, *arrastar esquerda <> – logo, <> – para baixo, para frente <> – em espaços gira a nave adequadamente*.
+Isso é um pouco mais complicado. Ter os botões "girar" de Holographic para tocar para uma experiência terrível. Não há um controle físico para aproveitar, portanto, o comportamento deve vir da manipulação de um objeto que representa o Lander ou com o próprio Lander. Nós reunimos um método usando TAP-and-arraste, que permite que um usuário "empurre e empurre" com eficiência na direção que desejam que ele tenha uma face. Sempre que um usuário toca e se mantém, o ponto no espaço em que o gesto foi iniciado se torna a origem para rotação. Arrastar da origem converte o Delta da tradução do lado (X, Y, Z) e o aplica ao Delta dos valores de rotação do Lander. Ou, mais simplesmente, arrastando para *a esquerda <-> direito, < > para baixo, encaminhar <-> de volta em espaços gira a remessa de acordo*.
 
-Uma vez que o HoloLens podem acompanhar duas mãos, rotação pode ser atribuída para a direita enquanto o foco é controlado à esquerda. Sofisticação é o fator determinante para o sucesso nesse jogo. O *sentir* dessas interações é a mais alta prioridade absoluta. Especialmente no contexto de imersão táteis. Um navio que reaja rápido demais seria desnecessariamente difícil conduzam, enquanto um muito lento exigiria que o usuário "por push e pull" na nave por um incômoda longo período de tempo.
+Como o HoloLens pode acompanhar duas mãos, a rotação pode ser atribuída à mão à direita enquanto o ThrustMaster é controlado pela esquerda. Astúcia é o fator determinante para o sucesso neste jogo. A *sensação* dessas interações é a prioridade mais alta absoluta. Especialmente no contexto de tactile imersão. Um envio que reage muito rapidamente seria desnecessariamente difícil de ser direcionado, enquanto um pouco lento exigiria que o usuário "Envie por push e puxe" na entrega por um longo período de tempo estranho.
 
-### <a name="adding-input-for-game-controllers"></a>Adicionando entrada para controladores de jogos
+### <a name="adding-input-for-game-controllers"></a>Adicionando entrada para controladores de jogo
 
-Embora os gestos de mão no HoloLens fornecem um método novel de um controle refinado, ainda há determinada falta de comentários táteis 'true' obtida da analog controles. Conectar-se um controlador de jogo do Xbox permite trazer de volta nesse sentido de relacionamento físico tem posto, aproveitando os cartões de controle para manter o controle refinado.
+Enquanto os gestos de mão no HoloLens fornecem um método romance de controle refinado, ainda há uma certa falta de comentários de tactile "verdadeiro" que você obtém de controles analógicos. Conectar um controlador de jogo do Xbox permite voltar essa sensação de física, aproveitando os pentes de controle para manter o controle refinado.
 
-Há várias maneiras de aplicar o esquema de controle relativamente simples para o controlador do Xbox. Uma vez que estamos tentando permanecer o mais próximo do arcade original configurar possível, **motivação** mapeia o melhor para o botão de gatilho. Esses botões são controles analógicos, que significa que eles têm mais de simples *e desativar* afirma, eles realmente responder ao grau de pressão para colocar neles. Isso nos dá uma construção semelhante como o **foco alavanca**. Ao contrário do jogo original e o gesto de mão, esse controle será recortar o foco da nave depois que um usuário para exercendo pressão sobre o gatilho. Ele ainda fornece ao usuário o mesmo grau de sofisticação como fez o jogo arcade original.
+Há várias maneiras de aplicar o esquema de controle relativamente direto ao controlador Xbox. Como estamos tentando permanecer o mais próximo possível da configuração original, o **Thrustmaster** mapeia melhor para o botão disparador. Esses botões são controles analógicos, o que significa que eles têm mais do que Estados simples *e* desligados, eles realmente respondem ao grau de pressão colocados neles. Isso nos dá um constructo semelhante à **alavanca de Thrustmaster**. Ao contrário do jogo original e do gesto de mão, esse controle recortará a Thrustmaster do navio quando um usuário parar de colocar a pressão no gatilho. Ele ainda dá ao usuário o mesmo grau de astúcia que o jogo de Altova original.
 
-![Analógico esquerdo é mapeado para Yaw e reverter, direcional direita é mapeado para vende e reverter](images/thumbsticksidebyside.gif)<br>
-*Analógico esquerdo é mapeado para yaw e reverter; alavanca direcional direita é mapeado para vende e reverter*
+![Thumbstick à esquerda é mapeada para guinada e roll, a Thumbstick direita é mapeada para pitch e roll](images/thumbsticksidebyside.gif)<br>
+*O Thumbstick esquerdo é mapeado para guinada e roll; o Thumbstick direito é mapeado para pitch e roll*
 
-Os alavancas direcionais duplas naturalmente se presta à rotação controladora de remessa. Infelizmente, há 3 eixos em que a nave pode girar e duas alavancas direcionais que dão suporte a dois eixos. Essa incompatibilidade significa um analógico controles um eixo; ou, não há sobreposição dos eixos para o alavancas direcionais. A solução anterior terminou se sentindo "interrompida", pois alavancas direcionais inerentemente seu local de mesclagem valores X e Y. A última solução necessários alguns testes para encontrar quais eixos redundantes se sentir mais natural. O exemplo final usa *yaw* e *roll* (eixos Y e X) para o analógico esquerdo, e *tom* e *roll* (eixos Z e X) para a direita direcional. Isso achamos mais natural quanto *roll* parece independentemente emparelhar bem com *yaw* e *tom*. Como uma observação adicional, usando os dois alavancas direcionais para *roll* também acontece dobrar o valor de rotação; é muito divertido para ter o lander fazer loops.
+O Thumbsticks duplo se presta naturalmente ao controle da rotação de remessa. Infelizmente, há 3 eixos nos quais a remessa pode girar e duas Thumbsticks que dão suporte a dois eixos. Essa incompatibilidade significa que um Thumbstick controla um eixo; ou há uma sobreposição de eixos para o Thumbsticks. A solução anterior acabou de se sentir "quebrada", já que Thumbsticks de forma inerente mesclar seus valores X e Y locais. A última solução exigiu algum teste para descobrir quais eixos redundantes se sentem mais naturais. O exemplo final usa  a guinada e *roll* (eixos Y e x) para o Thumbstick esquerdo, e *pitch* e *roll* (eixos Z e x) para a Thumbstick direita. Isso parecia que a rolagem  mais natural parece ser bem emparelhada com *desvio* e *inclinação*. Como uma observação adicional, o uso de Thumbsticks para *roll* também ocorre para dobrar o valor de rotação; é muito divertido ter os loops Lander.
 
-Este aplicativo de exemplo demonstra como espacial reconhecimento e imersão táteis significativamente pode alterar uma experiência graças ao modalidades de entrada extensíveis do Windows Mixed Reality. Enquanto o Lunar Lander pode ser se aproximando 40 anos de idade, os conceitos expostos com pouca octógono com legs ficará ativo para sempre. Quando imaginando o futuro, por que não parecem passado?
+Este aplicativo de exemplo demonstra como o reconhecimento espacial e tactile imersão podem alterar significativamente uma experiência graças às modalidades de entrada extensível da realidade mista do Windows. Embora o lunar Lander possa estar perto de 40 anos de idade, os conceitos expostos com esse pequeno octógono-com-pernas residirão sempre. Ao imaginar o futuro, por que não examinar o passado?
 
 ## <a name="technical-details"></a>Detalhes técnicos
 
-Você pode encontrar scripts e pré-fabricados para o aplicativo de exemplo do módulo Lunar sobre o [GitHub de laboratórios de Design de realidade mista](https://github.com/Microsoft/MRDesignLabs_Unity_LunarModule).
+Você pode encontrar scripts e pré-fabricados para o aplicativo de exemplo de módulo lunar no [GitHub de laboratórios de design de realidade misturada](https://github.com/Microsoft/MRDesignLabs_Unity_LunarModule).
 
 ## <a name="about-the-author"></a>Sobre o autor
 
 <table style="border-collapse:collapse" padding-left="0px">
 <tr>
 <td style="border-style: none" width="60"><img alt="Picture of Addison Linville" width="60" height="60" src="images/addisonlinville-tile-60px.jpg"></td>
-<td style="border-style: none"><b>Addison Linville</b><br>Designer de UX @Microsoft</td>
+<td style="border-style: none"><b>Linville de Addison</b><br>Designer de UX@Microsoft</td>
 </tr>
 </table>
 
 ## <a name="see-also"></a>Consulte também
-* [Controladores de movimento](motion-controllers.md)
+* [Controladores de movimentos](motion-controllers.md)
 * [Gestos](gestures.md)
 * [Tipos de aplicativos de realidade misturada](types-of-mixed-reality-apps.md)

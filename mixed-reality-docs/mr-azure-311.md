@@ -1,11 +1,11 @@
 ---
-title: MR e 311 - Microsoft Graph do Azure
-description: Conclua este curso para saber como aproveitar o Microsoft Graph e conecte-se aos dados que direcionam a produtividade, dentro de um aplicativo de realidade misturada.
+title: Sr e Azure 311-Microsoft Graph
+description: Conclua este curso para aprender a aproveitar Microsoft Graph e conectar-se aos dados que impulsionam a produtividade, em um aplicativo de realidade misturada.
 author: drneil
 ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
-keywords: realidade mista, Azure, academy, unity, tutorial, api, o microsoft graph, hololens, imersivo, vr
+keywords: Azure, realidade mista, Academia, Unity, tutorial, API, Microsoft Graph, hololens, imersão, VR
 ms.openlocfilehash: 04c72a7ef7724cfcc27867f7f003c171a6f7851f
 ms.sourcegitcommit: 06ac2200d10b50fb5bcc413ce2a839e0ab6d6ed1
 ms.translationtype: MT
@@ -14,268 +14,268 @@ ms.lasthandoff: 07/09/2019
 ms.locfileid: "67694523"
 ---
 >[!NOTE]
->Os tutoriais da academia de realidade mista foram criados com o HoloLens (1º gen) e misto realidade fones Imersivos em exposição em mente.  Como tal, achamos que é importante deixar esses tutoriais em vigor para os desenvolvedores que ainda estiver procurando por orientação no desenvolvimento para esses dispositivos.  Esses tutoriais serão **_não_** ser atualizados com os conjuntos de ferramentas ou interações que está sendo usadas para o HoloLens 2 a mais recente.  Eles serão mantidos para continuar trabalhando nos dispositivos com suporte. Haverá uma nova série de tutoriais que serão lançados no futuro e que demonstra como desenvolver para o HoloLens 2.  Este aviso será atualizado com um link para esses tutoriais quando são lançadas.
+>Os tutoriais misturados do Academia de realidade foram projetados com o HoloLens (1º gen) e com o fone de cabeça de imersão de realidade misturada.  Como tal, achamos que é importante deixar esses tutoriais em vigor para os desenvolvedores que ainda estão procurando orientação no desenvolvimento para esses dispositivos.  Esses tutoriais **_não_** serão atualizados com os conjuntos de ferramentas e as interações mais recentes usados para o HoloLens 2.  Eles serão mantidos para continuar a trabalhar nos dispositivos com suporte. Haverá uma nova série de tutoriais que serão publicados no futuro, que demonstrarão como desenvolver para o HoloLens 2.  Esse aviso será atualizado com um link para esses tutoriais quando eles forem postados.
 
-# <a name="mr-and-azure-311---microsoft-graph"></a>MR e 311 - Microsoft Graph do Azure
+# <a name="mr-and-azure-311---microsoft-graph"></a>Sr e Azure 311-Microsoft Graph
 
-Neste curso, você aprenderá a usar *Microsoft Graph* fazer logon na sua conta da Microsoft usando a autenticação segura dentro de um aplicativo de realidade misturada. Você, em seguida, recuperar e exibir suas reuniões agendadas na interface do aplicativo.
+Neste curso, você aprenderá a usar o *Microsoft Graph* para fazer logon em seu conta Microsoft usando a autenticação segura em um aplicativo de realidade misturada. Em seguida, você irá recuperar e exibir suas reuniões agendadas na interface do aplicativo.
 
 ![](images/AzureLabs-Lab311-00.png)
 
-*Microsoft Graph* é um conjunto de APIs projetados para permitir o acesso a muitos dos serviços da Microsoft. Microsoft descreve o Microsoft Graph como sendo uma matriz de recursos conectados por relações, o que significa que ele permite que um aplicativo para acessar todos os tipos de dados do usuário conectado. Para obter mais informações, visite o [página do Microsoft Graph](https://developer.microsoft.com/graph).
+*Microsoft Graph* é um conjunto de APIs criadas para permitir o acesso a muitos dos serviços da Microsoft. A Microsoft descreve Microsoft Graph como sendo uma matriz de recursos conectados por relações, o que significa que ele permite que um aplicativo acesse todos os tipos de dados de usuário conectados. Para obter mais informações, visite a [página Microsoft Graph](https://developer.microsoft.com/graph).
 
-Desenvolvimento incluirá a criação de um aplicativo em que o usuário será instruído a mantenha o foco em e, em seguida, toque em uma esfera, que solicitará ao usuário para fazer logon com segurança uma conta da Microsoft. Depois de conectado à sua conta, o usuário será capaz de ver uma lista de reuniões agendadas para o dia.
+O desenvolvimento incluirá a criação de um aplicativo no qual o usuário será instruído a olhar e, em seguida, tocará em uma esfera, que solicitará que o usuário faça logon com segurança em um conta Microsoft. Depois de conectado à sua conta, o usuário poderá ver uma lista de reuniões agendadas para o dia.
 
-Com a conclusão deste curso, você terá uma realidade misturada aplicativo HoloLens, que será capaz de fazer o seguinte:
+Após a conclusão deste curso, você terá um aplicativo de HoloLens de realidade misturada, que poderá fazer o seguinte:
 
-1.  Usando o gesto de toque, toque em um objeto, que solicitará que o usuário faça logon em uma Account da Microsoft (mover para fora do aplicativo para fazer logon e, em seguida, volta para o aplicativo novamente).
+1.  Usando o gesto de toque, toque em um objeto, que solicitará que o usuário faça logon em uma conta da Microsoft (saindo do aplicativo para fazer logon e, em seguida, volte para o aplicativo novamente).
 2.  Exiba uma lista de reuniões agendadas para o dia. 
 
-Em seu aplicativo, ele cabe a você sobre como você irá integrar os resultados com seu design. Este curso é projetado para ensinar a você como integrar um serviço do Azure ao seu projeto do Unity. Ele é seu trabalho para usar o conhecimento obtido com este curso para aprimorar seu aplicativo de realidade misturada.
+Em seu aplicativo, cabe a você como você integrará os resultados com seu design. Este curso foi projetado para ensinar a você como integrar um serviço do Azure com seu projeto do Unity. É seu trabalho usar o conhecimento obtido deste curso para aprimorar seu aplicativo de realidade misturada.
 
 ## <a name="device-support"></a>Suporte a dispositivos
 
 <table>
 <tr>
-<th>Curso</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Headsets imersivos</a></th>
+<th>Course</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Headsets imersivos</a></th>
 </tr><tr>
-<td> MR e 311 do Azure: Microsoft Graph</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> </td>
+<td> Sr e Azure 311: Microsoft Graph</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> </td>
 </tr>
 </table>
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
 > [!NOTE]
-> Este tutorial é projetado para desenvolvedores que têm experiência básica com o Unity e C#. Também esteja ciente de que os pré-requisitos e instruções por escrito neste documento representam o que tenha sido testado e verificado no momento da gravação (julho de 2018). Você é livre para usar o software mais recente, conforme listado dentro de [instalar as ferramentas](install-the-tools.md) do artigo, embora ele não deve ser suposto que as informações neste curso perfeitamente corresponderá o que você encontrará no software mais recente que o que está listado abaixo.
+> Este tutorial foi desenvolvido para desenvolvedores que têm experiência básica com o Unity C#e o. Além disso, lembre-se de que os pré-requisitos e as instruções escritas neste documento representam o que foi testado e verificado no momento da gravação (julho de 2018). Você está livre para usar o software mais recente, conforme listado no artigo [instalar as ferramentas](install-the-tools.md) , embora não seja recomendável que as informações neste curso correspondam perfeitamente ao que você encontrará no software mais recente do que o que está listado abaixo.
 
-Recomendamos que o hardware e software para este curso a seguir:
+Recomendamos o seguinte hardware e software para este curso:
 
-- Um computador de desenvolvimento
-- [Windows 10 Fall Creators Update (ou posterior) com o modo de desenvolvedor habilitado](install-the-tools.md#installation-checklist)
-- [O SDK mais recente do Windows 10](install-the-tools.md#installation-checklist)
-- [2017.4 do Unity](install-the-tools.md#installation-checklist)
+- Um PC de desenvolvimento
+- [Atualização dos criadores de outono do Windows 10 (ou posterior) com o modo de desenvolvedor habilitado](install-the-tools.md#installation-checklist)
+- [O SDK do Windows 10 mais recente](install-the-tools.md#installation-checklist)
+- [Unity 2017,4](install-the-tools.md#installation-checklist)
 - [Visual Studio 2017](install-the-tools.md#installation-checklist)
 - Um [Microsoft HoloLens](hololens-hardware-details.md) com o modo de desenvolvedor habilitado
-- Acesso à Internet para a instalação do Azure e a recuperação de dados do Microsoft Graph
-- Válida **Account da Microsoft** (pessoais ou corporativas ou de estudante)
-- Algumas reuniões agendadas para o dia atual, usando a mesma Account da Microsoft
+- Acesso à Internet para a instalação do Azure e recuperação de dados de Microsoft Graph
+- Uma **conta da Microsoft** válida (pessoal ou corporativa/de estudante)
+- Algumas reuniões agendadas para o dia atual, usando a mesma conta da Microsoft
 
 ### <a name="before-you-start"></a>Antes de começar
 
-1.  Para evitar tendo problemas para criar esse projeto, é altamente recomendável que você crie o projeto mencionado neste tutorial em uma pasta raiz ou perto de raiz (caminhos de pasta longa podem causar problemas em tempo de compilação).
-2.  Configurar e testar o HoloLens. Se você precisar dar suporte a configuração do seu HoloLens, [Certifique-se de visitar o artigo de instalação do HoloLens](https://docs.microsoft.com/hololens/hololens-setup). 
-3.  É uma boa ideia executar calibragem e ajuste de Sensor ao começar a desenvolver um new App HoloLens (às vezes, ele pode ajudar a executar essas tarefas para cada usuário). 
+1.  Para evitar problemas de criação desse projeto, é altamente recomendável que você crie o projeto mencionado neste tutorial em uma pasta raiz ou quase raiz (caminhos de pasta longos podem causar problemas em tempo de compilação).
+2.  Configure e teste seu HoloLens. Se você precisar de suporte para configurar seu HoloLens, [visite o artigo configuração do hololens](https://docs.microsoft.com/hololens/hololens-setup). 
+3.  É uma boa ideia executar a calibragem e o ajuste do sensor ao começar a desenvolver um novo aplicativo do HoloLens (às vezes, ele pode ajudar a executar essas tarefas para cada usuário). 
 
-Para obter ajuda sobre a calibragem, siga este [link para o artigo de calibragem HoloLens](calibration.md#hololens).
+Para obter ajuda sobre calibragem, siga este [link para o artigo Calibration do HoloLens](calibration.md#hololens).
 
-Para obter ajuda sobre ajuste de Sensor, siga este [link para o artigo de ajuste de Sensor HoloLens](sensor-tuning.md).
+Para obter ajuda sobre o ajuste do sensor, siga este [link para o artigo de ajuste do sensor do HoloLens](sensor-tuning.md).
 
-## <a name="chapter-1---create-your-app-in-the-application-registration-portal"></a>Capítulo 1 - criar seu aplicativo no Portal de registro de aplicativo
+## <a name="chapter-1---create-your-app-in-the-application-registration-portal"></a>Capítulo 1-criar seu aplicativo no portal de registro de aplicativos
 
-Para começar, você precisará criar e registrar seu aplicativo na **Portal de registro de aplicativo**.
+Para começar, você precisará criar e registrar seu aplicativo no **portal de registro de aplicativos**.
 
-Neste capítulo, você também irá encontrar a chave de serviço que permitirá que você faça chamadas para *Microsoft Graph* para acessar o conteúdo da sua conta.
+Neste capítulo, você também encontrará a chave de serviço que permitirá fazer chamadas para *Microsoft Graph* acessar o conteúdo da conta.
 
-1.  Navegue até a [Portal de registro de aplicativo do Microsoft](https://apps.dev.microsoft.com) e faça logon com sua Account da Microsoft. Depois de ter conectado, você será redirecionado para o **Portal de registro de aplicativo**.
+1.  Navegue até o [portal de registro de aplicativos da Microsoft](https://apps.dev.microsoft.com) e faça logon com sua conta da Microsoft. Depois de fazer logon, você será redirecionado para o portal de **registro de aplicativo**.
 
-2.  No **meus aplicativos** seção, clique no botão **adicionar um aplicativo**.
+2.  Na seção **meus aplicativos** , clique no botão **Adicionar um aplicativo**.
 
     ![](images/AzureLabs-Lab311-01.png)![](images/AzureLabs-Lab311-02.png)
 
     > [!IMPORTANT]
-    > O **Portal de registro de aplicativo** pode ser diferente, dependendo se você tiver trabalhado anteriormente com *o Microsoft Graph*. A seguir capturas de tela exibir essas versões diferentes.
+    > O **portal de registro de aplicativos** pode parecer diferente, dependendo se você já trabalhou com *Microsoft Graph*. As capturas de tela abaixo exibem essas versões diferentes.
 
-3.  Adicionar um nome para seu aplicativo e clique em **criar**.
+3.  Adicione um nome para seu aplicativo e clique em **criar**.
 
     ![](images/AzureLabs-Lab311-03.png)
 
-4.  Quando o aplicativo tiver sido criado, você será redirecionado para a página principal do aplicativo. Cópia de **Id do aplicativo** e anote esse valor em um lugar seguro, você irá usá-lo em breve em seu código.
+4.  Depois que o aplicativo tiver sido criado, você será redirecionado para a página principal do aplicativo. Copie a **ID do aplicativo** e anote esse valor em algum lugar seguro, você o usará em breve no seu código.
 
     ![](images/AzureLabs-Lab311-04.png)
 
-5.  No **plataformas** seção, certifique-se **aplicativo nativo** é exibida. Se *não* clique em **Adicionar plataforma** e selecione **aplicativo nativo**.
+5.  Na seção **plataformas** , verifique se o **aplicativo nativo** é exibido. Se *não* clique em **Adicionar plataforma** e selecione **aplicativo nativo**.
 
     ![](images/AzureLabs-Lab311-05.png)
 
-6.  Role para baixo na mesma página e na seção chamada **permissões do Microsoft Graph** você precisará adicionar permissões adicionais para o aplicativo. Clique em **Add** lado **permissões delegadas**.
+6.  Role para baixo na mesma página e, na seção chamada **Microsoft Graph permissões** , você precisará adicionar permissões adicionais para o aplicativo. Clique em **Adicionar** ao lado de **permissões delegadas**.
 
     ![](images/AzureLabs-Lab311-06.png)
 
-7.  Como você deseja que seu aplicativo para acessar o calendário do usuário, marque a caixa denominada **Calendars** e clique em **Okey**.
+7.  Como você deseja que seu aplicativo acesse o calendário do usuário, marque a caixa chamada **calendários. Leia** e clique em **OK**.
 
     ![](images/AzureLabs-Lab311-07.png)
 
-8.  Role para baixo e clique no **salvar** botão.
+8.  Role até a parte inferior e clique no botão **salvar** .
 
     ![](images/AzureLabs-Lab311-08.png)
 
-9.  O salvamento será confirmado e você pode fazer logoff do **Portal de registro de aplicativo**.
+9.  Seu salvamento será confirmado e você poderá fazer logoff do **portal de registro de aplicativos**.
 
-## <a name="chapter-2---set-up-the-unity-project"></a>Capítulo 2 - configurar o projeto do Unity
+## <a name="chapter-2---set-up-the-unity-project"></a>Capítulo 2 – configurar o projeto do Unity
 
-A seguir é um conjunto típico para cima para o desenvolvimento de realidade misturada e como tal, é um bom modelo para outros projetos.
+A seguir está uma configuração típica para o desenvolvimento com realidade misturada e, como tal, é um bom modelo para outros projetos.
 
-1.  Abra *Unity* e clique em **New**.
+1.  Abra o *Unity* e clique em **novo**.
 
     ![](images/AzureLabs-Lab311-09.png)
 
-2.  Você precisa fornecer um nome de projeto do Unity. Insert **MSGraphMR**. Verifique se o modelo de projeto é definido como **3D**. Defina as **local** para algum lugar adequado para você (Lembre-se de que quanto mais próximo para diretórios raiz é melhor). Em seguida, clique em **criar projeto**.
+2.  Você precisa fornecer um nome de projeto de Unity. Insira **MSGraphMR**. Verifique se o modelo de projeto está definido como **3D**. Defina o **local** como algum lugar apropriado para você (Lembre-se de que, mais próximo de diretórios raiz é melhor). Em seguida, clique em **criar projeto**.
 
     ![](images/AzureLabs-Lab311-10.png)
 
-3.  Com o Unity aberta, vale a pena verificar o padrão **Editor de scripts** é definido como **Visual Studio**. Vá para **edite** > **preferências** e, em seguida, na nova janela, navegue até **ferramentas externas**. Alteração **Editor de Script externo** à **Visual Studio 2017**. Fechar o **preferências** janela.
+3.  Com o Unity Open, vale a pena verificar se o **Editor de script** padrão está definido como **Visual Studio**. Vá para **Editar** > **preferências** e, em seguida, na janela novo, navegue até **Ferramentas externas**. Altere o **Editor de script externo** para o **Visual Studio 2017**. Feche a janela **preferências** .
 
     ![](images/AzureLabs-Lab311-11.png)
 
-4.  Vá para **arquivo** > **configurações de Build** e selecione **plataforma Universal do Windows**, em seguida, clique no **alternar plataforma** botão Aplicar sua seleção.
+4.  Vá para **arquivo** > **configurações de compilação** e selecione **plataforma universal do Windows**, em seguida, clique no botão **alternar plataforma** para aplicar sua seleção.
 
     ![](images/AzureLabs-Lab311-12.png)
 
-5.  Enquanto estiver na **arquivo** > **configurações de Build**, certifique-se de que:
+5.  Ainda em**configurações de compilação**de **arquivo** > , verifique se:
 
-    1. **Dispositivo de destino** é definido como **HoloLens**
-    2. **Tipo de compilação** é definido como **D3D**
-    3. **SDK** é definido como **mais recente instalada**
-    4. **Versão do Visual Studio** é definido como **mais recente instalada**
-    5. **Compilar e executar** é definido como **Máquina Local**
-    6. Salve a cena e adicioná-lo para a compilação.
+    1. O **dispositivo de destino** está definido como **HoloLens**
+    2. O **tipo de compilação** está definido como **D3D**
+    3. O **SDK** está definido para o **mais recente instalado**
+    4. A **versão do Visual Studio** está definida para o **mais recente instalado**
+    5. **Compilar e executar** é definido como **computador local**
+    6. Salve a cena e adicione-a à compilação.
 
-        1. Fazer isso selecionando **cenas abra Adicionar**. Salvamento janela será exibida.
+        1. Faça isso selecionando **Adicionar abrir cenas**. Uma janela salvar será exibida.
 
             ![](images/AzureLabs-Lab311-13.png)
 
-        2. Crie uma nova pasta para isso e qualquer futuro, cena. Selecione o **nova pasta** botão para criar uma nova pasta, nomeie- **cenas**.
+        2. Crie uma nova pasta para isso e qualquer cena futura. Selecione o botão **nova pasta** , para criar uma nova pasta, nomeie-a como **cenas**.
 
             ![](images/AzureLabs-Lab311-14.png)
 
-        3. Abrir seu recém-criado **cenas** pasta e, em seguida, no *nome do arquivo*: campo de texto, digite **MR_ComputerVisionScene**, em seguida, clique em **salvar** .
+        3. Abra sua pasta de **cenas** recém-criada e, no campo *nome do arquivo*:, digite **MR_ComputerVisionScene**e clique em **salvar**.
 
             ![](images/AzureLabs-Lab311-15.png)
 
             > [!IMPORTANT] 
-            > Esteja ciente de que você deve salvar suas cenas de Unity dentro do *ativos* pasta, pois eles devem estar associados ao projeto do Unity. Criando a pasta de cenas (e outras pastas semelhantes) é uma maneira comum de estruturar um projeto do Unity.
+            > Lembre-se de que você deve salvar as cenas do Unity na pasta *ativos* , pois elas devem ser associadas ao projeto do Unity. Criar a pasta de cenas (e outras pastas semelhantes) é uma maneira típica de estruturar um projeto do Unity.
 
-    7.  O restante de configurações, em *configurações de Build*, deverá ser deixado como padrão por enquanto.
+    7.  As configurações restantes, em *configurações de compilação*, devem ser deixadas como padrão por enquanto.
 
-6.  No *configurações de Build* janela, clique na **configurações do Player** botão, isso abrirá o painel relacionado no espaço de onde o *Inspetor* está localizado. 
+6.  Na janela *configurações de compilação* , clique no botão **configurações do Player** , isso abrirá o painel relacionado no espaço onde o *Inspetor* está localizado. 
 
     ![](images/AzureLabs-Lab311-16.png)
 
-7. Neste painel, algumas configurações precisam ser verificados:
+7. Nesse painel, algumas configurações precisam ser verificadas:
 
-    1. No **outras configurações** guia:
+    1. Na guia **outras configurações** :
 
-        1.  **Criação de scripts** **versão de tempo de execução** deve ser **Experimental** (equivalente ao .NET 4.6), que irá disparar uma necessidade de reiniciar o Editor.
+        1.  **Criando scripts** A **versão de tempo de execução** deve ser **Experimental** (.NET 4,6 equivalente), o que irá disparar uma necessidade de reiniciar o editor.
 
-        2. **Script de back-end** deve ser **.NET**
+        2. O **back-end de script** deve ser **.net**
 
-        3. **Nível de compatibilidade de API** deve ser **.NET 4.6**
+        3. O **nível de compatibilidade da API** deve ser **.NET 4,6**
 
             ![](images/AzureLabs-Lab311-17.png)
 
-    2.  Dentro de **configurações de publicação** guia, em **recursos**, verifique:
+    2.  Na guia **configurações de publicação** , em **recursos**, marque:
 
         - **InternetClient**
 
             ![](images/AzureLabs-Lab311-18.png)
 
-    3.  Mais para baixo no painel, no **XR configurações** (encontrada abaixo **configurações de publicação**), verifique **suporte de realidade Virtual**, certifique-se a **realidade mista do Windows SDK** é adicionado.
+    3.  Mais adiante no painel, em **configurações de XR** (encontradas abaixo de **configurações de publicação**), verifique a **realidade virtual com suporte**, verifique se o **SDK do Windows Mixed Reality** foi adicionado.
 
         ![](images/AzureLabs-Lab311-19.png)
 
-8.  Volta *configurações de Build*, *Unity C# projetos* não fica acinzentado; Verifique a caixa de seleção ao lado disso.
+8.  De volta *às configurações de compilação*, os *projetos de C# Unity* não ficam mais esmaecidos; Marque a caixa de seleção ao lado disso.
 
-9.  Fechar o *configurações de Build* janela.
+9.  Feche a janela *configurações de compilação* .
 
-10.  Salvar sua cena e seu projeto (**arquivo** > **salvar CENAS de arquivos** > **Salvar projeto**).
+10.  Salve sua cena e seu projeto **(arquivo salvar arquivos** > de salvamento **/**  > **salvar**arquivo).
 
-## <a name="chapter-3---import-libraries-in-unity"></a>Capítulo 3 - bibliotecas de importação no Unity
+## <a name="chapter-3---import-libraries-in-unity"></a>Capítulo 3 – importar bibliotecas no Unity
 
 > [!IMPORTANT]
-> Se você quiser ignorar a *Unity configurar* componente deste curso e continuar diretamente no código, fique à vontade para baixá-lo [MR-Azure-311.unitypackage](https://github.com/Microsoft/HolographicAcademy/raw/Azure-MixedReality-Labs/Azure%20Mixed%20Reality%20Labs/MR%20and%20Azure%20311%20-%20Microsoft%20Graph/Azure-MR-311.unitypackage), importá-lo para seu projeto como um [ **Pacote personalizado**](https://docs.unity3d.com/Manual/AssetPackages.html)e, em seguida, continuar a partir [capítulo 5](#chapter-5---create-meetingsui-class).
+> Se você quiser ignorar o componente de *configuração do Unity* deste curso e continuar diretamente no código, sinta-se à vontade para baixar este [Azure-Mr-311. unitypackage](https://github.com/Microsoft/HolographicAcademy/raw/Azure-MixedReality-Labs/Azure%20Mixed%20Reality%20Labs/MR%20and%20Azure%20311%20-%20Microsoft%20Graph/Azure-MR-311.unitypackage), importá-lo em seu projeto como um [**pacote personalizado**](https://docs.unity3d.com/Manual/AssetPackages.html)e, em seguida, continuar no [capítulo 5 ](#chapter-5---create-meetingsui-class).
 
-Para usar *Microsoft Graph* dentro do Unity que você precisa fazer uso das **Microsoft.Identity.Client** DLL. É possível usar o SDK do Microsoft Graph, no entanto, ela exigirá a adição de um pacote do NuGet depois de compilar o projeto do Unity (o que significa que editar pós-compilação do projeto). Ele é considerado mais simples importar as DLLs necessárias diretamente para o Unity.
+Para usar *Microsoft Graph* no Unity, você precisa fazer uso da dll **Microsoft. Identity. Client** . É possível usar o SDK do Microsoft Graph, no entanto, ele exigirá a adição de um pacote NuGet depois que você criar o projeto do Unity (ou seja, editando o projeto após a compilação). É considerado mais simples importar as DLLs necessárias diretamente para o Unity.
 
 > [!NOTE]
-> Atualmente, há um problema conhecido no Unity que requer o plug-ins para ser reconfigurado após a importação. Estas etapas (4 a 7 desta seção) não será necessárias depois que o bug foi resolvido.
+> Atualmente, há um problema conhecido no Unity que exige que os plugins sejam reconfigurados após a importação. Essas etapas (4-7 nesta seção) não serão mais necessárias depois que o bug for resolvido.
 
-Para importar *Microsoft Graph* em seu próprio projeto [Baixe o arquivo MSGraph_LabPlugins.zip](https://github.com/Microsoft/HolographicAcademy/raw/Azure-MixedReality-Labs/Azure%20Mixed%20Reality%20Labs/MR%20and%20Azure%20311%20-%20Microsoft%20Graph/MSGraph_LabPlugins.unitypackage). Este pacote foi criado com as versões das bibliotecas que foram testadas.
+Para importar *Microsoft Graph* para seu próprio projeto, [Baixe o arquivo MSGraph_LabPlugins. zip](https://github.com/Microsoft/HolographicAcademy/raw/Azure-MixedReality-Labs/Azure%20Mixed%20Reality%20Labs/MR%20and%20Azure%20311%20-%20Microsoft%20Graph/MSGraph_LabPlugins.unitypackage). Este pacote foi criado com versões das bibliotecas que foram testadas.
 
-Se você quiser saber mais sobre como adicionar DLLs personalizadas ao seu projeto do Unity [siga este link](https://docs.unity3d.com/Manual/UsingDLL.html).
+Se você quiser saber mais sobre como adicionar DLLs personalizadas ao seu projeto do Unity, [siga este link](https://docs.unity3d.com/Manual/UsingDLL.html).
 
 Para importar o pacote:
 
-1.  Adicione o pacote do Unity para Unity, usando o **ativos** > **Importar pacote** > **pacote personalizado** opção de menu. Selecione o pacote que você acabou de baixar.
+1.  Adicione o pacote do Unity ao Unity usando a opção de menu**pacote personalizado** do**pacote** > de importação de **ativos** > . Selecione o pacote que você acabou de baixar.
 
-2.  No **Importar pacote do Unity** caixa é exibido para cima, certifique-se de tudo em (e incluindo) **plug-ins** está selecionado.
+2.  Na caixa **Importar pacote de Unity** que é exibida, verifique se tudo em (e incluindo) **plug-ins** está selecionado.
 
     ![](images/AzureLabs-Lab311-20.png)
 
-3.  Clique o **importação** botão para adicionar itens ao seu projeto.
+3.  Clique no botão **importar** para adicionar os itens ao seu projeto.
 
-4.  Vá para o **MSGraph** pasta sob **plug-ins** no *painel projeto* e selecione o plug-in chamado **Microsoft.Identity.Client**.
+4.  Vá para a pasta **MSGraph** em **plug-ins** no *painel Projeto* e selecione o plug-in chamado **Microsoft. Identity. Client**.
 
     ![](images/AzureLabs-Lab311-21.png)
 
-5.  Com o *plug-in* selecionado, certifique-se de que **plataforma Any** está desmarcada e, em seguida, certifique-se de que **WSAPlayer** também está desmarcada e, em seguida, clique em **aplicar**. Isso é apenas para confirmar que os arquivos estão configurados corretamente.
+5.  Com o *plug-in* selecionado, verifique se **qualquer plataforma** está desmarcada e, em seguida, verifique se **WSAPlayer** também está desmarcado e clique em **aplicar**. Isso é apenas para confirmar que os arquivos estão configurados corretamente.
 
     ![](images/AzureLabs-Lab311-22.png)
 
     > [!NOTE] 
-    > Marcar esses plug-ins configura para ser usado apenas no Editor do Unity. Há um conjunto diferente de DLLs na pasta do WSA que será usado depois que o projeto é exportado do Unity como um aplicativo Universal do Windows.
+    > Marcar esses plug-ins os configura para ser usado apenas no editor do Unity. Há um conjunto diferente de DLLs na pasta WSA que será usado depois que o projeto for exportado do Unity como um aplicativo universal do Windows.
 
-6.  Em seguida, você precisa abrir o **WSA** pasta, dentro de **MSGraph** pasta. Você verá uma cópia do mesmo arquivo que você acabou de configurar. Selecione o arquivo e, em seguida, no Inspetor de:
+6.  Em seguida, você precisa abrir a pasta **WSA** , dentro da pasta **MSGraph** . Você verá uma cópia do mesmo arquivo que acabou de configurar. Selecione o arquivo e, em seguida, no Inspetor:
 
-    -   Certifique-se de que **plataforma Any** é **desmarcada**e que **apenas** **WSAPlayer** é **marcada**.
+    -   Verifique se **qualquer plataforma** está desmarcada e se **somente** **WSAPlayer** está **marcado**.
 
-    -   Certifique-se **SDK** é definido como **UWP**, e **script de back-end** é definido como **plataforma Dot Net**
+    -   Verifique se o **SDK** está definido como **UWP**e se o **back-end de script** está definido como **dot net**
 
-    -   Certifique-se de que **não processar** é **check**.
+    -   Verifique se **não processar** está **marcado**.
 
         ![](images/AzureLabs-Lab311-23.png)
 
 7.  Clique em **Aplicar**.
 
-## <a name="chapter-4---camera-setup"></a>Capítulo 4 - configuração de câmera
+## <a name="chapter-4---camera-setup"></a>Capítulo 4 – configuração da câmera
 
-Durante este capítulo, você definirá a câmera principal da sua cena:
+Durante este capítulo, você configurará a câmera principal da sua cena:
 
-1.  No *painel de hierarquia*, selecione o **câmera principal**.
+1.  No *painel hierarquia*, selecione a **câmera principal**.
 
-2.  Depois de selecionado, você poderá ver todos os componentes do **câmera principal** na *Inspetor* painel.
+2.  Depois de selecionado, você poderá ver todos os componentes da **câmera principal** no painel *Inspetor* .
 
-    1.  O **objeto de câmera** deve ser nomeado **câmera principal** (Observe a ortografia!)
+    1.  O **objeto de câmera** deve ser nomeado como a **câmera principal** (Observe a grafia!)
 
-    2.  A câmera principal **marca** deve ser definida como **MainCamera** (Observe a ortografia!)
+    2.  A **marca** da câmera principal deve ser definida como **MainCamera** (Observe a ortografia!)
 
-    3.  Verifique se o **transformar posição** é definido como **0, 0, 0**
+    3.  Verifique se a **posição de transformação** está definida como **0, 0,** 0
 
-    4.  Definir **limpar os sinalizadores** para **cor sólida**
+    4.  Definir **sinalizadores de limpeza** como **cor sólida**
 
-    5.  Defina a **cor do plano de fundo** do componente a câmera **preto, alfa 0** **(Hex código: 00000000 #)**
+    5.  Defina a **cor do plano de fundo** do componente da câmera como **preto, alfa 0** **(código hex: #00000000)**
 
         ![](images/AzureLabs-Lab311-24.png)
 
-3.  A estrutura de objeto final na *painel de hierarquia* deve ser semelhante à mostrada na imagem abaixo:
+3.  A estrutura final do objeto no *painel hierarquia* deve ser parecida com a mostrada na imagem abaixo:
 
     ![](images/AzureLabs-Lab311-25.png)
 
-## <a name="chapter-5---create-meetingsui-class"></a>Capítulo 5 - Criar classe MeetingsUI
+## <a name="chapter-5---create-meetingsui-class"></a>Capítulo 5-criar classe MeetingsUI
 
-É o primeiro script que você precisa criar **MeetingsUI**, que é responsável pela hospedagem e preenchendo a IU do aplicativo (mensagem de boas-vinda, instruções e os detalhes de reuniões).
+O primeiro script que você precisa criar é **MeetingsUI**, que é responsável por hospedar e preencher a interface do usuário do aplicativo (mensagem de boas-vindas, instruções e os detalhes da reunião).
 
-Para criar essa classe:
+Para criar esta classe:
 
-1.  Clique com botão direito no **ativos** pasta na *painel projeto*, em seguida, selecione **Create** > **pasta**. Nomeie a pasta **Scripts**.
+1.  Clique com o botão direito do mouse na pasta **ativos** no *painel Projeto*e selecione **criar** > **pasta**. Nomeie a pasta **scripts**.
 
     ![](images/AzureLabs-Lab311-26.png)
     ![](images/AzureLabs-Lab311-27.png)
 
-2.  Abra o **Scripts** pasta em seguida, dentro dessa pasta, clique com botão direito, **Create**  >   **C# Script**. Nomeie o script **MeetingsUI.**
+2.  Abra a pasta **scripts** e, nessa pasta, clique com o botão direito do mouse em **criar**  >   **C# script**. Nomeie o script **MeetingsUI.**
 
     ![](images/AzureLabs-Lab311-28.png)
 
-3.  Clique duas vezes na nova **MeetingsUI** script para abri-lo com *Visual Studio*.
+3.  Clique duas vezes no novo script **MeetingsUI** para abri-lo com o *Visual Studio*.
 
 4.  Insira os seguintes namespaces:
 
@@ -298,7 +298,7 @@ Para criar essa classe:
         private TextMesh _meetingDisplayTextMesh;
     ```
 
-6.  Em seguida, substitua os **Start ()** método e adicione um **Awake()** método. Eles serão chamados quando inicializa a classe:
+6.  Em seguida, substitua o método **Start ()** e adicione um método **ativo ()** . Eles serão chamados quando a classe for inicializada:
 
     ```csharp    
         /// <summary>
@@ -319,7 +319,7 @@ Para criar essa classe:
         }
     ```
 
-7.  Adicione os métodos responsáveis por criar a *interface do usuário de reuniões* e preenchê-lo com as reuniões atuais quando solicitado:
+7.  Adicione os métodos responsáveis por criar a *interface do usuário de reuniões* e preenchê-la com as reuniões atuais quando solicitado:
 
     ```csharp    
         /// <summary>
@@ -367,17 +367,17 @@ Para criar essa classe:
         }
     ```
 
-8. **Exclua** as **Update ()** método, e **salvar suas alterações** no Visual Studio antes de retornar para o Unity. 
+8. **Exclua** o método **Update ()** e **salve as alterações** no Visual Studio antes de retornar ao Unity. 
 
-## <a name="chapter-6---create-the-graph-class"></a>Capítulo 6 - criar a classe de gráfico
+## <a name="chapter-6---create-the-graph-class"></a>Capítulo 6 – criar a classe do grafo
 
-É o próximo script para criar o **Graph** script. Esse script é responsável por fazer as chamadas para autenticar o usuário e recuperar as reuniões agendadas para o dia atual do calendário do usuário.
+O próximo script a ser criado é o script do **grafo** . Esse script é responsável por fazer as chamadas autenticar o usuário e recuperar as reuniões agendadas para o dia atual do calendário do usuário.
 
-Para criar essa classe:
+Para criar esta classe:
 
-1.  Clique duas vezes no **Scripts** pasta para abri-lo.
+1.  Clique duas vezes na pasta **scripts** para abri-la.
 
-2.  Clique com botão direito dentro de **Scripts** pasta, clique em **Create** >  **C# Script**. Nomeie o script **Graph**.
+2.  Clique com botão direito dentro de **Scripts** pasta, clique em **Create** >  **C# Script**. Nomeie o **gráfico**de script.
 
 3.  Clique duas vezes no script para abri-lo com o Visual Studio.
 
@@ -398,11 +398,11 @@ Para criar essa classe:
     ```
 
     > [!IMPORTANT]
-    > Você observará que as partes do código nesse script são encapsuladas em torno [pré-compilar diretivas](https://docs.unity3d.com/Manual/PlatformDependentCompilation.html), isso é para evitar problemas com as bibliotecas ao compilar a solução do Visual Studio.
+    > Você observará que partes do código nesse script são encapsuladas em torno de [diretivas de pré-compilação](https://docs.unity3d.com/Manual/PlatformDependentCompilation.html), isso é para evitar problemas com as bibliotecas ao criar a solução do Visual Studio.
 
-5.  Excluir o **Start ()** e **Update ()** métodos, pois não serão usados.
+5.  Exclua os métodos **Start ()** e **Update ()** , pois eles não serão usados.
 
-6.  Fora de **Graph** de classe, insira os seguintes objetos são necessários para desserializar o objeto JSON que representa as diárias reuniões agendadas:
+6.  Fora da classe do **grafo** , insira os seguintes objetos, que são necessários para desserializar o objeto JSON que representa as reuniões agendadas diariamente:
 
     ```csharp
     /// <summary>
@@ -449,7 +449,7 @@ Para criar essa classe:
     }
     ```
 
-7.  Dentro de **Graph** de classe, adicione as seguintes variáveis:
+7.  Dentro da classe do **grafo** , adicione as seguintes variáveis:
 
     ```csharp    
         /// <summary>
@@ -475,9 +475,9 @@ Para criar essa classe:
     ```
 
     > [!NOTE]
-    > Alterar o **appId** valor seja a **Id do aplicativo** que você observou na  **[capítulo 1](#chapter-1---create-your-app-in-the-application-registration-portal), etapa 4**. Esse valor deve ser o mesmo que o exibido na **Portal de registro de aplicativo,** na sua página de registro do aplicativo.
+    > Altere o valor **AppID** para que seja a **ID do aplicativo** que você anotou no  **[capítulo 1](#chapter-1---create-your-app-in-the-application-registration-portal), etapa 4**. Esse valor deve ser o mesmo que o exibido no **portal de registro de aplicativos,** na página de registro do aplicativo.
 
-8.  Dentro de **Graph** classe, adicione os métodos **SignInAsync()** e **AquireTokenAsync()** , que solicitará ao usuário inserir as credenciais de logon.
+8.  Dentro da classe do **grafo** , adicione os métodos **SignInAsync ()** e **AquireTokenAsync ()** , que solicitará que o usuário insira as credenciais de logon.
 
     ```csharp
         /// <summary>
@@ -546,11 +546,11 @@ Para criar essa classe:
         }
     ```
 
-9.  Adicione dois métodos a seguir:
+9.  Adicione os dois métodos a seguir:
 
-    1.  **BuildTodayCalendarEndpoint()** , quais compilações o URI, especificando o dia e o período de tempo, em que as reuniões agendadas são recuperadas.
+    1.  **BuildTodayCalendarEndpoint ()** , que compila o URI que especifica o dia e o período de tempo em que as reuniões agendadas são recuperadas.
 
-    2.  **ListMeetingsAsync()** , que solicita as reuniões agendadas de *Microsoft Graph*.
+    2.  **ListMeetingsAsync ()** , que solicita as reuniões agendadas de *Microsoft Graph*.
 
     ```csharp
         /// <summary>
@@ -614,21 +614,21 @@ Para criar essa classe:
         }
     ```
 
-10. Agora você concluiu a **Graph** script. **Salve suas alterações** no Visual Studio antes de retornar para o Unity.
+10. Agora você concluiu o script do **grafo** . **Salve suas alterações** no Visual Studio antes de retornar ao Unity.
 
-## <a name="chapter-7---create-the-gazeinput-script"></a>Capítulo 7 - criar o script de GazeInput
+## <a name="chapter-7---create-the-gazeinput-script"></a>Capítulo 7-criar o script GazeInput
 
-Agora você criará a **GazeInput**. Essa classe manipula e mantém o controle de olhar do usuário, usando um **Raycast** provenientes a **câmera principal**, projetando para frente.
+Agora, você criará o **GazeInput**. Essa classe manipula e controla o olhar do usuário, usando um **Raycast** proveniente da **câmera principal**, projetando em frente.
 
 Para criar o script:
 
-1.  Clique duas vezes no **Scripts** pasta para abri-lo.
+1.  Clique duas vezes na pasta **scripts** para abri-la.
 
 2.  Clique com botão direito dentro de **Scripts** pasta, clique em **Create** >  **C# Script**. Nomeie o script **GazeInput**.
 
 3.  Clique duas vezes no script para abri-lo com o Visual Studio.
 
-4.  Alterar o código de namespaces para coincidir com a mostrada abaixo, junto com a adição de ' **\[System.Serializable\]** ' acima da marca seu **GazeInput** de classe, para que ele pode ser serializado:
+4.  Altere o código de namespaces para corresponder ao mostrado abaixo, juntamente com a adição da marca ' **\[System. Serializable\]** ' acima da classe **GazeInput** , para que possa ser serializada:
 
     ```csharp
     using UnityEngine;
@@ -641,7 +641,7 @@ Para criar o script:
     {
     ```
 
-5.  Dentro de **GazeInput** de classe, adicione as seguintes variáveis:
+5.  Dentro da classe **GazeInput** , adicione as seguintes variáveis:
 
     ```csharp    
         [Tooltip("Used to compare whether an object is to be interacted with.")]
@@ -677,7 +677,7 @@ Para criar o script:
         private Vector3 _gazeDirection;
     ```
 
-6.  Adicione a **CreateCursor()** método cria o cursor do HoloLens na cena e chame o método da **Start ()** método:
+6.  Adicione o método **CreateCursor ()** para criar o cursor do HoloLens na cena e chame o método do método **Start ()** :
 
     ```csharp    
         /// <summary>
@@ -708,7 +708,7 @@ Para criar o script:
         }
     ```
 
-7.  Os métodos a seguir permitem o olhar Raycast e controlar os objetos com foco.
+7.  Os métodos a seguir habilitam o olhar Raycast e controlam os objetos focados.
 
     ```csharp
     /// <summary>
@@ -804,21 +804,21 @@ Para criar o script:
         }
     ```
 
-8.  **Salve suas alterações** no Visual Studio antes de retornar para o Unity.
+8.  **Salve suas alterações** no Visual Studio antes de retornar ao Unity.
 
-## <a name="chapter-8---create-the-interactions-class"></a>Capítulo 8 - criar a classe de interações
+## <a name="chapter-8---create-the-interactions-class"></a>Capítulo 8-criar a classe interações
 
-Agora você precisará criar o **interações** script, que é responsável por:
+Agora será necessário criar o script de **interações** , que é responsável por:
 
--   Manipulando o **toque** interação e a **câmera olhares**, que permite que o usuário interaja com o log de "botão" na cena.
+-   Manipular a interação de **toque** e a **câmera olhar**, que permite ao usuário interagir com o logon "Button" na cena.
 
--   Criar o log no objeto de "botão" na cena para interagir com o usuário.
+-   Criando o objeto "Button" de logon na cena para o usuário interagir com o.
 
 Para criar o script:
 
-1.  Clique duas vezes no **Scripts** pasta para abri-lo.
+1.  Clique duas vezes na pasta **scripts** para abri-la.
 
-2.  Clique com botão direito dentro de **Scripts** pasta, clique em **Create** >  **C# Script**. Nomeie o script **interações**.
+2.  Clique com botão direito dentro de **Scripts** pasta, clique em **Create** >  **C# Script**. Nomeie o script de interações.
 
 3.  Clique duas vezes no script para abri-lo com o Visual Studio.
 
@@ -829,15 +829,15 @@ Para criar o script:
     using UnityEngine.XR.WSA.Input;
     ```
 
-5.  Alterar a herança do **interação** classe *MonoBehaviour* para **GazeInput**.
+5.  Altere a herança da classe de **interação** de *monocomportamento* para **GazeInput**.
 
-    ~~Interações de classe pública: MonoBehaviour~~
+    ~~interações de classe pública: MonoBehaviour~~
 
     ```csharp
     public class Interactions : GazeInput
     ```
 
-6.  Dentro de **interação** classe inserir a seguinte variável:
+6.  Dentro da classe de **interação** , insira a seguinte variável:
 
     ```csharp
         /// <summary>
@@ -846,7 +846,7 @@ Para criar o script:
         private GestureRecognizer _gestureRecognizer;
     ```
 
-7.  Substitua os **iniciar** método; Observe que ele é um método de substituição, que chama o método da classe 'base' olhar. **Start ()** será chamado quando a classe é inicializado, se registrar para o reconhecimento de entrada e criar a entrada *botão* na cena:
+7.  Substituir o método **Start** ; Observe que é um método override, que chama o método de classe ' base ' olhar. **Start ()** será chamado quando a classe for inicializada, registrando-se para o reconhecimento de entrada e criando o *botão* entrar na cena:
 
     ```csharp    
         /// <summary>
@@ -868,7 +868,7 @@ Para criar o script:
         }
     ```
 
-8.  Adicione a **CreateSignInButton()** método, que criará uma instância de entrada *botão* na cena e defina suas propriedades:
+8.  Adicione o método **CreateSignInButton ()** , que criará uma instância do *botão* entrar na cena e definirá suas propriedades:
 
     ```csharp    
         /// <summary>
@@ -889,7 +889,7 @@ Para criar o script:
         }
     ```
 
-9.  Adicione a **GestureRecognizer_Tapped()** método, que ser responder para o *toque* evento de usuário.
+9.  Adicione o método **GestureRecognizer_Tapped ()** , que será respondido para o evento *Tap* User.
 
     ```csharp   
         /// <summary>
@@ -905,25 +905,25 @@ Para criar o script:
         }
     ```
 
-10. **Excluir** as **Update ()** método e então **salvar suas alterações** no Visual Studio antes de retornar para o Unity.
+10. **Exclua** o método **Update ()** e **salve as alterações** no Visual Studio antes de retornar ao Unity.
 
-## <a name="chapter-9---set-up-the-script-references"></a>Capítulo 9 - configurar as referências de script
+## <a name="chapter-9---set-up-the-script-references"></a>Capítulo 9-configurar as referências de script
 
-Neste capítulo, você precisa colocar o **interações** gerar script para o **câmera principal**. Esse script tratará a colocar outros scripts onde elas precisam ser.
+Neste capítulo, você precisa posicionar o  script de interações na **câmera principal**. Esse script manipulará a colocação dos outros scripts onde eles precisam ser.
 
--  Do **Scripts** pasta na *painel projeto*, arraste o script **interações** para o **câmera principal** objeto, conforme ilustrado abaixo.
+-  Na pasta **scripts** do *painel Projeto*, arraste as interações de  script para o objeto da **câmera principal** , conforme mostrado abaixo.
 
     ![](images/AzureLabs-Lab311-29.png)
 
-## <a name="chapter-10---setting-up-the-tag"></a>Capítulo 10 - como configurar a marca
+## <a name="chapter-10---setting-up-the-tag"></a>Capítulo 10-Configurando a marca
 
-O código que processa o olhar fará o uso da marca **SignInButton** para identificar qual objeto de usuário irá interagir com para entrar no *o Microsoft Graph*.
+O código que manipula o olhar fará uso da marca **SignInButton** para identificar a qual objeto o usuário irá interagir para entrar no *Microsoft Graph*.
 
 Para criar a marca:
 
-1.  No Editor do Unity, clique no **câmera principal** na *painel de hierarquia*.
+1.  No editor do Unity, clique na **câmera principal** no *painel hierarquia*.
 
-2.  No *painel Inspetor* clique no **MainCamera** *marca* para abrir uma lista suspensa. Clique em **Adicionar marca...**
+2.  No *painel Inspetor* , clique na marca **MainCamera**  para abrir uma lista suspensa. Clique em **adicionar marca..** .
 
     ![](images/AzureLabs-Lab311-30.png)
 
@@ -931,57 +931,57 @@ Para criar a marca:
 
     ![](images/AzureLabs-Lab311-31.png)
 
-4.  Grave o nome de marca como **SignInButton** e clique em Salvar.
+4.  Escreva o nome da marca como **SignInButton** e clique em salvar.
 
     ![](images/AzureLabs-Lab311-32.png)
 
-## <a name="chapter-11---build-the-unity-project-to-uwp"></a>Capítulo 11 - compilar o projeto do Unity para UWP
+## <a name="chapter-11---build-the-unity-project-to-uwp"></a>Capítulo 11-criar o projeto do Unity para UWP
 
-Todos os componentes necessários para a seção de Unity desse projeto agora foi concluído, portanto, é hora de criá-lo do Unity.
+Tudo o que é necessário para a seção do Unity deste projeto foi concluído, portanto, é hora de compilá-lo a partir do Unity.
 
 1.  Navegue até *configurações de Build* (**arquivo*>*Compilar configurações**).
 
     ![](images/AzureLabs-Lab311-33.png)
 
-2.  Se ainda não estiver, marque **Unity C\# projetos**.
+2.  Se ainda não tiver feito isso, **projetos de unidade C\#** Tick.
 
-3.  Clique em **Compilar**. Unity iniciará uma **Explorador de arquivos** janela, em que você precisa para criar e, em seguida, selecione uma pasta para compilar o aplicativo em. Criar pasta agora e nomeie- **aplicativo**. Em seguida, com o **App** pasta selecionada, clique em **Selecionar pasta**.
+3.  Clique em **Compilar**. O Unity iniciará uma janela **Explorador de arquivos** , onde você precisará criar e, em seguida, selecionar uma pasta na qual o aplicativo será compilado. Crie essa pasta agora e nomeie-a como **aplicativo**. Em seguida, com a pasta de **aplicativo** selecionada, clique em **Selecionar pasta**.
 
-4.  Unity começará a compilar seu projeto para o **aplicativo** pasta.
+4.  O Unity começará a criar seu projeto na pasta do **aplicativo** .
 
-5.  Uma vez Unity terminou de construção (pode levar algum tempo), ele será aberto um **Explorador de arquivos** janela no local de sua compilação (verificar sua barra de tarefas, como sempre não pode aparecer acima do windows, mas irá notificá-lo da adição de um novo janela).
+5.  Depois que o Unity terminar a compilação (pode levar algum tempo), ele abrirá uma janela do **Explorador de arquivos** no local de sua compilação (verifique sua barra de tarefas, pois ela nem sempre aparecerá acima das janelas, mas o notificará sobre a adição de uma nova janela).
 
-## <a name="chapter-12---deploy-to-hololens"></a>Capítulo 12 - implantar em HoloLens
+## <a name="chapter-12---deploy-to-hololens"></a>Capítulo 12 – implantar no HoloLens
 
-Para implantar o HoloLens:
+Para implantar no HoloLens:
 
-1.  Será necessário o endereço IP do seu HoloLens (para a implantação remota) e garantir que seu HoloLens está em **modo de desenvolvedor.** Para fazer isso:
+1.  Você precisará do endereço IP do seu HoloLens (para implantação remota) e para garantir que seu HoloLens esteja no **modo de desenvolvedor.** Para fazer isso:
 
-    1.  Durante o uso de seu HoloLens, abra o **configurações**.
+    1.  Enquanto estiver desgastando seu HoloLens, abra as **configurações**.
 
-    2.  Vá para **rede e Internet** > **Wi-Fi** > **opções avançadas**
+    2.  Vá para **rede &**  > **Opções avançadas** **de Internet Wi-Fi** > 
 
-    3.  Observe a **IPv4** endereço.
+    3.  Anote o endereço **IPv4** .
 
-    4.  Em seguida, navegue até **as configurações**e, em seguida, para **atualização e segurança** > **para desenvolvedores**
+    4.  Em seguida, navegue de volta para **configurações**e, em seguida, para **Atualizar & segurança** > **para desenvolvedores**
 
-    5.  Definir **modo de desenvolvedor no**.
+    5.  Defina o **modo de desenvolvedor em**.
 
-2.  Navegue até seu novo build do Unity (o **App** pasta) e abra o arquivo de solução com **Visual Studio**.
+2.  Navegue até sua nova compilação do Unity (a pasta do **aplicativo** ) e abra o arquivo de solução com o **Visual Studio**.
 
-3.  No **configuração da solução** selecionar **depurar**.
+3.  Na **configuração da solução** , selecione **depurar**.
 
-4.  No **plataforma da solução**, selecione **x86, computador remoto**. Você será solicitado a inserir o **endereço IP** de um dispositivo remoto (o HoloLens, nesse caso, que você anotou).
+4.  Na **plataforma da solução**, selecione **x86, computador remoto**. Você será solicitado a inserir o **endereço IP** de um dispositivo remoto (o HoloLens, neste caso, que você anotou).
 
     ![](images/AzureLabs-Lab311-34.png)
 
-5.  Vá para **construir** menu e clique em **implantar solução** para carregar o aplicativo para o HoloLens.
+5.  Vá para o menu **Compilar** e clique em **implantar solução** para Sideload o aplicativo em seu HoloLens.
 
 6.  Seu aplicativo agora deve aparecer na lista de aplicativos instalados em seu HoloLens, pronto para ser iniciado!
 
-## <a name="your-microsoft-graph-hololens-application"></a>Seu aplicativo do Microsoft Graph HoloLens
+## <a name="your-microsoft-graph-hololens-application"></a>Seu aplicativo Microsoft Graph HoloLens
 
-Parabéns, você criou um aplicativo de realidade mista que aproveita o Microsoft Graph para ler e exibir dados de calendário do usuário.
+Parabéns, você criou um aplicativo de realidade misturada que aproveita o Microsoft Graph, para ler e exibir dados de calendário do usuário.
 
 ![](images/AzureLabs-Lab311-00.png)
 
@@ -989,10 +989,10 @@ Parabéns, você criou um aplicativo de realidade mista que aproveita o Microsof
 
 ### <a name="exercise-1"></a>Exercício 1
 
-Usar o Microsoft Graph para exibir outras informações sobre o usuário
+Use Microsoft Graph para exibir outras informações sobre o usuário
 
--   Email do usuário / número de telefone / imagem de perfil
+-   Email do usuário/número do telefone/imagem do perfil
 
 ### <a name="exercise-1"></a>Exercício 1
 
-Implementar o controle de voz para navegar a interface do usuário do Microsoft Graph.
+Implemente o controle de voz para navegar na interface do usuário do Microsoft Graph.

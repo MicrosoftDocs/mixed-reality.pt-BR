@@ -1,37 +1,37 @@
 ---
 title: Atualizando o HoloLens
-description: Como atualizar o HoloLens e ingressar no programa Windows Insider para visualização se baseia.
+description: Como atualizar o HoloLens e ingressar no programa Windows Insider para versões prévias.
 author: mattzmsft
 ms.author: mazeller
 ms.date: 10/23/2018
 ms.topic: article
-keywords: instruções, insider, visualização, update, recursos, a nova versão
+keywords: instruções, Insider, visualização, atualização, recursos, nova versão
 ms.openlocfilehash: 39df7f204af2edcfc83f6be245509e5d12c3bbc0
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59589545"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63548715"
 ---
 # <a name="updating-hololens"></a>Atualizando o HoloLens
 
-O HoloLens baixar automaticamente e instalar atualizações do sistema sempre que está conectado e conectado ao Wi-Fi, mesmo quando ele está em espera. No entanto, você também pode disparar uma atualização do sistema manualmente se houver um disponível.
+Seu HoloLens baixará e instalará automaticamente as atualizações do sistema sempre que ele estiver conectado a Wi-Fi, mesmo quando ele estiver em espera. No entanto, você também pode disparar uma atualização do sistema manualmente, se houver uma disponível.
 
 ## <a name="manual-update"></a>Atualização manual
 
 Para executar uma atualização manual:
-* Abra o **configurações** aplicativo.
-* Navegue até **atualização e segurança** > **Windows Update**.
-* Selecione o **verificar se há atualizações** botão.
+* Abra o aplicativo **configurações** .
+* Navegue até **Atualizar & segurança** > **Windows Update**.
+* Selecione o botão **verificar atualizações** .
 
-Se uma atualização estiver disponível, ele iniciará baixando a nova versão. Depois que o download for concluído, selecione a **reiniciar agora** botão para disparar a instalação. Se o dispositivo for inferior a 40%, e não está conectada, reiniciando não iniciará a instalação da atualização.
+Se uma atualização estiver disponível, ela começará a baixar a nova versão. Quando o download for concluído, selecione o botão **reiniciar agora** para disparar a instalação. Se o dispositivo estiver abaixo de 40% e não conectado, a reinicialização não iniciará a instalação da atualização.
 
-Enquanto o HoloLens é instalar a atualização, ele exibirá as engrenagens de rotação e um indicador de progresso. Não desligue o HoloLens durante esse tempo. Ele será reiniciado automaticamente após a conclusão da instalação.
+Enquanto o seu HoloLens está instalando a atualização, ele exibirá engrenagens giratórias e um indicador de progresso. Não desative seu HoloLens durante esse tempo. Ela será reinicializada automaticamente após a conclusão da instalação.
 
-Você pode verificar o número de versão do sistema abrindo o **as configurações** aplicativo e selecionando **sistema** e, em seguida, **sobre**. HoloLens atualmente dá suporte a aplicação de atualização apenas uma vez, então se o HoloLens for mais de uma versão atrasada a versão mais recente pode precisar executar várias vezes durante o processo de atualização para obtê-lo totalmente atualizado.
+Você pode verificar o número da versão do sistema abrindo o aplicativo **configurações** e selecionando **sistema** e, em seguida, **sobre**. Atualmente, o HoloLens dá suporte à aplicação de apenas uma atualização por vez, portanto, se o seu HoloLens for mais de uma versão por trás da mais recente, talvez seja necessário executar o processo de atualização várias vezes para obtê-lo totalmente atualizado.
 
-## <a name="windows-insider-program-on-hololens"></a>Windows Insider Program no HoloLens
+## <a name="windows-insider-program-on-hololens"></a>Programa Windows Insider no HoloLens
 
-Unindo o programa Windows Insider seu HoloLens, você obterá acesso para visualizar compilações HoloLens de atualizações de software antes que elas estão disponíveis ao público em geral.
+Unindo o programa Windows Insider do seu HoloLens, você obterá acesso a versões prévias de atualizações de software do HoloLens antes que elas estejam disponíveis para o público geral.
 
-Para obter informações sobre como participar no programa Windows Insider no HoloLens, consulte o [Insider preview para o Microsoft HoloLens](https://docs.microsoft.com/hololens/hololens-insider) artigo em nossos documentos para profissionais de TI.
+Para obter informações sobre como participar do programa Windows Insider no HoloLens, consulte o artigo do insider [Preview para o Microsoft HoloLens](https://docs.microsoft.com/hololens/hololens-insider) em nossos documentos de profissionais de ti.

@@ -1,36 +1,36 @@
 ---
-title: Usando XAML com aplicativos de DirectX holográfico
-description: Explica o impacto de alternar entre modos de exibição XAML 2D e imersivos no seu aplicativo DirectX e como fazer uso eficiente de um modo de exibição XAML e a exibição envolvente.
+title: Usando XAML com aplicativos Holographic DirectX
+description: Explica o impacto de alternar entre exibições do XAML 2D e exibições de imersão em seu aplicativo DirectX e como fazer uso eficiente de uma exibição XAML e de imersão.
 author: MikeRiches
 ms.author: mriches
 ms.date: 03/21/2018
 ms.topic: article
-keywords: aplicativo de realidade misturada, UWP, Windows exibir gerenciamento, xaml, teclado, passo a passo, DirectX
+keywords: realidade mista do Windows, UWP, gerenciamento de exibição de aplicativo, XAML, teclado, passo a passos, DirectX
 ms.openlocfilehash: 32b2feea0cb6b8aba972c1772451ca7b5b9946d5
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59589309"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63548706"
 ---
-# <a name="using-xaml-with-holographic-directx-apps"></a>Usando XAML com aplicativos de DirectX holográfico
+# <a name="using-xaml-with-holographic-directx-apps"></a>Usando XAML com aplicativos Holographic DirectX
 
-Este tópico explica o impacto da troca entre [2D modos de exibição XAML e imersivos](app-views.md) no seu aplicativo DirectX e como fazer uso eficiente de um modo de exibição XAML e a exibição envolvente.
+Este tópico explica o impacto de alternar entre [exibições do XAML 2D e exibições de imersão](app-views.md) em seu aplicativo DirectX e como fazer uso eficiente de uma exibição XAML e exibição imersiva.
 
 ## <a name="xaml-view-switching-overview"></a>Visão geral de alternância de exibição XAML
 
-Em HoloLens, um aplicativo geralmente imersão que posteriormente poderá exibir um modo de exibição XAML 2D deve inicializar esse modo de exibição XAML pela primeira vez e retorne imediatamente para um modo de exibição de imersão a partir daí. Isso significa que o XAML será carregado antes de seu aplicativo pode fazer qualquer coisa. Como resultado, haverá um pequeno aumento no seu tempo de inicialização, e XAML continuarão a ocupar espaço de memória no processo de seu aplicativo enquanto ele estiver no plano de fundo; a quantidade de memória depende do uso que seu aplicativo faz com XAML antes de alternar para o modo nativo e atraso na inicialização. Se você não fizer nada em seu código no início, exceto pelo fato iniciar seu modo de exibição de imersão de inicialização do XAML, o impacto deve ser menor. Além disso, como sua renderização holográfica é feita diretamente para a exibição imersiva, evitará qualquer restrições relacionadas a XAML em que a renderização.
+No HoloLens, um aplicativo geralmente envolvente que pode exibir posteriormente uma exibição XAML 2D deve inicializar essa exibição XAML primeiro e imediatamente alternar para uma exibição de imersão a partir daí. Isso significa que o XAML será carregado antes que seu aplicativo possa fazer qualquer coisa. Como resultado, haverá um pequeno aumento no tempo de inicialização, e o XAML continuará ocupando espaço de memória no processo do aplicativo enquanto ele reside em segundo plano; a quantidade de atraso de inicialização e uso de memória depende do que seu aplicativo faz com XAML antes de alternar para a exibição nativa. Se você não fizer nada em seu código de inicialização de XAML a princípio, exceto iniciar a exibição de imersão, o impacto deverá ser menor. Além disso, como a renderização Holographic é feita diretamente na exibição imersiva, você evitará restrições relacionadas a XAML nessa renderização.
 
-Observe que o uso de memória contagens de CPU e GPU. Direct3D 11 é capaz de trocar de memória virtual gráfica, mas ele não poderá trocar alguns ou todos os recursos de GPU XAML e pode haver um impacto perceptível no desempenho. De qualquer forma, não ao carregar os recursos XAML, você não precisa deixar mais espaço para seu aplicativo e proporcionar uma melhor experiência.
+Observe que o uso de memória conta tanto para CPU quanto para GPU. O Direct3D 11 é capaz de trocar a memória gráfica virtual, mas pode não ser capaz de trocar alguns ou todos os recursos de GPU XAML, e pode haver um impacto perceptível no desempenho. De qualquer forma, não carregar nenhum recurso XAML de que você não precisa deixará mais espaço para seu aplicativo e fornecerá uma experiência melhor.
 
 ## <a name="xaml-view-switching-workflow"></a>Fluxo de trabalho de alternância de exibição XAML
 
-O fluxo de trabalho para um aplicativo que vai diretamente no XAML para o modo imersivo é da seguinte forma:
-* O aplicativo é inicializado no modo de exibição XAML 2D.
-* Sequência de inicialização do aplicativo XAML detecta se o sistema atual dá suporte à renderização holográfica:
-* Nesse caso, o aplicativo cria a exibição envolvente e coloca-o para o primeiro plano imediatamente. Carregamento de XAML será ignorado para qualquer coisa que não é necessário em dispositivos Windows Mixed Reality, inclusive todos os ativos carregando no modo de exibição XAML e classes de renderização. Se o aplicativo estiver usando o XAML para entrada de teclado, essa página de entrada ainda deve ser criada.
-* Caso contrário, o modo de exibição XAML pode prosseguir com negócios como de costume.
+O fluxo de trabalho para um aplicativo que vai diretamente do XAML para o modo de imersão é assim:
+* O aplicativo é iniciado na exibição 2D XAML.
+* A sequência de inicialização XAML do aplicativo detecta se o sistema atual dá suporte à renderização Holographic:
+* Em caso afirmativo, o aplicativo cria a exibição imersiva e a coloca em primeiro plano imediatamente. O carregamento XAML é ignorado por qualquer coisa não necessária em dispositivos Windows Mixed Reality, incluindo quaisquer classes de renderização e carregamento de ativos na exibição XAML. Se o aplicativo estiver usando XAML para entrada de teclado, essa página de entrada ainda deverá ser criada.
+* Caso contrário, o modo de exibição XAML pode prosseguir com os negócios como de costume.
 
-## <a name="tip-for-rendering-graphics-across-both-views"></a>Dica para o processamento de gráficos em ambos os modos de exibição
+## <a name="tip-for-rendering-graphics-across-both-views"></a>Dica para renderizar elementos gráficos em ambas as exibições
 
-Se seu aplicativo precisa implementar alguma quantidade de processamento no DirectX para o modo de exibição XAML no Windows Mixed Reality, sua melhor aposta é criar um processador que pode trabalhar com ambos os modos de exibição. O renderizador deve ser uma instância que pode ser acessada em ambos os modos de exibição, e ele deve ser capaz de alternar entre a renderização 2D e holographic. Dessa forma, os ativos GPU só são carregados uma vez - isso reduz a quantidade de recursos a serem trocados ao alternar os modos de exibição, impacto na memória e tempos de carregamento.
+Se seu aplicativo precisar implementar alguma quantidade de renderização no DirectX para o modo de exibição XAML no Windows Mixed Reality, sua melhor aposta é criar um renderizador que possa funcionar com ambos os modos de exibição. O renderizador deve ser uma instância que possa ser acessada de ambos os modos de exibição e deve ser capaz de alternar entre a renderização 2D e Holographic. Dessa forma, os ativos de GPU são carregados apenas uma vez – isso reduz os tempos de carregamento, o impacto de memória e a quantidade de recursos a serem trocados ao alternar as exibições.

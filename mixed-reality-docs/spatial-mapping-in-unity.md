@@ -1,11 +1,11 @@
 ---
 title: Mapeamento espacial no Unity
-description: Renderização e colidam a geometria do mundo real ao seu redor no Unity.
+description: Renderizando e colide com a geometria do mundo real em relação a você no Unity.
 author: davidkline-ms
 ms.author: davidkl
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Unity, mapeamento espacial, processador, colisor, malha, varredura, componente
+keywords: Unity, mapeamento espacial, renderizador, colisor, malha, verificação, componente
 ms.openlocfilehash: 8f7bad1651ab31b2e83ad9d9c8f465547fbbdc5a
 ms.sourcegitcommit: 2f600e5ad00cd447b180b0f89192b4b9d86bbc7e
 ms.translationtype: MT
@@ -15,74 +15,74 @@ ms.locfileid: "67148646"
 ---
 # <a name="spatial-mapping-in-unity"></a>Mapeamento espacial no Unity
 
-Este tópico descreve como usar [mapeamento espacial](spatial-mapping.md) em seu projeto do Unity, recuperando as malhas de triângulos que representam as superfícies do mundo em torno de um dispositivo HoloLens, posicionamento, oclusão, análise de sala e muito mais.
+Este tópico descreve como usar o [mapeamento espacial](spatial-mapping.md) em seu projeto do Unity, recuperando as malhas de triângulos que representam as superfícies do mundo em um dispositivo HoloLens, para posicionamento, oclusão, análise de sala e muito mais.
 
-A Unity inclui suporte completo para o mapeamento espacial, que é exposto aos desenvolvedores das seguintes maneiras:
-1. Mapeamento de componentes disponíveis no MixedRealityToolkit espacial, que fornecem um caminho rápido e conveniente para começar o mapeamento espacial
-2. Mapeamento espacial de nível inferior das APIs, que fornecem completo controlar e habilitar a personalização de específico de aplicativo mais sofisticada
+O Unity inclui suporte completo para o mapeamento espacial, que é exposto aos desenvolvedores das seguintes maneiras:
+1. Componentes de mapeamento espacial disponíveis no MixedRealityToolkit, que fornecem um caminho conveniente e rápido para introdução ao mapeamento espacial
+2. APIs de mapeamento espacial de nível inferior, que fornecem controle total e permitem uma personalização mais sofisticada específica do aplicativo
 
-Para usar o mapeamento espacial em seu aplicativo, a capacidade de spatialPerception precisa ser definido em seu AppxManifest.
+Para usar o mapeamento espacial em seu aplicativo, o recurso spatialPerception precisa ser definido em seu AppxManifest.
 
-## <a name="setting-the-spatialperception-capability"></a>Definindo a capacidade de SpatialPerception
+## <a name="setting-the-spatialperception-capability"></a>Configurando o recurso SpatialPerception
 
-Para um aplicativo consumir dados de mapeamento espacial, a capacidade de SpatialPerception deve ser habilitada.
+Para que um aplicativo consuma dados de mapeamento espacial, o recurso SpatialPerception deve ser habilitado.
 
-Como habilitar a funcionalidade de SpatialPerception:
-1. No Editor do Unity, abra o **"Configurações do Player"** painel (Editar > configurações do projeto > Player)
-2. Clique no **"Windows Store"** guia
-3. Expandir **"Configurações de publicação"** e verifique o **"SpatialPerception"** funcionalidade no **"Recursos"** lista
+Como habilitar o recurso SpatialPerception:
+1. No editor do Unity, abra o painel **"configurações do Player"** (Editar > configurações do projeto > Player)
+2. Clique na guia **"Windows Store"**
+3. Expanda **"configurações de publicação"** e verifique o recurso **"SpatialPerception"** na lista **"recursos"**
 
-Observe que, se você já tiver exportado seu projeto do Unity para uma solução do Visual Studio, você precisará para exportar para uma nova pasta ou manualmente [definir esse recurso em que o AppxManifest no Visual Studio](spatial-mapping-in-directx.md#set-up-your-app-to-use-the-spatialperception-capability).
+Observe que, se você já tiver exportado seu projeto do Unity para uma solução do Visual Studio, será necessário exportar para uma nova pasta ou [definir manualmente esse recurso no AppxManifest no Visual Studio](spatial-mapping-in-directx.md#set-up-your-app-to-use-the-spatialperception-capability).
 
-Mapeamento espacial também requer um MaxVersionTested pelo menos 10.0.10586.0:
-1. No Visual Studio, clique com botão direito **Package. appxmanifest** no Gerenciador de soluções e selecione **Exibir código**
+O mapeamento espacial também requer um MaxVersionTested de pelo menos 10.0.10586.0:
+1. No Visual Studio, clique com o botão direito do mouse em **Package. appxmanifest** na Gerenciador de soluções e selecione **Exibir código**
 2. Localize a linha especificando **TargetDeviceFamily** e altere **MaxVersionTested = "10.0.10240.0"** para **MaxVersionTested = "10.0.10586.0"**
-3. **Salvar** Package. appxmanifest.
+3. **Salve** o Package. appxmanifest.
 
-## <a name="getting-started-with-unitys-built-in-spatial-mapping-components"></a>Introdução aos componentes de mapeamento espacial interna do Unity
+## <a name="getting-started-with-unitys-built-in-spatial-mapping-components"></a>Introdução aos componentes de mapeamento espacial interno do Unity
 
-2 componentes para facilmente adicionar mapeamento espacial ao seu aplicativo do Unity oferece **renderizador de mapeamento espacial** e **Colisor de mapeamento espacial**.
+O Unity oferece 2 componentes para adicionar facilmente o mapeamento espacial ao seu aplicativo, o renderizador de **mapeamento espacial** e o **Colisor de mapeamento espacial**.
 
 ### <a name="spatial-mapping-renderer"></a>Renderizador de mapeamento espacial
 
-O renderizador de mapeamento espacial permite a visualização da malha mapeamento espacial.
+O renderizador de mapeamento espacial permite a visualização da malha de mapeamento espacial.
 
 ![Renderizador de mapeamento espacial no Unity](images/spatialmappingrenderer.png)
 
-### <a name="spatial-mapping-collider"></a>Mapeamento espacial Colisor
+### <a name="spatial-mapping-collider"></a>Colisor de mapeamento espacial
 
-Permite que o Colisor mapeamento espacial holográfico conteúdo (ou caractere) interação, como física, com a malha de mapeamento espacial.
+O colisor de mapeamento espacial permite a interação de conteúdo Holographic (ou caractere), como a física, com a malha de mapeamento espacial.
 
-![Mapeamento espacial Colisor no Unity](images/spatialmappingcollider.png)
+![Colisor de mapeamento espacial no Unity](images/spatialmappingcollider.png)
 
-### <a name="using-the-built-in-spatial-mapping-components"></a>Usando os componentes internos mapeamento espacial
+### <a name="using-the-built-in-spatial-mapping-components"></a>Usando os componentes internos de mapeamento espacial
 
-Você pode adicionar os dois componentes ao seu aplicativo se você gostaria de visualizar e interagir com as superfícies de físico.
+Você pode adicionar ambos os componentes ao seu aplicativo se desejar visualizar e interagir com superfícies físicas.
 
 Para usar esses dois componentes em seu aplicativo do Unity:
-1. Selecione um GameObject no centro da área na qual você deseja detectar malhas de superfície espaciais.
-2. Na janela Inspetor, **Add Component** > **XR** > **Colisor de mapeamento espacial** ou **espacial Mapeamento de renderizador**.
+1. Selecione um gameobject no centro da área na qual você gostaria de detectar malhas de superfície espacial.
+2. Na janela Inspetor, adicione o processador de**mapeamento espacial** do **componente** > **XR** > ou o renderizador de **mapeamento espacial**.
 
-Você pode encontrar mais detalhes sobre como usar esses componentes na <a href="https://docs.unity3d.com/Manual/SpatialMappingComponents.html" target="_blank">site de documentação do Unity</a>.
+Você pode encontrar mais detalhes sobre como usar esses componentes no site de <a href="https://docs.unity3d.com/Manual/SpatialMappingComponents.html" target="_blank">documentação do Unity</a>.
 
-### <a name="going-beyond-the-built-in-spatial-mapping-components"></a>Indo além dos componentes internos mapeamento espacial
+### <a name="going-beyond-the-built-in-spatial-mapping-components"></a>Indo além dos componentes internos de mapeamento espacial
 
-Esses componentes torná-lo arrastar e soltar fácil começar a usar com o mapeamento espacial.  Quando você deseja ir além disso, há dois caminhos principais para explorar:
-* Para fazer seu próprio processamento de malha de nível inferior, consulte a seção abaixo sobre o script de nível baixo de mapeamento espacial API.
-* Para fazer a análise de malha de alto nível, consulte a seção abaixo sobre a biblioteca SpatialUnderstanding na <a href="https://github.com/Microsoft/MixedRealityToolkit-Unity/tree/htk_release/Assets/HoloToolkit/SpatialUnderstanding" target="_blank">MixedRealityToolkit</a>.
+Esses componentes o tornam fácil de arrastar e soltar para começar a usar o mapeamento espacial.  Quando quiser ir além, há dois caminhos principais a serem explorados:
+* Para fazer seu próprio processamento de malha de nível inferior, consulte a seção abaixo sobre a API de script de mapeamento espacial de baixo nível.
+* Para fazer uma análise de malha de nível superior, consulte a seção abaixo sobre a biblioteca SpatialUnderstanding em <a href="https://github.com/Microsoft/MixedRealityToolkit-Unity/tree/htk_release/Assets/HoloToolkit/SpatialUnderstanding" target="_blank">MixedRealityToolkit</a>.
 
-## <a name="using-the-low-level-unity-spatial-mapping-api"></a>Usando o Unity espacial mapeamento de API de nível inferior
+## <a name="using-the-low-level-unity-spatial-mapping-api"></a>Usando a API de mapeamento espacial do Unity de nível baixo
 
-Se você precisar de mais controle do que obter os componentes do renderizador de mapeamento espacial e Colisor de mapeamento espacial, você pode usar o script de nível baixo de mapeamento espacial APIs.
+Se você precisar de mais controle do que obter do renderizador de mapeamento espacial e dos componentes do colisor de mapeamento espacial, poderá usar as APIs de script de mapeamento espacial de nível baixo.
 
-**Namespace:** *UnityEngine.XR.WSA*<br>
-**Tipos de**: *SurfaceObserver*, *SurfaceChange*, *SurfaceData*, *SurfaceId*
+**Namespace:** *UnityEngine. XR. WSA*<br>
+**Tipos**: *SurfaceObserver*, *SurfaceChange*, *SurfaceData*, *surfaceid*
 
-A seguir é uma estrutura de tópicos do fluxo sugerido para um aplicativo que usa o mapeamento espacial APIs.
+Veja a seguir uma descrição do fluxo sugerido para um aplicativo que usa as APIs de mapeamento espacial.
 
-### <a name="set-up-the-surfaceobservers"></a>Configurar o SurfaceObserver(s)
+### <a name="set-up-the-surfaceobservers"></a>Configurar SurfaceObserver (s)
 
-Criar uma instância de um objeto SurfaceObserver para cada região definida pelo aplicativo de espaço que você precisa de dados de mapeamento espacial para.
+Crie uma instância de um objeto SurfaceObserver para cada região de espaço definida pelo aplicativo para a qual você precisa de dados de mapeamento espacial.
 
 ```cs
 SurfaceObserver surfaceObserver;
@@ -92,7 +92,7 @@ SurfaceObserver surfaceObserver;
  }
 ```
 
-Especifique a região de espaço que cada objeto SurfaceObserver fornecerá dados para chamando SetVolumeAsSphere, SetVolumeAsAxisAlignedBox, SetVolumeAsOrientedBox ou SetVolumeAsFrustum. Você pode redefinir a região de espaço no futuro, simplesmente chamando um dos seguintes métodos novamente.
+Especifique a região de espaço para a qual cada objeto SurfaceObserver fornecerá dados chamando SetVolumeAsSphere, SetVolumeAsAxisAlignedBox, SetVolumeAsOrientedBox ou SetVolumeAsFrustum. Você pode redefinir a região do espaço no futuro simplesmente chamando um desses métodos novamente.
 
 ```cs
 void Start () {
@@ -101,7 +101,7 @@ void Start () {
 }
 ```
 
-Quando você chama SurfaceObserver.Update(), você deve fornecer um manipulador para cada superfície espacial na região do SurfaceObserver de espaço que o sistema de mapeamento espacial tem novas informações para. O manipulador recebe, para uma superfície espacial:
+Ao chamar SurfaceObserver. Update (), você deve fornecer um manipulador para cada superfície espacial na região de espaço do SurfaceObserver para a qual o sistema de mapeamento espacial tem novas informações. O manipulador recebe, para uma superfície espacial:
 
 ```cs
 private void OnSurfaceChanged(SurfaceId surfaceId, SurfaceChange changeType, Bounds bounds, System.DateTime updateTime)
@@ -110,11 +110,11 @@ private void OnSurfaceChanged(SurfaceId surfaceId, SurfaceChange changeType, Bou
  }
 ```
 
-### <a name="handling-surface-changes"></a>Tratando alterações de superfície
+### <a name="handling-surface-changes"></a>Lidando com alterações de superfície
 
-Há vários casos principais para lidar com. Adicionado & atualizado que pode usar o mesmo código caminho e removido.
-* Nos casos adicionadas e atualizadas no exemplo, podemos adicionar ou obter o GameObject que representa isso do dicionário de malha, crie um struct SurfaceData com os componentes necessários, então chamar RequestMeshDataAsync para preencher o GameObject com os dados de malha e Posicione na cena.
-* No caso de removido, podemos remover o GameObject que representa essa malha do dicionário e destruí-lo.
+Há vários casos principais a serem manipulados. Adicionado & atualizado que pode usar o mesmo caminho de código e removido.
+* Nos casos adicionados & atualizados no exemplo, adicionamos ou obtemos o gameobject que representa essa malha do dicionário, criamos uma estrutura SurfaceData com os componentes necessários e, em seguida, chamamos RequestMeshDataAsync para preencher o gameobject com os dados de malha e posição na cena.
+* No caso removido, removemos o gameobject que representa a malha do dicionário e o destruimos.
 
 ```cs
 System.Collections.Generic.Dictionary<SurfaceId, GameObject> spatialMeshObjects = 
@@ -164,13 +164,13 @@ System.Collections.Generic.Dictionary<SurfaceId, GameObject> spatialMeshObjects 
    }
 ```
 
-### <a name="handling-data-ready"></a>Manipulação de dados pronto
+### <a name="handling-data-ready"></a>Manipulando dados prontos
 
-O manipulador de OnDataReady recebe um objeto SurfaceData. O WorldAnchor, MeshFilter e (opcionalmente) MeshCollider objetos que ele contém refletem o estado mais recente da superfície espacial associado. Opcionalmente, executar análise de e/ou [processamento](spatial-mapping.md#mesh-processing) dos dados de malha, acessando o membro de malha do objeto MeshFilter. Renderizar a superfície espacial com a malha mais recente e (opcionalmente) use-o para colisões de física e raycasts. É importante confirmar que o conteúdo do SurfaceData não é nulo.
+O manipulador OnDataReady recebe um objeto SurfaceData. Os objetos WorldAnchor, MeshFilter e (opcionalmente) MeshCollider que ele contém refletem o estado mais recente da superfície espacial associada. Opcionalmente, execute a análise e/ou o [processamento](spatial-mapping.md#mesh-processing) dos dados de malha acessando o membro de malha do objeto MeshFilter. Renderize a superfície espacial com a malha mais recente e (opcionalmente) Use-a para colisões de física e raycasts. É importante confirmar que o conteúdo de SurfaceData não é nulo.
 
-### <a name="start-processing-on-updates"></a>Iniciar o processamento de atualizações
+### <a name="start-processing-on-updates"></a>Iniciar processamento em atualizações
 
-SurfaceObserver.Update() deve ser chamado em um atraso, não cada quadro.
+SurfaceObserver. Update () deve ser chamado em um atraso, e não em todos os quadros.
 
 ```cs
 void Start () {
@@ -189,25 +189,25 @@ void Start () {
     }
 ```
 
-## <a name="higher-level-mesh-analysis-spatialunderstanding"></a>Análise da malha de nível superior: SpatialUnderstanding
+## <a name="higher-level-mesh-analysis-spatialunderstanding"></a>Análise de malha de nível superior: SpatialUnderstanding
 
-O <a href="https://github.com/Microsoft/MixedRealityToolkit-Unity" target="_blank">MixedRealityToolkit</a> é uma coleção de códigos de utilitários úteis para desenvolvimento holográfico baseado as APIs do Unity holográfica.
+O <a href="https://github.com/Microsoft/MixedRealityToolkit-Unity" target="_blank">MixedRealityToolkit</a> é uma coleção de código de utilidade útil para desenvolvimento de Holographic com base nas APIs do Unity Holographic.
 
-### <a name="spatial-understanding"></a>Noções básicas sobre espacial
+### <a name="spatial-understanding"></a>Compreensão espacial
 
-Ao colocar hologramas no mundo físico geralmente é desejável para ir além do mapeamento espacial de malha e planos de superfície. Quando o posicionamento é feito de maneira procedimental, um nível mais alto de compreensão ambiental é desejável. Isso geralmente exige a tomada de decisões sobre o que é paredes, ceiling e floor. Além disso, a capacidade de otimizar em relação a um conjunto de restrições de posicionamento para determinar os locais físicos mais desejáveis para objetos holographic.
+Ao colocar os hologramas no mundo físico, geralmente é desejável ir além dos planos de malha e superfície do mapeamento espacial. Quando o posicionamento é feito de procedimento, um nível mais alto de compreensão ambiental é desejável. Isso geralmente requer tomar decisões sobre o que é andar, teto e paredes. Além disso, a capacidade de otimizar contra um conjunto de restrições de posicionamento para determinar os locais físicos mais desejáveis para objetos Holographic.
 
-Durante o desenvolvimento de fragmentos e Conker Young, Asobo estúdios enfrentado head esse problema no desenvolvimento de um solucionador de espaço para essa finalidade. Cada um desses jogos tinha jogos necessidades específicas, mas eles compartilhados espacial Compreendendo a tecnologia de núcleo. O HoloToolkit.SpatialUnderstanding biblioteca encapsula dessa tecnologia, permitindo que você rapidamente localize de espaços vazios nas paredes, coloque os objetos no teto, identifica colocados por caractere sentar e uma grande variedade de outras consultas espaciais compreensão.
+Durante o desenvolvimento de jovens conkers e fragmentos, Asobo estúdios enfrentou esse problema, desenvolvendo um resolvedor de sala para essa finalidade. Cada um desses jogos tinha necessidades específicas de jogos, mas compartilhou a tecnologia de compreensão espacial principal. A biblioteca HoloToolkit. SpatialUnderstanding encapsula essa tecnologia, permitindo que você encontre rapidamente espaços vazios nas paredes, coloque os objetos no teto, identifique-os com relação ao caractere a ser colocado e uma infinidade de outras consultas de compreensão espacial.
 
-Todo o código-fonte está incluído, permitindo que você personalizá-lo às suas necessidades e compartilhar suas melhorias com a comunidade. O código para o C++ solver foi encapsulado em uma dll UWP e exposto a Unity com uma queda no pré-fabricado contido dentro de MixedRealityToolkit.
+Todo o código-fonte está incluído, permitindo personalizá-lo às suas necessidades e compartilhar suas melhorias com a Comunidade. O código do C++ resolvedor foi encapsulado em uma DLL UWP e exposto ao Unity com uma queda no pré-fabricado contido no MixedRealityToolkit.
 
 ### <a name="understanding-modules"></a>Noções básicas sobre módulos
 
-Existem três interfaces principais expostas pelo módulo: topologia para a superfície simple e consultas espaciais, forma para detecção de objetos e o Solucionador de posicionamento de objeto para o posicionamento de baseado em restrição de conjuntos de objetos. Cada um deles é descrita abaixo. Além das três interfaces do módulo principal, uma interface de conversão de ray pode ser usada para recuperar tipos de superfície com marcas de formatação e uma malha playspace watertight personalizados pode ser copiada-out.
+Há três interfaces primárias expostas pelo módulo: topologia para consultas espaciais e de superfície simples, forma de detecção de objeto e o resolvedor de posicionamento de objetos para o posicionamento baseado em restrição de conjuntos de objetos. Cada um deles é descrito abaixo. Além das três interfaces de módulo principais, uma interface de conversão Ray pode ser usada para recuperar tipos de superfície marcada e uma malha Watertight Playspace personalizada pode ser copiada.
 
 ### <a name="ray-casting"></a>Conversão de Ray
 
-Depois que a sala foi verificada e finalizada, rótulos são gerados internamente para superfícies de como o floor, ceiling e paredes. O "PlayspaceRaycast" função usa um raio e retorna se o raio entra em conflito com uma superfície conhecida e caso, nesse, informações sobre o que são exibidos na forma de "RaycastResult".
+Depois que a sala tiver sido verificada e finalizada, os rótulos serão gerados internamente para superfícies como o piso, o teto e as paredes. A função "PlayspaceRaycast" usa um raio e retorna se o raio colide com uma superfície conhecida e, nesse caso, informações sobre essa superfície na forma de um "RaycastResult".
 
 ```cpp
 struct RaycastResult
@@ -235,18 +235,18 @@ struct RaycastResult
 };
 ```
 
-Internamente, o raycast é calculado em relação a representação do playspace voxel do computada cm 8 ao cubo. Cada voxel contém um conjunto de elementos de superfície com os dados processados topologia (também conhecido como surfels). Os surfels contidos dentro da célula voxel interseccionadas são comparadas e a melhor correspondência usada para pesquisar as informações de topologia. Esses dados de topologia contém os rótulos retornados na forma de enumeração "SurfaceTypes", bem como a área de superfície da superfície de interseccionada.
+Internamente, o Raycast é calculado em relação à representação computada 8cm cúbico VOXEL do Playspace. Cada voxel contém um conjunto de elementos Surface com dados de topologia processados (também conhecido como surfels). As surfels contidas na célula VOXEL interseccionada são comparadas e a melhor correspondência usada para pesquisar as informações de topologia. Esses dados de topologia contêm o rótulo retornado na forma da enumeração "SurfaceTypes", bem como a área de superfície da superfície interseccionada.
 
-No exemplo de Unity, o cursor converte um raio a cada quadro. Em primeiro lugar, em relação a colisores do Unity. Em segundo lugar, em relação a representação do mundo do módulo de compreensão. E por fim, novamente elementos interface do usuário. Neste aplicativo, interface do usuário obtém prioridade, em seguida o resultado de compreensão e, por fim, colisores do Unity. O SurfaceType é relatado como texto ao lado do cursor.
+No exemplo de Unity, o cursor converte um raio cada quadro. Primeiro, em relação aos conflitantes da Unity. Em segundo lugar, em relação à representação Mundial do módulo de compreensão. E, finalmente, os elementos da interface do usuário. Neste aplicativo, a interface do usuário obtém prioridade, em seguida o resultado da compreensão e, por fim, os coliders do Unity. O Surfacetype é relatado como texto ao lado do cursor.
 
-![Tipo de superfície é rotulado ao lado do cursor](images/su-raycastresults-300px.jpg)<br>
-*Tipo de superfície é rotulado ao lado do cursor*
+![O tipo de superfície é rotulado ao lado do cursor](images/su-raycastresults-300px.jpg)<br>
+*O tipo de superfície é rotulado ao lado do cursor*
 
 ### <a name="topology-queries"></a>Consultas de topologia
 
-Dentro da DLL, o Gerenciador de topologia manipula a rotulagem do ambiente. Conforme mencionado acima, muitos dos dados é armazenado em surfels, contidos dentro de um volume voxel. Além disso, a estrutura de "PlaySpaceInfos" é usada para armazenar informações sobre o playspace, incluindo o alinhamento do mundo (para obter mais detalhes sobre isso abaixo), andar e altura de teto. Heurística é usada para determinar as paredes, ceiling e floor. Por exemplo, a superfície maior e menor horizontal com maior que 1 área da superfície m2 é considerada o chão. Observe que o caminho de câmera durante o processo de verificação também é usado neste processo.
+Dentro da DLL, o Gerenciador de topologia lida com a rotulagem do ambiente. Conforme mencionado acima, grande parte dos dados é armazenada no surfels, contido em um volume VOXEL. Além disso, a estrutura "PlaySpaceInfos" é usada para armazenar informações sobre o Playspace, incluindo o alinhamento Mundial (mais detalhes sobre isso abaixo), piso e altura do teto. A heurística é usada para determinar piso, teto e paredes. Por exemplo, a maior e menor superfície horizontal com uma área de superfície maior que 1 m2 é considerada a base. Observe que o caminho da câmera durante o processo de verificação também é usado nesse processo.
 
-Um subconjunto de consultas expostas pelo Gerenciador de topologia são expostos por meio da dll. As consultas de topologia expostos são da seguinte maneira.
+Um subconjunto das consultas expostas pelo Gerenciador de topologia é exposto por meio da dll. As consultas de topologia expostas são as seguintes.
 
 ```cpp
 QueryTopology_FindPositionsOnWalls
@@ -257,7 +257,7 @@ QueryTopology_FindLargestPositionsOnFloor
 QueryTopology_FindPositionsSittable
 ```
 
-Cada uma das consultas tem um conjunto de parâmetros, específicos para o tipo de consulta. No exemplo a seguir, o usuário Especifica a altura mínima & largura do volume desejado, a altura mínima de posicionamento acima do chão e a quantidade mínima de espaço livre na frente do volume. Todas as medidas são em metros.
+Cada uma das consultas tem um conjunto de parâmetros, específico ao tipo de consulta. No exemplo a seguir, o usuário especifica a altura mínima & largura do volume desejado, a altura mínima de posicionamento acima do andar e a quantidade mínima de espaço livre na frente do volume. Todas as medidas estão em metros.
 
 ```cpp
 EXTERN_C __declspec(dllexport) int QueryTopology_FindPositionsOnWalls(
@@ -269,9 +269,9 @@ EXTERN_C __declspec(dllexport) int QueryTopology_FindPositionsOnWalls(
     _Inout_ Dll_Interface::TopologyResult* locationData)
 ```
 
-Cada uma dessas consultas usarão uma matriz alocada previamente de estruturas de "TopologyResult". O parâmetro "locationCount" Especifica o comprimento da matriz passado. O valor de retorno relata o número de locais retornados. Esse número nunca é maior que o que for passado no parâmetro "locationCount".
+Cada uma dessas consultas usa uma matriz pré-configurada de estruturas "TopologyResult". O parâmetro "locationCount" especifica o comprimento da matriz passada. O valor de retorno informa o número de locais retornados. Esse número nunca é maior que o passado no parâmetro "locationCount".
 
-"TopologyResult" contém a posição central do volume retornado, a direção oposta (ou seja, normal) e as dimensões do espaço encontrado.
+O "TopologyResult" contém a posição central do volume retornado, a direção oposta (ou seja, normal) e as dimensões do espaço encontrado.
 
 ```cpp
 struct TopologyResult 
@@ -283,15 +283,15 @@ struct TopologyResult
 };
 ```
 
-Observe que a amostra do Unity, cada uma dessas consultas é vinculada a um botão no painel de interface do usuário virtual. O disco rígido do exemplo codifica os parâmetros para cada uma dessas consultas para valores razoáveis. Consulte SpaceVisualizer.cs no código de exemplo para obter mais exemplos.
+Observe que, no exemplo de Unity, cada uma dessas consultas é vinculada a um botão no painel de interface do usuário virtual. Os códigos de exemplo codificam os parâmetros de cada uma dessas consultas para valores razoáveis. Consulte SpaceVisualizer.cs no código de exemplo para obter mais exemplos.
 
 ### <a name="shape-queries"></a>Consultas de forma
 
-Dentro de dll, o analisador de forma ("ShapeAnalyzer_W") usa o analisador de topologia para correspondência com formas personalizadas definidas pelo usuário. O exemplo do Unity define um conjunto de formas e expõe os resultados-out por meio do menu de consulta no aplicativo, dentro da guia de forma. A intenção é que o usuário pode definir suas próprias consultas de forma do objeto e fazer usar desses, conforme exigido pelo seu aplicativo.
+Dentro da dll, o analisador de forma ("ShapeAnalyzer_W") usa o analisador de topologia para corresponder às formas personalizadas definidas pelo usuário. O exemplo de Unity define um conjunto de formas e expõe os resultados por meio do menu consulta no aplicativo, dentro da guia forma. A intenção é que o usuário possa definir suas próprias consultas de forma de objeto e usá-las, conforme a necessidade de seu aplicativo.
 
-Observe que a análise de forma funciona em superfícies horizontais apenas. Por exemplo, um sofá, é definido, a superfície de estação simples e simples parte superior do sofá novamente. A consulta de forma procura duas superfícies de um intervalo de tamanho, altura e os aspectos específico, com as superfícies de dois alinhada e conectado. Com a terminologia de APIs, o assento sofá e o back-top são componentes de forma e os requisitos de alinhamento são as restrições de componentes de forma.
+Observe que a análise de forma funciona apenas em superfícies horizontais. Um sofá, por exemplo, é definido pela superfície de estação plana e a parte superior do sofá de volta. A consulta de forma procura duas superfícies de um tamanho, altura e intervalo de aspecto específicos, com as duas superfícies alinhadas e conectadas. Usando a terminologia de APIs, a estação de sofá e a parte superior são componentes de forma e os requisitos de alinhamento são restrições de componente de forma.
 
-Um exemplo de consulta definido no exemplo Unity (ShapeDefinition.cs) para objetos "sittable" é o seguinte:
+Uma consulta de exemplo definida no exemplo de Unity (ShapeDefinition.cs) para objetos "sittable" é a seguinte:
 
 ```cs
 shapeComponents = new List<ShapeComponent>()
@@ -308,9 +308,9 @@ shapeComponents = new List<ShapeComponent>()
 AddShape("Sittable", shapeComponents);
 ```
 
-Cada consulta de forma é definida por um conjunto de componentes de forma, cada um com um conjunto de restrições de componente e um conjunto de restrições de forma que listando as dependências entre os componentes. Este exemplo inclui três restrições na definição de um único componente e sem restrições de forma entre os componentes (como há apenas um componente).
+Cada consulta de forma é definida por um conjunto de componentes de forma, cada um com um conjunto de restrições de componente e um conjunto de restrições de forma que listam as dependências entre os componentes. Este exemplo inclui três restrições em uma única definição de componente e nenhuma restrição de forma entre os componentes (já que há apenas um componente).
 
-Por outro lado, a forma de sofá tem dois componentes de forma e quatro restrições de forma. Observe que os componentes são identificados por seu índice na lista de componentes do usuário (0 e 1 neste exemplo).
+Por outro lado, a forma de sofá tem dois componentes Shape e quatro restrições Shape. Observe que os componentes são identificados por seu índice na lista de componentes do usuário (0 e 1 neste exemplo).
 
 ```cs
 shapeConstraints = new List<ShapeConstraint>()
@@ -322,14 +322,14 @@ shapeConstraints = new List<ShapeConstraint>()
 };
 ```
 
-Funções de wrapper são fornecidas no módulo do Unity para facilitar a criação de definições de forma personalizada. A lista completa de restrições de componente e a forma pode ser encontrada em "SpatialUnderstandingDll.cs" em "ShapeComponentConstraint" e as estruturas de "ShapeConstraint".
+As funções de wrapper são fornecidas no módulo do Unity para facilitar a criação de definições de formas personalizadas. A lista completa de restrições de componente e forma pode ser encontrada em "SpatialUnderstandingDll.cs" nas estruturas "ShapeComponentConstraint" e "ShapeConstraint".
 
-![Forma de retângulo é encontrada nessa superfície](images/su-shapequery-300px.jpg)<br>
-*Forma de retângulo é encontrada nessa superfície*
+![A forma de retângulo foi encontrada nesta superfície](images/su-shapequery-300px.jpg)<br>
+*A forma de retângulo foi encontrada nesta superfície*
 
-### <a name="object-placement-solver"></a>Solucionador de posicionamento de objeto
+### <a name="object-placement-solver"></a>Resolvedor de posicionamento de objeto
 
-O Solucionador de posicionamento de objeto pode ser usado para identificar locais ideais na sala de físico para colocar seus objetos. O solucionador encontrará que o melhor local fornecido a restrições e regras de objeto. Além disso, as consultas de objeto persistem até que o objeto for removido com "Solver_RemoveObject" ou "Solver_RemoveAllObjects" chamadas, permitindo que restrito posicionamento de vários objeto. Consultas de posicionamento de objetos consistem em três partes: o tipo de posicionamento com parâmetros, uma lista de regras e uma lista de restrições. Para executar uma consulta, use a seguinte API.
+O resolvedor de posicionamento de objetos pode ser usado para identificar locais ideais no espaço físico para colocar seus objetos. O solucionador encontrará o local mais adequado, considerando as regras e restrições do objeto. Além disso, as consultas de objeto persistem até que o objeto seja removido com chamadas "Solver_RemoveObject" ou "Solver_RemoveAllObjects", permitindo o posicionamento restrito de vários objetos. As consultas de posicionamento de objetos consistem em três partes: tipo de posicionamento com parâmetros, uma lista de regras e uma lista de restrições. Para executar uma consulta, use a API a seguir.
 
 ```cpp
 public static int Solver_PlaceObject(
@@ -342,7 +342,7 @@ public static int Solver_PlaceObject(
             [Out] IntPtr placementResult)
 ```
 
-Essa função usa um nome de objeto, definição de posicionamento e uma lista de regras e restrições. O C# wrappers funções auxiliares para facilitar a construção de restrição e regra de construção fornece. A definição de posicionamento contém o tipo de consulta – ou seja, um dos seguintes.
+Essa função usa um nome de objeto, uma definição de posicionamento e uma lista de regras e restrições. Os C# wrappers fornecem funções auxiliares de construção para facilitar a construção da regra e da restrição. A definição de posicionamento contém o tipo de consulta – ou seja, uma das opções a seguir.
 
 ```cpp
 public enum PlacementType
@@ -359,7 +359,7 @@ public enum PlacementType
             };
 ```
 
-Cada um dos tipos de posicionamento tem um conjunto de parâmetros exclusivos para o tipo. A estrutura de "ObjectPlacementDefinition" contém um conjunto de funções auxiliares estáticos para criar essas definições. Por exemplo, para encontrar um local para colocar um objeto no chão, você pode usar a função a seguir. público estático ObjectPlacementDefinition Create_OnFloor(Vector3 halfDims) em adição ao tipo de posicionamento, você pode fornecer um conjunto de regras e restrições. As regras não podem ser violadas. Locais possíveis para posicionamento que satisfazem o tipo e as regras são otimizados, em seguida, em relação ao conjunto de restrições para selecionar o local ideal de posicionamento. Cada uma das regras e restrições pode ser criada pelas funções de criação estáticos fornecido. Uma função de construção de restrição e regra de exemplo é fornecida abaixo.
+Cada um dos tipos de posicionamento tem um conjunto de parâmetros exclusivos para o tipo. A estrutura "ObjectPlacementDefinition" contém um conjunto de funções auxiliares estáticas para a criação dessas definições. Por exemplo, para encontrar um local para colocar um objeto no chão, você pode usar a função a seguir. Public estática ObjectPlacementDefinition Create_OnFloor (Vector3 halfDims) Além do tipo de posicionamento, você pode fornecer um conjunto de regras e restrições. As regras não podem ser violadas. Os locais de posicionamento possíveis que atendem ao tipo e às regras são então otimizados em relação ao conjunto de restrições para selecionar o local de posicionamento ideal. Cada uma das regras e restrições pode ser criada pelas funções de criação estática fornecidas. Uma regra de exemplo e uma função de construção de restrição são fornecidas abaixo.
 
 ```cs
 public static ObjectPlacementRule Create_AwayFromPosition(
@@ -368,7 +368,7 @@ public static ObjectPlacementConstraint Create_NearPoint(
     Vector3 position, float minDistance = 0.0f, float maxDistance = 0.0f)
 ```
 
-O abaixo do objeto de consulta de posicionamento está procurando um lugar para colocar um cubo de metade do medidor na borda de uma superfície, longe outros anteriormente colocar objetos e próximo ao centro da sala.
+A consulta de posicionamento de objeto abaixo está procurando um local para colocar um cubo de meio medidor na borda de uma superfície, longe de outros objetos anteriormente posicionados e perto do centro da sala.
 
 ```cs
 List<ObjectPlacementRule> rules = 
@@ -393,16 +393,16 @@ Solver_PlaceObject(
     UnderstandingDLL.GetStaticObjectPlacementResultPtr());
 ```
 
-Se for bem-sucedido, uma estrutura de "ObjectPlacementResult" que contém a posição de posicionamento, dimensões e a orientação é retornado. Além disso, o posicionamento é adicionado à lista interna da dll de objetos inseridos. Consultas subsequentes posicionamento levarão a esse objeto em conta. O arquivo "LevelSolver.cs" na amostra Unity contém mais consultas de exemplo.
+Se for bem-sucedida, uma estrutura "ObjectPlacementResult" contendo a posição de posicionamento, as dimensões e a orientação serão retornadas. Além disso, o posicionamento é adicionado à lista interna de objetos posicionados da dll. As consultas de posicionamento subsequentes levarão esse objeto à conta. O arquivo "LevelSolver.cs" no exemplo de Unity contém mais consultas de exemplo.
 
-![Resultados do posicionamento de objeto](images/su-objectplacement-1000px.jpg)<br>
-*Figura 3: O azul caixas como o resultado de três lugar no chão as consultas com longe as regras de posição de câmera*
+![Resultados da colocação do objeto](images/su-objectplacement-1000px.jpg)<br>
+*Figura 3: As caixas azuis de como o resultado de três lugares em consultas de piso distantes das regras de posição da câmera*
 
-Quando a solução para o local de posicionamento de vários objetos necessários para um cenário de nível ou do aplicativo, primeiro solucione indispensáveis e grandes objetos na ordem para maximizar a probabilidade de um espaço pode ser encontrado. Posicionamento de ordem é importante. Se os posicionamentos de objeto não for encontrados, tente configurações menos restritas. Ter um conjunto de configurações de fallback é essencial para dar suporte a funcionalidade em muitas configurações de espaço.
+Ao resolver o local de posicionamento de vários objetos necessários para um cenário de nível ou aplicativo, primeiro resolva os objetos indispensável e grandes para maximizar a probabilidade de que um espaço possa ser encontrado. A ordem de posicionamento é importante. Se os posicionamentos de objeto não puderem ser encontrados, tente configurações menos restritas. Ter um conjunto de configurações de fallback é essencial para dar suporte à funcionalidade em várias configurações de sala.
 
-### <a name="room-scanning-process"></a>Processo de verificação de espaço
+### <a name="room-scanning-process"></a>Processo de verificação de sala
 
-Enquanto a solução de mapeamento espacial fornecida pelo HoloLens é projetada para ser genérico o suficiente para atender às necessidades de toda a gama de problemas de espaço, o módulo de compreensão espacial foi criado para suportar as necessidades de dois jogos específicos. Sua solução é estruturada em torno de um processo específico e um conjunto de suposições, resumidas abaixo.
+Embora a solução de mapeamento espacial fornecida pelo HoloLens seja projetada para ser genérica o suficiente para atender às necessidades de toda a gama de espaços problemáticos, o módulo de compreensão espacial foi criado para dar suporte às necessidades de dois jogos específicos. Sua solução é estruturada em um processo específico e um conjunto de suposições, resumido abaixo.
 
 ```
 Fixed size playspace – The user specifies the maximum playspace size in the init call.
@@ -413,7 +413,7 @@ One-time scan process –
     Query functions will not function until after the scan has been finalized.
 ```
 
-Usuário controlado por playspace "pintura" – durante a fase de verificação, o usuário move e procura ao redor de desempenha o ritmo, pintura com eficiência as áreas que devem ser incluídas. A malha gerada é importante fornecer comentários do usuário durante essa fase. Em locais fechados home ou configuração do office – a consulta, as funções são projetadas em torno de superfícies simples e paredes ângulos retos. Essa é uma limitação suave. No entanto, durante a fase de verificação, uma análise de eixo primário é concluída para otimizar o mosaico de malha ao longo do eixo principal e secundário. O arquivo SpatialUnderstanding.cs incluído gerencia o processo de fase de verificação. Ele chama as funções a seguir.
+"Pintura" Playspace orientada por usuário – durante a fase de verificação, o usuário se move e procura o ritmo das jogas, pintando efetivamente as áreas que devem ser incluídas. A malha gerada é importante para fornecer comentários do usuário durante essa fase. Inportações domésticas ou de configuração do Office – as funções de consulta são projetadas em relação a superfícies simples e paredes em ângulos retos. Essa é uma limitação flexível. No entanto, durante a fase de verificação, uma análise de eixo primário é concluída para otimizar o mosaico de malha ao longo do eixo principal e secundário. O arquivo SpatialUnderstanding.cs incluído gerencia o processo da fase de verificação. Ele chama as funções a seguir.
 
 ```
 SpatialUnderstanding_Init – Called once at the start.
@@ -438,21 +438,21 @@ Import_UnderstandingMesh –
     after scanning has been finalized.
 ```
 
-O fluxo de varredura, acompanhando o comportamento de "SpatialUnderstanding" chama InitScan e, em seguida, UpdateScan cada quadro. Quando a consulta de estatísticas relata a cobertura razoável, o usuário tem permissão para airtap chamar RequestFinish para indicar o final da fase de verificação. UpdateScan continua a ser chamada até que ele é retornado o valor indica que a dll foi concluído o processamento.
+O fluxo de verificação, controlado pelo comportamento "SpatialUnderstanding", chama InitScan e, em seguida, UpdateScan cada quadro. Quando a consulta de estatísticas relata cobertura razoável, o usuário tem permissão para airtap chamar RequestFinish para indicar o fim da fase de verificação. UpdateScan continua sendo chamado até que o valor de retorno indique que a dll concluiu o processamento.
 
-### <a name="understanding-mesh"></a>Noções básicas sobre malha
+### <a name="understanding-mesh"></a>Entendendo a malha
 
-A dll de Noções básicas sobre armazena internamente o playspace como uma grade de cubos de voxel 8cm em tamanho. Durante a parte inicial da verificação, uma análise de componente principal é concluída para determinar os eixos da sala. Internamente, ele armazena seu espaço de voxel alinhado com esses eixos. Uma malha é gerada aproximadamente a cada segundo por meio da extração do isosurface do volume voxel. 
+A DLL de compreensão armazena internamente o Playspace como uma grade de cubos VOXEL dimensionados do 8cm. Durante a parte inicial da verificação, uma análise de componente primário é concluída para determinar os eixos da sala. Internamente, ele armazena seu espaço VOXEL alinhado a esses eixos. Uma malha é gerada aproximadamente a cada segundo, extraindo o isosurface do volume VOXEL. 
 
-![Malha gerada produzida a partir do volume voxel](images/su-custommesh.jpg)<br>
-*Malha gerada produzida a partir do volume voxel*
+![Malha gerada produzida a partir do volume VOXEL](images/su-custommesh.jpg)<br>
+*Malha gerada produzida a partir do volume VOXEL*
 
 ## <a name="troubleshooting"></a>Solução de problemas
-* Verifique se você tiver definido o [SpatialPerception](#setting-the-spatialperception-capability) capacidade
-* Quando o controle for perdido, o próximo evento OnSurfaceChanged removerá todas as malhas.
+* Verifique se você definiu o recurso [SpatialPerception](#setting-the-spatialperception-capability)
+* Quando o rastreamento for perdido, o próximo evento onsurfacechanged removerá todas as malhas.
 
-## <a name="spatial-mapping-in-mixed-reality-toolkit"></a>Mapeamento espacial no Kit de ferramentas de realidade misturada
-Para obter mais informações sobre como usar o mapeamento espacial com o Kit de ferramentas de realidade misturada v2, consulte o <a href="https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/SpatialAwareness/SpatialAwarenessGettingStarted.html" target="_blank">seção reconhecimento espacial</a> do docs MRTK.
+## <a name="spatial-mapping-in-mixed-reality-toolkit"></a>Mapeamento espacial no kit de ferramentas de realidade misturada
+Para obter mais informações sobre como usar o mapeamento espacial com o kit de ferramentas de realidade misturada v2, consulte a <a href="https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/SpatialAwareness/SpatialAwarenessGettingStarted.html" target="_blank">seção reconhecimento espacial</a> do docs MRTK.
 
 ## <a name="see-also"></a>Consulte também
 * [MR Espacial 230: mapeamento espacial](holograms-230.md)
@@ -461,4 +461,4 @@ Para obter mais informações sobre como usar o mapeamento espacial com o Kit de
 * <a href="https://github.com/Microsoft/MixedRealityToolkit-Unity" target="_blank">MixedRealityToolkit</a>
 * <a href="http://docs.unity3d.com/ScriptReference/MeshFilter.html" target="_blank">UnityEngine.MeshFilter</a>
 * <a href="http://docs.unity3d.com/ScriptReference/MeshCollider.html" target="_blank">UnityEngine.MeshCollider</a>
-* <a href="http://docs.unity3d.com/ScriptReference/Bounds.html" target="_blank">UnityEngine.Bounds</a>
+* <a href="http://docs.unity3d.com/ScriptReference/Bounds.html" target="_blank">UnityEngine. Bounds</a>

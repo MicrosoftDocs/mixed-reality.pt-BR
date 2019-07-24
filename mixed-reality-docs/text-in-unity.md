@@ -1,11 +1,11 @@
 ---
 title: Texto no Unity
-description: Para exibir o texto no Unity, há dois tipos de componentes de texto, você pode usar — o texto de interface do usuário e o texto 3D de malha.
+description: Para exibir texto no Unity, há dois tipos de componentes de texto que você pode usar — texto da interface do usuário e malha de texto 3D.
 author: cre8ivepark
 ms.author: dongpark
 ms.date: 06/03/2019
 ms.topic: article
-keywords: Windows Mixed Reality, design, controles, fonte, tipografia, interface do usuário, experiência do usuário
+keywords: Windows Mixed Reality, design, controles, fonte, tipografia, interface do usuário, UX
 ms.openlocfilehash: f57b04c7d57219b7426793879004ef010d2b1ea8
 ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
 ms.translationtype: MT
@@ -15,89 +15,89 @@ ms.locfileid: "67415421"
 ---
 # <a name="text-in-unity"></a>Texto no Unity
 
-Texto é um dos componentes mais importantes em aplicativos holographic. Para exibir o texto no Unity, há três tipos de componentes de texto, você pode usar — texto de interface do usuário, de malha 3D texto e texto de malha Pro. Por padrão o texto de interface do usuário e de malha 3D texto aparecem desfocado e são muito grandes. É preciso ajustar algumas variáveis para obter texto nítido e de alta qualidade que tem um tamanho gerenciável em HoloLens. Ao aplicar o fator de escala para obter as dimensões apropriadas ao usar o texto de interface do usuário e os componentes de texto de malha 3D, você pode obter a melhor qualidade de renderização.
+O texto é um dos componentes mais importantes nos aplicativos Holographic. Para exibir texto no Unity, há três tipos de componentes de texto que você pode usar — texto da interface do usuário, malha de texto 3D e malha de texto pro. Por padrão, o texto da interface do usuário e a malha de texto 3D aparecem borrados e são muito grandes. Você precisa ajustar algumas variáveis para obter um texto nítido e de alta qualidade que tenha um tamanho gerenciável no HoloLens. Ao aplicar o fator de dimensionamento para obter dimensões adequadas ao usar o texto da interface do usuário e componentes de malha de texto 3D, você pode obter melhor qualidade de renderização.
 
-![Como obter o texto nítido e Belo](images/hug-text-02-640px.png)<br>
-*Texto desfocado padrão no Unity*
+![Como obter texto nítido e bonito](images/hug-text-02-640px.png)<br>
+*Texto padrão borrado no Unity*
 
-## <a name="working-with-unitys-3d-texttext-mesh-and-ui-text"></a>Trabalhando com texto 3D (texto malha) e o texto da interface do usuário do Unity
+## <a name="working-with-unitys-3d-texttext-mesh-and-ui-text"></a>Trabalhando com texto 3D do Unity (malha de texto) e texto da interface do usuário
 
-Unity pressupõe que todos os novos elementos adicionados a uma cena 1 unidade do Unity no tamanho ou escala de transformação de 100%, que se traduz em cerca de 1 metro em HoloLens. No caso de fontes, a caixa delimitadora para um TextMesh 3D vem em por padrão, em cerca de 1 metro de altura.
+O Unity pressupõe que todos os novos elementos adicionados a uma cena tenham uma unidade Unity de tamanho ou uma escala de transformação de 100%, o que traduz em cerca de 1 metro no HoloLens. No caso de fontes, a caixa delimitadora para um textmesh 3D entra por padrão em aproximadamente 1 metro de altura.
 
 ![Trabalhando com fontes no Unity](images/640px-hug-text-03.png)<br>
-*Texto 3D do Unity padrão (texto de malha) ocupa 1 unidade do Unity, que é de 1 metro*
+*O texto 3D de Unity (malha de texto) padrão ocupa uma unidade Unity que é de 1 metro*
 
 <br>
-A maioria dos designers visuais usam pontos para definir tamanhos de fonte no mundo real. Há cerca de 2835 (2,834.645666399962) pontos em 1 metro. Com base na conversão de sistema de ponto de 1 metro e texto de malha tamanho da fonte padrão do Unity de 13, o cálculo simple de 13 dividido por 2835 é igual a 0.0046 (0.004586111116 para ser mais exato) fornece um bom padrão de dimensionamento para começar (alguns talvez queira arredondar como 0,005). Dimensionar o objeto de texto ou no contêiner para esses valores não permitirá somente para a conversão de 1:1 da fonte tamanhos em um programa de design, mas também fornece um padrão para que possa manter a consistência em toda a sua experiência.
+A maioria dos designers visuais usa pontos para definir tamanhos de fonte no mundo real. Há cerca de 2835 pontos (2, 834.645666399962) em 1 metro. Com base na conversão de sistema de ponto para 1 medidor e tamanho de fonte de malha de texto padrão de Unity de 13, a matemática simples de 13 dividido por 2835 é igual a 0, 46 (0.004586111116 a ser exato) fornece uma boa escala padrão para começar (algumas podem ser arredondadas para 0, 5). Dimensionar o objeto de texto ou o contêiner para esses valores não só permitirá a conversão 1:1 de tamanhos de fonte em um programa de design, mas também fornecerá um padrão para que você possa manter a consistência em toda a sua experiência.
 
-![Unity malha texto 3D com diferentes tamanhos de fontes](images/Text_In_Unity_Measurements1.png)<br>
-*Valores de escala para o texto 3D do Unity e o texto de interface do usuário*
+![Malha de texto 3D do Unity com tamanhos de fonte diferentes](images/Text_In_Unity_Measurements1.png)<br>
+*Dimensionamento de valores para texto 3D do Unity e texto da interface do usuário*
 
-![Unity malha texto 3D com diferentes tamanhos de fontes](images/hug-text-05-1000px.png)<br>
-*Unity malha texto 3D com valores otimizados*
+![Malha de texto 3D do Unity com tamanhos de fonte diferentes](images/hug-text-05-1000px.png)<br>
+*Malha de texto 3D do Unity com valores otimizados*
 
 <br>
-Ao adicionar um elemento de texto com base da interface do usuário ou de tela a uma cena, a diferença de tamanho é ainda maior. As diferenças em dois tamanhos é aproximadamente 1000%, que trará o fator de escala para componentes da interface do usuário com base em texto 0.00046 (0.0004586111116 para ser mais exato) ou 0,0005 para o valor arredondado.
+Ao adicionar um elemento de texto baseado na interface do usuário ou tela a uma cena, o tamanho da disparidade ainda é maior. As diferenças nos dois tamanhos são cerca de 1000%, o que levaria o fator de escala para componentes de texto baseados na interface do usuário a 0, 46 (0.0004586111116 para ser exato) ou 0, 5 para o valor arredondado.
 
-![Texto de interface do usuário do Unity com diferentes pixels dinâmicas por valores de unidade](images/hug-text-04-1000px.png)<br>
-*Texto de interface do usuário do Unity com valores otimizados*
+![Texto da interface do usuário do Unity com diferentes pixels dinâmicos por valores de unidade](images/hug-text-04-1000px.png)<br>
+*Texto da interface do usuário do Unity com valores otimizados*
 
 <br>
 
 >[!NOTE]
->O valor padrão de qualquer fonte que pode ser afetado pelo tamanho da textura de fonte ou como a fonte foi importada para o Unity. Esses testes foram executados com base em como a fonte Arial de padrão no Unity, bem como uma outra fonte importada.
+>O valor padrão de qualquer fonte pode ser afetado pelo tamanho da textura dessa fonte ou como a fonte foi importada para o Unity. Esses testes foram executados com base na fonte Arial padrão no Unity, bem como uma outra fonte importada.
 
-## <a name="working-with-text-mesh-pro"></a>Trabalhar com texto de malha Pro
+## <a name="working-with-text-mesh-pro"></a>Trabalhando com a malha de texto pro
 
-Com o texto de malha Pro do Unity, você pode garantir a qualidade de renderização de texto. Ele dá suporte à estrutura de tópicos de textos, independentemente da distância usando a [SDF (campo de distância assinado)](https://steamcdn-a.akamaihd.net/apps/valve/2007/SIGGRAPH2007_AlphaTestedMagnification.pdf) técnica. Usando o mesmo método de cálculo que usamos acima para o texto 3D de malha e o texto de interface do usuário, podemos encontrar os valores de escala apropriados usar ponto tipográfico convencional. Uma vez que a fonte de texto de malha Pro 3D padrão com o tamanho de 36 mostra o delimitador de 2,5 Unit(2.5m) do Unity, podemos usar o valor de escala 0,005 para usar o tamanho de ponto. O texto de malha Pro no menu de interface do usuário tem o padrão de limitação de tamanho de 25 Unit(25m) do Unity. Isso nos dá 0,0005 para o valor de escala.
+Com o Text mesh pro da Unity, você pode proteger a qualidade de renderização do texto. Ele dá suporte a uma estrutura de texto nítida, independentemente da distância que usa a técnica de [SDF (campo de distância assinada)](https://steamcdn-a.akamaihd.net/apps/valve/2007/SIGGRAPH2007_AlphaTestedMagnification.pdf) . Usando o mesmo método de cálculo que usamos acima para a malha de texto 3D e o texto da interface do usuário, podemos encontrar valores adequados de dimensionamento para usar o ponto tipográfico convencional. Como a fonte padrão de malha de texto 3D Pro com o tamanho 36 mostra o limite da unidade de 2,5 Unity (2,5 m), podemos usar o valor de dimensionamento 0, 5 para usar o tamanho do ponto. O texto malha pro no menu da interface do usuário tem o tamanho delimitador padrão de 25 unidades de Unity (25m). Isso nos dá 0, 5 para o valor de dimensionamento.
 
-![Unity malha texto 3D com diferentes tamanhos de fontes](images/Text_In_Unity_Measurements2.png)<br>
-*Valores de escala para o texto 3D do Unity e o texto de interface do usuário*
+![Malha de texto 3D do Unity com tamanhos de fonte diferentes](images/Text_In_Unity_Measurements2.png)<br>
+*Dimensionamento de valores para texto 3D do Unity e texto da interface do usuário*
 
-## <a name="recommended-text-size"></a>Tamanho do texto recomendada
-Como você pode esperar, tamanhos de tipo que usamos em um computador ou um dispositivo de tablet (normalmente entre 12 – 32 pt) parecer muito pequenos em uma distância de 2 metros. Ele depende das características de cada fonte, mas em geral, são o mínimo recomendado, exibindo o ângulo e a altura da fonte para manter a legibilidade em torno de 0.35°-0.4°/12.21-13.97mm com base em nossos estudos de pesquisa do usuário. Trata-se 35 40pt com o fator de escala apresentado acima. 
+## <a name="recommended-text-size"></a>Tamanho de texto recomendado
+Como você pode esperar, os tamanhos de tipo que usamos em um PC ou um dispositivo Tablet (normalmente entre 12 e 32pt) parecem muito pequenos em uma distância de 2 metros. Depende das características de cada fonte, mas, em geral, o ângulo de exibição mínimo recomendado e a altura da fonte para legibilidade estão em torno de 0.35 °-0.4 °/12.21-13.97mm, com base em nossos estudos de pesquisa de usuários. É cerca de 35 40pt com o fator de dimensionamento apresentado acima. 
 
-Para a interação quase em 0.45m(45cm), ângulo de exibição da fonte legível mínima e a altura são 0.4 °-0,5 ° / 3.14 – 3.9 mm. Trata-se 9-12 pt com o fator de escala apresentado acima.
+Para a interação próxima no 0.45 m (45cm), o ângulo de exibição da fonte mínimo legível e a altura são 0.4 °-0,5 °/3.14 – 3.9 mm. É cerca de 9 12 pt com o fator de dimensionamento apresentado acima.
 
-![Próximo e longe intervalo interação](images/typography-distance-1000px.jpg)
-*intervalo de interação de conteúdo no próximo e distante*
+![Conteúdo de intervalo](images/typography-distance-1000px.jpg)
+de interação próxima e longe*em um intervalo de interação próximo e longe*
 
-### <a name="the-minimum-legible-font-size"></a>O tamanho mínimo da fonte legível
-| distância | Ângulo de exibição | Altura do texto | Tamanho da fonte |
+### <a name="the-minimum-legible-font-size"></a>O tamanho mínimo de fonte legível
+| alcance | Ângulo de exibição | Altura do texto | Tamanho da fonte |
 |---------|---------|---------|---------|
-| 45cm (distância manipulação direta) | 0.4°-0.5° | 3.14 – 3.9 mm | 8.9 – 11.13pt |
-| 2 min | 0.35°-0.4° | 12.21 – 13.97 mm | 34.63-39.58pt |
+| 45cm (distância de manipulação direta) | 0.4 °-0,5 ° | 3.14 – 3.9 mm | 8.9 – 11.13 pt |
+| m | 0.35 °-0,4 ° | 12.21 – 13.97 mm | 34.63-39.58 pt |
 
 
-### <a name="the-comfortably-legible-font-size"></a>O tamanho da fonte confortavelmente legível
-| distância | Ângulo de exibição | Altura do texto | Tamanho da fonte |
+### <a name="the-comfortably-legible-font-size"></a>O tamanho de fonte legível confortavelmente
+| alcance | Ângulo de exibição | Altura do texto | Tamanho da fonte |
 |---------|---------|---------|---------|
-| 45cm (distância manipulação direta) | 0.65°-0.8° | 5.1-6.3 mm | 14.47-17.8pt |
-| 2 min | 0.6°-0.75° | 20,9-26.2 mm | 59.4-74.2pt |
+| 45cm (distância de manipulação direta) | 0.65 °-0,8 ° | 5.1-6.3 mm | 14.47-17.8 pt |
+| m | 0,6 ° a 0,75 ° | 20,9-26.2 mm | 59.4-74.2 pt |
 
-Segoe UI (a fonte padrão para Windows) funciona bem na maioria dos casos. No entanto, evite usando as famílias de fontes de luz de luz ou semi de tamanho pequeno, pois traços verticais finos serão Vibrar e ele prejudicará a legibilidade. Fontes modernos com suficiente espessura do traço funcionam muito bem. Por exemplo, Helvetica e Arial parecer bonitas e são muito legível em HoloLens com pesos regulares ou em negrito.
+Segoe UI (a fonte padrão do Windows) funciona bem na maioria dos casos. No entanto, evite usar famílias de fontes leves ou semileves em tamanho pequeno, uma vez que traços verticais finos serão vibrantes e diminuirá a legibilidade. Fontes modernas com espessura de traço suficiente funcionam bem. Por exemplo, Helvetica e Arial parecem grandioso e são muito legíveis no HoloLens com pesos normais ou em negrito.
 
 
-![Ângulo de visualização](images/Text_In_Unity_ViewingAngle.jpg)
-*exibindo a altura de distância, ângulo e texto*
+![Exibindo](images/Text_In_Unity_ViewingAngle.jpg)
+ângulo exibindo a*distância, o ângulo e a altura do texto*
 
-## <a name="sharp-text-rendering-quality-with-proper-dimension"></a>Qualidade de renderização de texto com dimensões adequadas de sustenido
+## <a name="sharp-text-rendering-quality-with-proper-dimension"></a>Qualidade de renderização de texto nítido com dimensão adequada
 
-Com base nesses fatores de dimensionamento, nós criamos [pré-fabricados de texto com texto de interface do usuário e de malha 3D texto](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MixedRealityToolkit.SDK/StandardAssets/Prefabs/Text). Os desenvolvedores podem usar essas pré-fabricados para obter o tamanho da fonte consistente e texto nítidos.
+Com base nesses fatores de dimensionamento, criamos [texto pré-fabricados com o texto da interface do usuário e a malha de texto 3D](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MixedRealityToolkit.SDK/StandardAssets/Prefabs/Text). Os desenvolvedores podem usar esses pré-fabricados para obter texto nítido e tamanho de fonte consistente.
 
-![Qualidade de renderização de texto com dimensões adequadas de sustenido](images/hug-text-06-1000px.png)<br>
-*Qualidade de renderização de texto com dimensões adequadas de sustenido*
+![Qualidade de renderização de texto nítido com dimensão adequada](images/hug-text-06-1000px.png)<br>
+*Qualidade de renderização de texto nítido com dimensão adequada*
 
-## <a name="shader-with-occlusion-support"></a>Sombreador com suporte de oclusão
+## <a name="shader-with-occlusion-support"></a>Sombreador com suporte a oclusão
 
-Material de fonte padrão do Unity não oferece suporte a oclusão. Por isso, você verá o texto atrás dos objetos por padrão. Incluímos um simples [sombreador que dá suporte à oclusão](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_release/Assets/MixedRealityToolkit/StandardAssets/Shaders/Text3DShader.shader). A imagem abaixo mostra o texto com o material de fonte padrão (à esquerda) e o texto com oclusão adequada (à direita).
+O material de fonte padrão do Unity não oferece suporte a oclusão. Por isso, você verá o texto por trás dos objetos por padrão. Incluímos um sombreador simples [que dá suporte ao oclusão](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_release/Assets/MixedRealityToolkit/StandardAssets/Shaders/Text3DShader.shader). A imagem abaixo mostra o texto com material de fonte padrão (esquerda) e o texto com oclusão apropriado (direita).
 
-![Sombreador com suporte de oclusão](images/hug-text-07-1000px.png)<br>
-*Sombreador com suporte de oclusão*
+![Sombreador com suporte a oclusão](images/hug-text-07-1000px.png)<br>
+*Sombreador com suporte a oclusão*
 
 
 ## <a name="see-also"></a>Consulte também
-* [Texto pré-fabricado no MRTK](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MixedRealityToolkit.SDK/StandardAssets/Prefabs/Text)
+* [Pré-fabricado de texto no MRTK](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MixedRealityToolkit.SDK/StandardAssets/Prefabs/Text)
 * [Tipografia](typography.md)
 
  

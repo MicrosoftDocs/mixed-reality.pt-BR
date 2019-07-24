@@ -1,11 +1,11 @@
 ---
-title: Cabeçalho e olho olhar no DirectX
-description: Guia do desenvolvedor para o uso principal olhar e rastreamento de aplicativos de DirectX nativos de olho.
+title: Olhar de cabeça e olho no DirectX
+description: Guia do desenvolvedor para usar o Head olhar e o acompanhamento de olho em aplicativos nativos do DirectX.
 author: caseymeekhof
 ms.author: cmeekhof
 ms.date: 05/09/2019
 ms.topic: article
-keywords: olhar, olhar cabeçalho, controle de cabeçalho, acompanhamento a olho nu, directx, entrada, hologramas
+keywords: olhar, Head olhar, acompanhamento de cabeçalho, controle ocular, DirectX, entrada, hologramas
 ms.openlocfilehash: edf20a621178d76bfc97477f9f9b2eca200f1318
 ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
 ms.translationtype: MT
@@ -13,23 +13,23 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 06/27/2019
 ms.locfileid: "67414415"
 ---
-# <a name="head-and-eye-gaze-input-in-directx"></a>Cabeçalho e olho olhares entrada no DirectX
+# <a name="head-and-eye-gaze-input-in-directx"></a>Entrada de olhar de cabeça e olho no DirectX
 
-No Windows Mixed Reality, olho e olhar principal entrada é usada para determinar o que o usuário está observando. Isso pode ser usado para gerar modelos principais de entrada, como [olhar e confirmação de cabeçalho](gaze-and-commit.md)e também para fornecer contexto para tipos de interações. Há dois tipos de olhar vetores disponíveis por meio da API: olhar e olhar de olho de cabeçalho.  Ambos são fornecidas como um três ray dimensional com uma origem e a direção. Aplicativos, em seguida, podem raycast no mundo real, ou suas cenas e determinar o que o usuário está definindo como destino.
+No Windows Mixed Reality, os olhos e a entrada olhar de cabeça são usados para determinar o que o usuário está olhando. Isso pode ser usado para direcionar modelos de entrada primários, como [Head olhar e commit](gaze-and-commit.md), e também fornecer contexto para tipos de interações. Há dois tipos de vetores olhar disponíveis por meio da API: Head olhar e olho olhar.  Ambos são fornecidos como um raio de três dimensões com uma origem e uma direção. Os aplicativos podem então raycastr em suas cenas ou no mundo real e determinar o que o usuário está direcionando.
 
-**Mantenha o foco principal** representa a direção apontado no cabeçalho do usuário. Pense nisso como a posição e direção de avanço do próprio dispositivo, com a posição que representa o centro do ponto entre as duas exibições.  Olhar de cabeça está disponível em todos os dispositivos de realidade misturada.
+**Olhar de cabeçalho** representa a direção na qual a cabeça do usuário é apontada. Considere isso como a posição e direção de encaminhamento do próprio dispositivo, com a posição que representa o ponto central entre as duas exibições.  O Head olhar está disponível em todos os dispositivos de realidade misturada.
 
-**Olhar olho** representa a direção que quer a atenção do usuário. A origem está localizada entre a atenção do usuário.  Ele está disponível em dispositivos de realidade mista que incluem um sistema de acompanhamento a olho nu.
+**Olho olhar** representa a direção que os olhos do usuário estão procurando. A origem está localizada entre os olhos do usuário.  Ele está disponível em dispositivos com realidade misturada que incluem um sistema de controle de olho.
 
-Cabeçalho e olho raios de olhar são acessíveis por meio de [SpatialPointerPose](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Input.Spatial.SpatialPointerPose) API. Basta chamar [SpatialPointerPose::TryGetAtTimestamp](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.spatial.spatialpointerpose.trygetattimestamp) para receber um novo objeto de SpatialPointerPose no carimbo de hora especificado e [sistema de coordenadas](coordinate-systems-in-directx.md). Este SpatialPointerPose contém uma origem de olhar principal e uma direção. Ele também contém uma origem de olhar de olho e a direção se acompanhamento a olho nu estiver disponível.
+Os raios de olhar de cabeça e olho podem ser acessados por meio da API do [SpatialPointerPose](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Input.Spatial.SpatialPointerPose) . Basta chamar [SpatialPointerPose:: TryGetAtTimestamp](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.spatial.spatialpointerpose.trygetattimestamp) para receber um novo objeto SpatialPointerPose no carimbo de data/hora e no [sistema de coordenadas](coordinate-systems-in-directx.md)especificado. Esse SpatialPointerPose contém uma origem e direção de olhar de cabeçalho. Ele também contém uma origem e direção de olhar de olho, se o acompanhamento de olho estiver disponível.
 
-## <a name="using-head-gaze"></a>Usando olhar principal
+## <a name="using-head-gaze"></a>Usando o Head olhar
 
-Para acessar o olhar principal, inicie chamando [SpatialPointerPose::TryGetAtTimestamp](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.spatial.spatialpointerpose.trygetattimestamp) para receber um novo objeto SpatialPointerPose. Você precisará passar os parâmetros a seguir.
- - Um [SpatialCoordinateSystem](https://docs.microsoft.com/en-us/uwp/api/windows.perception.spatial.spatialcoordinatesystem) que representa o sistema de coordenadas desejado para o cabeçalho olhar. Isso é representado pela *coordinateSystem* variável no código a seguir. Para obter mais informações, visite nosso [sistemas de coordenadas](coordinate-systems-in-directx.md) guia do desenvolvedor.
- - Um [carimbo de hora](https://docs.microsoft.com/en-us/uwp/api/windows.graphics.holographic.holographicframeprediction.timestamp#Windows_Graphics_Holographic_HolographicFramePrediction_Timestamp) que representa a hora exata da pose principal solicitada.  Normalmente, você usará um carimbo de hora que corresponde ao tempo de quando o quadro atual será exibido. Você pode obter esse carimbo de hora de exibição previstos de um [HolographicFramePrediction](https://docs.microsoft.com/en-us/uwp/api/Windows.Graphics.Holographic.HolographicFramePrediction) objeto, que é acessível por meio de atual [HolographicFrame](https://docs.microsoft.com/en-us/uwp/api/windows.graphics.holographic.holographicframe).  Esse objeto HolographicFramePrediction é representado pela *previsão* variável no código a seguir.
+Para acessar o cabeçalho olhar, comece chamando [SpatialPointerPose:: TryGetAtTimestamp](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.spatial.spatialpointerpose.trygetattimestamp) para receber um novo objeto SpatialPointerPose. Você precisa passar os parâmetros a seguir.
+ - Um [SpatialCoordinateSystem](https://docs.microsoft.com/en-us/uwp/api/windows.perception.spatial.spatialcoordinatesystem) que representa o sistema de coordenadas desejado para o olhar de cabeçalho. Isso é representado pela variável *coordinateSystem* no código a seguir. Para obter mais informações, visite nosso guia do desenvolvedor de [sistemas de coordenadas](coordinate-systems-in-directx.md) .
+ - Um [carimbo de data/](https://docs.microsoft.com/en-us/uwp/api/windows.graphics.holographic.holographicframeprediction.timestamp#Windows_Graphics_Holographic_HolographicFramePrediction_Timestamp) hora que representa o tempo exato necessário para a pose de cabeçalho.  Normalmente, você usará um carimbo de data/hora que corresponde ao horário em que o quadro atual será exibido. Você pode obter esse carimbo de data/hora de exibição previsto de um objeto [HolographicFramePrediction](https://docs.microsoft.com/en-us/uwp/api/Windows.Graphics.Holographic.HolographicFramePrediction) , que é acessível por meio do [HolographicFrame](https://docs.microsoft.com/en-us/uwp/api/windows.graphics.holographic.holographicframe)atual.  Esse objeto HolographicFramePrediction é representado pela variável de *previsão* no código a seguir.
 
- Quando você tiver um SpatialPointerPose válido, a posição principal e a direção para frente são acessíveis como propriedades.  O código a seguir mostra como acessá-los.
+ Quando você tiver um SpatialPointerPose válido, a posição de cabeçalho e a direção de encaminhamento serão acessíveis como propriedades.  O código a seguir mostra como acessá-los.
 
  ```cpp
 using namespace winrt::Windows::UI::Input::Spatial;
@@ -45,14 +45,14 @@ if (pointerPose)
 }
 ```
 
-## <a name="using-eye-gaze"></a>Usando um olhar de olhos
+## <a name="using-eye-gaze"></a>Usando os olhos olhar
 
-A API de olhar olho é muito semelhante ao olhar principal.  Ele usa as mesmas [SpatialPointerPose](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Input.Spatial.SpatialPointerPose) API, que fornece um raio de origem e a direção que você pode raycast em relação a sua cena.  A única diferença é que você precisa habilitar o acompanhamento de olho antes de usá-lo explicitamente. Para isso, você precisa fazer duas etapas:
-1. Solicite permissão de usuário para usar em seu aplicativo de acompanhamento de olho.
-2. Habilite a funcionalidade "Mantenha o foco de entrada" em seu manifesto de pacote.
+A API de olho olhar é muito semelhante à olhar de cabeça.  Ele usa a mesma API [SpatialPointerPose](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Input.Spatial.SpatialPointerPose) , que fornece uma Ray Origin e uma direção que você pode Raycast em sua cena.  A única diferença é que você precisa habilitar explicitamente o controle de olho antes de usá-lo. Para isso, você precisa executar duas etapas:
+1. Solicite permissão do usuário para usar o acompanhamento de olho em seu aplicativo.
+2. Habilite a funcionalidade de "entrada olhar" no manifesto do pacote.
 
-### <a name="requesting-access-to-gaze-input"></a>Solicitar acesso a mantenha o foco de entrada
-Quando seu aplicativo está sendo inicializado, chame [EyesPose::RequestAccessAsync](https://docs.microsoft.com/en-us/uwp/api/windows.perception.people.eyespose.requestaccessasync#Windows_Perception_People_EyesPose_RequestAccessAsync) para solicitar acesso ao acompanhamento de olho. O sistema solicitar que o usuário se necessário e retornar [GazeInputAccessStatus::Allowed](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.gazeinputaccessstatus) depois que o acesso foi concedido. Isso é uma chamada assíncrona, portanto, requer um pouco de gerenciamento adicional. O exemplo a seguir gira um std:: thread desanexado para aguardar o resultado, que armazena a uma variável de membro chamada *m_isEyeTrackingEnabled*.
+### <a name="requesting-access-to-gaze-input"></a>Solicitando acesso à entrada olhar
+Quando seu aplicativo estiver sendo inicializado, chame [EyesPose:: RequestAccessAsync](https://docs.microsoft.com/en-us/uwp/api/windows.perception.people.eyespose.requestaccessasync#Windows_Perception_People_EyesPose_RequestAccessAsync) para solicitar acesso ao controle ocular. O sistema solicitará o usuário se necessário e retornará [GazeInputAccessStatus:: allowed](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.gazeinputaccessstatus) depois que o acesso tiver sido concedido. Essa é uma chamada assíncrona, portanto, requer um pouco de gerenciamento extra. O exemplo a seguir gira um std:: thread desanexado para aguardar o resultado, que ele armazena em uma variável de membro chamada *m_isEyeTrackingEnabled*.
 
 ```cpp
 using namespace winrt::Windows::Perception::People;
@@ -71,10 +71,10 @@ std::thread requestAccessThread([this]()
 requestAccessThread.detach();
 
 ```
-Iniciar um thread desanexado é apenas uma opção para lidar com chamadas assíncronas.  Como alternativa, você pode usar o novo [co_await](https://docs.microsoft.com/en-us/windows/uwp/cpp-and-winrt-apis/concurrency) funcionalidade com suporte de C++/WinRT.
-Aqui está outro exemplo para solicitando permissão do usuário:
--   EyesPose::IsSupported() permite que o aplicativo disparar a caixa de diálogo de permissão somente se houver um controlador de olho.
--   GazeInputAccessStatus m_gazeInputAccessStatus; Isso é para evitar o pop-up de prompt de permissão repetidamente.
+Iniciar um thread desanexado é apenas uma opção para lidar com chamadas assíncronas.  Como alternativa, você pode usar a nova funcionalidade [co_await](https://docs.microsoft.com/en-us/windows/uwp/cpp-and-winrt-apis/concurrency) com suporte C++do/WinRT.
+Aqui está outro exemplo para solicitar permissão de usuário:
+-   EyesPose:: IsSupported () permite que o aplicativo dispare a caixa de diálogo de permissão somente se houver um rastreador ocular.
+-   GazeInputAccessStatus m_gazeInputAccessStatus; Isso é para evitar o pop-up do prompt de permissão repetidamente.
 
 ```cpp
 GazeInputAccessStatus m_gazeInputAccessStatus; // This is to prevent popping up the permission prompt over and over again.
@@ -101,23 +101,23 @@ if (Windows::Perception::People::EyesPose::IsSupported() &&
 ```
 
 
-### <a name="declaring-the-gaze-input-capability"></a>Declarando o *olhares entrada* funcionalidade
+### <a name="declaring-the-gaze-input-capability"></a>Declarando o recurso de *entrada olhar*
 
-Clique duas vezes no arquivo appxmanifest no *Gerenciador de soluções*.  Em seguida, navegue até a *funcionalidades* seção e verifique o *olhares entrada* funcionalidade. 
+Clique duas vezes no arquivo appxmanifest em *Gerenciador de soluções*.  Em seguida, navegue até a seção de *recursos* e verifique o recurso de *entrada olhar* . 
 
-![Mantenha o foco de entrada de recurso](images/gaze-input-capability.png)
+![Funcionalidade de entrada do olhar](images/gaze-input-capability.png)
 
-Isso adiciona as seguintes linhas para o *pacote* seção no arquivo appxmanifest:
+Isso adiciona as seguintes linhas à seção *Package* no arquivo appxmanifest:
 ```xml
   <Capabilities>
     <DeviceCapability Name="gazeInput" />
   </Capabilities>
 ```
 
-### <a name="getting-the-eye-gaze-ray"></a>Obtendo o raio de olhar olho
-Depois de ter recebido acesso ao ET, você é livre para captar o raio de olhar olho cada quadro.  Assim como ocorre com cabeçalho olhar, obter o [SpatialPointerPose](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Input.Spatial.SpatialPointerPose) chamando [SpatialPointerPose::TryGetAtTimestamp](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.spatial.spatialpointerpose.trygetattimestamp) com um carimbo de data desejado e o sistema de coordenadas. O SpatialPointerPose contém um [EyesPose](https://docs.microsoft.com/en-us/uwp/api/windows.perception.people.eyespose) por meio do objeto de [olhos](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.spatial.spatialpointerpose.eyes) propriedade. Isso é não nulo somente se o acompanhamento a olho nu está habilitado. A partir daí, você pode verificar se o usuário no dispositivo tem um acompanhamento calibragem chamando a olho nu [EyesPose::IsCalibrationValid](https://docs.microsoft.com/en-us/uwp/api/windows.perception.people.eyespose.iscalibrationvalid#Windows_Perception_People_EyesPose_IsCalibrationValid).  Em seguida, use o [olhares](https://docs.microsoft.com/en-us/uwp/api/windows.perception.people.eyespose.gaze#Windows_Perception_People_EyesPose_Gaze) propriedade a ser obtida de um [SpatialRay](https://docs.microsoft.com/en-us/uwp/api/windows.perception.spatial.spatialray) contianing olhos olhares posição e direção. A propriedade de olhar pode, às vezes, ser nulo, portanto, certifique-se de verificar isso. Isso pode acontecer é se um usuário calibrado temporariamente fecha seus olhos.
+### <a name="getting-the-eye-gaze-ray"></a>Obtendo o olho olhar Ray
+Depois de ter recebido o acesso ao ET, você fica livre para pegar o olho olhar Ray a cada quadro.  Assim como acontece com o Head olhar, obtenha o [SpatialPointerPose](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Input.Spatial.SpatialPointerPose) chamando [SpatialPointerPose:: TryGetAtTimestamp](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.spatial.spatialpointerpose.trygetattimestamp) com um carimbo de data/hora desejado e sistema de coordenadas. O SpatialPointerPose contém um objeto [EyesPose](https://docs.microsoft.com/en-us/uwp/api/windows.perception.people.eyespose) por meio da propriedade [Eyes](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.spatial.spatialpointerpose.eyes) . Isso será não nulo somente se o controle de olho estiver habilitado. A partir daí, você pode verificar se o usuário no dispositivo tem uma calibragem de acompanhamento de olho chamando [EyesPose:: IsCalibrationValid](https://docs.microsoft.com/en-us/uwp/api/windows.perception.people.eyespose.iscalibrationvalid#Windows_Perception_People_EyesPose_IsCalibrationValid).  Em seguida, use a propriedade [olhar](https://docs.microsoft.com/en-us/uwp/api/windows.perception.people.eyespose.gaze#Windows_Perception_People_EyesPose_Gaze) para obter um [SpatialRay](https://docs.microsoft.com/en-us/uwp/api/windows.perception.spatial.spatialray) contianing a posição e a direção de olhar de olho. Às vezes, a propriedade olhar pode ser nula, portanto certifique-se de verificar isso. Isso pode acontecer se um usuário calibrado fechar temporariamente seus olhos.
 
-O código a seguir mostra como acessar o raio de olhar olho.
+O código a seguir mostra como acessar o olho olhar Ray.
 
 ```cpp
 using namespace winrt::Windows::UI::Input::Spatial;
@@ -143,13 +143,13 @@ if (pointerPose)
 
 ## <a name="correlating-gaze-with-other-inputs"></a>Correlacionando olhar com outras entradas
 
-Às vezes, você pode achar que você precisa de uma [SpatialPointerPose](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.spatial.spatialpointerpose) que corresponde com um evento no passado. Por exemplo, se o usuário executa um toque de ar, seu aplicativo talvez queira saber o que eles estavam vendo. Para essa finalidade, simplesmente usando [SpatialPointerPose::TryGetAtTimestamp](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.spatial.spatialpointerpose.trygetattimestamp) com o quadro previsto tempo seria impreciso devido à latência entre o processamento de entrada do sistema e o tempo de exibição. Além disso, se usar olhar de olho para direcionamento, seus olhos tendem mover-se até mesmo antes de concluir uma ação de confirmação. Isso é um problema menor para um simples ar toque, mas se torna mais crítico ao combinar longa comandos de voz com os deslocamentos de olho rápida. Uma maneira de lidar com esse cenário é fazer uma chamada adicional para [SpatialPointerPose::TryGetAtTimestamp](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.spatial.spatialpointerpose.trygetattimestamp), usando um carimbo de hora histórico que corresponde ao evento de entrada.  
+Às vezes, você pode achar que precisa de um [SpatialPointerPose](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.spatial.spatialpointerpose) que corresponda a um evento no passado. Por exemplo, se o usuário executar um toque de ar, seu aplicativo poderá querer saber o que ele estava observando. Para essa finalidade, simplesmente usar [SpatialPointerPose:: TryGetAtTimestamp](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.spatial.spatialpointerpose.trygetattimestamp) com o tempo de quadro previsto não seria preciso devido à latência entre o processamento de entrada do sistema e o tempo de exibição. Além disso, se estiver usando olho olhar para direcionamento, nossos olhos tendem a se mover até mesmo antes de concluir uma ação de confirmação. Isso é menos um problema para um toque simples de ar, mas se torna mais crítico ao combinar comandos de voz longos com movimentos de olho rápido. Uma maneira de lidar com esse cenário é fazer uma chamada adicional para [SpatialPointerPose:: TryGetAtTimestamp](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.spatial.spatialpointerpose.trygetattimestamp), usando um carimbo de data/hora histórico que corresponde ao evento de entrada.  
 
-No entanto, para a entrada que roteia por meio de SpatialInteractionManager, há um método mais fácil. O [SpatialInteractionSourceState](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.spatial.spatialinteractionsourcestate) tem seu próprio [TryGetAtTimestamp](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.spatial.spatialinteractionsourcestate.trygetpointerpose) função. Chamar que fornecerá perfeitamente correlacionado [SpatialPointerPose](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.spatial.spatialpointerpose) sem as suposições. Para obter mais informações sobre como trabalhar com SpatialInteractionSourceStates, dê uma olhada a [mãos e controladores de movimento no DirectX](hands-and-motion-controllers-in-directx.md) documentação.
+No entanto, para entrada que roteiam o SpatialInteractionManager, há um método mais fácil. O [SpatialInteractionSourceState](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.spatial.spatialinteractionsourcestate) tem sua própria função [TryGetAtTimestamp](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.spatial.spatialinteractionsourcestate.trygetpointerpose) . Chamar isso fornecerá um [SpatialPointerPose](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.spatial.spatialpointerpose) perfeitamente correlacionado sem as suposições. Para saber mais sobre como trabalhar com o SpatialInteractionSourceStates, confira os [controladores de mãos e de movimento na documentação do DirectX](hands-and-motion-controllers-in-directx.md) .
 
 ## <a name="see-also"></a>Consulte também
-* [Olhar de cabeçalho e confirmar o modelo de entrada](gaze-and-commit.md)
-* [Eye-gaze on HoloLens 2](eye-tracking.md)
+* [Olhar de cabeça e modelo de entrada de confirmação](gaze-and-commit.md)
+* [Olho-olhar no HoloLens 2](eye-tracking.md)
 * [Sistemas de coordenadas no DirectX](coordinate-systems-in-directx.md)
 * [Entrada de voz no DirectX](voice-input-in-directx.md)
 * [Controladores de mãos e emovimento no DirectX](hands-and-motion-controllers-in-directx.md)

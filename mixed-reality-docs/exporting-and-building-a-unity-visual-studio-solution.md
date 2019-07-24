@@ -1,71 +1,71 @@
 ---
-title: Exportando e criando uma solução do Visual Studio do Unity
-description: Este artigo descreve a exportação de seu projeto de realidade mista do Unity para que você pode criar e implantar no Visual Studio.
+title: Exportando e compilando uma solução do Unity Visual Studio
+description: Este artigo descreve como exportar seu projeto de realidade misturada do Unity para que você possa compilar e implantar no Visual Studio.
 author: ''
 ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
-keywords: o Unity, visual studio, exportar, criar, implantar
+keywords: Unity, Visual Studio, exportar, compilar, implantar
 ms.openlocfilehash: 68c86fdfe0e589536dafe2bf53c7d4e5dffcc514
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59590713"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63525842"
 ---
-# <a name="exporting-and-building-a-unity-visual-studio-solution"></a>Exportando e criando uma solução do Visual Studio do Unity
+# <a name="exporting-and-building-a-unity-visual-studio-solution"></a>Exportando e compilando uma solução do Unity Visual Studio
 
-Se você não pretende usar o teclado do sistema em seu aplicativo, nossa recomendação é usar *D3D* conforme seu aplicativo usará um pouco menos memória e têm um tempo de inicialização ligeiramente mais rápido. Se você estiver usando a API de TouchScreenKeyboard em seu projeto para usar o teclado do sistema, você precisará exportar como *XAML*.
+Se você não pretende usar o teclado do sistema em seu aplicativo, nossa recomendação é usar o *D3D* , pois seu aplicativo usará um pouco menos de memória e terá um tempo de inicialização ligeiramente mais rápido. Se você estiver usando a API TouchScreenKeyboard em seu projeto para usar o teclado do sistema, será necessário exportar como *XAML*.
 
 ## <a name="how-to-export-from-unity"></a>Como exportar do Unity
 
-![Configurações de build do Unity](images/unitybuildsettings-300px.png)<br>
-*Configurações de build do Unity*
+![Configurações de Build do Unity](images/unitybuildsettings-300px.png)<br>
+*Configurações de Build do Unity*
 
-1. Quando você estiver pronto para exportar o projeto do Unity, abra o **arquivo** menu e selecione **configurações de compilação...**
-2. Clique em **cenas abra Adicionar** para adicionar sua cena para a compilação.
-3. No **configurações de Build** caixa de diálogo, escolha as seguintes opções para exportar para o HoloLens:
-   * **Plataforma:** *Plataforma universal do Windows* e certifique-se de selecionar **alternar plataforma** para sua seleção entrem em vigor.
-   * **SDK:** *Universal 10*.
-   * **Tipo de Build UWP:** *D3D*.
-4. **Opcional**: **Unity C# projetos:** Verificado.
+1. Quando você estiver pronto para exportar seu projeto do Unity, abra o menu **arquivo** e selecione **configurações de compilação...**
+2. Clique em **Adicionar abrir cenas** para adicionar sua cena à compilação.
+3. Na caixa de diálogo **configurações de compilação** , escolha as seguintes opções para exportar para o HoloLens:
+   * **Plataforma** *Plataforma universal do Windows* e certifique-se de selecionar **alternar plataforma** para sua seleção entrar em vigor.
+   * **SDK** *Universal 10*.
+   * **Tipo de compilação UWP:** *D3D*.
+4. **Opcional**: **Projetos C# do Unity:** Check.
 
 >[!NOTE]
 >Marcar essa caixa permite que você:
 >* Depure seu aplicativo no depurador remoto do Visual Studio.
->* Edite os scripts no Unity C# projeto enquanto estiver usando o IntelliSense para APIs do WinRT.
+>* Edite scripts no projeto C# do Unity ao usar o IntelliSense para APIs do WinRT.
 
-5. Do **configurações de Build...**  janela, abra **configurações do Player...**
-6. Selecione o **configurações para a plataforma Universal do Windows** guia.
-7. Expanda o **XR configurações** grupo.
-8. No **configurações XR** seção, verifique o **suporte de realidade Virtual** caixa de seleção para adicionar uma nova **dispositivos de realidade Virtual** listar e confirmar **"misto do Windows Realidade"** está listado como um dispositivo com suporte.
-9. Volte para o **configurações de Build** caixa de diálogo.
-10. Selecione **Build**.
-11. Na caixa de diálogo Windows Explorer que aparece, crie uma nova pasta para armazenar a saída do build do Unity. Em geral, é o nome da pasta "Aplicativo".
+5. Na janela **configurações de compilação...** , abra **as configurações do Player...**
+6. Selecione as **configurações para plataforma universal do Windows** guia.
+7. Expanda o grupo de **configurações XR** .
+8. Na seção **configurações de XR** , marque a caixa de seleção **suporte à realidade virtual** para adicionar uma nova lista de **dispositivos de realidade virtual** e confirme se **"realidade mista do Windows"** está listado como um dispositivo com suporte.
+9. Retorne para a caixa de diálogo **configurações de compilação** .
+10. Selecione **Compilar**.
+11. Na caixa de diálogo do Windows Explorer que aparece, crie uma nova pasta para manter a saída de Build do Unity. Em geral, nomeamos a pasta "app".
 12. Selecione a pasta recém-criada e clique em **Selecionar pasta**.
-13. Depois que o Unity terminou de construção, uma janela do Windows Explorer será aberto para o diretório raiz do projeto. Navegue até a pasta recém-criada.
+13. Depois de concluir a compilação do Unity, uma janela do Windows Explorer será aberta para o diretório raiz do projeto. Navegue até a pasta recém-criada.
 14. Abra o arquivo de solução do Visual Studio gerado localizado dentro dessa pasta.
 
 ## <a name="when-to-re-export-from-unity"></a>Quando exportar novamente do Unity
 
-Verificando o "C# projetos de" caixa de seleção quando a exportação de seu aplicativo do Unity cria uma solução do Visual Studio que inclui todos os arquivos de script do Unity. Isso permite que você itere nos seus scripts sem exportar novamente do Unity. No entanto, se você quiser fazer alterações ao seu projeto que não são apenas alterando o conteúdo de scripts, você precisará exportar novamente do Unity. Alguns exemplos de vezes que você precisa exportar novamente do Unity são:
-* Você pode adicionar ou remove ativos na guia de projeto.
-* Você altera qualquer valor na guia do Inspetor.
-* Você pode adicionar ou remove objetos de guia de hierarquia.
-* Alterar as configurações de projeto do Unity
+Marcar a caixaC# de seleção "projetos" ao exportar seu aplicativo do Unity cria uma solução do Visual Studio que inclui todos os arquivos de script do Unity. Isso permite que você Itere em seus scripts sem exportar novamente do Unity. No entanto, se você quiser fazer alterações em seu projeto que não estejam apenas alterando o conteúdo dos scripts, será necessário reexportar a partir do Unity. Alguns exemplos de vezes que você precisa exportar novamente do Unity são:
+* Você adiciona ou remove ativos na guia projeto.
+* Você altera qualquer valor na guia inspetor.
+* Você adiciona ou remove objetos da guia hierarquia.
+* Você altera as configurações de projeto de Unity
 
-## <a name="building-and-deploying-a-unity-visual-studio-solution"></a>Criando e implantando uma solução do Visual Studio do Unity
+## <a name="building-and-deploying-a-unity-visual-studio-solution"></a>Criando e implantando uma solução do Unity Visual Studio
 
-O restante da criação e implantação de aplicativos acontece em [Visual Studio](using-visual-studio.md). Você precisará especificar uma configuração de build do Unity. Convenções de nomenclatura do Unity podem diferir das que você está normalmente usados no Visual Studio:
+O restante da criação e implantação de aplicativos acontece no [Visual Studio](using-visual-studio.md). Será necessário especificar uma configuração de compilação do Unity. As convenções de nomenclatura do Unity podem ser diferentes do que costuma ser usado no Visual Studio:
 
 |  Configuração  |  Explicação | 
 |----------|----------|
-|  Depuração  |  Todas as otimizações de logoff e o criador de perfil está habilitado. Usado para depurar scripts. | 
-|  Mestre  |  Todas as otimizações estão ativadas e o criador de perfil está desabilitado. Usado para enviar aplicativos para a Store. | 
-|  Versão  |  Todas as otimizações estão ativadas e o criador de perfil está habilitado. Usado para avaliar o desempenho do aplicativo. | 
+|  Depurar  |  Todas as otimizações desativadas e o criador de perfil está habilitado. Usado para depurar scripts. | 
+|  Mestre  |  Todas as otimizações são ativadas e o criador de perfil está desabilitado. Usado para enviar aplicativos para a loja. | 
+|  Versão  |  Todas as otimizações são ativadas e o criador de perfil está habilitado. Usado para avaliar o desempenho do aplicativo. | 
 
-Observe que a lista acima é um subconjunto dos gatilhos comuns que fará com que o projeto do Visual Studio precisa ser gerado. Em geral, a edição de arquivos. cs, de dentro do Visual Studio não exigirão o projeto para ser regenerado a partir de dentro do Unity.
+Observe que a lista acima é um subconjunto dos gatilhos comuns que farão com que o projeto do Visual Studio precise ser gerado. Em geral, a edição de arquivos. cs de dentro do Visual Studio não exigirá que o projeto seja regenerado no Unity.
 
 ## <a name="troubleshooting"></a>Solução de problemas
 
-Se você achar que as edições em seus arquivos. cs não são reconhecidas no seu projeto do Visual Studio, certifique-se de que "Unity C# projetos" estiver marcada quando você gera o projeto de VS no menu do Build do Unity.
+Se você achar que as edições em seus arquivos. cs não estão sendo reconhecidas em seu projeto do Visual Studio, certifique C# -se de que "projetos do Unity" esteja marcado ao gerar o projeto do vs no menu de Build do Unity.

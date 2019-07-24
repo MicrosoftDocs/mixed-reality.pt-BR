@@ -1,11 +1,11 @@
 ---
 title: Design de mapeamento espacial
-description: Uso eficiente do mapeamento espacial dentro do HoloLens requer uma consideração cuidadosa de vários fatores.
+description: O uso efetivo do mapeamento espacial dentro do HoloLens requer uma consideração cuidadosa de muitos fatores.
 author: cre8ivepark
 ms.author: dongpark
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Mapeamento de Windows Mixed Reality, design, espacial, HoloLens, surface reconstrução, da malha
+keywords: Realidade mista do Windows, design, mapeamento espacial, HoloLens, reconstrução da superfície, malha
 ms.openlocfilehash: 451213a79e1d482d64725ce750065611830beec3
 ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
 ms.translationtype: MT
@@ -15,7 +15,7 @@ ms.locfileid: "66829966"
 ---
 # <a name="spatial-mapping-design"></a>Design de mapeamento espacial
 
-Uso eficiente do mapeamento espacial dentro do HoloLens requer uma consideração cuidadosa de vários fatores.
+O uso efetivo do mapeamento espacial dentro do HoloLens requer uma consideração cuidadosa de muitos fatores.
 
 ## <a name="device-support"></a>Suporte a dispositivos
 
@@ -28,7 +28,7 @@ Uso eficiente do mapeamento espacial dentro do HoloLens requer uma consideraçã
     <tr>
         <td><strong>Recurso</strong></td>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>Fones imersivos em exposição</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Headsets imersivos</strong></a></td>
     </tr>
      <tr>
         <td>Design de mapeamento espacial</td>
@@ -39,171 +39,171 @@ Uso eficiente do mapeamento espacial dentro do HoloLens requer uma consideraçã
 
 ## <a name="why-is-spatial-mapping-important"></a>Por que o mapeamento espacial é importante?
 
-Mapeamento espacial torna possível colocar objetos em superfícies real. Isso ajuda a objetos de âncora no mundo do usuário e se beneficia das indicações de profundidade do mundo real. Occluding seu hologramas com base em outros hologramas e objetos do mundo real ajuda convencer o usuário que esses hologramas estão realmente em seu espaço. Hologramas flutuando no espaço ou movendo-se com o usuário não se sinta como real. Quando possível, coloque itens de conforto.
+O mapeamento espacial torna possível posicionar objetos em superfícies reais. Isso ajuda a ancorar objetos no mundo do usuário e aproveita as indicações de profundidade do mundo real. Occluding seus hologramas com base em outros hologramas e objetos do mundo real ajudam a convencer o usuário de que esses hologramas estão na verdade em seu espaço. Os hologramas flutuam no espaço ou quando se movem com o usuário não se sentirão reais. Quando possível, coloque os itens em conforto.
 
-Visualize as superfícies ao colocar ou mover hologramas (usar uma grade projetada simple). Isso ajudará o usuário saiba onde melhor pode colocar suas hologramas e mostra que o usuário se o ponto em que eles estão tentando colocar o holograma ainda não foram mapeado. Você pode "de mensagem de itens" em direção ao usuário se eles terminam no muito de um ângulo.
+Visualize superfícies ao colocar ou mover hologramas (use uma grade projetada simples). Isso ajudará o usuário a saber onde eles podem posicionar melhor seus hologramas e mostrará o usuário se o ponto em que eles estão tentando posicionar o holograma ainda não tiver sido mapeado. Você pode "itens do mural" em direção ao usuário se eles acabarem em muito um ângulo.
 
-## <a name="what-influences-spatial-mapping-quality"></a>O que influencia a qualidade de mapeamento espacial?
+## <a name="what-influences-spatial-mapping-quality"></a>O que influencia a qualidade do mapeamento espacial?
 
-Para fornecer a melhor experiência de usuário, é importante entender os fatores que afetam a qualidade dos dados de mapeamento espacial coletados pelo HoloLens.
+Para fornecer a melhor experiência do usuário, é importante entender os fatores que afetam a qualidade dos dados de mapeamento espacial coletados pelo HoloLens.
 
-Erros em dados de mapeamento espacial se enquadram em uma das três categorias:
+Os erros nos dados de mapeamento espacial se enquadram em uma das três categorias:
 * **Buracos**: As superfícies do mundo real estão ausentes dos dados de mapeamento espacial.
-* **Hallucinations**: Superfícies existem nos dados de mapeamento espacial que não existem no mundo real.
-* **Tendência**: Superfícies nos dados de mapeamento espacial modo imperfeito são alinhadas com as superfícies de mundo real, seja enviada por push ou retirar as.
+* **Hallucinations**: Existem superfícies nos dados de mapeamento espacial que não existem no mundo real.
+* **Tendência**: As superfícies nos dados de mapeamento espacial são alinhadas de forma inperfeita com as superfícies do mundo real, enviadas ou retiradas.
 
-Vários fatores podem afetar a frequência e a gravidade desses erros:
+Vários fatores podem afetar a frequência e a severidade desses erros:
 
-* **Movimento de usuário**
-   * Como o usuário se move pelo seu ambiente determina quão bem o ambiente será verificado, o usuário poderá exigir orientações para alcançar uma verificação de boa.
-   * Câmera usada para verificação fornece os dados dentro de um cone de 70 graus, entre o mínimo de 0,8 metros a um máximo de 3.1 metros de distância da câmera. As superfícies do mundo real serão verificadas apenas dentro este campo de visão. Observe que esses valores estão sujeitos a alterações em versões futuras.
-   * Se o usuário nunca dentro 3.1 medidores de um objeto, em seguida, ele não será verificado.
-   * Se o usuário exibe somente um objeto de uma distância de menos de 0,8 metros, não serão verificado (Isso evita a verificação de mãos do usuário).
-   * Se o usuário nunca olhar para cima (que é bastante normal), em seguida, o teto provavelmente não será verificado.
-   * Se um usuário nunca procura por trás mobiliário ou uma parede os objetos obstruídos por eles não serão verificados.
-   * Superfícies tendem a ser verificado com melhor qualidade quando eles são exibidos frente, em vez de em um ângulo superficial.
-   * Se o sistema de controle de cabeçalho do HoloLens momentaneamente falhar (que pode acontecer devido ao movimento de usuário rápida, iluminação ruim, paredes featureless ou câmeras se tornando coberto), isso pode introduzir erros nos dados espaciais de mapeamento. Esses erros serão corrigidos ao longo do tempo conforme o usuário continua a mover-se e verificar seu ambiente.
+* **Movimento do usuário**
+   * A forma como o usuário percorre seu ambiente determina o quão bem o ambiente será verificado, para que o usuário possa exigir diretrizes para obter uma boa verificação.
+   * A câmera usada para verificação fornece dados dentro de um cone de 70 graus, de um mínimo de 0,8 metros para um máximo de 3,1 metros de distância da câmera. As superfícies do mundo real só serão verificadas nesse campo de exibição. Observe que esses valores estão sujeitos a alterações em versões futuras.
+   * Se o usuário nunca ficar dentro de 3,1 metros de um objeto, ele não será verificado.
+   * Se o usuário exibir apenas um objeto de uma distância de menos de 0,8 metros, ele não será verificado (isso evita a verificação das mãos do usuário).
+   * Se o usuário nunca ficar mais em funcionamento (o que é bastante normal), o teto provavelmente não será verificado.
+   * Se um usuário nunca ficar atrás de mobília ou de uma parede, os objetos obstruído por eles não serão verificados.
+   * As superfícies tendem a ser verificadas com uma qualidade mais alta quando são exibidas de cabeça em vez de em um ângulo superficial.
+   * Se o sistema de acompanhamento de cabeçalho do HoloLens falhar momentaneamente (o que pode ocorrer devido ao rápido movimento do usuário, à iluminação ruim, às paredes informativas ou às câmeras cobertas), isso poderá introduzir erros nos dados de mapeamento espacial. Esses erros serão corrigidos ao longo do tempo enquanto o usuário continua a se movimentar e verificar seu ambiente.
 
 * **Materiais de superfície**
-   * Os materiais encontrados em superfícies reais variam muito. Elas afetam a qualidade dos dados porque elas afetam a luz como infravermelho são refletidos de mapeamento espacial.
-   * Superfícies escuras não podem verificar até que eles se aproximarem da câmera, porque elas refletem menos luz.
-   * Alguns superfícies talvez-escuras que eles refletem luz muito pouco a ser verificado de qualquer distância, para que eles apresentará erros buraco no local da superfície e, às vezes, também por trás da superfície de.
-   * Superfícies brilhantes particularmente podem verificar somente quando visualizado em frente e não quando visualizado em um ângulo superficial.
-   * Espelhos, pois elas criam illusory reflexos de espaços real e superfícies, podem causar erros de buraco e erros hallucination.
+   * Os materiais encontrados em superfícies do mundo real variam muito. Isso afeta a qualidade dos dados de mapeamento espacial porque eles afetam a forma como a luz infravermelha é refletida.
+   * As superfícies escuras podem não ser verificadas até que fiquem mais próximas da câmera, pois refletem menos luz.
+   * Algumas superfícies podem ser tão escuras que refletem uma pequena luz para serem verificadas de qualquer distância, portanto, elas apresentarão erros de orifício no local da superfície e, às vezes, também por trás da superfície.
+   * As superfícies especialmente brilhantes só podem ser verificadas quando visualizadas, e não quando exibidas a partir de um ângulo superficial.
+   * Os espelhos, pois criam reflexos illusorys de espaços reais e superfícies, podem causar erros de orifício e erros de hallucination.
 
 * **Movimento de cena**
-   * Mapeamento espacial adapta-se rapidamente às mudanças no ambiente, como mover as pessoas ou abrindo e fechando portas.
-   * No entanto, mapeamento espacial só pode adaptar a alterações em uma área quando nessa área é claramente visível para a câmera é usada para verificação.
-   * Por isso, é possível que essa adaptação atrasar a realidade, o que pode causar erros de falha ou hallucination.
-   * Por exemplo, um usuário examina um amigo e os transforma em torno de enquanto o amigo deixa a sala. Uma representação de 'ghost' do amigo (um erro de hallucination) será mantido nos dados de mapeamento espacial, até que o usuário ativa novamente ao redor e examina novamente o espaço em que o amigo apoiava.
+   * O mapeamento espacial se adapta rapidamente às alterações no ambiente, como mover pessoas ou abrir e fechar portas.
+   * No entanto, o mapeamento espacial só pode se adaptar a alterações em uma área quando essa área está claramente visível para a câmera usada para verificação.
+   * Por isso, é possível que essa adaptação seja retardada por trás da realidade, o que pode causar erros de buraco ou hallucination.
+   * Por exemplo, um usuário examina um amigo e, em seguida, gira enquanto o amigo sai da sala. Uma representação ' fantasma ' do Friend (um erro hallucination) persistirá nos dados de mapeamento espacial, até que o usuário volte e examine novamente o espaço em que o amigo estava em pé.
 
 * **Interferência de iluminação**
-   * Luz ambiente de infravermelho na cena pode interferir com a varredura, por exemplo forte luz do sol recebidas por meio de uma janela.
-   * Superfícies brilhantes particularmente podem interferir com a varredura de superfícies próximas, a luz saltando off-las causando erros de ajuste.
-   * Superfícies brilhantes refletir a luz diretamente volta para a câmera podem interferir com o próximo espaço, fazendo com que flutuante hallucinations de ar intermediário ou atrasando adaptação ao movimento da cena.
+   * A luz de infravermelho de ambiente na cena pode interferir na verificação, por exemplo, uma luz de sol forte chegando por uma janela.
+   * As superfícies particularmente brilhantes podem interferir na verificação de superfícies vizinhas, a luz saltando-as causando erros de tendência.
+   * As superfícies brilhantes que refletem a luz diretamente na câmera podem interferir no espaço próximo, causando hallucinations flutuantes de ar médio ou atrasando a adaptação ao movimento de cena.
    * Dois dispositivos HoloLens na mesma sala não devem interferir uns com os outros, mas a presença de mais de cinco dispositivos HoloLens pode causar interferências.
 
-É possível evitar ou corrigir alguns desses erros. No entanto, você deve projetar seu aplicativo para que o usuário seja capaz de alcançar suas metas, mesmo na presença de erros nos dados de mapeamento espacial.
+Pode ser possível evitar ou corrigir alguns desses erros. No entanto, você deve projetar seu aplicativo para que o usuário possa atingir suas metas mesmo na presença de erros nos dados de mapeamento espacial.
 
-## <a name="the-environment-scanning-experience"></a>O ambiente de experiência de verificação
+## <a name="the-environment-scanning-experience"></a>A experiência de verificação do ambiente
 
-HoloLens aprende sobre as superfícies em seu ambiente, conforme o usuário levar analisando-os. Ao longo do tempo, o HoloLens cria uma verificação de todas as partes do ambiente que foram observados. Ele também atualiza a verificação como alterações no ambiente são observadas. Essa verificação será mantido automaticamente entre o aplicativo é iniciado.
+O HoloLens aprende sobre as superfícies em seu ambiente à medida que o usuário as examina. Ao longo do tempo, o HoloLens cria uma verificação de todas as partes do ambiente que foram observadas. Ele também atualiza a verificação conforme as alterações no ambiente são observadas. Essa verificação persistirá automaticamente entre as inicializações do aplicativo.
 
-Cada aplicativo que usa o mapeamento espacial deve considerar a fornecer uma "experiência de verificação;' o processo por meio do qual o aplicativo orienta o usuário para verificar as superfícies que são necessárias para o aplicativo funcione corretamente.
+Cada aplicativo que usa o mapeamento espacial deve considerar a possibilidade de fornecer uma "experiência de verificação"; o processo pelo qual o aplicativo orienta o usuário a verificar as superfícies necessárias para que o aplicativo funcione corretamente.
 
 ![Exemplo de verificação](images/sr-mixedworld-140429-8pm-00068-1000px.png)<br>
 *Exemplo de verificação*
 
-A natureza dessa experiência de verificação pode variar consideravelmente dependendo das necessidades de cada aplicativo, mas os dois principais princípios devem orientar seu design.
+A natureza dessa experiência de verificação pode variar muito dependendo das necessidades de cada aplicativo, mas dois princípios principais devem guiar seu design.
 
-Em primeiro lugar, **clara comunicação com o usuário é a principal preocupação**. O usuário deve estar ciente de que se os requisitos do aplicativo estão sendo atendidos. Quando eles não estão sendo atendidos, deve ficar claro imediatamente para o usuário porque este é o caso e deve ser levados rapidamente para tomar as devidas providências.
+Em primeiro lugar, **a comunicação clara com o usuário é a principal preocupação**. O usuário deve estar sempre atento se os requisitos do aplicativo estão sendo atendidos. Quando eles não estão sendo atendidos, deve ser imediatamente claro para o usuário por que isso é feito e eles devem ser rapidamente administrados para executar a ação apropriada.
 
-Em segundo lugar, **aplicativos devem tentar obter um equilíbrio entre a eficiência e confiabilidade**. Quando é possível fazer isso **confiável**, aplicativos automaticamente devem analisar os dados de mapeamento espacial para economizar o tempo do usuário. Quando não é possível fazer isso de forma confiável, aplicativos em vez disso, devem permitir que o usuário forneça rapidamente o aplicativo com as informações adicionais necessárias.
+Em segundo lugar, **os aplicativos devem tentar um equilíbrio entre a eficiência e a confiabilidade**. Quando é possível fazer isso de forma **confiável**, os aplicativos devem analisar automaticamente os dados de mapeamento espacial para salvar a hora do usuário. Quando não é possível fazer isso de forma confiável, os aplicativos devem permitir que o usuário forneça rapidamente ao aplicativo as informações adicionais necessárias.
 
-Para ajudar o direito de experiência de verificação de design, considere qual das seguintes possibilidades são aplicáveis ao seu aplicativo:
+Para ajudar a criar a experiência de verificação correta, considere quais das seguintes possibilidades são aplicáveis ao seu aplicativo:
 
 * **Nenhuma experiência de verificação**
-   * Um aplicativo pode funcionar perfeitamente, sem qualquer experiência interativa de verificação; ele irá aprender sobre as superfícies que são observadas no decorrer de movimento natural do usuário.
-   * Por exemplo, um aplicativo que permite que o usuário desenhar em superfícies com spraypaint holográfica requer conhecimento somente de superfícies visíveis no momento para o usuário.
-   * O ambiente pode ser examinado completamente já se ele for um no qual o usuário já passou muito tempo usando o HoloLens.
-   * Tenha em mente entretanto que a câmera usada pelo mapeamento espacial só poderá ver 3.1m na frente do usuário, para que o mapeamento espacial não saberá sobre qualquer superfícies mais distantes, a menos que o usuário tem observá-los à distância mais próxima no passado.
-   * Para que ele entende que cobrem foram verificados, o aplicativo deve fornecer comentários visuais para esse efeito, por exemplo, conversão sombras virtuais em superfícies digitalizadas pode ajudar o usuário colocar hologramas dessas superfícies.
-   * Nesse caso, os volumes do observador de superfície espacial delimitador devem ser atualizado de cada quadro para um corpo bloqueado [sistema de coordenadas espacial](coordinate-systems.md), de modo que eles seguem o usuário.
+   * Um aplicativo pode funcionar perfeitamente sem nenhuma experiência de verificação guiada; Ele aprenderá sobre as superfícies observadas no decorrer do movimento de usuário natural.
+   * Por exemplo, um aplicativo que permite que o usuário desenhe superfícies com Holographic spraypaint exige conhecimento apenas das superfícies visíveis no momento para o usuário.
+   * O ambiente pode ser completamente verificado, já que é aquele em que o usuário já gastou muito tempo usando o HoloLens.
+   * No entanto, lembre-se de que a câmera usada pelo mapeamento espacial só pode ver 3,1 m na frente do usuário, portanto, o mapeamento espacial não saberá sobre nenhuma superfície mais distante, a menos que o usuário as tenha observado de uma distância mais próxima no passado.
+   * Portanto, o usuário entende quais superfícies foram verificadas, o aplicativo deve fornecer comentários visuais para esse efeito, por exemplo, converter sombras virtuais em superfícies digitalizadas pode ajudar o usuário a posicionar os hologramas nessas superfícies.
+   * Nesse caso, os volumes delimitados do observador de superfície espacial devem ser atualizados cada quadro para um [sistema de coordenadas espaciais](coordinate-systems.md)bloqueadas pelo corpo, para que eles sigam o usuário.
 
-* **Encontre um local adequado**
+* **Encontrar um local adequado**
    * Um aplicativo pode ser projetado para uso em um local com requisitos específicos.
-   * Por exemplo, o aplicativo pode exigir uma área vazia em torno do usuário para que eles podem praticar com segurança mais Feroz holográfica.
-   * Aplicativos devem se comunicar os requisitos específicos para o usuário inicial e reforçá-los com o feedback visual.
-   * Neste exemplo, o aplicativo deverá visualizar a extensão da área vazia necessária e destacar visualmente a presença de qualquer objeto indesejada dentro dessa zona.
-   * Para esse caso, os volumes do observador de superfície espacial delimitadora devem usar um mundo bloqueado [sistema de coordenadas espacial](coordinate-systems.md) no local escolhido.
+   * Por exemplo, o aplicativo pode exigir uma área vazia em todo o usuário para que possa praticar com segurança Holographic Kung-Fu.
+   * Os aplicativos devem comunicar quaisquer requisitos específicos para o usuário antes e reforce-los com comentários visuais claros.
+   * Neste exemplo, o aplicativo deve Visualizar a extensão da área vazia necessária e realçar visualmente a presença de qualquer objeto indesejado nessa zona.
+   * Para esse caso, os volumes delimitados do observador de superfície espacial devem usar um [sistema de coordenadas espaciais](coordinate-systems.md) bloqueados pelo mundo no local escolhido.
 
-* **Localizar uma configuração adequada de superfícies**
-   * Um aplicativo pode exigir uma configuração específica de superfícies, por exemplo dois grandes, simples, opostos paredes para criar uma sala holográfica de espelhos.
-   * Nesses casos, o aplicativo precisará analisar as superfícies de fornecido pelo mapeamento espacial para detectar superfícies adequadas e direcionar o usuário em direção a eles.
-   * O usuário deve ter uma opção de fallback se a análise da superfície do aplicativo não é totalmente confiável. Por exemplo, se o aplicativo identifica incorretamente uma porta de entrada como uma parede simples, o usuário precisa de uma maneira simples de corrigir esse erro.
+* **Encontre uma configuração adequada de superfícies**
+   * Um aplicativo pode exigir uma configuração específica de superfícies, por exemplo, duas paredes grandes e simples e opostas para criar um Holographic Hall de espelhos.
+   * Nesses casos, o aplicativo precisará analisar as superfícies fornecidas pelo mapeamento espacial para detectar superfícies adequadas e direcionar o usuário para eles.
+   * O usuário deverá ter uma opção de fallback se a análise da superfície do aplicativo não for totalmente confiável. Por exemplo, se o aplicativo identificar incorretamente um porta como uma parede simples, o usuário precisará de uma maneira simples de corrigir esse erro.
 
-* **Verificar a parte do ambiente**
-   * Um aplicativo talvez queira capturar somente a parte do ambiente, conforme indicado pelo usuário.
-   * Por exemplo, o aplicativo examina a parte de um espaço para que o usuário pode lançar um holográfico classificados para móveis que desejam vender.
-   * Nesse caso, o aplicativo deve capturar dados de mapeamento espacial dentro de regiões observados pelo usuário durante sua verificação.
+* **Examinar parte do ambiente**
+   * Um aplicativo pode desejar capturar apenas parte do ambiente, conforme indicado pelo usuário.
+   * Por exemplo, o aplicativo examina parte de uma sala para que o usuário possa postar um anúncio Holographic classificado para móveis que desejam vender.
+   * Nesse caso, o aplicativo deve capturar dados de mapeamento espacial dentro das regiões observadas pelo usuário durante a verificação.
 
-* **Verificar o espaço inteiro**
-   * Um aplicativo pode exigir uma verificação de todas as superfícies da sala atual, incluindo aqueles por trás do usuário.
-   * Por exemplo, um jogo pode colocar o usuário na função de Gulliver, cerco de centenas de pequenos Lilliputians se aproximando de todas as direções.
-   * Nesses casos, o aplicativo precisará determinar o espaço disponível para quantos de superfícies atual já foram examinados e direcionar olhar do usuário para preencher lacunas significativas.
-   * A chave para esse processo é fornecer comentários visuais que deixa claro para o usuário que cobrem ainda não foram verificados. O aplicativo pode usar por exemplo [com base em distância Névoa](https://msdn.microsoft.com/library/windows/desktop/bb173401%28v=vs.85%29.aspx) para destacar visualmente regiões que não são cobertas por superfícies de mapeamento espacial.
+* **Verificar a sala inteira**
+   * Um aplicativo pode exigir uma verificação de todas as superfícies no espaço atual, incluindo aquelas por trás do usuário.
+   * Por exemplo, um jogo pode colocar o usuário na função de Gulliver, sob o Siege de centenas de pequenas Lilliputians abordagens de todas as direções.
+   * Nesses casos, o aplicativo precisará determinar quantas superfícies na sala atual já foram verificadas e direcionar o olhar do usuário para preencher lacunas significativas.
+   * A chave para esse processo é fornecer comentários visuais que o tornam claro para o usuário quais superfícies ainda não foram verificadas. O aplicativo poderia, por exemplo, usar a [neblina baseada em distância](https://msdn.microsoft.com/library/windows/desktop/bb173401%28v=vs.85%29.aspx) para realçar visualmente as regiões que não são cobertas por superfícies de mapeamento espacial.
 
-* **Crie um instantâneo inicial do ambiente**
-   * Um aplicativo pode querer ignorar todas as alterações no ambiente depois de tirar um inicial 'snapshot'.
-   * Isso pode ser apropriado para evitar a interrupção de dados criados pelo usuário que está intimamente ligados ao estado inicial do ambiente.
-   * Nesse caso, o aplicativo deve fazer uma cópia dos dados de mapeamento espacial em seu estado inicial após a verificação for concluída.
-   * Aplicativos devem continuar recebendo atualizações aos dados de mapeamento espacial se hologramas ainda devem ser corretamente obstruídos pelo ambiente.
-   * Atualizações contínuas para dados de mapeamento espacial também permitem visualizar as alterações que ocorreram, esclarecendo ao usuário as diferenças entre os estados anteriores e presentes do ambiente.
+* **Tirar um instantâneo inicial do ambiente**
+   * Um aplicativo pode desejar ignorar todas as alterações no ambiente depois de usar um ' instantâneo ' inicial.
+   * Isso pode ser apropriado para evitar a interrupção de dados criados pelo usuário que estejam rigidamente acoplados ao estado inicial do ambiente.
+   * Nesse caso, o aplicativo deve fazer uma cópia dos dados de mapeamento espacial em seu estado inicial quando a verificação for concluída.
+   * Os aplicativos devem continuar recebendo atualizações para dados de mapeamento espacial se os hologramas ainda estiverem obstruídodos corretamente pelo ambiente.
+   * Atualizações continuadas para dados de mapeamento espacial também permitem visualizar todas as alterações que ocorreram, esclarecendo ao usuário as diferenças entre os Estados anterior e o presente do ambiente.
 
-* **Tirar instantâneos iniciada pelo usuário do ambiente**
-   * Um aplicativo só poderá responder a alterações ambientais quando instruído pelo usuário.
-   * Por exemplo, o usuário poderia criar vários 3D statues de um amigo, capturando seus poses em momentos diferentes.
+* **Fazer instantâneos iniciados pelo usuário do ambiente**
+   * Um aplicativo pode querer responder apenas a alterações ambientais quando instruído pelo usuário.
+   * Por exemplo, o usuário poderia criar várias ' Statues ' 3D de um amigo capturando suas poses em momentos diferentes.
 
 * **Permitir que o usuário altere o ambiente**
-   * Um aplicativo pode ser projetado para responder em tempo real para todas as alterações feitas no ambiente do usuário.
-   * Por exemplo, o usuário uma cortina de desenho pode disparar 'alteração de cena' para um play holográfica estão ocorrendo no outro lado.
+   * Um aplicativo pode ser projetado para responder em tempo real a qualquer alteração feita no ambiente do usuário.
+   * Por exemplo, o usuário que desenha um Curtain poderia disparar a "mudança de cena" para uma reprodução de Holographic em andamento no outro lado.
 
-* **Guia do usuário para evitar erros nos dados de mapeamento espacial**
-   * Um aplicativo talvez queira fornecer orientação para o usuário enquanto eles estiver verificando seu ambiente.
-   * Isso pode ajudar o usuário para evitar determinados tipos de [erros nos dados de mapeamento espacial](spatial-mapping-design.md#what-influences-spatial-mapping-quality), por exemplo, manter-se para fora do windows sunlit ou espelhos.
+* **Orientar o usuário para evitar erros nos dados de mapeamento espacial**
+   * Um aplicativo pode desejar fornecer orientações ao usuário enquanto eles estão verificando seu ambiente.
+   * Isso pode ajudar o usuário a evitar determinados tipos de [erros nos dados de mapeamento espacial](spatial-mapping-design.md#what-influences-spatial-mapping-quality), por exemplo, mantendo-se afastados das janelas sunlit ou dos espelhos.
 
-Um detalhe adicional estar atento é que 'range' de dados de mapeamento espacial não é ilimitado. Durante o mapeamento espacial criar um banco de dados permanente de grandes espaços, ele apenas torna os dados disponíveis para aplicativos em uma bolha' ' tamanho limitado em torno do usuário. Portanto, se você começa do início de um longo caminhar e exame de longe o suficiente para longe de início, eventualmente as superfícies espaciais início desaparecerá. É claro, você pode mitigar isso ao armazenar em cache esses superfícies em seu aplicativo depois que eles desapareceram dos dados de mapeamento espacial disponível.
+Um detalhe adicional a ser considerado é que o ' intervalo ' de dados de mapeamento espacial não é ilimitado. Apesar de o mapeamento espacial criar um banco de dados permanente de espaços grandes, ele disponibiliza apenas os dados para os aplicativos em uma "bolha" de tamanho limitado em relação ao usuário. Portanto, se você começar no início de um longo corredor e ir longe o suficiente do início, eventualmente as superfícies espaciais no início desaparecerão. É claro que você pode reduzir isso armazenando em cache essas superfícies em seu aplicativo depois que elas desaparecerem dos dados de mapeamento espacial disponíveis.
 
 ## <a name="mesh-processing"></a>Processamento de malha
 
-Talvez seja útil para detectar tipos comuns de erros em superfícies e filtrar, remover ou modificar os dados de mapeamento espacial conforme apropriado.
+Pode ajudar a detectar tipos comuns de erros em superfícies e filtrar, remover ou modificar os dados de mapeamento espacial conforme apropriado.
 
-Tenha em mente que esse mapeamento espacial dados deve ser tão fiel possível superfícies do mundo real, para qualquer processamento que você aplicar os riscos de mudança de suas superfícies mais longe da verdade.
+Tenha em mente que os dados de mapeamento espacial devem ser tão fiels quanto possível para superfícies reais, de modo que qualquer processamento que você aplique riscos mudará suas superfícies além da ' verdade '.
 
 Aqui estão alguns exemplos de diferentes tipos de processamento de malha que podem ser úteis:
 
-* **Preenchimento de buraco**
-   * Se um objeto pequeno feito de um material escuro ocorra falha na verificação, ele deixará um buraco na superfície de ao redor.
-   * Buracos afetam oclusão: hologramas podem ser vistas 'por meio de' um buraco em uma superfície supostamente opaco do mundo real.
-   * Buracos afetam raycasts: se você estiver usando raycasts para ajudar os usuários interagem com superfícies, ele pode ser indesejável para esses raios passar através de falhas. Uma mitigação é usar um pacote de vários raycasts que abrangem uma região dimensionada adequadamente. Isso permitirá que você filtre os resultados de 'exceções', para que, mesmo se um raycast passa por um pequeno orifício, o resultado da agregação ainda serão válido. No entanto, lembre-se de que essa abordagem tem um custo computacional.
-   * Buracos afetam as colisões de física: um objeto controlado pela simulação de física pode remover por meio de um buraco no chão e se percam.
-   * É possível algoritmicamente preencher esses buracos na malha superfície. No entanto, você precisará ajustar seu algoritmo para que 'buracos real' como o windows e entradas de acesso não são preenchidos. Pode ser difícil diferenciar confiável 'brechas real' de 'imaginários buracos', portanto, você precisará experimentar diferente heurística, como o 'Tamanho' e 'forma limite'.
+* **Preenchimento de orifício**
+   * Se um pequeno objeto formado por um material escuro falhar ao digitalizar, ele deixará um orifício na superfície ao redor.
+   * Os buracos afetam o oclusão: os hologramas podem ser vistos "por meio de um buraco em uma superfície do mundo real opaca supostamente.
+   * Os buracos afetam o raycasts: se você estiver usando o raycasts para ajudar os usuários a interagir com as superfícies, pode ser indesejável que esses raios passem por buracos. Uma mitigação é usar um pacote de vários raycasts cobrindo uma região de tamanho adequado. Isso permitirá que você filtre os resultados de "exceção", de modo que, mesmo que um Raycast passe por uma pequena brecha, o resultado da agregação ainda será válido. No entanto, lembre-se de que essa abordagem vem com um custo computacional.
+   * Os buracos afetam as colisões de física: um objeto controlado pela simulação física pode derrubar um orifício no chão e se tornar perdido.
+   * É possível forma algorítmica o preenchimento desses buracos na malha da superfície. No entanto, você precisará ajustar seu algoritmo para que "buracos reais", como Windows e doorways, não sejam preenchidos. Pode ser difícil diferenciar de forma confiável ' buracos reais ' de ' buracos imaginários ', portanto, você precisará experimentar uma heurística diferente, como ' tamanho ' e ' forma de limite '.
 
 * **Remoção de hallucination**
-   * Reflexos, luzes brilhantes e movimentação de objetos pode deixar o pequeno remanescentes 'hallucinations' flutuando no ar intermediário.
-   * Hallucinations afetam oclusão: hallucinations podem se tornar visíveis como formas escuras movendo na frente do e occluding outras hologramas.
-   * Hallucinations afetam raycasts: se você estiver usando raycasts para ajudar os usuários interagem com superfícies, esses raios conseguiram acertar um hallucination em vez da superfície por trás dele. Assim como acontece com falhas, uma mitigação é usar muitas raycasts em vez de um único raycast mas, novamente, ele será recebido por um custo computacional.
-   * Hallucinations afetam colisões de física: um objeto controlado pela simulação de física pode ficar preso em relação a um hallucination e ser possível mover através de uma área aparentemente clara de espaço.
-   * É possível filtrar esses hallucinations da malha superfície. No entanto, assim como acontece com falhas, você precisará ajustar seu algoritmo para que real pequenos objetos, como lamp significa e identificadores de porta não foram removidas.
+   * Reflexos, luzes brilhantes e movimentação de objetos podem deixar o ' hallucinations ' remanescente pequeno no ar médio.
+   * Hallucinations afeta oclusão: hallucinations pode se tornar visível como formas escuras se movendo na frente e occluding outros hologramas.
+   * Hallucinations afeta raycasts: se você estiver usando o raycasts para ajudar os usuários a interagir com superfícies, esses raios poderão atingir um hallucination em vez da superfície por trás dele. Assim como acontece com os buracos, uma mitigação é usar muitas raycasts em vez de um único Raycast, mas novamente isso será fornecido a um custo computacional.
+   * Hallucinations afetam as colisões de física: um objeto controlado pela simulação física pode ficar preso contra um hallucination e não pode passar por uma área de espaço aparentemente nítida.
+   * É possível filtrar esses hallucinations da malha de superfície. No entanto, assim como com os buracos, você precisará ajustar seu algoritmo para que os objetos reais pequenos, como a lâmpada e os identificadores de porta, não sejam removidos.
 
 * **Suavização**
-   * Mapeamento espacial pode retornar as superfícies que parecem ser aproximada ou ruídos em comparação com suas contrapartes do mundo real.
-   * Suavidade afeta as colisões de física: se o chão é aproximado, uma bola de Golfe fisicamente simulado pode não são transferidas suavemente por ele em uma linha reta.
-   * Suavidade afeta a renderização: se uma superfície é visualizada diretamente, normais da superfície aproximadas podem afetar sua aparência e interromper uma aparência 'limpa'. É possível atenuar isso por meio de iluminação apropriada e texturas no sombreador que é usado para renderizar a superfície.
-   * É possível suavizar Aspereza em uma malha de superfície. No entanto, isso pode enviar por push a superfície para fora da superfície do mundo real correspondente. Manter uma correspondência de fechamento é importante para produzir oclusão holograma precisos e permitir que os usuários alcançar interações precisas e previsíveis com superfícies holográfica.
-   * Se apenas uma alteração superficial for necessária, ela pode ser suficiente suavizar normais de vértice sem alterar as posições de vértice.
+   * O mapeamento espacial pode retornar superfícies que parecem ser aproximadas ou "ruidosas" em comparação com suas contrapartes do mundo real.
+   * A suavidade afeta as colisões de física: se o piso for aproximado, uma bola de golfe fisicamente simulada poderá não ser organizada sem problemas em uma linha reta.
+   * A suavidade afeta a renderização: se uma superfície for visualizada diretamente, os Normals da superfície aproximada poderão afetar sua aparência e interromper uma aparência "limpa". É possível mitigar isso usando a iluminação e texturas apropriadas no sombreador que é usado para renderizar a superfície.
+   * É possível suavizar a áspero em uma malha de superfície. No entanto, isso pode empurrar a superfície para longe da superfície real correspondente. Manter uma correspondência próxima é importante para produzir oclusão de holograma precisos e para permitir que os usuários obtenham interações precisas e previsíveis com superfícies holographics.
+   * Se apenas uma alteração superficial for necessária, pode ser suficiente para suavizar Normals de vértice sem alterar as posições de vértice.
 
 * **Localização do plano**
-   * Há muitas formas de análise que um aplicativo talvez queira executar nas superfícies de fornecido pelo mapeamento espacial.
-   * Um exemplo simple é 'Localização do plano'; Identificando limitadas, principalmente planar regiões de superfícies.
-   * Planares regiões podem ser usados como holográfica-as superfícies de trabalho, regiões onde holográfico conteúdo pode ser colocado automaticamente pelo aplicativo.
-   * Regiões planares podem restringir a interface do usuário, orientar os usuários a interagir com as superfícies que melhor se adequar às suas necessidades.
-   * Planares regiões podem ser usados como no mundo real, para contrapartes holographic para objetos funcionais, como telas de LCD, tabelas ou quadros de comunicações.
-   * Planares regiões podem definir áreas play, formando a base dos níveis de videogame.
-   * Planares regiões podem ajudar a virtuais agentes para navegar no mundo real, por meio da identificação de áreas de piso que provavelmente as pessoas reais para guiá-lo no.
+   * Há muitas formas de análise que um aplicativo pode desejar executar nas superfícies fornecidas pelo mapeamento espacial.
+   * Um exemplo simples é ' Localizar plano '; identificação das regiões de superfícies limitadas e em grande-planar.
+   * As regiões planar podem ser usadas como superfícies de trabalho Holographic, regiões em que o conteúdo Holographic pode ser colocado automaticamente pelo aplicativo.
+   * As regiões planar podem restringir a interface do usuário, para orientar os usuários a interagir com as superfícies que melhor atendam às suas necessidades.
+   * As regiões planar podem ser usadas como no mundo real, para contrapartes Holographic a objetos funcionais, como telas de LCD, tabelas ou quadros de comunicações.
+   * As regiões planar podem definir áreas de reprodução, formando a base dos níveis de videogame.
+   * As regiões planar podem ajudar os agentes virtuais a navegar pelo mundo real, identificando as áreas de piso que as pessoas realmente têm a probabilidade de acompanhar.
 
-## <a name="prototyping-and-debugging"></a>Criação de protótipos e depuração
+## <a name="prototyping-and-debugging"></a>Protótipo e depuração
 
 ### <a name="useful-tools"></a>Ferramentas úteis
-* O [HoloLens emulador](using-the-hololens-emulator.md) pode ser usado para desenvolver aplicativos usando o mapeamento espacial sem acesso a um HoloLens físico. Ele permite que você simule uma sessão ao vivo em um HoloLens em um ambiente realista, com todos os dados de seu aplicativo normalmente consumiria, incluindo HoloLens movimento, sistemas de coordenadas espaciais e mapeamento espacial malhas. Isso pode ser usado para fornecer entrada confiável, repetível, que pode ser útil para depuração de problemas e avaliar as alterações ao seu código.
-* Para reproduzir um cenários, capturar dados de mapeamento espacial pela rede a partir de um HoloLens ao vivo e, em seguida, salvá-lo para o disco e reutilizá-la nas sessões subsequentes de depuração.
-* O [exibição 3D do Windows dispositivo portal](using-the-windows-device-portal.md#3d-view) fornece uma maneira de ver todas as superfícies espaciais está disponíveis por meio do sistema de mapeamento espacial. Isso fornece uma base de comparação para as superfícies espaciais dentro de seu aplicativo. Por exemplo, você pode perceber facilmente se qualquer superfícies espaciais estão falta ou estão sendo exibidas no lugar errado.
+* O [emulador do HoloLens](using-the-hololens-emulator.md) pode ser usado para desenvolver aplicativos usando o mapeamento espacial sem acesso a um HoloLens físico. Ele permite simular uma sessão ao vivo em um HoloLens em um ambiente realista, com todos os dados que seu aplicativo normalmente consumiria, incluindo movimento de HoloLens, sistemas de coordenadas espaciais e malhas de mapeamento espacial. Isso pode ser usado para fornecer entradas confiáveis e reproduzíveis, que podem ser úteis para depurar problemas e avaliar alterações em seu código.
+* Para reproduzir um cenário, Capture dados de mapeamento espacial pela rede de um HoloLens ao vivo e, em seguida, salve-os no disco e reutilize-os em sessões de depuração subsequentes.
+* O [modo de exibição 3D do portal de dispositivo do Windows](using-the-windows-device-portal.md#3d-view) fornece uma maneira de ver todas as superfícies espaciais disponíveis atualmente por meio do sistema de mapeamento espacial. Isso fornece uma base de comparação para as superfícies espaciais dentro de seu aplicativo; por exemplo, você pode identificar facilmente se alguma superfície espacial está ausente ou sendo exibida no local errado.
 
-### <a name="general-prototyping-guidance"></a>Diretrizes gerais de criação de protótipos
-* Porque [erros](spatial-mapping-design.md#what-influences-spatial-mapping-quality) no mapeamento espacial dados fortemente podem afetar a experiência do usuário, é recomendável que você teste seu aplicativo em uma ampla variedade de ambientes.
-* Não obter interceptadas o hábito de sempre testando no mesmo local, por exemplo, em sua mesa. Certifique-se de testar em várias superfícies de posições diferentes, formas, tamanhos e materiais.
-* Da mesma forma, enquanto dados sintéticos ou gravados podem ser útil para depuração, não se tornam muito depende do mesmos poucos casos de teste. Isso pode atrasar a localizar problemas importantes que mais testes variado seriam ter capturada anteriormente.
-* É uma boa ideia para executar o teste com usuários reais (e o ideal é que não coached), pois eles não podem usar o HoloLens ou seu aplicativo exatamente da mesma maneira que você faz. Na verdade, talvez você se surpreenda comportamento das pessoas como divergentes, suposições e dados de Conhecimento podem ser!
+### <a name="general-prototyping-guidance"></a>Diretrizes gerais de protótipo
+* Como os [erros](spatial-mapping-design.md#what-influences-spatial-mapping-quality) nos dados de mapeamento espacial podem afetar seriamente a experiência do usuário, recomendamos que você teste seu aplicativo em uma ampla variedade de ambientes.
+* Não se preocupe com o hábito de testar sempre no mesmo local, por exemplo, em sua mesa. Certifique-se de testar várias superfícies de diferentes posições, formas, tamanhos e materiais.
+* Da mesma forma, embora os dados sintéticos ou registrados possam ser úteis para depuração, não se tornem muito dependentes dos mesmos casos de teste. Isso pode atrasar a localização de problemas importantes que os testes mais variados teriam detectados anteriormente.
+* É uma boa ideia executar testes com usuários reais (e idealmente desconhecidos), pois eles não podem usar o HoloLens ou seu aplicativo exatamente da mesma maneira que você. Na verdade, ele pode surpreender você como o comportamento das pessoas, o conhecimento e as suposições mais divergentes podem ser!
 
 ## <a name="see-also"></a>Consulte também
 * [Visualização de varredura do ambiente](room-scan-visualization.md)

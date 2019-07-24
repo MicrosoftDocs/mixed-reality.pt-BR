@@ -1,11 +1,11 @@
 ---
 title: Viva voz
-description: Otimizando seu aplicativo para mãos livres
+description: Otimizando seu aplicativo para as mãos
 author: liamar
 ms.author: liamar
 ms.date: 04/20/2019
 ms.topic: article
-keywords: Realidade misturada, viva-voz, mantenha o foco, olhares direcionamento, interação, design
+keywords: Realidade misturada, mãos gratuitas, olhar, direcionamento olhar, interação, design
 ms.openlocfilehash: 7942192f644a7133335f089cfaaccfaebdd9292e
 ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
 ms.translationtype: MT
@@ -19,79 +19,79 @@ ms.locfileid: "67414391"
 
 ## <a name="scenarios"></a>Cenários
 
-Conforme descrito na [visão geral do modelo de interação](interaction-fundamentals.md), depois de você ter identificado os usuários e suas metas, pergunte-se que desafios ambientais ou situacional eles poderá enfrentar como eles trabalham para realizar suas tarefas. Por exemplo, muitos usuários precisam usar suas mãos atingir seus objetivos do mundo real e terá dificuldade para interagir com uma interface com base prática e controladores. 
+Conforme descrito na [visão geral do modelo de interação](interaction-fundamentals.md), depois de identificar os usuários e suas metas, pergunte-se quais desafios ambientais ou de situação eles podem enfrentar enquanto trabalham para realizar suas tarefas. Por exemplo, muitos usuários precisam usar suas mãos para realizar suas metas reais e terão dificuldade para interagir com uma interface baseada em controladores e mãos. 
 
 Alguns cenários específicos podem ser: 
-* Que está sendo guiado por meio de uma tarefa, enquanto as mãos estão ocupadas
-* Referenciando materiais enquanto suas mãos estão ocupadas
+* Guiado por uma tarefa, enquanto as mãos estão ocupadas
+* Fazendo referência a materiais enquanto suas mãos estão ocupadas
 * Fadiga mão
-* Luvas que não podem ser controladas
-* Portando algo
+* Luvas que não podem ser rastreados
+* Carregando algo
 
 
-## <a name="hands-free-modalities"></a>Viva-voz modalidades
+## <a name="hands-free-modalities"></a>Modalidades sem intervenção
 
 ### <a name="voice-commandingvoice-designmd"></a>[Comando de voz](voice-design.md)
 
-Usando a voz para comando e controle de que uma interface pode não apenas permitir que o usuário opere para mãos livres, mas também ignorar várias etapas. O uso desse modalidade pode variar de permitindo que o usuário simplesmente ler nome do qualquer botão em voz alta para ativá-lo, como em Consulte-it-say-it, para conversar com um agente que pode realizar tarefas para você.
+Usar sua voz para comando e controlar uma interface só pode permitir que o usuário opere Handsfree, mas também ignore várias etapas. O uso dessa modalidade pode variar de permitir que o usuário simplesmente Leia o nome de qualquer botão para ativá-lo, como em consulte-it-diga-it, para conversar com um agente que pode realizar tarefas para você.
 
 
 
 ### <a name="head-gaze-and-dwellgaze-and-dwellmd"></a>[Focar com a cabeça e esperar](gaze-and-dwell.md)
 
-Em algumas situações viva-voz, usando a voz não é ideal ou até mesmo possível. Ambientes fabris alto, privacidade ou sociais normas podem ser restrições. O cabeçalho olhares + lidam bem com modelo permite que o usuário navegue o aplicativo usando seu principal vetor para apontar ao remanescentes, ou dwelling em um botão irá ativá-lo após um determinado período de tempo, normalmente cerca de 1 segundo ou isso. 
+Em algumas situações práticas, usar sua voz não é ideal ou até mesmo possível. Ambientes de fábrica altos, privacidade ou normas sociais podem ser restrições. O modelo Head olhar + de pesquisa permite que o usuário navegue pelo aplicativo usando seu vetor de cabeçalho para apontar, enquanto o modo de navegação ou de pausar em um botão o ativará após um determinado período de tempo, geralmente em cerca de 1 segundo ou assim por diante. 
 
 
-## <a name="transitioning-in-and-out-of-hands-free"></a>A transição para dentro e fora de mãos livres
+## <a name="transitioning-in-and-out-of-hands-free"></a>Transição para dentro e para fora de mãos gratuitas
 
-Para esses cenários, liberar as mãos de interagir com hologramas para comandos e navegação pode variar de sendo um requisito absoluto para operar o aplicativo ponta a ponta, para uma conveniência adicional que o usuário pode fazer a transição do qualquer tempo. 
+Para esses cenários, liberar suas mãos de interagir com hologramas para comando e navegação pode variar de ser um requisito absoluto para operar o aplicativo, de ponta a ponta, a uma conveniência adicional de que o usuário pode fazer a transição para dentro e fora de qualquer momento. 
 
-Se o requisito do aplicativo é que ela será sempre usada viva-voz, usando o único comando de voz, comandos de voz ou duração, "select" e, em seguida, certifique-se de fazer as acomodações apropriadas em sua interface do usuário. 
+Se o requisito do aplicativo for que ele sempre será usado sem intervenções, seja usando a pesquisa, comandos de voz ou o comando de voz simples, "Select", certifique-se de tornar o accomodations apropriado em sua interface do usuário. 
 
-Se o usuário de destino precisa ser capaz de alternar de mãos para mãos livres a seu critério, em seguida, é importante considerar os seguintes princípios.
+Se o seu usuário de destino precisar ser capaz de alternar de mãos para mãos gratuitas a seu critério, é importante levar os princípios a seguir em conta.
 
-### <a name="assume-the-user-is-already-in-the-mode-that-they-want-to-switch-to"></a>Suponha que o usuário já está no modo que eles desejam mudar para
-Por exemplo, se o usuário está no chão de fábrica, assistir a uma referência de vídeo no seu Hololens e decide pegar uma chave inglesa para começar a trabalhar, ela provavelmente seria começar a trabalhar para mãos livres sem a necessidade de criar a chave inglesa ao pressionar um botão. Ela deve ser capaz de invocar uma sessão de voz com um comando de voz, lidam bem com uma interface do usuário já visível para começar a duração ou, digamos que a palavra "select".
+### <a name="assume-the-user-is-already-in-the-mode-that-they-want-to-switch-to"></a>Suponha que o usuário já esteja no modo que deseja alternar para
+Por exemplo, se o usuário estiver no chão de fábrica, observando uma referência de vídeo em seu Hololens e decidir pegar uma chave de fenda para começar a trabalhar, ela provavelmente começaria a trabalhar no handsfree sem precisar colocar a chave de fenda para pressionar um botão. Ela deve ser capaz de invocar uma sessão de voz com um comando de voz, a pesquisa em uma interface do usuário já visível para iniciar a pesquisa ou dizer a palavra "Select".
 
 O usuário deve ter a capacidade de: 
-* Alternar para mãos livres enquanto viva-voz
-* Alterne para mãos com suas mãos
-* Alterne para o controlador usando um controlador 
+* Mude para o hands sem intervenção
+* Mude para as mãos com suas mãos
+* Alternar para o controlador usando um controlador 
 
-### <a name="create-redundant-ways-to-switch-modes"></a>Criar formas redundantes para alternar entre modos
-Embora seja o primeiro princípio sobre o acesso, a segunda é sobre a disponibilidade. Apenas não deve haver uma única maneira de fazer a transição para dentro e fora de um modo. 
+### <a name="create-redundant-ways-to-switch-modes"></a>Criar maneiras redundantes de alternar entre modos
+Embora o primeiro princípio seja sobre o acesso, o segundo é sobre a disponibilidade. Não deve haver apenas uma única maneira de fazer a transição para dentro e para fora de um modo. 
 
 Alguns exemplos seriam: 
-* Um botão para começar a interações de voz
-* Um comando de voz para fazer a transição usando olhar + duração
+* Um botão para iniciar as interações de voz
+* Um comando de voz para fazer a transição para usar o olhar + a pesquisa
 
-### <a name="add-a-dash-of-drama"></a>Adicionar um traço de drama
-Uma opção do modo é muito importante – é importante que quando essas transições acontecem que eles sejam uma opção explícita, até mesmo dramática, para que o usuário saiba o que aconteceu. 
+### <a name="add-a-dash-of-drama"></a>Adicionar um traço de baixo-claro
+Uma opção de modo é um grande problema – é importante que, quando essas transições acontecem, elas sejam um interruptor explícito e até mesmo drástico, para permitir que o usuário saiba o que aconteceu. 
 
 
 ## <a name="usability-checklist"></a>Lista de verificação de usabilidade
 
-**O usuário pode fazer tudo e qualquer coisa viva-voz, de ponta a ponta?**
-* Cada interactible deve ser acessível viva-voz
-* Certifique-se de que há uma substituição para todos os gestos personalizados, como o redimensionamento, colocando, dedo, toques, etc.
-* Certifique-se de que o usuário tem certeza de controle de presença, posicionamento e detalhamento da interface do usuário em todos os momentos
-    * Obtendo a interface do usuário do caminho
-    * Endereçamento de interface do usuário que está fora do campo de exibição (FOV)
-    * Quanto eu vejo, onde, quando
+**O usuário pode fazer tudo e tudo sem intervenção, de ponta a ponta?**
+* Todos os interactible devem estar acessíveis sem intervenções
+* Certifique-se de que haja uma substituição para todos os gestos personalizados, como redimensionamento, colocação, passes, toques, etc.
+* Certifique-se de que o usuário tenha o controle seguro de presença, posicionamento e detalhes de interface do usuário em todos os momentos
+    * Obtendo a interface do usuário fora do caminho
+    * Endereçando a interface do usuário que está fora do campo de visão (FOV)
+    * Quanto vejo, onde, quando
 
-**São a mecânica da interação que está sendo ensinada e reforçada com as capacidades certas?**
+**A mecânica da interação está sendo ensinada e reforçada com a capacidades correta?**
 
-O usuário entender...
-* ... O modo que eles estão em?
-* ... O que eles podem fazer nesse modo?
+O usuário entende...
+* ... Em que modo eles estão?
+* ... O que eles podem fazer neste modo?
 * ... O que é o estado atual?
-* ... Como eles podem fazer a transição-out?
+* ... Como eles podem fazer a transição?
     
-**É a interface do usuário otimizada para mãos livres?**   
+**A interface do usuário é otimizada para mãos gratuitas?**   
 
-* Exemplo: Capacidades de duração não são recursos internas para os padrões típicos de 2D
-* Exemplo: O direcionamento de voz é melhor com realce de objeto
-* Exemplo: Interações de voz são melhores com legendas que precisam ser ligado
+* Exemplo: Capacidades de pesquisa não são internos para padrões 2D típicos
+* Exemplo: O direcionamento de voz é melhor com o realce de objeto
+* Exemplo: As interações de voz são melhores com legendas que precisam ser ativadas
 
 
 ## <a name="see-also"></a>Consulte também

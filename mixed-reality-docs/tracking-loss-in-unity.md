@@ -1,43 +1,43 @@
 ---
-title: Controlando a perda no Unity
-description: Tratamento de perda de dentro de um aplicativo do Unity de acompanhamento.
+title: Perda de rastreamento no Unity
+description: Tratamento da perda de controle em um aplicativo do Unity.
 author: thetuvix
 ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Unity, controlando a perda, a imagem de perda de controle
+keywords: Unity, perda de controle, imagem de perda de rastreamento
 ms.openlocfilehash: eb675860d67e9cad0d1129b3a6f61343990a4179
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59590491"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63548749"
 ---
-# <a name="tracking-loss-in-unity"></a>Controlando a perda no Unity
+# <a name="tracking-loss-in-unity"></a>Perda de rastreamento no Unity
 
-Quando o dispositivo não pode localizar-se no mundo, o aplicativo passa por "perda de controle". Por padrão, o Unity pausar o loop de atualização e exibir uma imagem de abertura para o usuário. Quando o rastreamento é recuperado, a imagem inicial desaparece e continua o loop de atualização.
+Quando o dispositivo não consegue se localizar no mundo, o aplicativo tem "perda de rastreamento". Por padrão, o Unity pausará o loop de atualização e exibirá uma imagem de abertura para o usuário. Quando o rastreamento é retomado, a imagem de abertura desaparece e o loop de atualização continua.
 
-Como alternativa, o usuário pode manipular manualmente essa transição ao recusar a configuração. Todo o conteúdo parecerá tornam-se o corpo bloqueado durante a perda de controle se nada é feito para manipulá-lo.
+Como alternativa, o usuário pode lidar com essa transição manualmente, recusando a configuração. Todo o conteúdo parecerá ficar bloqueado durante a perda de rastreamento se nada for feito para tratá-lo.
 
-## <a name="default-handling"></a>O tratamento padrão
+## <a name="default-handling"></a>Manipulação padrão
 
-Por padrão, o loop de atualização do aplicativo, bem como todos os eventos e mensagens será interrompido para a duração da perda de controle. Ao mesmo tempo, uma imagem será exibida ao usuário. Você pode personalizar essa imagem ao ir até Editar -> Configurações -> Player, clicando em imagem inicial e definir a imagem holográfica perda de controle.
+Por padrão, o loop Update do aplicativo, bem como todas as mensagens e eventos, serão interrompidos durante a perda de rastreamento. Ao mesmo tempo, uma imagem será exibida para o usuário. Você pode personalizar essa imagem acessando configurações de > de edição – > Player, clicando em imagem de abertura e definindo a imagem de perda de rastreamento de Holographic.
 
 ## <a name="manual-handling"></a>Manipulação manual
 
-Para lidar manualmente com a perda de controle, você precisará ir para **edite** > **configurações do projeto** > **Player**  >   **Guia de configurações de plataforma Windows universal** > **imagem inicial** > **Windows Holographic** e desmarque a opção "no controle perda pausa e Mostrar imagem ". Depois disso, você precisa lidar com o controle de alterações com as APIs especificadas abaixo.
+Para lidar manualmente com a perda de controle, você precisa ir para **Editar** > **configurações** >  > do projeto plataforma universal do Windows**imagem**  > deSplashdaguiaConfigurações >  **Windows Holographic** e desmarque "ao rastrear a perda e mostrar imagem". Depois, você precisa lidar com as alterações de controle com as APIs especificadas abaixo.
 
-**Namespace:** *UnityEngine.XR.WSA*<br>
-**Tipo:** *WorldManager*
+**Namespace:** *UnityEngine. XR. WSA*<br>
+**Escreva** *Worldmanager*
 
-* Gerenciador de mundo expõe um evento para detectar obtidas/perdidas acompanhamento (*WorldManager.OnPositionalLocatorStateChanged*) e uma propriedade para consultar o estado atual (*WorldManager.state*)
-* Quando o estado de controle não está ativo, a câmera não aparecerá converter no mundo virtual, até mesmo quando o usuário converte. Isso significa que os objetos não corresponderá ao qualquer local físico e todos aparecerão corpo bloqueado.
+* O World Manager expõe um evento para detectar o controle perdido/obtido (*worldmanager. OnPositionalLocatorStateChanged*) e uma propriedade para consultar o estado atual (*worldmanager. State*)
+* Quando o estado de acompanhamento não estiver ativo, a câmera não parecerá traduzir no mundo virtual mesmo que o usuário se traduz. Isso significa que os objetos não corresponderão mais a qualquer local físico e todos serão exibidos no corpo bloqueado.
 
-Ao lidar com o controle de alterações em seus próprios, você precisará sondar a propriedade state cada quadro ou identificador a *OnPositionalLocatorStateChanged* eventos.
+Ao lidar com alterações de controle por conta própria, você precisa sondar a propriedade de estado em cada quadro ou manipular o evento *OnPositionalLocatorStateChanged* .
 
-### <a name="polling"></a>sondagem
+### <a name="polling"></a>Poll
 
-É o estado mais importante *PositionalLocatorState.Active* que significa que o acompanhamento está totalmente funcional. Qualquer outro estado resulta em apenas rotacional deltas para a câmera principal. Por exemplo: 
+O estado mais importante é *PositionalLocatorState. Active* , o que significa que o controle é totalmente funcional. Qualquer outro Estado resultará em apenas deltas rotacionais para a câmera principal. Por exemplo:
 
 ```cs
 void Update()
@@ -60,7 +60,7 @@ void Update()
 
 ### <a name="handling-the-onpositionallocatorstatechanged-event"></a>Manipulando o evento OnPositionalLocatorStateChanged
 
-Como alternativa e mais conveniente, você também pode assinar *OnPositionalLocatorStateChanged* para lidar com as transições:
+Como alternativa e mais conveniente, você também pode assinar o *OnPositionalLocatorStateChanged* para lidar com as transições:
 
 ```cs
 void Start()
@@ -82,4 +82,4 @@ private void WorldManager_OnPositionalLocatorStateChanged(PositionalLocatorState
 ```
 
 ## <a name="see-also"></a>Consulte também
-* [Tratamento de perda de acompanhamento no DirectX](coordinate-systems-in-directx.md#handling-tracking-loss)
+* [Lidando com a perda de controle no DirectX](coordinate-systems-in-directx.md#handling-tracking-loss)

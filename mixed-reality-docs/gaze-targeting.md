@@ -1,11 +1,11 @@
 ---
-title: Mantenha o foco de direcionamento
-description: Todas as interações baseiam-se a capacidade de um usuário para o elemento que eles querem interagir, independentemente da modalidade de entrada de destino.
+title: Direcionamento olhar
+description: Todas as interações baseiam-se na capacidade de um usuário direcionar seu foco para o elemento com o qual deseja interagir, independentemente da modalidade de entrada.
 author: cre8ivepark
 ms.author: jennyk
 ms.date: 02/24/2019
 ms.topic: article
-keywords: Misto realidade, olhar, olhar direcionamento, interação, de design
+keywords: Realidade misturada, olhar, direcionamento olhar, interação, design
 ms.openlocfilehash: eddc832456b2ba0c6bc8955157d2c8e1a268e893
 ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
 ms.translationtype: MT
@@ -13,29 +13,29 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 06/11/2019
 ms.locfileid: "66829844"
 ---
-# <a name="gaze-and-dwell"></a>Olhar e duração
-Há muitas maneiras diferentes para confirmar uma _confirmação_ , como a combinação de olhar com _voz_ ou _gestos de mão_.
-Há vários cenários de usuário, no qual mãos dos usuários podem estar ocupadas ou não podem ser rastreadas (por exemplo, operadores de fábrica com luvas pesadas muito grandes). Entrada de voz também pode estar disponível devido a preferências do usuário, contexto social ou ambientes de altos não.
-Como uma solução de fallback, outra opção para executar uma _confirmação_ é simplesmente manter diante de um elemento de interface do usuário que chamamos _lidam bem com_.
-Um _lidam bem com_ podem ser executadas com o cabeçalho ou olho olhar. A ideia é simple e pode ser dividida nas seguintes fases: 
-1. Usuário começa a observação em um botão holographic
+# <a name="gaze-and-dwell"></a>Olhar e a pesquisa
+Há várias maneiras diferentes de confirmar uma _confirmação_ , como combinar olhar com gestos de _voz_ ou _mão_.
+No entanto, há vários cenários de usuário, nos quais as mãos dos usuários podem estar ocupadas ou não podem ser controladas (por exemplo, funcionários de fábrica com luvas de imposto pesado muito grandes). A entrada de voz também pode não estar disponível devido a preferências do usuário, contexto social ou ambientes altos.
+Como uma solução de fallback, outra opção para executar uma _confirmação_ é simplesmente manter a estrela em um elemento de interface do usuário que nos referimos como uma _pesquisa_.
+Uma _pesquisa_ pode ser executada com olhar de cabeça ou de olho. A ideia é simples e pode ser dividida nas seguintes fases: 
+1. O usuário inicia o nuvens em um botão Holographic
 
-2. Após um atraso de início breve (por exemplo, 150 ms) animação alguns comentários visuais é iniciada. O atraso de início é usado para evitar sobrecarregar o usuário pelo imediatamente pop-up de comentários sobre o tempo todo.
-    - Para _olhar olho_, recomendamos o seguinte para o design do visual lidam bem com comentários:
-      - **Mesclá-la**: Mistura perfeitamente os comentários dos quase não visíveis no primeiro para completamente opaco. Isso torna os comentários menos causa distração e overwhleming e alinha-se perfeitamente com a confiança de que o sistema tem que o usuário realmente quer interagir com esse botão.
-      - **Usá-la**: Crie um feedback visual que diminui de tamanho e a move para o centro do destino, extraindo a atenção do usuário visual. 
+2. Após um breve atraso de início (por exemplo, 150 ms), algumas animações de comentários visuais são iniciadas. O atraso de início é usado para evitar sobrecarregar o usuário imediatamente ao mesmo tempo.
+    - Para _olhar de olho_, recomendamos o seguinte para o design dos comentários sobre a pesquisa Visual:
+      - **Misturar**: Mescle suavemente os comentários do mal visíveis a princípio para totalmente opaco. Isso torna os comentários menos confusos e overwhlemings e alinha-se perfeitamente com a confiança que o sistema tem que o usuário realmente deseja envolver com esse botão.
+      - Efetuar **pull**: Crie um comentário visual que diminui em tamanho e se move para o centro do destino, puxando a atenção visual do usuário. 
 
-3. Após um período de duração predefinidos (por exemplo, 800 ms), a duração for concluída e um evento associado é disparado.
-    - Forneça alguns finalizando auditivos ou comentários visuais para realmente colocar página inicial que o item foi selecionado agora.
+3. Após uma duração de uma pesquisa predefinida (por exemplo, 800 MS), a pesquisa é concluída e um evento associado é disparado.
+    - Forneça alguns comentários de auditoria ou visuais finais para realmente colocar em casa que o item foi selecionado agora.
 
-![Estados de duração da pesquisa](images/eyes_dwellstate_recommendation.png)
+![Estados de pesquisa](images/eyes_dwellstate_recommendation.png)
 
 
-# <a name="gaze-targeting"></a>Mantenha o foco de direcionamento
+# <a name="gaze-targeting"></a>Direcionamento olhar
 
-Todas as interações baseiam-se a capacidade de um usuário para o elemento que eles querem interagir, independentemente da modalidade de entrada de destino. Na realidade mista do Windows, isso geralmente é feito usando olhar do usuário.
+Todas as interações baseiam-se na capacidade de um usuário direcionar seu foco para o elemento com o qual deseja interagir, independentemente da modalidade de entrada. No Windows Mixed Reality, isso geralmente é feito com o foco do usuário.
 
-Para habilitar um usuário trabalhar com uma experiência com êxito, as Noções básicas sobre calculado do sistema de intenção do usuário e a intenção do usuário real, deve se alinhar o mais próximo possível. Para o grau que o sistema interpreta as ações do usuário pretendida corretamente, aumenta a satisfação e o desempenho melhora.
+Para permitir que um usuário trabalhe com uma experiência bem-sucedida, o entendimento calculado do sistema da intenção de um usuário e a intenção real do usuário devem estar os mais alinhados possíveis. Na medida em que o sistema interpreta as ações pretendidas do usuário corretamente, a satisfação e o desempenho melhoram.
 
 ## <a name="device-support"></a>Suporte a dispositivos
 
@@ -50,16 +50,16 @@ Para habilitar um usuário trabalhar com uma experiência com êxito, as Noçõe
         <td><strong>Recurso</strong></td>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens (1ª geração)</strong></a></td>
         <td><strong>HoloLens 2</strong></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>Fones imersivos em exposição</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Headsets imersivos</strong></a></td>
     </tr>
      <tr>
-        <td>Mantenha o foco de direcionamento</td>
+        <td>Direcionamento olhar</td>
         <td>✔️</td>
         <td>✔️</td>
         <td>✔️</td>
     </tr>
      <tr>
-        <td>Direcionamento de olhos</td>
+        <td>Direcionamento de olho</td>
         <td>❌</td>
         <td>✔️</td>
         <td>❌</td>
@@ -67,52 +67,52 @@ Para habilitar um usuário trabalhar com uma experiência com êxito, as Noçõe
 </table>
 
 > [!NOTE]
-> Mais orientações específicas para 2 HoloLens [em breve](index.md).
+> Mais diretrizes específicas para o HoloLens 2 em [breve](index.md).
 
-## <a name="target-sizing-and-feedback"></a>Comentários e dimensionamento de destino
+## <a name="target-sizing-and-feedback"></a>Dimensionamento e comentários sobre o alvo
 
-O vetor de olhar mostrado repetidamente para ser usado para direcionar tudo bem, mas geralmente funciona melhor para brutos direcionamento (ao adquirir um pouco maiores destinos). Tamanhos de destino mínimo de 1 a 1,5 graus devem permitir que as ações do usuário bem-sucedida na maioria dos cenários, embora normalmente permitem destinos de graus de 3 para maior velocidade. Observe que o tamanho que os destinos de usuário é efetivamente uma área 2D até mesmo para elementos 3D – qualquer projeção é voltado para a eles deve ser a área a ser direcionada. Fornecer alguma indicação evidente que um elemento está "ativo" (que o usuário está direcionando-la) é extremamente útil – isso pode incluir tratamentos como efeitos de "passagem" visível, destaques de áudio ou cliques ou desmarque o alinhamento de um cursor com um elemento.
+O vetor de foco demonstrou repetidamente ser utilizável para o direcionamento refinado, mas geralmente funciona melhor para o direcionamento bruto (adquirindo, de certa forma, alvos maiores). Os tamanhos mínimos do alvo de 1 a 1,5 grau devem permitir ações bem-sucedidas do usuário na maioria dos cenários, embora os alvos de 3 graus normalmente permitam uma maior velocidade. Observe que o tamanho do alvo escolhido pelo usuário é efetivamente uma área 2D até mesmo para elementos 3D – qualquer que seja a projeção que esteja voltada para eles deverá ser a área de alvo. O fornecimento de alguma indicação evidente de que um elemento está "ativo" (ao qual o usuário está direcionando o foco) é extremamente útil – isso pode incluir tratamentos como efeitos de "focalização" visíveis, destaques de áudio ou cliques ou alinhamento claro de um cursor com um elemento.
 
-![Tamanho de destino ideal a distância do medidor 2](images/gazetargeting-size-1000px.jpg)<br>
-*Tamanho de destino ideal a distância do medidor 2*
+![Tamanho ideal do alvo em uma distância de 2 metros](images/gazetargeting-size-1000px.jpg)<br>
+*Tamanho ideal do alvo em uma distância de 2 metros*
 
-![Um exemplo de realce de um objeto de destino de olhar](images/gazetargeting-highlighting-640px.jpg)<br>
-*Um exemplo de realce de um objeto de destino de olhar*
+![Um exemplo de realce de um objeto direcionado por foco](images/gazetargeting-highlighting-640px.jpg)<br>
+*Um exemplo de realce de um objeto direcionado por foco*
 
-## <a name="target-placement"></a>Posicionamento de destino
+## <a name="target-placement"></a>Posicionamento do alvo
 
-Os usuários geralmente não encontrarão encontrar elementos de interface do usuário são posicionados muito alto ou muito baixo em seu campo de visão, concentrando-se a maior parte de sua atenção nas áreas em torno de seu foco principal (geralmente aproximadamente nível dos olhos). Pode ajudar a colocar a maioria dos destinos em alguns banda razoável em torno do nível dos olhos. Dada a tendência para os usuários para se concentrar em uma área visual relativamente pequena a qualquer momento (attentional cone de visão é aproximadamente 10 graus), agrupar elementos de interface do usuário para o grau que elas estão relacionadas conceitualmente pode aproveitar comportamentos de encadeamento de atenção do item a item como um usuário move seu olhar por meio de uma área. Ao projetar a interface do usuário, tenha em mente a variação grande potencial no campo de exibição entre HoloLens e fones imersivos em exposição.
+Em geral, os usuários não encontrarão elementos de interface do usuário posicionados muito acima ou muito abaixo de seu campo de visão, concentrando a maior parte de sua atenção nas áreas em torno de seu foco principal (em geral, aproximadamente no nível dos olhos). O posicionamento da maioria dos alvos em uma faixa razoável em torno do nível dos olhos pode ajudar. Dada a tendência dos usuários de se concentrarem em uma área visual relativamente pequena a qualquer momento (o cone de atenção da visão é de aproximadamente 10 graus), o agrupamento de elementos de interface do usuário na medida em que eles estejam relacionados conceitualmente pode aproveitar os comportamentos de encadeamento da atenção de item a item conforme um usuário move o foco por uma área. Ao projetar a interface do usuário, tenha em mente a grande variação potencial no campo de visão entre o HoloLens e os headsets imersivos.
 
-![Um exemplo dos elementos de interface do usuário agrupados para olhar mais fáceis de direcionamento no Explorer Galaxy](images/gazetargeting-grouping-1000px.jpg)<br>
-*Um exemplo dos elementos de interface do usuário agrupados para olhar mais fáceis de direcionamento no Explorer Galaxy*
+![Um exemplo de elementos de interface do usuário agrupados para um direcionamento do foco mais fácil no Galaxy Explorer](images/gazetargeting-grouping-1000px.jpg)<br>
+*Um exemplo de elementos de interface do usuário agrupados para um direcionamento do foco mais fácil no Galaxy Explorer*
 
-## <a name="improving-targeting-behaviors"></a>Melhorando a comportamentos de direcionamento
+## <a name="improving-targeting-behaviors"></a>Como melhorar os comportamentos de direcionamento
 
-Se a intenção do usuário para algo de destino pode ser determinada (ou aproximada de perto), ele pode ser muito útil aceitar "near Srta" tenta a interação como se eles foram direcionados corretamente. Há um punhado de métodos bem-sucedidas que podem ser incorporados em experiências de realidade mista:
+Se a intenção do usuário de direcionar o foco para algo puder ser determinada (ou aproximada), poderá ser muito útil aceitar tentativas "quase certas" na interação como se elas tivessem sido direcionadas corretamente. Há diversos métodos bem-sucedidos que podem ser incorporados em experiências de realidade misturada:
 
-### <a name="gaze-stabilization-gravity-wells"></a>Estabilização olhar ("wells gravidade")
+### <a name="gaze-stabilization-gravity-wells"></a>Estabilização de olhar ("gravidade caixas")
 
-Essa deve ser ligado a maioria ou todos do tempo. Essa técnica remove os jitters head/pescoço natural que os usuários podem ter. Também movimento devido a comportamentos de busca/falando.
+Isso deve estar ligado na maior parte do tempo ou todo o tempo. Essa técnica remove as tremulações naturais da cabeça/do pescoço que os usuários possam ter. Além disso, o movimento devido a comportamentos de visão/fala.
 
-### <a name="closest-link-algorithms"></a>Algoritmos mais próximo do link
+### <a name="closest-link-algorithms"></a>Algoritmos de vínculo mais próximo
 
-Eles funcionam melhor em áreas com conteúdo interativo esparsa. Se houver uma grande probabilidade de que você pode determinar o que um usuário estava tentando interagir com, você pode complementar suas habilidades de direcionamento por simplesmente supondo que algum nível de intenção.
+Eles funcionam melhor em áreas com conteúdo interativo esparso. Se houver uma grande probabilidade de que você determine com o que um usuário estava tentando interagir, você poderá complementar suas habilidades de direcionamento apenas supondo algum nível de intenção.
 
-### <a name="backdatingpostdating-actions"></a>Ações backdating/postdating
+### <a name="backdatingpostdating-actions"></a>Ações de antedatar/pós-datar
 
-Esse mecanismo é útil para tarefas que precisam de velocidade. Quando um usuário está se movendo por meio de uma série de direcionamento/ativação evasivas na velocidade, pode ser útil a assumir algum intenção e permitir *perdeu etapas* para atuar em destinos que o usuário tinha em foco um pouco antes ou depois de um pouco o tap ( 50 ms antes/depois foi eficaz em testes iniciais).
+Esse mecanismo é útil para tarefas que exigem velocidade. Quando um usuário passa por uma série de manobras de direcionamento/ativação em velocidade, pode ser útil assumir alguma intenção e permitir que *as etapas perdidas* atuem em destinos que o usuário tinha em foco um pouco antes ou ligeiramente após o toque (50 ms antes/depois foi eficaz em testes iniciais).
 
 ### <a name="smoothing"></a>Suavização
 
-Esse mecanismo é útil para movimentos de caminhos, reduzindo a tremulação/wobble pequena devido às características de movimentação do cabeçote natural. Quando a suavização ao longo de movimentos de caminhos, suaves por tamanho/distância de movimentos em vez de ao longo do tempo
+Esse mecanismo é útil para movimentos de caminhos, reduzindo leve tremulação/tremor devido às características de movimentação natural da cabeça. Durante a suavização em movimentos de caminhos, aplique a suavização por tamanho/distância de movimentos em vez de ao longo do tempo
 
-### <a name="magnetism"></a>Magnetism
+### <a name="magnetism"></a>Magnetismo
 
-Esse mecanismo pode ser pensado como uma versão mais geral de algoritmos "Vincular mais próximo" - desenhar um cursor em direção a um destino ou simplesmente aumentar hitboxes (seja visivelmente ou não) como os usuários provavelmente destinos de abordagem, usando algum conhecimento sobre o layout interativo para intenção do usuário abordagem melhor. Isso pode ser particularmente poderoso para destinos pequeno.
+Esse mecanismo pode ser considerado uma versão mais geral dos algoritmos de "Vínculo mais próximo" – desenhar um cursor em direção a um alvo ou apenas aumentar os hitboxes (seja visivelmente ou não) conforme os usuários se aproximam de prováveis alvos, usando algum conhecimento sobre o layout interativo para uma melhor abordagem da intenção do usuário. Isso pode ser particularmente eficiente para alvos pequenos.
 
-### <a name="focus-stickiness"></a>Adesão de foco
+### <a name="focus-stickiness"></a>Adesão do foco
 
-Ao determinar qual próximos elementos interativos para dar o foco para o, forneça uma tendência para o elemento que tem o foco. Isso ajudará a reduzir o foco irregular alternância comportamentos quando flutuante em um ponto médio entre dois elementos com ruído natural.
+Ao determinar a quais elementos interativos nas proximidades o foco deve ser dado, forneça um desvio para o elemento que tem o foco atualmente. Isso ajudará a reduzir os comportamentos de alternância de foco instável durante a flutuação em um ponto médio entre dois elementos com ruído natural.
 
 ## <a name="see-also"></a>Consulte também
 * [Gestos](gestures.md)

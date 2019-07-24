@@ -1,74 +1,74 @@
 ---
 title: Faça comentários
-description: Crie comentários acionável para desenvolvedores HoloLens e realidade mista do Windows usando o Hub de comentários.
+description: Crie comentários acionáveis para os desenvolvedores do HoloLens e do Windows Mixed Reality usando o Hub de comentários.
 author: mattzmsft
 ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
-keywords: comentários, bug, problema, erro, solucionar problemas, ajuda
+keywords: Comentários, Bug, problema, erro, solucionar problemas, ajuda
 ms.openlocfilehash: 710256ec11df2849b93a5d289dcb28f2a44ed815
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59589133"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63524731"
 ---
 # <a name="give-us-feedback"></a>Faça comentários
 
-Use o Hub de comentários para nos dizer quais recursos você adora, quais recursos você pode fazer sem ou quando algo poderia ser melhor.
+Use o Hub de comentários para nos dizer quais recursos você adora, quais recursos você pode fazer sem, ou quando algo pode ser melhor.
 
-## <a name="feedback-for-windows-mixed-reality-immersive-headset-on-pc"></a>Comentários de fone de ouvido imersão no PC Windows Mixed Reality
+## <a name="feedback-for-windows-mixed-reality-immersive-headset-on-pc"></a>Comentários sobre o headset de imersão de realidade mista do Windows no PC
 
-* Verifique se que você tiver o fone de ouvido imersivo conectado ao seu computador.
-* Inicie **Hub de comentários** na área de trabalho com o HMD conectado.
-* Vá para **guia de comentários** no painel esquerdo. <br>
+* Verifique se você tem o headset de imersão conectado ao seu PC.
+* Inicie o **Hub de comentários** na área de trabalho com o HMD conectado.
+* Vá para a **guia comentários** no painel esquerdo. <br>
   ![Guia de comentários](images/feedback1-600px.png)
-* Clique em **adicionar novos comentários** botão para inserir um novo comentário.<br>
+* Clique no botão **Adicionar novo comentário** para inserir um novo comentário.<br>
   ![Adicionar novos comentários](images/feedback2-600px.png)
-* Selecione **problema** na **quais tipos de comentários é isto?** para fazer comentários acionáveis.
-* Forneça comentários significativos título na **resuma seu problema** caixa.
-* Forneça detalhes e as etapas de reprodução na **envie-nos mais detalhadamente** caixa.<br>
+* Selecione o **problema** em **que tipo de comentário isso é possível?** para fazer comentários.
+* Forneça um título de feedback significativo na caixa resumir **seu problema** .
+* Forneça detalhes e etapas de reprodução na caixa **nos fornecer mais detalhes** .<br>
   ![Detalhes e etapas de reprodução](images/feedback3-600px.png)
-* Selecione **realidade misturada** principais categoria e, em seguida, selecione uma categoria de sub aplicável:
+* Selecione categoria superior da **realidade misturada** e escolha uma subcategoria aplicável:
 
   |  Subcategoria  |  Descrição | 
   |----------|----------|
   |  Aplicativos  |  Problemas com um aplicativo específico. | 
-  |  Desenvolvedor  |  Problemas na criação / executando um aplicativo de realidade misturada. | 
-  |  Dispositivo  |  Problemas com o HMD em si. | 
-  |  Experiência em casa  |  Problemas no seu ambiente VR: interações com a sua base de realidade misturada. | 
-  |  Entrada  |  Problemas com métodos de entrada: movimento controladores, fala, gamepad, mouse e teclado. | 
-  |  Configurar  |  Tudo o que está impedindo você de configuração do dispositivo. | 
+  |  Desenvolvedor  |  Problemas na criação/execução de um aplicativo para realidade misturada. | 
+  |  Dispositivo  |  Problemas com o próprio HMD. | 
+  |  Experiência inicial  |  Problemas com seu ambiente VR: interações com a sua casa de realidade misturada. | 
+  |  Entrada  |  Problemas com métodos de entrada: controladores de animação, fala, gamepad ou mouse e teclado. | 
+  |  Configurar  |  Qualquer coisa que esteja impedindo a configuração do dispositivo. | 
   |  Todos os outros problemas  |  Mais alguma coisa. |
   
-* Para nos ajudar a identificar e corrigir o bug mais rapidamente, capturar rastreamentos e vídeo é extremamente útil. Para iniciar a coleta de rastreamentos, clique em **iniciar captura**. Isso iniciará a coleta de rastreamentos e uma captura de vídeo do seu cenário de realidade misturada.<br>
+* Para nos ajudar a identificar e corrigir o bug mais rapidamente, capturar rastreamentos e vídeos é extremamente útil. Para começar a coletar rastreamentos, clique em **Iniciar captura**. Isso começará a coletar rastreamentos e uma captura de vídeo de seu cenário de realidade misturada.<br>
   ![Iniciar captura](images/feedback4-600px.png)
-* Deixar o aplicativo de Feedback e percorrer o cenário quebrado. Não feche o aplicativo de Hub de comentários neste momento.
-* Depois de terminar com seu cenário, volte para o aplicativo de comentários e clique em **Parar captura**. Depois de fazer isso, você deve ver o que foi adicionado um arquivo que contém os rastreamentos.
+* Deixe o aplicativo de comentários e execute o cenário interrompido. Não feche o aplicativo de Hub de comentários neste ponto.
+* Depois de concluir seu cenário, volte para o aplicativo de comentários e clique em **parar captura**. Depois de fazer isso, você verá que um arquivo contendo os rastreamentos foi adicionado.
 * Clique em **Enviar**.<br>
   ![Enviar](images/feedback5-600px.png)
-* Isso levará você à página de agradecimento.<br>
+* Isso levará você à sua página de agradecimento.<br>
   ![Obrigado](images/feedback6-600px.png)
 * Neste ponto, seus comentários foram enviados com êxito.
-* Depois de enviar comentários, para direcionar facilmente a outras pessoas (por exemplo, colaboradores, equipe da Microsoft, [fórum](https://forums.hololens.com/) leitores et al) para o problema, vá para comentários > Meus comentários, clique em sobre o problema e usar o **compartilhamento** ícone para obter uma URL reduzida, você pode fornecer a outras pessoas para votar ou escalar.
+* Depois de enviar os comentários, para direcionar facilmente a outras pessoas (por exemplo, colegas de trabalho, equipe da Microsoft, leitores de [Fórum](https://forums.hololens.com/) et al) até o problema, acesse os comentários > meus comentários, clique no problema e use o ícone **compartilhar** para obter uma URL abreviada que você pode dar a outras pessoas Vote ou escale.
 
 >[!NOTE]
->Antes de enviar um bug, certifique-se de que atender às seguintes restrições para que os logs forem carregados com êxito com os comentários:
-> - Ter um mínimo de 3GB espaço livre em disco na unidade principal do dispositivo.
-> - Certifique-se de que uma rede ilimitada está disponível para carregar cabs.
+>Antes de fazer o arquivamento de um bug, verifique se você atende às seguintes restrições para que os logs sejam carregados com êxito com os comentários:
+> - Ter um mínimo de 3GB de espaço livre em disco disponível na unidade principal do dispositivo.
+> - Certifique-se de que uma rede não limitada esteja disponível para carregar o cabs.
 
-## <a name="feedback-for-hololens"></a>Comentários para HoloLens
+## <a name="feedback-for-hololens"></a>Comentários para o HoloLens
 
-1. Use o **bloom** gesto para abrir o menu Iniciar.
-2. Selecione **Hub de comentários** do início.<br>
-  ![Menu Iniciar no Microsoft HoloLens](images/startmenu.jpg)
+1. Use o gesto de **cair** para abrir o menu iniciar.
+2. Selecione o **Hub de comentários** em Iniciar.<br>
+  ![Menu iniciar no Microsoft HoloLens](images/startmenu.jpg)
 3. Coloque o aplicativo em seu ambiente e, em seguida, selecione o aplicativo para iniciá-lo.
-4. Se outra pessoa forneceu comentários semelhantes, inserindo o tópico, como "Teclado".<br>
-  ![Pesquisar comentários](images/searchfeedback-500px.jpg)
-5. Se você encontrar comentários semelhantes, selecioná-la, adicione todos os detalhes e selecione **Upvote**.<br>
-  ![Votar a favor dos comentários de existente](images/upvotefeedback-500px.jpg)
-6. Se você não encontrar quaisquer comentários semelhantes, selecione **adicionar novos comentários**e escolha um tópico de **selecionar uma categoria** e, em seguida, **selecionar uma subcategoria**.<br>
+4. Veja se outra pessoa recebeu comentários semelhantes inserindo o tópico, como "teclado".<br>
+  ![Comentários da pesquisa](images/searchfeedback-500px.jpg)
+5. Se você encontrar comentários semelhantes, selecione-o, adicione todos os detalhes e, em seguida, selecione o **voto**.<br>
+  ![Vote em comentários existentes](images/upvotefeedback-500px.jpg)
+6. Se você não encontrar nenhum comentário semelhante, selecione **Adicionar novos comentários**e escolha um tópico em **selecionar uma categoria** e, em seguida, **Selecione uma subcategoria**.<br>
   ![Adicionar novos comentários](images/addnewfeedback-500px.jpg)
 7. Insira seus comentários.
-8. Se você tiver uma reprodução, você pode clicar em **reproduzir** e reprodução seus comentários, quando terminar, volte para o Hub de comentários e clique em **terminei**. Isso irá coletar capturar de realidade mista de sua reprodução e os logs de diagnóstico relevantes serão coletados.
-9. Quando terminar.
+8. Se você tiver uma reprodução, poderá clicar em **reproduzir** e reproduzir seus comentários, quando terminar, voltar ao Hub de comentários e clicar em **concluído**. Isso coletará a captura de realidade misturada de sua reprodução e seus logs de diagnóstico relevantes serão coletados.
+9. Você concluiu.

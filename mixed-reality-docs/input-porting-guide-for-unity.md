@@ -1,56 +1,56 @@
 ---
-title: Entrada de portabilidade de guia para Unity
-description: Saiba como manipular a entrada para o Windows Mixed Reality no Unity.
+title: Guia de porta de entrada para Unity
+description: Saiba como lidar com a entrada para a realidade mista do Windows no Unity.
 author: thetuvix
 ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
-keywords: entrada, unity, portabilidade
+keywords: entrada, Unity, portabilidade
 ms.openlocfilehash: 20e8efa09d20b0a9eaa246015d9c185884f9c216
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59590495"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63515488"
 ---
-# <a name="input-porting-guide-for-unity"></a>Entrada de portabilidade de guia para Unity
+# <a name="input-porting-guide-for-unity"></a>Guia de porta de entrada para Unity
 
-Você pode portar sua lógica de entrada para o Windows Mixed Reality usando uma das duas abordagens, APIs Input.GetButton/GetAxis geral do Unity que se estendem por várias plataformas ou o XR específicos do Windows. WSA. APIs de entrada que oferecem dados avançados especificamente para controladores de movimento e HoloLens mãos.
+Você pode portar sua lógica de entrada para a realidade mista do Windows usando uma das duas abordagens, as APIs de entrada geral do Unity e do getbutton/getaxis que se estendem por várias plataformas ou pelo XR específico do Windows. WSA. APIs de entrada que oferecem dados mais ricos especificamente para controladores de movimento e mãos de HoloLens.
 
-## <a name="general-inputgetbuttongetaxis-apis"></a>APIs de Input.GetButton/GetAxis geral
+## <a name="general-inputgetbuttongetaxis-apis"></a>Informações gerais de entrada. getbutton/getaxis
 
-Atualmente, o Unity usa suas APIs Input.GetButton/Input.GetAxis geral para expor a entrada para [o SDK do Oculus](https://docs.unity3d.com/Manual/OculusControllers.html) e [SDK OpenVR](https://docs.unity3d.com/Manual/OpenVRControllers.html). Se seus aplicativos já estiver usando essas APIs para a entrada, este é o caminho mais fácil para dar suporte a controladores de movimento na realidade mista do Windows: você só precisa remapear botões e eixos no Gerenciador de entrada.
+No momento, o Unity usa suas APIs Input. getbutton/Input. getaxis gerais para expor a entrada para [o SDK do Oculus](https://docs.unity3d.com/Manual/OculusControllers.html) e [o SDK do OpenVR](https://docs.unity3d.com/Manual/OpenVRControllers.html). Se seus aplicativos já estiverem usando essas APIs para entrada, este é o caminho mais fácil para dar suporte a controladores de movimento no Windows Mixed Reality: você deve apenas precisar remapear botões e eixos no Gerenciador de entrada.
 
-Para obter mais informações, consulte o [tabela de mapeamento de botão/eixo do Unity](gestures-and-motion-controllers-in-unity.md#unity-buttonaxis-mapping-table) e o [visão geral das APIs do Unity comuns](gestures-and-motion-controllers-in-unity.md#common-unity-apis-inputgetbuttongetaxis).
+Para obter mais informações, consulte a [tabela de mapeamento de botões/eixo do Unity](gestures-and-motion-controllers-in-unity.md#unity-buttonaxis-mapping-table) e a [visão geral das APIs comuns do Unity](gestures-and-motion-controllers-in-unity.md#common-unity-apis-inputgetbuttongetaxis).
 
-## <a name="windows-specific-xrwsainput-apis"></a>XR específicas do Windows. WSA. APIs de entrada
+## <a name="windows-specific-xrwsainput-apis"></a>XR específico do Windows. WSA. APIs de entrada
 
-Se seu aplicativo já compilado lógica personalizada de entrada para cada plataforma, você pode optar por usar as APIs de entrada espaciais específicos do Windows sob a **UnityEngine.XR.WSA.Input** namespace. Isso lhe permite acessar informações adicionais, como precisão de posição ou o tipo de fonte, permitindo que você conte mãos e controladores separados em HoloLens.
+Se seu aplicativo já criar uma lógica de entrada personalizada para cada plataforma, você poderá optar por usar as APIs de entrada espaciais específicas do Windows no namespace **UnityEngine. XR. WSA. Input** . Isso permite que você acesse informações adicionais, como precisão de posição ou tipo de fonte, permitindo que você informe as mãos e os controladores no HoloLens.
 
-Para obter mais informações, consulte o [visão geral das APIs UnityEngine.XR.WSA.Input](gestures-and-motion-controllers-in-unity.md#windows-specific-apis-xrwsainput).
+Para obter mais informações, consulte a [visão geral das APIs UnityEngine. XR. WSA. Input](gestures-and-motion-controllers-in-unity.md#windows-specific-apis-xrwsainput).
 
-## <a name="grip-pose-vs-pointing-pose"></a>Alça pose versus pose apontador
+## <a name="grip-pose-vs-pointing-pose"></a>Segurar pose vs. ponto de apontar
 
-Realidade mista do Windows oferece suporte a controladores de movimento em uma variedade de fatores forma, com o design de cada controlador difere em sua relação entre a posição do usuário mão e natural "encaminhar" direção que aplicativos deve usar para apontando ao renderizar o controlador.
+O Windows Mixed Reality dá suporte a controladores de movimento em uma variedade de fatores forma, sendo que o design de cada controlador difere em sua relação entre a posição da mão do usuário e a direção natural "encaminhar" que os aplicativos devem usar para apontar ao renderizar o controle.
 
-Para melhor representar esses controladores, há dois tipos de poses, que você pode investigar para cada fonte de interação:
+Para representar melhor esses controladores, há dois tipos de poses que você pode investigar para cada fonte de interação:
 
-* O **alça pose**, que representa o local de palma da mão detectada por um HoloLens ou palma mantendo um controlador de animação.
-    * Em fones imersivos em exposição, essa pose é melhor usado para renderizar **mão do usuário** ou **um objeto é mantido em mãos do usuário**, como uma espada ou elétrons.
-    * O **segure posição**: O centroide de palm pressionando o controlador naturalmente, ajustado esquerda ou direita para centralizar a posição dentro a alça.
-    * O **Segure o eixo à direita da orientação**: Quando você abre completamente sua mão para formar uma dedo simples 5 pose, raio que é normal para o palm (para a frente da esquerda palm, com versões anteriores do palm à direita)
-    * O **Segure o eixo de encaminhamento da orientação**: Quando você fecha sua mão parcialmente (como se que mantém o controlador), o raio que aponta "forward" por meio de tubo formado por seus dedos não thumb.
-    * O **segure orientação backup eixo**: O eixo de cima indicado pelas definições de direito e Avançar.
-    * Você pode acessar a alça pose por meio da API de entrada entre fornecedores do Unity, qualquer um dos (**[XR. InputTracking](https://docs.unity3d.com/ScriptReference/XR.InputTracking.html). GetLocalPosition/Rotation**) ou por meio da API do Windows específica (**sourceState.sourcePose.TryGetPosition/Rotation**, solicitando a pose alça).
-* O **ponteiro pose**, que representa a dica do controlador que aponta para a frente.
-    * Essa pose é melhor usado para raycast quando **apontando para a interface do usuário** quando você está renderizando o próprio modelo de controlador.
-    * Atualmente, pose o ponteiro está disponível apenas através da API do Windows específica (**sourceState.sourcePose.TryGetPosition/Rotation**, solicitando a pose ponteiro).
+* A **alça de fixação**, que representa o local da palma de uma mão detectada por um HoloLens ou o Palm que possui um controlador de movimento.
+    * Em headsets de imersão, essa pose é melhor usada para renderizar **a mão do usuário** ou **um objeto mantido na mão do usuário**, como uma gumes ou uma arma.
+    * A **posição da alça**: O Palm centróide ao manter o controlador naturalmente, ajustado para a esquerda ou para a direita para centralizar a posição dentro da alça.
+    * O **eixo direito da orientação de alça**: Quando você abre completamente a mão para formar uma pose plana de 5 dedos, o raio normal para o Palm (para frente do Palm esquerdo, para trás do Palm direito)
+    * O **eixo de avanço da orientação de alça**: Quando você fecha a sua mão parcialmente (como se você mantiver o controlador), o raio que aponta para "encaminhar" por meio do tubo formado por seus dedos não-thumbs.
+    * O **eixo superior da orientação de alça**: O eixo superior implícito pelas definições direita e avançar.
+    * Você pode acessar a alça de pose por meio da API de entrada entre fornecedores do Unity ( **[XR. InputTracking](https://docs.unity3d.com/ScriptReference/XR.InputTracking.html). GetLocalPosition/Rotation**) ou por meio da API específica do Windows (**SourceState. SourcePose. TryGetPosition/Rotation**, solicitando a pose de alça).
+* A **pose do ponteiro**, representando a ponta do controlador apontando para frente.
+    * Essa pose é mais bem usada para Raycast ao apontar para a **interface do usuário** quando você está renderizando o próprio modelo do controlador.
+    * Atualmente, a pose do ponteiro está disponível somente por meio da API específica do Windows (**SourceState. sourcePose. TryGetPosition/Rotation**, solicitando a pose do ponteiro).
 
-Esses representam as coordenadas são expressas em coordenadas de mundo do Unity.
+Essas coordenadas de pose são todas expressas nas coordenadas do mundo do Unity.
 
 ## <a name="see-also"></a>Consulte também
-* [Controladores de movimento](motion-controllers.md)
+* [Controladores de movimentos](motion-controllers.md)
 * [Gestos e controladores de movimento no Unity](gestures-and-motion-controllers-in-unity.md)
-* [UnityEngine.XR.WSA.Input](https://docs.unity3d.com/ScriptReference/XR.WSA.Input.InteractionManager.html)
-* [UnityEngine.XR.InputTracking](https://docs.unity3d.com/ScriptReference/XR.InputTracking.html)
-* [Portabilidade de guias](porting-guides.md)
+* [UnityEngine. XR. WSA. Input](https://docs.unity3d.com/ScriptReference/XR.WSA.Input.InteractionManager.html)
+* [UnityEngine. XR. InputTracking](https://docs.unity3d.com/ScriptReference/XR.InputTracking.html)
+* [Guias de portabilidade](porting-guides.md)

@@ -1,57 +1,57 @@
 ---
-title: Estudo de caso - dimensionamento Datascape em todos os dispositivos com diferentes de desempenho
-description: Este estudo de caso oferece informações sobre como o aplicativo de Datascape para fornecer uma experiência atraente em vários dispositivos com uma variedade de recursos de desempenho com otimização de desenvolvedores da Microsoft.
+title: Estudo de caso-dimensionamento de Datascape em dispositivos com desempenho diferente
+description: Esse estudo de caso oferece informações sobre como os desenvolvedores da Microsoft otimizaram o aplicativo Datascape para fornecer uma experiência atraente nos dispositivos com uma variedade de recursos de desempenho.
 author: danandersson
 ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
-keywords: headset imersivo, estudo de caso de otimização, VR, desempenho
+keywords: Headset de imersão, otimização de desempenho, VR, estudo de caso
 ms.openlocfilehash: 990a5ee6de07b6416e3150a7885220409a9c8d93
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59590974"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63523382"
 ---
-# <a name="case-study---scaling-datascape-across-devices-with-different-performance"></a>Estudo de caso - dimensionamento Datascape em todos os dispositivos com diferentes de desempenho
+# <a name="case-study---scaling-datascape-across-devices-with-different-performance"></a>Estudo de caso-dimensionamento de Datascape em dispositivos com desempenho diferente
 
-Datascape é um aplicativo de realidade mista do Windows desenvolvido internamente na Microsoft em que nos concentramos sobre como exibir dados meteorológicos sobre os dados de terreno. O aplicativo explora as percepções exclusivas que os usuários obtêm da descoberta de dados na realidade mista, envolvendo o usuário com a visualização de dados holographic.
+O Datascape é um aplicativo de realidade mista do Windows desenvolvido internamente na Microsoft, no qual nos concentramos na exibição de dados meteorológicos sobre os dados do terreno. O aplicativo explora os usuários de insights exclusivos que aproveitam a descoberta de dados em realidade misturada ao redor do usuário com a visualização de dados do Holographic.
 
-Para Datascape queríamos uma variedade de plataformas de destino com recursos de hardware diferentes que variam do Microsoft HoloLens para fones imersivos em exposição Windows Mixed Reality e de PCs baseados em inferior para os PCs mais recentes com GPU high-end. O principal desafio era renderizando nossa cena em questão visualmente atraente em dispositivos com recursos gráficos totalmente diferente durante a execução de uma alta taxa de quadros.
+Para o Datascape, queríamos ter como alvo uma variedade de plataformas com diferentes recursos de hardware, desde o Microsoft HoloLens até o Windows Mixed realness headsets e de PCs de baixo consumo até os computadores mais recentes com GPU de ponta. O principal desafio era renderizar nossa cena em uma questão visualmente atraente em dispositivos com recursos gráficos muito diferentes durante a execução em uma taxa de quadros alta.
 
-Este estudo de caso percorrerá o processo e as técnicas usadas para criar alguns dos nossos mais sistemas de uso intenso da GPU, que descrevem os problemas encontrados e como podemos superou.
+Esse estudo de caso examinará o processo e as técnicas usadas para criar alguns de nossos sistemas mais intensivos de GPU, descrevendo os problemas encontrados e como superou-los.
 
-## <a name="transparency-and-overdraw"></a>Transparência e excedente
+## <a name="transparency-and-overdraw"></a>Transparência e sobredesenho
 
-Nosso lutas renderização principal lidam com transparência, como transparência pode ser cara em uma GPU.
+Nosso principal esforço de renderização foi resolvido com transparência, pois a transparência pode ser cara em uma GPU.
 
-Geometria sólida pode ser renderizada de frente para trás ao gravar no buffer de profundidade, interrompendo os pixels futuras localizados por trás desse pixel de ser descartado. Isso impede que oculta pixels executando o sombreador de pixel, acelerando o processo consideravelmente. Se a geometria é classificada de maneira ideal, cada pixel na tela será desenhada apenas uma vez.
+A geometria sólida pode ser renderizada de frente para trás durante a gravação no buffer de profundidade, interrompendo os pixels futuros localizados atrás desse pixel de serem descartados. Isso impede que os pixels ocultos executem o sombreador de pixel, acelerando significativamente o processo. Se a geometria for classificada de forma ideal, cada pixel na tela será desenhado apenas uma vez.
 
-Necessidades de geometria transparente a ser classificada de volta para a frente e se baseia em mistura a saída do sombreador de pixel para o pixel atual na tela. Isso pode resultar em cada pixel na tela que está sendo desenhada para várias vezes por quadro, conhecido como excedente.
+A geometria transparente precisa ser classificada de volta para a frente e se baseia na mesclagem da saída do sombreador de pixel com o pixel atual na tela. Isso pode resultar em cada pixel na tela que está sendo desenhada várias vezes por quadro, chamado de sobreempate.
 
-Para o HoloLens e PCs predominantes, a tela só pode ser preenchida inúmeras vezes, tornando transparente de um problema de renderização.
+Para os computadores HoloLens e mainstream, a tela só pode ser preenchida algumas vezes, tornando o processo transparente de processamento.
 
-## <a name="introduction-to-datascape-scene-components"></a>Introdução aos componentes de cena Datascape
+## <a name="introduction-to-datascape-scene-components"></a>Introdução aos componentes de cena do Datascape
 
-Tivemos três componentes principais de nossa cena; **a interface do usuário, o mapa**, e **o clima**. Sabíamos desde o início que nosso efeitos de clima exigiria GPU sempre foi possível obter, portanto, propositadamente projetamos a interface do usuário e o terreno, de forma que reduziria qualquer excedentes.
+Tínhamos três componentes principais para nossa cena; **a interface do usuário, o mapa**e **o clima**. Sabíamos no início que nossos efeitos meteorológicos exigiriam todo o tempo de GPU que poderia obter, então criamos de forma intencional a interface do usuário e o terreno de uma maneira que reduza qualquer sobreempate.
 
-Retrabalhamos a interface do usuário várias vezes para minimizar a quantidade de excedente produziria. Erramos na lateral da geometria mais complexa em vez de arte transparente sobreposição sobre o outro para componentes como brilhantes visões gerais de botões e o mapa.
+Retrabalhamos a interface do usuário várias vezes para minimizar a quantidade de sobreempates que ela produziria. Nós erramosmos o lado da geometria mais complexa em vez de sobrecarregar arte transparente sobre as outras para componentes como botões brilhantes e visões gerais de mapa.
 
-Para o mapa, usamos um sombreador personalizado que seria retirar os recursos padrão do Unity como sombras e iluminação complexa, substituí-los com um modelo de iluminação simples sun único e um cálculo personalizado neblina. Isso produziu um sombreador de pixel simples e liberar ciclos GPU.
+Para o mapa, usamos um sombreador personalizado que distribuiva recursos padrão do Unity, como sombras e iluminação complexa, substituindo-os por um único modelo simples de iluminação de sol e um cálculo de neblina personalizado. Isso produziu um sombreador de pixel simples e libera ciclos de GPU.
 
-Nós conseguimos obter a interface do usuário e o mapa para renderização no orçamento onde não é necessário todas as alterações a eles dependendo do hardware; No entanto, a visualização de previsão do tempo, em particular a renderização de nuvem, provou para ser um desafio!
+Nós gerenciamos para obter a interface do usuário e o mapa para renderizar no orçamento, onde não precisamos de nenhuma alteração para elas, dependendo do hardware; no entanto, a visualização do clima, em particular, a renderização na nuvem, provou ser mais um desafio!
 
-## <a name="background-on-cloud-data"></a>Em segundo plano nos dados de nuvem
+## <a name="background-on-cloud-data"></a>Plano de fundo em dados de nuvem
 
-Nossos dados de nuvem tiver sido baixados de servidores da NOAA (http://nomads.ncep.noaa.gov/) e veio para nós em três camadas distintas de 2D, cada um com a altura da parte superior e inferior da nuvem, bem como a densidade da nuvem para cada célula da grade. Os dados obteve processados em uma textura de informações da nuvem em que cada componente foi armazenado no componente vermelho, verde e azul da textura para facilitar o acesso na GPU.
+Nossos dados de nuvem foram baixados de servidores http://nomads.ncep.noaa.gov/) NOAA (e nos vieram em três camadas 2D distintas, cada uma com a altura superior e inferior da nuvem, bem como a densidade da nuvem para cada célula da grade. Os dados foram processados em uma textura de informações de nuvem, em que cada componente foi armazenado no componente vermelho, verde e azul da textura para facilitar o acesso na GPU.
 
 ## <a name="geometry-clouds"></a>Nuvens de geometria
 
-Para garantir que nossos computadores baseados em inferior possa renderizar nossas nuvens, decidimos que começar com uma abordagem que usaria a geometria sólida para minimizar o excedente.
+Para garantir que nossos computadores com menor capacidade possam renderizar nossas nuvens, decidimos começar com uma abordagem que usaria uma geometria sólida para minimizar o sobreempate.
 
-Primeiro, tentamos produzindo nuvens por meio da geração de uma malha de heightmap sólida para cada camada usando o raio da textura de informações de nuvem por vértice para gerar a forma. Usamos um sombreador de geometria para produzir os vértices na parte superior e a parte inferior da nuvem gera formas de nuvem sólida. Usamos o valor de densidade de textura para a nuvem de cores com cores mais escuras para mais densas nuvens.
+Primeiro, tentamos produzir nuvens gerando uma malha heightmap sólida para cada camada usando o raio da textura de informações de nuvem por vértice para gerar a forma. Usamos um sombreador Geometry para produzir os vértices na parte superior e a parte inferior da nuvem gerando formas de nuvem sólidas. Usamos o valor de densidade da textura para colorir a nuvem com cores mais escuras para nuvens mais densas.
 
-**Sombreador para criar vértices:**
+**Sombreador para criar os vértices:**
 
 ```
 v2g vert (appdata v)
@@ -98,27 +98,27 @@ fixed4 frag (g2f i) : SV_Target
 }
 ```
 
-Apresentamos um padrão de ruído pequeno para obter mais detalhes sobre os dados reais. Para produzir bordas de nuvem redonda, podemos recortada os pixels no sombreador de pixel quando o valor de raio interpolada atinge um limite para descartar os valores de quase zero.
+Apresentamos um pequeno padrão de ruído para obter mais detalhes sobre os dados reais. Para produzir bordas de nuvem arredondadas, cortamos os pixels no sombreador de pixel quando o valor de raio interpolado atinge um limite para descartar valores quase zero.
 
 ![Nuvens de geometria](images/datascape-geometry-clouds-700px.jpg)
 
-Como as nuvens são geometria sólida, eles podem ser processados antes do terreno para ocultar qualquer pixels mapa caro abaixo para melhorar ainda mais a taxa de quadros. Essa solução foi executado bem em todas as placas gráficas da especificação de min placas gráficas high-end, bem como em HoloLens, devido à abordagem de processamento a geometria sólida.
+Como as nuvens são uma geometria sólida, elas podem ser renderizadas antes que o terreno oculte os pixels de mapa caros abaixo para melhorar ainda mais a taxa de quadros. Essa solução foi executada bem em todas as placas gráficas de min-spec a placas gráficas de ponta, bem como no HoloLens, devido à abordagem de renderização de geometria sólida.
 
-## <a name="solid-particle-clouds"></a>Nuvens de partícula sólida
+## <a name="solid-particle-clouds"></a>Nuvens de partículas sólidas
 
-Agora tínhamos uma solução de backup que produziu uma representação decente de nossos dados de nuvem, mas foi um pouco lackluster no fator de "wow" e não transmitem a sensação volumétricas que queríamos para nosso máquinas high-end.
+Agora tivemos uma solução de backup que produzia uma representação razoável de nossos dados em nuvem, mas era um pouco Lackluster no fator "Wow" e não transmitiu a sensação de volumétricos que queríamos para nossos computadores de alto nível.
 
-Nossa próxima etapa foi criando as nuvens, que representa-los com aproximadamente 100.000 partículas para produzir uma aparência mais orgânica e volumétricas.
+Nossa próxima etapa foi criar as nuvens, representando-as com aproximadamente 100.000 partículas para produzir uma aparência mais orgânica e volumétricos.
 
-Se partículas permanecem estável e classificar de frente para trás, podemos ainda podem se beneficiar do buffer de profundidade traseira dos pixels por trás de partículas anteriormente renderizadas, reduzindo a excedentes. Além disso, com uma solução baseada em partículas, podemos alterar a quantidade de partículas usado para hardware de destino diferente. No entanto, todos os pixels ainda precisam ser testado em profundidade, que resulta em alguma sobrecarga adicional.
+Se as partículas permanecerem sólidas e classificarem de volta para trás, ainda podemos nos beneficiar com a remoção do buffer de profundidade dos pixels por trás das partículas renderizadas anteriormente, reduzindo o sobreempate. Além disso, com uma solução baseada em partículas, podemos alterar a quantidade de partículas usadas para direcionar diferentes hardwares. No entanto, todos os pixels ainda precisam ser testados com profundidade, o que resulta em alguma sobrecarga adicional.
 
-Primeiro, criamos posições de partícula em torno do ponto central da experiência na inicialização. Podemos distribuído as partículas mais densamente em torno do centro e, portanto, menos na distância. Podemos previamente classificados todas as partículas no centro para trás de modo que as partículas mais próximas renderização pela primeira vez.
+Primeiro, criamos posições de partícula em todo o ponto central da experiência na inicialização. Distribuímos as partículas mais densas em todo o centro e menos para a distância. Nós classificamos previamente todas as partículas do centro para trás para que as partículas mais próximas sejam renderizadas primeiro.
 
-A textura de informações da nuvem para posicionar cada partícula em uma altura correta e a cor de acordo com a densidade de exemplo seria um sombreador de cálculo.
+Um sombreador de computação deve obter uma amostra da textura de informações de nuvem para posicionar cada partícula em uma altura correta e Colorá-la com base na densidade.
 
-Usamos *DrawProcedural* renderizar um quad por partículas, permitindo que os dados de partícula permanecer na GPU em todos os tempos.
+Usamos *DrawProcedural* para renderizar um quad por partícula, permitindo que os dados de partícula permaneçam sempre na GPU.
 
-Cada partícula continha uma altura e um raio. A altura foi com base nos dados de nuvem exemplificados a textura de informações de nuvem e o raio foi com base na distribuição inicial onde ele será calculado para armazenar a distância horizontal para seu vizinho mais próximo. Os quadrados usaria esses dados para orientar o próprio angular pela altura para que quando os usuários examiná-la horizontalmente, a altura seria mostrada e quando os usuários olhar de cima para baixo, a área entre seus vizinhos seria abordada.
+Cada partícula continha uma altura e um raio. A altura foi baseada nos dados de nuvem amostrados da textura de informações de nuvem, e o raio era baseado na distribuição inicial em que seria calculado para armazenar a distância horizontal para o vizinho mais próximo. Os quatro processadores usariam esses dados para se orientarem em ângulo pela altura, de modo que, quando os usuários olharem isso horizontalmente, a altura seja mostrada e, quando os usuários olhassem de cima para baixo, a área entre seus vizinhos seria coberta.
 
 ![Forma de partícula](images/particle-shape-700px.png)
 
@@ -160,23 +160,23 @@ v2f vert(uint id : SV_VertexID, uint inst : SV_InstanceID)
 }
 ```
 
-Como podemos classificar a partículas frente para trás e ainda, usamos um sombreador de estilo sólido para pixels transparentes do clipe (não blend), essa técnica trata uma quantidade surpreendente de partículas, evitando a dispendioso desenho em excesso, mesmo em computadores baseados em inferior.
+Como classificamos as partículas front-to-back e ainda usamos um sombreador de estilo sólido para recortar (não misturar) pixels transparentes, essa técnica trata de uma quantidade surpreendente de partículas, evitando um dispendioso excesso de empates mesmo nos computadores com menor capacidade.
 
-## <a name="transparent-particle-clouds"></a>Nuvens de partícula transparente
+## <a name="transparent-particle-clouds"></a>Nuvens de partículas transparentes
 
-As partículas sólidas fornecido uma boa ideia orgânica na forma de nuvens, mas ainda precisava algo para vender o fluffiness de nuvens. Decidimos tentar uma solução personalizada para os cartões de gráficos avançados, onde podemos apresentar transparência.
+As partículas sólidas forneciam uma boa sensação orgânica à forma das nuvens, mas ainda precisavam de algo para vender o fluffiness de nuvens. Decidimos tentar uma solução personalizada para as placas gráficas de alto nível em que podemos introduzir transparência.
 
-Para fazer isso simplesmente alternado a ordem de classificação inicial das partículas e alterou o sombreador para usar o alfa de texturas.
+Para fazer isso, simplesmente alternamos a ordem de classificação inicial das partículas e alteramos o sombreador para usar as texturas alfa.
 
-![A Fluffy nuvens](images/fluffy-clouds-700px.jpg)
+![Nuvens Fluffys](images/fluffy-clouds-700px.jpg)
 
-Pareciam ótimo, mas provou para ser muito pesada para até mesmo as máquinas mais difíceis, pois resultaria no processamento de cada pixel na tela de centenas de vezes!
+Parece ótimo, mas provou ser muito pesado para até mesmo as máquinas mais difíceis, pois isso resultaria na renderização de cada pixel na tela centenas de vezes!
 
-## <a name="render-off-screen-with-lower-resolution"></a>Processar fora da tela com resolução mais baixa
+## <a name="render-off-screen-with-lower-resolution"></a>Renderizar fora da tela com resolução mais baixa
 
-Para reduzir o número de pixels renderizados por nuvens, começamos a renderização-los no buffer de resolução de um trimestre (em comparação comparada a tela) e ampliar o resultado final faça backup para a tela depois que todas as partículas tivessem sido desenhadas. Isso nos deu aproximadamente um aumento de velocidade 4 x, mas veio com algumas limitações.
+Para reduzir o número de pixels processados pelas nuvens, começamos a renderizá-los em um buffer de resolução de trimestre (em comparação à tela) e esticar o resultado final de volta para a tela depois que todas as partículas tivessem sido desenhadas. Isso nos deu aproximadamente um 4x aumento de velocidade, mas vem com algumas advertências.
 
-**Código para a renderização de fora da tela:**
+**Código para renderização fora da tela:**
 
 ```
 cloudBlendingCommand = new CommandBuffer();
@@ -198,41 +198,41 @@ cloudCamera.targetTexture = null;
 cloudBlendingCommand.Blit(currentCloudTexture, new RenderTargetIdentifier(BuiltinRenderTextureType.CurrentActive), blitMaterial);
 ```
 
-Primeiro, ao renderizar em um buffer fora da tela, perdemos todas as informações de profundidade da cena nosso principal, resultando em partículas por trás de montanhas renderização na parte superior a montanha.
+Primeiro, ao renderizar em um buffer fora da tela, perdemos todas as informações de profundidade de nossa cena principal, resultando em partículas por trás da renderização de montanhas sobre a montanha.
 
-Em segundo lugar, alongando o buffer também introduziu artefatos nas bordas do nosso nuvens em que a alteração de resolução foi perceptível. As duas próximas seções falam sobre como resolvemos esses problemas.
+Em segundo lugar, o alongamento do buffer também introduziu artefatos nas bordas de nossas nuvens em que a alteração da resolução foi perceptível. As próximas duas seções falam sobre como resolvemos esses problemas.
 
 ## <a name="particle-depth-buffer"></a>Buffer de profundidade de partícula
 
-Para tornar as partículas coexiste com a geometria do mundo em que um objeto ou mountain poderia englobar partículas por trás dele, preenchemos o buffer fora da tela com um buffer de profundidade que contém a geometria da cena principal. Para produzir esse buffer de profundidade, criamos uma segunda câmera, renderizar apenas a geometria sólida e a profundidade da cena.
+Para fazer com que as partículas coexistam com a geometria mundial em que uma montanha ou um objeto possa cobrir partículas por trás dela, populamos o buffer fora da tela com um buffer de profundidade que contém a geometria da cena principal. Para produzir esse buffer de profundidade, criamos uma segunda câmera, Renderizando apenas a geometria sólida e a profundidade da cena.
 
-Em seguida, usamos a nova textura no sombreador de pixel das nuvens para occlude pixels. Nós usamos a mesma textura para calcular a distância à geometria por trás de um pixel de nuvem. Usando essa distância e aplicá-lo para o alfa do pixel, podemos agora tinha o efeito de nuvens desaparecimento conforme eles chegarem perto o terreno, removendo qualquer cortes onde se encontram partículas e terreno.
+Em seguida, usamos a nova textura no sombreador de pixel das nuvens para occlude pixels. Usamos a mesma textura para calcular a distância para a geometria por trás de um pixel de nuvem. Ao usar essa distância e aplicá-la ao alfa do pixel, agora tínhamos o efeito das nuvens desaparecendo à medida que elas ficam perto do terreno, removendo qualquer recorte fixo onde as partículas e o terreno se encontram.
 
-![Nuvens em um terreno](images/clouds-blended-to-terrain-700px.jpg)
+![Nuvens mescladas no terreno](images/clouds-blended-to-terrain-700px.jpg)
 
-## <a name="sharpening-the-edges"></a>Nitidez bordas
+## <a name="sharpening-the-edges"></a>Ajustando as bordas
 
-As nuvens alongados para cima tinha quase idênticas para as nuvens de tamanho normal no centro das partículas ou onde eles sobrepostas, mas mostraram alguns artefatos nas bordas de nuvem. Caso contrário, bordas nítidas apareceria desfocadas e efeitos de alias foram introduzidos quando movido a câmera.
+As nuvens ampliadas se parecevam quase idênticas às nuvens de tamanho normal no centro das partículas ou nas quais elas se sobrepostam, mas mostraram alguns artefatos nas bordas da nuvem. Caso contrário, as bordas nítidas aparecerão borradas e os efeitos de alias foram introduzidos quando a câmera fosse movida.
 
-Solucionamos essa questão, executando um sombreador simple no buffer de fora da tela para determinar em que grandes alterações ocorreram por outro lado (1). Colocamos os pixels com grandes alterações em um novo buffer de estêncil (2). Em seguida, usamos o buffer de estêncil máscara essas áreas de alto contraste ao aplicar o buffer fora da tela na tela, resultando em falhas em e relacionado as nuvens (3).
+Resolvemos isso executando um sombreador simples no buffer fora da tela para determinar onde ocorreram grandes alterações (1). Colocamos os pixels com grandes alterações em um novo buffer de estêncil (2). Em seguida, usamos o buffer de estêncil para mascarar essas áreas de alto contraste ao aplicar o buffer fora da tela de volta à tela, resultando em buracos em e em todas as nuvens (3).
 
-Podemos então processado todas as partículas novamente no modo de tela inteira, mas este tempo usado para mascarar tudo o que o buffer de estêncil, mas as bordas, resultando em um conjunto mínimo de pixels tocadas (4). Uma vez que o buffer de comando já foi criado para as partículas, simplesmente tivemos para renderizá-lo novamente para a nova câmera.
+Em seguida, renderizamos todas as partículas novamente no modo de tela inteira, mas desta vez usamos o buffer de estêncil para mascarar tudo, exceto as bordas, resultando em um conjunto mínimo de pixels tocadas (4). Como o buffer de comando já foi criado para as partículas, simplesmente tivemos que renderizá-lo novamente na nova câmera.
 
-![Progressão de renderização de bordas de nuvem](images/cloud-steps-1-4-700px.jpg)
+![Progressão do processamento de bordas de nuvem](images/cloud-steps-1-4-700px.jpg)
 
-O resultado final era bordas nítidas com seções barato center das nuvens.
+O resultado final foi bordas nítidas com seções do centro barato das nuvens.
 
-Embora isso era muito mais rápido que a renderização de tela cheia de todas as partículas de, há ainda um custo associado com o teste de um pixel no buffer de estêncil, portanto, uma grande quantidade de excedente ainda veio com um custo.
+Embora isso fosse muito mais rápido do que renderizar todas as partículas em tela inteira, ainda há um custo associado ao teste de um pixel em relação ao buffer do estêncil, de modo que uma grande quantidade de sobreempates ainda veio com um custo.
 
 ## <a name="culling-particles"></a>Remoção de partículas
 
-Para nosso efeito de vento, geramos faixas de triângulo longa em um sombreador de cálculo, a criação de muitos wisps de vento no mundo. Enquanto o efeito de vento não estava pesado na taxa de preenchimento devido a faixas magro gerado, ele produziu várias centenas de milhares de vértices, resultando em uma carga pesada para o sombreador de vértices.
+Para nosso efeito de vento, geramos extensões de triângulo longos em um sombreador de computação, criando muitos WISPs de vento no mundo. Embora o efeito de vento não tenha sido pesado na taxa de preenchimento devido a faixas skinnis geradas, ele produziu muitas centenas de milhares de vértices, resultando em uma carga pesada para o sombreador de vértice.
 
-Introduzimos o acréscimo de buffers no sombreador de cálculo para alimentar um subconjunto das faixas vento a ser desenhado. Com alguma exibição simples frustum escolhidos lógica no sombreador de cálculo, poderíamos determinar se uma faixa estava fora do modo de exibição da câmera e impedi-lo de que está sendo adicionada ao buffer de envio por push. Isso reduziu a quantidade de faixas significativamente, liberando alguns ciclos necessários na GPU.
+Introduzimos buffers de acréscimo no sombreador de computação para alimentar um subconjunto das faixas de vento a serem desenhadas. Com alguns frustum de exibição simples de seleção de lógica no sombreador de computação, poderíamos determinar se uma tira estava fora do modo de exibição de câmera e impedir que ela fosse adicionada ao buffer de envio por push. Isso reduziu significativamente a quantidade de faixas, liberando alguns ciclos necessários na GPU.
 
 **Código que demonstra um buffer de acréscimo:**
 
-*Sombreador de cálculo:*
+*Sombreador de computação:*
 
 ```
 AppendStructuredBuffer<int> culledParticleIdx;
@@ -241,7 +241,7 @@ if (show)
     culledParticleIdx.Append(id.x);
 ```
 
-*C#código:*
+*C#auto-completar*
 
 ```
 protected void Awake() 
@@ -267,56 +267,56 @@ protected void Update()
 }
 ```
 
-Tentamos usando a mesma técnica sobre as partículas de nuvem, onde podemos seria analisá-los sobre o sombreador de cálculo e apenas enviar por push as partículas visíveis a ser renderizado. Essa técnica, na verdade, não salvou nos muito na GPU, já que o maior afunilamento foi os pixels de quantidade renderizados na tela e não o custo de calcular os vértices.
+Tentamos usar a mesma técnica nas partículas de nuvem, em que poderíamos alterá-las no sombreador de computação e apenas enviar por push as partículas visíveis a serem renderizadas. Na verdade, essa técnica não nos salvou muito na GPU, uma vez que o maior afunilamento era a quantidade de pixels renderizados na tela, e não o custo de calcular os vértices.
 
-O outro problema com essa técnica foi que o buffer de acréscimo é populado em ordem aleatória devido à sua natureza em paralelo de partículas, fazendo com que as partículas classificadas seja não classificada, resultando em cintilantes partículas de nuvem de computação.
+O outro problema dessa técnica era que o buffer de acréscimo foi populado em ordem aleatória devido à sua natureza paralelizada de computação das partículas, fazendo com que as partículas classificadas não sejam classificadas, resultando na cintilação de partículas de nuvem.
 
-Há técnicas para classificar o buffer de envio por push, mas a quantidade limitada de ganho de desempenho, temos fora traseira partículas provavelmente seria deslocamento com uma classificação adicional, portanto, decidimos não buscar essa otimização.
+Há técnicas para classificar o buffer de push, mas a quantidade limitada de acertos de desempenho que acabamos de escolher partículas provavelmente seria compensada com uma classificação adicional, portanto, decidimos não buscar essa otimização.
 
 ## <a name="adaptive-rendering"></a>Renderização adaptável
 
-Para garantir uma taxa de quadros estável em um aplicativo com diferentes condições, como um nublado vs de renderização uma visão clara, introduzimos renderização adaptável ao nosso aplicativo.
+Para garantir uma taxa de quadros constante em um aplicativo com condições de renderização diferentes, como uma nuvem versus uma exibição clara, introduzimos a renderização adaptável em nosso aplicativo.
 
-A primeira etapa de renderização adaptável é medir a GPU. Fizemos isso inserindo o código personalizado no buffer de comandos GPU no início e no final de um quadro renderizado, capturando ambos esquerda e direita olho tempo da tela.
+A primeira etapa da renderização adaptável é medir a GPU. Fizemos isso inserindo código personalizado no buffer de comando da GPU no início e no final de um quadro renderizado, capturando o horário da tela de olho à esquerda e à direita.
 
-Medindo o tempo gasto de renderização e compará-lo a nossa desejado-taxa de atualização, temos uma ideia de quão próximo precisássemos descarte de quadros.
+Medindo o tempo gasto renderizando e comparando-o à nossa taxa de atualização desejada, temos uma noção de como devemos descartar os quadros.
 
-Quando perto de descarte de quadros, podemos adaptar nosso processamento para torná-lo mais rapidamente. Uma maneira simples de se adaptar está mudando o tamanho do visor da tela, exigindo menos pixels a serem renderizado.
+Ao fechar os quadros, adaptamos nossa renderização para torná-lo mais rápido. Uma maneira simples de adaptar-se é alterar o tamanho do visor da tela, exigindo menos pixels para ser renderizado.
 
-Usando *UnityEngine.XR.XRSettings.renderViewportScale* o sistema reduz o visor do destino e estende-se automaticamente o resultado para a tela de ajuste. Uma pequena alteração no dimensionamento é quase imperceptível no geometria mundial, e um fator de escala de 0,7 requer metade da quantidade de pixels a serem renderizados.
+Usando *UnityEngine. XR. XRSettings. renderViewportScale* , o sistema reduz o visor de destino e alonga automaticamente o resultado de volta para o ajuste à tela. Uma pequena alteração na escala é mal perceptível na geometria mundial, e um fator de escala de 0,7 requer metade da quantidade de pixels a serem renderizados.
 
-![escala de 70%, metade dos pixels](images/datascape-scaling-700px.jpg)
+![70% de escala, metade dos pixels](images/datascape-scaling-700px.jpg)
 
-Quando Detectamos que estamos prestes a descartar quadros, podemos reduzir a escala por um número fixo e aumentar-o novamente quando estamos executando novamente rápido o suficiente.
+Quando detectamos que estamos prestes a descartar os quadros, reduzimos a escala por um número fixo e o aumentamos quando estamos executando rápido o suficiente novamente.
 
-Embora, decidimos qual técnica de nuvem para usar com base em elementos gráficos, recursos do hardware na inicialização, é possível baseá-la em dados da medida GPU para impedir que o sistema permaneça em baixa resolução por um longo tempo, mas isso é algo que não tínhamos tempo  para explorar o Datascape.
+Embora decidimos qual técnica de nuvem usar com base nos recursos gráficos do hardware na inicialização, é possível baseá-la nos dados da medição da GPU para impedir que o sistema permaneça em baixa resolução por um longo tempo, mas isso é algo que não temos tempo  para explorar em Datascape.
 
-## <a name="final-thoughts"></a>Considerações finais
+## <a name="final-thoughts"></a>Pensamentos finais
 
-Direcionamento de uma variedade de hardware é um desafio e exige algum planejamento.
+O direcionamento a uma variedade de hardware é desafiador e requer algum planejamento.
 
-É recomendável que você comece a direcionar computadores baseados em inferior para se familiarizar com o espaço do problema e desenvolver uma solução de backup que será executado em todos os seus computadores. Crie sua solução com taxa de preenchimento em mente, já que pixels será seu recurso mais precioso. Geometria sólida de destino de transparência.
+Recomendamos que você comece a direcionar computadores com menor capacidade para se familiarizar com o espaço do problema e desenvolver uma solução de backup que será executada em todos os seus computadores. Projete sua solução com a taxa de preenchimento em mente, pois os pixels serão seus recursos mais preciosos. Direcionar a geometria sólida sobre transparência.
 
-Com uma solução de backup, você pode iniciar, em seguida, disposição em camadas em mais de complexidade para máquinas de high-end ou talvez apenas aprimorar a resolução de sua solução de backup.
+Com uma solução de backup, você pode iniciar a disposição em camadas em mais complexidade para máquinas de alto nível ou talvez apenas aprimorar a resolução da solução de backup.
 
-Design para os piores cenários e talvez considere usando renderização adaptável para situações pesadas.
+Design para cenários de pior caso e talvez considere o uso de processamento adaptável para situações pesadas.
 
 ## <a name="about-the-authors"></a>Sobre os autores
 
 <table style="border:0">
 <tr>
 <td style="border:0" width="60px"><img alt="Picture of Robert Ferrese" width="60" height="60" src="images/robert-ferrese-60px.jpg"></td>
-<td style="border:0"><b>Robert Ferrese</b><br>Engenheiro de software @Microsoft</td>
+<td style="border:0"><b>Robert Ferrese</b><br>Engenheiro de software@Microsoft</td>
 </tr>
 <tr>
 <td style="border:0" width="60px"><img alt="Picture of Dan Andersson" width="60" height="60" src="images/dan-andersson-60px.jpg"></td>
-<td style="border:0"><b>Dan Andersson</b><br>Engenheiro de software @Microsoft</td>
+<td style="border:0"><b>Dan Andersson</b><br>Engenheiro de software@Microsoft</td>
 </tr>
 </table>
 
 
 ## <a name="see-also"></a>Consulte também
-* [Noções básicas sobre desempenho para realidade misturada](understanding-performance-for-mixed-reality.md)
-* [Recomendações de desempenho para Unity](performance-recommendations-for-unity.md)
+* [Entendendo o desempenho da realidade misturada](understanding-performance-for-mixed-reality.md)
+* [Recomendações de desempenho para o Unity](performance-recommendations-for-unity.md)
 
  

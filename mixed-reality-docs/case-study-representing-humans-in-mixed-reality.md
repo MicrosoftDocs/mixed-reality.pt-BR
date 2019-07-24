@@ -1,83 +1,83 @@
 ---
-title: Estudo de caso - que representa os seres humanos, na realidade mista
-description: Que tipo de oportunidades surgem quando estamos apenas não é possível criar elementos fantásticos, mas utilizar as capturas mais realistas de ambientes, objetos e as pessoas na realidade mista?
+title: Estudo de caso – representando seres humanos em realidade misturada
+description: Que tipo de oportunidades surge quando não podemos criar apenas elementos fantásticos, mas utilizam as capturas mais realistas de ambientes, objetos e pessoas na realidade misturada?
 author: mavitazk
 ms.author: mavitazk
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Windows Mixed Reality, seres humanos, avatar, misto captura realidade, o vídeo volumétricas
+keywords: Windows Mixed Reality, seres humanos, Avatar, captura de realidade misturada, vídeo volumétricos
 ms.openlocfilehash: 35dced220d4e76cfc92ec17c0b88c1576eced403
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59590494"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63527152"
 ---
-# <a name="case-study---representing-humans-in-mixed-reality"></a>Estudo de caso - que representa os seres humanos, na realidade mista
+# <a name="case-study---representing-humans-in-mixed-reality"></a>Estudo de caso – representando seres humanos em realidade misturada
 
-James Turrell projeta com luz. Entrar em seu trabalho Desfoca de um senso de profundidade e o foco. Paredes parecerem ambos fechar e infinito, brilho fornece a maneira de sombras. Percepções desconhecidas projetadas por balanceamento cuidadosamente a cor e a difusão da luz. [Turrell descreve esses sensations](http://www.sculpture.org/documents/scmag02/nov02/turrell/turrell.shtml) como *'está se sentindo com seus olhos'*, uma maneira de estender uma é entender da realidade. Mundos fantásticos, como a aqueles Turrell imagina, são ferramentas poderosas para explorar nossos sentidos, não ao contrário de ambientes de imersão de realidade misturada hoje mesmo.
+James Turrell projeta com leve. A depuração em seu trabalho Desfoca uma noção de profundidade e foco. As paredes parecem tanto fechadas quanto infinitas, o brilho dá uma maneira de sombras. Percepções desconhecidas projetadas balanceando cuidadosamente a cor e a difusão da luz. [Turrell descreve esses Sensations](http://www.sculpture.org/documents/scmag02/nov02/turrell/turrell.shtml) como *"sensação com seus olhos"* , uma maneira de estender uma compreensão de realidade. Os mundos fantásticos, como aqueles Turrells, são ferramentas poderosas para explorar nossos sentidos, não diferentemente dos ambientes de imersão de realidade misturada hoje em dia.
 
-![Todo o Out - James Turrell (1998)](images/wide-out-james-turrell.jpg)
+![Wide out-James Turrell (1998)](images/wide-out-james-turrell.jpg)
 
-## <a name="how-do-you-represent-complex-real-world-environments-in-mixed-reality"></a>Como você representar ambientes complexos do mundo real na realidade mista?
+## <a name="how-do-you-represent-complex-real-world-environments-in-mixed-reality"></a>Como você representa ambientes do mundo real complexos em realidade misturada?
 
-Torna o trabalho do Turrell representando em uma experiência de imersão para um desafio interessante. Iluminação, escala e áudio espacial apresentam oportunidades para representar seu trabalho. Enquanto o anexo 's Geométrico arredores exigiria modelagem 3D relativamente simple, eles são secundários para o foco do artista: impacto da luz nos sentidos.
+Representar o trabalho de Turrell em uma experiência de imersão faz um desafio convincente. A iluminação, a escala e o áudio espacial apresentam oportunidades para representar seu trabalho. Embora os arredores geométricos do anexo exijam uma modelagem 3D relativamente simples, eles são secundários ao foco do artista: o impacto da luz nos sentidos.
 
-Minimalism de gritante, surreal do Turrell é a marca de seu trabalho, mas e se quiséssemos representar um anexo com materiais mais complexos na realidade mista?
+Stark da Turrell, surreal o mínimo é o diferencial de seu trabalho, mas e se quiséssemos representar um anexo com materiais mais complexos na realidade misturada?
 
-![Bang - Ai Weiwei (2013)](images/bang-ai-weiwie.jpg)
+![Bang-ia Weiwei (2013)](images/bang-ai-weiwie.jpg)
 
-Em 2013, o artista Ai Weiwei divulgou [uma obra de arte tangling](http://www.designboom.com/art/ai-weiwei-bang-installation-at-venice-art-biennale-2013/) apresentando 886 stools estilo antigo no Biennale Varsóvia. Cada stool madeira veio de uma época em que a habilidade de chinês foi muito valorizada, onde esses stools seriam foram passados para baixo entre gerações. Os stools em si — as complexidades de madeira, a precisão de peças, seu posicionamento cuidado — são essenciais para comentários do Ai na cultura modernos.
+Em 2013, o artista ia Weiwei revelou [um trabalho de arte tangling](http://www.designboom.com/art/ai-weiwei-bang-installation-at-venice-art-biennale-2013/) com 886 stools antigo Venice Biennale. Cada Stool madeira veio de uma era onde o chinês habilidade era muito valorizado, onde essas stools teriam sido passadas entre gerações. O próprio stools – as complexidades da madeira, a precisão das peças, seu posicionamento cuidadoso — são fundamentais para os comentários do ia sobre a cultura moderna.
 
-Os estilo antigo stools entregar a mensagem do artista por meio de sua autenticidade. Sua representação realista é essencial para a experiência, criando um desafio técnico: Sculpting cada um dos 886 stools manualmente seria extremamente exaustiva e caro. Quanto tempo levaria para o modelo e a posição? Como você poderia manter a autenticidade do material? Recriar esses objetos a partir do zero torna-se, em muitos aspectos, uma interpretação da arte final em si. Como você pode preservar a intenção do artista?
+A stools de estilo antigo entrega a mensagem do artista por meio de sua autenticidade. Sua representação realista é essencial para a experiência, criando um desafio técnico: Sculpting cada uma das 886 stoolss por mão seria imensamente exaustiva e cara. Quanto tempo levaria para modelar e posicionar? Como você manteria a autenticidade do material? A recriação desses objetos do zero se torna, de várias maneiras, uma interpretação do trabalho artístico em si. Como você pode preservar a intenção do artista?
 
 ## <a name="methods-of-capturing-mixed-reality-assets"></a>Métodos de captura de ativos de realidade misturada
 
-A alternativa para criar algo a partir do zero captura a situação real. Por meio de um conjunto de métodos de captura nunca avançando, podemos desenvolver autênticas representações de cada um dos tipos de ativo core encontrados na realidade mista (ambientes, objetos e as pessoas).
+A alternativa para criar algo a partir do zero é capturar a coisa real. Por meio de um conjunto de métodos de captura em constante progresso, podemos desenvolver representações autênticas de cada um dos principais tipos de ativos encontrados em realidade misturada (ambientes, objetos e pessoas).
 
-O intervalo de categorias amplas de vídeo 2D bem estabelecido para as formas mais recentes de vídeo volumétricas. No caso de anexo do Ai Weiwei, verificação (geralmente referenciado por sua técnica fundamental, photogrammetry) poderia ser utilizada durante a criação de um anexo, verificação de cada uma das stools em si. captura de fotos e vídeos de 360° é outro método para virtualizar a experiência de utilizar uma câmera onidirecionais de alta qualidade posicionada em todo o anexo. Com essas técnicas, começa a entender o senso de escala, o ideal é que com detalhes suficientes para ver a habilidade do cada parte. Tudo isso enquanto existente em um formato digital que permite novos vistas e perspectivas não possível em realidade.
+As categorias amplas variam desde o vídeo 2D bem estabelecido até as formas mais recentes de vídeo volumétricos. No caso do anexo do ia Weiwei, a verificação (frequentemente mencionada por sua técnica fundamental, Photogrammetry) poderia ser empregada durante a criação do anexo, verificando cada um dos stools em si. 360 ° foto e captura de vídeo é outro método para virtualizar a experiência utilizando uma câmera de alta qualidade de Omni-direcional posicionada em todo o anexo. Com essas técnicas, uma começa a entender o sentido da escala, idealmente com detalhes suficientes para ver a habilidade de cada parte. Tudo isso já existente em um formato digital que permite novas vista e perspectivas não possíveis na realidade.
 
-![2D para vídeo Volumétricos](images/2d-to-volumetric-video.png)
+![Vídeo 2D para volumétricos](images/2d-to-volumetric-video.png)
 
-Que tipo de oportunidades surgem quando estamos apenas não é possível criar elementos fantásticos, mas utilizar as capturas mais realistas de ambientes, objetos e as pessoas na realidade mista? Explorando a sobreposição entre essas iluminam de ajuda de métodos que tomará a mídia.
+Que tipo de oportunidades surge quando não podemos criar apenas elementos fantásticos, mas utilizam as capturas mais realistas de ambientes, objetos e pessoas na realidade misturada? Explorar a sobreposição entre esses métodos ajuda a iluminar onde o meio é a ponta.
 
-Para ambientes e objetos, software de geração de imagens de 360° está evoluindo para incluir elementos de photogrammetry. Isolando as informações de profundidade de cenas, advanced 360° vídeos ajudar a aliviar a sensação de ter sua cabeça presa em um peixeiro ao procurar em torno de uma cena virtual.
+Para ambientes e objetos, 360 ° software de geração de imagens está evoluindo para incluir elementos de Photogrammetry. Isolar informações de profundidade de cenas, vídeos avançados de 360 ° ajudam a aliviar a sensação de que sua cabeça se presa em um Fishbowl ao examinar uma cena virtual.
 
-Para as pessoas, novos métodos estão surgindo que combinar e estendem a verificação e captura do motion: Captura de movimento foi fundamental para trazer o movimento humano detalhado para efeitos visuais e animação da caracteres, enquanto a verificação avançou para capturar detalhadas visuais humanas, como faces e prático. Com os avanços na tecnologia de renderização, um novo método chamado vídeo volumétricos compila desativar essas técnicas, combinando visual e captura informações de profundidade, para criar a próxima geração de 3D humana.
+Para pessoas, novos métodos estão surgindo que combinam e estendem a captura e a verificação de movimento: A captura de movimento tem sido fundamental para trazer a movimentação humana detalhada para efeitos visuais e Cinematic caracteres, enquanto a verificação tem avançado para capturar visuais humanos detalhados, como rostos e mãos. Com avanços na tecnologia de renderização, um novo método chamado volumétricos Video compila essas técnicas, combinando informações visuais e de profundidade, para criar a próxima geração de capturas humanas 3D.
 
-## <a name="volumetric-video-and-the-pursuit-of-authentic-human-capture"></a>A busca de captura humana autêntica e vídeo volumétricos
+## <a name="volumetric-video-and-the-pursuit-of-authentic-human-capture"></a>Vídeo do volumétricos e a busca de captura humana autêntica
 
-Os seres humanos são essenciais para narração — no sentido mais literal: um ser humano falando, desempenho ou como o assunto da história. Alguns dos mais imersivas e momentos revelador das experiências de imersão antecipada de hoje são sociais. Compartilhe uma realidade misturada experiência juntas na sala de estar, para ver seus amigos inacreditável novos ambientes. O elemento humano torna até mesmo a realidade mais fantástica, uma realidade.
+Os seres humanos são fundamentais para narração – no sentido mais literal: um discurso humano, um desempenho ou como o assunto da história. Alguns dos momentos de mais de imersão e de abertura das experiências de imersão iniciais de hoje são sociais. De compartilhar uma experiência de realidade mista em seu espaço de vida, para ver seus amigos em Unbelievable novos ambientes. O elemento humano faz até mesmo a realidade mais fantástica, uma realidade.
 
 ![Mindshow em VR](images/mindshow-in-vr-640px.jpg)
 
-Avatares nas experiências de imersão permitem que um novo tipo de incorporação a narração. Os aplicativos mais recentes são Repensando o conceito de propriedade do corpo virtual e a configuração de um salto em eliminando a distância entre as pessoas. Empresas como a [Mindshow](http://mindshow.com/) estiver desenvolvendo ferramentas criativas que aproveitam os avatares, permitindo que os usuários a assumir personas totalmente novas e caracteres. Outras pessoas estão explorando [métodos de expressão artístico](https://en.wikipedia.org/wiki/Uncanny_valley), uma oportunidade de creative potencialmente ilimitada para explorar a natureza (e a necessidade) dos atributos humana. Atualmente, essa ausência de realismo ajuda a evitar a [silício incomum de semelhança humana](https://en.wikipedia.org/wiki/Uncanny_valley) juntamente com um host de problemas técnicos para desenvolvedores de todos os dias. Por essas razões (e mais) é muito provável que avatares não realistas tornará o padrão para o futuro próximo. E ainda, enquanto o realismo representa um enorme desafio para realidade misturada, *há cenários importantes que exigem a representação autêntica de seres humanos no espaço 3D*.
+Os avatars em experiências de imersão permitem um novo tipo de Embodiment no narração. Os aplicativos mais recentes estão repensando o conceito de Propriedade do corpo virtual e configurando um salto de geração ao eliminar a distância entre as pessoas. Empresas como [Mindshow](http://mindshow.com/) estão desenvolvendo ferramentas criativas que aproveitam os avatars, permitindo que os usuários adotem totalmente novas pessoas e caracteres. Outros estão explorando [métodos de expressão artística](https://en.wikipedia.org/wiki/Uncanny_valley), uma oportunidade criativa potencialmente ilimitada para explorar a natureza (e a necessidade) de atributos como os humanos. Hoje, essa ausência de realm ajuda a evitar o vale indefinido [do semelhança humano](https://en.wikipedia.org/wiki/Uncanny_valley) , juntamente com um host de problemas técnicos para desenvolvedores diários. Por esses motivos (e mais), é muito provável que os avatars não realísticos se tornem o padrão para o futuro próximo. E ainda, embora o realm seja um enorme desafio para a realidade misturada, *há cenários importantes que exigem a representação autêntica de humanos em espaço 3D*.
 
-Na Microsoft, uma equipe pequena transportadas por fora do Microsoft Research passou os últimos anos desenvolvendo um método para capturar os seres humanos por meio de uma forma de vídeo volumétricas. Hoje, o processo é semelhante à produção de vídeo: em vez de aplicar o movimento a um ativo sculpted é uma gravação completa, 3D. O desempenho e a imagem são capturados em tempo real — não é o trabalho de um artista, é uma representação autêntica. E enquanto a tecnologia está apenas começando a expandir em aplicativos comerciais, as implicações de vídeo volumétrico são essenciais para [a visão da Microsoft de computação mais pessoais](https://www.youtube.com/watch?v=tcyj-_IEWt8).
+Na Microsoft, uma pequena equipe surgiu da Microsoft Research passou os últimos anos desenvolvendo um método para a captura de seres humanos por meio de um vídeo volumétricos. O processo hoje é semelhante à produção de vídeo: em vez de aplicar a movimentação a um ativo sculpted, é uma gravação completa e 3D. O desempenho e a imagem são capturados em tempo real — não é o trabalho de um artista, é uma representação autêntica. E, embora a tecnologia esteja apenas começando a se expandir em aplicativos comerciais, as implicações do vídeo volumétricos são essenciais para a [visão da Microsoft de computação pessoal](https://www.youtube.com/watch?v=tcyj-_IEWt8).
 
-![Vídeo volumétricas SIGGRAPH de 2015](images/volumetric-video-siggraph-2015.gif)
+![Volumétricos vídeo SIGGRAPH 2015](images/volumetric-video-siggraph-2015.gif)
 
-Captura humana autêntica desbloqueia novas categorias exclusivas de experiências na realidade mista. Ver alguém que você reconhecer, seja ele uma celebridade, um colega ou alguém, cria uma profundidade de intimidade nunca antes possível em uma mídia digital. Sua face, suas expressões, as nuances em seus movimentos fazem parte do que eles fazem. Quais oportunidades desbloquear quando podemos capturar essas qualidades humanas no espaço 3D?
+A autenticidade humana Capture desbloqueia novas categorias exclusivas de experiências em realidade misturada. Vendo alguém que você reconhece, seja um celebridade, um colega ou um adore, cria uma profundidade de intimidade nunca antes de ser possível em um meio digital. Sua face, suas expressões, a nuance em seus movimentos fazem parte de quem estão. Quais oportunidades são desbloqueadas quando podemos capturar essas qualidades humanas no espaço 3D?
 
-Hoje em dia a equipe está enviando os limites de vídeo volumétricos se concentrando em setores como entretenimento e educação: [Actiongram](https://www.microsoft.com/p/actiongram/9nblggh5ftmt) recursos criativos caracteres e [celebridades](https://www.youtube.com/watch?v=BwWueXlsOrA) criar histórias de realidade misturada. [Destino: MARS apresentam](https://www.jpl.nasa.gov/news/news.php?feature=6220), agora no Centro de espaço Kennedy da NASA, apresenta um vídeo volumétricos de astronaut lendário repercussão Aldrin. A experiência permite que os visitantes movimentar-se ao redor da superfície do Mars com repercussões conforme ele apresenta a busca pelos colonization humana em Mars.
+Hoje, a equipe está empurrando os limites do vídeo volumétricos concentrando-se em setores como entretenimento e educação: O [Actiongram](https://www.microsoft.com/p/actiongram/9nblggh5ftmt) apresenta caracteres de criação e [celebridades](https://www.youtube.com/watch?v=BwWueXlsOrA) para criar histórias de realidade misturadas. [Destino: A exposição](https://www.jpl.nasa.gov/news/news.php?feature=6220)do Mars, agora no centro de espaço Kennedy da NASA, apresenta um vídeo volumétricos de lendárias Astronaut repercussão Aldrin. A experiência permite que os visitantes percorram a superfície do Mars, pois ele apresenta a busca do Colonization humano em Mars.
 
 ## <a name="humans-are-fundamental-to-mixed-reality"></a>Os seres humanos são fundamentais para a realidade misturada
 
-Projetando maneiras de tornar esses vídeos parecer natural apresenta um desafio, mas aquele em que a equipe vê enorme potencial. E essas oportunidades serão expandida conforme a tecnologia se torna mais acessível e mudar de gravações para a captura em tempo real.
+Projetar maneiras de fazer esses vídeos parecer natural representa um desafio, mas um em que a equipe vê enorme potencial. E essas oportunidades serão expandidas à medida que a tecnologia se tornar mais acessível e passar de gravações para captura em tempo real.
 
-[Holoportation](https://www.microsoft.com/en-us/research/project/holoportation-3/) é um esforço de pesquisa que tem como base a mesma tecnologia fundamental, autenticamente capturando informações de visual e a profundidade e renderizar o resultado em tempo real. A equipe está explorando o que significa que o poder da representação humana realista para o futuro das conversas e experiências compartilhadas. O que acontece quando uma captura tridimensional de alguém, de qualquer lugar no mundo, pode ser adicionada ao seu ambiente?
+O [Holoportation](https://www.microsoft.com/en-us/research/project/holoportation-3/) é um esforço de pesquisa que se baseia na mesma tecnologia fundamental, capturando de forma autenticada informações visuais e de profundidade e renderizando o resultado em tempo real. A equipe está explorando o que o poder da representação humana realista significa para o futuro de conversas e experiências compartilhadas. O que acontece quando uma captura tridimensional de alguém, de qualquer lugar do mundo, pode ser adicionada ao seu ambiente?
 
 ![Futuro da conversa](images/girl-with-dress.jpg)
 
-Da disposição em camadas para um novo nível de imersão para aplicativos de todos os dias como Skype, remodelagem radicalmente o conceito de reuniões digitais e negócios de viagem — volumétricos vídeo abre cenários exclusivos: Uma especialista em treinamento praticamente médicos em uma amigos distantes continente ou digital sentado no couches e cadeiras na sala de estar. Adicionando representações humanas autênticas para experiências de realidade misturada remodelará radicalmente o conceito de reuniões digitais e viagens de negócios.
+Desde a disposição em camadas, um novo nível de imersão em aplicativos diários como o Skype, para remodelar radicalmente o conceito de reuniões digitais e viagens de negócios — o vídeo volumétricos abre cenários exclusivos: Um especialista treina praticamente médicos em um continente distante ou em amigos digitais nos sofás e nas cadeiras de sua sala de vida. A adição de representações humanas autênticas a experiências mistas de realidade remodelará radicalmente o conceito de reuniões digitais e viagens de negócios.
 
-Assim como a arte abstrata de James Turrell e o realismo crítico do Ai Weiwei oferecem seus próprios desafios técnicos exclusivos, então, fazer os métodos para representar os humanos como avatares criativos e captura realista. Um não pode ser ignorado levando em consideração o outro e explorar o potencial de cada nos ajudará a compreender a interação humana nesse novo espaço.
+Assim como a arte abstrata de James Turrell e o realismo crítico do ia Weiwei oferecem seus próprios desafios técnicos exclusivos, portanto, os métodos para representar seres humanos como avatars criandos e capturas realísticas. Uma não pode ser ignorada à luz da outra e explorar o potencial de cada uma nos ajudará a entender a interação humana nesse novo espaço.
 
 ## <a name="about-the-author"></a>Sobre o autor
 
 <table style="border-collapse:collapse" padding-left="0px">
 <tr>
 <td style="border-style: none" width="60"><img alt="Picture of Mark Vitazko" width="60" height="60" src="images/mark-vitazko.jpg"></td>
-<td style="border-style: none"><b>Mark Vitazko</b><br>Designer de UX @Microsoft</td>
+<td style="border-style: none"><b>Marcar Vitazko</b><br>Designer de UX@Microsoft</td>
 </tr>
 </table>

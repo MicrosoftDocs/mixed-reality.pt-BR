@@ -1,11 +1,11 @@
 ---
-title: Código QR de acompanhamento
-description: Saiba como ativar o código QR de acompanhamento para o Windows Mixed Reality imersivo (VR) fone de ouvido e implementar o recurso em seus aplicativos VR.
+title: Controle de código QR
+description: Saiba como ativar o controle de código QR para seu fone de ouvido (VR) de realidade mista do Windows e implementar o recurso em seus aplicativos VR.
 author: yoyozilla
 ms.author: yoyoz
 ms.date: 11/06/2018
 ms.topic: article
-keywords: VR, lbe, entretenimento baseados na localização, vr arcade, código qr de arcade, imersivo, qr,
+keywords: VR, LBE, entretenimento baseado na localização, VR de los, de los, de imersão, QR, QR Code
 ms.openlocfilehash: 465056cf645a8b9dc9e0e2d3f9dacf887df67c52
 ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
 ms.translationtype: MT
@@ -13,12 +13,12 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 06/11/2019
 ms.locfileid: "66829978"
 ---
-# <a name="qr-code-tracking"></a>Código QR de acompanhamento
+# <a name="qr-code-tracking"></a>Controle de código QR
 
-Código QR de controle é implementado no driver do Windows Mixed Reality para fones imersivos em exposição (VR). Habilitando o rastreador de código QR no driver fone de ouvido, o fone de ouvido examina os códigos QR e são relatados para aplicativos de seu interessados. Esse recurso só está disponível desde o [atualização do Windows 10 de outubro de 2018 (também conhecido como RS5)](release-notes-october-2018.md).
+O controle de código QR é implementado no driver do Windows Mixed Reality para headsets de imersão (VR). Ao habilitar o controlador de código QR no driver Headset, o headset verifica os códigos QR e eles são relatados aos aplicativos interessados. Esse recurso só está disponível a partir da [atualização do Windows 10 de outubro de 2018 (também conhecida como RS5)](release-notes-october-2018.md).
 
 >[!NOTE]
->Atualmente, os trechos de código neste artigo demonstram o uso de C++/CX em vez de C + + 17 compatíveis C++/WinRT como usado na [ C++ modelo de projeto holographic](creating-a-holographic-directx-project.md).  Os conceitos são equivalentes para um C++projeto de /WinRT, embora você precisará converter o código.
+>Os trechos de código neste artigo demonstram atualmente o C++uso de/CX em vez de/WinRT em C++conformidade com C + +17, conforme usado no [ C++ modelo de projeto Holographic](creating-a-holographic-directx-project.md).  Os conceitos são equivalentes a C++um projeto/WinRT, embora você precise converter o código.
 
 ## <a name="device-support"></a>Suporte a dispositivos
 
@@ -31,44 +31,44 @@ Código QR de controle é implementado no driver do Windows Mixed Reality para f
     <tr>
         <td><strong>Recurso</strong></td>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>Fones imersivos em exposição</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Headsets imersivos</strong></a></td>
     </tr>
      <tr>
-        <td>Código QR de acompanhamento</td>
+        <td>Controle de código QR</td>
         <td>❌</td>
         <td>✔️</td>
     </tr>
 </table>
 
-## <a name="enabling-and-disabling-qr-code-tracking-for-your-headset"></a>Habilitando e desabilitando QR o acompanhamento de fone de ouvido de código
-Observação: Esta seção só é válida para [atualização do Windows 10 de outubro de 2018 (também conhecido como RS5)](release-notes-october-2018.md). Compilações de 19h 1 em diante, não será preciso fazer isso.
-Se você estiver desenvolvendo um aplicativo de realidade mista que otimizará o código QR de acompanhamento, ou você for um cliente de um desses aplicativos, você precisará ativar manualmente o código QR de acompanhamento no driver do seu fone de ouvido.
+## <a name="enabling-and-disabling-qr-code-tracking-for-your-headset"></a>Habilitando e desabilitando o controle de código QR para o headset
+Observação: Esta seção só é válida para a [atualização do Windows 10 de outubro de 2018 (também conhecida como RS5)](release-notes-october-2018.md). Do 19h1 Builds em diante, você não precisará fazer isso.
+Se você estiver desenvolvendo um aplicativo de realidade misturada que aproveitará o controle de código QR, ou se for um cliente de um desses aplicativos, precisará ativar manualmente o controle de código QR no driver do headset.
 
-Para **ativar o código QR de acompanhamento** para imersivo fone de ouvido (VR):
+Para ativar o **controle de código QR** para seu headset de imersão (VR):
 
-1. Feche o aplicativo do Portal de realidade misturada em seu computador.
-2. Desconecte o fone de ouvido do seu computador.
-3. Execute o seguinte script no Prompt de comando:<br>
+1. Feche o aplicativo portal da realidade misturada em seu PC.
+2. Desconecte o headset do seu PC.
+3. Execute o seguinte script no prompt de comando:<br>
     `reg add "HKLM\SOFTWARE\Microsoft\HoloLensSensors" /v  EnableQRTrackerDefault /t REG_DWORD /d 1 /F`
-4. Reconecte o fone de ouvido a seu computador.
+4. Reconecte o headset ao seu PC.
 
-Para **desativar o código QR de acompanhamento** para imersivo fone de ouvido (VR):
+Para desativar o **controle de código QR** para seu headset de imersão (VR):
 
-1. Feche o aplicativo do Portal de realidade misturada em seu computador.
-2. Desconecte o fone de ouvido do seu computador.
-3. Execute o seguinte script no Prompt de comando:<br>
+1. Feche o aplicativo portal da realidade misturada em seu PC.
+2. Desconecte o headset do seu PC.
+3. Execute o seguinte script no prompt de comando:<br>
     `reg add "HKLM\SOFTWARE\Microsoft\HoloLensSensors" /v  EnableQRTrackerDefault /t REG_DWORD /d 0 /F`
-4. Reconecte o fone de ouvido a seu computador. Isso fará com que todos os códigos QR descobertos "não-localizáveis."
+4. Reconecte o headset ao seu PC. Isso fará com que todos os códigos QR descobertos "não localizáveis".
 
 ## <a name="printing-codes"></a>Códigos de impressão
 
-Primeiramente, o [especificações para os códigos QR](https://www.qrcode.com/en/howto/code.html) diz "a área de símbolo de código QR exige uma margem ou"zona silenciosa"em torno da ser usado. A margem é uma área clara em torno de um símbolo em que nada é impresso. Código QR requer uma margem de ampla de quatro módulos em todos os lados de um símbolo". Isso deve ter uma largura, em cada lado, de quatro vezes o tamanho de um módulo - um único quadrado preto no código. A página spec contém recomendações sobre como imprimir códigos QR e descobrir a área necessária para fazer um determinado tamanho código QR.
+Primeiro, a [especificação de códigos QR](https://www.qrcode.com/en/howto/code.html) diz "a área de símbolo de código QR requer uma margem ou" zona silenciosa "em relação a ela a ser usada. A margem é uma área clara em um símbolo em que nada é impresso. O código QR requer uma margem larga de quatro módulos em todos os lados de um símbolo. " Isso precisa ter uma largura, em cada lado, de quatro vezes o tamanho de um módulo, um único quadrado preto no código. A página de especificações contém conselhos sobre como imprimir códigos QR e descobrir a área necessária para fazer um determinado código QR de tamanho.
 
-Atualmente, qualidade de detecção de código QR é suscetível a iluminação e pano de fundo de variáveis. Para combater isso, observe a iluminação e imprimir o código apropriado. Em uma cena com iluminação particularmente brilhante, imprima um código que é preto em um plano de fundo cinza. Em uma cena pouca luz, uma preta sobre branca funciona. Da mesma forma, se o pano de fundo para o código for particularmente escuro, tente um preto no código cinza se a taxa de detecção for baixa. Caso contrário, se o pano de fundo é mais leve, um código regular deve funcionar bem.
+A qualidade de detecção de código QR no momento é suscetível a uma variação de iluminação e de fundo. Para combater isso, Observe sua iluminação e imprima o código apropriado. Em uma cena com iluminação particularmente brilhante, imprima um código preto em um plano de fundo cinza. Em uma cena de pouca luz, o preto em branco funciona. Da mesma forma, se o pano de fundo para o código for particularmente escuro, experimente um preto no código cinza se a taxa de detecção for baixa. Caso contrário, se o pano de fundo for mais leve, um código regular deverá funcionar bem.
 
-## <a name="qrtracking-api"></a>QRTracking API
+## <a name="qrtracking-api"></a>API QRTracking
 
-O plug-in QRTracking expõe as APIs de código QR de acompanhamento. Para usar o plug-in, você precisará usar os seguintes tipos dos *QRCodesTrackerPlugin* namespace.
+O plug-in QRTracking expõe as APIs para o controle de código QR. Para usar o plug-in, você precisará usar os seguintes tipos do namespace *QRCodesTrackerPlugin* .
 
 ```cs
  // QRTracker plugin namespace
@@ -179,27 +179,27 @@ O plug-in QRTracking expõe as APIs de código QR de acompanhamento. Para usar o
 }
 ```
 
-## <a name="implementing-qr-code-tracking-in-unity"></a>Implementando o código QR de acompanhamento no Unity
+## <a name="implementing-qr-code-tracking-in-unity"></a>Implementando o controle de código QR no Unity
 
-### <a name="sample-unity-scenes-in-mrtk-mixed-reality-toolkit"></a>Exemplo Unity cenas no MRTK (Toolkit de realidade mista)
+### <a name="sample-unity-scenes-in-mrtk-mixed-reality-toolkit"></a>Cenas de exemplo do Unity em MRTK (Mixed Reality Toolkit)
 
-Você pode encontrar um exemplo de como usar a API de controle de QR no Kit de ferramentas de realidade misturada [site do GitHub](https://github.com/Microsoft/MixedRealityToolkit-Unity/tree/htk_release/Assets/HoloToolkit-Preview/QRTracker).
+Você pode encontrar um exemplo de como usar a API de controle QR no [site GitHub](https://github.com/Microsoft/MixedRealityToolkit-Unity/tree/htk_release/Assets/HoloToolkit-Preview/QRTracker)do kit de ferramentas de realidade misturada.
 
-MRTK implementou os scripts necessários para simpilify o QR acompanhando o uso. Todos os ativos necessários para desenvolver aplicativos de acompanhamento de QR estão na pasta "QRTracker". Há duas cenas: o primeiro é um exemplo para mostrar apenas os detalhes dos códigos QR conforme eles são detectados e o segundo demonstra como usar o sistema de coordenadas anexado para o código QR para exibir hologramas.
-Há um pré-fabricado "QRScanner" que adicionou todos os scripts necessários nos bastidores para usar QRCodes. O script QRCodeManager é uma classe singleton que implementa a API QRCode. Isso precisa ser adicionado à sua cena. O script "AttachToQRCode" é usado para anexar hologramas para os sistemas de coordenadas do código QR, esse script pode ser adicionado a qualquer um dos seus hologramas. "SpatialGraphCoordinateSystem" mostra como usar o sistema de coordenadas QRCode. Esses scripts podem ser usados como-está em seu projeto cenas ou você pode escrever seu próprio diretamente usando o plug-in conforme descrito acima.
+O MRTK implementou os scripts necessários para simpilify o uso do controle QR. Todos os ativos necessários para desenvolver aplicativos com controle QR estão na pasta "QRTracker". Há duas cenas: a primeira é uma amostra para simplesmente mostrar detalhes dos códigos QR conforme eles são detectados e o segundo demonstra como usar o sistema de coordenadas anexado ao código QR para exibir hologramas.
+Há um pré-fabricado "QRScanner" que adicionou todos os scripts necessários aos bastidores para usar o QRCodes. O script QRCodeManager é uma classe singleton que implementa a API QRCode. Isso precisa ser adicionado à sua cena. O script "AttachToQRCode" é usado para anexar hologramas aos sistemas de coordenadas de código QR, esse script pode ser adicionado a qualquer um dos seus hologramas. O "SpatialGraphCoordinateSystem" mostra como usar o sistema de coordenadas QRCode. Esses scripts podem ser usados no estado em que se encontram em seus bastidores de projeto ou você pode escrever seus próprios diretamente usando o plug-in, conforme descrito acima.
 
-### <a name="implementing-qr-code-tracking-in-unity-without-mrtk"></a>Implementando o código QR de acompanhamento no Unity sem MRTK
+### <a name="implementing-qr-code-tracking-in-unity-without-mrtk"></a>Implementando o controle de código QR no Unity sem MRTK
 
-Você também pode usar a API de controle de QR no Unity sem assumir uma dependência MRTK. Para usar a API, você precisará preparar seu projeto com a instrução a seguir:
+Você também pode usar a API de controle QR no Unity sem usar uma dependência no MRTK. Para usar a API, você precisará preparar seu projeto com a seguinte instrução:
 
-1. Crie uma nova pasta na pasta ativos do seu projeto do unity com o nome: "Plug-ins".
-2. Copie todos os arquivos necessários do [nessa pasta](https://github.com/Microsoft/MixedRealityToolkit-Unity/tree/htk_release/Assets/HoloToolkit-Preview/QRTracker/Plugins) na pasta de "Plug-ins" local que você acabou de criar.
-3. Você pode usar o QR acompanhamento scripts na [pasta de scripts MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity/tree/htk_release/Assets/HoloToolkit-Preview/QRTracker/Scripts) ou escreva seu próprio.
-Observação: Esses plug-ins são apenas para [atualização do Windows 10 de outubro de 2018 (também conhecido como RS5)](release-notes-october-2018.md) compilações. Os plug-ins serão atualizados com a próxima versão do windows. Os plug-ins atuais foram experimentais e não funcionará para uma versão futura do windows. Novos plug-ins serão publicado que pode ser usada da próxima versão do windows e eles não serão retroativamente compatível e não funcionará com RS5).
+1. Crie uma nova pasta na pasta ativos do projeto do Unity com o nome: "Plugins".
+2. Copie todos os arquivos necessários [dessa pasta](https://github.com/Microsoft/MixedRealityToolkit-Unity/tree/htk_release/Assets/HoloToolkit-Preview/QRTracker/Plugins) para a pasta "plugins" local que você acabou de criar.
+3. Você pode usar os scripts de controle QR na [pasta MRTK scripts](https://github.com/Microsoft/MixedRealityToolkit-Unity/tree/htk_release/Assets/HoloToolkit-Preview/QRTracker/Scripts) ou escrever o seu próprio.
+Observação: Esses plug-ins são apenas para compilações de [atualização do Windows 10 de outubro de 2018 (também conhecidas como RS5)](release-notes-october-2018.md) . Os plug-ins serão atualizados com a próxima versão do Windows. Os plugins atuais foram experimentais e não funcionarão para versões futuras do Windows. Novos plug-ins serão publicados, que podem ser usados na próxima versão do Windows e não serão compatíveis com versões anteriores e não funcionarão com o RS5).
 
-## <a name="implementing-qr-code-tracking-in-directx"></a>Implementando o código QR de acompanhamento no DirectX
+## <a name="implementing-qr-code-tracking-in-directx"></a>Implementando o controle de código QR no DirectX
 
-Para usar o QRTrackingPlugin no Visual Studio, você precisará adicionar referência do QRTrackingPlugin à. winmd. Você pode encontrar o [os arquivos necessários para as plataformas com suporte aqui](https://github.com/Microsoft/MixedRealityToolkit-Unity/tree/htk_release/Assets/HoloToolkit-Preview/QRTracker/Plugins/WSA).
+Para usar o QRTrackingPlugin no Visual Studio, você precisará adicionar a referência de QRTrackingPlugin ao. winmd. Você pode encontrar os [arquivos necessários para as plataformas com suporte aqui](https://github.com/Microsoft/MixedRealityToolkit-Unity/tree/htk_release/Assets/HoloToolkit-Preview/QRTracker/Plugins/WSA).
 
 ```cpp
 // MyClass.h
@@ -251,13 +251,13 @@ void MyClass::OnRemovedQRCode(QRCodesTrackerPlugin::QRCodeRemovedEventArgs ^args
 
 ## <a name="getting-a-coordinate-system"></a>Obtendo um sistema de coordenadas
 
-Definimos um sistema de coordenadas à direita alinhado com o código QR no canto superior esquerdo do quadrado detecção rápida no canto superior esquerdo. O sistema de coordenadas é mostrado abaixo. O eixo z está apontando no documento de (não mostrado), mas no Unity o eixo z é sem o papel e mão esquerda.
+Definimos um sistema de coordenadas à direita alinhado com o código QR no canto superior esquerdo do quadrado de detecção rápida na parte superior esquerda. O sistema de coordenadas é mostrado abaixo. O eixo Z está apontando para o papel (não mostrado), mas no Unity o eixo z está fora do papel e da mão esquerda.
 
-Um SpatialCoordinateSystem é definida que está alinhada conforme mostrado. Esse sistema de coordenadas podem ser obtido da plataforma usando a API *Windows::Perception::Spatial::Preview::SpatialGraphInteropPreview::CreateCoordinateSystemForNode*.
+Um SpatialCoordinateSystem é definido e alinhado como mostrado. Esse sistema de coordenadas pode ser obtido da plataforma usando as janelas de API *::P erception:: Spatial::P revisar:: SpatialGraphInteropPreview:: CreateCoordinateSystemForNode*.
 
-![Sistema de coordenadas do código QR](images/Qr-coordinatesystem.png) 
+![Sistema de coordenadas de código QR](images/Qr-coordinatesystem.png) 
 
-De QRCode ^ código de objeto, o código a seguir mostra como criar um retângulo e colocá-lo no sistema de coordenadas QR:
+No objeto de código QRCode ^, o código a seguir mostra como criar um retângulo e colocá-lo no sistema de coordenadas QR:
 
 ```cpp
 // Creates a 2D rectangle in the x-y plane, with the specified properties.
@@ -280,13 +280,13 @@ Você pode usar o tamanho físico para criar o retângulo QR:
 std::vector<float3> qrVertices = CreateRectangle(Code->PhysicalSizeMeters, Code->PhysicalSizeMeters); 
 ```
 
-O sistema de coordenadas pode ser usado para desenhar o código QR ou anexar hologramas no local:
+O sistema de coordenadas pode ser usado para desenhar o código QR ou anexar hologramas ao local:
 
 ```cpp
 Windows::Perception::Spatial::SpatialCoordinateSystem^ qrCoordinateSystem = Windows::Perception::Spatial::Preview::SpatialGraphInteropPreview::CreateCoordinateSystemForNode(Code->Id);
 ```
 
-Completamente, sua *QRCodesTrackerPlugin::QRCodeAddedHandler* pode ter esta aparência:
+Totalmente, seu *QRCodesTrackerPlugin:: QRCodeAddedHandler* pode ser semelhante a este:
 
 ```cpp
 void MyClass::OnAddedQRCode(QRCodesTrackerPlugin::QRCodeAddedEventArgs ^args)
@@ -308,26 +308,26 @@ void MyClass::OnAddedQRCode(QRCodesTrackerPlugin::QRCodeAddedEventArgs ^args)
 }
 ```
 
-## <a name="troubleshooting-and-faq"></a>Solução de problemas e perguntas Frequentes
+## <a name="troubleshooting-and-faq"></a>Solução de problemas e perguntas frequentes
 
 **Solução de problemas gerais**
 
-* Seu PC está executando o Windows 10 de outubro de 2018 atualizar?
-* Você já definiu a chave do registro? Reiniciado posteriormente o dispositivo?
-* É a versão do código QR em uma versão com suporte? Atual API dá suporte a até 20 de versão do código QR. É recomendável usar a versão 5 para uso geral. 
-* São que você feche suficiente para o código QR? Quanto mais próximo a câmera é o código QR, maior será a QR versão do código da API pode dar suporte.  
+* Seu PC está executando a atualização do Windows 10 de outubro de 2018?
+* Você definiu a chave do registro? O dispositivo foi reiniciado depois?
+* A versão do código QR é uma versão com suporte? A API atual suporta até o código QR versão 20. É recomendável usar a versão 5 para uso geral. 
+* Você está perto o suficiente para o código QR? Quanto mais próximo a câmera for o código QR, mais alta será a versão do código QR à qual a API pode dar suporte.  
 
-**Como fechar precisa ser para o código QR para detectá-lo?**
+**Como é preciso ter o código QR para detectá-lo?**
 
-Isso dependerá do tamanho do código QR e também qual versão é. Para um código QR de versão 1 varia de lados 5 cm até lados 25 cm, a distância mínima detecção varia de medidores 0,15 aos medidores de 0,5. Mais distantes imediatamente esses podem ser detectados de vai de cerca de 0,3 medidores para os destinos de código QR menores para medidores 1.4 para o maior. Para os códigos QR maiores que isso, você pode estimar; a distância de detecção para o tamanho aumenta linearmente. Nosso rastreador não funciona com os códigos QR com lados menor do que 5 cm.
+Isso dependerá do tamanho do código QR e também da versão. Para um código QR da versão 1 variando de 5 cm para os lados 25 cm, a distância mínima de detecção varia de 0,15 metros a 0,5 metros. Os mais distantes deles podem ser detectados a partir de cerca de 0,3 metros para o código QR menor se destina a 1,4 metros para maior. Para códigos QR maiores que isso, você pode estimar; a distância de detecção para o tamanho aumenta linearmente. Nosso controlador não funciona com códigos QR com lados menores que 5 cm.
 
-**Fazer os códigos QR com logotipos de trabalho?**
+**Os códigos QR com logotipos funcionam?**
 
-Códigos QR com logotipos não foram testados e não têm suportados no momento.
+Códigos QR com logotipos não foram testados e não têm suporte no momento.
 
-**Como posso limpar códigos QR do meu aplicativo para que eles não são mantidas?**
+**Como fazer limpar códigos QR do meu aplicativo para que eles não persistam?**
 
-* Códigos QR somente são persistidos na sessão de inicialização. Depois de reinicializar (ou reiniciar o driver), eles serão passaram e detectados como novos objetos próxima vez.
-* Histórico do código QR é salvo no nível do sistema na sessão de driver, mas você pode configurar seu aplicativo para ignorar os códigos QR com mais de um carimbo de data específico se você quiser. Atualmente a API dá suporte a histórico de código QR de limpeza, como vários aplicativos podem estar interessados nos dados.
+* Os códigos QR só são persistidos na sessão de inicialização. Depois que você reinicializar (ou reiniciar o driver), eles serão desfeitos e detectados como novos objetos na próxima vez.
+* O histórico de código QR é salvo no nível do sistema na sessão do driver, mas você pode configurar seu aplicativo para ignorar códigos QR mais antigos que um carimbo de data/hora específico, se desejar. Atualmente, a API dá suporte à limpeza do histórico de código QR, pois vários aplicativos podem estar interessados nos dados.
 
-**Os plug-ins para versões futuras e RS5 não são compatíveis** RS5 verzi o plug-in funciona apenas para RS5 e não funcionará para versões futuras. O plug-in expermental será substituído com o plug-in real e deve ser aquele que podemos usar em futuras versões do windows.
+**Os plug-ins para RS5 e versões futuras não são compatíveis** A versão RS5 do plug-in funciona apenas para RS5 e não funcionará para versões futuras. O plug-in expermental será substituído pelo plug-in real e deverá ser o que pode ser usado em versões futuras do Windows.

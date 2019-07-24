@@ -1,11 +1,11 @@
 ---
 title: Gestos
-description: Gestos de mão permitem aos usuários executar a ação em realidade misturada.
+description: Os gestos de mão permitem que os usuários executem ações em realidade misturada.
 author: rwinj
 ms.author: cmeekhof
 ms.date: 02/24/2019
 ms.topic: article
-keywords: Realidade misturada, gestos, interação, o design
+keywords: Realidade misturada, gestos, interação, design
 ms.openlocfilehash: 8094caaf8a5d805606e9dac11ece56bc50122e5d
 ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
 ms.translationtype: MT
@@ -15,7 +15,7 @@ ms.locfileid: "66829776"
 ---
 # <a name="gestures"></a>Gestos
 
-Gestos de mão permitem que os usuários realizar uma ação na realidade mista. Interação baseia **olhares** ao destino e **gesto** ou **voz** para atuar em qualquer elemento foram direcionado. Gestos de mão não fornecem um local exato no espaço, mas a simplicidade de colocar em um HoloLens e estão interagindo imediatamente com conteúdo permite que os usuários começar a trabalhar sem os outros acessórios.
+Os gestos de mão permitem que os usuários executem ações em realidade misturada. A interação é criada em **olhar** para direcionar e **gesto** ou **voz** para agir sobre qualquer elemento que tenha sido direcionado. Os gestos de mão não fornecem um local preciso no espaço, mas a simplicidade de colocar em um HoloLens e interagir imediatamente com o conteúdo permite que os usuários trabalhem sem nenhum outro acessório.
 
 <br>
 
@@ -34,7 +34,7 @@ Gestos de mão permitem que os usuários realizar uma ação na realidade mista.
         <td><strong>Recurso</strong></td>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens (1ª geração)</strong></a></td>
         <td><strong>HoloLens 2</strong></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>Fones imersivos em exposição</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Headsets imersivos</strong></a></td>
     </tr>
      <tr>
         <td>Gestos</td>
@@ -51,54 +51,54 @@ Gestos de mão permitem que os usuários realizar uma ação na realidade mista.
 </table>
 
 > [!NOTE]
-> Mais orientações específicas para 2 HoloLens [em breve](index.md#news-and-notes).
+> Mais diretrizes específicas para o HoloLens 2 em [breve](index.md#news-and-notes).
 
-## <a name="gaze-and-commit"></a>Olhar e confirmação
+## <a name="gaze-and-commit"></a>Olhar-e-Commit
 
-Para executar ações, use gestos de mão [olhar principal](gaze.md) como o mecanismo de direcionamento. A combinação de **olhares** e o **polegar** gesto resulta em um **olhar e confirmação** interação. É uma alternativa à confirmação olhar **ponto-e-confirmação**, habilitado por [controladores de movimento](motion-controllers.md). Aplicativos que são executados em HoloLens só precisam dar suporte à confirmação olhar como HoloLens não oferece suporte a controladores de movimento. Aplicativos que são executados em HoloLens e fones imersivos em exposição devem dar suporte a interações de tanto orientado a olhar e controlado por apontando para fornecer opções dos usuários nos dispositivos de entrada que eles utilizam.
+Para executar ações, os gestos à mão usam [olhar de cabeçalho](gaze.md) como o mecanismo de direcionamento. A combinação de **olhar** e o gesto de **toque do Air** resulta em uma interação de **olhar e confirmação** . Uma alternativa ao olhar-and-commit é o **ponto e a confirmação**, habilitado pelos [controladores de movimento](motion-controllers.md). Os aplicativos executados no HoloLens só precisam dar suporte a olhar-and-Commit, já que o HoloLens não oferece suporte a controladores de movimento. Os aplicativos que são executados em headsets de HoloLens e de imersão devem dar suporte a interações controladas por olhar e por ponto, para dar aos usuários a opção de qual dispositivo de entrada eles usam.
 
-## <a name="the-two-core-gestures-of-hololens"></a>As duas principais gestos do HoloLens
+## <a name="the-two-core-gestures-of-hololens"></a>Os dois gestos principais do HoloLens
 
-Atualmente, HoloLens reconhece dois principais gestos-componentes - **polegar** e **Bloom**. Essas interações de dois núcleos são o nível mais baixo de dados espaciais de entrada que um desenvolvedor possa acessar. Eles formam a base para uma variedade de ações possíveis do usuário.
+Atualmente, o HoloLens reconhece dois gestos de componentes principais – **toque** e **flor**. Essas duas interações principais são o nível mais baixo de dados de entrada espaciais que um desenvolvedor pode acessar. Eles formam a base para uma variedade de possíveis ações do usuário.
 
-### <a name="air-tap"></a>Indicador e polegar
+### <a name="air-tap"></a>Fechar e abrir dedos indicador e polegar
 
-Indicador e polegar é um gesto de tocar com a mão na vertical, semelhante a um clique do mouse ou selecione. Isso é usado na maioria das experiências do HoloLens para o equivalente de "clique" em um elemento de interface do usuário após para direcioná-lo com [olhares](gaze.md). Ele é uma ação universal que você saiba mais uma vez e, em seguida, aplicar em todos os seus aplicativos. Outras maneiras de executar select são pressionando o botão único uma [HoloLens Clicker](hardware-accessories.md#hololens-clicker) ou falando a voz de comando "Select".
+O toque de ar é um gesto de toque com a mão mantida na vertical, semelhante a um clique do mouse ou selecionar. Isso é usado na maioria das experiências de HoloLens para o equivalente a um "clique" em um elemento de interface do usuário depois de direcioná-lo com [olhar](gaze.md). É uma ação universal que você aprende uma vez e, em seguida, se aplica em todos os seus aplicativos. Outras maneiras de executar SELECT são pressionar o botão único em um selecionador de [HoloLens](hardware-accessories.md#hololens-clicker) ou falando sobre o comando de voz "Select".
 
-![Estado pronto para gestos de mão em HoloLens](images/image9.png)<br>
-*Estado pronto para o indicador e polegar no HoloLens.*
+![Estado pronto para gestos de mão no HoloLens](images/image9.png)<br>
+*Estado pronto para toque de ar no HoloLens.*
 
-Indicador e polegar é um gesto discreto. Uma seleção é concluída ou não é, uma ação é ou não ocorrer dentro de uma experiência. É possível, embora não seja recomendado sem alguma finalidade específica, para criar outros gestos discretos de combinações de componentes principais (por exemplo, um gesto de toque duplo para significar algo diferente de um único toque).
+O toque de ar é um gesto discreto. Uma seleção está concluída ou não é, uma ação é ou não é executada em uma experiência. É possível, embora não seja recomendado sem alguma finalidade específica, criar outros gestos discretos de combinações dos componentes principais (por exemplo, um gesto de toque duplo para significar algo diferente de um toque único).
 
-![Com o dedo na posição pronta e, em seguida, um movimento de toque ou clique em](images/readyandpress.jpg)<br>
-*Como executar um indicador e polegar: Gerar o dedo para a posição de pronto, pressione o dedo para baixo até o toque ou selecione e, em seguida, fazer backup para liberar.*
+![Dedo na posição pronta e, em seguida, um toque ou clique em movimento](images/readyandpress.jpg)<br>
+*Como executar um toque de ar: Eleve o dedo do índice à posição pronta, pressione o dedo para baixo para tocar ou selecionar e, em seguida, faça backup para o lançamento.*
 
-### <a name="bloom"></a>Bloom
+### <a name="bloom"></a>Cair
 
-Bloom é o gesto de "home" e é reservada para que apenas. É uma ação de sistema especial que é usada para retornar ao Menu Iniciar. É equivalente a pressionar a tecla do Windows em um teclado ou o botão do Xbox em um controlador do Xbox. O usuário pode usar qualquer um dos mão.
+A flor é o gesto de "início" e é reservado para isso sozinho. É uma ação especial do sistema que é usada para voltar ao menu iniciar. É equivalente a pressionar a tecla Windows em um teclado ou o botão Xbox em um controlador Xbox. O usuário pode usar qualquer uma das mãos.
 
-![Gesto de bloom em HoloLens](images/image10-640px.png)
+![Gesto de cair no HoloLens](images/image10-640px.png)
 
-Para fazer o gesto de bloom em HoloLens, mantenha a sua mão, palm, junto com seu alcance. Em seguida, abra a mão. Observe que você também sempre pode retornar ao início dizendo "Ei Cortana, Go Home". Aplicativos não é possível reagir especificamente a uma ação inicial, como elas são tratadas pelo sistema.
+Para fazer o gesto de cair no HoloLens, mantenha sua mão em mãos, com suas mãos juntas. Em seguida, abra sua mão. Observe que você também pode retornar para começar dizendo "Ei Cortana, Go Home". Os aplicativos não podem reagir especificamente a uma ação inicial, pois são tratados pelo sistema.
 
-![Gesto de bloom](images/bloom-giphy.gif)<br>
-*Como executar o gesto de bloom em HoloLens.*
+![Gesto de cair](images/bloom-giphy.gif)<br>
+*Como executar o gesto de flor no HoloLens.*
 
-## <a name="composite-gestures"></a>Gestos de composição
+## <a name="composite-gestures"></a>Gestos compostos
 
-Aplicativos podem reconhecer os toques de mais de apenas individuais. Pela combinação de toque, mantenha e de versão com o movimento da mão, gestos de composição mais complexos podem ser executados. Esses gestos de alto nível ou compostos dependem de baixo nível entrados dados espaciais (de indicador e polegar e Bloom) que os desenvolvedores têm acesso ao.
+Os aplicativos podem reconhecer mais do que apenas toques individuais. Pela combinação do toque, do gesto de manter e de soltar com o movimento da mão, gestos compostos mais complexos podem ser feitos. Esses gestos compostos ou de alto nível baseiam-se nos dados de entrada espaciais de baixo nível (do fechar e abrir dedos indicador e polegar ao abrir a mão) aos quais os desenvolvedores têm acesso.
 
 <table>
 <tr>
 <th> Gesto de composição</th><th> Como aplicar</th>
 </tr><tr>
-<td>Indicador e polegar</td><td>O gesto de toque de ar (bem como outros gestos abaixo) reage somente a um toque específico. Para detectar outras toques, como o Menu ou compreensão, seu aplicativo deve usar diretamente as interações de baixo nível descritas na seção de gestos de dois componentes principais acima.</td>
+<td>Fechar e abrir dedos indicador e polegar</td><td>O gesto de fechar e abrir dedos indicador e polegar (bem como os outros gestos abaixo) responde somente a um toque específico. Para detectar outros toques, como menu ou segurar, o aplicativo precisa usar diretamente as interações de baixo nível descritas na seção de gestos de dois componentes principais acima.</td>
 </tr><tr>
-<td>Tap e hold</td><td><p>Espera é simplesmente manter a posição do dedo para baixo do indicador e polegar. A combinação do ar tap e hold permite para uma variedade de mais complexos &quot;clique e arraste&quot; interações quando combinado com o arm movimentação como pegar um objeto em vez de ativá-la ou &quot;mousedown&quot; interações secundárias como mostrar um menu de contexto.</p><p>Tenha cuidado ao projetar para esse gesto no entanto, como os usuários pode estar sujeita a relaxar postures suas mãos no decorrer de quaisquer gesto estendido.</p></td>
+<td>Fechar e abrir dedos indicador e polegar e manter</td><td><p>Manter é simplesmente manter a posição do dedo para baixo no gesto de fechar e abrir dedos indicador e polegar. A combinação de toque e suspensão do ar permite uma variedade de interações &quot;mais complexas de&quot; clicar e arrastar quando combinadas com movimento de ARM, como a seleção de um objeto &quot;,&quot; em vez de ativá-lo ou MouseDown interações secundárias, como mostrar um menu de contexto.</p><p>No entanto, tenha cuidado ao projetar o uso desse gesto, pois os usuários podem estar propensos a relaxar suas posturas de mão no decorrer de qualquer gesto estendido.</p></td>
 </tr><tr>
-<td>Manipulação</td><td><p>Gestos de manipulação que podem ser usados para mover, redimensionar ou girar um holograma quando desejar que o holograma reagir 1:1 para o usuário&#39;movimentos de mão de s. Um uso para tais movimentações de 1:1 é permitir que o usuário desenha ou pintar no mundo.</p><p>O direcionamento inicial um gesto de manipulação de deve ser feito pelo olhar ou apontando. Depois que o tap e hold é iniciado, qualquer manipulação do objeto, em seguida, é tratada manualmente os movimentos, liberando o usuário para olhar em volta, embora eles manipulam.</p></td>
+<td>Manipulação</td><td><p>Os gestos de manipulação podem ser usados para mover, redimensionar ou girar um holograma quando você quiser que o holograma reaja 1:1&#39;aos movimentos do usuário. Um uso para essas movimentações de 1:1 é permitir que o usuário desenhe ou pinte no mundo.</p><p>O direcionamento inicial de um gesto de manipulação deve ser feito pelo foco ou apontando. Depois que o gesto de fechar e abrir dedos indicador e polegar e manter for iniciado, qualquer manipulação do objeto será tratada pelos movimentos da mão, liberando o usuário para olhar em volta durante a manipulação.</p></td>
 </tr><tr>
-<td>Navegação</td><td><p>Gestos de navegação funcionam como um joystick virtual e podem ser usados para navegar de widgets de interface do usuário, como menus radiais. Toque e segure para iniciar o gesto e, em seguida, mova a mão dentro de um cubo 3D normalizado, centralizada em torno de imprensa inicial. Você pode mover sua mão ao longo do eixo X, Y ou Z de um valor de -1 para 1 com 0 sendo o ponto de partida.</p><p>Navegação pode ser usada para criar com base em velocidade de rolagem contínua ou gestos de zoom, semelhantes a uma interface do usuário de 2D de rolagem clicando no botão do meio do mouse e, em seguida, mover o mouse para cima para baixo.</p><p>A navegação com o rails refere-se à capacidade de reconhecer os movimentos no certo eixo até certo limite é atingido naquele eixo. Isso só é útil, quando o movimento em mais de um eixo está habilitado em um aplicativo pelo desenvolvedor, por exemplo, se um aplicativo é configurado para reconhecer gestos de navegação em X, eixo Y, mas também especificado eixo com trilhos X. Nesse caso, sistema reconhecerá movimentos de mão em eixo X, desde que eles permaneçam dentro de um imaginário rails (guia) no eixo, X se o movimento de mão também ocorre eixo Y.</p><p>Em aplicativos 2D, os usuários podem usar gestos de navegação vertical para rolar, aplicar zoom ou arraste dentro do aplicativo. Isso injeta toques de dedo virtual para o aplicativo para simular os gestos de toque do mesmo tipo. Os usuários podem selecionar qual das seguintes ações ocorrem alternando entre as ferramentas na barra de acima do aplicativo, selecionando o botão ou dizendo &#39; &lt;arrastar/rolagem/Zoom&gt; ferramenta&#39;.</p></td>
+<td>Navegação</td><td><p>Os gestos de navegação funcionam como um joystick virtual e podem ser usados para navegar por widgets de interface do usuário, como menus radiais. Feche e abra os dedos indicador e polegar e mantenha para iniciar o gesto e, em seguida, mova a mão dentro de um cubo 3D normalizado, centralizado em torno do pressionamento inicial. Você pode mover a mão ao longo do eixo X, Y ou Z de um valor -1 a 1, sendo 0 o ponto de partida.</p><p>A navegação pode ser usada para criar gestos de rolagem ou zoom contínuo baseados em velocidade, semelhante à rolagem de uma interface do usuário 2D com um clique no botão do meio do mouse e, em seguida, a movimentação do mouse para cima e para baixo.</p><p>A navegação com trilhos refere-se à capacidade de reconhecer movimentos em determinado eixo até certo limite ser atingido nesse eixo. Isso só é útil quando o movimento em mais de um eixo é habilitado em um aplicativo pelo desenvolvedor, por exemplo, se um aplicativo é configurado para reconhecer gestos de navegação nos eixos X e Y, mas também no eixo X especificado com trilhos. Nesse caso, o sistema reconhecerá os movimentos de mão no eixo X, desde que eles permaneçam dentro de um trilho imaginário (guia) no eixo, X caso o movimento de mão também ocorra no eixo Y.</p><p>Em aplicativos 2D, os usuários podem usar gestos de navegação vertical para rolagem, zoom ou operações de arrastar dentro do aplicativo. Isso injeta toques de dedo virtuais no aplicativo para simular gestos de toque do mesmo tipo. Os usuários podem selecionar quais dessas ações ocorrem alternando entre as ferramentas na barra acima do aplicativo, seja selecionando o botão ou dizendo &#39; &lt;a ferramenta&#39;rolar/arrastar/aplicar zoom&gt; .</p></td>
 </tr>
 </table>
 
@@ -106,24 +106,24 @@ Aplicativos podem reconhecer os toques de mais de apenas individuais. Pela combi
 
 ### <a name="gesture-recognizers"></a>Reconhecedores de gestos
 
-Uma vantagem de usar o reconhecimento de gesto é que você pode configurar um reconhecedor de gestos apenas para os gestos que de destino atual holograma pode aceitar. A plataforma fará apenas a necessário para distinguir os gestos com suporte específicos de Desambiguidade. Dessa forma, um holograma que suporta apenas o polegar pode aceitar qualquer período de tempo entre press e versão, enquanto um holograma que dá suporte tanto tocar e segurar pode promover o tap a uma isenção após o limite de tempo de espera.
+Uma vantagem do uso do reconhecimento de gestos é que você pode configurar um reconhecedor de gestos apenas para os gestos que o holograma direcionado atualmente pode aceitar. A plataforma fará apenas a desambiguidade necessária para distinguir esses gestos compatíveis específicos. Dessa forma, um holograma que só é compatível com o gesto de fechar e abrir dedos indicador e polegar pode aceitar qualquer período de tempo entre o pressionamento e a liberação, enquanto um holograma que é compatível com o gesto de fechar e abrir dedos indicador e polegar e manter pode promover o toque a um gesto de manter após o limite de tempo em que o toque é mantido.
 
 ## <a name="hand-recognition"></a>Reconhecimento de mão
 
-HoloLens reconhece gestos de mão acompanhando a posição de uma ou ambas as mãos que são visíveis para o dispositivo. HoloLens vê mãos quando estão em qualquer um de **estado está pronto** (parte posterior a mão voltada para o usuário com o dedo para cima) ou o **estado pressionado** (parte posterior a mão voltada para o usuário com o dedo para baixo). Quando as mãos estiverem em outras poses, o HoloLens irá ignorá-los.
+O HoloLens reconhece gestos de mão acompanhando a posição de uma ou das duas mãos visíveis para o dispositivo. O HoloLens vê as mãos quando estão no **estado pronto** (o verso da mão com o dedo para cima) ou o **estado pressionado** (no verso da mão com o dedo do índice). Quando as mãos estiverem em outras poses, o HoloLens as ignorará.
 
-Para cada mão que HoloLens detecta, você pode acessar sua posição (sem orientação) e seu estado pressionado. Como a mão se aproximar a borda do quadro de gesto, também são fornecidas com um vetor de direção, você pode mostrar ao usuário para que eles saibam como mover sua mão para obtê-lo novamente no qual o HoloLens podem vê-lo.
+Para cada mão detectada pelo HoloLens, você pode acessar sua posição (sem orientação) e seu estado pressionado. Conforme a mão se aproxima da borda do quadro de gesto, você também recebe um vetor de direção, que você pode mostrar ao usuário para que ele saiba como mover a mão para retorná-la ao local em que o HoloLens possa vê-la.
 
 ## <a name="gesture-frame"></a>Quadro de gesto
 
-Para gestos em HoloLens, a mão deve estar em um "gesto quadro", em um intervalo em que a detecção de gesto câmeras podem ver adequadamente (muito aproximadamente de nariz para foi muito e entre os ombros). Os usuários precisam ser treinados para essa área de reconhecimento para o sucesso da ação e para seu próprios conforto (muitos usuários inicialmente pressupor que o quadro de gesto deve ser dentro de sua exibição por meio do HoloLens e mantenha a manter-se uncomfortably para interagir). Ao usar o HoloLens Clicker, suas mãos não precisa estar dentro do quadro de gesto.
+Para os gestos no HoloLens, a mão precisa estar em um “quadro de gesto”, em um alcance no qual as câmeras de detecção de gesto possam vê-la de forma adequada (muito aproximadamente, do nariz até a cintura e entre os ombros). Os usuários precisam ser treinados nessa área de reconhecimento para o sucesso da ação e para seu próprio conforto (muitos usuários inicialmente presumirão que o quadro de gesto está dentro de sua visão por meio do HoloLens e manterão os braços levantados de forma desconfortável para interagir com ele). Ao usar o HoloLens Clicker, suas mãos não precisam estar dentro do quadro de gesto.
 
-No caso de gestos contínuos em particular, há alguns riscos de usuários movendo suas mãos fora do quadro de gesto no gesto intermediário (ao mover um objeto holográfico, por exemplo) e perder seu resultado pretendido.
+No caso de gestos contínuos em particular, há algum risco de que os usuários movam as mãos para fora do quadro de gesto durante o gesto intermediário (ao mover um objeto holográfico, por exemplo) e percam seu resultado pretendido.
 
 Há três coisas que você deve considerar:
-* Formação do usuário sobre o quadro de gesto existência e limites aproximados (Isso é ministrado durante a instalação do HoloLens).
-* Notificar os usuários quando seus gestos estão se aproximando/últimas os limites do quadro de gesto dentro de um aplicativo, para o grau que um gesto perdido leva a resultados indesejados. Pesquisas mostram as qualidades principais de tal um sistema de notificação e o shell do HoloLens oferece um bom exemplo desse tipo de notificação (visual, no cursor central, que indica a direção em limites em que está ocorrendo cruzamento).
-* Consequências de quebrar os limites de quadro do gesto devem ser minimizadas. Em geral, isso significa que o resultado de um gesto deve ser interrompido no limite, mas não invertido. Por exemplo, se um usuário está mudando algum objeto holographic em uma sala, movimentação deve parar quando o quadro de gesto é violado, mas **não** ser retornado para o ponto de partida. O usuário pode experimentar alguns frustração em seguida, mas pode mais rapidamente entender os limites e não precisa reiniciar suas ações pretendidas completas de cada vez.
+* Educação do usuário sobre a existência do quadro de gesto e os limites aproximados (isso é ensinado durante a instalação do HoloLens).
+* Notificação dos usuários quando seus gestos estiverem se aproximando ou saírem dos limites do quadro de gesto em um aplicativo, na medida em que um gesto perdido levará a resultados indesejados. As pesquisas mostram as principais qualidades de um sistema de notificação como esse e o shell do HoloLens oferece um bom exemplo desse tipo de notificação (visual, no cursor central, indicando a direção na qual o limite está sendo ultrapassado).
+* As consequências de sair dos limites do quadro do gesto deverão ser minimizadas. Em geral, isso significa que o resultado de um gesto deve ser interrompido no limite, mas não revertido. Por exemplo, se um usuário estiver movendo algum objeto Holographic por uma sala, a movimentação deverá parar quando o quadro do gesto for violado, mas **não** será retornado para o ponto de partida. Assim, o usuário poderá se frustrar, mas poderá mais rapidamente entender os limites e não precisar reiniciar suas ações pretendidas completas sempre.
 
 ## <a name="see-also"></a>Consulte também
 * [Focar com a cabeça e esperar](gaze-and-dwell.md)

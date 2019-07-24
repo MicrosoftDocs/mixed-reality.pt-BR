@@ -1,67 +1,67 @@
 ---
 title: Cor, luz e materiais
-description: Criação de conteúdo para realidade misturada requer uma consideração cuidadosa de cor, iluminação e materiais para cada um dos ativos visuais usados em sua experiência.
+description: A criação de conteúdo para realidade misturada requer uma consideração cuidadosa de cor, iluminação e materiais para cada um dos ativos visuais usados em sua experiência.
 author: mavitazk
 ms.author: pinkb
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Windows Mixed Reality, design, cor, luz, materiais
+keywords: Realidade mista do Windows, design, cor, luz, materiais
 ms.openlocfilehash: 3f8ee8edfe4cbbaf8a55b3c4a9125f752823be9c
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59589848"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63526490"
 ---
 # <a name="color-light-and-materials"></a>Cor, luz e materiais
 
-Criação de conteúdo para realidade misturada requer uma consideração cuidadosa de cor, iluminação e materiais para cada um dos ativos visuais usados em sua experiência. Essas decisões podem ser para fins estéticos, como o uso de luz e material para definir o tom de um ambiente imersivo e finalidades funcionais, como o uso de cores surpreendentes para alertar os usuários de uma ação iminente. Cada uma dessas decisões deve ser contra as oportunidades e restrições de dispositivo de destino da sua experiência.
+A criação de conteúdo para realidade misturada requer uma consideração cuidadosa de cor, iluminação e materiais para cada um dos ativos visuais usados em sua experiência. Essas decisões podem ser para ambos os fins de estética, como o uso de luz e material para definir o tom de um ambiente de imersão e finalidades funcionais, como o uso de cores surpreendentes para alertar os usuários de uma ação iminente. Cada uma dessas decisões deve ser avaliada em relação às oportunidades e restrições do dispositivo de destino de sua experiência.
 
-Abaixo estão as diretrizes específicas para ativos de renderização em headsets envolventes e holographic. Muitos deles estão estreitamente relacionados a outras áreas técnicas e uma lista de tópicos relacionados pode ser encontrada na [Consulte também](color,-light-and-materials.md#see-also) seção no final deste artigo.
+Veja abaixo as diretrizes específicas para renderizar ativos em headsets de imersão e Holographic. Muitos deles estão fortemente ligados a outras áreas técnicas e uma lista de assuntos relacionados pode ser encontrada na seção [Consulte também](color,-light-and-materials.md#see-also) no final deste artigo.
 
-## <a name="rendering-on-immersive-vs-holographic-devices"></a>Renderização em imersivo versus dispositivos holográfico
+## <a name="rendering-on-immersive-vs-holographic-devices"></a>Renderização em dispositivos de imersão versus Holographic
 
-Conteúdo renderizado no fones imersivos em exposição aparecerá visualmente diferente quando comparado ao conteúdo renderizado no holográfica fones de ouvido. Enquanto fones imersivos em exposição geralmente renderizar conteúdo quanto você esperaria em uma tela 2D, headsets holográfica como HoloLens use transparente, sequencial de cor RGB exibe para hologramas processa.
+O conteúdo renderizado em headsets de imersão aparecerá visualmente diferente quando comparado ao conteúdo renderizado em headsets Holographic. Embora os headsets de imersão geralmente processem o conteúdo como você esperaria em uma tela 2D, os headsets Holographic como o HoloLens usam a seqüência de cores, consulte o RGB é exibido para renderizar hologramas.
 
-Sempre têm tempo para testar suas experiências holográfica um Headset holográfica. A aparência do conteúdo, mesmo se ele foi desenvolvido especificamente para dispositivos holográfico, serão diferentes conforme visto no secundários monitores, instantâneos e no modo de exibição spectator. Lembre-se para fazer a ronda experiências com um dispositivo, teste a iluminação de hologramas e observando de todos os lados (bem como acima e abaixo) como seu conteúdo é renderizado. Certifique-se de testar em uma variedade de configurações de brilho no dispositivo, porque é improvável que todos os usuários compartilharão um padrão assumido, bem como um conjunto diversificado de condições de iluminação.
+Sempre Reserve um tempo para testar suas experiências de Holographic em um headset Holographic. A aparência do conteúdo, mesmo que seja criado especificamente para dispositivos Holographic, será diferente, como visto nos monitores secundários, instantâneos e na exibição do Spectator. Lembre-se de acompanhar experiências com um dispositivo, testar a iluminação de hologramas e observar de todos os lados (bem como de acima e abaixo) como o conteúdo é renderizado. Certifique-se de testar em um intervalo de configurações de brilho no dispositivo, pois é improvável que todos os usuários compartilhem um padrão presumido, bem como um conjunto diversificado de condições de iluminação.
 
-## <a name="fundamentals-of-rendering-on-holographic-devices"></a>Conceitos básicos de renderização em dispositivos holographic
-* **Dispositivos holográfico têm exibe aditivas** – hologramas são criadas com a adição de luz à luz do mundo real – branco aparecerá muito clara, enquanto preta aparecerá transparente.
-* **Impacto de cores varia de acordo com o ambiente do usuário** – há muitas condições de iluminação diversificado na sala de um usuário. Crie conteúdo com níveis apropriados de contraste para proporcionar maior clareza.
-* **Evite iluminação dinâmica** – hologramas estão acesos uniformemente nas experiências holográfica são mais eficientes. Usando a iluminação avançada e dinâmica provavelmente excederá os recursos de sombreadores móveis.
+## <a name="fundamentals-of-rendering-on-holographic-devices"></a>Conceitos básicos de renderização em dispositivos Holographic
+* **Dispositivos Holographic têm exibições aditivas** – os hologramas são criados com a adição de luz à luz do mundo real – o branco aparecerá com brilho, enquanto preto aparecerá transparente.
+* **O impacto das cores varia de acordo com o ambiente do usuário** – há muitas condições de iluminação diferentes na sala do usuário. Crie conteúdo com níveis apropriados de contraste para ajudar com a clareza.
+* **Evite a iluminação dinâmica** – os hologramas que são acesos uniformemente em experiências de Holographic são os mais eficientes. Usando a luminosidade avançada, a iluminação dinâmica provavelmente excederá os recursos de sombreadores móveis.
 
 ## <a name="designing-with-color"></a>Criando com cor
 
-Devido à natureza exibe aditiva, determinadas cores podem parecer diferentes em telas holographic. Algumas cores serão exibida em ambientes de iluminação, enquanto outros serão exibidos como o menor impacto. As cores frias tendem a recuam na tela de fundo, enquanto as cores quentes saltar para o primeiro plano. Considere estes fatores conforme você explora a cor em suas experiências:
-* **A gama** -HoloLens se beneficia de uma "gama ampla" de cor, conceitualmente semelhante a Adobe RGB. Como resultado, algumas cores podem apresentar diferentes qualidades e representação no dispositivo.
-* **Gama** -o brilho e contraste da imagem renderizada irão variar entre dispositivos envolventes e holographic. Geralmente, essas diferenças em dispositivos aparecem tornar áreas escuras de cores e sombras, mais ou menos brilhante.
-* **Separação de cores** -também chamado de "divisão de cor" ou "margem das cores", separação de cores ocorre com mais frequência movendo hologramas (incluindo o cursor) quando um usuário controla objetos com seus olhos.
-* **Cor uniformidade** -normalmente hologramas são renderizadas com brilho bastante para que eles mantenham a uniformidade de cores, independentemente da tela de fundo. Grandes áreas podem se tornar toques. Evite grandes regiões da brilhante, cor sólida.
-* **Renderização de cores claras** -branco aparece muito claro e deve ser usado com moderação. Na maioria dos casos, considere um valor em branco em torno de R 235 G 235 B 235. Grandes áreas brilhantes podem causar discomfort do usuário.
+Devido à natureza de exibições aditivas, determinadas cores podem aparecer diferentes em exibições de Holographic. Algumas cores serão exibidas em ambientes de iluminação, enquanto outras aparecerão menos impactantes. As cores legais tendem a receder em segundo plano enquanto cores quentes saltam para o primeiro plano. Considere esses fatores à medida que explorar a cor em suas experiências:
+* Os benefícios da **gama** -HoloLens de uma "ampla gama" de cores, conceitualmente semelhante ao Adobe RGB. Como resultado, algumas cores podem apresentar qualidades e representação diferentes no dispositivo.
+* **Gama** -o brilho e o contraste da imagem renderizada irão variar entre os dispositivos de imersão e Holographic. Essas diferenças de dispositivo geralmente parecem tornar áreas escuras de cores e sombras, mais ou menos brilhantes.
+* **Separação de cores** – também chamada de "cor divisão" ou "borda colorida", a separação de cores geralmente ocorre com o movimento de holograma (incluindo o cursor) quando um usuário rastreia objetos com seus olhos.
+* Uniformidade de **cores** -normalmente, os hologramas são renderizados com brilho suficiente para que mantenham a uniformidade de cores, independentemente do plano de fundo. Áreas grandes podem se tornar blotchy. Evite grandes regiões de cores brilhantes e sólidas.
+* **Renderizando cores claras** -o branco parece muito brilhante e deve ser usado com moderação. Na maioria dos casos, considere um valor branco em volta de R 235 G 235 B 235. Grandes áreas brilhantes podem causar discomfort do usuário.
 
-**Renderização de cores escuras**
+**Renderizando cores escuras**
 
-Devido à natureza exibe aditivas, as cores escuras aparecem transparentes. Um objeto preto sólido aparecerá não é diferente do mundo real. Canal alfa de consulte abaixo. Para dar a aparência de "preto" Tente um valor RGB cinza escuro muito como 16,16,16.
+Devido à natureza de exibições aditivas, as cores escuras aparecem transparentes. Um objeto preto sólido não aparecerá de forma diferente do mundo real. Consulte canal alfa abaixo. Para dar a aparência de "preto", experimente um valor RGB cinza muito escuro, como 16, 16, 16.
 
-![Normal versus gama de cores](images/640px-widegamut.png)<br>
-*Normal versus gama de cores*
+![Gama de cores normal versus ampla](images/640px-widegamut.png)<br>
+*Gama de cores normal versus ampla*
 
 ## <a name="technical-considerations"></a>Considerações técnicas
-* **Alias** -considerar o alias, irregulares ou "degraus" em que a borda da geometria de um holograma atinge o mundo real. Usando texturas com maior nível de detalhes pode agravados esse efeito. Texturas devem ser mapeadas e a filtragem habilitada. Considere as bordas do hologramas-dégradé ou adicionando uma textura que cria uma borda preta de borda em torno de objetos. Sempre que possível, evite geometria fina.
-* **Canal alfa** -você deve limpar o canal alfa para totalmente transparente para todas as partes em que você não estiver renderizando um holograma. Deixando os leads indefinidos alfabéticos para artefatos visuais ao fazer vídeos/imagens do dispositivo ou com o modo de exibição Spectator.
-* **Suavização de textura** – uma vez que a luz é aditivos exibe holográfica, é melhor evitar grandes regiões da brilhante, cor sólida, conforme eles geralmente não produzir o efeito visual desejado.
+* **Alias** -seja considerem de alias, denteado ou "etapas da escada", em que a borda da geometria de um holograma atende ao mundo real. O uso de texturas com alto detalhe pode aggravate esse efeito. As texturas devem ser mapeadas e habilitadas para filtragem. Considere desbotar as bordas de hologramas ou adicionar uma textura que cria uma borda de borda preta em torno de objetos. Evite a geometria fina sempre que possível.
+* **Canal alfa** -você deve limpar o canal alfa para totalmente transparente para todas as partes em que você não está renderizando um holograma. Deixar o alfa não definido leva a artefatos visuais ao tirar imagens/vídeos do dispositivo ou com a exibição Spectator.
+* **Suavização de textura** -como a luz é aditiva em exibições de Holographic, é melhor evitar grandes regiões de cores sólidas e brilhantes, pois elas geralmente não produzem o efeito visual pretendido.
 
-## <a name="storytelling-with-light-and-color"></a>Storytelling com luz e a cor
+## <a name="storytelling-with-light-and-color"></a>Narração com luz e cor
 
-Luz e a cor podem ajudar a tornar seu hologramas aparecer mais naturalmente em de um usuário ambiente, bem como oferecem diretrizes e ajuda para o usuário. Para obter experiências holográfica, considere estes fatores conforme você explora a cor e iluminação:
-* **Vinheta** -um efeito 'vignette' para escurecer materiais pode ajudar a se concentrar a atenção do usuário no centro do campo de visualização. Esse efeito escurece material do holograma em alguns radius do vetor de olhar do usuário. Observe que isso também é eficaz quando o usuário vê hologramas a partir de um ângulo Oblíquo ou glancing.
-* **Ênfase** -chamar a atenção para objetos ou pontos de interação de contraste de cores, brilho, e de iluminação. Para uma visão mais detalhada de métodos de iluminação na narração, consulte [cinematografia Pixel - uma abordagem de iluminação para gráficos de computador](http://media.siggraph.org/education/cgsource/Archive/ConfereceCourses/S96/course30.pdf).
+A luz e a cor podem ajudar a tornar seus hologramas mais naturalmente no ambiente de um usuário, bem como orientações de oferta e ajuda para o usuário. Para experiências de Holographic, considere esses fatores ao explorar a iluminação e a cor:
+* **Vignetting** -um efeito ' Vignette ' para escurecer materiais pode ajudar a concentrar a atenção do usuário no centro do campo de exibição. Esse efeito escurece o material do holograma em algum raio do vetor olhar do usuário. Observe que isso também é eficaz quando o usuário exibe os hologramas de um ângulo oblíquo ou glancing.
+* **Ênfase** -desenhando a atenção para objetos ou pontos de interação por contraste com cores, brilho e iluminação. Para obter uma visão mais detalhada dos métodos de iluminação no narração, consulte [pixel Cinematography-uma abordagem de iluminação para gráficos de computador](http://media.siggraph.org/education/cgsource/Archive/ConfereceCourses/S96/course30.pdf).
 
-![Uso de cores para mostrar a ênfase para elementos de narração, mostrada aqui em uma cena de fragmentos.](images/640px-fragments.jpg)<br>
-*Uso de cores para mostrar a ênfase para elementos de narração, mostrada aqui em uma cena [fragmentos](https://www.microsoft.com/p/fragments/9nblggh5ggm8).*
+![Uso de cor para mostrar ênfase para elementos narração, mostrados aqui em uma cena de fragmentos.](images/640px-fragments.jpg)<br>
+*Uso de cor para mostrar ênfase para elementos narração, mostrados aqui em uma cena de [fragmentos](https://www.microsoft.com/p/fragments/9nblggh5ggm8).*
 
 ## <a name="see-also"></a>Consulte também
 * [Separação de cores](hologram-stability.md#color-separation)
 * [Hologramas](hologram.md)
-* [Linguagem de Design da Microsoft - cor](https://www.microsoft.com/design/color)
-* [Plataforma universal do Windows - cor](https://docs.microsoft.com/windows/uwp/style/color)
+* [Linguagem de design da Microsoft-cor](https://www.microsoft.com/design/color)
+* [Plataforma Universal do Windows-cor](https://docs.microsoft.com/windows/uwp/style/color)

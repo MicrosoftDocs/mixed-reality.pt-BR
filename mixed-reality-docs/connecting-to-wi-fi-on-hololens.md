@@ -1,11 +1,11 @@
 ---
-title: Conectar-se ao Wi-Fi em HoloLens
-description: Instruções sobre como se conectar à internet sem fio com o HoloLens e como identificar o endereço IP do dispositivo.
+title: Conectando-se ao Wi-Fi no HoloLens
+description: Instruções sobre como se conectar à Internet sem fio com o HoloLens e como identificar o endereço IP do dispositivo.
 author: mattzmsft
 ms.author: mazeller
 ms.date: 09/27/2018
 ms.topic: article
-keywords: HoloLens, wifi, wireless, internet, ip, ip address
+keywords: HoloLens, WiFi, sem fio, Internet, IP, endereço IP
 ms.openlocfilehash: b064514124d861c0734ca51b3878d4a68b592fab
 ms.sourcegitcommit: f5c1dedb3b9e29f27f627025b9e7613931a7ce18
 ms.translationtype: MT
@@ -13,63 +13,63 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 04/28/2019
 ms.locfileid: "64670112"
 ---
-# <a name="connecting-to-wi-fi-on-hololens"></a>Conectar-se ao Wi-Fi em HoloLens
+# <a name="connecting-to-wi-fi-on-hololens"></a>Conectando-se ao Wi-Fi no HoloLens
 
-HoloLens contém um 802.11ac-capaz, 2 x 2 rádio de Wi-Fi. Conectar o HoloLens a uma rede Wi-Fi é semelhante a conectar um dispositivo Windows 10 Desktop ou Mobile a uma rede Wi-Fi.
+O HoloLens contém uma rádio Wi-Fi com capacidade para AC 802.11, 2x2. Conectar o HoloLens a uma rede Wi-Fi é semelhante a conectar um dispositivo Windows 10 desktop ou móvel a uma rede Wi-Fi.
 
-![Configurações de Wi-Fi HoloLens](images/wifi-hololens-600px.jpg)
+![Configurações de Wi-Fi do HoloLens](images/wifi-hololens-600px.jpg)
 
-## <a name="connecting-to-a-wi-fi-network-on-hololens"></a>Conectar a uma rede Wi-Fi em HoloLens
+## <a name="connecting-to-a-wi-fi-network-on-hololens"></a>Conectando-se a uma rede Wi-Fi no HoloLens
 
-1. [Bloom](gestures.md#bloom) para o **iniciar** menu.
-2. Selecione o **as configurações** aplicativo de início ou do **todos os aplicativos** lista à direita do menu Iniciar.
-3. O **configurações** aplicativo será colocado automaticamente na sua frente.
-4. Selecione **rede e Internet**.
+1. [Cair](gestures.md#bloom) para o menu **Iniciar** .
+2. Selecione o aplicativo **configurações** em iniciar ou na lista **todos os aplicativos** à direita do menu iniciar.
+3. O aplicativo de **configurações** será colocado automaticamente na frente de você.
+4. Selecione **rede & Internet**.
 5. Verifique se o Wi-Fi está ativado.
 6. Selecione uma rede Wi-Fi na lista.
-7. Digite a senha de rede Wi-Fi (se necessário).
+7. Digite a senha da rede Wi-Fi (se necessário).
 
-## <a name="disabling-wi-fi-on-hololens"></a>Desabilitando o Wi-Fi em HoloLens
+## <a name="disabling-wi-fi-on-hololens"></a>Desabilitando Wi-Fi no HoloLens
 
-### <a name="using-the-settings-app-on-hololens"></a>Usando o aplicativo de configurações em HoloLens
+### <a name="using-the-settings-app-on-hololens"></a>Usando o aplicativo de configurações no HoloLens
 
-1. [Bloom](gestures.md#bloom) para o **iniciar** menu.
-2. Selecione o **as configurações** aplicativo de início ou do **todos os aplicativos** lista à direita do menu Iniciar.
-3. O **configurações** aplicativo será colocado automaticamente na sua frente.
-4. Selecione **rede e Internet**.
-5. Selecione a opção de controle deslizante de Wi-Fi para movê-lo para a posição "Desativado". Isso irá desativar os componentes de RF do rádio Wi-Fi e desabilitar todas as funcionalidades de Wi-Fi em HoloLens. 
+1. [Cair](gestures.md#bloom) para o menu **Iniciar** .
+2. Selecione o aplicativo **configurações** em iniciar ou na lista **todos os aplicativos** à direita do menu iniciar.
+3. O aplicativo de **configurações** será colocado automaticamente na frente de você.
+4. Selecione **rede & Internet**.
+5. Selecione a opção de controle deslizante Wi-Fi para movê-la para a posição "off". Isso desligará os componentes RF da rádio Wi-Fi e desabilitará toda a funcionalidade de Wi-Fi no HoloLens. 
 
     >[!WARNING]
-    >HoloLens não poderão carregar automaticamente seus [espaços](environment-considerations-for-hololens.md#WiFi fingerprint considerations) quando a opção de Wi-Fi está desabilitada.
+    >O HoloLens não poderá carregar seus [espaços](environment-considerations-for-hololens.md#WiFi fingerprint considerations) automaticamente quando o Wi-Fi Radio estiver desabilitado.
     
-6. Mova a opção de controle deslizante para a posição de "On" para ativar a opção de Wi-Fi e restaurar a funcionalidade de Wi-Fi no Microsoft HoloLens. O estado de rádio Wi-Fi selecionado ("ligado" de "Desativado") será mantido entre as reinicializações.
+6. Mova o controle deslizante para a posição "on" para ativar o rádio Wi-Fi e restaurar a funcionalidade Wi-Fi no Microsoft HoloLens. O estado de rádio Wi-Fi selecionado ("on" de "off") persistirá entre as reinicializações.
 
 ## <a name="how-to-confirm-you-are-connected-to-a-wi-fi-network"></a>Como confirmar que você está conectado a uma rede Wi-Fi
 
-1. [Bloom](gestures.md#bloom) para abrir o **iniciar** menu.
-2. Observe a parte superior esquerda do menu Iniciar para o status de Wi-Fi. O estado de Wi-Fi e o SSID da rede conectada serão mostrados.
+1. [Incair](gestures.md#bloom) para abrir o menu **Iniciar** .
+2. Examine a parte superior esquerda do menu Iniciar para status de Wi-Fi. O estado de Wi-Fi e o SSID da rede conectada serão mostrados.
 
-## <a name="identifying-the-ip-address-of-your-hololens-on-the-wi-fi-network"></a>Identificar o endereço IP do seu HoloLens na rede Wi-Fi
+## <a name="identifying-the-ip-address-of-your-hololens-on-the-wi-fi-network"></a>Identificando o endereço IP do seu HoloLens na rede Wi-Fi
 
-### <a name="using-the-settings-app"></a>Usando o aplicativo de configurações
+### <a name="using-the-settings-app"></a>Usando o aplicativo configurações
 
-1. [Bloom](gestures.md#bloom) para o **iniciar** menu.
-2. Selecione o **as configurações** aplicativo de início ou do **todos os aplicativos** lista à direita do menu Iniciar.
-3. O **configurações** aplicativo será colocado automaticamente na sua frente.
-4. Selecione **rede e Internet**.
-5. Role para baixo até abaixo da lista de redes Wi-Fi disponíveis e selecione **propriedades de Hardware**.
+1. [Cair](gestures.md#bloom) para o menu **Iniciar** .
+2. Selecione o aplicativo **configurações** em iniciar ou na lista **todos os aplicativos** à direita do menu iniciar.
+3. O aplicativo de **configurações** será colocado automaticamente na frente de você.
+4. Selecione **rede & Internet**.
+5. Role para baixo até a lista de redes Wi-Fi disponíveis e selecione **Propriedades de hardware**.
 
     ![Propriedades de hardware nas configurações de Wi-Fi](images/wifi-hololens-hwdetails.jpg)
 
-O endereço IP será mostrado ao lado **endereço IPv4**.
+O endereço IP será mostrado ao lado do **endereço IPv4**.
 
-### <a name="using-cortana"></a>Usando o Cortana
+### <a name="using-cortana"></a>Usando a Cortana
 
-Dizer "*Ei Cortana, o que é meu endereço IP?*" e Cortana exibirá e ler seu endereço IP.
+Diga "*Ei Cortana, qual é meu endereço IP?* " e a Cortana exibirá e lerá seu endereço IP.
 
-### <a name="using-windows-device-portal"></a>Usando o Windows Device Portal
+### <a name="using-windows-device-portal"></a>Usando o portal de dispositivos do Windows
 
-1. Abra o [portal do dispositivo](using-the-windows-device-portal.md#networking) em um navegador da web em seu computador.
-2. Navegue até a **rede** seção.
+1. Abra o [portal do dispositivo](using-the-windows-device-portal.md#networking) em um navegador da Web em seu computador.
+2. Navegue até a seção **rede** .
 
-Seu endereço IP e outras informações de rede serão exibidos lá. Esse método permite fácil copiar e colar do endereço IP em seu computador de desenvolvimento.
+Seu endereço IP e outras informações de rede serão exibidos lá. Esse método permite copiar e colar facilmente o endereço IP no seu computador de desenvolvimento.

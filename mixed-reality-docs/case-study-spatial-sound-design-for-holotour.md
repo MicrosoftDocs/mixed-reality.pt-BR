@@ -1,84 +1,84 @@
 ---
-title: Estudo de caso - espacial design som para HoloTour
-description: Para criar um tour virtual de 3D verdadeiramente imersivo para o Microsoft HoloLens, os vídeos panorâmicas e o cenário holográfico são apenas uma parte da fórmula.
+title: Estudo de caso-design de som espacial para HoloTour
+description: Para criar um tour virtual 3D verdadeiramente envolvente para o Microsoft HoloLens, os vídeos panorâmicos e o cenário Holographic são apenas parte da fórmula.
 author: JSyltebo
 ms.author: jsylte
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Realidade mista do Windows, HoloLens, HoloTour, estudo de caso, som espacial
+keywords: Realidade mista do Windows, HoloLens, HoloTour, som espacial, estudo de caso
 ms.openlocfilehash: eca675534dba12dd65a20fb9d85e4df57f725288
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59590699"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63522431"
 ---
-# <a name="case-study---spatial-sound-design-for-holotour"></a>Estudo de caso - espacial design som para HoloTour
+# <a name="case-study---spatial-sound-design-for-holotour"></a>Estudo de caso-design de som espacial para HoloTour
 
-Para criar um tour virtual de 3D verdadeiramente imersivo para o Microsoft HoloLens, os vídeos panorâmicas e o cenário holográfico são apenas uma parte da fórmula. Jason Syltebo fala sobre como o som do designer de áudio foi capturado e processado para torná-lo a sentir como está, na verdade, em cada um dos locais a HoloTour.
+Para criar um tour virtual 3D verdadeiramente envolvente para o Microsoft HoloLens, os vídeos panorâmicos e o cenário Holographic são apenas parte da fórmula. O designer de áudio Jason Syltebo fala sobre como o som foi capturado e processado para fazer você sentir como você realmente está em cada um dos locais em HoloTour.
 
-## <a name="the-tech"></a>O técnico
+## <a name="the-tech"></a>O Tech
 
-O belas imagens e cenas holográfica, que você vê no HoloTour são apenas uma parte da criação de uma experiência de realidade misturada verossímeis. Embora hologramas só podem aparecer visualmente na frente de um usuário, o [som espacial](spatial-sound.md) recurso do HoloLens permite áudio provenientes de todas as direções, que dá ao usuário uma experiência mais completa de aparelhos.
+As belas imagens e cenas de Holographic que você vê em HoloTour são apenas uma parte da criação de uma experiência de realidade mista de verossímeis. Embora os hologramas só possam aparecer visualmente na frente de um usuário, o recurso de [som espacial](spatial-sound.md) do HoloLens permite que o áudio venha de todas as direções, o que dá ao usuário uma experiência de sensor mais completa.
 
-Som espacial nos permite fornecer indicações de áudio para indicar uma direção na qual o usuário deve ativar ou Avisar ao usuário que há mais hologramas para que eles possam ver dentro de seu espaço. Podemos também anexar um som diretamente a um holograma e atualizar continuamente a direção e a distância que de holograma é de um usuário para torná-lo parecer como se o som é provenientes diretamente do objeto.
+O som espacial nos permite dar indicações de áudio para indicar uma direção na qual o usuário deve ativar ou para permitir que o usuário saiba que há mais hologramas para que eles vejam dentro de seu espaço. Também podemos anexar um som diretamente a um holograma e atualizar continuamente a direção e a distância que o holograma é de um usuário para que pareça que o som é proveniente diretamente desse objeto.
 
-Com HoloTour, queremos aproveitar os recursos de som espaciais do HoloLens, para criar um ambiente de ambiente de 360 graus, sincronizado com o vídeo para revelar os destaques sonic locais específicos.
+Com o HoloTour, queríamos aproveitar os recursos de som espacial do HoloLens para criar um ambiente de 360 graus, sincronizado com o vídeo para revelar os destaques da Sonic de locais específicos.
 
 ## <a name="behind-the-scenes"></a>Nos bastidores
 
-Criamos experiências HoloTour dos dois locais diferentes: Roma e Machu Picchu. Para fazer esses tours se sintam autêntica e atraente queremos evitar o uso de genéricos sons e capturar o áudio diretamente nos locais em que podemos foram filmagem em vez disso.
+Criamos experiências de HoloTour de dois locais diferentes: Roma e Machu Picchu. Para fazer esses Tours parecerem autênticos e atraentes, queríamos evitar o uso de sons genéricos e, em vez disso, capturar áudio diretamente dos locais onde estávamos filmings.
 
-### <a name="capturing-the-audio"></a>Captura de áudio
+### <a name="capturing-the-audio"></a>Capturando o áudio
 
-No nosso [estudo de caso sobre como capturar o conteúdo visual para HoloTour](case-study-capturing-and-creating-content-for-holotour.md), falamos sobre o design personalizado do nosso simuladores de carga de câmera. Consistiu em 14 câmeras GoPro contidas em um invólucro 3D-impresso, projetado para as dimensões específicas a tripé. Para capturar esse simulador de carga de áudio, adicionamos uma matriz de microfone quad abaixo as câmeras, que são inseridos em uma unidade de gravação de 4 canais compact sentei na base do tripé. Escolhemos microfones que não apenas executadas bem, mas que tinha um volume muito pequeno, para não occlude o modo de exibição da câmera.
+Em nosso [estudo de caso sobre como capturar o conteúdo visual para HoloTour](case-study-capturing-and-creating-content-for-holotour.md), falamos sobre o design personalizado do nosso Rig de câmera. Ele consistiu em 14 câmeras GoPros contidas em uma estrutura 3D, projetada para as dimensões específicas do tripod. Para capturar áudio desse Rig, adicionamos uma matriz de microfone quádruplo sob as câmeras, que entraram em uma unidade de gravação compactada de 4 canais que se SAT na base do tripod. Escolhemos microfones que não só eram bem executados, mas que tinham um espaço muito pequeno, para não occlude a exibição da câmera.
 
-![Simulador de carga personalizada de câmera e microfone](images/camera-rig-microphones-300px.png)<br>
-*Simulador de carga personalizada de câmera e microfone*
+![Câmera personalizada e Rig do microfone](images/camera-rig-microphones-300px.png)<br>
+*Câmera personalizada e Rig do microfone*
 
-Esta instalação capturada som em quatro direções o local exato da nossa câmera, dando informações suficientes para recriar um panorama auricular 3D usando o som espacial, o que nós pudéssemos sincronizar posteriormente para o vídeo de 360 graus.
+Essa configuração capturou som em quatro direções do local preciso de nossa câmera, fornecendo informações suficientes para recriar um panorama de auricular 3D usando som espacial, que poderíamos, posteriormente, ser sincronizado com o vídeo de 360 graus.
 
-Um dos desafios com o áudio de matriz da câmera é que você está à mercê do que é gravado no momento da captura. Mesmo se a captura de vídeo for boa, a captura de som pode se tornar problemática devido a sons de fora da câmera como sirenes, aviões ou ventos alta. Para garantir que tínhamos todos os elementos que precisamos, usamos uma série de unidades de gravação de móveis estéreo e mono obter elementos de assíncronos, o ambientes em pontos específicos de interesse em cada local. Esta captura é importante, pois ele permite que o designer de som para buscar o conteúdo limpo e utilizável que pode ser usado na produção após a criação de seu interesse e adicionar mais direcionalidade.
+Um dos desafios com o áudio da matriz de câmera é que você está no mercê do que está registrado no momento da captura. Mesmo que a captura de vídeo seja boa, a captura de som pode se tornar problemática devido a sons fora da câmera, como Sirens, aviões ou altos ventos. Para garantir que tínhamos todos os elementos de que precisamos, usamos uma série de unidades de gravação móvel estéreo e mono para obter elementos de ambiente assíncronos em pontos de interesse específicos em cada local. Essa captura é importante, pois dá ao designer de som a capacidade de buscar conteúdo limpo e utilizável, que pode ser usado em produção após o interesse e adicionar direção adicional.
 
-Qualquer dia determinado captura geraria um grande número de arquivos. Ele era importante desenvolver um sistema para controlar quais arquivos correspondem a um local específico ou a câmera captura. Nossa unidade de gravação foi configurada para arquivos de nome automático por data e número tirado e podemos faria backup esses no final do dia para unidades externas. Na pior das hipóteses, verbalmente slating início de gravações de áudio era importante, pois isso permite a fácil identificação contextual do conteúdo devem nomes de arquivos se tornar um problema. Também foi importante para que possamos visualmente como o vídeo e áudio foram registrados como mídia separada e necessários a serem sincronizados durante o post de imagem fixa a captura da câmera simuladores de carga.
+Qualquer dia de captura determinado geraria um grande número de arquivos. Era importante desenvolver um sistema para controlar quais arquivos correspondem a um local ou uma captura de câmera específica. Nossa unidade de gravação foi configurada para nomear automaticamente os arquivos por data e pegar o número e devemos fazer o backup no final do dia para unidades externas. Na pior das hipóteses, a slat verbal do início das gravações de áudio foi importante, pois isso permite que a identificação contextual fácil do conteúdo se torne um problema. Também foi importante para que possamos visualmente a captura de Rig da câmera, pois o vídeo e o áudio foram registrados como mídia separada e precisavam ser sincronizados durante o post.
 
-### <a name="editing-the-audio"></a>Edição de áudio
+### <a name="editing-the-audio"></a>Editando o áudio
 
-Novamente no studio após a viagem de captura, montando uma experiência auricular direcional e envolvente a primeira etapa é examinar a captura de áudio para um local, escolher a melhor usa e identificar qualquer destaques que pudesse ser aplicados de forma criativa durante todos integração. O áudio é, em seguida, editado e limpos. Por exemplo, uma haste carro barulhento que dura um segundo e repetir algumas vezes, pode ser substituído e montada com seções de áudio silenciosa, o ambiente da mesma captura.
+De volta ao estúdio após a viagem de captura, a primeira etapa na montagem de uma experiência de auricular direcional e de imersão é examinar toda a captura de áudio de um local, escolher a melhor forma e identificar os destaques que poderiam ser aplicados criativamente durante integrar. O áudio é então editado e limpo. Por exemplo, uma haste de carro alta, com duração de um segundo, e repetidas vezes, pode ser substituída e grampeada com seções de áudio silencioso e ambiente da mesma captura.
 
-Quando a edição de vídeo para um local tiver sido estabelecida com o que Designer de som pode sincronizar o áudio correspondente. Neste ponto, nós trabalhamos com captura com câmera simuladores de carga e captura móvel para decidir quais elementos ou combinação delas funcionarão para criar uma cena do áudio envolvente. Uma técnica que encontramos útil era adicionar todos os elementos de som em um áudio editor e compilação rápida linear fictício no-break para fazer experiências com ideias de mistura de diferentes. Isso nos deu melhor ideias formadas quando chegou a hora de criar o plano HoloTour real.
+Quando a edição de vídeo de um local tiver sido estabelecida, o designer de som poderá sincronizar o áudio correspondente. Neste ponto, trabalhamos com a captura de Rig de câmera e a captura móvel para decidir quais elementos, ou combinação deles, funcionarão para criar uma cena de áudio de imersão. Uma técnica que encontramos útil foi adicionar todos os elementos de som em um editor de áudio e criar uma simulação rápida linear para experimentar com diferentes ideias de combinação. Isso nos ofereceu ideias melhores formadas quando chegou a hora de criar os bastidores de HoloTour reais.
 
 ### <a name="assembling-the-scene"></a>Montando a cena
 
-A primeira etapa para criar uma cena 3D de ambiente é criar um ambiente de geral sons em segundo plano ambiente loop que dará suporte a outros recursos e elementos interativos de som em uma cena. Fazer isso, usamos uma abordagem holística para determinado pelas necessidades específicas e os critérios de design de qualquer determinado cena de técnicas de implementação diferentes. Alguns cenas podem de índice na direção do uso da captura de câmera sincronizado, enquanto outros podem exigir uma abordagem mais estruturada que usa mais discretamente colocados sons, elementos interativos e música e som efeitos para os momentos mais Cinemático em HoloTour.
+A primeira etapa para a criação de uma cena de ambiente 3D é criar uma base de sons gerais de loop de ambiente em segundo plano que dará suporte a outros recursos e elementos de som interativos em uma cena. Ao fazer isso, pegamos uma abordagem holística em relação às diferentes técnicas de implementação determinadas pelas necessidades específicas e os critérios de design de qualquer cena específica. Algumas cenas podem ser indexadas em direção ao uso da captura de câmera sincronizada, enquanto outras podem exigir uma abordagem mais organizada que usa sons mais discretos, elementos interativos e música e efeitos sonoros para o mais Cinematic momentos no HoloTour.
 
-Ao indexar sobre o uso de áudio de captura de câmera, colocamos espaciais habilitado o som ambientes áudio emissores correspondente às coordenadas direcionais da orientação da câmera, de modo que a visualização da câmera Norte reproduz áudio do microfone do Norte e da mesma forma para outras direções cardinais. Esses emissores são bloqueados ao mundo, que significa que o usuário pode livremente ativar suas cabeças em relação a essas emissores e o som será alterada da mesma forma, modelagem efetivamente o som de pé nesse local. Ouça a Piazza Navona ou o Pantheon para obter exemplos de segundo plano que usam uma combinação válida de áudio de câmera capturado.
+Ao indexar o uso do áudio de captura de câmera, colocamos emissores de áudio de ambiente habilitados para sons espaciais correspondentes às coordenadas direcionais da orientação da câmera, de modo que a exibição da câmera do Norte reproduza áudio do microfone norte e da mesma forma para as outras direções de cardinal. Esses emissores são bloqueados mundialmente, o que significa que o usuário pode transformar seu cabeçalho livremente em relação a esses emissores e o som será alterado de forma adequada, modelando efetivamente o som de pé nesse local. Ouça o Piazza Navona ou o Pantheon para obter exemplos de cenas que usam uma boa mistura de áudio capturado de câmera.
 
-Uma abordagem diferente envolvidos brincando um ambiente estéreo em loop em conjunto com os emissores de som espaciais colocados ao redor do cenário de reprodução de sons únicas que são randomizados em termos de frequência de volume, densidade e o gatilho. Isso cria um ambiente com uma maior sensação de direcionalidade. No Aguas Calientes, por exemplo, você pode ouvir como cada quadrante do panorama tem os emissores específicos que destacam intencionalmente as áreas específicas da geografia, mas funcionam em conjunto para criar um ambiente imersivo geral.
+Uma abordagem diferente envolvida na reprodução de um Ambience de estéreo de loop em conjunto com emissores de som espaciais colocados em volta da cena que executa sons únicos que são aleatórios em termos de frequência de volume, densidade e gatilho. Isso cria um Ambience com um aspecto aprimorado de direcionalidade. No Aguas Calientes, por exemplo, você pode ouvir como cada quadrante do panorama tem emissores específicos que realçam áreas específicas da geografia, mas trabalham em conjunto para criar um Ambience de imersão geral.
 
 ## <a name="tips-and-tricks"></a>Dicas e truques
 
-Quando você está colocando juntos áudio para uma cena, existem alguns métodos adicionais que você pode usar para realçar ainda mais a direcionalidade e imersão, fazer uso total de recursos espaciais som do HoloLens. Nós fornecemos uma lista de alguns abaixo — ouça-os na próxima vez que você tente HoloTour.
-* **Procurar destinos**: Esses são os sons que disparam somente quando você está examinando um objeto específico ou a área do quadro holográfica. Por exemplo, procurando na direção de café o lado da rua em Piazza Navona do Roma disparará um pouco os sons de um restaurante ocupado.
-* **Visão local**: A jornada embora HoloTour contenha determinados vence onde orientar seu tour, auxiliado pelos hologramas, irá explorar um assunto em detalhes. Por exemplo, à medida que a fachada do Pantheon se dissolva para revelar o oculus, áudio reverberating colocados como um emissor 3D de dentro do Pantheon incentiva o usuário para explorar o modelo interior.
-* **Aprimorada a direcionalidade**: Em muitos cenas, colocamos sons de várias maneiras para adicionar à direcionalidade. Na cena Pantheon, por exemplo, o som de fica a fonte foi colocado como um emissor separado feche suficiente para o usuário, para que eles poderiam ter uma ideia do 'sonic parallax' como percorrida por eles em todo o espaço de execução. Na cena de Salinas de Maras do Peru, sob a perspectiva individual de alguns fluxos pouco foram colocados como emissores separados para criar um ambiente de ambiente mais imersivo, envolvendo o usuário com os sons autênticos do local.
-* **Emissor de spline**: Move este emissor de som espacial especial no espaço 3D em relação a posição visual do objeto a que é anexado. Um exemplo disso foi o treinamento em Machu Picchu, em que usamos um emissor de spline para dar uma noção distinta de direcionalidade e movimentação.
-* **Música e SFX**: Determinados aspectos de HoloTour que representam uma abordagem mais estilizada ou animação da usarem música e efeitos de som para aumentar o impacto emocional. Na batalha gladiator no final do tour Roma, efeitos especiais, como whooshes ou stingers foram usados para ajudar a fortalecer o efeito dos rótulos que aparecem em segundo plano.
+Quando você está reunindo áudio para uma cena, há alguns métodos adicionais que podem ser usados para realçar ainda mais a direção e o imersão, fazendo uso completo dos recursos de som espacial do HoloLens. Fornecemos uma lista de alguns itens abaixo — escute-os na próxima vez que tentar HoloTour.
+* **Procurar destinos**: Esses são sons que são disparados somente quando você está olhando para um objeto ou área específica do quadro Holographic. Por exemplo, examinar a direção do café do lado da rua no Piazza Navona de Roma disparará sutilmente os sons de um restaurante ocupado.
+* **Visão local**: A jornada, embora HoloTour, contenha determinados batidas em que o guia do Tour, auxiliado por hologramas, explorará um tópico em detalhes. Por exemplo, como a fachada do Pantheon é resolvida para revelar o Oculus, o reverberating Audio colocado como um emissor 3D do interior do Pantheon incentiva o usuário a explorar o modelo interior.
+* **Direcionalidade aprimorada**: Em muitos bastidores, colocamos sons de várias maneiras de adicionar à direcionalidade. Na cena Pantheon, por exemplo, o som do Fountain foi colocado como um emissor separado, próximo o suficiente para o usuário, para que pudesse ter uma noção de ' Sonic da Parallax ' conforme eles percorrem o espaço de jogo. Na cena Salinas de Maras do Peru, a perspectiva individual de alguns dos pequenos fluxos foi colocada como emissores separados para criar um ambiente ambiente mais imersiva, ao redor do usuário com os sons autênticos desse local.
+* **Emissor de spline**: Esse emissor de som espacial especial se move em espaço 3D em relação à posição visual do objeto ao qual ele está anexado. Um exemplo disso foi o treinamento no Machu Picchu, no qual usamos um emissor de spline para dar uma noção distinta de direcionalidade e movimento.
+* **Música e SFX**: Determinados aspectos de HoloTour que representam uma abordagem mais estilizada ou Cinematic usam efeitos de música e som para reforçar o impacto emocional. Na batalha de Gladiator ao final do Tour de Roma, efeitos especiais como whooshes ou Stingers foram usados para ajudar a reforçar o efeito dos rótulos que aparecem em cenas.
 
 ## <a name="about-the-author"></a>Sobre o autor
 
 <table style="border-collapse:collapse">
 <tr>
 <td style="border-style: none" width="60px"><img alt="Picture of Jason Syltebo" width="60" height="60" src="images/syltebo.png"></td>
-<td style="border-style: none"><b>Jason Syltebo</b><br>Designer de áudio @Microsoft</td>
+<td style="border-style: none"><b>Jason Syltebo</b><br>Designer de áudio@Microsoft</td>
 </tr>
 </table>
 
 ## <a name="see-also"></a>Consulte também
 * [Som espacial](spatial-sound.md)
-* [Design de som espacial](spatial-sound-design.md)
+* [Projeto de som espacial](spatial-sound-design.md)
 * [Som espacial no Unity](spatial-sound-in-unity.md)
-* [MR Spatial 220](holograms-220.md)
+* [MR espacial 220](holograms-220.md)
 * [Vídeo: Microsoft HoloLens: HoloTour](https://www.youtube.com/watch?v=pLd9WPlaMpY)
 
  

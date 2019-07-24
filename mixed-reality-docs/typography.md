@@ -1,11 +1,11 @@
 ---
 title: Tipografia
-description: Texto é um elemento importante para distribuição de informações de sua experiência de aplicativo.
+description: O texto é um elemento importante para entregar informações em sua experiência de aplicativo.
 author: cre8ivepark
 ms.author: dongpark
 ms.date: 06/03/2019
 ms.topic: article
-keywords: Windows Mixed Reality, design, estilo, fonte, tipografia, interface do usuário, experiência do usuário
+keywords: Realidade mista do Windows, design, estilo, fonte, tipografia, interface do usuário, UX
 ms.openlocfilehash: cc8e25e9cd7ba41bed179328fe7198e935e65d76
 ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
 ms.translationtype: MT
@@ -15,91 +15,91 @@ ms.locfileid: "66830010"
 ---
 # <a name="typography"></a>Tipografia
 
-Texto é um elemento importante para distribuição de informações de sua experiência de aplicativo. Assim como tipografia nas telas 2D, o objetivo é ser claro e legível. Com o aspecto tridimensional da realidade misturada, há uma oportunidade para afetar o texto e o usuário geral experiência de forma ainda maior.
+O texto é um elemento importante para entregar informações em sua experiência de aplicativo. Assim como a tipografia em telas 2D, o objetivo é ser claro e legível. Com o aspecto tridimensional da realidade misturada, há uma oportunidade de afetar o texto e a experiência geral do usuário de uma maneira ainda maior.
 
 ![Exemplo de tipografia no HoloLens](images/typography-cover.png)<br>
 *Exemplo de tipografia no HoloLens*
 
-Quando falamos sobre o tipo em 3D, tendemos a pensar extrusão, volumétricos texto 3D. Exceto para alguns designs de logotipo e alguns outros aplicativos limitados, o texto extrusão tende a degradar a legibilidade do texto. Mesmo que estamos criando experiências para 3D, podemos usar 2D para o tipo porque ele é mais legível e fácil de ler.
+Quando falamos sobre o tipo em 3D, tendemos a pensar em texto com extrusão, volumétricos em 3D. Exceto para alguns designs de logotipo e alguns outros aplicativos limitados, o texto extrudada tende a degradar a legibilidade do texto. Embora estejamos criando experiências para 3D, usamos 2D para o tipo, pois ele é mais legível e mais fácil de ler.
 
-No HoloLens, o tipo é construído com hologramas usando luz com base no sistema de Cores aditivas. Assim como outras hologramas tipo pode ser colocado no ambiente real em que pode ser bloqueado e observado de qualquer ângulo de mundo. O [parallax](https://en.wikipedia.org/wiki/Parallax) efeito entre o tipo e o ambiente também adiciona profundidade para a experiência.
+No HoloLens, o tipo é construído com hologramas usando Light com base no sistema de cores aditivo. Assim como outros hologramas, o tipo pode ser colocado no ambiente real em que ele pode ser bloqueado pelo mundo e observado em qualquer ângulo. O efeito de [da Parallax](https://en.wikipedia.org/wiki/Parallax) entre o tipo e o ambiente também adiciona profundidade à experiência.
 
-## <a name="typography-in-mixed-reality"></a>Tipografia na realidade mista
+## <a name="typography-in-mixed-reality"></a>Tipografia em realidade misturada
 
-Regras tipográficas na realidade mista não são diferentes de qualquer outra coisa. O texto no mundo físico e o mundo virtual precisa ser legíveis e legíveis. Texto pode ser em uma parede ou sobrepostas em um objeto físico. Ele poderia ser flutuante junto com uma interface do usuário digital. Independentemente do contexto, aplicamos as mesmas regras tipográficas para leitura e reconhecimento.
+Regras tipográficas em realidade misturada não são diferentes de nenhum outro lugar. O texto no mundo físico e no mundo virtual precisa ser legível e legível. O texto pode estar em uma parede ou sobreposto em um objeto físico. Ele pode ser flutuante junto com uma interface de usuário digital. Independentemente do contexto, aplicamos as mesmas regras tipográficas para leitura e reconhecimento.
 
 ### <a name="create-clear-hierarchy"></a>Criar hierarquia clara
 
-Crie hierarquia e contraste usando pesos e diversos tamanhos de tipo. Definindo uma rampa de tipo e depois dele em toda a experiência de aplicativo fornece uma excelente experiência de usuário com a hierarquia de informações consistente.
+Crie contraste e hierarquia usando diferentes tamanhos e pesos de tipo. Definir uma rampa de tipo e seguir em toda a experiência do aplicativo fornecerá uma excelente experiência do usuário com a hierarquia de informações consistente.
 
 ![Exemplos de rampa de tipo](images/typography-ramp-1000px.jpg)<br>
-*Definir seu rampa de tipo e segui-lo em toda a experiência de aplicativo*
+*Defina a rampa de tipo e siga-a em toda a experiência do aplicativo*
 
-### <a name="limit-your-fonts"></a>Limitar as fontes
+### <a name="limit-your-fonts"></a>Limitar suas fontes
 
-Evite usar mais de duas famílias de fontes diferentes em um único contexto. Isso interromperá a harmonia e a consistência de sua experiência e torná-lo mais difícil de consumir informações. No HoloLens, já que as informações são sobrepostas sobre o ambiente físico, usar vários estilos de fonte poderá degradar a experiência. Segoe UI é a fonte para todos os designs de digital da Microsoft. Ele é usado consistentemente no shell do Windows Mixed Reality. Você pode baixar o arquivo de fonte do Segoe UI a [página de kit de ferramentas de design do Windows](https://docs.microsoft.com/windows/uwp/design-downloads/).
+Evite usar mais de duas famílias de fontes diferentes em um único contexto. Isso interromperá a harmonia e a consistência da sua experiência e dificultará o consumo de informações. No HoloLens, como as informações são sobrepostas sobre o ambiente físico, o uso de muitos estilos de fonte diminuirá a experiência. Segoe UI é a fonte de todos os designs digitais da Microsoft. Ele é usado consistentemente no Shell do Windows Mixed Reality. Você pode baixar o arquivo de fonte Segoe UI na [página do kit de ferramentas de design do Windows](https://docs.microsoft.com/windows/uwp/design-downloads/).
 
-[Para obter mais informações sobre a face de tipos do Segoe UI](https://docs.microsoft.com/windows/uwp/design/style/typography)
+[Mais informações sobre o tipo de Segoe UI](https://docs.microsoft.com/windows/uwp/design/style/typography)
 
-### <a name="avoid-thin-font-weights"></a>Evite pesos fonte dinâmico
+### <a name="avoid-thin-font-weights"></a>Evitar pesos de fontes finas
 
-Evite usar pesos de fonte de luz ou semilight para tamanhos de tipo em 42pt, como traços verticais finos serão Vibrar e prejudicar a legibilidade. Fontes modernos com suficiente espessura do traço funcionam muito bem. Por exemplo, Helvetica e Arial são muito legível em HoloLens usar pesos regulares ou em negrito.
+Evite usar pesos de fontes leves ou semilight para tamanhos de tipo em 42pt, uma vez que traços verticais finos irão vibrar e degradar a legibilidade. Fontes modernas com espessura de traço suficiente funcionam bem. Por exemplo, Helvetica e Arial são muito legíveis no HoloLens usando pesos regulares ou em negrito.
 
 ### <a name="color"></a>Cor
 
-HoloLens, desde que o hologramas são construídas com um sistema leve aditivo, texto em branco é altamente legível. Você pode encontrar exemplos de texto em branco no menu Iniciar e barra de aplicativos. Mesmo que o texto em branco funciona bem sem um prato voltar em HoloLens, um plano de fundo físico complexo poderia tornar o tipo difíceis de ler. Para melhorar o foco do usuário e minimizar a distração de um plano de fundo físico, é recomendável usar texto em branco em um prato colorido novamente ou escuro.
+No HoloLens, como os hologramas são construídos com um sistema leve aditivo, o texto em branco é altamente legível. Você pode encontrar exemplos de texto em branco no menu iniciar e na barra de aplicativos. Embora o texto em branco funcione bem sem uma chapa de apoio no HoloLens, um plano de fundo físico complexo poderia dificultar a leitura do tipo. Para melhorar o foco do usuário e minimizar a distração de um plano de fundo físico, é recomendável usar o texto em branco em uma chapa de apoio escuro ou colorido.
 
 <br>
 
 
-![É recomendável usar texto em branco em um prato fundo colorido ou escuro. ](images/typography-whiteonblack2-1000px.jpg)
- *Exemplos de texto em branco em um prato fundo colorido ou escuro.*
+![É recomendável usar o texto em branco em uma chapa de fundo escura ou colorida. *Exemplos de texto em branco em uma chapa de fundo escura ou colorida.* ](images/typography-whiteonblack2-1000px.jpg)
+
 <br>
 
-Para usar texto escuro, você deve usar um prato back brilhante para torná-lo mais legível. Em sistemas de Cores aditivas, preto é exibido como transparente. Isso significa que você não poderá ver o texto preto sem um coloridas placa traseira.
+Para usar texto escuro, você deve usar uma chapa de fundo brilhante para torná-la legível. Em sistemas de cores aditivos, o preto é exibido como transparente. Isso significa que você não poderá ver o texto em preto sem uma chapa de fundo colorida.
 
-![Exemplos de texto em preto](images/typography-whiteonblack.png)
-<br>*Exemplos de na traseira preto e branco no texto em branco*
+![Exemplos de texto preto](images/typography-whiteonblack.png)
+<br>*Exemplos de branco sobre voltar e preto em texto branco*
 
 
-![Exemplos de texto em preto](images/640px-typography-blackonwhite.jpg)
-<br>*Exemplos de texto preto em aplicativos do sistema - Store e configurações*
+![Exemplos de texto preto](images/640px-typography-blackonwhite.jpg)
+<br>*Exemplos de texto preto nos aplicativos do sistema – armazenamento e configurações*
 
-## <a name="recommended-font-size"></a>Tamanho da fonte recomendado
+## <a name="recommended-font-size"></a>Tamanho de fonte recomendado
 
-Como você pode esperar, tamanhos de tipo que usamos em um computador ou um dispositivo de tablet (normalmente entre 12 – 32 pt) parecer muito pequenos em uma distância de 2 metros. Ele depende das características de cada fonte, mas em geral, são o mínimo recomendado, exibindo o ângulo e a altura da fonte para manter a legibilidade em torno de 0.35°-0.4°/12.21-13.97mm com base em nossos estudos de pesquisa do usuário. Trata-se de 35 40pt com o fator de escala introduzido no [texto no Unity](text-in-unity.md) página. 
+Como você pode esperar, os tamanhos de tipo que usamos em um PC ou um dispositivo Tablet (normalmente entre 12 e 32pt) parecem muito pequenos em uma distância de 2 metros. Depende das características de cada fonte, mas, em geral, o ângulo de exibição mínimo recomendado e a altura da fonte para legibilidade estão em torno de 0.35 °-0.4 °/12.21-13.97mm, com base em nossos estudos de pesquisa de usuários. É cerca de 35 40pt com o fator de dimensionamento introduzido no [texto na página do Unity](text-in-unity.md) . 
 
-Para a interação quase em 0.45m(45cm), ângulo de exibição da fonte legível mínima e a altura são 0.4 °-0,5 ° / 3.14 – 3.9 mm. Trata-se de 9-12 pt com o fator de escala introduzido no [texto no Unity](text-in-unity.md).
+Para a interação próxima no 0.45 m (45cm), o ângulo de exibição da fonte mínimo legível e a altura são 0.4 °-0,5 °/3.14 – 3.9 mm. É cerca de 9 12 pt com o fator de dimensionamento introduzido no [texto no Unity](text-in-unity.md).
 
-![Próximo e longe intervalo interação](images/typography-distance-1000px.jpg)
-*intervalo de interação de conteúdo no próximo e distante*
+![Conteúdo de intervalo](images/typography-distance-1000px.jpg)
+de interação próxima e longe*em um intervalo de interação próximo e longe*
 
-### <a name="the-minimum-legible-font-size"></a>O tamanho mínimo da fonte legível
-| distância | Ângulo de exibição | Altura do texto | Tamanho de fonte * * |
+### <a name="the-minimum-legible-font-size"></a>O tamanho mínimo de fonte legível
+| alcance | Ângulo de exibição | Altura do texto | Tamanho da fonte * * |
 |---------|---------|---------|---------|
-| 45cm (distância manipulação direta) | 0.4°-0.5° | 3.14 – 3.9 mm | 8.9 – 11.13pt |
-| 2 min | 0.35°-0.4° | 12.21 – 13.97 mm | 34.63-39.58pt |
+| 45cm (distância de manipulação direta) | 0.4 °-0,5 ° | 3.14 – 3.9 mm | 8.9 – 11.13 pt |
+| m | 0.35 °-0,4 ° | 12.21 – 13.97 mm | 34.63-39.58 pt |
 
 
-### <a name="the-comfortably-legible-font-size"></a>O tamanho da fonte confortavelmente legível
-| distância | Ângulo de exibição | Altura do texto | Tamanho de fonte * * |
+### <a name="the-comfortably-legible-font-size"></a>O tamanho de fonte legível confortavelmente
+| alcance | Ângulo de exibição | Altura do texto | Tamanho da fonte * * |
 |---------|---------|---------|---------|
-| 45cm (distância manipulação direta) | 0.65°-0.8° | 5.1-6.3 mm | 14.47-17.8pt |
-| 2 min | 0.6°-0.75° | 20,9-26.2 mm | 59.4-74.2pt |
+| 45cm (distância de manipulação direta) | 0.65 °-0,8 ° | 5.1-6.3 mm | 14.47-17.8 pt |
+| m | 0,6 ° a 0,75 ° | 20,9-26.2 mm | 59.4-74.2 pt |
 
 
-Segoe UI (a fonte padrão para Windows) funciona bem na maioria dos casos. No entanto, evite usando as famílias de fontes de luz de luz ou semi de tamanho pequeno, pois traços verticais finos serão Vibrar e ele prejudicará a legibilidade. Fontes modernos com suficiente espessura do traço funcionam muito bem. Por exemplo, Helvetica e Arial parecer bonitas e são muito legível em HoloLens com pesos regulares ou em negrito.
+Segoe UI (a fonte padrão do Windows) funciona bem na maioria dos casos. No entanto, evite usar famílias de fontes leves ou semileves em tamanho pequeno, uma vez que traços verticais finos serão vibrantes e diminuirá a legibilidade. Fontes modernas com espessura de traço suficiente funcionam bem. Por exemplo, Helvetica e Arial parecem grandioso e são muito legíveis no HoloLens com pesos normais ou em negrito.
 
-* * Para obter mais informações sobre o cálculo do tamanho do texto no Unity, consulte a página [texto no Unity](text-in-unity.md)
+\* * Para obter informações mais detalhadas sobre o cálculo do tamanho do texto no Unity, consulte o texto da página [no Unity](text-in-unity.md)
 
-![Ângulo de visualização](images/Text_In_Unity_ViewingAngle.jpg)
-*exibindo a altura de distância, ângulo e texto*
+![Exibindo](images/Text_In_Unity_ViewingAngle.jpg)
+ângulo exibindo a*distância, o ângulo e a altura do texto*
 
 ## <a name="resources"></a>Recursos
-* [Fontes do Segoe](http://download.microsoft.com/download/1/B/C/1BCF071A-78EE-4968-ACBE-15461C274B61/Segoe%20fonts%20v1705.zip)
-* [HoloLens font](http://download.microsoft.com/download/3/8/D/38D659E2-4B9C-413A-B2E7-1956181DC427/Hololens%20font.zip)
+* [Fontes Segoe](http://download.microsoft.com/download/1/B/C/1BCF071A-78EE-4968-ACBE-15461C274B61/Segoe%20fonts%20v1705.zip)
+* [Fonte do HoloLens](http://download.microsoft.com/download/3/8/D/38D659E2-4B9C-413A-B2E7-1956181DC427/Hololens%20font.zip)
 
-![A fonte do HoloLens lhe dá os glifos de símbolo usados na realidade mista do Windows](images/300px-hololensmdl2symbols.jpg)
+![A fonte do HoloLens fornece os glifos de símbolo usados na realidade misturada do Windows](images/300px-hololensmdl2symbols.jpg)
 <br>*A fonte do HoloLens fornece os glifos de símbolo usados na realidade mista do Windows.*
 
 ## <a name="see-also"></a>Consulte também

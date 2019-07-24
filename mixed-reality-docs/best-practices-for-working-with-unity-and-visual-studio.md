@@ -1,59 +1,63 @@
 ---
-title: Práticas recomendadas para trabalhar com o Unity e Visual Studio
-description: Dicas e truques para simplificar o fluxo de trabalho de criação de um aplicativo de realidade misturada com o Unity e Visual Studio.
+title: Práticas recomendadas para trabalhar com o Unity e o Visual Studio
+description: Dicas e truques para simplificar o fluxo de trabalho de criação de um aplicativo de realidade misturada com o Unity e o Visual Studio.
 author: mattzmsft
 ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
-keywords: implantar, unity, fone de ouvido de imersão do visual studio, HoloLens,
-ms.openlocfilehash: 80a533851b3bee0d747a90dfececbaa558c4ec1f
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+keywords: implantar, Unity, Visual Studio, HoloLens, HoloLens 2, headset de imersão
+ms.openlocfilehash: b2c345a8cc9bddcbc447531eb5f6cdacc62f2e98
+ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59590815"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63522316"
 ---
-# <a name="best-practices-for-working-with-unity-and-visual-studio"></a>Práticas recomendadas para trabalhar com o Unity e Visual Studio
+# <a name="best-practices-for-working-with-unity-and-visual-studio"></a>Práticas recomendadas para trabalhar com o Unity e o Visual Studio
 
-Um desenvolvedor que cria um aplicativo de realidade misturada com o Unity precisará alternar entre o Unity e o Visual Studio para compilar o pacote de aplicativo é implantado para HoloLens e/ou um fone de ouvido envolvente. Por padrão, duas instâncias do Visual Studio são necessário (um para modificar os scripts do Unity) e outro para implantar o dispositivo e na depuração. O procedimento a seguir permite o desenvolvimento usando a instância única do Visual Studio, reduz a frequência de exportação de projetos do Unity e melhora a experiência de depuração.
+Um desenvolvedor que cria um aplicativo de realidade misturada com o Unity precisará alternar entre o Unity e o Visual Studio para criar o pacote de aplicativos que é implantado no HoloLens e/ou um headset de imersão. Por padrão, duas instâncias do Visual Studio são necessárias (uma para modificar scripts do Unity e outra para implantar no dispositivo e depurar). O procedimento a seguir permite o desenvolvimento usando uma única instância do Visual Studio, reduz a frequência de exportação de projetos do Unity e melhora a experiência de depuração.
 
 ## <a name="improving-iteration-time"></a>Melhorando o tempo de iteração
 
-Um problema comum de fluxo de trabalho ao trabalhar com o Unity e o Visual Studio está tendo várias janelas do Visual Studio aberto e a necessidade de alternar constantemente entre o Visual Studio e o Unity para iterar.
-1. **Unity** – para modificar a cena e exportar uma solução do Visual Studio
-2. **Visual Studio (1)** - para modificar scripts
-3. **Visual Studio (2)** – para criação e implantação do Unity exportados solução do Visual Studio para o dispositivo
+O suporte para o back-end de script do .NET no Unity está sendo substituído no Unity 2018 e removido no Unity 2019 +. Portanto, é aconselhável mudar para [IL2CPP](https://docs.unity3d.com/Manual/IL2CPP.html). No entanto, isso pode incorrer em tempos de compilação mais longos do Unity para o Visual Studio. Para melhorar a iteração mais rápida, é necessário configurar o ambiente para obter melhores resultados de compilação.
 
-Felizmente, existe uma maneira de simplificar a uma única instância do Visual Studio e reduzir o exportações frequentes do Unity.
+1) Aproveite a criação incremental criando seu projeto no mesmo diretório a cada vez, reutilizando os arquivos predefinidos ali
+2) Desabilitar verificações de software antimalware para seu projeto & criar pastas
+   - Abra o **vírus & proteção contra ameaças** em seu aplicativo de configurações do Windows 10
+   - Selecione **gerenciar configurações** em **vírus & ameaças proteção configurações**
+   - Selecione **Adicionar ou remover exclusões** na seção **exclusões**
+   - Clique em **Adicionar uma exclusão** e selecione a pasta que contém o código do projeto do Unity e as saídas da compilação
+3) Utilizar um SSD para compilação
 
-Quando [exportando seu projeto do Unity](exporting-and-building-a-unity-visual-studio-solution.md), verifique o **Unity C# projetos** caixa de seleção no menu "Arquivo > Compilar configurações". Agora, o projeto de exportar do Unity inclui todo o seu projeto do C# scripts e tem vários benefícios:
-* Usar a mesma instância do Visual Studio para escrever scripts e criação/implantação de seu projeto
-* Exportar do Unity somente quando a cena é alterada no Editor do Unity; alterar o conteúdo de scripts pode ser feito no Visual Studio sem exportar novamente.
+Leia otimizando os [tempos de compilação para IL2CPP](https://docs.unity3d.com/Manual/IL2CPP-OptimizingBuildTimes.html) para obter mais informações. Além disso, leia [depuração em back-end de script IL2CPP](https://docs.unity3d.com/Manual/windowsstore-debugging-il2cpp.html).
 
-Com o **Unity C# projetos** habilitada, apenas uma instância de cada programa precisa ser aberta:
-1. **Unity** – para modificar a cena e exportar uma solução do Visual Studio
-2. **Visual Studio** - para modificar scripts, em seguida, criar e implantar o Unity exportados solução do Visual Studio para o dispositivo
+Além disso, considere instalar a [extensão do Visual Studio *UnityScriptAnalyzer* ](https://github.com/Microsoft/MixedRealityCompanionKit/tree/master/UnityScriptAnalyzer). Essa ferramenta analisa seus scripts de C# Unity para o código que pode ser capaz de ser escrito de maneira mais otimizada.
 
 ## <a name="visual-studio-tools-for-unity"></a>Ferramentas do Visual Studio para Unity
 
-Baixar [ferramentas do Visual Studio para Unity](https://visualstudiogallery.msdn.microsoft.com/8d26236e-4a64-4d64-8486-7df95156aba9)
+Baixar [Ferramentas do Visual Studio para Unity](https://docs.microsoft.com/en-us/visualstudio/cross-platform/getting-started-with-visual-studio-tools-for-unity?view=vs-2019)
 
-**Benefícios do Visual Studio Tools for Unity**
-* Depure o modo de reprodução de no editor do Unity no Visual Studio, colocando os pontos de interrupção, avaliar as varáveis e expressões complexas.
-* Use o Explorador de projeto do Unity para encontrar seu script com a mesma hierarquia exata que exibe do Unity.
+**Benefícios do Ferramentas do Visual Studio para Unity**
+* Depure o modo de reprodução do Unity no editor do Visual Studio colocando pontos de interrupção, avaliando variáveis e expressões complexas.
+* Use o explorador de projeto do Unity para localizar o script com exatamente a mesma hierarquia que o Unity exibe.
 * Obtenha o console do Unity diretamente dentro do Visual Studio.
-* Use assistentes para criar rapidamente ou navegue para scripts.
+* Use assistentes para criar ou navegar rapidamente para scripts.
 
-## <a name="expose-c-class-variables-for-easy-tuning"></a>Expor C# classe variáveis para ajuste fácil
+## <a name="expose-c-class-variables-for-easy-tuning"></a>Expor C# variáveis de classe para um ajuste fácil
 
-Há duas maneiras de expor as variáveis de classe. A maneira recomendada para fazer isso é adicionar o atributo [SerializeField] para suas variáveis privadas. Isso lhes permite ser acessados do editor, mas não programaticamente expostos.  A outra opção é tornar C# classe pública de variáveis para expô-las no editor de interface do usuário. 
+Há duas maneiras de expor variáveis de classe. A maneira recomendada de fazer isso é adicionar o atributo [Serializefield] às suas variáveis privadas. Isso permite que eles sejam acessados do editor, mas não expostos de forma programática.  A outra opção é tornar C# as variáveis de classe públicas para expô-las na interface do usuário do editor. 
 
-Ambas as abordagens tornam possível ajustar facilmente variáveis durante a execução no editor. Isso é especialmente útil para propriedades mechanic de interação de ajuste.
+Ambas as abordagens possibilitam o ajuste fácil de variáveis durante a execução no editor. Isso é especialmente útil para ajustar propriedades mecânicas de interação.
 
-## <a name="regenerate-uwp-visual-studio-solutions-after-windows-sdk-or-unity-upgrade"></a>Regenerar as soluções do Visual Studio de UWP depois de atualizar o SDK do Windows ou do Unity
+## <a name="regenerate-uwp-visual-studio-solutions-after-windows-sdk-or-unity-upgrade"></a>Regenerar soluções do Visual Studio UWP após a atualização do SDK do Windows ou do Unity
 
-Check-in no controle de origem de soluções do Visual Studio de UWP podem obter desatualizadas depois de atualizar para um novo mecanismo de SDK do Windows ou do Unity. Você pode resolver isso após a atualização ao construir uma nova solução UWP do Unity, mesclando as diferenças na solução de check-in.
+As soluções UWP do Visual Studio com check-in no controle do código-fonte podem ficar desatualizadas após a atualização para um novo SDK do Windows ou mecanismo do Unity. Você pode resolver isso após a atualização criando uma nova solução UWP do Unity e, em seguida, mesclando quaisquer diferenças na solução com check-in.
 
-## <a name="use-text-format-assets-for-easy-comparison-of-content-changes"></a>Usar ativos de formato de texto para facilitar a comparação das alterações de conteúdo
+## <a name="use-text-format-assets-for-easy-comparison-of-content-changes"></a>Usar ativos de formato de texto para uma comparação fácil de alterações de conteúdo
 
-Armazenar ativos no formato de texto torna mais fácil de examinar as diferenças de alteração de conteúdo no Visual Studio. Você pode habilitá-lo no "Editar > Editor de configurações do > projeto" alterando **serialização de ativo** modo **forçar texto**. No entanto, mesclar alterações do arquivo de ativo de texto é propenso a erro e não é recomendado, portanto, considere habilitar check-outs exclusivos binários no seu sistema de controle do código-fonte.
+O armazenamento de ativos em formato de texto facilita a revisão de diferenciações de alteração de conteúdo no Visual Studio. Você pode habilitar isso em "Editar configurações de projeto > editor de >" alterando o modo de **serialização de ativos** para **forçar o texto**. No entanto, mesclar alterações de arquivo de ativo de texto é propenso a erros e não recomendado, portanto, considere habilitar check-outs binários exclusivos no sistema de controle do código-fonte.
+
+## <a name="see-also"></a>Consulte também
+- [Ferramentas do Visual Studio para Unity](https://visualstudiogallery.msdn.microsoft.com/8d26236e-4a64-4d64-8486-7df95156aba9)
+- [Otimizando os tempos de compilação para IL2CPP](https://docs.unity3d.com/Manual/IL2CPP-OptimizingBuildTimes.html)
+- [*UnityScriptAnalyzer* Extensão do Visual Studio](https://github.com/Microsoft/MixedRealityCompanionKit/tree/master/UnityScriptAnalyzer)

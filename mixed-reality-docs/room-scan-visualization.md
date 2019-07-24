@@ -1,11 +1,11 @@
 ---
-title: Visualização de verificação de espaço
-description: Aplicativos que exigem que os dados de mapeamento espacial se baseiam no dispositivo para automaticamente coletar esses dados ao longo do tempo e entre as sessões do usuário explora o seu ambiente com o Active Directory do dispositivo.
+title: Visualização da verificação de sala
+description: Os aplicativos que exigem dados de mapeamento espacial dependem do dispositivo para coletar automaticamente esses dados ao longo do tempo e entre as sessões, à medida que o usuário explora seu ambiente com o dispositivo ativo.
 author: mattzmsft
 ms.author: alexpf
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Windows Mixed Reality, padrões de aplicativo, design, HoloLens, verificação de espaço, espacial de mapeamento, superfície reconstrução, da malha
+keywords: Realidade mista do Windows, padrões de aplicativo, design, HoloLens, verificação de sala, mapeamento espacial, reconstrução de superfície, malha
 ms.openlocfilehash: 09df4464ea4dac01dfad637886b07b861f468d4d
 ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
 ms.translationtype: MT
@@ -13,16 +13,16 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 06/11/2019
 ms.locfileid: "66829909"
 ---
-# <a name="room-scan-visualization"></a>Visualização de verificação de espaço
+# <a name="room-scan-visualization"></a>Visualização da verificação de sala
 
-Aplicativos que exigem que os dados de mapeamento espacial se baseiam no dispositivo para automaticamente coletar esses dados ao longo do tempo e entre as sessões do usuário explora o seu ambiente com o Active Directory do dispositivo. A integridade e a qualidade dos dados depende de vários fatores, incluindo a quantidade de exploração que o usuário tenha feito, quanto tempo se passou desde a exploração e se os objetos como móveis e portas foram movidas desde a área de verificação de dispositivo.
+Os aplicativos que exigem dados de mapeamento espacial dependem do dispositivo para coletar automaticamente esses dados ao longo do tempo e entre as sessões, à medida que o usuário explora seu ambiente com o dispositivo ativo. A integridade e a qualidade desses dados dependem de vários fatores, incluindo a quantidade de explorações que o usuário fez, quanto tempo passou desde a exploração e se os objetos como mobília e portas foram movidos desde que o dispositivo examinou a área.
 
-Para garantir que os dados de mapeamento espacial úteis, os desenvolvedores de aplicativos tem várias opções:
-* Contar o que talvez já foram coletado. Esses dados podem estar incompletos inicialmente.
-* Peça ao usuário para usar o gesto de bloom para obter o Windows Mixed Reality inicial e, em seguida, explore a área que eles desejam usar para a experiência. Eles podem usar o toque de ar para confirmar que toda a área necessária é conhecida para o dispositivo.
-* Crie uma experiência de exploração personalizado em seu próprio aplicativo.
+Para garantir dados de mapeamento espacial úteis, os desenvolvedores de aplicativos têm várias opções:
+* Conte com o que já pode ter sido coletado. Esses dados podem estar incompletos inicialmente.
+* Peça ao usuário para usar o gesto de cair para chegar à página inicial do Windows Mixed Reality e, em seguida, explorar a área que desejam usar para a experiência. Eles podem usar o Air-TAP para confirmar se toda a área necessária é conhecida pelo dispositivo.
+* Crie uma experiência de exploração personalizada em seu próprio aplicativo.
 
-Observe que em todos esses casos, os dados reais coletados durante a exploração são armazenados pelo sistema e o aplicativo não precisa fazer isso.
+Observe que, em todos esses casos, os dados reais coletados durante a exploração são armazenados pelo sistema e o aplicativo não precisa fazer isso.
 
 ## <a name="device-support"></a>Suporte a dispositivos
 
@@ -35,10 +35,10 @@ Observe que em todos esses casos, os dados reais coletados durante a exploraçã
     <tr>
         <td><strong>Recurso</strong></td>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>Fones imersivos em exposição</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Headsets imersivos</strong></a></td>
     </tr>
      <tr>
-        <td>Visualização de verificação de espaço</td>
+        <td>Visualização da verificação de sala</td>
         <td>✔️</td>
         <td>❌</td>
     </tr>
@@ -46,51 +46,51 @@ Observe que em todos esses casos, os dados reais coletados durante a exploraçã
 
 
 
-## <a name="building-a-custom-scanning-experience"></a>Criar uma experiência de verificação personalizada
+## <a name="building-a-custom-scanning-experience"></a>Criando uma experiência de verificação personalizada
 
-Aplicativos podem decidir analisar os dados de mapeamento espacial no início da experiência para avaliar se eles desejam que o usuário execute etapas adicionais para melhorar sua integridade e a qualidade. Se a análise indica que deve ser melhor qualidade, os desenvolvedores devem fornecer uma visualização para o mundo para indicar de sobreposição:
-* Quanto o volume total nas proximidades usuários precisa fazer parte da experiência do
-* Em que o usuário deve ir para melhorar a dados
+Os aplicativos podem decidir analisar os dados de mapeamento espacial no início da experiência para avaliar se desejam que o usuário execute etapas adicionais para melhorar sua integridade e qualidade. Se a análise indicar que a qualidade deve ser melhorada, os desenvolvedores devem fornecer uma visualização para sobreposição no mundo para indicar:
+* Quanto do volume total nos arredores dos usuários precisa fazer parte da experiência
+* Onde o usuário deve ir para melhorar os dados
 
-Os usuários não sabem o que faz uma verificação de "boa". Eles precisam ser mostrado ou informado o que procurar se eles são solicitados para avaliar uma verificação – planeza, distância das paredes reais, etc. O desenvolvedor deve implementar um loop de comentários que inclui a atualização de dados de mapeamento espacial durante a fase de verificação ou exploração.
+Os usuários não sabem o que faz uma verificação "boa". Eles precisam ser mostrados ou disseram o que procurar se forem solicitados a avaliar uma verificação – Flatness, distância de paredes reais etc. O desenvolvedor deve implementar um loop de comentários que inclua a atualização dos dados de mapeamento espacial durante a fase de verificação ou exploração.
 
-Em muitos casos, talvez seja melhor informar ao usuário o que precisam (por exemplo, examinar o limite, procure por trás de móveis), para obter a qualidade de verificação necessárias.
+Em muitos casos, pode ser melhor informar ao usuário o que eles precisam fazer (por exemplo, examinar o teto, examinar os móveis) para obter a qualidade de digitalização necessária.
 
-## <a name="cached-versus-continuous-spatial-mapping"></a>Armazenados em cache versus contínuo mapeamento espacial
+## <a name="cached-versus-continuous-spatial-mapping"></a>Mapeamento espacial em cache versus contínua
 
-Os dados de mapeamento espacial serão mais pesada aplicativos de fonte de dados podem consumir. Para evitar problemas de desempenho, como quadros ignorados ou falhas, consumo de dados deve ser feito com cuidado.
+Os dados de mapeamento espacial são os aplicativos de fonte de dados de peso mais intenso que podem ser consumidos. Para evitar problemas de desempenho como quadros descartados ou excedentes, o consumo desses dados deve ser feito com cuidado.
 
-Verificando ativa durante uma experiência pode ser benéfico ou prejudicial e o desenvolvedor precisará decidir qual método usar com base na experiência.
+A verificação ativa durante uma experiência pode ser benéfica ou prejudicial, e o desenvolvedor precisará decidir qual método usar com base na experiência.
 
-### <a name="cached-spatial-mapping"></a>Mapeamento espacial em cache
+### <a name="cached-spatial-mapping"></a>Mapeamento espacial armazenado em cache
 
-No caso do mapeamento espacial em cache, o aplicativo geralmente tira um instantâneo dos dados de mapeamento espacial e usa esse instantâneo para a duração da experiência.
+No caso do mapeamento espacial armazenado em cache, o aplicativo normalmente tira um instantâneo dos dados de mapeamento espacial e usa esse instantâneo pela duração da experiência.
 
 **Benefícios**
-* Redução sobrecarga no sistema enquanto a experiência está em execução líder a enorme potência, térmica e ganhos de desempenho de cpu.
-* Uma implementação mais simples da experiência de principal, pois ele não é interrompido por alterações nos dados espaciais.
-* Um único custo em qualquer pós-processamento dos dados espaciais para outros fins, gráficos e física de uma vez.
+* Redução da sobrecarga no sistema, enquanto a experiência está em execução levando a uma potência drástica, ganhos térmicos e de desempenho da CPU.
+* Uma implementação mais simples da experiência principal, uma vez que ela não é interrompida por alterações nos dados espaciais.
+* Um único custo individual em qualquer pós-processamento dos dados espaciais de física, elementos gráficos e outras finalidades.
 
 **Desvantagens**
-* A movimentação de objetos do mundo real ou pessoas não será refletida pelos dados armazenados em cache. Ex. o aplicativo pode considerar uma porta aberta quando, na verdade, é fechada agora.
-* Potencialmente mais memória do aplicativo para manter a versão em cache dos dados.
+* A movimentação de objetos do mundo real ou de pessoas não é refletida pelos dados armazenados em cache. Ex. o aplicativo pode considerar uma porta aberta quando está realmente fechado agora.
+* Possivelmente mais memória de aplicativo para manter a versão em cache dos dados.
 
-Um bom caso para esse método é um jogo de tabela superior ou de um ambiente controlado.
+Um bom caso para esse método é um ambiente controlado ou um jogo de topo de tabela.
 
 ### <a name="continuous-spatial-mapping"></a>Mapeamento espacial contínuo
 
-Determinados aplicativos podem se basear em continua a varredura para atualizar os dados de mapeamento espacial.
+Determinados aplicativos podem depender da varredura para atualizar dados de mapeamento espacial.
 
 **Benefícios**
-* Você não precisa compilar em uma separada de verificação ou exploração experiência com antecedência em seu aplicativo.
-* A movimentação de objetos do mundo real pode ser refletida com o jogo, embora com algum atraso.
+* Você não precisa criar uma experiência separada de verificação ou exploração antecipada em seu aplicativo.
+* A movimentação de objetos do mundo real pode ser refletida pelo jogo, embora com algum atraso.
 
 **Desvantagens**
-* Maior complexidade na implementação da experiência de principal.
-* Potencial de sobrecarga do processamento adicional para o elemento gráfico ou física como alterações precisam ser ingeridos incrementalmente por esses sistemas.
-* Maior capacidade, térmico e impacto sobre a CPU.
+* Maior complexidade na implementação da experiência principal.
+* Sobrecarga potencial do processamento adicional para gráfico ou física, pois as alterações precisam ser ingeridas incrementalmente por esses sistemas.
+* Maior capacidade, impacto térmico e de CPU.
 
-Um bom caso para esse método é que um onde hologramas devem interagir com a movimentação de objetos, por exemplo, um carro holográfico unidades no chão talvez queira corretamente se deparar com uma porta dependendo se ele for aberto ou fechado.
+Um bom caso para esse método é um em que os hologramas são esperados para interagir com a movimentação de objetos, por exemplo, um carro Holographic que as unidades no chão podem desejar aumentar corretamente em uma porta dependendo se ela está aberta ou fechada.
 
 ## <a name="see-also"></a>Consulte também
 * [Projeto de mapeamento espacial](spatial-mapping-design.md)

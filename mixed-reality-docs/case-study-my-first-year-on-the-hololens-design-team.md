@@ -1,11 +1,11 @@
 ---
-title: Estudo de caso - equipe de design do meu primeiro ano sobre o HoloLens
-description: Minha jornada de um flatland 2D para o mundo 3D iniciado quando eu ingressou na equipe de design do HoloLens em janeiro de 2016.
+title: Estudo de caso – meu primeiro ano na equipe de design do HoloLens
+description: Minha jornada de um Flatland 2D para o mundo 3D começou quando ingressei na equipe de design do HoloLens em janeiro de 2016.
 author: designnomad
 ms.author: haejinl
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Pessoal editorial, do design, Windows Mixed Reality, HoloLens,
+keywords: Realidade mista do Windows, HoloLens, design, editorial, pessoal
 ms.openlocfilehash: 050645e6096559a4f37b033e5ddfdc5444039c08
 ms.sourcegitcommit: 90ce9415889e7121dd2fd76a893dc3734672881b
 ms.translationtype: MT
@@ -13,119 +13,119 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 04/29/2019
 ms.locfileid: "64873950"
 ---
-# <a name="case-study---my-first-year-on-the-hololens-design-team"></a>Estudo de caso - equipe de design do meu primeiro ano sobre o HoloLens
+# <a name="case-study---my-first-year-on-the-hololens-design-team"></a>Estudo de caso – meu primeiro ano na equipe de design do HoloLens
 
-Minha jornada de um flatland 2D para o mundo 3D iniciado quando eu ingressou na equipe de design do HoloLens em janeiro de 2016. Antes de se juntar à equipe, eu tinha muito pouca experiência no design 3D. Como o chinês provérbio sobre uma jornada de milhas de mil começando com uma única etapa, exceto no meu caso, essa primeira etapa era um salto era!
+Minha jornada de um Flatland 2D para o mundo 3D começou quando ingressei na equipe de design do HoloLens em janeiro de 2016. Antes de ingressar na equipe, eu tinha muito pouca experiência no design 3D. Era como o chinês provérbio sobre uma jornada de milhares de milhas que começa com uma única etapa, exceto no meu caso, a primeira etapa era um salto!
 
 ![Levando o salto de 2D para 3D](images/2D_to_3D-800px.gif)<br>
 *Levando o salto de 2D para 3D*
 
-> *"Me senti que eu pulei de motorista sem precisar saber como dirigir o carro. Eu estava sobrecarregado e com medo, ainda que muito focada. "*<br>
+> *"Pensei que, embora eu tenha colocado na estação do driver sem saber como dirigir o carro. Fiquei sobrecarregado e medo, mas muito focado. "*<br>
 > — Hae Jin Lee
 
-Durante o ano passado, eu captado habilidades e conhecimentos tão rápido quanto eu poderia, mas ainda tenho muito a aprender. Aqui, eu escrevi backup 4 observações com um tutorial em vídeo documentando minha transição de um 2D para o designer de interação 3D. Espero que minha experiência inspire outros designers para levar o salto para 3D.
+Durante o ano passado, eu escolhi habilidades e conhecimento o mais rápido possível, mas ainda tenho muito o que aprender. Aqui, escrevi quatro observações com um tutorial em vídeo documentando minha transição de um designer de interação 2D para 3D. Espero que minha experiência inspirará outros designers para levar o salto para o 3D.
 
-## <a name="good-bye-frame-hello-spatial--diegetic-ui"></a>Quadro de um adeus. Olá espacial / diegetic da interface do usuário
+## <a name="good-bye-frame-hello-spatial--diegetic-ui"></a>Quadro de boa-adeus. Saudação da interface espacial/diegetic
 
-Sempre que projetei cartazes, revistas, sites ou telas do aplicativo, um quadro definido (normalmente, um retângulo) era uma constante para cada problema. A menos que você está lendo esta postagem em um HoloLens ou outro dispositivo VR, você está *olhando externo* por meio da tela 2D protegida com segurança dentro de um quadro. O conteúdo é externo para você. No entanto, headset de realidade misturada *elimina o quadro*, de modo que você está no espaço de conteúdo, procurando e percorrer o conteúdo de dentro para fora.
+Sempre que projetei cartazes, revistas, sites ou telas de aplicativos, um quadro definido (geralmente um retângulo) era uma constante para cada problema. A menos que você esteja lendo esta postagem em um HoloLens ou outro dispositivo VR, você está *olhando para isso* na tela externa por meio de 2D protegida com segurança dentro de um quadro. O conteúdo é externo a você. No entanto, o headset da realidade misturada *elimina o quadro*, portanto, você está dentro do espaço de conteúdo, examinando e percorrendo o conteúdo de dentro para fora.
 
-Eu entendi isso conceitualmente, mas no início eu cometi o erro de transferência de simplesmente pensar 2D em espaço 3D. Isso obviamente não funcionou bem porque o espaço 3D tem suas próprias propriedades exclusivas, como uma alteração do modo de exibição (com base na movimentação do cabeçote do usuário) e [requisito diferente para o conforto do usuário](https://www.youtube.com/watch?v=-606oZKLa_s/) (com base nas propriedades de dispositivos e os humanos usando -los). Por exemplo, em um espaço 2D de design de interface do usuário, o bloqueio de elementos de interface do usuário no canto de uma tela é um padrão muito comum, mas esse estilo de HUD (Head-se exibir) da interface do usuário não se sintam natural em experiências MR/VR; Ele impede imersão do usuário para o espaço e faz com que o discomfort do usuário. É como ter uma partícula poeira irritante em seus óculos que você está ansioso para eliminar. Ao longo do tempo, eu aprendi que ela se parece mais natural para posicionar o conteúdo no espaço 3D e adicionar comportamento bloqueado de corpo que faz o seguinte conteúdo o usuário a uma distância fixa relativo.
+Entendi isso conceitualmente, mas no início eu fiz o erro de simplesmente transferir o raciocínio 2D para o espaço 3D. Isso obviamente não funcionou bem porque o espaço 3D tem suas próprias propriedades exclusivas, como uma alteração de exibição (com base no movimento do cabeçalho do usuário) e um [requisito diferente para o conforto do usuário](https://www.youtube.com/watch?v=-606oZKLa_s/) (com base nas propriedades dos dispositivos e nos seres humanos que os utilizam). Por exemplo, em um espaço de design de interface do usuário 2D, bloquear elementos da interface do usuário no canto de uma tela é um padrão muito comum, mas essa interface do usuário do estilo HUD (exibição de rumo) não se sente natural em experiências com o Sr/VR; Ele impede o imersão do usuário no espaço e faz discomfort do usuário. É como ter uma partícula de poeira incômodo nos óculos dos quais você está curioso de se livrar. Ao longo do tempo, aprendi que parece mais natural posicionar o conteúdo em espaço 3D e adicionar comportamento de corpo bloqueado que faz com que o conteúdo acompanhe o usuário em uma distância fixa relativa.
 
-![Bloqueado por corpo](images/bodylockedtagalong.gif)<br>
-*Bloqueado por corpo*
+![Corpo-bloqueado](images/bodylockedtagalong.gif)<br>
+*Corpo-bloqueado*
 
 <br>
 
-![Bloqueado pelo mundo](images/worldlocked.gif)<br>
-*Bloqueado pelo mundo*
+![Protegido pelo mundo](images/worldlocked.gif)<br>
+*Protegido pelo mundo*
 
-### <a name="fragments-an-example-of-great-diegetic-ui"></a>Fragmentos: Um exemplo de excelente Diegetic UI
+### <a name="fragments-an-example-of-great-diegetic-ui"></a>Fragmentos Um exemplo de grande interface do usuário do Diegetic
 
-[Fragmentos](https://www.microsoft.com/p/fragments/9nblggh5ggm8), um suspense crime de primeira pessoa desenvolvido pela [Asobo Studio](http://www.asobostudio.com/) para HoloLens demonstra uma UI Diegetic excelente. Nesse jogo, o usuário se torna um caractere principal, um detetive que tenta resolver um mistério. As pivotal dicas para resolver esse mistério obterem espalhadas em sala de física do usuário e são muitas vezes incorporado dentro de um objeto fictício, em vez de existentes por conta própria. Este diegetic na interface do usuário tende a ser menos identificáveis que bloqueado o corpo da interface do usuário, portanto, a equipe Asobo inteligentemente usado muitas indicações, incluindo a direção de olhar virtual caracteres, som, luz e guias (por exemplo, seta apontando para o local da pista) para captar a atenção do usuário.
+[Fragmentos](https://www.microsoft.com/p/fragments/9nblggh5ggm8), um thriller de crime de primeira pessoa desenvolvido pelo [Asobo Studio](http://www.asobostudio.com/) para o HoloLens demonstra uma excelente interface do usuário Diegetic. Neste jogo, o usuário se torna um caractere principal, uma detecção que tenta resolver um mistério. As pistas dinâmicas para resolver esse mistério são espalhadas na sala física do usuário e geralmente são os horários inseridos dentro de um objeto fictício, e não os existentes por conta própria. Essa interface do usuário do diegetic tende a ser menos detectável do que a interface do usuário bloqueada pelo corpo, portanto, a equipe do Asobo usava com muita atenção muitos indícios, incluindo a direção dos caracteres virtuais ' olhar, som, luz e guias (por exemplo, seta apontando o local da pista) para obter a atenção do usuário.
 
-![Fragmentos - exemplos Diegetic UI](images/fragments-game-example-1.jpg)<br>
-*Fragmentos - exemplos Diegetic UI*
+![Fragmentos-exemplos da interface do usuário do Diegetic](images/fragments-game-example-1.jpg)<br>
+*Fragmentos-exemplos da interface do usuário do Diegetic*
 
-### <a name="observations-about-diegetic-ui"></a>Observações sobre diegetic da interface do usuário
+### <a name="observations-about-diegetic-ui"></a>Observações sobre a interface do usuário do amdiegetic
 
-Diegetic da interface do usuário e interface do usuário (ambos bloqueado de corpo e bloqueada pelo mundo) espacial tem seus próprios pontos fortes e fracos. Eu recomendo que os designers para experimentar tantos aplicativos MR/VR possível e desenvolver suas próprias compreensão e sensibility para interface do usuário vários métodos de posicionamento.
+A interface do usuário espacial (de corpo bloqueado e de bloqueio mundial) e a interface do usuário do diegetic têm seus próprios pontos fortes e fracos. Recomendo que os designers experimentem tantos aplicativos MR/VR quanto possível e desenvolvam sua própria compreensão e Sensibility para vários métodos de posicionamento da interface do usuário.
 
-## <a name="the-return-of-skeuomorphism-and-magical-interaction"></a>O retorno de esqueumorfismo e interação de mágica
+## <a name="the-return-of-skeuomorphism-and-magical-interaction"></a>O retorno da interação esqueumorfismo e mágico
 
-Esqueumorfismo, uma interface digital que imita a forma de objetos do mundo real foi "legal" nos últimos 5 a 7 anos no setor de design. Quando por fim, a Apple deu lugar ao design simples no iOS 7, mesmo pareceu esqueumorfismo morreu, por fim, como uma metodologia de design de interface. Mas, em seguida, uma nova mídia, fone de ouvido MR/VR chegou ao mercado e parece que esqueumorfismo retornado novamente. : )
+Esqueumorfismo, uma interface digital que imita a forma dos objetos do mundo real é "não legal" nos últimos 5 a 7 anos no setor de design. Quando a Apple finalmente deu o caminho para o design simples no iOS 7, parecia que Esqueumorfismo estava finalmente inoperante como uma metodologia de design de interface. Mas, em seguida, um novo Headset médio, Sr/VR chegou ao mercado e parece que Esqueumorfismo retornou novamente. : )
 
 ### <a name="job-simulator-an-example-of-skeuomorphic-vr-design"></a>Simulador de trabalho: Um exemplo de design VR skeuomorphic
 
-[Trabalho Simulator](http://jobsimulatorgame.com/), um jogo extravagante desenvolvido pela [Owlchemy laboratórios](https://owlchemylabs.com/) é um do exemplo mais popular do design VR skeuomorphic. Dentro nesse jogo, os jogadores são transportados para futuro onde robôs substituir os seres humanos e humanos visitar um museu para experimentar a sensação para realizar tarefas rotineiras em uma das quatro diferentes trabalhos: Auto mecânico, Gourmet Chef, administrador Store ou trabalhador de escritório.
+O simulador de [trabalho](http://jobsimulatorgame.com/), um jogo estranho desenvolvido pelo [Owlchemy Labs](https://owlchemylabs.com/) , é um dos exemplos mais populares para o design do skeuomorphic VR. Nesse jogo, os jogadores são transportados para o futuro, onde os robôs substituem seres humanos e humanos visitam um museu para experimentar o que parece executar tarefas de comuns em um dos quatro trabalhos diferentes: Mecânico automático, chefe de gourmet, administrador da loja ou Office Worker.
 
-O benefício de esqueumorfismo é evidente. Ambiente familiar e objetos dentro desse jogo ajudam novos usuários VR se sentir mais confortável e presente no espaço virtual. Ele também torna-os sentir como eles estão no controle por meio da associação de dados de Conhecimento familiar e comportamentos com objetos e reações deles físicas correspondentes. Por exemplo, para tomar uma xícara de café, as pessoas simplesmente precisam percorrer para a máquina de café, pressionar um botão, arraste a alça de cup e incliná-la em direção a seu boca como fazem no mundo real.
+O benefício do Esqueumorfismo é claro. Os ambientes e os objetos conhecidos desse jogo ajudam os novos usuários de VR a se sentir mais confortáveis e apresentarem espaço virtual. Ele também faz com que eles se sintam no controle associando conhecimento e comportamentos familiares a objetos e suas reações físicas correspondentes. Por exemplo, para bebida uma xícara de café, as pessoas simplesmente precisam ir para a máquina de café, pressionar um botão, pegar a alça da xícara e inclinar a sua boca como faria no mundo real.
 
 ![Simulador de trabalho](images/job-simulator.gif)<br>
 *Simulador de trabalho*
 
-Como MR/VR ainda é um meio de desenvolvimento, usar um certo grau de esqueumorfismo é necessário para desmistificar tecnologia MR/VR e conectá-lo para um público maior em todo o mundo. Além disso, usando esqueumorfismo ou representação realista pode ser benéfico para tipos específicos de aplicativos, como simulação de cirurgia ou voo. Como o objetivo desses aplicativos é desenvolver e refinar as habilidades específicas que podem ser aplicadas diretamente no mundo real, quanto mais próximo a simulação é mundo real, o conhecimento é transferível mais.
+Como o Sr/VR ainda é um meio de desenvolvimento, usar um certo grau de esqueumorfismo é necessário para desmistificar a tecnologia Sr/VR e apresentá-la a públicos maiores em todo o mundo. Além disso, o uso da representação esqueumorfismo ou realista pode ser benéfico para tipos específicos de aplicativos, como cirurgia ou simulação de voo. Como o objetivo desses aplicativos é desenvolver e refinar habilidades específicas que podem ser aplicadas diretamente no mundo real, quanto mais próxima a simulação for o mundo real, mais transferível será o conhecimento.
 
-Lembre-se de que esqueumorfismo é apenas uma abordagem. O potencial do mundo MR/VR é muito maior do que e designers devem se esforçar para criar interações com o hyper-natural mágicas — novas capacidades que são possíveis exclusivamente no mundo MR/VR. Para começar, considere adicionar potências mágicas para objetos comuns para permitir que os usuários atender a seus pontos fundamentais — incluindo teleportation e omniscience.
+Lembre-se de que esqueumorfismo é apenas uma abordagem. O potencial do mundo do Sr/VR é muito maior que isso, e os designers devem se esforçar para criar interações de mágico do Hyper-natural — novas capacidades que são exclusivamente possíveis no mundo do Sr/VR. Como um início, considere adicionar mágico poweries a objetos comuns para permitir que os usuários atendam aos seus desejos fundamentais, incluindo a Teleportation e a omniscience.
 
-![Porta mágica do Doraemon (à esquerda) e slippers(right) Ruby](images/doraemons-magical-door-and-ruby-slippers.jpg)<br>
-*Porta mágica do Doraemon (à esquerda) e slippers(right) ruby*
+![Doraemon da porta mágico (esquerda) e Ruby slippers (direita)](images/doraemons-magical-door-and-ruby-slippers.jpg)<br>
+*Doraemon da porta mágico (esquerda) e Ruby slippers (direita)*
 
 ### <a name="observations-about-skeuomorphism-in-vr"></a>Observações sobre esqueumorfismo em VR
 
-De "Em qualquer lugar da porta" no Doraemon, "Chinelos de rubi", o mágico de Oz do Maurader "mapa" em Harry Potter, exemplos de objetos comuns com energia mágico são muitas ficção popular. Esses objetos mágicos nos ajudar a visualizar uma conexão entre o mundo real e o fantástico, entre o que é e o que poderia ser. Tenha em mente que, durante a criação de mágico ou surreal objeto um precisa atingir um equilíbrio entre funcionalidade e entretenimento. Tenha cuidado com a tentação de criar algo de mágico puramente apenas para exemplificar do novidade.
+De "porta de qualquer lugar" em Doraemon, "Ruby slippers" no assistente de Oz para "mapa de Maurader" no Harry Potter, exemplos de objetos comuns com mágico Power abound em ficção popular. Esses objetos mágico nos ajudam a visualizar uma conexão entre o mundo real e o fantástico, entre o que é e o que poderia ser. Tenha em mente que, ao criar o objeto mágico ou surreal, é necessário fazer um equilíbrio entre a funcionalidade e a diversão. Tenha cuidado com a tentação de criar algo puramente mágico apenas para a novidade.
 
-## <a name="understanding-different-input-methods"></a>Noções básicas sobre os diferentes métodos de entrada
+## <a name="understanding-different-input-methods"></a>Compreendendo diferentes métodos de entrada
 
-Quando projetei a mídia 2D, tive de se concentrar em toque, mouse e interações de teclado para as entradas. No espaço de design MR/VR, o nosso corpo torna-se a interface e os usuários são capazes de usar uma seleção mais ampla de métodos de entrada: incluindo fala, olhar, gesto, [dof 6 controladores](https://en.wikipedia.org/wiki/Six_degrees_of_freedom)e luvas que arcar com mais de conexão direta e intuitiva com objetos virtuais.
+Quando projetei para a mídia 2D, tive que me concentrar nas interações de toque, mouse e teclado para entradas. No espaço de design do Sr/VR, nosso corpo torna-se a interface e os usuários podem usar uma seleção mais ampla de métodos de entrada: incluindo fala, olhar, gesto, [6-DOF controladores](https://en.wikipedia.org/wiki/Six_degrees_of_freedom)e luvas que oferecem conexão mais intuitiva e direta com objetos virtuais.
 
 ![Entradas disponíveis no HoloLens](images/inputs.jpg)<br>
 *Entradas disponíveis no HoloLens*
 
-> *"Tudo o que é melhor para algo e os piores para outra coisa".*<br>
-> — [Bill Buxton](https://www.billbuxton.com/)
+> *"Tudo é o melhor para algo e o pior para outra coisa".*<br>
+> — [Bill Buxton compartilhará](https://www.billbuxton.com/)
 
-Por exemplo, o gesto de entrada usando bare mão e sensores de câmera em um dispositivo HMD libera mão de usuários de contendo controladores ou utilize sweaty luvas, mas uso frequente pode causar fadiga física (também conhecidas como braço de gorila). Além disso, os usuários precisam manter suas mãos dentro da linha de visão; Se a câmera não é possível ver as mãos, os ponteiros não podem ser usados.
+Por exemplo, a entrada de gestos usando sensores de câmera e Bare-up em um dispositivo HMD libera os usuários da manutenção de controladores ou utilizando o luvas Sweaty, mas o uso frequente pode causar fadiga física (a. k. a Gorilla ARM). Além disso, os usuários precisam manter suas mãos dentro da linha de visão; se a câmera não puder ver as mãos, as mãos não poderão ser usadas.
 
-Entrada de fala é bom na atravessando tarefas complexas, porque ela permite que os usuários recortem por meio de menus aninhados com um comando (por exemplo, "Mostre-me os filmes feitos pelo studio Laika.") e também muito econômico quando combinado com outra modalidade (por exemplo, "Face para mim" comando orienta o holograma de um usuário está olhando para o usuário). No entanto, a entrada de fala pode não funcionar bem no ambiente barulhento ou talvez não apropriados em um espaço muito silencioso.
+A entrada de fala é boa para percorrer tarefas complexas porque permite que os usuários recortem menus aninhados com um comando (por exemplo, "Mostre-me os filmes feitos pelo Laika Studio".) e também muito econômico quando combinado com outra modalidade (por exemplo, o comando "face-me" orienta o holograma que um usuário está examinando em direção ao usuário). No entanto, a entrada de fala pode não funcionar bem em um ambiente barulhento ou pode não ser apropriada em um espaço muito silencioso.
 
-Além de gestos e fala, portáteis controlados controladores (por exemplo, Oculus touch, proceder, etc.) são muito populares métodos de entrada, porque eles são fáceis de usar e precisas, aproveitar das pessoas [proprioception](https://en.wikipedia.org/wiki/Proprioception)e fornecer dicas hápticos passivas. No entanto, esses benefícios são fornecidos ao custo de não poder ser bare-hands e usar o controle completos de dedo.
+Além de gestos e falas, os controladores rastreados de bolso (por exemplo, Oculus Touch, Naopak, etc.) são métodos de entrada muito populares porque são fáceis de usar, precisos, aproveitam o [proprioception](https://en.wikipedia.org/wiki/Proprioception)das pessoas e fornecem indicações de Haptic passivas. No entanto, esses benefícios têm o custo de não poder ser práticos e usar o controle de dedo completo.
 
-![Senso (à esquerda) e Manus VR(Right)](images/senso-and-manus-vr.jpg)<br>
-*Senso (à esquerda) e Manus VR (à direita)*
+![Senso (à esquerda) e Manus VR (direita)](images/senso-and-manus-vr.jpg)<br>
+*Senso (à esquerda) e Manus VR (direita)*
 
-Embora não seja tão populares como controladores, luvas estão ganhando força a onda MR/VR graças ao. Mais recentemente, a entrada de dupla personalidade/Lembre-se tiver começado a ganhar força como uma interface para ambientes virtuais, integrando o sensor EEG ou EMG para fone de ouvido (por exemplo, [MindMaze VR](http://www.mindmaze.com/)).
+Embora não sejam tão populares quanto os controladores, o luvas está ganhando impulso novamente graças ao Sr/VR Wave. Mais recentemente, a entrada cérebro/mental começou a obter força como uma interface para ambientes virtuais ao integrar o sensor EEG ou EMG ao headset (por exemplo, [MINDMAZE VR](http://www.mindmaze.com/)).
 
-### <a name="observations-about-input-methods"></a>Observações sobre métodos de entrada
+### <a name="observations-about-input-methods"></a>Observações sobre os métodos de entrada
 
-Esses são apenas uma amostra dos dispositivos de entrada disponíveis no mercado para MR/VR. Eles continuarão a se proliferam até que o setor se desenvolve e entra em acordo sobre as práticas recomendadas. Até lá, os designers devem ficar atento a novos dispositivos de entrada e ser bem familiarizado com os métodos de entrada específicos para seu projeto específico. Designers de precisam Procurar soluções criativas dentro de limitações, quando estiver em execução também para os pontos fortes do dispositivo.
+Esses são apenas um exemplo de dispositivos de entrada disponíveis no mercado para o Sr/VR. Eles continuarão a proliferar até que o setor se expanda e concorde com as práticas recomendadas. Até lá, os designers devem continuar cientes dos novos dispositivos de entrada e ser bem informados nos métodos de entrada específicos para seu projeto específico. Os designers precisam procurar soluções criativas dentro de limitações, enquanto também estão jogando nos pontos fortes do dispositivo.
 
-## <a name="sketch-the-scene-and-test-in-the-headset"></a>Esboço da cena e testar o headset
+## <a name="sketch-the-scene-and-test-in-the-headset"></a>Esboço da cena e do teste no headset
 
-Quando trabalhei em 2D, eu principalmente elaborado apenas o conteúdo. No entanto, no espaço de realidade mista que não era suficiente. Tive de esboço de toda a cena imaginar melhor as relações entre os objetos de usuário e virtuais. Para ajudar a meu raciocínio espacial, comecei a esboçar cenas [Cinema 4d](https://www.maxon.net/en/products/cinema-4d/overview/) e, às vezes, criar ativos simples para protótipos nos [Maya](http://www.autodesk.com/products/maya/overview/). Eu nunca tivesse usado o programa antes de se juntar à equipe do HoloLens e eu ainda sou um iniciante, mas trabalhar com esses programas 3D certamente me ajudou a fique à vontade com a nova terminologia, tais como [sombreador](https://en.wikipedia.org/wiki/Shader) e [IK (inverso cinemática)](https://knowledge.autodesk.com/support/maya/learn-explore/caas/CloudHelp/cloudhelp/2016/ENU/Maya/files/GUID-07C3BA47-32BB-477B-B6C5-1090E5C9B81C-htm.html/).
+Quando trabalhei em 2D, eu esbocei principalmente o conteúdo. No entanto, no espaço de realidade misturada que não era suficiente. Eu tinha que esboçar toda a cena para imaginar melhor as relações entre o usuário e os objetos virtuais. Para ajudar meu pensamento espacial, comecei a esboçar cenas no [cinema 4D](https://www.maxon.net/en/products/cinema-4d/overview/) e, às vezes, criamos ativos simples para a criação de protótipos no [Maya](http://www.autodesk.com/products/maya/overview/). Nunca usei nenhum programa antes de participar da equipe do HoloLens e ainda sou um jogador, mas trabalhar com esses programas 3D me ajudou a se sentir confortável com a nova terminologia, como o [Shader](https://en.wikipedia.org/wiki/Shader) e o [IK (cinemática inversa)](https://knowledge.autodesk.com/support/maya/learn-explore/caas/CloudHelp/cloudhelp/2016/ENU/Maya/files/GUID-07C3BA47-32BB-477B-B6C5-1090E5C9B81C-htm.html/).
 
-**"Não importa a forma como eu elaborado a cena em 3D, a experiência real Headset quase nunca foi o mesmo que o esboço. É por isso que é importante testar a cena no destino headsets. "— Hae Jin Lee**
+**"Não importa quão bem esboço a cena em 3D, a experiência real em Headset quase nunca foi a mesma coisa que o esboço. É por isso que é importante testar a cena nos headsets de destino. "— Hae Jin Lee**
 
-Para a criação de protótipos HoloLens, eu tentei todos os tutoriais na [tutoriais de realidade misturada](tutorials.md) para iniciar. Em seguida, eu comecei a brincar com [HoloToolkit.Unity](https://github.com/Microsoft/HoloToolkit-Unity/) que a Microsoft fornece aos desenvolvedores para acelerar o desenvolvimento de aplicativos holographic. Quando eu não conseguir Avançar com algo, eu publiquei minha pergunta para [Fórum de resposta e HoloLens pergunta](https://forums.hololens.com/categories/questions-and-answers/).
+Para o protótipo do HoloLens, experimentei todos os tutoriais em [tutoriais de realidade misturados](tutorials.md) para começar. Em seguida, comecei a brincar com o [HoloToolkit. Unity](https://github.com/Microsoft/HoloToolkit-Unity/) que a Microsoft fornece aos desenvolvedores para acelerar o desenvolvimento de aplicativos Holographic. Quando fui preso por algo, publiquei minha pergunta sobre o [HoloLens question & Fórum de resposta](https://forums.hololens.com/categories/questions-and-answers/).
 
-Depois de adquirir noções básicas sobre criação de protótipos HoloLens, eu queria capacitar outros não codificadores para criar um protótipo por conta própria. Então, fiz um vídeo tutorial que ensina como desenvolver um projectile simple usando o HoloLens. Eu explique resumidamente os conceitos básicos, portanto, mesmo que se você tiver zero experiência no desenvolvimento HoloLens, você deve ser capaz de acompanhar.
+Depois de adquirir a compreensão básica do protótipo do HoloLens, eu queria capacitar outros não-codificadores para que eles tenham um protótipo próprio. Eu fiz um tutorial em vídeo que ensina como desenvolver um Projectile simples usando o HoloLens. Expliquei brevemente os conceitos básicos, portanto, mesmo que você tenha zero experiência no desenvolvimento do HoloLens, você deve ser capaz de acompanhar.
 
 <br>
 
 >[!VIDEO https://www.youtube.com/embed/58612RT2CT8]
-*Eu fiz este tutorial simples para programadores, como eu mesmo.*
+*Eu fiz este tutorial simples para não programadores como eu mesmo.*
 
-Para a criação de protótipos VR, peguei cursos em [VR Dev School](http://learn.vrdev.school/) e também levou [criação de conteúdo 3D de realidade Virtual](https://www.lynda.com/Unreal-Engine-tutorials/3D-Content-Creation-Virtual-Reality/482055-2.html?srchtrk=index%3a1%0alinktypeid%3a2%0aq%3aVirtual+Reality+%0apage%3a1%0as%3arelevance%0asa%3atrue%0aproducttypeid%3a2/) no Lynda.com. Desenvolvimento VR escola fornecido-me mais conhecimento profundo na codificação e o curso de Laura me oferecida uma breve introdução à criação de ativos para VR a BOM.
+Para o criação de protótipos VR, eu fiz cursos na [escola de desenvolvimento VR](http://learn.vrdev.school/) e também fiz [a criação de conteúdo 3D para a realidade virtual](https://www.lynda.com/Unreal-Engine-tutorials/3D-Content-Creation-Virtual-Reality/482055-2.html?srchtrk=index%3a1%0alinktypeid%3a2%0aq%3aVirtual+Reality+%0apage%3a1%0as%3arelevance%0asa%3atrue%0aproducttypeid%3a2/) em Lynda.com. A escola de desenvolvimento VR me proporcionou um conhecimento mais aprofundado na codificação e o curso Laura me ofereceu uma boa introdução à criação de ativos para VR.
 
-## <a name="take-the-leap"></a>Levar o leap
+## <a name="take-the-leap"></a>Pegue o salto
 
-Um ano atrás, me senti como tudo isso foi um pouco sobrecarregado. Agora posso dizer que era 100% vale o esforço. MR/VR ainda é muito jovem médio e há muitas possibilidades interessantes esperando a serem obtidos. Sinto inspirar e favorável ser capaz de reproduzir uma pequena parte em Projetando o futuro. Espero que você se Junte a mim na jornada em espaço 3D!
+Há um ano, eu achei que tudo isso era um pouco difícil. Agora, posso dizer que era 100% do esforço. O Sr/VR ainda é muito jovem e há tantas possibilidades interessantes aguardando para serem percebidas. Sinto inspirado e sorte ser capaz de jogar uma pequena parte na criação do futuro. Espero que você se junte à jornada no espaço 3D!
 
 ## <a name="about-the-author"></a>Sobre o autor
 
 <table style="border-collapse:collapse" padding-left="0px">
 <tr>
 <td style="border-style: none" width="60"><img alt="Picture of Hae Jin Lee" width="60" height="60" src="images/haejinlee.jpg"></td>
-<td style="border-style: none"><b>Hae Jin Lee</b><br>Designer de UX @Microsoft</td>
+<td style="border-style: none"><b>Hae Jin Lee</b><br>Designer de UX@Microsoft</td>
 </tr>
 </table>
 

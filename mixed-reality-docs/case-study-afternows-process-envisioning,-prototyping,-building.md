@@ -1,145 +1,145 @@
 ---
-title: Estudo de caso - processo do AfterNow - previsão, criação de protótipos, criando
-description: Processo do afterNow - previsão, criação de protótipos, criando
+title: Estudo de caso-previsão de processo do AfterNow, criação de protótipos, construção
+description: Processo – previsão, criação de protótipos do AfterNow
 author: rwinj
 ms.author: randyw
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Windows Mixed Reality, AfterNow, previsão, criação de protótipos, criando
+keywords: Realidade mista do Windows, AfterNow, previsão, criação de protótipos, compilação
 ms.openlocfilehash: 778ce2ff8ff69a5cdff1cc22b192100a9ab33347
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59590936"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63523472"
 ---
-# <a name="case-study---afternows-process---envisioning-prototyping-building"></a>Estudo de caso - processo do AfterNow - previsão, criação de protótipos, criando
+# <a name="case-study---afternows-process---envisioning-prototyping-building"></a>Estudo de caso-previsão de processo do AfterNow, criação de protótipos, construção
 
-No [AfterNow](https://www.afternow.io/), trabalharemos com você para transformar suas ideias e às aspirações em produtos concretos, totalmente operacionais e experiências pronto para o mercado. Mas antes que podemos escrever uma única linha de código, podemos criar um plano gráfico por meio de um processo chamado de previsão.
+Em [AfterNow](https://www.afternow.io/), trabalhamos com você para transformar suas ideias e aspirações em produtos concretos e totalmente operacionais e experiências prontas para o mercado. Mas antes de escrevermos uma única linha de código, criamos um plano gráfico por meio de um processo chamado previsão.
 
-![O que é a previsão?](images/whatisenvisioning-640px.png)
+![O que é previsão?](images/whatisenvisioning-640px.png)
 
-## <a name="what-is-envisioning"></a>O que é a previsão?
+## <a name="what-is-envisioning"></a>O que é previsão?
 
-A previsão é um processo de criação de ideias usado para design de produto. Podemos simplificar um grande pool de ideias em um – ou alguns – conceitos calculados e realistas para executar.
+A previsão é um processo idealização usado para o design do produto. Simplificamos um grande pool de ideias em um ou alguns conceitos reais calculados para execução.
 
-Esse processo levará à luz muitos problemas e impedem que seria eventualmente surgir no produto. Falha no início e rápida, por fim, poupa muito tempo e dinheiro.
+Esse processo levará à luz de muitos problemas e bloqueadores que eventualmente surgiram no produto. A falha antecipada e rápida, em última análise, poupa muito tempo e dinheiro.
 
-Ao longo desse processo, forneceremos você com observações sobre o grupo ideias e descobertas. Quando tivermos concluído, você receberá um documento de um script e um vídeo de nossa etapa "agir", uma simulação do produto em ação proposto. Esses são os planos gráficos concretos para seu produto – uma estrutura que você pode manter. Idealmente, a próxima etapa é para que possamos criar o produto, o que nos permite testar e experimentar o contrato real.
+Durante todo esse processo, forneceremos observações sobre as ideias e descobertas do grupo. Quando terminarmos, você receberá um documento de um script e um vídeo de nossa etapa "agir", uma simulação do produto proposto em ação. Essas são plantas concretas para seu produto – uma estrutura que você pode manter. O ideal é que a próxima etapa seja criar o produto, o que nos permite testar e experimentar o negócio real.
 
-Aqui está um play-by-play diária do processo, quanto tempo leva cada etapa e que você precisará da sua equipe.
+Aqui está uma reprodução diária do processo, quanto tempo cada etapa leva e quem você precisará para sua equipe.
 
-![Os participantes de previsão](images/envisioning-participants-640px.png)
+![Previsão de participantes](images/envisioning-participants-640px.png)
 
-## <a name="envisioning-participants"></a>Os participantes de previsão
+## <a name="envisioning-participants"></a>Previsão de participantes
 
-É importante selecionar participantes certos para esse processo. O número pode variar, mas é recomendável mantê-lo em sete pessoas por questão de eficiência.
+É importante selecionar os participantes certos para esse processo. O número pode variar, mas é recomendável mantê-lo sob sete pessoas para fins de eficiência.
 
-**Decider (crítico)**-Decider o é uma pessoa importante ter, no grupo. Ele ou ela é aquele que tomar a decisão final ou tipping a escala se não houver um indecisão durante o processo (geralmente o CEO, fundador, gerente de produto ou head de design). Se eles não podem participar de para todo o processo, designa a que alguém mais ajusta para assumir a função.
+**Decididor (crítico)** -o decidinte é uma pessoa importante para ter no grupo. Ele é aquele que fará a decisão final ou debaterá a escala se houver uma decisão durante o processo (normalmente o CEO, fundador, gerente de produto ou chefe de Design). Se eles não conseguirem participar de todo o processo, você deve indicar a cada uma das mais adequadas para tomar a função.
 
-**(Opcional) de finanças**-alguém que podem explicar como o projeto é patrocinado.
+**Finanças (opcional)** -alguém que pode explicar como o projeto é financiado.
 
-**(Opcional) de marketing**-alguém que cria mensagens da empresa.
+**Marketing (opcional)** -alguém que faz uma artesanato das mensagens da empresa.
 
-**Cliente (importante)**-alguém que se comunica com os clientes com frequência e pode ser seu defensor.
+**Cliente (importante)** -alguém que se comunica com os clientes com frequência e que pode ser seu defensor.
 
-**Tech/logística (importante)**-alguém que entende o que a empresa pode criar e entregar.
+**Tech/logística (importante)** -alguém que compreende o que a empresa pode criar e entregar.
 
-**Design (importante)**-alguém que projeta o produto que sua empresa fabrica.
+**Design (importante)** -alguém que projeta o produto que sua empresa faz.
 
-## <a name="day-1---map"></a>DIA 1 - mapa
+## <a name="day-1---map"></a>DIA 1-mapa
 
-**Metas de lista & restrições; definir um objetivo a longo prazo – 5 min**
+**Listar metas & restrições; definir uma meta de longo prazo-5 min**
 
-Se nós estavam sendo completamente otimistas, o que é o nosso objetivo a longo prazo? Por que estamos são criar essa solução em realidade mista e quais problemas são estamos tentando resolver?
+Se estamos sendo totalmente otimistas, qual é nossa meta a longo prazo? Por que estamos criando essa solução em realidade misturada e quais problemas estamos tentando resolver?
 
-**Perguntas de sprint de lista - 5 min**
+**Listar perguntas do Sprint-5 min**
 
-Formato de Get um pouco pragmático e listar temores em questão. Como podemos poderia falhar? Para cumprir o objetivo a longo prazo, o que deve ser true? Se o projeto tiver falhado, o que pode ter causado que?
+Obtenha um pouco pragmático e liste temores no formato de pergunta. Como podemos falhar? Para atender à meta a longo prazo, o que deve ser verdadeiro? Se o projeto falhou, o que pode ter causado isso?
 
-**Fazer com que um fluxo mapear - até 1 hora**
+**Criar um mapa de fluxo-até 1 hora**
 
-Este é um mapa aproximado, funcional (não detalhado). Podemos escrever todos os tipos de usuário à esquerda e as terminações de à direita. Em seguida, podemos conectá-los no meio com palavras e setas que mostram como os usuários interagem com o produto. Isso é feito nas etapas 5 a 15.
+Esse é um mapa aproximado e funcional (não detalhado). Escrevemos todos os tipos de usuário à esquerda e as terminações à direita. Em seguida, nós os conectamos no meio com palavras e setas mostrando como os usuários interagem com o produto. Isso é feito em etapas de 5-15.
 
-**Entrevistam especialistas & fazer anotações**
+**Os especialistas em entrevistas & fazer anotações**
 
-O objetivo deste exercício é aprimorar nossa compreensão coletiva do problema. Aqui podemos adicionar coisas no mapa e corrigir quaisquer erros nele. Se parte do fluxo pode ser expandido em mais detalhes, podemos falar para o especialista.
+O objetivo deste exercício é aprimorar nossa compreensão coletiva do problema. Aqui, podemos adicionar coisas ao mapa e corrigir quaisquer erros. Se parte do fluxo puder ser expandida mais detalhadamente, conversaremos com o especialista.
 
-Nossa recomendação para esse processo acontece quando levamos notas individuais no talvez como podemos formato (HMW). HMW é uma técnica desenvolvida pela P & G nos anos 70. Ele é um método de anotações na forma de uma pergunta que acaba resultando em anotações organizadas e priorizadas. Podemos será anotar uma ideia por nota autoadesiva que começa com a frase "Como talvez nós." Por exemplo, talvez nos comunicamos os valores da [sua empresa] na realidade mista?
+Nossa prática recomendada para esse processo ocorre quando pegamos observações individuais em como podemos (HMW) o formato. HMW é uma técnica desenvolvida por P & G no 70s. É um método de observação que assume a forma de uma pergunta que, por fim, resulta em anotações organizadas e priorizadas. Vamos anotar uma ideia por nota auto-adesiva, que começa com a frase "como isso é possível". Por exemplo, como podemos comunicar os valores de [sua empresa] em realidade misturada?
 
 ![Organizar e decidir](images/organize-and-decide-640px.png)<br>
 *Organizar e decidir*
 
-**Organizar HMW anotações**
+**Organizar HMW notas**
 
-Vamos tomar todas as anotações "Como talvez nós" e colá-las em uma parede. Podemos, em seguida, será categorize-os em temas perceptíveis que surgem.
+Pegamos todas as "como podemos" fazer anotações e fixá-las em uma parede. Em seguida, categorizaremos-os em temas perceptíveis à medida que surgirem.
 
-**Vote em notas HMW**
+**Vote em HMW Notes**
 
-Depois que todas as anotações estiverem em suas categorias apropriadas, podemos votará em nossas perguntas favoritas. Todo mundo terá dois votos; o Decider obtém quatro votos.
+Depois que todas as anotações estiverem em suas categorias apropriadas, votarei em nossas perguntas favoritas. Todos obtêm dois votos; o decidido obtém quatro votos.
 
 **Escolher um destino**
 
-O cliente mais importante e o momento de um destino no mapa de círculo e examinar as perguntas iniciais para o sprint. O Decider tem a tarefa de fazer a chamada.
+Circule o cliente mais importante e um momento de destino no mapa e examine as perguntas iniciais do Sprint. O decididor tem a tarefa de fazer a chamada.
 
-## <a name="day-2---sketch"></a>DIA 2 - esboço
+## <a name="day-2---sketch"></a>DIA 2 – esboço
 
-**Demonstrações de produto existente**
+**Demonstrações de produto existentes**
 
-Todos no grupo sprint pesquisarão produtos existentes que desejarem que resolvam problemas semelhantes a que nós enfrenta. Em seguida, demonstraremos as nossas descobertas para o restante do grupo. Isso nos dá uma boa ideia dos recursos que achamos interessantes.
+Todos no grupo Sprint pesquisarão os produtos que eles gostam que resolvem problemas semelhantes aos que estamos lidando. Em seguida, demonstraremos nossas descobertas para o restante do grupo. Isso nos dá uma boa ideia dos recursos que encontramos interessantes.
 
-**Notas**
+**Observações**
 
-Vamos gastar andando silenciosamente o espaço para reunir as notas de 20 minutos.
+Passamos 20 minutos acompanhando silenciosamente a sala para reunir anotações.
 
-**Ideias**
+**Suas**
 
-Vamos gastar de 20 minutos em particular fazer algumas ideias aproximadas.
+Passamos 20 minutos para escrever de forma privada algumas ideias.
 
-**Crazy 8s**
+**8s de louco**
 
-Vamos gastar criando oito quadros de oito minutos. Isso é onde podemos esboço rapidamente uma variação de um dos nossos melhores ideias em cada quadro.
+Gastamos oito minutos criando oito quadros. É aí que podemos esboçar rapidamente uma variação de uma de nossas melhores ideias em cada quadro.
 
 **Solução**
 
-Vamos gastar rascunho storyboards de 30 minutos. Vamos levar as variações melhores ideias de 8s malucas e criar um storyboard de três painéis da ideia.
+Passamos 30 minutos esboçando storyboards. Pegamos as melhores variações de ideias de 8s de louco e criamos um storyboard de três painéis da ideia.
 
-![Fazer um rascunho de storyboards](images/sketching-storyboards-640px.png)<br>
-*Fazer um rascunho de storyboards*
+![Esboço de storyboards](images/sketching-storyboards-640px.png)<br>
+*Esboço de storyboards*
 
-## <a name="day-3---decide"></a>DIA 3 - decidir
+## <a name="day-3---decide"></a>DIA 3-decidir
 
-Esse dia envolve muita comentando e votação. Esta é a explicação:
+Este dia envolve muita comentando e votação. Aqui está a divisão:
 
 **Comentando silencioso**
 
-Podemos soluções até a parede de fita e levar tempo para examiná-las silenciosamente. Depois que todas as pessoas ficou momento de examinar todos os esboços, coletivamente criaremos um mapa de calor. Cada pessoa coloca as marcas de esboços que desejarem. Isso pode ser uma área de um fluxo ou de todo o fluxo.
+Fazemos soluções de fita para a parede e demoramos para vê-las silenciosamente. Depois que todo mundo obtiver tempo para examinar todos os esboços, criaremos coletivamente um mapa de calor. Cada pessoa coloca as marcas nos esboços desejados. Isso pode ser todo o fluxo ou uma área de um fluxo.
 
-**Discussão & explicações**
+**Explicações de & de discussão**
 
-Começaremos a ver um mapa de calor de pessoas ideias interessantes e gastar três minutos em cada esboço que chamou a atenção a maioria dos. As pessoas abertamente podem discutir por que, como determinados esboços e o artista pode corretamente transmitem suas ideias quando há um mal-entendido. Às vezes isso pode surgir a novas ideias.
+Começaremos a ver um mapa de calor das ideias que as pessoas acham interessantes e passarão três minutos em cada esboço com mais atenção. As pessoas podem discutir de forma aberta por que eles gostam de determinados esboços e o artista pode transmitir corretamente suas ideias quando há um mal-entendido. Isso pode trazer novas ideias às vezes.
 
-Nesta etapa também queremos dar as pessoas oportunidades para explicar ideias que não obtiveram muita atenção. Às vezes, você encontrará que uma pérola em pessoas uma ideia realmente não compreendi anteriormente.
+Nesta etapa, também queremos dar oportunidades às pessoas para explicar ideias que não obtiveram muita atenção. Às vezes, você encontrará uma gem em uma ideia que as pessoas realmente não entenderam anteriormente.
 
-**Sondagem de Gota & supervote**
+**Straw sondagem & supervoto**
 
-Cada pessoa escolherá silenciosamente sua ideia favorita e, quando estiver pronto, as pessoas serão colocar uma marca em seu favoritos uma todos de uma vez. O Decider, em seguida, receberá três pontos grandes para a ideia de que ele gostaram mais. Aqueles marcados com o Decider são as ideias que pretende ser um protótipo.
+Cada pessoa escolherá silenciosamente sua ideia favorita e, quando estiver pronto, as pessoas marcarão seu favorito de uma só vez. Em seguida, o decidido obterá três pontos grandes para a ideia de que ele gostou mais. Aqueles marcados pelo Deciditor são as ideias que serão modeladas com protótipo.
 
-## <a name="day-4---prototype"></a>DIA 4 - protótipo
+## <a name="day-4---prototype"></a>DIA 4-protótipo
 
-**Preparação**
+**Preparar**
 
-Preparação para a fase de criação de protótipos, podemos coletará uma variedade de ferramentas de físicas, muito parecido com um kit de brincadeira de criança – para construir objetos 3D que representarão hologramas. Também temos ferramentas físicas que representam os dispositivos de hardware, as pessoas estão usando para acessar esses hologramas.
+Em preparação para a fase de criação de protótipos, coletaremos uma variedade de ferramentas físicas, muito parecidas com o kit de reprodução de um filho, para construir objetos 3D que irão representar hologramas. Também teremos ferramentas físicas que representem os dispositivos de hardware que as pessoas estão usando para acessar esses hologramas.
 
-***Protótipo!***
+***Funções!***
 
 **Preparar um script**
 
-O usuário todo o fluxo para esse protótipo de fora do script e decidir sobre os atores que serão ser exerce um papel no skit.
+Crie o script de todo o fluxo do usuário para esse protótipo e decida sobre os atores que executarão uma parte no skit.
 
-**Agir-**
+**Agir**
 
-Agir fisicamente o fluxo de usuário que envolve a todas as partes do usuário na ordem em que eles serão usá-lo. Isso nos dá uma boa ideia de como viável este produto será quando estamos desenvolvê-la. Ele também trará para algumas grandes curva aguda que nós podem ter sido ignoradas quando surgindo com a ideia de luz.
+Aja fisicamente o fluxo do usuário que envolve todas as partes do usuário na ordem em que elas vão usá-lo. Isso nos dá uma boa ideia de quão viável esse produto será quando o criamos. Ele também trará um pouco mais de Kinks que poderemos ter sido despercebido ao chegar à ideia.
 
 ## <a name="about-the-author"></a>Sobre o autor
 

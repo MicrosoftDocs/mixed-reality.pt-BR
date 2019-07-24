@@ -5,14 +5,13 @@ author: liamartinez
 ms.author: liamar
 ms.date: 05/13/2019
 ms.topic: article
-ms.localizationpriority: high
 keywords: Realidade Misturada, focar, esperar, interação, design
-ms.openlocfilehash: 70b25949380679d2edc81b07ab54f24fa20e3f3d
-ms.sourcegitcommit: 9b6949d7cd2e67e6bde9b32aebeaeea325baa6c4
-ms.translationtype: HT
+ms.openlocfilehash: d522ca3a6f36995959e8e6e87482279d05bf0aa3
+ms.sourcegitcommit: b0b1b8e1182cce93929d409706cdaa99ff24fdee
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66516014"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68387534"
 ---
 # <a name="head-gaze-and-dwell"></a>Focar com a cabeça e esperar
 
@@ -90,7 +89,8 @@ Aplique um pequeno atraso antes de iniciar o retorno visual para evitar cintila�
 ## <a name="ui-patterns"></a>Padrões da interface do usuário
 
 ### <a name="high-frequency-buttons"></a>Botões de alta frequência
-![Botão de Avançar dos Guias do Microsoft Dynamics 365](images/GuideNextButton.png "Botão de Avançar dos Guias do Microsoft Dynamics 365") Botões de alta frequência são botões comumente usados em um aplicativo. Um bom exemplo são os botões Voltar e Avançar nos Guias do Microsoft Dynamics 365.
+![Botão Avançar dos guias do Microsoft Dynamics 365](images/GuideNextButton.png "Botão Avançar dos guias do Microsoft Dynamics 365")<br>
+*Botões de alta frequência são botões que são usados normalmente em um aplicativo. Um bom exemplo desses são os botões Avançar e voltar nos guias do Microsoft Dynamics 365.*
 
 Botões de alta frequência devem...
 * ser maiores e mais fáceis de acionar com o foco com a cabeça
@@ -114,7 +114,8 @@ Quando uma ação tem um impacto significativo, como cobrar dinheiro, excluir um
 Botões de alternância exigem uma lógica sutil para funcionarem corretamente. Quando uma pessoa olha fixo para um botão de alternância e o ativa, ela precisa sair do botão e retornar para reiniciar a lógica de espera. É importante que os botões de alternância tenham estados ativo e inativo claros. 
 
 ### <a name="list-views"></a>Modos de exibição de lista
-![Diálogo de confirmação dos Guias do Microsoft Dynamics 365](images/GuidesListView.png "Diálogo de confirmação dos Guias do Microsoft Dynamics 365") As exibições de lista são um desafio especial para a entrada de focar com a cabeça e esperar. As pessoas devem poder verificar o conteúdo sem sentirem que precisam tomar cuidado com os alvos de espera. 
+![Diálogo de confirmação dos Guias do Microsoft Dynamics 365](images/GuidesListView.png "Diálogo de confirmação dos Guias do Microsoft Dynamics 365")<br>
+*As exibições de lista apresentam um desafio específico para a entrada de olhar e de duração da pesquisa. As pessoas precisam ser capazes de verificar o conteúdo sem se sentir que eles precisam Tiptoe-los em volta dos destinos de pesquisa.*
 
 Algumas dicas para projetar exibições de lista:
 * realce toda a linha ao focar com a cabeça, mas não comece a esperar, a menos que o foco com a cabeça esteja fixado no alvo específico.

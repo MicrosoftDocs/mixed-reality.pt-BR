@@ -5,7 +5,7 @@ author: wguyman
 ms.author: wguyman
 ms.date: 10/02/2018
 ms.topic: article
-keywords: MRC, misturadas captura realidade, fotos, vídeo, câmera, captura, uso, fluxo, transmissão ao vivo, demonstração
+keywords: MRC, captura de realidade mista, fotos, vídeo, câmera, captura, uso, fluxo, transmissão ao vivo, demonstração
 ms.openlocfilehash: 7af60682f78f624e6b41ded88c8a77e70d40194c
 ms.sourcegitcommit: 06ac2200d10b50fb5bcc413ce2a839e0ab6d6ed1
 ms.translationtype: MT
@@ -15,75 +15,75 @@ ms.locfileid: "67694508"
 ---
 # <a name="mixed-reality-capture"></a>Captura de realidade mista
 
-HoloLens oferece aos usuários a experiência de mistura do mundo real com o mundo digital. Captura de realidade misturada (MRC) permitem que você capture essa experiência como uma fotografia ou um vídeo. Isso permite que você compartilhe a experiência com outras pessoas, permitindo que eles vejam as hologramas conforme você vê-los. Tais fotos e vídeos são de um ponto de vista de primeira pessoa. Para o ponto de vista da terceira pessoa, use [exibição spectator](spectator-view.md).
+O HoloLens dá aos usuários a experiência de misturar o mundo real com o mundo digital. A MRC (Mixed Reality Capture) permite que você capture essa experiência como uma fotografia ou um vídeo. Isso permite que você compartilhe a experiência com outras pessoas, permitindo que elas vejam os hologramas à medida que você vê-las. Esses vídeos e fotos são de um ponto de vista de primeira pessoa. Para um ponto de vista de terceira pessoa, use a [exibição Spectator](spectator-view.md).
 
-Casos de uso para a captura de realidade misturada vão além de compartilhar vídeos entre um círculo social. Vídeos podem ser usados para instruir a outras pessoas sobre como usar um aplicativo. Os desenvolvedores podem usar vídeos ou ainda pode melhorar as etapas de reprodução e depurar experiências de aplicativo.
+Casos de uso para a captura de realidade misturada vão além do compartilhamento de vídeos entre um círculo social. Vídeos podem ser usados para instruir outras pessoas sobre como usar um aplicativo. Os desenvolvedores podem usar vídeos ou ainda para melhorar as etapas de reprodução e depurar experiências de aplicativo.
 
-## <a name="live-streaming-from-hololens"></a>Transmissão do HoloLens ao vivo
+## <a name="live-streaming-from-hololens"></a>Transmissão ao vivo do HoloLens
 
-O [atualização do Windows 10 de outubro de 2018](release-notes-october-2018.md) adiciona o suporte do Miracast para o HoloLens. Selecione o **Connect** botão na parte inferior do menu Iniciar para abrir um seletor para dispositivos habilitados para Miracast e adaptadores. Selecione o dispositivo ao qual você deseja iniciar o streaming. Quando terminar, selecione a **desconectar** botão na parte inferior do menu Iniciar.  **Conectar-se** e **desconectar** também estão disponíveis no menu Ações rápidas.
+A [atualização do Windows 10 de outubro de 2018](release-notes-october-2018.md) adiciona suporte a Miracast ao HoloLens. Selecione o botão **conectar** na parte inferior do menu Iniciar para abrir um seletor para dispositivos e adaptadores habilitados para Miracast. Selecione o dispositivo para o qual você deseja iniciar o streaming. Quando terminar, selecione o  botão desconectar na parte inferior do menu iniciar.  **Conectar** e **Desconectar** também estão disponíveis no menu ações rápidas.
 
-O [Windows Device Portal](using-the-windows-device-portal.md) e [aplicativo complementar do Microsoft HoloLens](https://www.microsoft.com/store/productId/9NBLGGH4QWNX) expõem as opções para dispositivos que estão no modo de desenvolvedor de transmissão ao vivo.
+O [portal do dispositivo do Windows](using-the-windows-device-portal.md) e o [aplicativo Microsoft HoloLens Companion](https://www.microsoft.com/store/productId/9NBLGGH4QWNX) expõem opções de transmissão ao vivo para dispositivos que estão no modo de desenvolvedor.
 
-[Dynamics 365 remoto auxiliar](https://dynamics.microsoft.com/en-us/mixed-reality/remote-assist) dá suporte à transmissão ao vivo do HoloLens aos funcionários em locais remotos.
+O Dynamic [Assist do Dynamics 365](https://dynamics.microsoft.com/en-us/mixed-reality/remote-assist) dá suporte à transmissão ao vivo do HoloLens para funcionários em locais remotos.
 
-## <a name="taking-mixed-reality-captures"></a>Levando a realidade misturada captura
+## <a name="taking-mixed-reality-captures"></a>Fazendo capturas de realidade misturada
 
-![Clique no ícone da câmera na parte inferior do menu Iniciar](images/cameraiconinpins-300px.png)<br>
-*Clique no ícone da câmera na parte inferior do menu Iniciar*
+![Clique no ícone da câmera na parte inferior do menu iniciar](images/cameraiconinpins-300px.png)<br>
+*Clique no ícone da câmera na parte inferior do menu iniciar*
 
-Há várias maneiras de iniciar uma captura de realidade mista:
-* Cortana pode ser usado em todos os momentos, independentemente do aplicativo em execução no momento. Simplesmente dizer: "Ei Cortana, tirar uma foto" ou "Ei Cortana, inicie a gravação." Para interromper um vídeo, dizer "Ei Cortana, interromper a gravação."
-* No menu Iniciar, selecione **câmera** ou **vídeo**. Use [polegar](gestures.md#air-tap) para abrir a câmera MRC interna da interface do usuário.
-* No menu Ações rápidas, selecione **câmera** ou **vídeo** para abrir a câmera MRC interna da interface do usuário.
-* Aplicativos são capazes de expor seu próprios da interface do usuário para a captura de realidade misturada usando personalizado ou, desde o [atualização do Windows 10 de outubro de 2018](release-notes-october-2018.md), [câmera interna de MRC da interface do usuário](mixed-reality-capture-for-developers.md).
+Há várias maneiras de iniciar uma captura de realidade misturada:
+* O Cortana pode ser usado sempre, independentemente do aplicativo em execução no momento. Apenas digamos, "Ei Cortana, tirar uma foto" ou "Ei Cortana, iniciar a gravação". Para interromper um vídeo, diga "Ei Cortana, parar a gravação".
+* No menu Iniciar, selecione **câmera** ou **vídeo**. Use o [Air-toque](gestures.md#air-tap) para abrir a interface do usuário da câmera da MRC interna.
+* No menu ações rápidas, selecione **câmera** ou **vídeo** para abrir a interface do usuário da câmera da MRC interna.
+* Os aplicativos são capazes de expor sua própria interface do usuário para a captura de realidade misturada usando Custom ou, a partir da [atualização do Windows 10 de outubro de 2018](release-notes-october-2018.md), [interface do usuário da câmera da MRC interna](mixed-reality-capture-for-developers.md).
 * Exclusivo para o HoloLens: 
-    * [Windows Device Portal](using-the-windows-device-portal.md) tem uma página de captura de realidade mista que pode ser usada para tirar fotos, vídeos, transmissão ao vivo e exibir capturas.
-    * Pressione ambas as **aumentar volume** e **Diminuir volume** botões simultaneamente para tirar uma foto, independentemente do aplicativo em execução no momento.
-    * Mantenha os **aumentar volume** e **Diminuir volume** botões para três segundos iniciar a gravação de um vídeo. Para interromper um vídeo, toque em ambos **aumentar volume** e **Diminuir volume** botões simultaneamente.
-* Exclusivo para imersivo headsets: 
-    * Usando um controlador de movimento, mantenha o **Windows** botão e, em seguida, toque o **gatilho** para tirar uma foto. 
-    * Usando um controlador de movimento, mantenha o **Windows** botão e, em seguida, toque o **menu** botão para iniciar a gravação de vídeo. Mantenha os **Windows** botão e, em seguida, toque o **gatilho** Parar gravação de vídeo.
+    * O [portal do dispositivo Windows](using-the-windows-device-portal.md) tem uma página de captura de realidade misturada que pode ser usada para tirar fotos, vídeos, transmissão ao vivo e exibir capturas.
+    * Pressione os botões **volume up** e **volume down** simultaneamente para tirar uma foto, independentemente do aplicativo em execução no momento.
+    * Segure os botões **volume up** e **volume down** por três segundos para começar a gravar um vídeo. Para interromper um vídeo, toque nos botões **volume up** e **volume down** simultaneamente.
+* Únicos a headsets de imersão: 
+    * Usando um controlador de movimento, mantenha o botão do **Windows** pressionado e, em seguida, toque no **gatilho** para tirar uma foto. 
+    * Usando um controlador de movimento, mantenha o botão do **Windows** pressionado e, em seguida, toque no botão de **menu** para iniciar a gravação do vídeo. Mantenha o botão do **Windows** pressionado e, em seguida, toque no **gatilho** para parar de gravar o vídeo.
     
 >[!NOTE]
->O [atualização do Windows 10 de outubro de 2018](release-notes-october-2018.md) altera o comportamento de bloom e o botão do Windows. Antes da atualização, o botão de Windows ou um gesto de bloom seria parar a gravação. Após a atualização, o gesto de bloom ou no botão Windows abre o menu Iniciar (ou o menu de ações rápidas se você estiver em um aplicativo). No menu, selecione **Stop vídeo** para interromper a gravação.
+>A [atualização do Windows 10 de outubro de 2018](release-notes-october-2018.md) muda a forma como o botão de cair e do Windows se comporta. Antes da atualização, o botão de gesto de cair ou do Windows interromperia a gravação. Após a atualização, o gesto de cair ou o botão do Windows abrirá o menu iniciar (ou o menu ações rápidas se você estiver em um aplicativo). No menu, selecione **parar vídeo** para interromper a gravação.
 
 ### <a name="limitations-of-mixed-reality-capture"></a>Limitações da captura de realidade misturada
 
-Em HoloLens, o sistema limitará a taxa de processamento para 30Hz. Isso cria alguns sobra para MRC ser executado para que o aplicativo não precisa manter uma reserva de orçamento constante e também corresponde a taxa de quadros de gravação de vídeo MRC de (até) 30fps.
+No HoloLens, o sistema limitará a taxa de renderização a 30Hz. Isso cria algum espaço para que a MRC seja executada para que o aplicativo não precise manter uma reserva de orçamento constante e também corresponda à taxa de quadros de gravação de vídeo da MRC de (até) 30fps.
 
-Vídeos de ter um comprimento máximo de cinco minutos.
+Os vídeos têm um comprimento máximo de cinco minutos.
 
-A câmera MRC interna da interface do usuário só dá suporte a uma única operação MRC por vez (tirar uma foto é mutuamente exclusivo de gravar um vídeo).
+A interface do usuário da câmera da MRC interna dá suporte apenas a uma única operação da MRC por vez (tirar uma imagem é mutuamente exclusiva de gravar um vídeo).
 
 ### <a name="file-formats"></a>Formatos de arquivo
 
-Captura de realidade misturada de comandos de voz Cortana e ferramentas do Menu Iniciar criam arquivos nos seguintes formatos:
+A realidade misturada captura os comandos de voz do Cortana e as ferramentas do menu iniciar criam arquivos nos seguintes formatos:
 
 |  type  |  Formatar  |  Extensão  |  Resolução  |  Áudio | 
 |----------|----------|----------|----------|----------|
-|  Fotografia  |  [JPEG](https://en.wikipedia.org/wiki/JPEG)  |  .jpg  |  3904x2196px (HoloLens 2)<br> 1408x792px (HoloLens)<br> 1920x1080px<br>tamanho (fones Imersivos em exposição) |  N/D | 
-|  Vídeo  |  [MPEG-4](https://en.wikipedia.org/wiki/MPEG-4)  |  .mp4  |  1920x1080px<br>tamanho em 30fps (HoloLens 2)<br> 1216x684px at 24fps (HoloLens)<br> 1632x918px em 30fps (fones Imersivos em exposição) |  48kHz estéreo | 
+|  Fotografia  |  [JPEG](https://en.wikipedia.org/wiki/JPEG)  |  .jpg  |  3904x2196px (HoloLens 2)<br> 1408x792px (HoloLens)<br> 1920x1080px (headsets de imersão) |  N/D | 
+|  Vídeo  |  [MPEG-4](https://en.wikipedia.org/wiki/MPEG-4)  |  .mp4  |  1920x1080px em 30fps (HoloLens 2)<br> 1216x684px em 24fps (HoloLens)<br> 1632x918px em 30fps (headsets de imersão) |  Estéreo de 48kHz | 
 
 >[!NOTE]
->A resolução de fotos e vídeos pode ser menor, se a câmera de vídeo/foto já está em uso por outro aplicativo, durante a transmissão ao vivo, ou quando os recursos do sistema estão baixos.
+>A resolução de fotos e vídeos pode ser menor se a câmera de foto/vídeo já estiver em uso por outro aplicativo, enquanto a transmissão ao vivo ou quando os recursos do sistema estão baixos.
 
-### <a name="video-stabilization"></a>Estabilização do vídeo
+### <a name="video-stabilization"></a>Estabilização de vídeo
 
 Por padrão:
-* Estabilização do vídeo de latência de zero é aplicada quando ao vivo de streaming pela Miracast.
-* Estabilização do vídeo de longa latência é aplicada aos vídeos capturados usando a câmera interna de MRC da interface do usuário, os comandos de voz Cortana e Windows Device Portal.
+* A estabilização de vídeo de latência zero é aplicada quando a transmissão ao vivo sobre Miracast.
+* A estabilização de vídeo de latência longa é aplicada aos vídeos capturados usando a interface do usuário da câmera da MRC interna, os comandos de voz da Cortana e o portal de dispositivo do Windows.
 
-## <a name="viewing-mixed-reality-captures"></a>Exibindo a realidade misturada captura
+## <a name="viewing-mixed-reality-captures"></a>Exibindo capturas de realidade misturada
 
-Realidade misturada captura fotos e vídeos são salvos "Rolo da câmera" pasta do dispositivo. Eles podem ser acessados por meio de [aplicativo fotos](see-your-photos.md#photos-app) ou Explorador de arquivos.
+A realidade mista captura fotos e vídeos são salvos na pasta "rolo de câmera" do dispositivo. Eles podem ser acessados por meio do [aplicativo de fotos](see-your-photos.md#photos-app) ou explorador de arquivos.
 
-Em um PC conectado ao HoloLens, você também pode usar [Windows Device Portal](using-the-windows-device-portal.md#mixed-reality-capture) ou o Explorador de arquivos do seu PC ([por meio da consulta MTP](release-notes-april-2018.md#new-features-for-hololens)).
+Em um PC conectado ao HoloLens, você também pode usar o [portal de dispositivo do Windows](using-the-windows-device-portal.md#mixed-reality-capture) ou o explorador de arquivos do seu PC ([via MTP](release-notes-april-2018.md#new-features-for-hololens)).
 
-Se você instalar o [aplicativo OneDrive](https://www.microsoft.com/p/onedrive/9wzdncrfj1p3), você pode ativar **upload da câmera,** e suas MRC fotos e vídeos serão sincronizados com o OneDrive e outros dispositivos usando o OneDrive.
+Se você instalar o [aplicativo do onedrive](https://www.microsoft.com/p/onedrive/9wzdncrfj1p3), poderá ativar o **carregamento da câmera** e suas fotos e vídeos da MRC serão sincronizados com o onedrive e seus outros dispositivos usando o onedrive.
 
 >[!NOTE]
->A partir do Windows 10 de abril de 2018 Update, o aplicativo de fotos não carregará suas fotos e vídeos no OneDrive.
+>A partir da atualização do Windows 10 de abril de 2018, o aplicativo de fotos não carregará mais suas fotos e vídeos no OneDrive.
 
 ## <a name="see-also"></a>Consulte também
 * [Modo de exibição Espectador](spectator-view.md)
