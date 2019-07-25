@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realidade misturada, unity, tutorial, hololens
-ms.openlocfilehash: 3e4be00ddeab6d91dbbc8226bfa3dc543cded095
-ms.sourcegitcommit: 611af6ff7a2412abad80c0c7d4decfc0c3a0e8c8
+ms.openlocfilehash: 529a888dfa00180ca908fbc7f4c62f9a9086c661
+ms.sourcegitcommit: c7c7e3c836373b65e319609b4e8389dea6b081de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68293701"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68460324"
 ---
 # <a name="4-sharing-object-movements-with-multiple-users"></a>4. Compartilhando movimentos de objetos com vários usuários
 
@@ -50,7 +50,7 @@ Seus
 
 ![module3chapter4updatestep6](images/module3chapter4updatestep6.png)
 
-7. Na exibição do projeto, navegue até ativos-> recursos-> pré-fabricados. Primeiro, arraste e solte a tabela pré-fabricado para o slot Tableprefab na classe PhotonRoom. Em seguida, arraste e solte o pré-fabricado LunarModule para o slot do módulo pré-fabricado na classe PhotonRoom.
+7. Na exibição do projeto, navegue até ativos-> recursos-> pré-fabricados. Primeiro, arraste e solte a tabela pré-fabricado para o slot Tableprefab na classe PhotonRoom. Em seguida, arraste e solte o RocketLauncherCompleteVariantprefab para o slot pré-fabricado do módulo na classe PhotonRoom.
 
 ![module3chapter4updatestep7](images/module3chapter4updatestep7.png)
 
@@ -67,10 +67,6 @@ Seus
 10. Com o novo objeto selecionado em sua hierarquia, altere o nome do objeto para TableAnchor no painel de Inspetor. Além disso, clique em Adicionar componente e procure o componente TableAnchor. Selecione-o e adicione-o ao objeto. 
 
 ![Module3Chapter4step6im](images/module3chapter4step7im.PNG)
-
-> Observação: Defina o posicionamento como x = 1, y =-0,55 e z = 2. Além disso, defina a rotação para y = 90. 
->
-> ![Module3Chapter4step6im](images/module3chapter4noteim.PNG)
 
 11. Agora, no painel projeto na pasta pré-fabricados, arraste a tabela pré-fabricado para o objeto filho "TableAnchor" que você acabou de criar.
 
