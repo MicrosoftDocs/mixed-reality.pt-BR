@@ -6,12 +6,12 @@ ms.author: shengkait
 ms.date: 04/26/2019
 ms.topic: article
 keywords: Realidade misturada, mãos, controle de movimento, interação, design
-ms.openlocfilehash: d0e54c71ab42a09f2f9c6063a85441b98e729af1
-ms.sourcegitcommit: 8d6e5723283c03f984f1fafef81afa5aab5d04bc
+ms.openlocfilehash: b6efb0a9651cad8eee9b80bb130aa1a85b9a9941
+ms.sourcegitcommit: 76a7aa6e64e114b63ace058dd6d6d662b3c9f09e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66039173"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68507865"
 ---
 # <a name="hands-and-motion-controllers"></a>Controladores de mãos e de movimento
 ## <a name="scenarios"></a>Cenários
@@ -32,9 +32,11 @@ Essa é uma modalidade que aproveita o poder das mãos, com as quais os usuário
 Essa modalidade permite que os usuários interajam com os hologramas em uma distância. Ele permite que os usuários façam o melhor uso de arredores. Os usuários podem posicionar os hologramas em qualquer lugar e ainda podem acessá-los de qualquer distância. Os modelos mentales e gestos para controlar e manipular os hologramas 2D e 3D são altamente sincronizados com aqueles de manipulação direta.
 
 ### <a name="motion-controllersmotion-controllersmd"></a>[Controladores de movimentos](motion-controllers.md)
-Os controladores de movimento são ferramentas que estendem os recursos físicos dos usuários, fornecendo interações precisas em uma grande variedade de distâncias ao usar uma ou ambas as mãos. Esses acessórios de hardware fornecem atalhos para muitas interações usadas com frequência e fornecem comentários de Surefooted, tactile para uma variedade de ações. Atualmente, os controladores de movimento só estão disponíveis para cenários WMR. 
+Os controladores de movimento são ferramentas que estendem os recursos físicos do usuário, fornecendo interações precisas em uma grande variedade de distâncias ao usar uma ou ambas as mãos. Esses acessórios de hardware fornecem atalhos para muitas interações usadas com frequência e fornecem comentários de Surefooted, tactile para uma variedade de ações. Atualmente, os controladores de movimento só estão disponíveis para cenários de WMR (realidade mista do Windows). 
 
-![](images/Hands-and-controllers-720px.jpg)<br>
+![Comparação de modalidades de controladores de mão e de movimento](images/Hands-and-controllers-720px.jpg)<br>
+
+*Comparação de modalidades de controladores de mão e de movimento*
 
 ## <a name="see-also"></a>Consulte também
 * [Focar com a cabeça e confirmar](gaze-and-commit.md)

@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realidade misturada, unity, tutorial, hololens
-ms.openlocfilehash: 529a888dfa00180ca908fbc7f4c62f9a9086c661
-ms.sourcegitcommit: c7c7e3c836373b65e319609b4e8389dea6b081de
+ms.openlocfilehash: 77ae779b4bb32dd66a722c9793d1b83c4a64ae2e
+ms.sourcegitcommit: b086d7a62ee0c7913aa8f66c90e9d2527f270264
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68460324"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68485671"
 ---
 # <a name="4-sharing-object-movements-with-multiple-users"></a>4. Compartilhando movimentos de objetos com vários usuários
 
@@ -23,7 +23,7 @@ Seus
 - Configure seu projeto para compartilhar os movimentos do modelo 3D.
 - Saiba como criar um aplicativo de colaboração de vários usuários básico
 
-### <a name="instructions"></a>Instruções
+## <a name="instructions"></a>Instruções
 
 
 1. Salve a cena da lição anterior (Control + S). Você pode nomeá-lo, HLSharedProjectMainPart4. Unity, para que seja mais fácil encontrá-lo quando precisar.
@@ -85,5 +85,5 @@ Embora todos os usuários estejam conectados como parte de uma experiência comp
 
 Antes de prosseguir para a próxima lição, precisaremos concluir o módulo de aprendizado do ASA que aborda noções básicas do ASA, criação de contas e recursos do Azure e outros blocos de edifícios fundamentais necessários para que possamos integrá-lo à nossa experiência compartilhada.
 
-[Próxima lição: Compartilhamento (Photon) lição 5](mrlearning-sharing(photon)-ch5.md)
+[Próxima lição: 5. Integrar Âncoras Espaciais do Azure em uma experiência compartilhada](mrlearning-sharing(photon)-ch5.md)
 

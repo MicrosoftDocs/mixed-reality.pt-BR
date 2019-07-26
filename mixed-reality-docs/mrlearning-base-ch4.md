@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 05/02/2019
 ms.topic: article
 keywords: realidade misturada, unity, tutorial, hololens
-ms.openlocfilehash: d47f2940ad741cb436322a824a67f54bb6376c55
-ms.sourcegitcommit: b0b1b8e1182cce93929d409706cdaa99ff24fdee
+ms.openlocfilehash: 314af3e1e38e1698943f07dc32f5e1e3e2f36d4f
+ms.sourcegitcommit: b086d7a62ee0c7913aa8f66c90e9d2527f270264
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68387697"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68485700"
 ---
 # <a name="5-interacting-with-3d-objects"></a>5. Interagindo com objetos 3D
 
@@ -202,8 +202,8 @@ Neste exemplo, reproduziremos um efeito sonoro quando você tocar um objeto com 
 
 ![Lesson4 Chapter4 Step3 5 Noteim](images/Lesson4_chapter4_step3-5-noteim.PNG)
 
-### <a name="congratulations"></a>Parabéns 
+## <a name="congratulations"></a>Parabéns 
 Neste tutorial, você aprendeu a organizar objetos 3D em uma coleção de grade e a manipular objetos 3D (dimensionamento, rotação e movimentação) usando a interação próxima (pegando diretamente com as mãos controladas) e a interação extrema (usando raios olhar ou raios de mão). Você também aprendeu como colocar caixas delimitadoras em objetos 3D e aprendeu como usar e personalizar o utensílios nas caixas delimitadoras. Por fim, você aprendeu a disparar eventos ao tocar um objeto.
 
-[Próxima lição: Entrada avançada](mrlearning-base-ch5.md)
+[Próxima lição: 6. Explorar as opções avançadas de entrada](mrlearning-base-ch5.md)
 

@@ -1,4 +1,4 @@
-### <a name="getting-unity-ready-for-development"></a>Obtendo o Unity pronto para desenvolvimento 
+# <a name="2-getting-unity-ready-for-development"></a>2. Obtendo o Unity pronto para desenvolvimento 
 
 
 Neste tutorial, aprendemos como preparar e configurar o Unity para o desenvolvimento de aplicativos, incluindo a importação do kit de ferramentas de realidade misturada, a definição de configurações de compilação e a preparação de nossa cena.
@@ -11,7 +11,7 @@ Seus
 
 - Preparar a cena do projeto
 
-### <a name="instructions"></a>Instruções
+## <a name="instructions"></a>Instruções
 
 1. Baixe e salve o pacote da Unity do kit de ferramentas da realidade mista clicando [aqui.](https://github.com/microsoft/MixedRealityToolkit-Unity/releases/download/v2.0.0-RC2.1/Microsoft.MixedReality.Toolkit.Unity.Foundation-v2.0.0-RC2.1.unitypackage)
 
@@ -76,5 +76,5 @@ Seus
 
 Seu projeto de Unity agora está pronto para Photon. Nos próximos tutoriais, vamos criar essa cena e nosso projeto de Unity em direção a uma experiência compartilhada completa.
 
-[Próximo tutorial: Conectar vários usuários](mrlearning-sharing(photon)-ch3.md)
+[Próximo tutorial: 3. Conectar vários usuários](mrlearning-sharing(photon)-ch3.md)
 

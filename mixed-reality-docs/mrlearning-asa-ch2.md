@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realidade misturada, unity, tutorial, hololens
-ms.openlocfilehash: 80367ed818168c1d642fadbd7316d3d6481dd2a9
-ms.sourcegitcommit: 611af6ff7a2412abad80c0c7d4decfc0c3a0e8c8
+ms.openlocfilehash: b263d30905c5a1ba81bfb59ba6a49c7710c43869
+ms.sourcegitcommit: b086d7a62ee0c7913aa8f66c90e9d2527f270264
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68293795"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68485738"
 ---
 # <a name="2-saving-retrieving-and-sharing-azure-spatial-anchors"></a>2. Salvando, recuperando e compartilhando âncoras espaciais do Azure
 
@@ -81,5 +81,5 @@ Aprendemos como implementar as âncoras espaciais do Azure como parte de uma exp
 
 Na próxima lição, aprenderemos a fornecer aos usuários comentários em tempo real. Esses comentários incluirão informações sobre a criação de âncora, a qualidade da compreensão do ambiente e o estado da sessão do Azure. Sem comentários, os usuários podem não saber se uma âncora foi carregada com êxito no Azure, se a qualidade do ambiente é suficiente para a criação de âncora ou para o estado atual.
 
-[Próxima lição: Tutorial do ASA 3](mrlearning-asa-ch3.md)
+[Próxima lição: 3. Exibindo comentários de âncora espacial do Azure](mrlearning-asa-ch3.md)
 

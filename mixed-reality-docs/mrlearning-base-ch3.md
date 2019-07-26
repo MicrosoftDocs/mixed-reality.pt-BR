@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realidade misturada, unity, tutorial, hololens
-ms.openlocfilehash: 4baee7ba8643f5bb80e0456eb97d915405431654
-ms.sourcegitcommit: b0b1b8e1182cce93929d409706cdaa99ff24fdee
+ms.openlocfilehash: 401c667ef80042da9182b7f4e065dfd6884cf061
+ms.sourcegitcommit: b086d7a62ee0c7913aa8f66c90e9d2527f270264
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68387711"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68485696"
 ---
 # <a name="4-placing-dynamic-content-and-using-solvers"></a>4. Colocando conteúdo dinâmico e usando os solveres
 
@@ -74,8 +74,8 @@ Nesta seção, configuraremos o objeto do jogo de cubo criado anteriormente para
 
 ![Lição3 Capítulo3 Etapa5im](images/Lesson3_chapter3_step5im.PNG)
 
-### <a name="congratulations"></a>Parabéns
+## <a name="congratulations"></a>Parabéns
 Neste tutorial, você aprendeu a usar os resolvedores do MRTK para ter uma interface do usuário intuitivamente seguir o User. Você também aprendeu a anexar um solucionador a um objeto do jogo (ou seja, o cubo) para seguir as mãos do usuário. Para saber mais sobre esses e outros solucionadores incluídos com o MRTK, fique à vontade para visitar a [página da documentação dos solucionadores do MRTK](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Solver.html).
 
-[Próxima lição: Interação de objetos 3D](mrlearning-base-ch4.md)
+[Próxima lição: 5.    Interagir com objetos 3D](mrlearning-base-ch4.md)
 

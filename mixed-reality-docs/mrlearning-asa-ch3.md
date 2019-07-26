@@ -6,18 +6,18 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realidade misturada, unity, tutorial, hololens
-ms.openlocfilehash: c6e902710eebe205b9e944b1bf95a9ddd3bd9044
-ms.sourcegitcommit: 611af6ff7a2412abad80c0c7d4decfc0c3a0e8c8
+ms.openlocfilehash: cfd6ac9997a8a5d962603922f473bd6fc5d708ed
+ms.sourcegitcommit: b086d7a62ee0c7913aa8f66c90e9d2527f270264
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68293803"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68485731"
 ---
-# <a name="displaying-azure-spatial-anchor-feedback"></a>Exibindo comentários de âncora espacial do Azure
+# <a name="3-displaying-azure-spatial-anchor-feedback"></a>3. Exibindo comentários de âncora espacial do Azure
 
 Nesta lição, você aprenderá a fornecer aos usuários comentários sobre a descoberta de âncora, eventos e status ao usar âncoras espaciais do Azure.
 
-Seus
+## <a name="objectives"></a>Objetivos
 
 * Saiba como configurar um painel de interface do usuário que exibe informações importantes sobre a sessão atual do ASA
 

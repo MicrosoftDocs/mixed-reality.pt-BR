@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realidade misturada, unity, tutorial, hololens
-ms.openlocfilehash: 690ece3a02aeefd598db18baa66de3ddabfa43eb
-ms.sourcegitcommit: 611af6ff7a2412abad80c0c7d4decfc0c3a0e8c8
+ms.openlocfilehash: 391e797ad9cc8933b057366ab47a3f453c68723e
+ms.sourcegitcommit: b086d7a62ee0c7913aa8f66c90e9d2527f270264
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68293815"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68485770"
 ---
 # <a name="1-getting-started-with-azure-spatial-anchors"></a>1. Introdução às âncoras espaciais do Azure
 
@@ -199,5 +199,5 @@ Nas seções anteriores, você aprendeu os conceitos básicos das âncoras espac
 ## <a name="congratulations"></a>Parabéns
 Neste tutorial, você aprendeu os conceitos básicos das âncoras espaciais do Azure. Esse Esson forneceu a você vários botões que permitem explorar as várias etapas necessárias para iniciar e parar uma sessão do Azure, criar, carregar e baixar âncoras do Azure em um único dispositivo. Na próxima lição, aprenderemos como salvar IDs de âncora do Azure em seu HoloLens 2 para recuperação, mesmo depois que o aplicativo for reiniciado. Durante a série, você aprenderá também a transferir IDs de âncora entre vários dispositivos para obter o alinhamento espacial e aprender sobre sessões compartilhadas de vários usuários, em breve como parte do tutorial de compartilhamento.
 
-[Próxima lição: Lição 2 do ASA](mrlearning-asa-ch2.md)
+[Próxima lição: 2. Salvar, recuperar e compartilhar Âncoras Espaciais do Azure](mrlearning-asa-ch2.md)
 

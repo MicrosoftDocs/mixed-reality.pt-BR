@@ -6,14 +6,14 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realidade misturada, unity, tutorial, hololens
-ms.openlocfilehash: f9da038fe917e9e45b386de54049d6aa312ecfba
-ms.sourcegitcommit: b0b1b8e1182cce93929d409706cdaa99ff24fdee
+ms.openlocfilehash: d7ef68d1a1e64ca85d76b11376d0916b2693e8e1
+ms.sourcegitcommit: b086d7a62ee0c7913aa8f66c90e9d2527f270264
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68387780"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68485708"
 ---
-# <a name="6exploring-advanced-input-options"></a>6. explorando opções de entrada avançadas
+# <a name="6-exploring-advanced-input-options"></a>6. Explorando opções de entrada avançadas
 
 Neste tutorial, exploraremos várias opções de entrada avançadas para o HoloLens 2, incluindo o uso de comandos de voz, gesto de panorâmica e acompanhamento de olho. 
 
@@ -198,8 +198,9 @@ No campo recém-criado, adicione o objeto de jogo atual ao campo vazio e selecio
 6. Certifique-se de que as funcionalidades de acompanhamento ocular estejam configuradas adequadamente antes de compilar para o HoloLens 2. No momento da redação deste artigo, o Unity ainda não tem a capacidade de definir a entrada olhar para recursos de acompanhamento de olho. A definição dessa funcionalidade é necessária para que o acompanhamento de olho funcione no HoloLens 2. Siga estas instruções na documentação do Kit de Ferramentas de Realidade Misturada para habilitar a funcionalidade de entrada de foco: https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_BasicSetup.html#testing-your-unity-app-on-a-hololens-2 
 
 
-### <a name="congratulations"></a>Parabéns! 
+## <a name="congratulations"></a>Parabéns
+
 Você adicionou com êxito os recursos básicos de acompanhamento de olho ao seu aplicativo. Essas ações são apenas o começo de um mundo de possibilidades com o acompanhamento ocular. Este capítulo também conclui a lição 5, na qual aprendemos sobre a funcionalidade de entrada avançada, como comandos de voz, gestos de panorâmica e acompanhamento de olho. 
 
-[Próxima lição: Experiência de exemplo do assembly de módulo Lunar](mrlearning-base-ch6.md)
+[Próxima lição: 7. Criar um aplicativo de exemplo do módulo Lunar](mrlearning-base-ch6.md)
 

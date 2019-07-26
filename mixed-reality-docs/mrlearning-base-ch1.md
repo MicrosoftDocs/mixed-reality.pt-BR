@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realidade misturada, unity, tutorial, hololens
-ms.openlocfilehash: 51cfc123f7da8d25a53eecfb730f60cf10fe7377
-ms.sourcegitcommit: b0b1b8e1182cce93929d409706cdaa99ff24fdee
+ms.openlocfilehash: e79c3ea719a71d6df8ffd9e2be009d14a846a16a
+ms.sourcegitcommit: b086d7a62ee0c7913aa8f66c90e9d2527f270264
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68387787"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68485718"
 ---
 # <a name="2-initializing-your-project-and-first-application"></a>2. Inicializando o projeto e o primeiro aplicativo
 
@@ -112,4 +112,4 @@ Agora você implantou seu primeiro aplicativo do HoloLens 2. Ao percorrer, você
 
 >Observação: você verá como ativar e desativar o contador da taxa de quadros usando um comando de voz na [Lição 5](mrlearning-base-ch5.md).
 
-[Próxima lição: Interface do usuário, acompanhamento de mão e configuração do Kit de Ferramentas de Realidade Misturada](mrlearning-base-ch2.md)
+[Próxima lição: 3. Criando interface do usuário e Configurando o kit de ferramentas de realidade mista](mrlearning-base-ch2.md)
