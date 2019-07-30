@@ -241,7 +241,7 @@ Para usar o serviço de mídia do Azure, você precisará configurar uma instân
 
     ![O portal do Azure](images/AzureLabs-Lab6-24.png)
 
-23. Você será solicitado a definir um localizador , que é o ponto de entrada, para arquivos/s em seus ativos. Para seu cenário, defina as seguintes propriedades:
+23. Você será solicitado a definir um localizador, que é o ponto de entrada, para arquivos/s em seus ativos. Para seu cenário, defina as seguintes propriedades:
 
     1.  Tipo > de localizador**progressivo**.
 
@@ -358,7 +358,7 @@ Como importar o **unitypackage**:
 
     2.  Na pasta **materiais** , você encontrará o material de **InsideOutSpheres** *LAMBERT1*, junto com um material chamado *ButtonMaterial*, que é usado pelo GazeButton, que será exibido em breve.
 
-    3.  A pasta **pré-fabricados** contém o **InsideOutSphere** pré-fabricado que contém o modelo **InsideOutSphere**  e o *GazeButton*.
+    3.  A pasta **pré-fabricados** contém o **InsideOutSphere** pré-fabricado que contém o modelo **InsideOutSphere** e o *GazeButton*.
 
     4.  **Nenhum código está incluído**, você escreverá o código seguindo este curso.
 
@@ -748,7 +748,7 @@ A finalidade deste capítulo é configurar as duas cenas, cada uma hospedando um
 5.  De volta ao Unity, abra a pasta **cenas** e clique com o botão esquerdo do mouse no arquivo **VideoScene1** . Use o teclado e pressione **Ctrl + D** para duplicar essa cena
 
     > [!TIP]
-    > O  comando duplicado também pode ser executado navegando para **Editar > duplicado**.
+    > O comando duplicado também pode ser executado navegando para **Editar > duplicado**.
 
 6.  O Unity incrementará automaticamente o número de nomes de cena, mas o verificará de qualquer forma, para garantir que ele corresponda ao código inserido anteriormente.
 
@@ -830,7 +830,7 @@ Para compilar:
 
 4.  Você será solicitado a selecionar a pasta onde deseja buildThe a solução.
 
-5.  Crie uma  pasta builds e dentro dessa pasta crie outra pasta com um nome apropriado de sua escolha.
+5.  Crie uma pasta builds e dentro dessa pasta crie outra pasta com um nome apropriado de sua escolha.
 
 6.  Clique na nova pasta e, em seguida, clique em **Selecionar pasta**, para escolher essa pasta, para iniciar a compilação nesse local.
 

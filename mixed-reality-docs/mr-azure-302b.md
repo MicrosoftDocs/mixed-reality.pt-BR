@@ -296,7 +296,7 @@ Para importar a biblioteca Newtonsoft para seu projeto, use o pacote do Unity qu
     > Marcar esses plug-ins os configura para ser usado apenas no editor do Unity. Há um conjunto diferente deles na pasta WSA que será usada depois que o projeto for exportado do Unity.
 
 6.  Em seguida, você precisa abrir a pasta **WSA** , dentro da pasta **Newtonsoft** . Você verá uma cópia do mesmo arquivo que acabou de configurar. Selecione o arquivo e, no Inspetor, verifique se
-    -   **Qualquer plataforma** está  desmarcada 
+    -   **Qualquer plataforma** está desmarcada 
     -   **somente** **WSAPlayer** está **marcado**
     -   Não **processar** está **marcado**
 
@@ -905,7 +905,7 @@ Para criar esta classe:
         }
     ```
 
-10. Adicione o método **TrainCustomVisionProject ()** . Depois que a imagem for enviada e marcada, esse método será chamado. Ele criará uma nova iteração que será treinada com todas as imagens anteriores enviadas ao serviço mais a imagem que acabou de ser carregada. Depois que o treinamento for concluído, esse método chamará um método para definir a iteração  recém-criada como **padrão**, para que o ponto de extremidade que você está usando para análise seja a iteração mais recente treinada.
+10. Adicione o método **TrainCustomVisionProject ()** . Depois que a imagem for enviada e marcada, esse método será chamado. Ele criará uma nova iteração que será treinada com todas as imagens anteriores enviadas ao serviço mais a imagem que acabou de ser carregada. Depois que o treinamento for concluído, esse método chamará um método para definir a iteração recém-criada como **padrão**, para que o ponto de extremidade que você está usando para análise seja a iteração mais recente treinada.
 
     ```csharp
         /// <summary>
@@ -1641,7 +1641,7 @@ Antes de fazer isso, verifique se:
 
 - Você inseriu sua **chave de treinamento** na variável **TrainingKey** da classe *CustomVisionTrainer* .
 
-- Você inseriu a **ID do projeto** na  variável ProjectId da classe *CustomVisionTrainer* .
+- Você inseriu a **ID do projeto** na variável ProjectId da classe *CustomVisionTrainer* .
 
 ## <a name="chapter-13---build-and-sideload-your-application"></a>Capítulo 13-criar e sideloadr seu aplicativo
 

@@ -1146,7 +1146,7 @@ Tudo o que é necessário para a seção do Unity deste projeto foi concluído.
 
     ![nova pasta para compilação](images/AzureLabs-Lab8-77.png)
 
-    1.  Abra a nova  pasta builds e crie outra pasta (usando a **nova pasta** mais uma vez) e nomeie-a **\_NH desktop\_app**.
+    1.  Abra a nova pasta builds e crie outra pasta (usando a **nova pasta** mais uma vez) e nomeie-a **\_NH desktop\_app**.
 
         ![nome da pasta NH_Desktop_App](images/AzureLabs-Lab8-78.png)
 
@@ -1495,7 +1495,7 @@ Este capítulo é idêntico ao processo de compilação para o projeto anterior.
 
     ![criar pasta de builds](images/AzureLabs-Lab8-100.png)
 
-    1.  Abra a nova  pasta builds e crie outra pasta (usando a **nova pasta** mais uma vez) e nomeie-a como **\_aplicativo NH\_Mr**.
+    1.  Abra a nova pasta builds e crie outra pasta (usando a **nova pasta** mais uma vez) e nomeie-a como **\_aplicativo NH\_Mr**.
 
         ![criar pasta NH_MR_Apps](images/AzureLabs-Lab8-101.png)
 
