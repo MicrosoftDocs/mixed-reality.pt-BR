@@ -3,7 +3,7 @@
 
 Neste tutorial, aprendemos como preparar e configurar o Unity para o desenvolvimento de aplicativos, incluindo a importação do kit de ferramentas de realidade misturada, a definição de configurações de compilação e a preparação de nossa cena.
 
-Seus
+## <a name="objectives"></a>Objetivos
 
 - Configurar o Unity para o desenvolvimento de aplicativos
 

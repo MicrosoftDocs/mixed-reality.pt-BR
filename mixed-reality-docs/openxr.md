@@ -1,56 +1,67 @@
 ---
 title: OpenXR
-description: Experimente a API provisional OpenXR 0,90 com a realidade misturada OpenXR Developer Preview.
+description: Crie um mecanismo usando o padrão da API OpenXR portátil e implante-o na realidade mista do Windows e fones de ouvido 2 do HoloLens.
 author: thetuvix
 ms.author: alexturn
-ms.date: 3/18/2019
+ms.date: 7/29/2019
 ms.topic: article
-keywords: Visualização da realidade misturada do OpenXR Developer
-ms.openlocfilehash: 723b0b85785d4b6dd735430aa76a24b9ce05b5c7
-ms.sourcegitcommit: 8d6e5723283c03f984f1fafef81afa5aab5d04bc
+keywords: OpenXR, Khronos, BasicXRApp, Mixed Realm OpenXR portal do desenvolvedor, DirectX, nativo, mecanismo personalizado do aplicativo nativo, middleware
+ms.openlocfilehash: 057d01527163f2ffcfe10d2e105592f07ff9e9e2
+ms.sourcegitcommit: 23e172664c2ee1220fe3b4468c104b37ef3ceda9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66039177"
+ms.lasthandoff: 07/29/2019
+ms.locfileid: "68601605"
 ---
 # <a name="openxr"></a>OpenXR
 
-O OpenXR é um padrão aberto isento de royalties da [Khronos](https://www.khronos.org/) que fornece acesso nativo a uma ampla gama de dispositivos de muitos fornecedores que abrangem o [espectro de realidade misturada](mixed-reality.md).
+O OpenXR é um padrão de API livre de royalties aberto da [Khronos](https://www.khronos.org/) que fornece aos mecanismos acesso nativo a uma ampla gama de dispositivos de muitos fornecedores que abrangem o [espectro de realidade misturada](mixed-reality.md).
 
-Com o OpenXR, você pode criar aplicativos destinados a dispositivos Holographic (como o HoloLens 2) que colocam o conteúdo digital no mundo real como se estivesse realmente lá, bem como dispositivos de imersão (como o Windows Mixed realness headsets para PCs Desktop) que ocultam o mundo físico e substitua-o por uma experiência digital.  O OpenXR permite que você escreva código depois de ser portátil em uma ampla gama de plataformas de hardware.
+Você pode desenvolver usando OpenXR em um headset de imersão de realidade 2 ou Windows misto na área de trabalho.  Se você não tiver acesso a um headset, poderá usar o emulador do HoloLens 2 ou o simulador de realidade mista do Windows.
 
-Atualmente, o OpenXR Standard está em uma fase provisionada, com uma especificação inicial de OpenXR 0,90 lançada para comentários.  Para obter mais informações sobre OpenXR, incluindo o acesso à especificação e aos [cabeçalhos](https://github.com/KhronosGroup/OpenXR-Docs/tree/master/include/openxr)de [0,90](https://www.khronos.org/registry/OpenXR/specs/0.90/html/xrspec.html) provisionos, consulte a [página OpenXR do Khronos](https://www.khronos.org/openxr/). 
+## <a name="why-openxr"></a>Por que OpenXR?
 
-Você pode experimentar a API OpenXR 0,90 provisionada em um HoloLens 2 ou em um PC desktop usando o OpenXR Developer preview da realidade misturada.  Esse tempo de execução inicial permite que os aplicativos direcionados à API do OpenXR 0,90 para direcionar headsets de imersão de realidade 2 ou Windows misto na área de trabalho.
+Com o OpenXR, você pode criar mecanismos direcionados a ambos os dispositivos Holographic (como o HoloLens 2) que colocam o conteúdo digital no mundo real como se estivesse realmente lá, bem como dispositivos de imersão (como o Windows Mixed Realm headsets para PCs Desktop) que ocultam o físico o mundo e o substituem por uma experiência digital.  O OpenXR permite que você escreva código depois de ser portátil em uma ampla gama de plataformas de hardware.
 
-Se você não tiver acesso a um headset, poderá usar o emulador do HoloLens 2 ou o simulador de realidade mista do Windows.
+A API OpenXR usa um carregador que conecta seu aplicativo diretamente ao suporte de plataforma nativa do headset.  Isso oferece aos seus usuários finais o desempenho máximo e a latência mínima, se eles estiverem usando um headset de realidade mista do Windows ou qualquer outro headset.
 
-## <a name="setting-up-the-mixed-reality-openxr-developer-preview-for-hololens-2"></a>Configurando a realidade misturada do OpenXR Developer Preview para o HoloLens 2
+## <a name="what-is-openxr"></a>O que é o OpenXR?
 
-Para começar a usar o Mixed Reality OpenXR Developer Preview no HoloLens 2:
+A API Core OpenXR 1,0 fornece a funcionalidade básica que você precisará para criar um mecanismo que pode ter como alvo os dispositivos Holographic, como o HoloLens 2 e dispositivos de imersão, como headsets de realidade mista do Windows:
+* Sistemas + sessões
+* Espaços de referência (exibição, local, estágio)
+* Exibir configurações (mono, estéreo)
+* Permuta + temporização de quadro
+* Camadas de composição
+* Entrada e haptics
+* API de gráficos + integração de plataforma
+
+Para saber mais sobre a API do OpenXR, confira a [especificação do OpenXR 1,0](https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html) e a [referência da API do OpenXR 1,0](https://www.khronos.org/registry/OpenXR/specs/1.0/man/html/).  Para obter mais informações, consulte a [página Khronos OpenXR](https://www.khronos.org/openxr/).
+
+Para direcionar o conjunto de recursos completo do HoloLens 2, você também usará extensões de OpenXR específicas de fornecedor e de fornecedor que habilitam recursos adicionais além do OpenXR 1,0 Core, como controle de mão articulado, acompanhamento de olho, mapeamento espacial e âncoras espaciais.  Consulte a seção de [roteiro](openxr.md#roadmap) abaixo para obter mais informações sobre as extensões lançadas posteriormente neste ano.
+
+Observe que o OpenXR não é, em si, um mecanismo de realidade misturada.  Em vez disso, o OpenXR permite que mecanismos como Unity e inreais gravem código portátil uma vez que possam acessar os recursos da plataforma nativa do dispositivo Holographic ou de imersão do usuário, independentemente de qual fornecedor criou essa plataforma.
+
+## <a name="getting-started-with-openxr-for-hololens-2"></a>Introdução ao OpenXR para o HoloLens 2
+
+Para começar a desenvolver aplicativos OpenXR para o HoloLens 2:
 
 1. Configure um HoloLens 2 ou siga as instruções para [instalar o emulador do HoloLens 2](using-the-hololens-emulator.md).
-1. Inicie o aplicativo da loja de dentro do dispositivo ou emulador e verifique se todos os aplicativos estão atualizados.  Isso instalará o Mixed Reality OpenXR Developer Preview para uso com aplicativos nesse dispositivo.  Se estiver usando o emulador, você desejará consultar as [instruções de entrada](using-the-hololens-emulator.md#basic-emulator-input) do emulador para ajudá-lo a usar o aplicativo da loja dentro do emulador.
+1. Inicie o aplicativo da loja de dentro do dispositivo ou emulador e verifique se todos os aplicativos estão atualizados.  Isso garantirá que o tempo de execução do OpenXR em seu HoloLens seja atualizado para o OpenXR 1,0.  Se estiver usando o emulador, você desejará consultar as [instruções de entrada](using-the-hololens-emulator.md#basic-emulator-input) do emulador para ajudá-lo a usar o aplicativo da loja dentro do emulador.
 
-## <a name="setting-up-the-mixed-reality-openxr-developer-preview-for-immersive-desktop-headsets"></a>Configurando a realidade misturada do OpenXR Developer Preview para imersivas de área de trabalho de imersão
+## <a name="getting-started-with-openxr-for-windows-mixed-reality-headsets"></a>Introdução ao OpenXR for Windows Mixed realness headsets
 
-Para começar a usar o Mixed Reality OpenXR Developer preview em um PC desktop:
+Para começar a desenvolver aplicativos OpenXR para headsets de imersão misturadas do Windows:
 
-1. Verifique se você está executando a atualização do Windows 10 de outubro de 2018 (1809) ou a atualização do Windows 10 de maio de 2019 (1903).  Se você estiver em uma versão anterior do Windows 10, poderá atualizar para a atualização de maio de 2019 usando o [Assistente de atualização do Windows 10](https://www.microsoft.com/en-us/software-download/windows10).
+1. Verifique se você está executando o Windows 10 pode 2019 atualização (1903), que é o requisito mínimo para o Windows Mixed Reality que os usuários finais executam aplicativos OpenXR.  Se você estiver em uma versão anterior do Windows 10, poderá atualizar para a atualização de maio de 2019 usando o [Assistente de atualização do Windows 10](https://www.microsoft.com/en-us/software-download/windows10).  Se você não conseguir atualizar seu computador, também será possível [desenvolver seu aplicativo OpenXR usando a atualização de 10 de outubro de 2018 (1809)](openxr.md#developing-on-windows-10-october-2018-update), embora você possa enfrentar um desempenho inferior ou outros problemas.
 1. Configure um headset de realidade mista do Windows ou siga as instruções para [habilitar o simulador de realidade mista do Windows](using-the-windows-mixed-reality-simulator.md).
-1. Instale o [aplicativo Mixed Reality OpenXR Developer Preview](https://www.microsoft.com/store/productId/9n5cvvl23qbt).  Este aplicativo o ajudará a configurar com o tempo de execução da visualização OpenXR no Windows 10 de outubro de 2018 atualização (1809) ou posterior.  Depois de instalar esse aplicativo, a Windows Store manterá o tempo de execução atualizado.
-1. Execute o aplicativo Mixed Reality OpenXR Developer Preview no menu iniciar e siga as instruções para tornar o tempo de execução ativo.  Em breve, esse aplicativo permitirá que você explore outras informações de depuração do OpenXR também.
+1. Instale o [aplicativo de portal do desenvolvedor OpenXR da realidade mista](https://www.microsoft.com/store/productId/9n5cvvl23qbt).  A instalação desse aplicativo instalará automaticamente o tempo de execução do OpenXR da realidade misturada.  Depois que o tempo de execução do OpenXR for instalado, o Microsoft Store manterá o tempo de execução atualizado.
+1. Execute o aplicativo de portal do desenvolvedor OpenXR de realidade misturada no menu iniciar e siga as instruções para tornar o tempo de execução ativo.
 
-![Aplicativo Mixed Reality OpenXR Developer Preview](images/mixed-reality-openxr-developer-preview.png)
+![Aplicativo de portal do desenvolvedor OpenXR de realidade misturada](images/mixed-reality-openxr-developer-portal.png)
 
-### <a name="support-for-windows-10-october-2018-update"></a>Suporte para atualização do Windows 10 de outubro de 2018
-
-Se você estiver executando o Windows 10 pode 2019 atualização (1903) e seguiu as etapas acima, você deve estar pronto para usar a realidade mista do OpenXR Developer Preview!
-
-Se você não estiver pronto para [atualizar seu PC desktop para a atualização de maio de 2019](https://www.microsoft.com/en-us/software-download/windows10), poderá começar a usar a atualização do Windows 10 de outubro de 2018 (1809) seguindo mais uma etapa:
-
-1. Siga as etapas acima para instalar o Mixed Reality OpenXR Developer Preview.
-1. Para definir a realidade mista do OpenXR Developer Preview como o tempo de execução do OpenXR do seu sistema, instale o [pacote de compatibilidade da visualização do desenvolvedor do OpenXR](https://aka.ms/openxr-compat)do informativo misto.
+> [!NOTE]
+> O tempo de execução do OpenXR da realidade misturada estará disponível em breve para todos os usuários finais da realidade misturada do Windows por meio do aplicativo portal da realidade mista.
 
 ## <a name="building-a-sample-openxr-app"></a>Criando um aplicativo OpenXR de exemplo
 
@@ -58,28 +69,53 @@ O projeto [BasicXrApp](https://github.com/Microsoft/OpenXR-SDK-VisualStudio/tree
 
 Observe que, embora os arquivos de projeto Win32 e UWP sejam separados devido a diferenças no empacotamento e na implantação, o código do aplicativo dentro de cada projeto é de 100% o mesmo!
 
-## <a name="feedback"></a>Comentários
+## <a name="roadmap"></a>Mapa
 
-Para fornecer comentários sobre a [especificação do OpenXR Provision 0,90](https://www.khronos.org/registry/OpenXR/specs/0.90/html/xrspec.html), visite os [fóruns do Khronos OpenXR](https://community.khronos.org/c/openxr), a [margem de atraso #openxr canal](https://khr.io/slack) e o rastreador de [problemas de especificação](https://github.com/KhronosGroup/OpenXR-Docs/issues).
+A especificação OpenXR define um mecanismo de extensão que permite que implementadores de tempo de execução exponham funcionalidades adicionais além dos [principais recursos](openxr.md#what-is-openxr) definidos na [especificação OpenXR 1,0 base](https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html).
+
+Há três tipos de extensões OpenXR:
+* **Extensões de fornecedor (por exemplo, MSFT):** Habilita a inovação por fornecedor em recursos de hardware ou software.  Qualquer fornecedor de tempo de execução pode introduzir e enviar uma extensão de fornecedor a qualquer momento.
+* **Extensões EXT:** Extensões entre fornecedores que várias empresas definem e implementam.  Grupos de empresas interessadas podem introduzir extensões EXT a qualquer momento.
+* **Extensões KHR:** As extensões Khronos oficiais são ratificadas como parte de uma versão de especificação principal.  As extensões KHR são cobertas pela mesma licença que a principal espec.
+
+Ao final do ano, o tempo de execução do OpenXR da realidade misturada dará suporte a um conjunto de extensões MSFT e EXT que trazem o conjunto completo de recursos do HoloLens 2 para aplicativos OpenXR:
+* [Espaço de referência não associado (experiências de escala mundial)](coordinate-systems.md#building-a-world-scale-experience)
+* [Âncoras espaciais + armazenamento](spatial-anchors.md)
+* [Mão Articulation + malha à mão](hands-and-tools.md)
+* [Foco com o olhar](eye-tracking.md)
+* [Configurações de exibição secundárias (captura de realidade mista)](mixed-reality-capture-for-developers.md#render-from-the-pv-camera-opt-in)
+* [Mapeamento espacial](spatial-mapping.md)
+* Interoperabilidade com APIs de SDK do Windows
+
+Embora algumas dessas extensões possam ser iniciadas como extensões de MSFT específicas do fornecedor, a Microsoft e outros fornecedores de tempo de execução OpenXR estão trabalhando juntos para projetar extensões de extensão ou KHR de vários fornecedores para muitas dessas áreas de recursos.  Isso permitirá que o código que você escreve para esses recursos seja portável em fornecedores de tempo de execução, assim como na Especificação principal.
 
 ## <a name="troubleshooting"></a>Solução de problemas
 
-Aqui estão algumas dicas de solução de problemas para a realidade misturada do OpenXR Developer Preview.  Se você estiver atingindo outros problemas, visite os [fóruns do Khronos OpenXR](https://community.khronos.org/c/openxr) ou a [margem de atraso #openxr canal](https://khr.io/slack).
+Aqui estão algumas dicas de solução de problemas para o tempo de execução OpenXR da realidade misturada.  Se você tiver outras dúvidas sobre a [especificação do OpenXR 1,0](https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html), visite os [fóruns do Khronos OpenXR](https://community.khronos.org/c/openxr) ou a [margem de atraso #openxr canal](https://khr.io/slack).
+
+### <a name="developing-on-windows-10-october-2018-update"></a>Desenvolvendo no Windows 10 de outubro de 2018 atualização
+
+Se não for possível [atualizar seu PC de desenvolvimento para a atualização de maio de 2019](https://www.microsoft.com/en-us/software-download/windows10), você poderá configurar seu PC de atualização do Windows 10 de outubro de 2018 (1809) para desenvolvimento seguindo mais uma etapa:
+
+1. Siga as etapas acima para começar a usar o OpenXR em seu PC desktop.
+1. Para definir o tempo de execução do OpenXR da realidade misturada como o tempo de execução do OpenXR ativo do seu sistema, instale o [pacote de compatibilidade do desenvolvedor da realidade do OpenXR misto](https://aka.ms/openxr-compat)
+
+> [!NOTE]
+> Embora a atualização do Windows 10 de outubro de 2018 (1809) possa ser usada ao desenvolver seus aplicativos OpenXR, a atualização do Windows 10 pode ser 2019 (1903) é o requisito mínimo para que os usuários finais usem o OpenXR com a realidade mista do Windows.  Você pode enfrentar um desempenho inferior ou outros problemas ao executar seu aplicativo OpenXR na atualização de outubro de 2018.  É altamente recomendável que você atualize seu PC de desenvolvimento para a atualização 2019 do Windows 10 (1903).
 
 ### <a name="openxr-app-not-starting-windows-mixed-reality"></a>O aplicativo OpenXR não está iniciando a realidade mista do Windows
 
-Se seu aplicativo OpenXR não estiver iniciando a realidade mista do Windows quando você executá-lo, a visualização misturada da realidade do OpenXR Developer não poderá ser definida como o tempo de execução ativo.  Certifique-se de executar o aplicativo Mixed Reality OpenXR Developer Preview e siga as instruções para tornar o tempo de execução ativo.
+Se seu aplicativo OpenXR não estiver iniciando a realidade mista do Windows quando você executá-lo, o tempo de execução do OpenXR da realidade mista não poderá ser definido como o tempo de execução ativo.  Certifique-se de executar o aplicativo de portal do desenvolvedor da realidade misturada do OpenXR e siga as instruções para tornar o tempo de execução ativo.
 
-### <a name="mixed-reality-openxr-developer-preview-app-cannot-be-installed"></a>O aplicativo OpenXR Developer Preview misto não pode ser instalado 
+### <a name="mixed-reality-openxr-developer-portal-app-cannot-be-installed"></a>Não é possível instalar o aplicativo portal do desenvolvedor OpenXR da realidade mista 
 
 Verifique se você está executando pelo menos a atualização de 10 de outubro de 2018 do Windows (1809).  Se você estiver em uma versão anterior do Windows 10, poderá atualizar para a atualização de maio de 2019 (1903) usando o [Assistente de atualização do Windows 10](https://www.microsoft.com/en-us/software-download/windows10).
 
-Se o botão instalar no aplicativo Mixed Reality OpenXR Developer Preview não faz nada na atualização do Windows 10 de outubro de 2018, seu sistema pode ter requisitos de sistema obsoletos em cache para o aplicativo.  Você pode executar o comando `wsreset.exe` de um prompt de comando para limpar o cache.
+Se o botão instalar no aplicativo do portal do desenvolvedor da realidade misturada do OpenXR não faz nada na atualização do Windows 10 de outubro de 2018, seu sistema pode ter requisitos de sistema em cache obsoletos para o aplicativo.  Você pode executar o comando `wsreset.exe` de um prompt de comando para limpar o cache.
 
 ## <a name="see-also"></a>Consulte também
 
 * [Mais informações sobre o OpenXR](https://www.khronos.org/openxr/)
-* [Especificação OpenXR provisiony 0,90](https://www.khronos.org/registry/OpenXR/specs/0.90/html/xrspec.html)
-* [Referência de API OpenXR provisional 0,90](https://www.khronos.org/registry/OpenXR/specs/0.90/man/html/)
-* [Cabeçalhos OpenXR Provision 0,90](https://github.com/KhronosGroup/OpenXR-Docs/tree/master/include/openxr)
-* [Guia de referência rápida do OpenXR Provisioning 0,90](https://www.khronos.org/registry/OpenXR/specs/0.90/refguide/OpenXR-0.90-web.pdf)
+* [Especificação do OpenXR 1,0](https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html)
+* [Referência de API do OpenXR 1,0](https://www.khronos.org/registry/OpenXR/specs/1.0/man/html/)
+* [Guia de referência rápida do OpenXR 1,0](https://www.khronos.org/registry/OpenXR/specs/1.0/refguide/OpenXR-1.0-web.pdf)
