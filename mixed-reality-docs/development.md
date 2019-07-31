@@ -8,12 +8,12 @@ ms.date: 02/12/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Realidade misturada, desenvolver, desenvolvimento, HoloLens, unity, directx
-ms.openlocfilehash: 8833d2d692f2082c939bcfc3bb55e5d159e8c9ac
-ms.sourcegitcommit: f20beea6a539d04e1d1fc98116f7601137eebebe
+ms.openlocfilehash: b2bd9c4d81e5c7156ad753859a299209bad70c44
+ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "65974817"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67414427"
 ---
 # <a name="development-launchpad"></a>Barra inicial de desenvolvimento
 
@@ -114,7 +114,7 @@ ms.locfileid: "65974817"
                             <a href="directx-development-overview.md">Mecanismo personalizado (DirectX)</a>
                         </p>
                         <p>
-Unreal - em breve!
+                            <a href="https://www.unrealengine.com/en-US/blog/unreal-engine-4-support-for-hololens-2-released-in-early-access">Unreal</a>
                         </p>                
                     </div>
                 </div>
@@ -175,7 +175,7 @@ Unreal - em breve!
 
 ## <a name="overview"></a>Visão geral
 
-Os aplicativos de realidade misturada são criados com a [Plataforma Universal do Windows](https://dev.windows.com/getstarted). Todos os aplicativos de realidade misturada são aplicativos universais do Windows e podem ser criados para serem executados em dispositivos Windows Mixed Reality. Com o Windows 10 e a familiaridade com as ferramentas de middleware como o Unity, você pode começar a criar experiências de realidade misturada hoje mesmo.
+Os aplicativos de realidade misturada são criados com a [UWP](https://dev.windows.com/getstarted) (Plataforma Universal do Windows). Todos os aplicativos de realidade misturada são aplicativos UWP. Todos os aplicativos UWP podem ser feitos para execução em dispositivos Windows Mixed Reality. Com o Windows 10 e a familiaridade com as ferramentas de middleware, tais como o Unity, você pode começar a criar experiências de realidade misturada hoje mesmo.
 
 <br>
 
@@ -183,7 +183,7 @@ Os aplicativos de realidade misturada são criados com a [Plataforma Universal d
 
 ## <a name="basics-of-mixed-reality-development"></a>Conceitos básicos do desenvolvimento de realidade misturada
 
-As experiências de [realidade misturada](mixed-reality.md) são possibilitadas pelos novos recursos do Windows para noção ambiental. Elas permitem que os desenvolvedores coloquem um [holograma](hologram.md) no mundo real e que os usuários percorram os mundos digitais literalmente caminhando. 
+As experiências de [realidade misturada](mixed-reality.md) são possibilitadas pelos novos recursos do Windows para noção ambiental. Esses recursos permitem que os desenvolvedores coloquem um [holograma](hologram.md) no mundo real e que os usuários percorram os mundos digitais literalmente caminhando. 
 
 Estes são os blocos principais de construção para o desenvolvimento da realidade misturada:
 
@@ -219,16 +219,16 @@ Estes são os blocos principais de construção para o desenvolvimento da realid
 
 O modelo de interação básico do [HoloLens](hololens-hardware-details.md) se baseia em [foco ocular](gaze.md), [gestos](gestures.md) e [vozes](voice-input.md), às vezes chamados de *GGV* . [Os headsets imersivos do Windows Mixed Reality](immersive-headset-hardware-details.md) também usam foco ocular e vozes, mas usam os [controladores de movimento](motion-controllers.md) para os gestos.
 
-Todos os dispositivos de realidade misturada se beneficiam do ecossistema de entrada disponível para Windows, incluindo mouse, teclado, gamepads e muito mais. Com o HoloLens, os [acessórios de hardware](hardware-accessories.md) são conectados por Bluetooth. Com os headsets imersivos, os acessórios se conectam ao computador host por Bluetooth, USB e outros protocolos compatíveis.
+Todos os dispositivos de realidade misturada se beneficiam do ecossistema de entrada disponível no Windows, incluindo mouse, teclado, gamepads e muito mais. Com o HoloLens, os [acessórios de hardware](hardware-accessories.md) são conectados por Bluetooth. Com os headsets imersivos, os acessórios se conectam ao computador host por Bluetooth, USB e outros protocolos compatíveis.
 
-Os recursos de noção ambiental, como as [coordenadas](coordinate-systems.md), o [som espacial](spatial-sound.md) e o [mapeamento espacial](spatial-mapping.md), fornecem os recursos necessários para misturar a realidade. O mapeamento espacial é exclusivo do HoloLens e permite que os hologramas interajam com o usuário e o mundo físico ao redor deles. Os sistemas de coordenadas permitem que o movimento do usuário afete o movimento no mundo digital.
+Os recursos de noção ambiental, tais como as [coordenadas](coordinate-systems.md), o [som espacial](spatial-sound.md) e o [mapeamento espacial](spatial-mapping.md), fornecem os recursos necessários para misturar a realidade. O mapeamento espacial é exclusivo do HoloLens e permite que os hologramas interajam com o usuário e o mundo físico ao redor deles. Os sistemas de coordenadas permitem que o movimento do usuário afete o movimento no mundo digital.
 
-Os hologramas são feitos de luz e som, que dependem da [renderização](rendering.md). Ter noções básicas sobre a experiência de colocação e persistência, conforme demonstrado no [Windows Mixed Reality doméstico](navigating-the-windows-mixed-reality-home.md) (às vezes chamado de "shell") é uma ótima maneira de projetar-se na experiência do usuário.
+Os hologramas são feitos de luz e som, que dependem da [renderização](rendering.md). Entender a experiência de posicionamento e persistência, conforme demonstrado na [página inicial do Windows Mixed Reality](navigating-the-windows-mixed-reality-home.md) (também chamado de "shell"), é uma ótima maneira de projetar-se na experiência do usuário.
 
-## <a name="tools-for-developing-for-mixed-reality"></a>Ferramentas para o desenvolvimento de realidade misturada
+## <a name="tools-for-developing-mixed-reality"></a>Ferramentas para o desenvolvimento de realidade misturada
 
 As ferramentas utilizadas dependerão do [estilo do aplicativo](app-views.md) que você deseja compilar.
-* Os [aplicativos com exibição 2D](building-2d-apps.md) utilizam as ferramentas para criar aplicativos da plataforma universal do Windows adequados para ambientes como tablets, computadores e Windows Phone. A experiência desses aplicativos ocorre como projeções 2D colocadas no Windows Mixed Reality doméstico e podem funcionar em vários tipos de dispositivos (incluindo telefones e computadores).
+* Os [aplicativos com exibição 2D](building-2d-apps.md) utilizam as ferramentas para criar aplicativos UWP adequados para ambientes como tablets, computadores e Windows Phone. A experiência desses aplicativos ocorre como projeções 2D colocadas no Windows Mixed Reality doméstico e funcionam em vários tipos de dispositivos, incluindo telefones e computadores.
 * Os aplicativos imersivos e holográficos precisam de ferramentas projetadas para tirar proveito das APIs do Windows Mixed Reality. [Recomendamos usar o Unity](unity-development-overview.md) para criar aplicativos de realidade misturada. Os desenvolvedores interessados em criar seus próprios mecanismos podem [usar DirectX e outras APIs do Windows](directx-development-overview.md).
 
 Seja qual for o tipo de aplicativo que você esteja compilando, essas ferramentas facilitarão a sua experiência de desenvolvimento:
