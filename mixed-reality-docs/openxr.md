@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 7/29/2019
 ms.topic: article
 keywords: OpenXR, Khronos, BasicXRApp, Mixed Realm OpenXR portal do desenvolvedor, DirectX, nativo, mecanismo personalizado do aplicativo nativo, middleware
-ms.openlocfilehash: 057d01527163f2ffcfe10d2e105592f07ff9e9e2
-ms.sourcegitcommit: 23e172664c2ee1220fe3b4468c104b37ef3ceda9
+ms.openlocfilehash: efad0809356f969c825ef7285885fdb9431c7fce
+ms.sourcegitcommit: c0d5c19b756b8e6ff95ea26a4d8d2b3a53878c2e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68601605"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68671953"
 ---
 # <a name="openxr"></a>OpenXR
 
@@ -36,7 +36,7 @@ A API Core OpenXR 1,0 fornece a funcionalidade básica que você precisará para
 * Entrada e haptics
 * API de gráficos + integração de plataforma
 
-Para saber mais sobre a API do OpenXR, confira a [especificação do OpenXR 1,0](https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html) e a [referência da API do OpenXR 1,0](https://www.khronos.org/registry/OpenXR/specs/1.0/man/html/).  Para obter mais informações, consulte a [página Khronos OpenXR](https://www.khronos.org/openxr/).
+Para saber mais sobre a API do OpenXR, confira a [especificação do OpenXR 1,0](https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html) e a [referência da API do OpenXR 1,0](https://www.khronos.org/registry/OpenXR/specs/1.0/man/html/openxr.html).  Para obter mais informações, consulte a [página Khronos OpenXR](https://www.khronos.org/openxr/).
 
 Para direcionar o conjunto de recursos completo do HoloLens 2, você também usará extensões de OpenXR específicas de fornecedor e de fornecedor que habilitam recursos adicionais além do OpenXR 1,0 Core, como controle de mão articulado, acompanhamento de olho, mapeamento espacial e âncoras espaciais.  Consulte a seção de [roteiro](openxr.md#roadmap) abaixo para obter mais informações sobre as extensões lançadas posteriormente neste ano.
 
@@ -117,5 +117,5 @@ Se o botão instalar no aplicativo do portal do desenvolvedor da realidade mistu
 
 * [Mais informações sobre o OpenXR](https://www.khronos.org/openxr/)
 * [Especificação do OpenXR 1,0](https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html)
-* [Referência de API do OpenXR 1,0](https://www.khronos.org/registry/OpenXR/specs/1.0/man/html/)
+* [Referência de API do OpenXR 1,0](https://www.khronos.org/registry/OpenXR/specs/1.0/man/html/openxr.html)
 * [Guia de referência rápida do OpenXR 1,0](https://www.khronos.org/registry/OpenXR/specs/1.0/refguide/OpenXR-1.0-web.pdf)

@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realidade misturada, unity, tutorial, hololens
-ms.openlocfilehash: 391e797ad9cc8933b057366ab47a3f453c68723e
-ms.sourcegitcommit: b086d7a62ee0c7913aa8f66c90e9d2527f270264
+ms.openlocfilehash: 9f830bc4ead35fd308108051617c61c65d98d451
+ms.sourcegitcommit: c0d5c19b756b8e6ff95ea26a4d8d2b3a53878c2e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68485770"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68671962"
 ---
 # <a name="1-getting-started-with-azure-spatial-anchors"></a>1. Introdução às âncoras espaciais do Azure
 
@@ -28,13 +28,13 @@ Bem-vindo ao segundo módulo dos tutoriais do HoloLens 2. Antes de começar, cer
 ### <a name="downloading-and-importing-assets"></a>Baixando e importando ativos
 Antes de começar, baixe e importe os seguintes ativos:
 
-[Âncoras Espaciais do Azure](https://github.com/azure/azure-spatial-anchors-samples/releases)
+[Âncoras espaciais do Azure v 1.1.0](https://github.com/Azure/azure-spatial-anchors-samples/releases/download/v1.1.0/AzureSpatialAnchors.unitypackage)
 
-[Pacote de ativos do módulo de base do MR](https://github.com/microsoft/MixedRealityLearning/releases/tag/1.2)
+[Pacote de ativos do módulo base MR v 1.2](https://github.com/microsoft/MixedRealityLearning/releases/download/1.2/BaseModuleAssets-1.2.unitypackage)
 
-[Pacote de ativos do módulo ASA](https://github.com/microsoft/MixedRealityLearning/releases/tag/ASA_1.1)
+[Pacote de ativos do módulo ASA v 1.0](https://github.com/microsoft/MixedRealityLearning/releases/download/v1/ASAModuleAssets_1.unitypackage)
 
-[Kit de ferramentas de realidade misturada](https://github.com/microsoft/MixedRealityToolkit-Unity/releases/)
+[Kit de ferramentas de realidade misturada 2.0.0 RC1](https://github.com/microsoft/MixedRealityToolkit-Unity/releases/download/v2.0.0-RC1-Refresh/Microsoft.MixedReality.Toolkit.Unity.Foundation-v2.0.0-RC1-Refresh.unitypackage)
 
 > Observação: Consulte a etapa 5 para obter instruções específicas sobre como importar âncoras espaciais do Azure, etapa 6 para obter instruções específicas sobre o pacote de ativos do módulo base do MR e as etapas 3 a 4 para obter instruções específicas sobre o MRKT (Kit de ferramentas de realidade mista).
 
