@@ -8,18 +8,20 @@ ms.date: 03/21/2018
 ms.topic: article
 ms.localizationpriority: high
 keywords: Windows Mixed Reality, design, interação, estilo, cor, padrões de aplicativo, controles, exemplos de aplicativos, Kit de ferramentas de realidade misturada, MRTK
-ms.openlocfilehash: 88de9008dbea6cce3b980bbbe3d0f45b7818e7c9
-ms.sourcegitcommit: f20beea6a539d04e1d1fc98116f7601137eebebe
+ms.openlocfilehash: 6601f4c2dd75e6e555dd79bc92abcccc15eb1ab4
+ms.sourcegitcommit: 30246ab9b9be44a3c707061753e53d4bf401eb6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66039207"
+ms.lasthandoff: 06/22/2019
+ms.locfileid: "67326187"
 ---
 # <a name="design-for-mixed-reality"></a>Design para realidade misturada
 
 ![Design para realidade misturada](images/Bicycle-Leschi10.gif)
 
-Essa orientação foi criada pelos designers, desenvolvedores, gerentes de programa e pesquisadores da Microsoft, cujo trabalho abrange dispositivos holográficos (como o HoloLens) e dispositivos imersivos (como os headsets Windows Mixed Reality da Acer e da HP). Portanto, considere esse trabalho como um conjunto de tópicos sobre "como projetar capacetes de realidade virtual do Windows".
+
+Essa orientação foi criada pelos designers, desenvolvedores, gerentes de programa e pesquisadores da Microsoft, cujo trabalho abrange dispositivos holográficos (como o HoloLens) e dispositivos imersivos (como os headsets Windows Mixed Reality da Acer e da HP). Portanto, considere esse trabalho um conjunto de tópicos sobre como projetar capacetes de realidade virtual do Windows.
+
 
 ## <a name="article-categories"></a>Categorias de artigo
 
@@ -166,7 +168,7 @@ Essa orientação foi criada pelos designers, desenvolvedores, gerentes de progr
                             <a href="progress.md">Exibindo o progresso</a>
                         </p>
                         <p>
-                            <a href="app-bar-and-bounding-box.md">Barra de aplicativos e caixa delimitadora</a>
+                            <a href="app-bar-and-bounding-box.md">Caixa delimitadora e barra de aplicativos</a>
                         </p>
                     </div>
                 </div>
@@ -213,7 +215,7 @@ Crie grandes experiências a partir dos exemplos projetados e criados pela nossa
                         </div>
                         <div class="cardText">
                             <h3>Módulo lunar</h3>
-                            <p>Saiba como estender os gestos básicos do HoloLens com acompanhamento de duas mãos e entrada de controlador do Xbox.</p>
+                            <p>Saiba como estender os gestos básicos do HoloLens com acompanhamento de duas mãos e a entrada do controle Xbox .</p>
                         </div>
                     </div>
                 </div>
@@ -248,7 +250,7 @@ Crie grandes experiências a partir dos exemplos projetados e criados pela nossa
 
 <ul id="cardtypes-D" class="cardsD panelContent" style="display: flex; margin-top: 0px;">
     <li>
-    <a href="https://github.com/Microsoft/MixedRealityToolkit-Unity" title="Kit de ferramentas de realidade misturada - Unity" data-linktype="absolute-path">
+    <a href="https://microsoft.github.io/MixedRealityToolkit-Unity/README.html#ui-and-interaction-building-blocks" title="Kit de ferramentas de realidade misturada - Unity" data-linktype="absolute-path">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -284,26 +286,7 @@ Crie grandes experiências a partir dos exemplos projetados e criados pela nossa
             </div>
         </div>
       </a>  
-    </li>   
-        <li>
-    <a href="case-study-building-holosketch,-a-spatial-layout-and-ux-sketching-app-for-hololens.md" title="HoloSketch" data-linktype="absolute-path">
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="images/HoloSketch.png" alt="HoloSketch">
-                        </div>
-                    </div>                    
-            <div class="cardText">
-                        <h3>HoloSketch</h3>
-                        <p> </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-      </a>  
-    </li>   
+    </li>       
             <li>
     <a href="https://www.simplygon.com" title="Simplygon" data-linktype="absolute-path">
         <div class="cardSize">
@@ -368,7 +351,7 @@ Crie grandes experiências a partir dos exemplos projetados e criados pela nossa
       </a>  
     </li>   
         <li>
-    <a href="https://developer.microsoft.com/windows/apps/design" title="Criação de aplicativos da Plataforma Universal do Windows (UWP)" data-linktype="absolute-path">
+    <a href="https://developer.microsoft.com/windows/apps/design" title="Criação de aplicativos da UWP (Plataforma Universal do Windows)" data-linktype="absolute-path">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -378,7 +361,7 @@ Crie grandes experiências a partir dos exemplos projetados e criados pela nossa
                         </div>
                     </div>                    
             <div class="cardText">
-                        <h3>Criação de aplicativos da Plataforma Universal do Windows (UWP)</h3>
+                        <h3>Criação de aplicativos da UWP (Plataforma Universal do Windows)</h3>
                         <p> </p>
                     </div>
                 </div>
