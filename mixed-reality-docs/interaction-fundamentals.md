@@ -7,12 +7,12 @@ ms.date: 04/11/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Realidade Misturada, foco, direcionamento do foco, interação, design, hololens, MMR, multimodal
-ms.openlocfilehash: 7b04141c832597be4bb58447629e0ef6e248dc2b
-ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
+ms.openlocfilehash: 3ba1a2fc46aa88c856e4cc9531382c479b3fb17a
+ms.sourcegitcommit: 76a7aa6e64e114b63ace058dd6d6d662b3c9f09e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67415253"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68507895"
 ---
 # <a name="introducing-instinctual-interactions"></a>Apresentação de interações instintivas
 
@@ -115,7 +115,7 @@ Aqui estão alguns exemplos de como as capacidades e os comportamentos são otim
     <tr>
         <td><a href="hands-and-tools.md">Controladores de movimentos e mãos</a></td>
         <td>Vejo uma malha de mão, vejo uma funcionalidade de ponta do dedo ou raios de controlador ou de mão.</td>
-        <td>Vejo uma caixa delimitadora ou alças que aparecem quando a minha mão está próxima.</td>
+        <td>Vejo alças ou uma caixa delimitadora é exibida quando a minha mão está próxima de um objeto.</td>
         <td>Posso ouvir sons e ver animações ao capturar e soltar.</td>
     </tr>
     <tr>
@@ -133,7 +133,7 @@ Aqui estão alguns exemplos de como as capacidades e os comportamentos são otim
     <tr>
         <td><a href="hands-free.md">Mãos livres (comandos de voz)</a></td>
         <td>Vejo um indicador de escuta e legendas que mostram o que o sistema ouviu.</td>
-        <td>Obtenho prompts de voz e dicas. Quando digo: "o que posso dizer?" Vejo feedback.</td>
+        <td>Obtenho prompts de voz e dicas. Quando digo: "O que posso falar?" Vejo feedback.</td>
         <td>Vejo/ouço confirmações visuais e auditivas quando emito um comando ou obtenho uma experiência de usuário de desambiguidade quando necessário.</a></td>
     </tr>
 </table>

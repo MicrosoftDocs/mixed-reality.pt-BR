@@ -22,7 +22,6 @@
 #### [Redefinir ou recuperar o HoloLens](reset-or-recover-your-hololens.md)
 #### [Como salvar e localizar seus arquivos](saving-and-finding-your-files.md)
 #### [Ver suas fotos](see-your-photos.md)
-#### [Ajuste do sensor](sensor-tuning.md)
 #### [Como atualizar o HoloLens](updating-hololens.md)
 #### [Compartilhamento de dispositivos](device-sharing.md)
 #### [Guia de limpeza e ajuste de demonstração do HoloLens](hololens-demo-guide.md)
@@ -218,7 +217,7 @@
 ###### [2. Preparar o Unity para o desenvolvimento](mrlearning-sharing(photon)-ch2.md)
 ###### [3. Conectar vários usuários](mrlearning-sharing(photon)-ch3.md)
 ###### [4. Compartilhar movimentações de objeto com vários usuários](mrlearning-sharing(photon)-ch4.md)
-###### [5. Integrar Âncoras Espaciais do Azure em uma experiência compartilhada](mrlearning-sharing(photon)-ch5.md)
+###### [5. Integrar âncoras espaciais do Azure a uma experiência compartilhada](mrlearning-sharing(photon)-ch5.md)
 #### HoloLens (1º gen) aplicativos de exemplo de software livre
 ##### [Tabela periódica dos elementos](periodic-table-of-the-elements.md)
 ##### [Módulo lunar](lunar-module.md)
