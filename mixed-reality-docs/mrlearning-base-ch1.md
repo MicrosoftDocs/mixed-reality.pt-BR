@@ -1,17 +1,17 @@
 ---
-title: Módulo básico de aprendizagem de MR - Inicialização de projeto e primeiro aplicativo
+title: Tutoriais de introdução-2. Inicializando o projeto e o primeiro aplicativo
 description: Conclua este curso para saber como implementar o reconhecimento facial do Azure em um aplicativo de realidade misturada.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realidade misturada, unity, tutorial, hololens
-ms.openlocfilehash: e79c3ea719a71d6df8ffd9e2be009d14a846a16a
-ms.sourcegitcommit: b086d7a62ee0c7913aa8f66c90e9d2527f270264
+ms.openlocfilehash: f003bebf51859122b679162f41797bff1becd3fb
+ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68485718"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68702056"
 ---
 # <a name="2-initializing-your-project-and-first-application"></a>2. Inicializando o projeto e o primeiro aplicativo
 

@@ -6,12 +6,12 @@ ms.author: dongpark
 ms.date: 06/03/2019
 ms.topic: article
 keywords: Windows Mixed Reality, design, controles, fonte, tipografia, interface do usuário, UX
-ms.openlocfilehash: f57b04c7d57219b7426793879004ef010d2b1ea8
-ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
+ms.openlocfilehash: 739dee36ffcbaa92fad705d1b0e58506801c9a4d
+ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67415421"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68701908"
 ---
 # <a name="text-in-unity"></a>Texto no Unity
 
@@ -20,7 +20,7 @@ O texto é um dos componentes mais importantes nos aplicativos Holographic. Para
 ![Como obter texto nítido e bonito](images/hug-text-02-640px.png)<br>
 *Texto padrão borrado no Unity*
 
-## <a name="working-with-unitys-3d-texttext-mesh-and-ui-text"></a>Trabalhando com texto 3D do Unity (malha de texto) e texto da interface do usuário
+## <a name="working-with-unitys-3d-text-text-mesh-and-ui-text"></a>Trabalhando com texto 3D do Unity (malha de texto) e texto da interface do usuário
 
 O Unity pressupõe que todos os novos elementos adicionados a uma cena tenham uma unidade Unity de tamanho ou uma escala de transformação de 100%, o que traduz em cerca de 1 metro no HoloLens. No caso de fontes, a caixa delimitadora para um textmesh 3D entra por padrão em aproximadamente 1 metro de altura.
 
@@ -32,6 +32,8 @@ A maioria dos designers visuais usa pontos para definir tamanhos de fonte no mun
 
 ![Malha de texto 3D do Unity com tamanhos de fonte diferentes](images/Text_In_Unity_Measurements1.png)<br>
 *Dimensionamento de valores para texto 3D do Unity e texto da interface do usuário*
+
+<br>
 
 ![Malha de texto 3D do Unity com tamanhos de fonte diferentes](images/hug-text-05-1000px.png)<br>
 *Malha de texto 3D do Unity com valores otimizados*
@@ -49,7 +51,7 @@ Ao adicionar um elemento de texto baseado na interface do usuário ou tela a uma
 
 ## <a name="working-with-text-mesh-pro"></a>Trabalhando com a malha de texto pro
 
-Com o Text mesh pro da Unity, você pode proteger a qualidade de renderização do texto. Ele dá suporte a uma estrutura de texto nítida, independentemente da distância que usa a técnica de [SDF (campo de distância assinada)](https://steamcdn-a.akamaihd.net/apps/valve/2007/SIGGRAPH2007_AlphaTestedMagnification.pdf) . Usando o mesmo método de cálculo que usamos acima para a malha de texto 3D e o texto da interface do usuário, podemos encontrar valores adequados de dimensionamento para usar o ponto tipográfico convencional. Como a fonte padrão de malha de texto 3D Pro com o tamanho 36 mostra o limite da unidade de 2,5 Unity (2,5 m), podemos usar o valor de dimensionamento 0, 5 para usar o tamanho do ponto. O texto malha pro no menu da interface do usuário tem o tamanho delimitador padrão de 25 unidades de Unity (25m). Isso nos dá 0, 5 para o valor de dimensionamento.
+Com o Text mesh pro da Unity, você pode proteger a qualidade de renderização do texto. Ele dá suporte a contornos de texto nítidos, independentemente da distância usando a técnica de [SDF (conexão de campo de distância) assinada](https://steamcdn-a.akamaihd.net/apps/valve/2007/SIGGRAPH2007_AlphaTestedMagnification.pdf) . Usando o mesmo método de cálculo que usamos acima para a malha de texto 3D e o texto da interface do usuário, podemos encontrar os valores de dimensionamento adequados a serem usados com pontos tipográficos convencionais. Como a fonte pro de malha de texto 3D padrão com o tamanho de 36 tem um tamanho delimitador de 2,5 unidades de Unity (2,5 m), podemos usar o valor de dimensionamento 0, 5 para obter o tamanho do ponto. O Text mesh pro no menu da interface do usuário tem o tamanho delimitador padrão de 25 unidades de Unity (25m). Isso nos dá 0, 5 para o valor de dimensionamento.
 
 ![Malha de texto 3D do Unity com tamanhos de fonte diferentes](images/Text_In_Unity_Measurements2.png)<br>
 *Dimensionamento de valores para texto 3D do Unity e texto da interface do usuário*
@@ -63,14 +65,14 @@ Para a interação próxima no 0.45 m (45cm), o ângulo de exibição da fonte m
 de interação próxima e longe*em um intervalo de interação próximo e longe*
 
 ### <a name="the-minimum-legible-font-size"></a>O tamanho mínimo de fonte legível
-| alcance | Ângulo de exibição | Altura do texto | Tamanho da fonte |
+| Alcance | Ângulo de exibição | Altura do texto | Tamanho da fonte |
 |---------|---------|---------|---------|
 | 45cm (distância de manipulação direta) | 0.4 °-0,5 ° | 3.14 – 3.9 mm | 8.9 – 11.13 pt |
 | m | 0.35 °-0,4 ° | 12.21 – 13.97 mm | 34.63-39.58 pt |
 
 
 ### <a name="the-comfortably-legible-font-size"></a>O tamanho de fonte legível confortavelmente
-| alcance | Ângulo de exibição | Altura do texto | Tamanho da fonte |
+| Alcance | Ângulo de exibição | Altura do texto | Tamanho da fonte |
 |---------|---------|---------|---------|
 | 45cm (distância de manipulação direta) | 0.65 °-0,8 ° | 5.1-6.3 mm | 14.47-17.8 pt |
 | m | 0,6 ° a 0,75 ° | 20,9-26.2 mm | 59.4-74.2 pt |

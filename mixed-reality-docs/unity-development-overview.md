@@ -6,17 +6,16 @@ ms.author: Yoyoz
 ms.date: 04/15/2018
 ms.topic: article
 keywords: Unity, realidade mista, desenvolvimento, introdução, novo projeto, portabilidade, capacidade, câmera, simulação, emulação, documentação
-ms.openlocfilehash: 24217b4c61bf2d438ebc1c4114bc9dc20dc62f64
-ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
+ms.openlocfilehash: b1384e886a2b4d0b3ed9f8008fca6af6ad4b78d5
+ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67414519"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68701788"
 ---
 # <a name="unity-development-overview"></a>Visão geral do desenvolvimento do Unity
 
 O caminho mais rápido para criar um [aplicativo de realidade misturada](app-views.md) é com o [Unity](http://aka.ms/HoloLensUnity). Recomendamos que você reserve um tempo para explorar os [tutoriais do Unity](https://unity3d.com/learn/tutorials). Se você precisar de ativos, o Unity terá um [repositório de ativos](https://www.assetstore.unity3d.com/)abrangente. Depois de criar uma compreensão básica do Unity, você pode visitar os [tutoriais](tutorials.md) para aprender as especificações do desenvolvimento de realidade misturada com o Unity. Visite os [fóruns de realidade misturada no Unity](http://forum.unity3d.com/forums/hololens.102/) para se envolver com o restante da Comunidade criando aplicativos de realidade misturada no Unity e encontre soluções para os problemas que você pode encontrar.
-
 
 Para começar a criar aplicativos de realidade misturada com o Unity, primeiro [Instale as ferramentas](install-the-tools.md). 
 
@@ -71,7 +70,7 @@ Com essa solução VS em mãos, você pode executar o aplicativo de uma das trê
 
 ## <a name="unity-documentation"></a>Documentação do Unity
 
-Além desta documentação disponível no centro de desenvolvimento do Windows, o Unity instala a funcionalidade de realidade mista do Windows junto com o editor do Unity. A documentação fornecida pelo Unity inclui duas seções separadas:
+Além desta documentação disponível no docs.microsoft.com, o Unity instala a documentação da funcionalidade de realidade mista do Windows junto com o editor do Unity. A documentação fornecida pelo Unity inclui duas seções separadas:
 1. **Referência de script do Unity**
     * Esta seção da documentação contém detalhes da API de script que o Unity fornece.
     * Acessível do editor do Unity por meio da **ajuda > referência de script**

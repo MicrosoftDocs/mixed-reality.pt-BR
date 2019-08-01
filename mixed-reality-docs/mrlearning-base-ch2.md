@@ -1,17 +1,17 @@
 ---
-title: Módulo básico de aprendizado de MR – Configuração do kit de ferramentas de interface do usuário, acompanhamento de mão e realidade misturada
+title: Tutoriais de introdução-3. Criando interface do usuário e Configurando o kit de ferramentas de realidade mista
 description: Conclua este curso para saber como implementar o reconhecimento facial do Azure em um aplicativo de realidade misturada.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realidade misturada, unity, tutorial, hololens
-ms.openlocfilehash: 6257b5a4b42127a7f15b235dbdd6b44967684fcb
-ms.sourcegitcommit: b086d7a62ee0c7913aa8f66c90e9d2527f270264
+ms.openlocfilehash: 925ab825c2716a847726ac763dc6800914d87c6b
+ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68485753"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68702043"
 ---
 # <a name="3-creating-user-interface-and-configure-mixed-reality-toolkit"></a>3. Criando interface do usuário e Configurando o kit de ferramentas de realidade mista 
 

@@ -1,17 +1,17 @@
 ---
-title: Módulo de compartilhamento de aprendizagem do MR para o HoloLens 2
+title: Tutoriais de funcionalidades de vários usuários-4. Compartilhando movimentos de objetos com vários usuários
 description: Conclua este curso para aprender a implementar experiências compartilhadas de vários usuários em um aplicativo do HoloLens 2.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realidade misturada, unity, tutorial, hololens
-ms.openlocfilehash: 77ae779b4bb32dd66a722c9793d1b83c4a64ae2e
-ms.sourcegitcommit: b086d7a62ee0c7913aa8f66c90e9d2527f270264
+ms.openlocfilehash: 2e676d319ba7221cf9549b200b3d748f26025aa7
+ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68485671"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68701894"
 ---
 # <a name="4-sharing-object-movements-with-multiple-users"></a>4. Compartilhando movimentos de objetos com vários usuários
 

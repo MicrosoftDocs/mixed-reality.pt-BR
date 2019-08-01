@@ -1,17 +1,17 @@
 ---
-title: Módulo básico de aprendizado de MR – entrada avançada
+title: Tutoriais de introdução-6. Explorando opções de entrada avançadas
 description: Conclua este curso para saber como implementar o reconhecimento facial do Azure em um aplicativo de realidade misturada.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realidade misturada, unity, tutorial, hololens
-ms.openlocfilehash: d7ef68d1a1e64ca85d76b11376d0916b2693e8e1
-ms.sourcegitcommit: b086d7a62ee0c7913aa8f66c90e9d2527f270264
+ms.openlocfilehash: 0f01b789cfc358500ec94a10f82315bca55dd622
+ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68485708"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68702006"
 ---
 # <a name="6-exploring-advanced-input-options"></a>6. Explorando opções de entrada avançadas
 

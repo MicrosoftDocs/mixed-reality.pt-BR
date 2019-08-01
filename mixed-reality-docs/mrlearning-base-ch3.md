@@ -1,17 +1,17 @@
 ---
-title: Módulo básico da aprendizagem de MR - Solucionadores e posicionamento de conteúdo dinâmico
+title: Tutoriais de introdução-4. Colocando conteúdo dinâmico e usando os solveres
 description: Conclua este curso para saber como implementar o reconhecimento facial do Azure em um aplicativo de realidade misturada.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realidade misturada, unity, tutorial, hololens
-ms.openlocfilehash: 401c667ef80042da9182b7f4e065dfd6884cf061
-ms.sourcegitcommit: b086d7a62ee0c7913aa8f66c90e9d2527f270264
+ms.openlocfilehash: a73be40180e582058ae3e9bbaeffebe462042fbb
+ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68485696"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68701997"
 ---
 # <a name="4-placing-dynamic-content-and-using-solvers"></a>4. Colocando conteúdo dinâmico e usando os solveres
 

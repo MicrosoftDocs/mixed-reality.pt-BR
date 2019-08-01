@@ -1,3 +1,18 @@
+---
+title: Tutoriais de funcionalidades de vários usuários-2. Obtendo o Unity pronto para desenvolvimento
+description: Conclua este curso para aprender a implementar experiências compartilhadas de vários usuários em um aplicativo do HoloLens 2.
+author: jessemcculloch
+ms.author: jemccull
+ms.date: 02/26/2019
+ms.topic: article
+keywords: realidade misturada, unity, tutorial, hololens
+ms.openlocfilehash: 9d42811157db108baad51eab3f367a06a11b7f7b
+ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68701974"
+---
 # <a name="2-getting-unity-ready-for-development"></a>2. Obtendo o Unity pronto para desenvolvimento 
 
 

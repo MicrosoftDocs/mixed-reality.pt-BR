@@ -1,17 +1,17 @@
 ---
-title: Módulo do ASA do Sr Learning âncora espacial do Azure no HoloLens 2
+title: Tutoriais de âncoras espaciais do Azure-2. Salvando, recuperando e compartilhando âncoras espaciais do Azure
 description: Conclua este curso para saber como implementar o reconhecimento facial do Azure em um aplicativo de realidade misturada.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realidade misturada, unity, tutorial, hololens
-ms.openlocfilehash: b263d30905c5a1ba81bfb59ba6a49c7710c43869
-ms.sourcegitcommit: b086d7a62ee0c7913aa8f66c90e9d2527f270264
+ms.openlocfilehash: 4e60ed844e64d736c268dd3ec8453c6c2cb7ad75
+ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68485738"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68702045"
 ---
 # <a name="2-saving-retrieving-and-sharing-azure-spatial-anchors"></a>2. Salvando, recuperando e compartilhando âncoras espaciais do Azure
 
@@ -81,5 +81,5 @@ Aprendemos como implementar as âncoras espaciais do Azure como parte de uma exp
 
 Na próxima lição, aprenderemos a fornecer aos usuários comentários em tempo real. Esses comentários incluirão informações sobre a criação de âncora, a qualidade da compreensão do ambiente e o estado da sessão do Azure. Sem comentários, os usuários podem não saber se uma âncora foi carregada com êxito no Azure, se a qualidade do ambiente é suficiente para a criação de âncora ou para o estado atual.
 
-[Próxima lição: 3. Exibindo comentários de âncora espacial do Azure](mrlearning-asa-ch3.md)
+[Próxima lição: 3. Exibir comentários da Âncora Espacial do Azure](mrlearning-asa-ch3.md)
 

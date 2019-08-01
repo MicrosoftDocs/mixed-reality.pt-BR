@@ -1,17 +1,17 @@
 ---
-title: Módulo MR Learning Base - experiência de exemplo de montagem do módulo lunar
+title: Tutoriais de introdução-7. Criando um aplicativo de exemplo de módulo lunar
 description: Nesta lição, vamos combinar vários conceitos aprendidos em lições anteriores para criar uma experiência de exemplo exclusiva.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realidade misturada, unity, tutorial, hololens
-ms.openlocfilehash: 79f2d3a4a3224533761ea2e4a7e73dc3d4d5e53e
-ms.sourcegitcommit: b0b1b8e1182cce93929d409706cdaa99ff24fdee
+ms.openlocfilehash: 97dd8fce1ebe53efc37cb48cde7dc9e207be9a42
+ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68387689"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68701988"
 ---
 # <a name="7-creating-a-lunar-module-sample-application"></a>7. Criando um aplicativo de exemplo de módulo lunar
 

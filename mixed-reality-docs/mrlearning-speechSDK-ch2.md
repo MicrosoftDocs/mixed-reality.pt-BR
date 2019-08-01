@@ -1,21 +1,21 @@
 ---
-title: Módulo Sr Learning SpeechSDK – reconhecimento de fala e transcrição
+title: TUTORIAIS dos serviços de fala do Azure-2. Adicionando um modo offline para tradução de fala em texto local
 description: Conclua este curso para aprender a implementar o SDK de fala do Azure em um aplicativo de realidade misturada.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 06/27/2019
 ms.topic: article
 keywords: realidade misturada, unity, tutorial, hololens
-ms.openlocfilehash: b13b22fcdce2e7fa1319d241302b764f457aabba
-ms.sourcegitcommit: b086d7a62ee0c7913aa8f66c90e9d2527f270264
+ms.openlocfilehash: 1dd6c01768ddf5dda954f50e0f7507022bd59c3b
+ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68485600"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68701856"
 ---
-# <a name="2----adding-an-offline-mode-for-local-speech-to-text-translation"></a>2.    Adicionando um modo offline para tradução de fala em texto local
+# <a name="2-adding-an-offline-mode-for-local-speech-to-text-translation"></a>2. Adicionando um modo offline para tradução de fala em texto local
 
-Neste tutorial, adicionaremos um modo offline que permite executar a tradução de fala para texto local quando não for possível se conectar ao serviço do Azure. Também simularemos  um estado desconectado.
+Neste tutorial, adicionaremos um modo offline que permite executar a tradução de fala para texto local quando não for possível se conectar ao serviço do Azure. Também simularemos um estado desconectado.
 
 ## <a name="instructions"></a>Instruções
 
