@@ -6,21 +6,25 @@ ms.author: mriches
 ms.date: 05/24/2019
 ms.topic: article
 keywords: Realidade mista do Windows, hologramas, comunicação remota Holographic, renderização remota, renderização de rede, HoloLens, hologramas remotos
-ms.openlocfilehash: 8d645f634ff0fc820893f5554fd602aa3a2f38e3
-ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
+ms.openlocfilehash: 71a763b0660867bf910c0dcecb5fba921f19d068
+ms.sourcegitcommit: ca949efe0279995a376750d89e23d7123eb44846
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66829626"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68712426"
 ---
-# <a name="add-holographic-remoting"></a>Adicionar comunicação remota do Holographic
+# <a name="add-holographic-remoting-hololens-1"></a>Adicionar comunicação remota do Holographic (HoloLens 1)
+
+>[!IMPORTANT]
+>Este documento descreve a criação de um aplicativo host para o HoloLens 1. O aplicativo host para o **HoloLens 1** deve usar o pacote NuGet versão **1. x**. x. Isso implica que os aplicativos host escritos para o HoloLens 1 não são compatíveis com o HoloLens 2 e vice-versa.
 
 ## <a name="hololens-2"></a>HoloLens 2
 
-> [!NOTE]
-> Mais diretrizes específicas para o HoloLens 2 em [breve](index.md#news-and-notes).
+Os desenvolvedores de HoloLens que usam a comunicação remota do Holographic precisarão atualizar seus aplicativos para torná-los compatíveis com o HoloLens 2. Isso requer uma nova versão do pacote NuGet de comunicação remota do Holographic. Se um aplicativo que usa o pacote NuGet de comunicação remota do Holographic com um número de versão menor do que o 2.0.0.0 tentar se conectar ao Player de comunicação remota do Holographic no HoloLens 2, a conexão falhará.
 
-Os desenvolvedores de HoloLens que usam a comunicação remota do Holographic precisarão atualizar seus aplicativos para torná-los compatíveis com o HoloLens 2.  Isso exigirá uma nova versão do pacote NuGet de comunicação remota do Holographic que ainda não está disponível publicamente.  Se um aplicativo que usa o pacote NuGet do HoloLens tentar se conectar ao Player de comunicação remota do Holographic no HoloLens 2, a conexão falhará.  Assista a esta página para obter atualizações depois que o pacote NuGet do HoloLens 2 estiver disponível.
+>[!NOTE]
+>As diretrizes específicas para o HoloLens 2 podem ser encontradas [aqui](holographic-remoting-create-host.md).
+
 
 ## <a name="add-holographic-remoting-to-your-desktop-or-uwp-app"></a>Adicionar a comunicação remota do Holographic ao seu aplicativo da área de trabalho ou UWP
 
@@ -47,7 +51,7 @@ Siga estas etapas para obter o pacote NuGet para a comunicação remota do Holog
 
 Primeiro, precisamos de uma instância de HolographicStreamerHelpers. Adicione isso à classe que tratará de comunicação remota.
 
-```
+```cpp
 #include <HolographicStreamerHelpers.h>
 
    private:
@@ -56,7 +60,7 @@ Primeiro, precisamos de uma instância de HolographicStreamerHelpers. Adicione i
 
 Você também precisará acompanhar o estado da conexão. Se você quiser renderizar a visualização, precisará ter uma textura para copiá-la para. Você também precisa de algumas coisas como um bloqueio de estado de conexão, alguma maneira de armazenar o endereço IP do HoloLens e assim por diante.
 
-```
+```cpp
 private:
        Microsoft::Holographic::HolographicStreamerHelpers^ m_streamerHelpers;
 
@@ -75,7 +79,7 @@ private:
 
 Para se conectar a um dispositivo HoloLens, crie uma instância do HolographicStreamerHelpers e conecte-se ao endereço IP de destino. Você precisará definir o tamanho do quadro de vídeo para corresponder à largura e altura de exibição do HoloLens, pois a biblioteca de comunicação remota Holographic espera que as resoluções do codificador e do decodificador correspondam exatamente.
 
-```
+```cpp
 m_streamerHelpers = ref new HolographicStreamerHelpers();
        m_streamerHelpers->CreateStreamer(m_d3dDevice);
 
@@ -98,7 +102,7 @@ A conexão do dispositivo é assíncrona. Seu aplicativo precisa fornecer manipu
 
 O evento onconnected pode atualizar a interface do usuário, iniciar a renderização e assim por diante. Em nosso exemplo de código de área de trabalho, atualizamos o título da janela com uma mensagem "conectada".
 
-```
+```cpp
 m_streamerHelpers->OnConnected += ref new ConnectedEvent(
            [this]()
            {
@@ -108,7 +112,7 @@ m_streamerHelpers->OnConnected += ref new ConnectedEvent(
 
 O evento ondisconnectd pode lidar com a reconexão, as atualizações da interface do usuário e assim por diante. Neste exemplo, reconectamos se houver uma falha transitória.
 
-```
+```cpp
 Platform::WeakReference streamerHelpersWeakRef = Platform::WeakReference(m_streamerHelpers);
        m_streamerHelpers->OnDisconnected += ref new DisconnectedEvent(
            [this, streamerHelpersWeakRef](_In_ HolographicStreamerConnectionFailureReason failureReason)
@@ -148,7 +152,7 @@ Platform::WeakReference streamerHelpersWeakRef = Platform::WeakReference(m_strea
 
 Quando o componente de comunicação remota está pronto para enviar um quadro, seu aplicativo recebe uma oportunidade de fazer uma cópia dele no SendFrameEvent. Aqui, copiamos o quadro em uma cadeia de permuta para que possamos exibi-lo em uma janela de visualização.
 
-```
+```cpp
 m_streamerHelpers->OnSendFrame += ref new SendFrameEvent(
            [this](_In_ const ComPtr<ID3D11Texture2D>& spTexture, _In_ FrameMetadata metadata)
            {
@@ -180,13 +184,13 @@ Para renderizar o conteúdo usando comunicação remota, você configura um IFra
 
 Em vez de criá-los por conta própria, os componentes de espaço e fala do Holographic vêm de sua classe HolographicRemotingHelpers:
 
-```
+```cpp
 m_appView->Initialize(m_streamerHelpers->HolographicSpace, m_streamerHelpers->RemoteSpeech);
 ```
 
 Em vez de usar um loop de atualização dentro de um método Run, você fornece atualizações em escala do loop principal de seu aplicativo de desktop ou UWP. Isso permite que seu aplicativo da área de trabalho ou UWP permaneça no controle do processamento de mensagens.
 
-```
+```cpp
 void DesktopWindow::Tick()
    {
        auto lock = m_deviceLock.Lock();
@@ -198,7 +202,7 @@ void DesktopWindow::Tick()
 
 O método Tick () da exibição do aplicativo Holographic conclui uma iteração do loop Update, Draw e Present.
 
-```
+```cpp
 void AppView::Tick()
    {
        if (m_main)
@@ -222,7 +226,7 @@ O loop de atualização de exibição do aplicativo Holographic, render e Presen
 
 Para desconectar-por exemplo, quando o usuário clica em um botão da interface do usuário para desconectar-chamada Disconnect () no HolographicStreamerHelpers e, em seguida, libera o objeto.
 
-```
+```cpp
 void DesktopWindow::DisconnectFromRemoteDevice()
    {
        // Disconnecting from the remote device can change the connection state.
@@ -246,7 +250,7 @@ O player de comunicação remota do Windows Holographic é oferecido na loja de 
 
 A exibição do aplicativo Holographic precisará de uma maneira de fornecer seu aplicativo com o dispositivo Direct3D, que deve ser usado para inicializar o espaço do Holographic. Seu aplicativo deve usar este dispositivo Direct3D para copiar e exibir o quadro de visualização.
 
-```
+```cpp
 internal:
        const std::shared_ptr<DX::DeviceResources>& GetDeviceResources()
        {
