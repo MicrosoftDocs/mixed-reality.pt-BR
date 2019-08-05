@@ -6,12 +6,12 @@ ms.author: dongpark
 ms.date: 06/03/2019
 ms.topic: article
 keywords: Windows Mixed Reality, design, controles, fonte, tipografia, interface do usuário, UX
-ms.openlocfilehash: 739dee36ffcbaa92fad705d1b0e58506801c9a4d
-ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
+ms.openlocfilehash: 238f99442bcc5cf02de6760f0ce52d07c9d9c567
+ms.sourcegitcommit: be3631932ea1c88ac3ad8b2390c98c5a6e8b93ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68701908"
+ms.lasthandoff: 08/04/2019
+ms.locfileid: "68776399"
 ---
 # <a name="text-in-unity"></a>Texto no Unity
 
@@ -51,7 +51,7 @@ Ao adicionar um elemento de texto baseado na interface do usuário ou tela a uma
 
 ## <a name="working-with-text-mesh-pro"></a>Trabalhando com a malha de texto pro
 
-Com o Text mesh pro da Unity, você pode proteger a qualidade de renderização do texto. Ele dá suporte a contornos de texto nítidos, independentemente da distância usando a técnica de [SDF (conexão de campo de distância) assinada](https://steamcdn-a.akamaihd.net/apps/valve/2007/SIGGRAPH2007_AlphaTestedMagnification.pdf) . Usando o mesmo método de cálculo que usamos acima para a malha de texto 3D e o texto da interface do usuário, podemos encontrar os valores de dimensionamento adequados a serem usados com pontos tipográficos convencionais. Como a fonte pro de malha de texto 3D padrão com o tamanho de 36 tem um tamanho delimitador de 2,5 unidades de Unity (2,5 m), podemos usar o valor de dimensionamento 0, 5 para obter o tamanho do ponto. O Text mesh pro no menu da interface do usuário tem o tamanho delimitador padrão de 25 unidades de Unity (25m). Isso nos dá 0, 5 para o valor de dimensionamento.
+Com o Text mesh pro da Unity, você pode proteger a qualidade de renderização do texto. Ele dá suporte a contornos de texto nítidos, independentemente da distância usando a técnica de [SDF (conexão de campo de distância) assinada](https://steamcdn-a.akamaihd.net/apps/valve/2007/SIGGRAPH2007_AlphaTestedMagnification.pdf) . Usando o mesmo método de cálculo que usamos acima para a malha de texto 3D e o texto da interface do usuário, podemos encontrar os valores de dimensionamento adequados a serem usados com pontos tipográficos convencionais. Como a fonte padrão da malha de texto 3D Pro com o tamanho de 36 tem um tamanho delimitador de 2,5 unidades de Unity (2,5 m), podemos usar o valor de dimensionamento de 0, 5 para obter o tamanho do ponto. O Text mesh pro no menu da interface do usuário tem o tamanho delimitador padrão de 25 unidades de Unity (25m). Isso nos dá 0, 5 para o valor de dimensionamento.
 
 ![Malha de texto 3D do Unity com tamanhos de fonte diferentes](images/Text_In_Unity_Measurements2.png)<br>
 *Dimensionamento de valores para texto 3D do Unity e texto da interface do usuário*
