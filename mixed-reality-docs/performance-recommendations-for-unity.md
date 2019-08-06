@@ -6,12 +6,12 @@ ms.author: trferrel
 ms.date: 03/26/2019
 ms.topic: article
 keywords: gráficos, CPU, GPU, renderização, coleta de lixo, hololens
-ms.openlocfilehash: b0821f07184bff8630f6b6af0d0fc461f6fcd133
-ms.sourcegitcommit: 8f3ff9738397d9b9fdf4703b14b89d416f0186a5
+ms.openlocfilehash: 16a923697985e3686992dc31ea8e6fc39249c276
+ms.sourcegitcommit: 6a3b7d489c2aa3451b1c88c5e9542fbe1472c826
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67843341"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68817349"
 ---
 # <a name="performance-recommendations-for-unity"></a>Recomendações de desempenho para o Unity
 
@@ -205,13 +205,13 @@ Leia os artigos a seguir do Unity para obter detalhes com essa abordagem de rend
 
 #### <a name="static-batching"></a>Envio em lote estático
 
-O Unity é capaz de fazer o lote de muitos objetos estáticos para reduzir chamadas de empates para a GPU. O envio em lote estático para a maioria dos objetos de [processador](https://docs.unity3d.com/ScriptReference/Renderer.html) no Unity que **1) compartilham o mesmo material** e **2)  são marcados como estáticos** (selecione um objeto no Unity e clique na caixa de seleção no canto superior direito do Inspetor). GameObjects marcado como *estático* não pode ser movido por todo o tempo de execução do aplicativo. Portanto, o envio em lote estático pode ser difícil de aproveitar no HoloLens, em que praticamente todos os objetos precisam ser colocados, movidos, dimensionados, etc. Para headsets de imersão, o envio em lote estático pode reduzir drasticamente as chamadas de desenho e, portanto, melhorar o desempenho.
+O Unity é capaz de fazer o lote de muitos objetos estáticos para reduzir chamadas de empates para a GPU. O envio em lote estático para a maioria dos objetos de [processador](https://docs.unity3d.com/ScriptReference/Renderer.html) no Unity que **1) compartilham o mesmo material** e **2) são marcados como estáticos** (selecione um objeto no Unity e clique na caixa de seleção no canto superior direito do Inspetor). GameObjects marcado como *estático* não pode ser movido por todo o tempo de execução do aplicativo. Portanto, o envio em lote estático pode ser difícil de aproveitar no HoloLens, em que praticamente todos os objetos precisam ser colocados, movidos, dimensionados, etc. Para headsets de imersão, o envio em lote estático pode reduzir drasticamente as chamadas de desenho e, portanto, melhorar o desempenho.
 
 Leia *envio em lote estático* em [desenho de chamada em lote no Unity](https://docs.unity3d.com/Manual/DrawCallBatching.html) para obter mais detalhes.
 
 #### <a name="dynamic-batching"></a>Envio em lote dinâmico
 
-Como é problemático marcar objetos como estáticos  para o desenvolvimento do HoloLens, o envio em lote dinâmico pode ser uma ótima ferramenta para compensar esse recurso. É claro que também pode ser útil em headsets de imersão. O envio em lote dinâmico no Unity pode ser difícil, embora seja possível habilitar, pois GameObjects deve ter **um) compartilhamento do mesmo material** e **b) que atendem a uma longa lista de outros critérios**.
+Como é problemático marcar objetos como estáticos para o desenvolvimento do HoloLens, o envio em lote dinâmico pode ser uma ótima ferramenta para compensar esse recurso. É claro que também pode ser útil em headsets de imersão. O envio em lote dinâmico no Unity pode ser difícil, embora seja possível habilitar, pois GameObjects deve ter **um) compartilhamento do mesmo material** e **b) que atendem a uma longa lista de outros critérios**.
 
 Leia *envio em lote dinâmico* em [desenho de chamada em lote no Unity](https://docs.unity3d.com/Manual/DrawCallBatching.html) para obter a lista completa. Normalmente, GameObjects se tornam inválidos para serem agrupados dinamicamente porque os dados de malha associados não podem ter mais de 300 vértices.
 
@@ -231,6 +231,18 @@ Saiba mais sobre como [otimizar a renderização de gráficos no Unity](https://
 ### <a name="optimize-depth-buffer-sharing"></a>Otimizar o compartilhamento de buffer de profundidade
 
 Geralmente, é recomendável habilitar o **compartilhamento de buffer de profundidade** nas configurações do **Player XR** para otimizar a [estabilidade do holograma](Hologram-stability.md). No entanto, ao habilitar a Reprojeção de etapa tardia baseada em profundidade com essa configuração, é recomendável selecionar **formato de profundidade de 16 bits** em vez de **formato de profundidade de 24 bits**. Os buffers de profundidade de 16 bits reduzem drasticamente a largura de banda (e, portanto, a energia) associada ao tráfego de profundidade do buffer. Isso pode ser um grande ganho de energia, mas só é aplicável a experiências com uma pequena faixa de profundidade, já que o [combate a z](https://en.wikipedia.org/wiki/Z-fighting) é mais provável que ocorra com 16 bits do que 24 bits. Para evitar esses artefatos, modifique os planos de clipes próximos/distantes da [câmera do Unity](https://docs.unity3d.com/Manual/class-Camera.html) para considerar a precisão mais baixa. Para aplicativos baseados em HoloLens, um plano de recorte distante de 50 milhões em vez do 1000m padrão de Unity geralmente pode eliminar qualquer combate a z.
+
+### <a name="avoid-full-screen-effects"></a>Evitar efeitos de tela inteira
+
+As técnicas que operam na tela inteira podem ser bastante caras, já que sua ordem de magnitude é milhões de operações em todos os quadros. Portanto, é recomendável evitar [efeitos de pós-processamento](https://docs.unity3d.com/Manual/PostProcessingOverview.html) , como suavização de serrilhado, flor e muito mais. 
+
+### <a name="optimal-lighting-settings"></a>Configurações de iluminação ideais
+
+[A iluminação global em tempo real](https://docs.unity3d.com/Manual/GIIntro.html) no Unity pode fornecer resultados visuais pendentes, mas envolve cálculos de iluminação bastante caros. É recomendável desabilitar a iluminação global em tempo real para cada arquivo de cena do Unity por meio de**configurações de iluminação** de**renderização** > de **janelas** > > desmarcar **a iluminação global em tempo real**. 
+
+Além disso, é recomendável desabilitar toda a transmissão de sombra, pois elas também adicionam passagens de GPU caras em uma cena do Unity. As sombras podem ser desabilitadas por luz, mas também podem ser controladas holísticamente por meio de configurações de qualidade. 
+ 
+**Edite** > **as configurações do projeto**e, em seguida, selecione a categoria **qualidade** > selecione **baixa qualidade** para a plataforma UWP. Também é possível definir apenas a Propriedade Shadows para **desabilitar Shadows**.
 
 ### <a name="reduce-poly-count"></a>Reduzir número de polylines
 
