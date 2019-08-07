@@ -8,12 +8,12 @@ ms.date: 02/24/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Mixed Reality, discover, distribute, index, landing page, design, development, tutorials, sample apps, fundamentals, case studies, resources, HoloLens how-to, Open source projects
-ms.openlocfilehash: cf513cebbbf4f05721811cb82d584f9039e378b7
-ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
+ms.openlocfilehash: c39a5f2f31dc962758456f743e17aaf37fd4ed64
+ms.sourcegitcommit: 6a3b7d489c2aa3451b1c88c5e9542fbe1472c826
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67415393"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68817353"
 ---
 # <a name="mixed-reality-documentation"></a>Documentação da Realidade Misturada
 
@@ -104,7 +104,7 @@ A Realidade misturada combina conteúdo real e virtual em ambientes híbridos em
                                     </a>
                             </li>
                             <li>
-                              <a href="https://docs.microsoft.com/azure/cognitive-services/speech-service/" target="_blank" title="Serviços de fala" data-linktype="absolute-path">
+                              <a href="https://docs.microsoft.com/azure/cognitive-services/speech-service/" target="_blank" title="Serviços de Fala" data-linktype="absolute-path">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -183,4 +183,4 @@ Conforme prometido, estamos felizes em compartilhar mais adequação da realidad
 
 
 >[!IMPORTANT]
->Todos os materiais de desenvolvimento de realidade misturada são fornecidos neste site somente para referência. Seu aplicativo, seu uso e seu efeito sobre os usuários finais é de sua responsabilidade exclusiva como desenvolvedor do aplicativo, incluindo as garantias e isenções de responsabilidade apropriadas e também a garantia de que o aplicativo não causará desconforto, lesão ou nenhum outro dano ao usuário final. É necessário sempre seguir as etapas apropriadas no desenvolvimento e na publicação do seu aplicativo para garantir que ele seja seguro e atenda a todas as obrigações do [Contrato de Desenvolvedor de Aplicativos com a Microsoft](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement). 
+>Todos os materiais de desenvolvimento de realidade misturada são fornecidos neste site somente para referência. Seu aplicativo, seu uso e seu efeito sobre os usuários finais é de sua responsabilidade exclusiva como o desenvolvedor do aplicativo, incluindo a garantia de que o aplicativo não causará desconforto, lesão ou nenhum outro dano ao usuário final, incluindo avisos e isenções de responsabilidade apropriados. É necessário sempre seguir as etapas apropriadas no desenvolvimento e na publicação do seu aplicativo para garantir que ele seja seguro e atenda a todas as obrigações do [Contrato de Desenvolvedor de Aplicativos com a Microsoft](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement). 
