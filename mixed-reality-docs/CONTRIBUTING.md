@@ -5,12 +5,12 @@ author: mattwojo
 ms.author: mattwoj
 ms.date: 03/21/2018
 ms.topic: article
-ms.openlocfilehash: c110b549603f42ec03fd6c0dc8df7bf70ba5ba9f
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: a6c2574a35ec1240c573532dabfdc6cec1696947
+ms.sourcegitcommit: 4ac761fed7a9570977f6d031ba4f870585d6630a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63516269"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68861714"
 ---
 # <a name="contributing-to-windows-mixed-reality-developer-documentation"></a>Contribuindo para a documentação do desenvolvedor do Windows Mixed Reality
 
@@ -58,11 +58,33 @@ Use o seguinte fluxo de trabalho para fazer atualizações em *um artigo existen
 6. Na página seguinte, clique em **criar solicitação de pull** para mesclar sua ramificação criada automaticamente em ' mestre '.
 7. Repita as etapas acima para o próximo artigo que você deseja editar.
 
+## <a name="renaming-or-deleting-an-existing-article"></a>Renomeando ou excluindo um artigo existente
+
+Se sua alteração for renomear ou excluir um artigo existente, certifique-se de adicionar um redirecionamento. Dessa forma, qualquer pessoa com um link para o artigo existente ainda será encerrada no lugar certo. Os redirecionamentos são gerenciados pelo arquivo. openpublishing. Redirecting. JSON na raiz do repositório.
+
+Para adicionar um redirecionamento a. openpublishing. redirectment. JSON, adicione uma entrada `redirections` à matriz:
+
+```json
+{
+    "redirections": [
+        {
+            "source_path": "mixed-reality-docs/old-article.md",
+            "redirect_url": "new-article#section-about-old-topic",
+            "redirect_document_id": false
+        },
+```
+
+- O `source_path` é o caminho relativo do repositório para o artigo antigo que você está removendo. Verifique se o caminho começa com `mixed-reality-docs` e termina com `.md`.
+- O `redirect_url` é a URL pública relativa do artigo antigo para o novo artigo. Certifique-se de que essa URL não `mixed-reality-docs` contém `.md`ou, pois se refere à URL pública e não ao caminho do repositório. É permitido vincular a uma seção dentro do novo `#section` artigo usando. Você também pode usar um caminho absoluto para outro site aqui, se necessário.
+- `redirect_document_id`indica se você deseja manter a ID do documento do arquivo anterior. O padrão é `false`. Use `true` se você quiser preservar o `ms.documentid` valor do atributo do artigo Redirecionado. Se você preservar a ID do documento, os dados, como exibições de página e classificações, serão transferidos para o artigo de destino. Faça isso se o redirecionamento for basicamente uma renomeação, e não um ponteiro para um artigo diferente que cobre apenas alguns dos mesmos conteúdos.
+
+Se você adicionar um redirecionamento, certifique-se de excluir o arquivo antigo também.
+
 ## <a name="creating-a-new-article"></a>Criando um novo artigo
 
 Use o fluxo de trabalho a seguir para *criar novos artigos* no repositório de documentação por meio do GitHub em um navegador da Web:
 
-1. Crie uma bifurcação da ramificação "mestre" do MicrosoftDocs/Mixed-Realm  (usando o botão bifurcar no canto superior direito).
+1. Crie uma bifurcação da ramificação "mestre" do MicrosoftDocs/Mixed-Realm (usando o botão bifurcar no canto superior direito).
 
    ![Bifurcar a ramificação mestre.](images/forkbranch.png)
 2. Na pasta "Mixed-Reality-docs", clique no botão **criar novo arquivo** no canto superior direito.

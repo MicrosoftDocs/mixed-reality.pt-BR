@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
 keywords: DirectX, renderização Holographic, nativo, aplicativo nativo, WinRT, aplicativo WinRT, APIs de plataforma, mecanismo personalizado, middleware
-ms.openlocfilehash: da6beae6e256fef49481b581395e507b3f2acd04
-ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
+ms.openlocfilehash: 58b311038633dc325cc2c5425fd09b9a0192b161
+ms.sourcegitcommit: 4ac761fed7a9570977f6d031ba4f870585d6630a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67414379"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68861703"
 ---
 # <a name="directx-development-overview"></a>Visão geral de desenvolvimento do DirectX
 
@@ -56,7 +56,6 @@ Para habilitar a melhor experiência possível para os usuários de sua appslica
 Há outros recursos principais que muitos aplicativos de imersão desejarão usar que também são expostos aos aplicativos do DirectX:
 
 * [Âncoras espaciais compartilhadas no DirectX](shared-spatial-anchors-in-directx.md)
-* [Câmera localizável no DirectX](locatable-camera-in-directx.md)
 * [Teclado, mouse e entrada do controlador no DirectX](keyboard,-mouse,-and-controller-input-in-directx.md)
 
 ## <a name="see-also"></a>Consulte também

@@ -6,12 +6,12 @@ ms.author: wguyman, cdedmonds
 ms.date: 06/12/2019
 ms.topic: article
 keywords: câmera, hololens, câmera colorida, frente, hololens 2, CV, pesquisa Visual computacional, fiducial, marcadores, código QR, QR, foto, vídeo
-ms.openlocfilehash: b80e201723f8f499a6d35008b9d308f93b925b1c
-ms.sourcegitcommit: 06ac2200d10b50fb5bcc413ce2a839e0ab6d6ed1
+ms.openlocfilehash: 368943dd70c721a41ca7c265a19ecb7c394db312
+ms.sourcegitcommit: 4ac761fed7a9570977f6d031ba4f870585d6630a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67694532"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68861720"
 ---
 # <a name="locatable-camera"></a>Câmera localizável
 
@@ -84,11 +84,13 @@ Para ir do ' CameraIntrinsics ' e ' CameraCoordinateSystem ' para seu sistema/co
 
 [Câmera localizável no Unity](locatable-camera-in-unity.md): O CameraToWorldMatrix é fornecido automaticamente pela classe PhotoCaptureFrame (portanto, você não precisa se preocupar com as transformações CameraCoordinateSystem).
 
-[Câmera localizável no DirectX](locatable-camera-in-directx.md): Mostra a maneira bastante simples de consultar a transformação entre o sistema de coordenadas da câmera e seu próprio sistema (s) de coordenadas de aplicativo.
+[Câmera localizável no DirectX](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/HolographicFaceTracking): O exemplo de acompanhamento facial do Holographic mostra a maneira bastante simples de consultar a transformação entre o sistema de coordenadas da câmera e seu próprio sistema de coordenadas do aplicativo.
 
 ### <a name="distortion-error"></a>Erro de distorção
 
-No HoloLens, os fluxos de vídeo e de imagem ainda não são distorcidos no pipeline de processamento de imagens do sistema antes que os quadros sejam disponibilizados para o aplicativo (o fluxo de visualização contém os quadros originais distorcidos). Como somente os CameraIntrinsics são disponibilizados, os aplicativos devem assumir que os quadros de imagem representam uma câmera pinhole perfeita. no entanto, a função de distorção no processador de imagem ainda pode deixar um erro de até 10 pixels no HoloLens (primeira geração) ao usar o CameraIntrinsics nos metadados do quadro. Em muitos casos de uso, esse erro não importa, mas se você estiver alinhando hologramas a pôsteres/marcadores do mundo real, por exemplo, e observar um deslocamento de < 10px (aproximadamente 11mm para hologramas posicionados 2 metros de distância) esse erro de distorção pode ser a causa. 
+No HoloLens, os fluxos de vídeo e de imagem ainda não são distorcidos no pipeline de processamento de imagens do sistema antes que os quadros sejam disponibilizados para o aplicativo (o fluxo de visualização contém os quadros originais distorcidos). Como somente os CameraIntrinsics são disponibilizados, os aplicativos devem assumir que os quadros de imagem representam uma câmera pinhole perfeita.
+
+No HoloLens (primeira geração), a função de distorção no processador de imagem ainda pode deixar um erro de até 10 pixels ao usar o CameraIntrinsics nos metadados do quadro. Em muitos casos de uso, esse erro não importa, mas se você estiver alinhando hologramas a pôsteres/marcadores do mundo real, por exemplo, e observar um deslocamento de < 10px (aproximadamente 11mm para hologramas posicionados 2 metros de distância) esse erro de distorção pode ser a causa. 
 
 ## <a name="locatable-camera-usage-scenarios"></a>Cenários de uso de câmera localizável
 
@@ -170,7 +172,7 @@ Exemplos:
 * Identifique e reconheça pessoas na sala (por exemplo, coloque os cartões de contato Holographic em rostos)
 
 ## <a name="see-also"></a>Consulte também
-* [Câmera localizável no DirectX](locatable-camera-in-directx.md)
+* [Exemplo de câmera localizável](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/HolographicFaceTracking)
 * [Câmera localizável no Unity](locatable-camera-in-unity.md)
 * [Captura de realidade misturada](mixed-reality-capture.md)
 * [Captura de realidade misturada para desenvolvedores](mixed-reality-capture-for-developers.md)

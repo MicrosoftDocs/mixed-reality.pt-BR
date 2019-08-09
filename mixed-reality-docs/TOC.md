@@ -182,7 +182,6 @@
 #### [Mapeamento espacial no DirectX](spatial-mapping-in-directx.md)
 ### Outros recursos principais
 #### [Âncoras espaciais compartilhadas no DirectX](shared-spatial-anchors-in-directx.md)
-#### [Câmera localizável no DirectX](locatable-camera-in-directx.md)
 #### [Teclado, mouse e entrada do controlador no DirectX](keyboard,-mouse,-and-controller-input-in-directx.md)
 ### Tópicos avançados
 #### [Como usar o XAML com aplicativos DirectX holográficos](using-xaml-with-holographic-directx-apps.md)
