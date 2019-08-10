@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
 keywords: mapeamento espacial, HoloLens, realidade misturada, reconstrução de superfície, malha, Sr
-ms.openlocfilehash: 31abeca624512f1d5e721dbe879ca2243cf41345
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 4914cf5b7864ecb2430a39af73729eb6dfc0e2bd
+ms.sourcegitcommit: c4c293971bb3205a82121bbfb40d1ac52b5cb38e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63550502"
+ms.lasthandoff: 08/10/2019
+ms.locfileid: "68937065"
 ---
 # <a name="spatial-mapping"></a>Mapeamento espacial
 
@@ -72,7 +72,7 @@ Um dos principais usos das superfícies de mapeamento espacial é simplesmente p
 
 O oclusão também fornece informações para o usuário; Quando um holograma parece ser obstruídodo por uma superfície do mundo real, isso fornece comentários visuais adicionais sobre o local espacial desse holograma no mundo. Por outro lado, o oclusão também pode *ocultar* informações de forma útil do usuário; os hologramas occluding por trás das paredes podem reduzir a desordem Visual de uma maneira intuitiva. Para ocultar ou revelar um holograma, o usuário precisa apenas mover sua cabeça.
 
-O oclusão também pode ser usado para obter as principais expectativas de uma interface do usuário natural com base em interações físicas familiares; se um holograma for obstruídodo por uma superfície, isso ocorre porque essa superfície é sólida e, portanto, o usuário deve esperar  que o holograma colidirá com essa superfície e não simplesmente passará por ela.
+O oclusão também pode ser usado para obter as principais expectativas de uma interface do usuário natural com base em interações físicas familiares; se um holograma for obstruídodo por uma superfície, isso ocorre porque essa superfície é sólida e, portanto, o usuário deve esperar que o holograma colidirá com essa superfície e não simplesmente passará por ela.
 
 Às vezes, oclusão de hologramas é indesejável. Se um usuário precisa ser capaz de interagir com um holograma, ele precisa ser capaz de vê-lo-mesmo que esteja por trás de uma superfície do mundo real. Nesses casos, geralmente faz sentido renderizar esse holograma de forma diferente quando é obstruído (por exemplo, reduzindo seu brilho). Dessa forma, o usuário poderá localizar visualmente o holograma, mas ainda saberá que está por trás de algo.
 
@@ -164,7 +164,7 @@ Aqui está um exemplo de estratégia de cache de malha, usando histerese espacia
 * Como uma superfície espacial também pode desaparecer temporariamente devido à perda de rastreamento, o aplicativo também adia a descartação de superfícies espaciais removidas durante a perda de rastreamento.
 * Em geral, um aplicativo deve avaliar a compensação entre o processamento de atualização reduzido e o maior uso de memória para determinar sua estratégia de cache ideal.
 
-## <a name="rendering"></a>tratamento
+## <a name="rendering"></a>Tratamento
 
 Há três maneiras principais pelas quais as malhas de mapeamento espacial tendem a ser usadas para renderização:
 * Para visualização de superfície
@@ -220,4 +220,5 @@ No entanto, tenha em mente que cada Raycast pode ter um alto custo computacional
 * [Mapeamento espacial no DirectX](spatial-mapping-in-directx.md)
 * [Mapeamento espacial no Unity](spatial-mapping-in-unity.md)
 * [Projeto de mapeamento espacial](spatial-mapping-design.md)
+* [Compreensão da cena](scene-understanding.md)
 * [Estudo de caso - Como olhar através dos buracos na sua realidade](case-study-looking-through-holes-in-your-reality.md)
