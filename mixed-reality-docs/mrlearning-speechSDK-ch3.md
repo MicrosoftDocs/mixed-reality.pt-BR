@@ -6,16 +6,16 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realidade misturada, unity, tutorial, hololens
-ms.openlocfilehash: 27742702f7a274b3212cdf12c77d8acfa0a29834
-ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
+ms.openlocfilehash: c7cbdca3c22253042a9be44a194fca8925f0f446
+ms.sourcegitcommit: 599bbdd861ce6ff11b6cfb345a0a995f8b7bf85b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68701833"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68977961"
 ---
 # <a name="3-adding-the-azure-cognitive-services-speech-translation-component"></a>3. Adicionando o componente de tradução de fala dos serviços cognitivas do Azure
 
-Neste tutorial, aprendemos a aabout o componente de tradução de fala dos serviços cognitivas do Azure em nosso projeto, além de traduzir em três idiomas diferentes. 
+Neste tutorial, aprendemos sobre o componente de tradução de fala dos serviços cognitivas do Azure em nosso projeto, além de traduzir em três idiomas diferentes. 
 
 ## <a name="instructions"></a>Instruções
 
@@ -45,5 +45,5 @@ Abaixo está um exemplo de como deve ser a aparência de sua cena:
 
 Agora seu projeto pode traduzir as palavras que você fala em vários idiomas diferentes. Fique à vontade para brincar com os idiomas e teste a precisão da tradução. 
 
-[Próximo tutorial: 4.  Configurar a intenção e o reconhecimento vocal natural](mrlearning-speechSDK-ch4.md)
+[Próximo tutorial: 4. Configurar a intenção e o reconhecimento vocal natural](mrlearning-speechSDK-ch4.md)
 

@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realidade misturada, unity, tutorial, hololens
-ms.openlocfilehash: 4e60ed844e64d736c268dd3ec8453c6c2cb7ad75
-ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
+ms.openlocfilehash: 70f84c1ec03919a15bed486ffa51fb57db39deec
+ms.sourcegitcommit: 599bbdd861ce6ff11b6cfb345a0a995f8b7bf85b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68702045"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68977968"
 ---
 # <a name="2-saving-retrieving-and-sharing-azure-spatial-anchors"></a>2. Salvando, recuperando e compartilhando âncoras espaciais do Azure
 
@@ -46,13 +46,13 @@ Neste tutorial, aprenderemos como salvar nossas âncoras espaciais do Azure em v
 
    - Para o botão chamado GetFromDisk, crie um novo evento sob o botão pressionado evento acionado, bem como o gatilho de evento on Click. Arraste o objeto ParentAnchor para o campo vazio e atribua o método LoadAzureAnchorIDsFromDisk () do componente ASAmoduleScript do objeto ParentAnchor.
 
-3. Siga as instruções de Tutoiral 1 para criar o aplicativo atualizado para seu dispositivo. Depois de pressionar o botão criar âncora do Azure, como fez na lição anterior, você pode salvar a ID de âncora do Azure em disco pressionando o botão salvar em disco.
+3. Siga as instruções do tutorial 1 para criar o aplicativo atualizado para seu dispositivo. Depois de pressionar o botão criar âncora do Azure, como fez na lição anterior, você pode salvar a ID de âncora do Azure em disco pressionando o botão salvar em disco.
 
 4. Reinicie o aplicativo, inicie a sessão do Azure, pressione carregar ID de âncora e, em seguida, pressione localizar âncora do Azure para localizar a âncora associada à ID salva no disco. A cena inteira agora deve se ajustar à posição, no local em que você salvou a âncora anteriormente!
 
 ### <a name="share-azure-anchors-between-multiple-devices"></a>Compartilhar âncoras do Azure entre vários dispositivos
 
-Nesta seção, aprenderemos como compartilhar a ID de âncora do Azure entre vários dispositivos. Isso permitirá que vários dispositivos consultem o Azure para a mesma ID de âncora, permitindo que nossos hologramas ancorados e cenas sejam alinhados espacialmente. O alinhamento espacial (Ver os mesmos hologramas no mesmo local físico entre vários dispositivos) é a chave para experiências compartilhadas locais no HoloLens 2. Há várias maneiras de transferir informações sobre as IDs do Azure entre dispositivos, incluindo métodos descritos nos tutoriais de experiências compartilhadas do Azure espaciais (TODO: Adicionar link). Este exemplo usa um serviço Web simples para carregar e baixar IDs de âncora entre dispositivos.
+Nesta seção, aprenderemos como compartilhar a ID de âncora do Azure entre vários dispositivos. Isso permitirá que vários dispositivos consultem o Azure para a mesma ID de âncora, permitindo que nossos hologramas ancorados e cenas sejam alinhados espacialmente. O alinhamento espacial (Ver os mesmos hologramas no mesmo local físico entre vários dispositivos) é a chave para experiências compartilhadas locais no HoloLens 2. Há várias maneiras de transferir informações sobre as IDs do Azure entre os dispositivos, incluindo métodos descritos nos [tutoriais](mrlearning-sharing(photon)-ch1.md)de tutoriais de experiências compartilhadas do Azure. Este exemplo usa um serviço Web simples para carregar e baixar IDs de âncora entre dispositivos.
 
 1. Adicione o ShareAnchor pré-fabricado à sua hierarquia. Este pré-fabricado adiciona dois novos botões à sua cena; uma para carregar informações de ID de âncora e outra para baixar informações de ID de âncora. 
 

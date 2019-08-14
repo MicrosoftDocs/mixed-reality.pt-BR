@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realidade misturada, unity, tutorial, hololens
-ms.openlocfilehash: fc65dccfcbc181af0c0b321374c721797e120e5d
-ms.sourcegitcommit: c7c7e3c836373b65e319609b4e8389dea6b081de
+ms.openlocfilehash: 43a6f02eaf09fcf43775374fae4fbe2d0bc8c346
+ms.sourcegitcommit: 599bbdd861ce6ff11b6cfb345a0a995f8b7bf85b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68460332"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68977984"
 ---
 # <a name="speech-sdk-learning-module---rocket-launcher-control-using-speech-commands"></a>Módulo de aprendizagem do SDK de fala – controle de Rocket Launcher usando comandos de fala
 
@@ -23,17 +23,17 @@ Nesta lição, usaremos o recurso de intenção do serviço de fala do Azure par
 - Saiba como usar comandos de voz da intenção de fala como comandos de entrada de controle de Rocket.
 
 ## <a name="instructions"></a>Instruções
-1. Neste tutorial, usaremos um ativo "BaseModule" para integrar o Rocket Launcher com os comandos de fala. Para isso, precisamos importar o ativo para nosso projeto. Você pode baixar o ativo "Rocket Launcher" usando este link (anexar o link). 
+1. Neste tutorial, usaremos um ativo "BaseModule" para integrar o Rocket Launcher com os comandos de fala. Para isso, precisamos importar o ativo para nosso projeto. Você pode baixar o ativo do "Rocket Launcher" usando este [link](https://github.com/microsoft/MixedRealityLearning/releases/tag/1.2). 
 
 2. Para importar o ativo, acesse ativos-> Importar pacote-> pacote personalizado-> Navegue até o arquivo baixado e clique em importar.
 
 ![module4chapter5step1](images/module4chapter5step1.PNG)
 
-3. Depois de importar o ativo "Rocket Launcher", navegue na pasta "Rocket Launcher"-> pré-fabricados-> selecione "Rocket Launcher_Complete" e, em seguida, arraste-o e solte-o na hierarquia de cena existente.
+3. Depois de importar o ativo "ativos do módulo base", navegue dentro da pasta "ativos do módulo base"-> pré-fabricados-> selecione "Rocket Launcher_Complete" e, em seguida, arraste-o e solte-o na hierarquia de cena existente.
 
 ![module4chapter5step2](images/module4chapter5step2.PNG)
 
-4. Agora, precisamos integrar nosso "iniciador do Rocket" com nosso projeto LUIS que trabalhamos em nossa lição anterior (link para lesson4). Para isso, expanda o pré-fabricado "Rocket Launcher_Complete" na hierarquia e encontre os botões "LaunchRoundButton", "ResetRoundButton" e "dicas de posicionamento".
+4. Agora, precisamos integrar nosso "iniciador do Rocket" com nosso projeto LUIS que trabalhamos em nossa [lição](mrlearning-speechSDK-ch4.md)anterior da lição. Para isso, expanda o pré-fabricado "Rocket Launcher_Complete" na hierarquia e encontre os botões "LaunchRoundButton", "ResetRoundButton" e "dicas de posicionamento".
 
 ![module4chapter5step3](images/module4chapter5step3.PNG)
 

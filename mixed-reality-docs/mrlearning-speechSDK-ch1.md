@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realidade misturada, unity, tutorial, hololens
-ms.openlocfilehash: 501e8bc2e70248a4ca8a79f90d74d30129830701
-ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
+ms.openlocfilehash: a6367a1be1bcaeab911b925641dbb3a66998c2dc
+ms.sourcegitcommit: 599bbdd861ce6ff11b6cfb345a0a995f8b7bf85b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68701958"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68977989"
 ---
 # <a name="1-integrating-and-using-speech-recognition-and-transcription"></a>1. Integrando e usando o reconhecimento de fala e a transcrição
 
@@ -133,18 +133,19 @@ Este tutorial cria um aplicativo de realidade misturada que explora o uso do SDK
 ![Lição 1 Chapter5 etapa 1](images/Lesson1Chapter5Step1.JPG)
 
 2. Verifique se a cena que você deseja experimentar está na lista de "Cenas em Compilação", clicando no botão "Adicionar Cenas Abertas".
-
-3. Pressione o botão Compilar para iniciar o processo de compilação.
+3. Pressione o botão Configurações do Player e vá para publicando configurações. Em recursos, habilite: Internet, servidor de cliente de Internet, servidor de cliente de rede privada, microfone e percepção espacial.
+4. Nas mesmas configurações do Player, vá para configurações de XR e selecione a realidade virtual com suporte para ativado.
+5. Pressione o botão Compilar para iniciar o processo de compilação.
 
 ![Lição 1 Chapter5 etapa 3](images/Lesson1Chapter5Step3.JPG)
 
-4. Crie e dê um nome para uma nova pasta para o seu aplicativo. Na imagem abaixo, uma pasta com o nome "Aplicativo" foi criada para armazenar o aplicativo. Clique em "Selecionar Pasta" para começar a compilar na pasta recém-criada. Após a compilação, você pode fechar a janela "Configurações de Compilação" no Unity. 
+6. Crie e dê um nome para uma nova pasta para o seu aplicativo. Na imagem abaixo, uma pasta com o nome "Aplicativo" foi criada para armazenar o aplicativo. Clique em "Selecionar Pasta" para começar a compilar na pasta recém-criada. Após a compilação, você pode fechar a janela "Configurações de Compilação" no Unity. 
 
 ![Lição 1 Chapter5 etapa 4](images/Lesson1Chapter5Step4.JPG)
 
 > OBSERVAÇÃO: se a compilação falhar, tente compilar novamente ou reiniciar o Unity e compilar novamente. Se você vir um erro, como "Erro: CS0246 = O nome do tipo ou do namespace ‘XX’ não pôde ser encontrado (não pode ser encontrado (está faltando uma diretiva using ou uma referência de assembly?) ", talvez precise instalar o [SDK do Windows 10 (10.0.18362.0)](<https://developer.microsoft.com/en-us/windows/downloads/windows-10-sdk>).
 
-5. Depois que a compilação for concluída, abra a pasta recém-criada que contém os arquivos do novo aplicativo. Clique duas vezes no arquivo de solução ". sln" para abrir o arquivo de solução no Visual Studio.
+7. Depois que a compilação for concluída, abra a pasta recém-criada que contém os arquivos do novo aplicativo. Clique duas vezes no arquivo de solução ". sln" para abrir o arquivo de solução no Visual Studio.
 
 > Observação: certifique-se de abrir a pasta recém-criada (ou seja, "Aplicativo", se estiver seguindo as convenções de nomenclatura das etapas anteriores), pois haverá um arquivo .sln com nome semelhante fora dessa pasta que não deve ser confundido com o arquivo .sln dentro da pasta de compilação. 
 
@@ -152,15 +153,14 @@ Este tutorial cria um aplicativo de realidade misturada que explora o uso do SDK
 
 > Observação: se o Visual Studio solicitar a instalação de novos componentes, reserve um momento para garantir que todos os componentes necessários sejam instalados conforme especificado na [página "Instalar as ferramentas"](install-the-tools.md).
 
-6. Conecte o HoloLens 2 ao computador usando o cabo USB. Embora essas instruções pressuponham que você esteja implantando um teste com um dispositivo HoloLens 2, também é possível optar por implantar o [emulador do HoloLens 2](using-the-hololens-emulator.md) ou criar um [pacote do aplicativo para sideload](<https://docs.microsoft.com/en-us/windows/uwp/packaging/packaging-uwp-apps>).
+8. Conecte o HoloLens 2 ao computador usando o cabo USB. Embora essas instruções pressuponham que você esteja implantando um teste com um dispositivo HoloLens 2, também é possível optar por implantar o [emulador do HoloLens 2](using-the-hololens-emulator.md) ou criar um [pacote do aplicativo para sideload](<https://docs.microsoft.com/en-us/windows/uwp/packaging/packaging-uwp-apps>).
+9. Antes de compilar para seu dispositivo, verifique se ele está no Modo de Desenvolvedor. Se for a primeira vez que você implanta o HoloLens 2, o Visual Studio pode solicitar o emparelhamento do seu HoloLens 2 com um pin. Siga [estas instruções](https://docs.microsoft.com/en-us/windows/mixed-reality/using-visual-studio) se você precisar ativar o modo de desenvolvedor ou emparelhar com o Visual Studio.
 
-7. Antes de compilar para seu dispositivo, verifique se ele está no Modo de Desenvolvedor. Se for a primeira vez que você implanta o HoloLens 2, o Visual Studio pode solicitar o emparelhamento do seu HoloLens 2 com um pin. Siga [estas instruções](https://docs.microsoft.com/en-us/windows/mixed-reality/using-visual-studio) se você precisar ativar o modo de desenvolvedor ou emparelhar com o Visual Studio.
-
-8. Configure o Visual Studio para compilar seu HoloLens 2, selecionando a configuração "Versão" e a arquitetura "ARM".
+10. Configure o Visual Studio para compilar seu HoloLens 2, selecionando a configuração "Versão" e a arquitetura "ARM".
 
 ![Lição 1 Chapter5 Step8](images/Lesson1Chapter5Step8.JPG)
 
-9. A etapa final é compilar para seu dispositivo, selecionando Depurar > Iniciar sem Depuração. Selecionar "Iniciar sem Depuração" fará com que o aplicativo inicie imediatamente em seu dispositivo após uma compilação bem-sucedida, mas sem exibir informações de Depuração no Visual Studio. Isso também significa que você pode desconectar o cabo USB enquanto o aplicativo estiver em execução no HoloLens 2 sem interromper o aplicativo. Você também pode selecionar Compilação > Implantar Solução para implantar seu dispositivo sem iniciar o aplicativo automaticamente.
+11. A etapa final é compilar para seu dispositivo, selecionando Depurar > Iniciar sem Depuração. Selecionar "Iniciar sem Depuração" fará com que o aplicativo inicie imediatamente em seu dispositivo após uma compilação bem-sucedida, mas sem exibir informações de Depuração no Visual Studio. Isso também significa que você pode desconectar o cabo USB enquanto o aplicativo estiver em execução no HoloLens 2 sem interromper o aplicativo. Você também pode selecionar Compilação > Implantar Solução para implantar seu dispositivo sem iniciar o aplicativo automaticamente.
 
 ![Lição 1 Chapter5 Step9](images/Lesson1Chapter5Step9.JPG)
 

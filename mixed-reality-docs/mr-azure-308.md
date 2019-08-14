@@ -728,7 +728,7 @@ Para importar o SDK para seu próprio projeto, certifique-se de ter baixado o [ 
 
 1.  Adicione o **. unitypackage** ao Unity usando a opção de menu **pacote \> personalizado do pacote de \> importação de ativos** .
 
-2.  Na caixa **Importar pacote de Unity** que é exibida, você pode selecionar tudo em * **plugin* \> * armazenamento * * *.  Desmarque todas as outras opções, pois elas não são necessárias para este curso.
+2.  Na caixa **Importar pacote de Unity** que é exibida, você pode selecionar tudo em **plugin**\> **armazenamento**.  Desmarque todas as outras opções, pois elas não são necessárias para este curso.
 
     ![importar para pacote](images/AzureLabs-Lab8-61.png)
 
