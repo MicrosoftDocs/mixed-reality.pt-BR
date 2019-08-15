@@ -3,15 +3,15 @@ title: Arquivo de emulador do HoloLens
 description: Lista de compilações liberadas do emulador Microsoft HoloLens.
 author: pbarnettms
 ms.author: pbarnett
-ms.date: 4/25/2019
+ms.date: 8/14/2019
 ms.topic: article
 keywords: HoloLens, emulador, compilações, versões
-ms.openlocfilehash: b209e444c223c3183d2680976f68c33a3b6ed79b
-ms.sourcegitcommit: 06ac2200d10b50fb5bcc413ce2a839e0ab6d6ed1
+ms.openlocfilehash: 548e8fb72af137e53c10c4507c56f29c8bd6a4ca
+ms.sourcegitcommit: 06c27acdac24c845952f9c1d3611770756f25820
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67694428"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69030153"
 ---
 O emulador do HoloLens (1º gen) e o do HoloLens 2 compilam a instalação lado a lado. Geralmente, é recomendável usar a compilação mais recente disponível, mas pode haver casos em que você deseja ou precisa testar um aplicativo em um emulador antigo. Esta página inclui links para versões lançadas.
 
@@ -21,7 +21,8 @@ O emulador do HoloLens (1º gen) e o do HoloLens 2 compilam a instalação lado 
 
 |  Build |  Data de lançamento |  Observações | 
 |----------|----------|----------|
-|  [10.0.18362.1021 de Build do emulador do HoloLens 2](https://go.microsoft.com/fwlink/?linkid=2098508) | 8 de julho de 2019 | Compilação mais recente do HoloLens 2.  Aborda um problema de assinatura com DiskStream. dll |
+|  [10.0.18362.1028 de Build do emulador do HoloLens 2](https://go.microsoft.com/fwlink/?linkid=2101019) | 14 de agosto de 2019 | Compilação 2 de agosto de 2019 do HoloLens.  Os modelos de aplicativo Holographic não são mais incluídos, mas estão disponíveis no Visual Studio Marketplace a partir de setembro de 2019.  Agora, o emulador funcionará quando os SDKs forem instalados em um local personalizado. |
+|  [10.0.18362.1021 de Build do emulador do HoloLens 2](https://go.microsoft.com/fwlink/?linkid=2098508) | 8 de julho de 2019 | Aborda um problema de assinatura com DiskStream. dll |
 |  [10.0.18362.1019 de Build do emulador do HoloLens 2](https://go.microsoft.com/fwlink/?linkid=2095316) | 11 de junho de 2019 | Não precisa mais ser executado como administrador.  Atalho do menu iniciar adicionado. |
 |  [10.0.18362.1005 de Build do emulador do HoloLens 2](https://go.microsoft.com/fwlink/?linkid=2087187) | 16 de abril de 2019 |  |
 

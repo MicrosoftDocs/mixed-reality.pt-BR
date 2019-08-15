@@ -6,12 +6,12 @@ ms.author: jlyons
 ms.date: 02/24/2019
 ms.topic: article
 keywords: Portal de dispositivos Windows, HoloLens
-ms.openlocfilehash: 79a4a1f99125028fcaf71e185eb00093aa8c742f
-ms.sourcegitcommit: 06ac2200d10b50fb5bcc413ce2a839e0ab6d6ed1
+ms.openlocfilehash: 5a2440c07ade1a9c41f3c28c332748e0c97cd3ed
+ms.sourcegitcommit: e5b677f92ac4b1dff9aad6c329345a5aca4fcef5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67694590"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69020226"
 ---
 # <a name="using-the-windows-device-portal"></a>Usando o portal do dispositivo Windows
 
@@ -36,7 +36,7 @@ Esta documentação é especificamente sobre o portal de dispositivos do Windows
 5. Selecione o item de menu **Para desenvolvedores**.
 6. Habilite o **Modo de Desenvolvedor**.
 7. [Role para baixo](gestures.md#composite-gestures) e habilite o **portal do dispositivo**.
-8. Se você estiver configurando o portal de dispositivos do Windows para que possa implantar aplicativos nesse HoloLens em USB ou Wi-  Fi, clique em emparelhar para [gerar um PIN de emparelhamento](using-visual-studio.md). Deixe o aplicativo configurações no pop-up de PIN até inserir o PIN no Visual Studio durante a primeira implantação.
+8. Se você estiver configurando o portal de dispositivos do Windows para que possa implantar aplicativos nesse HoloLens em USB ou Wi- Fi, clique em emparelhar para [gerar um PIN de emparelhamento](using-visual-studio.md). Deixe o aplicativo configurações no pop-up de PIN até inserir o PIN no Visual Studio durante a primeira implantação.
 
    ![Habilitando o modo de desenvolvedor no aplicativo de configurações para Windows Holographic](images/deviceportalsettings.png)
 
@@ -52,7 +52,7 @@ Esta documentação é especificamente sobre o portal de dispositivos do Windows
 
 1. [Instale as ferramentas](install-the-tools.md) para verificar se você tem o Visual Studio Update 1 com as ferramentas de desenvolvedor do Windows 10 instaladas em seu computador. Isso permite a conectividade por USB.
 2. Conecte seu HoloLens ao computador com um cabo Micro USB.
-3. Usando um navegador da Web em seu computador, acesse http://127.0.0.1:10080.
+3. Em um navegador da Web em seu computador, vá [http://127.0.0.1:10080](http://127.0.0.1:10080)para.
 
 ## <a name="connecting-to-an-emulator"></a>Conectando a um emulador
 
@@ -69,7 +69,7 @@ Na primeira vez que se conectar ao Device Portal em seu HoloLens, você precisar
 3. Insira o PIN na caixa de texto do **PIN exibido em seu dispositivo** .
 4. Insira o nome de usuário que você usará para se conectar ao Device Portal. Não é necessário ser um nome de MSA (conta da Microsoft) ou um nome de domínio.
 5. Insira uma senha e confirme-a. A senha deve ter pelo menos sete caracteres de comprimento. Não é necessário ser uma senha de MSA ou de domínio.
-6. Clique  em emparelhar para se conectar ao portal de dispositivo do Windows no HoloLens.
+6. Clique em emparelhar para se conectar ao portal de dispositivo do Windows no HoloLens.
 
 Se você quiser alterar esse nome de usuário ou senha a qualquer momento, poderá repetir esse processo visitando a página de segurança do dispositivo navegando até: https://< YOUR_HOLOLENS_IP_ADDRESS >/devicepair.htm.
 
@@ -222,7 +222,7 @@ Gerencia os aplicativos que estão instalados no HoloLens.
 ![Página despejos de memória do aplicativo no portal do dispositivo Windows no Microsoft HoloLens](images/windows-device-portal-dev-apps-crash-dumps-page-1000px.png)<br>
 *Página despejos de memória do aplicativo no portal do dispositivo Windows no Microsoft HoloLens*
 
-Essa página permite que você colete despejos de memória para seus aplicativos de sideload. Marque a  caixa de seleção de despejos de memória habilitados para cada aplicativo para o qual você deseja coletar despejos de memória. Retorne a essa página para coletar despejos de memória. Os arquivos de despejo podem ser [abertos no Visual Studio para depuração](https://msdn.microsoft.com/library/d5zhxt22.aspx).
+Essa página permite que você colete despejos de memória para seus aplicativos de sideload. Marque a caixa de seleção de despejos de memória habilitados para cada aplicativo para o qual você deseja coletar despejos de memória. Retorne a essa página para coletar despejos de memória. Os arquivos de despejo podem ser [abertos no Visual Studio para depuração](https://msdn.microsoft.com/library/d5zhxt22.aspx).
 
 ### <a name="file-explorer"></a>Explorador de Arquivos
 
