@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realidade misturada, unity, tutorial, hololens
-ms.openlocfilehash: 97dd8fce1ebe53efc37cb48cde7dc9e207be9a42
-ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
+ms.openlocfilehash: f45aa7e2f07a8a67cd56f0aae140de3a68afc918
+ms.sourcegitcommit: e9a55528965048ce34f8247ef6e544f9f432ee37
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68701988"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69559892"
 ---
 # <a name="7-creating-a-lunar-module-sample-application"></a>7. Criando um aplicativo de exemplo de módulo lunar
 
@@ -51,7 +51,7 @@ Se você expandir o objeto de jogo Rocket Launcher_Tutorial em sua hierarquia e 
 
 > Observação: Os nomes de objetos de jogos que você vê em sua hierarquia de cena base não correspondem aos nomes dos objetos na cena.
 
-Etapa 2: Adicione uma fonte de áudio ao módulo lunar. Verifique se o módulo lunar está selecionado na sua hierarquia de cena base e clique em Adicionar componente. Pesquise fonte de áudio e adicione-a ao objeto. Deixe em branco por enquanto. Usaremos isso para reproduzir o som de lançamento mais tarde.
+Etapa 2: Adicione uma fonte de áudio ao módulo lunar. Verifique se o módulo lunar está selecionado na sua hierarquia de cena base e clique em Adicionar componente. Pesquise fonte de áudio e adicione-a ao objeto. Deixe em branco por enquanto, mas certifique-se de clicar na caixa de seleção "Espacialize" para habilitar o áudio espacial. Usaremos isso para reproduzir o som de lançamento mais tarde.
 
  ![Lesson6 Chapter1 Step2im](images/Lesson6_Chapter1_step2im.PNG)  
 Etapa 3: Adicione o script, alterne as dicas de posicionamento. Clique em Adicionar componente e procure alternar dicas de posicionamento. Esse é um script personalizado que permite ativar e desativar as dicas translúcidas (objetos com o material x-ray) mencionado anteriormente.  

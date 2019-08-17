@@ -6,12 +6,12 @@ ms.author: dongpark
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Realidade mista do Windows, design, mapeamento espacial, HoloLens, reconstrução da superfície, malha
-ms.openlocfilehash: 451213a79e1d482d64725ce750065611830beec3
-ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
+ms.openlocfilehash: 02e64727f9a23bea28e018d7c4e5a8b89c152447
+ms.sourcegitcommit: 60f73ca23023c17c1da833c83d2a02f4dcc4d17b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66829966"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69566013"
 ---
 # <a name="spatial-mapping-design"></a>Design de mapeamento espacial
 
@@ -45,49 +45,9 @@ Visualize superfícies ao colocar ou mover hologramas (use uma grade projetada s
 
 ## <a name="what-influences-spatial-mapping-quality"></a>O que influencia a qualidade do mapeamento espacial?
 
-Para fornecer a melhor experiência do usuário, é importante entender os fatores que afetam a qualidade dos dados de mapeamento espacial coletados pelo HoloLens.
-
-Os erros nos dados de mapeamento espacial se enquadram em uma das três categorias:
-* **Buracos**: As superfícies do mundo real estão ausentes dos dados de mapeamento espacial.
-* **Hallucinations**: Existem superfícies nos dados de mapeamento espacial que não existem no mundo real.
-* **Tendência**: As superfícies nos dados de mapeamento espacial são alinhadas de forma inperfeita com as superfícies do mundo real, enviadas ou retiradas.
-
-Vários fatores podem afetar a frequência e a severidade desses erros:
-
-* **Movimento do usuário**
-   * A forma como o usuário percorre seu ambiente determina o quão bem o ambiente será verificado, para que o usuário possa exigir diretrizes para obter uma boa verificação.
-   * A câmera usada para verificação fornece dados dentro de um cone de 70 graus, de um mínimo de 0,8 metros para um máximo de 3,1 metros de distância da câmera. As superfícies do mundo real só serão verificadas nesse campo de exibição. Observe que esses valores estão sujeitos a alterações em versões futuras.
-   * Se o usuário nunca ficar dentro de 3,1 metros de um objeto, ele não será verificado.
-   * Se o usuário exibir apenas um objeto de uma distância de menos de 0,8 metros, ele não será verificado (isso evita a verificação das mãos do usuário).
-   * Se o usuário nunca ficar mais em funcionamento (o que é bastante normal), o teto provavelmente não será verificado.
-   * Se um usuário nunca ficar atrás de mobília ou de uma parede, os objetos obstruído por eles não serão verificados.
-   * As superfícies tendem a ser verificadas com uma qualidade mais alta quando são exibidas de cabeça em vez de em um ângulo superficial.
-   * Se o sistema de acompanhamento de cabeçalho do HoloLens falhar momentaneamente (o que pode ocorrer devido ao rápido movimento do usuário, à iluminação ruim, às paredes informativas ou às câmeras cobertas), isso poderá introduzir erros nos dados de mapeamento espacial. Esses erros serão corrigidos ao longo do tempo enquanto o usuário continua a se movimentar e verificar seu ambiente.
-
-* **Materiais de superfície**
-   * Os materiais encontrados em superfícies do mundo real variam muito. Isso afeta a qualidade dos dados de mapeamento espacial porque eles afetam a forma como a luz infravermelha é refletida.
-   * As superfícies escuras podem não ser verificadas até que fiquem mais próximas da câmera, pois refletem menos luz.
-   * Algumas superfícies podem ser tão escuras que refletem uma pequena luz para serem verificadas de qualquer distância, portanto, elas apresentarão erros de orifício no local da superfície e, às vezes, também por trás da superfície.
-   * As superfícies especialmente brilhantes só podem ser verificadas quando visualizadas, e não quando exibidas a partir de um ângulo superficial.
-   * Os espelhos, pois criam reflexos illusorys de espaços reais e superfícies, podem causar erros de orifício e erros de hallucination.
-
-* **Movimento de cena**
-   * O mapeamento espacial se adapta rapidamente às alterações no ambiente, como mover pessoas ou abrir e fechar portas.
-   * No entanto, o mapeamento espacial só pode se adaptar a alterações em uma área quando essa área está claramente visível para a câmera usada para verificação.
-   * Por isso, é possível que essa adaptação seja retardada por trás da realidade, o que pode causar erros de buraco ou hallucination.
-   * Por exemplo, um usuário examina um amigo e, em seguida, gira enquanto o amigo sai da sala. Uma representação ' fantasma ' do Friend (um erro hallucination) persistirá nos dados de mapeamento espacial, até que o usuário volte e examine novamente o espaço em que o amigo estava em pé.
-
-* **Interferência de iluminação**
-   * A luz de infravermelho de ambiente na cena pode interferir na verificação, por exemplo, uma luz de sol forte chegando por uma janela.
-   * As superfícies particularmente brilhantes podem interferir na verificação de superfícies vizinhas, a luz saltando-as causando erros de tendência.
-   * As superfícies brilhantes que refletem a luz diretamente na câmera podem interferir no espaço próximo, causando hallucinations flutuantes de ar médio ou atrasando a adaptação ao movimento de cena.
-   * Dois dispositivos HoloLens na mesma sala não devem interferir uns com os outros, mas a presença de mais de cinco dispositivos HoloLens pode causar interferências.
-
-Pode ser possível evitar ou corrigir alguns desses erros. No entanto, você deve projetar seu aplicativo para que o usuário possa atingir suas metas mesmo na presença de erros nos dados de mapeamento espacial.
+Vários fatores, detalhados [aqui](environment-considerations-for-hololens.md), podem afetar a frequência e a severidade desses erros.  No entanto, você deve projetar seu aplicativo para que o usuário possa atingir suas metas mesmo na presença de erros nos dados de mapeamento espacial.
 
 ## <a name="the-environment-scanning-experience"></a>A experiência de verificação do ambiente
-
-O HoloLens aprende sobre as superfícies em seu ambiente à medida que o usuário as examina. Ao longo do tempo, o HoloLens cria uma verificação de todas as partes do ambiente que foram observadas. Ele também atualiza a verificação conforme as alterações no ambiente são observadas. Essa verificação persistirá automaticamente entre as inicializações do aplicativo.
 
 Cada aplicativo que usa o mapeamento espacial deve considerar a possibilidade de fornecer uma "experiência de verificação"; o processo pelo qual o aplicativo orienta o usuário a verificar as superfícies necessárias para que o aplicativo funcione corretamente.
 
@@ -104,7 +64,7 @@ Para ajudar a criar a experiência de verificação correta, considere quais das
 
 * **Nenhuma experiência de verificação**
    * Um aplicativo pode funcionar perfeitamente sem nenhuma experiência de verificação guiada; Ele aprenderá sobre as superfícies observadas no decorrer do movimento de usuário natural.
-   * Por exemplo, um aplicativo que permite que o usuário desenhe superfícies com Holographic spraypaint exige conhecimento apenas das superfícies visíveis no momento para o usuário.
+   * Por exemplo, um aplicativo que permite que o usuário desenhe superfícies com tinta de irrigação Holographic requer conhecimento apenas das superfícies visíveis no momento para o usuário.
    * O ambiente pode ser completamente verificado, já que é aquele em que o usuário já gastou muito tempo usando o HoloLens.
    * No entanto, lembre-se de que a câmera usada pelo mapeamento espacial só pode ver 3,1 m na frente do usuário, portanto, o mapeamento espacial não saberá sobre nenhuma superfície mais distante, a menos que o usuário as tenha observado de uma distância mais próxima no passado.
    * Portanto, o usuário entende quais superfícies foram verificadas, o aplicativo deve fornecer comentários visuais para esse efeito, por exemplo, converter sombras virtuais em superfícies digitalizadas pode ajudar o usuário a posicionar os hologramas nessas superfícies.
