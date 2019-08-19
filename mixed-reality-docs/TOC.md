@@ -22,6 +22,7 @@
 #### [Como salvar e localizar seus arquivos](saving-and-finding-your-files.md)
 #### [Ver suas fotos](see-your-photos.md)
 #### [Como atualizar o HoloLens](updating-hololens.md)
+#### [Usar o HoloLens em novos espaços](use-hololens-in-new-spaces.md)
 #### [Compartilhamento de dispositivos](device-sharing.md)
 #### [Guia de limpeza e ajuste de demonstração do HoloLens](hololens-demo-guide.md)
 ### Headsets imersivos
