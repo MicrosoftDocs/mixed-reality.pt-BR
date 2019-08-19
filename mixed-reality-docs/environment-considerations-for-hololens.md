@@ -6,12 +6,12 @@ ms.author: dobrown
 ms.date: 04/22/2019
 ms.topic: article
 keywords: quadro Holographic, campo de exibição, FOV, calibração, espaços, ambiente, instruções
-ms.openlocfilehash: 0070455792e09cd59741362b201ca6b7b9af0aec
-ms.sourcegitcommit: f5c1dedb3b9e29f27f627025b9e7613931a7ce18
-ms.translationtype: HT
+ms.openlocfilehash: fd5c5020916b3fde6f91663135c3bc2b6c334b44
+ms.sourcegitcommit: 60f73ca23023c17c1da833c83d2a02f4dcc4d17b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64670178"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69565992"
 ---
 # <a name="environment-considerations-for-hololens"></a>Considerações de ambiente para o HoloLens
 
@@ -21,7 +21,7 @@ Os hologramas que você colocar permanecerão onde você os colocou, mesmo se vo
 
 ## <a name="setting-up-an-environment"></a>Configurando um ambiente
 
-Os dispositivos do HoloLens sabem como posicionar hologramas estáveis e precisos acompanhando os usuários em um espaço. Sem o acompanhamento adequado, o dispositivo não entende o ambiente ou o usuário dentro dele; portanto, os hologramas podem aparecer nos locais errados, não aparecem no mesmo ponto a cada vez ou não aparecem.
+Os dispositivos do HoloLens sabem como posicionar hologramas estáveis e precisos acompanhando os usuários em um espaço. Sem o acompanhamento adequado, o dispositivo não entende o ambiente ou o usuário dentro dele; portanto, os hologramas podem aparecer nos locais errados, não aparecem no mesmo ponto a cada vez ou não aparecem. Os dados usados para rastrear os usuários são representados no *mapa espacial*. 
 
 O controle do desempenho é bastante influenciado pelo ambiente no qual o usuário está e o ajuste de um ambiente para induzir o acompanhamento estável e consistente é uma arte em vez de uma ciência. Muitos fatores ambientais diferentes são misturados para permitir o acompanhamento, mas como um desenvolvedor de realidade misturada, há vários fatores que você pode ter em mente para ajustar um espaço para um melhor acompanhamento.
  
@@ -55,10 +55,12 @@ Se você tiver duas áreas ou regiões que parecem iguais, o rastreador poderá 
 
 Para evitar fendas espaciais, tente evitar áreas idênticas no mesmo espaço. As áreas idênticas às vezes podem incluir estações de fábrica, janelas em um prédio, racks de servidor ou estações de trabalho. As áreas de rotulagem ou a adição de recursos exclusivos a cada área de aparência semelhante podem ajudar a reduzir as fendas espaciais.
  
-### <a name="temporal-stability-of-a-space"></a>Estabilidade temporal de um espaço
+### <a name="movement-in-a-space"></a>Movimento em um espaço
 Se o seu ambiente estiver constantemente mudando e mudando, o dispositivo não terá recursos estáveis para localização. 
 
 Quanto mais objetos em movimento estiverem em um espaço, incluindo as pessoas, mais fácil será perder o controle. Mover as esteiras da transmissão, os itens em diferentes Estados de construção e muitas pessoas em um espaço têm sido conhecidos por causar problemas de controle.
+
+O HoloLens pode se adaptar rapidamente a essas alterações, mas somente quando essa área estiver claramente visível para o dispositivo. As áreas que não são vistas com frequência podem atrasar por trás da realidade, o que pode causar erros no mapa espacial. Por exemplo, um usuário examina um amigo e, em seguida, gira enquanto o amigo sai da sala. Uma representação ' fantasma ' do Friend será mantida nos dados de mapeamento espacial até que o usuário Examine novamente o espaço vazio.
  
 ### <a name="proximity-of-the-user-to-items-in-the-space"></a>Proximidade do usuário a itens no espaço
 Da mesma forma como os seres humanos não podem se concentrar bem em objetos próximos aos olhos, o HoloLens luta quando os objetos estão próximos de câmeras. Se um objeto estiver muito próximo de ser visto com ambas as câmeras ou se um objeto estiver bloqueando uma câmera, o dispositivo terá muito mais problemas com o acompanhamento do objeto. 
@@ -76,11 +78,7 @@ Desde que o WiFi esteja habilitado, os dados do mapa serão correlacionados com 
 A identificação de rede (ou seja, SSID, endereço MAC) não é enviada à Microsoft e todas as referências de WiFi são mantidas localmente no HoloLens.
 
 ## <a name="mapping-new-spaces"></a>Mapeando novos espaços
-Quando você inserir um novo espaço (ou carregar um existente), verá um gráfico de malha espalhando o espaço. Isso significa que seu dispositivo está [Mapeando seus arredores](spatial-mapping-design.md). 
-
-Se você estiver tendo problemas para colocar os hologramas, tente percorrer o espaço para que o HoloLens possa mapeá-lo mais completamente. 
-
-Se o seu HoloLens não puder mapear seu espaço ou estiver sem calibragem, você poderá entrar no modo limitado. No modo limitado, você não poderá posicionar os hologramas no ambiente.
+Quando você inserir um novo espaço (ou carregar um existente), verá um gráfico de malha espalhando o espaço. Isso significa que seu dispositivo está mapeando seus arredores. Embora um HoloLens Aprenda um espaço ao longo do tempo, há [dicas e truques para mapear espaços](use-hololens-in-new-spaces.md). 
 
 ## <a name="environment-management"></a>Gerenciamento de ambiente
 Há duas configurações que permitem aos usuários "limpar" os hologramas e fazer com que o HoloLens "Esqueça" um espaço.  Eles existem em "hologramas e ambientes" no aplicativo de configurações, com a segunda configuração também exibida em "privacidade" no aplicativo de configurações.
@@ -89,20 +87,14 @@ Há duas configurações que permitem aos usuários "limpar" os hologramas e faz
 
 2.  Excluir todos os hologramas – ao selecionar essa configuração, o HoloLens apagará todos os dados do mapa e os hologramas ancorados em todos os bancos de dado de espaços.  Nenhum holograma será redescoberto e quaisquer hologramas precisarão ser colocados recentemente para armazenar novamente as seções do mapa no banco de dados.
 
-### <a name="managing-your-spaces"></a>Gerenciando seus espaços
-
-As seções de mapa e espaços diferentes foram recolhidas em um único banco de dados, armazenadas localmente no dispositivo do HoloLens. O banco de dados de mapa é armazenado com segurança, com acesso disponível apenas para o sistema interno e nunca para um usuário do dispositivo, mesmo quando conectado a um computador e/ou usando o aplicativo explorador de arquivos. Quando o BitLocker é habilitado, os dados do mapa armazenado também são criptografados.
-
-Existem vários componentes de mapa quando os hologramas são colocados em locais diferentes sem um caminho de conexão entre os locais/hologramas.  Os hologramas ancorados na mesma seção de mapa são considerados "próximos" no espaço atual.
-
-Há uma API de desenvolvedor para exportar um pequeno subconjunto do "espaço atual" (uma parte do componente de mapa que é reconhecido atualmente) para habilitar cenários de holograma compartilhado.  Atualmente, não há um mecanismo para baixar todo o banco de dados de todos os espaços que foram mapeados.
-
 
 ## <a name="hologram-quality"></a>Qualidade do holograma
 
 Os hologramas podem ser colocados em todo o ambiente – alta, baixa e tudo em seu lugar — mas você os verá por meio de um [quadro Holographic](holographic-frame.md) que fica na frente dos seus olhos. Para obter a melhor exibição, certifique-se de ajustar seu dispositivo para que você possa ver o quadro inteiro. E não hesite em abordar seu ambiente e explorar!
 
 Para que seus [hologramas](hologram.md) pareçam nítidos, claros e estáveis, seu HoloLens precisa ser calibrado apenas para você. Ao configurar o HoloLens pela primeira vez, você será orientado por esse processo. Posteriormente, se os hologramas não parecerem corretos ou se você estiver vendo muitos erros, poderá fazer ajustes.
+
+Se você estiver tendo problemas para mapear espaços, tente excluir os hologramas próximos e remapear o espaço.
 
 ### <a name="calibration"></a>Calibragem
 
@@ -118,3 +110,4 @@ Se outra pessoa estiver usando seu HoloLens, ele deverá executar o aplicativo d
 * [Projeto de mapeamento espacial](spatial-mapping-design.md)
 * [Hologramas](hologram.md)
 * [Calibragem](calibration.md)
+* [Usar o Hololens em novos espaços](use-hololens-in-new-spaces.md)

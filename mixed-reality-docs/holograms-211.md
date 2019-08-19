@@ -6,12 +6,12 @@ ms.author: kurtie
 ms.date: 03/21/2018
 ms.topic: article
 keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit-Unity, Academia, tutorial, gesto
-ms.openlocfilehash: 76d2b4c0ac3d0a3783b091f7dc8c39548a18b548
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
-ms.translationtype: HT
+ms.openlocfilehash: 694f51f1b56588e100d6d2676a8194d7e9936133
+ms.sourcegitcommit: e9a55528965048ce34f8247ef6e544f9f432ee37
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63522461"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69559880"
 ---
 >[!NOTE]
 >Os tutoriais misturados do Academia de realidade foram projetados com o HoloLens (1º gen) e com o fone de cabeça de imersão de realidade misturada.  Como tal, achamos que é importante deixar esses tutoriais em vigor para os desenvolvedores que ainda estão procurando orientação no desenvolvimento para esses dispositivos.  Esses tutoriais **_não_** serão atualizados com os conjuntos de ferramentas e as interações mais recentes usados para o HoloLens 2.  Eles serão mantidos para continuar a trabalhar nos dispositivos com suporte. Haverá uma nova série de tutoriais que serão publicados no futuro, que demonstrarão como desenvolver para o HoloLens 2.  Esse aviso será atualizado com um link para esses tutoriais quando eles forem postados.
@@ -121,6 +121,9 @@ Se estiver implantando em um headset de imersão:
 * Assine os eventos de acompanhamento do Hand.
 * Use comentários do cursor para mostrar os usuários quando uma mão estiver sendo controlada.
 
+>[!NOTE]
+>No HoloLens 2, as mãos detectadas são acionadas sempre que as mãos ficam visíveis (não apenas quando um dedo está apontando para cima).
+
 ### <a name="instructions"></a>Instruções
 
 * No painel **hierarquia** , expanda o objeto **InputManager** .
@@ -142,7 +145,7 @@ Em seguida, atualizaremos nosso cursor da [entrada do sr 210](holograms-210.md) 
 
 Os **dados de estado do cursor** funcionam da seguinte maneira:
 
-* Qualquer **estado** de observação significa que nenhuma mão é detectada e o usuário está simplesmente olhando.
+* Qualquer estado de observação significa que nenhuma mão é detectada e o usuário está simplesmente olhando.
 * Qualquer estado de **interação** significa que uma mão ou um controlador é detectado.
 * Qualquer estado de **foco** significa que o usuário está observando um holograma.
 
