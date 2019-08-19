@@ -1,11 +1,11 @@
 ---
 title: Sistemas de coordenadas
-description: Os sistemas de coordenadas espaciais usados para construir sentado, permanente, sala de escala e dimensionamento do mundo misto experiências realidade.
+description: Os sistemas de coordenadas espaciais usados para criar experiências de realidade misturada, em pé, em escala de sala e em escala mundial.
 author: thetuvix
 ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
-keywords: sistema de coordenadas, sistema de coordenadas espacial, somente orientação, encaixado em escala, escala de pé, sala de escala, escala mundial, 360 graus, encaixado, permanente, sala, mundo, escala, posição, orientação, parado, anexado, estágio, âncora, âncora espacial, bloqueado pelo mundo, bloqueando o mundo, bloqueado de corpo, bloqueio de corpo, limites, persistência, compartilhamento, controlando a perda, espacial âncora de nuvem
+keywords: sistema de coordenadas, sistema de coordenadas espaciais, somente orientação, escala em posição, escala de posto, escala de sala, escala mundial, 360 graus, encaixado, posicionado, sala, mundo, escala, posição, orientação, fixo, anexado, estágio, âncora, âncora espacial, World-Locked, bloqueio mundial, corpo-bloqueado, bloqueio de corpo, limites, persistência, compartilhamento, perda de rastreamento, âncora espacial da nuvem
 ms.openlocfilehash: f4b945a3ffb83b9ac0a94e0d793a19939aece3bb
 ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
 ms.translationtype: MT
@@ -15,7 +15,7 @@ ms.locfileid: "66829865"
 ---
 # <a name="coordinate-systems"></a>Sistemas de coordenadas
 
-Em sua essência, misto local de aplicativos de realidade [hologramas](hologram.md) no seu mundo que pareçam e parecer objetos reais. Isso envolve precisamente posicionamento e a orientação desses hologramas em locais no mundo que são significativas para o usuário, se o mundo é seu espaço físico ou um território virtual que você criou. Ao raciocinar sobre a posição e orientação de seu hologramas ou qualquer outro tipo de geometria, como o [olhares](gaze.md) ray ou [entregar posições](gestures.md), Windows fornece diversos sistemas de coordenadas do mundo real na qual geometria pode ser expressos, conhecido como **sistemas de coordenadas espaciais**.
+Em seu núcleo, os aplicativos de realidade misturada colocam os [hologramas](hologram.md) em seu mundo que parecem e são semelhantes a objetos reais. Isso envolve o posicionamento preciso e a orientação desses hologramas em lugares do mundo que são significativos para o usuário, seja o mundo de sua sala física ou um realm que você criou. Ao se deparar com a posição e a orientação de seus hologramas, ou qualquer outra geometria como as posições [olhar](gaze.md) Ray ou [Hand](gestures.md), o Windows fornece vários sistemas de coordenadas do mundo real em que a geometria pode ser expressa, conhecida como  **sistemas de coordenadas espaciais**.
 
 <br>
 
@@ -34,7 +34,7 @@ Em sua essência, misto local de aplicativos de realidade [hologramas](hologram.
         <td><strong>Recurso</strong></td>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens (1ª geração)</strong></a></td>
         <td><strong>HoloLens 2</strong></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>Fones imersivos em exposição</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Headsets imersivos</strong></a></td>
     </tr>
      <tr>
         <td><a href="coordinate-systems.md#stationary-frame-of-reference">Quadro estacionário de referência</a></td>
@@ -49,9 +49,9 @@ Em sua essência, misto local de aplicativos de realidade [hologramas](hologram.
         <td>✔️</td>
     </tr>
     <tr>
-        <td><a href="coordinate-systems.md#stage-frame-of-reference">Estágio de quadro de referência</a></td>
-        <td>Ainda não tem suporte</td>
-        <td>Ainda não tem suporte</td>
+        <td><a href="coordinate-systems.md#stage-frame-of-reference">Quadro de referência de estágio</a></td>
+        <td>Ainda sem suporte</td>
+        <td>Ainda sem suporte</td>
         <td>✔️</td>
     </tr>
     <tr>
@@ -70,162 +70,162 @@ Em sua essência, misto local de aplicativos de realidade [hologramas](hologram.
 
 ## <a name="mixed-reality-experience-scales"></a>Escalas de experiência de realidade misturada
 
-Aplicativos de realidade misturada podem projetar uma ampla variedade de experiências do usuário, dos visualizadores de vídeos de 360 graus que precisam apenas de orientação do fone de ouvido, para aplicativos de escala mundial completo e jogos, que precisam de mapeamento espacial e âncoras espaciais:
+Os aplicativos de realidade misturada podem projetar para uma ampla gama de experiências de usuário, desde visualizadores de vídeo de 360 graus que precisam apenas da orientação do headset, até aplicativos e jogos completos de escala mundial, que precisam de mapeamento espacial e âncoras espaciais:
 <br>
 
 | Escala de experiência | Requisitos | Experiência de exemplo | 
 |----------|----------|----------|
-|  **Somente orientação** |  **Orientação de fone de ouvido** (alinhado à gravidade) |  Visualizador de vídeo de 360° | 
-|  **Seated-scale** |  Acima, o sinal de adição **posição fone de ouvido** em relação à posição zero |  Simulador de jogo ou no espaço de corrida | 
-|  **Escala permanente** |  Acima, plus **preparar origem floor** |  Jogo de ação onde você jantar e dodge em vigor  | 
-|  **Room-scale** |  Acima, plus **polígono de limites de estágio** |  Quebra-cabeça jogo em que você percorrer o quebra-cabeça | 
-|  **World-scale** |  **Âncoras espaciais** (e geralmente [mapeamento espacial](spatial-mapping.md)) |  Jogo com inimigos provenientes de parede real, tais como [RoboRaid](https://www.microsoft.com/p/roboraid/9nblggh5fv3j) | 
+|  **Somente orientação** |  **Orientação do headset** (alinhado por gravidade) |  Visualizador de vídeo 360 ° | 
+|  **Escala colocada** |  Acima, além da **posição do headset** em relação à posição zero |  Jogo de corrida ou simulador de espaço | 
+|  **Escala em posição** |  Acima, mais a **origem do estágio de andar** |  Jogo de ação onde você Patou e subexposição em vigor  | 
+|  **Espaço em escala** |  Acima, mais o **polígono dos limites do estágio** |  Jogo de quebra-cabeça onde você se movimenta pelo quebra-cabeça | 
+|  **Escala mundial** |  **Âncoras espaciais** (e normalmente o [mapeamento espacial](spatial-mapping.md)) |  Jogo com inimigos provenientes de suas paredes reais, como [RoboRaid](https://www.microsoft.com/p/roboraid/9nblggh5fv3j) | 
 
-Essas experiência escalas seguem um modelo de "bonecas de aninhamento". O princípio de design fundamental para o Windows Mixed Reality é determinado um fone de ouvido dá suporte a aplicativos criados para uma escala de experiência de destino, bem como dimensiona todos menos:
+Esses dimensionamentos de experiência seguem um modelo de "aninhamento de bobblehead". O principal princípio de design aqui para a realidade mista do Windows é que um determinado Headset dá suporte a aplicativos criados para uma escala de experiência de destino, bem como a todas as escalas menores:
 <br>
 
-| Acompanhamento de 6DOF | Floor definido | Acompanhamento de 360° | Dos limites definidos | Âncoras espaciais | Experiência de max | 
+| acompanhamento de 6DOF | Definido pelo piso | acompanhamento de 360 ° | Limites definidos | Âncoras espaciais | Experiência máxima | 
 |----------|----------|----------|----------|----------|----------|
 |  Não |  - |  - |  - |  - |  **Somente orientação** | 
-|  **Sim** |  Não |  - |  - |  - |  **Encaixado** | 
-|  **Sim** |  **Sim** |  Não |  - |  - |  **Aguardando - Forward** | 
-|  **Sim** |  **Sim** |  **Sim** |  Não |  - |  **Posição - 360°** | 
-|  **Sim** |  **Sim** |  **Sim** |  **Sim** |  Não |  **Room** | 
-|  **Sim** |  **Sim** |  **Sim** |  **Sim** |  **Sim** |  **mundo** | 
+|  **Sim** |  Não |  - |  - |  - |  **Sentados** | 
+|  **Sim** |  **Sim** |  Não |  - |  - |  **Avançar** | 
+|  **Sim** |  **Sim** |  **Sim** |  Não |  - |  **Pé-360 °** | 
+|  **Sim** |  **Sim** |  **Sim** |  **Sim** |  Não |  **Espaço** | 
+|  **Sim** |  **Sim** |  **Sim** |  **Sim** |  **Sim** |  **Países** | 
 
-Observe que o estágio quadro de referência ainda não é suportado em HoloLens. Um aplicativo em escala de espaço em HoloLens atualmente precisa usar [mapeamento espacial](spatial-mapping.md) para localizar o usuário piso e paredes.
+Observe que o conjunto de teste de referência ainda não tem suporte no HoloLens. Um aplicativo de escala de sala no HoloLens atualmente precisa usar o [mapeamento espacial](spatial-mapping.md) para localizar o piso do usuário e as paredes.
 
 ## <a name="spatial-coordinate-systems"></a>Sistemas de coordenadas espaciais
 
-Usam todos os aplicativos de gráficos 3D [sistemas de coordenadas cartesianas](https://docs.microsoft.com/windows/uwp/graphics-concepts/coordinate-systems) raciocinar sobre as posições e orientações de objetos nos mundos virtuais que eles sejam renderizados. Esses sistemas de coordenadas estabelecer 3 eixos perpendiculares ao longo do qual posicionar objetos: um eixo X, Y e Z.
+Todos os aplicativos gráficos 3D usam [sistemas de coordenadas cartesianas](https://docs.microsoft.com/windows/uwp/graphics-concepts/coordinate-systems) para ponderar sobre as posições e orientações dos objetos nos mundos virtuais que eles renderizam. Tais sistemas de coordenadas estabelecem 3 eixos perpendiculares ao longo do qual posicionar objetos: um eixo X, Y e Z.
 
-Na [realidade misturada](mixed-reality.md), seus aplicativos serão argumentar sobre os sistemas de coordenadas físicos e virtuais. Windows chama um sistema de coordenadas que tem um significado real no mundo físico uma **sistema de coordenadas espacial**.
+Em [realidade misturada](mixed-reality.md), seus aplicativos serão um motivo para os sistemas de coordenadas física e virtual. O Windows chama um sistema de coordenadas que tem significado real no mundo físico um **sistema de coordenadas espaciais**.
 
-Sistemas de coordenadas espaciais expressar seus valores de coordenada em metros. Isso significa que os objetos colocados 2 unidades de distância no X, eixo Y ou Z aparecerá 2 metros distantes um do outro quando renderizado em realidade misturada. Isso permite que você facilmente processar objetos e ambientes em escala do mundo real.
+Os sistemas de coordenadas espaciais expressam seus valores de coordenadas em metros. Isso significa que os objetos colocados 2 unidades separadas no eixo X, Y ou Z aparecerão 2 metros uns dos outros quando renderizados em realidade misturada. Isso permite que você processe objetos e ambientes com facilidade em escala do mundo real.
 
-Em geral, os sistemas de coordenadas cartesianas podem ser destro ou canhoto. Sistemas de coordenadas espaciais no Windows são sempre destros, que significa que o positivo eixo x aponta diretamente, os positivos do eixo y aponta para cima (alinhado à gravidade) e o positivo eixo z aponta em direção a você.
+Em geral, os sistemas de coordenadas cartesianas podem ser destros ou destros. Os sistemas de coordenadas espaciais no Windows são sempre destros, o que significa que os pontos positivos do eixo X estão certos, o eixo Y positivo aponta para cima (alinhado à gravidade) e os pontos positivos do eixo Z em direção a você.
 
-Em ambos os tipos de sistemas de coordenadas, positivo eixo x aponta para a direita e o eixo y positivo aponta para cima. A diferença é se o positivos do eixo z aponta em direção ou para fora. Você pode se lembrar a direção na qual o positivos do eixo z aponta, apontando os dedos do seu esquerda ou direita em positivo X direção e ondulação-los para a direção de Y positiva. A direção em que o polegar aponta, em direção ou para fora, é a direção do eixo positivo z aponta para esse sistema de coordenadas.
+Em ambos os tipos de sistemas de coordenadas, o eixo X positivo aponta para a direita e o eixo Y positivo aponta para cima. A diferença é se os pontos positivos do eixo Z estão em direção ou afastadas de você. Você pode lembrar qual direção os pontos positivos do eixo Z apontando os dedos de sua mão esquerda ou direita na direção X positiva e enrolando-os para a direção Y positiva. A direção em que seu thumb aponta, para ou longe de você, é a direção que os pontos positivos do eixo Z para esse sistema de coordenadas.
 
-## <a name="building-an-orientation-only-or-seated-scale-experience"></a>Criação de uma experiência somente orientação ou encaixado em escala
+## <a name="building-an-orientation-only-or-seated-scale-experience"></a>Criando uma experiência somente de orientação ou de escala assentada
 
-A chave para holographic [renderização](rendering.md) está mudando a exibição do seu aplicativo de seus hologramas cada quadro quando o usuário move ao redor, para corresponder ao seu movimento principal previsto. Você pode compilar **escala encaixado experiências** que respeito muda para a posição do usuário principal e orientação principal usando uma **quadro estacionário de referência**.
+A chave para a [renderização](rendering.md) de Holographic é alterar a exibição do aplicativo de seus hologramas cada quadro à medida que o usuário se movimenta, para corresponder ao seu movimento de cabeça previsto. Você pode criar **experiências em escala** em conjunto que respeitam as alterações na posição de cabeçalho e na orientação da cabeça do usuário usando um **quadro estacionário de referência**.
 
-Algum conteúdo deve ignorar as atualizações de posição principal, permanecendo fixo em um título escolhido e distância do usuário em todos os momentos. O principal exemplo é um vídeo de 360 graus: porque o vídeo é capturado de uma única perspectiva fixa, ele seria arruinando a ilusão para a posição de exibição mover em relação ao conteúdo, mesmo que a orientação da exibição deve alterar conforme o usuário procura ao redor. Você pode criar tal **experiências de orientação** usando uma **anexado o quadro de referência**.
+Alguns conteúdos devem ignorar as atualizações de posição de cabeçalho, permanecendo fixo em um título e distância escolhidos do usuário em todos os momentos. O exemplo principal é o vídeo de 360 graus: como o vídeo é capturado de uma perspectiva fixa única, ele arruinaria a ilusão da posição da exibição para se mover em relação ao conteúdo, mesmo que a orientação da exibição deva mudar conforme o usuário for examinado. Você pode criar essas **experiências somente de orientação** usando um **quadro de referência anexado**.
 
 ### <a name="stationary-frame-of-reference"></a>Quadro estacionário de referência
 
-O sistema de coordenadas fornecido por um quadro estacionário de referência funciona para manter as posições dos objetos próxima ao usuário mais estável possível em relação ao mundo, respeitando as alterações na posição de principal do usuário.
+O sistema de coordenadas fornecido por um quadro estacionário de referência funciona para manter as posições de objetos perto do usuário o mais estável possível em relação ao mundo, ao mesmo tempo em que respeitam as alterações na posição de cabeçalho do usuário.
 
-Para dimensionamento encaixado experiências, como em um mecanismo de jogo [Unity](https://unity3d.com/), um quadro estacionário de referência é o que define "mundo origem" do mecanismo. Objetos que são colocados em uma coordenada de mundo específica usam o quadro estacionário de referência para definir sua posição no mundo real usando essas mesmas coordenadas. Conteúdo que permanece é colocado no mundo, mesmo que os usuários se deslocam, é conhecido como **bloqueada pelo mundo** conteúdo.
+Para experiências em escala em estado em um mecanismo de jogo, como o [Unity](https://unity3d.com/), um quadro estacionário de referência é o que define a "origem mundial" do mecanismo. Os objetos que são colocados em uma coordenada específica do mundo usam o quadro estacionário de referência para definir sua posição no mundo real usando as mesmas coordenadas. O conteúdo que permanece no mundo, mesmo quando o usuário percorra, é conhecido como conteúdo **bloqueado pelo mundo** .
 
-Um aplicativo normalmente será criar um quadro estacionário de referência na inicialização e usar seu sistema de coordenadas em todo o tempo de vida do aplicativo. Como desenvolvedor de aplicativos no Unity, você pode iniciar apenas colocando conteúdo relativo à origem, que estará em posição de cabeçalho inicial e a orientação do usuário. Se o usuário move para um novo local e deseja continuar sua experiência de escala encaixado, você pode centralizar novamente a origem do mundo nesse local.
+Normalmente, um aplicativo criará um quadro estacionário de referência na inicialização e usará seu sistema de coordenadas durante o tempo de vida do aplicativo. Como desenvolvedor de aplicativos no Unity, você pode simplesmente começar a colocar o conteúdo em relação à origem, que estará na posição e orientação da cabeça inicial do usuário. Se o usuário se mover para um novo local e quiser continuar sua experiência em escala, você poderá recentralizar a origem mundial nesse local.
 
-Ao longo do tempo, como o sistema aprende mais sobre o ambiente do usuário, ele pode determinar que as distâncias entre vários pontos no mundo real são menor ou maior que o sistema anteriormente acredita-se. Se você renderizar hologramas em um quadro estacionário de referência para um aplicativo em HoloLens, em que os usuários Peregrino além de uma área amplas cerca de 5 metros, seu aplicativo pode observar o descompasso no local desses hologramas observado. Se a sua experiência tem usuários wandering além dos medidores de 5, você está compilando uma [experiência de dimensionamento do mundo](#building-a-world-scale-experience), que exigirá técnicas adicionais para manter hologramas estável, conforme descrito abaixo.
+Ao longo do tempo, à medida que o sistema aprende mais sobre o ambiente do usuário, ele pode determinar que as distâncias entre vários pontos do mundo real sejam mais curtas ou maiores do que o sistema acreditar anteriormente. Se você renderizar hologramas em um quadro estacionário de referência para um aplicativo no HoloLens onde os usuários perfrentem além de uma área cerca de 5 metros de largura, seu aplicativo pode observar descompasso no local observado desses hologramas. Se sua experiência tiver usuários indo além de 5 metros, você estará criando uma [experiência de escala mundial](#building-a-world-scale-experience), o que exigirá técnicas adicionais para manter os hologramas estáveis, conforme descrito abaixo.
 
 ### <a name="attached-frame-of-reference"></a>Quadro de referência anexado
 
-Um quadro de referência anexado move-se com o usuário conforme eles ir, com um título fixo definido quando o aplicativo primeiro cria o quadro. Isso permite que o usuário ver confortavelmente em torno do conteúdo colocado dentro desse quadro de referência. Conteúdo renderizado dessa maneira relativo do usuário é chamado **bloqueado de corpo** conteúdo.
+Um quadro de referência anexado é movido com o usuário conforme ele percorre, com um título fixo definido quando o aplicativo cria o quadro pela primeira vez. Isso permite que o usuário examine confortavelmente o conteúdo colocado dentro desse quadro de referência. O conteúdo renderizado nesse modo relativo ao usuário é chamado de conteúdo **bloqueado pelo corpo** .
 
-Quando o fone de ouvido não consegue descobrir onde ele está no mundo, um quadro de referência anexado fornece o único sistema de coordenadas que pode ser usado para renderizar hologramas. Isso o torna ideal para a exibição de fallback da interface do usuário para informar ao usuário que seu dispositivo não é possível encontrá-las no mundo. Aplicativos que estão encaixadas em escala ou superior devem incluir um fallback apenas orientação para ajudar o usuário comece novamente, com a interface do usuário semelhante à mostrada na [realidade misturada doméstica](navigating-the-windows-mixed-reality-home.md).
+Quando o headset não consegue descobrir onde ele está no mundo, um quadro de referência anexado fornece o único sistema de coordenadas que pode ser usado para renderizar hologramas. Isso o torna ideal para exibir a interface de usuário de fallback para informar ao usuário que seu dispositivo não consegue encontrá-los no mundo. Os aplicativos que são recolocados em escala ou superior devem incluir um fallback somente de orientação para ajudar o usuário a entrar novamente, com a interface do usuário semelhante à mostrada na [página inicial mistura de realidade](navigating-the-windows-mixed-reality-home.md).
 
-## <a name="building-a-standing-scale-or-room-scale-experience"></a>Criar uma experiência de escala permanente ou de escala de espaço
+## <a name="building-a-standing-scale-or-room-scale-experience"></a>Criando uma experiência em escala ou em escala de sala
 
-Para ir além do dimensionamento encaixado em um fone de ouvido envolvente e criar uma **experiência de escala de pé**, você pode usar o **estágio quadro de referência**.
+Para ir além da escala em um headset de imersão e criar uma **experiência de escala em posição**, você pode usar o **quadro de referência de estágio**.
 
-Para fornecer um **experiência de escala de sala**, permitindo usuários ronda dentro do limite do medidor de 5 elas previamente definidas, você pode verificar **estágio limites** também.
+Para fornecer uma **experiência em escala de sala**, permitindo que os usuários percorram o limite de 5 medidores predefinidos, você também pode verificar **limites de estágio** .
 
-### <a name="stage-frame-of-reference"></a>Estágio de quadro de referência
+### <a name="stage-frame-of-reference"></a>Quadro de referência de estágio
 
-Ao configurar primeiro um fone de ouvido imersivo, o usuário define uma **estágio**, que representa o espaço no qual eles terão de realidade misturada. O estágio minimamente define uma **preparar origem**, um sistema de coordenadas espacial centralizado no usuário escolhida posição de base e a orientação de encaminhamento em que ele pretende usar o dispositivo. Colocando o conteúdo no sistema de coordenadas estágio no plano de Chão de Y = 0, você pode garantir seu hologramas confortavelmente aparecem no chão quando o usuário está aguardando, fornecendo aos usuários com um **experiência de escala de pé**.
+Ao configurar pela primeira vez um headset de imersão, o usuário define um **estágio**, que representa a sala em que haverá realidade misturada. O estágio define minimamente uma **origem de estágio**, um sistema de coordenadas espaciais centralizado na posição de piso escolhida do usuário e orientação de encaminhamento onde pretendem usar o dispositivo. Ao colocar o conteúdo neste estágio sistema de coordenadas no plano Y = 0, você pode garantir que os hologramas pareçam confortavelmente no chão quando o usuário estiver em pé, fornecendo aos usuários uma **experiência de escala em pé**.
 
 ### <a name="stage-bounds"></a>Limites de estágio
 
-O usuário também pode definir **estágio limites**, realidade misturada de uma área dentro da sala que eles desmarcou móvel em que ele pretende mover-se no. Se assim, o aplicativo pode criar uma **experiência de escala de sala**, usando esses limites para garantir que hologramas sempre são colocadas em que o usuário pode encontrá-los.
+O usuário também pode definir, opcionalmente, **limites de estágio**, uma área dentro da sala que foi limpa de mobília, onde pretendem se mover em realidade misturada. Nesse caso, o aplicativo pode criar uma **experiência de escala de sala**, usando esses limites para garantir que os hologramas sempre sejam colocados onde o usuário possa contatá-los.
 
-Como o quadro de referência do estágio oferece que fixo de um único sistema de coordenadas na qual você deseja colocar o conteúdo relativo ao chão, ele é o caminho mais fácil para portabilidade de escala de uma posição e aplicativos de escala de sala desenvolvidos para fones de ouvido de realidade virtual. No entanto, como com essas plataformas VR, um único sistema de coordenadas só pode se estabilizar conteúdo sobre um diâmetro do medidor 5 (16 pés), antes de arm alavanca efeitos causam conteúdo longe de ser o centro para deslocar visivelmente conforme o sistema ajusta. Para ir além dos 5 metros, âncoras espaciais são necessários.
+Como o quadro de referência de estágio fornece um único sistema de coordenadas fixos no qual posicionar o conteúdo relativo, é o caminho mais fácil para portar aplicativos de escala em estado e de colocação em pé desenvolvidos para a realidade virtual headsets. No entanto, assim como acontece com essas plataformas de VR, um único sistema de coordenadas só pode estabilizar conteúdo em cerca de um diâmetro de 5 metros (16 pés), antes que os efeitos de braço de alavanca façam com que o conteúdo longe do centro mude notavelmente à medida que o sistema se ajusta. Para ir além de 5 metros, são necessárias âncoras espaciais.
 
-## <a name="building-a-world-scale-experience"></a>Criar uma experiência de dimensionamento do mundo
+## <a name="building-a-world-scale-experience"></a>Criando uma experiência de escala mundial
 
-True permite HoloLens **experiências do mundo em escala** que permitem aos usuários percorrer além dos 5 metros. Para criar um aplicativo de dimensionamento do mundo, você precisará de novas técnicas além daquelas usadas para experiências de sala em escala.
+O HoloLens permite **experiências reais em grande escala** que permitem que os usuários perfrentem mais de 5 metros. Para criar um aplicativo de escala mundial, você precisará de novas técnicas além das usadas para experiências em escala de sala.
 
-### <a name="why-a-single-rigid-coordinate-system-cannot-be-used-beyond-5-meters"></a>Por que um único sistema de coordenadas rígido não pode ser usado além dos medidores de 5
+### <a name="why-a-single-rigid-coordinate-system-cannot-be-used-beyond-5-meters"></a>Por que um único sistema de coordenadas rígidos não pode ser usado além de 5 metros
 
-Hoje, ao escrever jogos, aplicativos de visualização de dados ou aplicativos de realidade virtual, a abordagem típica é estabelecer um sistema de coordenadas de mundo absoluto todas as outras coordenadas confiável podem mapear para. Nesse ambiente, você sempre pode encontrar uma transformação estável que define uma relação entre dois objetos nesse mundo. Se você não mover esses objetos, suas transformações relativas sempre permanecerão os mesmos. Esse sistema de coordenadas global de funciona bem quando a renderização de um mundo puramente virtual em que você sabe tudo da geometria com antecedência. Aplicativos em escala de sala de VR hoje em dia normalmente estabelecem esse tipo de sistema de coordenadas absolutas de escala de sala com sua origem no chão.
+Hoje em dia, ao escrever jogos, aplicativos de visualização de dados ou aplicativos de realidade virtual, a abordagem típica é estabelecer um sistema de coordenadas do mundo absoluto que todas as outras coordenadas possam Mapear de forma confiável de volta para o. Nesse ambiente, você sempre pode encontrar uma transformação estável que define uma relação entre quaisquer dois objetos nesse mundo. Se você não moveu esses objetos, suas transformações relativas sempre permanecerão as mesmas. Esse tipo de sistema de coordenadas global funciona bem ao renderizar um mundo puramente virtual em que você conhece toda a geometria com antecedência. Atualmente, os aplicativos VR em escala de sala normalmente estabelecem esse tipo de sistema de coordenadas de escala de sala absoluto com sua origem no chão.
 
-Por outro lado, um dispositivo de realidade misturada ilimitado, como o HoloLens tem uma compreensão dinâmica controlado por sensor do mundo, ajustando continuamente seu conhecimento ao longo do tempo do ambiente do usuário como conduzem vários medidores em um inteiro andar de um prédio. Em uma experiência de dimensionamento do mundo, se você colocou todos os seus hologramas em um único sistema de coordenadas rígido, esses hologramas seriam necessariamente descompasso ao longo do tempo, em relação ao mundo ou uns aos outros.
+Por outro lado, um dispositivo de realidade misturada sem compartilhamento de porta, como o HoloLens, tem uma compreensão dinâmica orientada por sensor do mundo, ajustando continuamente seu conhecimento ao longo do tempo do ambiente do usuário à medida que eles orientam muitos medidores em todo um andar de um edifício. Em uma experiência de escala mundial, se você colocou todos os seus hologramas em um único sistema de coordenadas rígidos, esses hologramas seriam necessariamente desfeitos com o passar do tempo, seja em relação ao mundo ou entre si.
 
-Por exemplo, o fone de ouvido pode acreditar no momento, os dois locais no mundo ser 4 metros de distância e, em seguida, posteriormente, refinar essa compreensão, os locais são na verdade 3.9 metros de distância de aprendizado. Se esses hologramas tinham inicialmente foi colocadas 4 medidores separados em um único sistema de coordenadas rígido, um deles, em seguida, sempre apareceria 0,1 metros fora do mundo real.
+Por exemplo, o headset pode acreditar, no momento, que dois locais do mundo tenham 4 metros de distância e depois refinam essa compreensão, aprendendo que os locais estão na verdade 3,9 metros de distância. Se esses hologramas tiverem sido inicialmente colocados quatro metros de distância em um único sistema de coordenadas rígidos, um deles sempre pareceria de 0,1 metros do mundo real.
 
 ### <a name="spatial-anchors"></a>Âncoras espaciais
 
-Windows Mixed Reality resolve o problema descrito na seção anterior, permitindo que você crie [âncoras espaciais](spatial-anchors.md) para marcar pontos importantes no mundo em que o usuário tiver efetuado hologramas. Uma âncora espacial representa um ponto importante no mundo do que o sistema deve manter o controle de ao longo do tempo.
+A realidade mista do Windows resolve o problema descrito na seção anterior, permitindo que você crie [âncoras espaciais](spatial-anchors.md) para marcar pontos importantes no mundo em que o usuário colocou os hologramas. Uma âncora espacial representa um ponto importante no mundo que o sistema deve acompanhar ao longo do tempo.
 
-Como o dispositivo aprende sobre o mundo, essas âncoras espaciais podem ajustar sua posição em relação a uma outra conforme necessário para garantir que cada âncora permaneça precisamente onde ele foi colocado em relação ao mundo real. Colocando uma âncora espacial no local em que o usuário coloca um holograma e, em seguida, posicionamento desse holograma em relação à sua âncora espacial, você pode garantir que o holograma mantém estabilidade ideal, mesmo que o usuário passa em dezenas de medidores.
+Como o dispositivo aprende sobre o mundo, essas âncoras espaciais podem ajustar sua posição em relação umas às outras, conforme necessário, para garantir que cada âncora permaneça precisamente onde foi colocado em relação ao mundo real. Ao colocar uma âncora espacial no local em que o usuário coloca um holograma e, em seguida, posicionar esse holograma em relação à sua âncora espacial, você pode garantir que o holograma mantenha a estabilidade ideal, mesmo que o usuário se movimente entre dezenas de medidores.
 
-Esse ajuste contínuo das âncoras espaciais a relação é a principal diferença entre coordinate systems de âncoras espaciais e quadros de referência estáticos:
+Esse ajuste contínuo de âncoras espaciais em relação umas com as outras é a principal diferença entre sistemas de coordenadas de âncoras espaciais e quadros de referência estáticos:
 
-* Hologramas colocadas no quadro estacionário de referência todos os mantêm uma relação rígida umas às outras. No entanto, como os usuários se deslocam longas distâncias, sistema de coordenadas do quadro pode descompasso em relação ao mundo para garantir que hologramas ao lado do usuário aparecem estáveis.
+* Os hologramas colocados no quadro estacionário de referência todos retêm uma relação rígida entre si. No entanto, à medida que o usuário passa por longas distâncias, o sistema de coordenadas desse quadro pode descompassor em relação ao mundo para garantir que os hologramas ao lado do usuário pareçam estáveis.
 
-* Hologramas colocadas no estágio quadro de referência também mantêm uma relação rígida umas às outras. Em contraste com o quadro estacionário, o quadro de estágio sempre permanece fixado em vigor em relação à origem física definida. No entanto, conteúdo renderizado no sistema de coordenadas do estágio além do seu limite de 5 medidor só aparecerá estável enquanto o usuário está tentando funcionar dentro desse limite.
+* Os hologramas colocados no quadro do estágio de referência também retêm uma relação rígida entre si. Ao contrário do quadro estacionário, o quadro de estágio sempre permanece fixo em vigor em relação à sua origem física definida. No entanto, o conteúdo renderizado no sistema de coordenadas do estágio além de seu limite de 5 metros só aparecerá estável quando o usuário estiver dentro desse limite.
 
-* Hologramas colocadas usando uma âncora espacial pode oscilar em relação ao hologramas colocado usando outro âncora espacial. Isso permite que o Windows melhorar sua compreensão da posição de cada âncora espacial, mesmo se, por exemplo, um por âncora precisa ajustar próprio à esquerda e outro por âncora precisa ajustar à direita.
+* Os hologramas colocados usando uma âncora espacial podem descompassor em relação aos hologramas colocados usando outra âncora espacial. Isso permite que o Windows aprimore sua compreensão da posição de cada âncora espacial, mesmo que, por exemplo, uma âncora precise se ajustar à esquerda e outra âncora precise se ajustar à direita.
 
-Em contraste com um quadro estacionário de referência, que sempre otimiza para estabilidade próxima ao usuário, o estágio de quadro de referência e âncoras espaciais garantem a estabilidade do próximo suas origens. Isso ajuda a esses hologramas continuam com precisão no lugar ao longo do tempo, mas isso também significa que hologramas renderizadas muito longe da origem do seu sistema de coordenadas experimentará os efeitos de cada vez mais graves alavanca-arm. Isso ocorre porque os pequenos ajustes para a posição e orientação do estágio ou âncora são ampliados proporcional à distância dessa âncora. 
+Ao contrário de um quadro estacionário de referência, que sempre otimiza a estabilidade próxima ao usuário, o quadro de referência e as âncoras espaciais garantem a estabilidade perto de suas origens. Isso ajuda esses hologramas a permanecerem precisamente com o passar do tempo, mas também significa que os hologramas renderizados muito longe da origem do seu sistema de coordenadas sofrerão efeitos cada vez mais graves na alavanca. Isso ocorre porque pequenos ajustes na posição e na orientação do estágio ou da âncora são ampliados proporcionalmente à distância dessa âncora. 
 
-Uma boa regra prática é garantir que nada que é renderizado com base no sistema de coordenadas de um distante âncora espaciais está em cerca de 3 medidores de sua origem. Para uma origem de estágio próximos, o conteúdo de distante de renderização é Okey, pois qualquer erro posicional maior afetará hologramas apenas pequenas que não mudará muito no modo de exibição do usuário.
+Uma boa regra geral é garantir que tudo que você renderiza com base em um sistema de coordenadas da âncora espacial distante esteja em cerca de 3 metros de sua origem. Para uma origem de estágio próximo, a renderização de conteúdo distante está OK, pois qualquer maior erro posicional afetará apenas os pequenos hologramas que não mudarão muito na exibição do usuário.
 
-### <a name="spatial-anchor-persistence"></a>Persistência de âncora espacial
+### <a name="spatial-anchor-persistence"></a>Persistência de ancoragem espacial
 
-Âncoras espaciais também podem permitir que seu aplicativo se lembrar de um local importante mesmo depois que seu aplicativo for suspenso ou o dispositivo está desligado.
+As âncoras espaciais também podem permitir que seu aplicativo se lembre de um local importante mesmo depois que o aplicativo é suspenso ou o dispositivo é desligado.
 
-Você pode salvar as âncoras espaciais cria seu aplicativo de disco e, em seguida, carregá-los novamente mais tarde, mantendo-os para seu aplicativo **repositório de âncora espacial**. Ao salvar ou carregar uma âncora, você fornece uma chave de cadeia de caracteres que seja significativa para seu aplicativo, para identificar a âncora mais tarde. Considere esta chave como o nome do arquivo para a âncora. Se você deseja associar a essa âncora de outros dados, como um modelo 3D que o usuário é colocado nesse local, salve que para o armazenamento local do seu aplicativo e associá-la com a chave que você escolheu.
+Você pode salvar em disco as âncoras espaciais que seu aplicativo cria e, em seguida, carregá-las novamente mais tarde, persistindo-as para o **repositório de âncora espacial**do seu aplicativo. Ao salvar ou carregar uma âncora, você fornece uma chave de cadeia de caracteres que é significativa para seu aplicativo, a fim de identificar a âncora mais tarde. Considere essa chave como o nome de arquivo para sua âncora. Se você quiser associar outros dados a essa âncora, como um modelo 3D que o usuário colocou nesse local, salve-o no armazenamento local do seu aplicativo e associe-o à chave escolhida.
 
-Por âncoras persistir no armazenamento, seus usuários podem colocar hologramas individuais ou colocar um espaço de trabalho ao redor do qual um aplicativo colocar seus vários hologramas e, em seguida, localize esses hologramas posteriormente em que eles esperam que, ao longo de muitos usos do seu aplicativo.
+Ao persistir âncoras para a loja, os usuários podem posicionar hologramas individuais ou posicionar um espaço de trabalho em volta do qual um aplicativo coloca seus diversos hologramas e, em seguida, encontrar esses hologramas posteriormente, onde eles esperam, em muitos usos de seu aplicativo.
 
-Você também pode usar <a href="https://docs.microsoft.com/azure/spatial-anchors/overview" target="_blank">âncoras espacial do Azure</a> para persistência holograma assíncrona em dispositivos Android, iOS e HoloLens.  Compartilhando uma âncora de nuvem durável espacial, vários dispositivos podem observar o holograma persistente mesmo ao longo do tempo, mesmo se esses dispositivos não estão presentes em conjunto ao mesmo tempo.
+Você também pode usar <a href="https://docs.microsoft.com/azure/spatial-anchors/overview" target="_blank">Âncoras Espaciais do Azure</a> para persistência assíncrona de holograma em dispositivos HoloLens, iOS e Android.  Ao compartilhar uma âncora espacial em nuvem durável, vários dispositivos podem observar o mesmo holograma persistente ao longo do tempo, mesmo que os dispositivos não estejam presentes ao mesmo tempo.
 
 ### <a name="spatial-anchor-sharing"></a>Compartilhamento de âncora espacial
 
-Seu aplicativo também pode compartilhar uma âncora espacial em tempo real com outros dispositivos, permitindo em tempo real compartilhado experiências.
+Seu aplicativo também pode compartilhar uma âncora espacial em tempo real com outros dispositivos, permitindo experiências compartilhadas em tempo real.
 
-Usando <a href="https://docs.microsoft.com/azure/spatial-anchors/overview" target="_blank">âncoras espacial do Azure</a>, seu aplicativo pode compartilhar uma âncora espacial entre vários HoloLens, dispositivos iOS e Android. Fazendo com que cada dispositivo renderizar um holograma usando a mesma âncora espacial, todos os usuários verão o holograma aparecem no mesmo lugar no mundo real.
+Usando <a href="https://docs.microsoft.com/azure/spatial-anchors/overview" target="_blank">âncoras espaciais do Azure</a>, seu aplicativo pode compartilhar uma âncora espacial entre vários dispositivos de HoloLens, Ios e Android. Ao fazer cada dispositivo renderizar um holograma usando a mesma âncora espacial, todos os usuários verão o holograma aparecer no mesmo lugar no mundo real.
 
-## <a name="avoid-head-locked-content"></a>Evite conteúdo bloqueado de cabeça
+## <a name="avoid-head-locked-content"></a>Evitar conteúdo bloqueado por cabeçalho
 
-Nós não recomendamos a renderização de conteúdo bloqueado de cabeçalho, que permanece em um ponto fixo na exibição (como um HUD). Em geral, conteúdo bloqueado de cabeça é desconfortável para usuários e não se parecem com uma parte natural do seu mundo.
+Não é altamente recomendável renderizar conteúdo de cabeça bloqueada, que permanece em um local fixo na exibição (como um HUD). Em geral, o conteúdo bloqueado por cabeça é desconfortável para os usuários e não parece uma parte natural do seu mundo.
 
-Conteúdo bloqueado pelo head geralmente deve ser substituído pelo hologramas que estão anexadas ao usuário ou colocadas no mundo em si. Por exemplo, [cursores](cursors.md) deve normalmente ser enviado para o mundo, dimensionamento naturalmente para refletir a posição e a distância do objeto em olhar do usuário.
+O conteúdo bloqueado no cabeçalho deve ser normalmente substituído por hologramas anexados ao usuário ou colocados no próprio mundo. Por exemplo, os [cursores](cursors.md) devem, em geral, ser enviados para o mundo, dimensionando naturalmente para refletir a posição e a distância do objeto sob o olhar do usuário.
 
-## <a name="handling-tracking-errors"></a>Rastreamento de tratamento de erros
+## <a name="handling-tracking-errors"></a>Manipulação de erros de controle
 
-Em alguns ambientes, como corredores escuros, pode não ser possível que um fone de ouvido usando o controle de dentro para fora para localizar-se corretamente no mundo. Isso pode levar hologramas não aparecem ou aparecem em locais incorretos se tratadas de forma incorreta. Agora, discutiremos as condições em que isso pode acontecer, seu impacto na experiência do usuário, e dicas para melhor lidar com essa situação.
+Em alguns ambientes, como corredores escuros, talvez não seja possível que um headset Use controle interno para se localizar corretamente no mundo. Isso pode levar os hologramas a não aparecer ou aparecerem em locais incorretos se forem manipulados incorretamente. Agora, discutiremos as condições em que isso pode acontecer, seu impacto na experiência do usuário e dicas para lidar melhor com essa situação.
 
-### <a name="headset-cannot-track-due-to-insufficient-sensor-data"></a>Não é possível acompanhar o fone de ouvido devido a dados de sensor insuficiente
+### <a name="headset-cannot-track-due-to-insufficient-sensor-data"></a>O headset não pode ser acompanhado devido a dados insuficientes do sensor
 
-Às vezes, os sensores do fone de ouvido não são capazes de descobrir onde está o fone de ouvido. Isso pode acontecer se a sala está escura, ou se os sensores são cobertos por fios ou mãos, ou se o ambiente não tem suficiente textura.
+Às vezes, os sensores do headset não conseguem descobrir onde está o headset. Isso pode acontecer se a sala for escura ou se os sensores estiverem cobertos por cabelo ou mãos ou se os arredores não tiverem textura suficiente.
 
-Quando isso acontece, o fone de ouvido será possível acompanhar sua posição com precisão suficiente para processar hologramas bloqueado pelo mundo. Você não conseguirá descobrir onde uma âncora espacial, o quadro estacionário ou o quadro de estágio é relativo ao dispositivo, mas você ainda pode renderizar conteúdo bloqueado de corpo o quadro de referência anexado.
+Quando isso acontecer, o headset não poderá controlar sua posição com precisão suficiente para renderizar hologramas bloqueados ao mundo. Você não conseguirá descobrir onde uma âncora espacial, um quadro estacionário ou um quadro de estágio é relativo ao dispositivo, mas ainda poderá renderizar conteúdo bloqueado no corpo do quadro de referência anexado.
 
-Seu aplicativo deve informar ao usuário como obter posicionais de acompanhamento, algum conteúdo fallback bloqueado de corpo que descreve algumas dicas, como descobrir os sensores e ativar mais luzes de renderização.
+Seu aplicativo deve informar ao usuário como obter o controle posicional de volta, Renderizando algum conteúdo bloqueado com corpo de fallback que descreve algumas dicas, como a descoberta de sensores e a ativação de mais luzes.
 
-### <a name="headset-tracks-incorrectly-due-to-dynamic-changes-in-the-environment"></a>Controla o fone de ouvido incorretamente devido a alterações dinâmicas no ambiente
+### <a name="headset-tracks-incorrectly-due-to-dynamic-changes-in-the-environment"></a>Fone de ouvido acompanha incorretamente devido a alterações dinâmicas no ambiente
 
-Às vezes, o dispositivo não é possível acompanhar corretamente se houver muitas alterações dinâmicas no ambiente, como muitas pessoas andando na sala. Nesse caso, as hologramas podem parecer saltar ou descompasso conforme o dispositivo tenta controlar em si neste ambiente dinâmico. É recomendável usar o dispositivo em um ambiente dinâmico menos se você atingir esse cenário.
+Às vezes, o dispositivo não poderá rastrear corretamente se houver muitas alterações dinâmicas no ambiente, como muitas pessoas percorrendo na sala. Nesse caso, os hologramas podem parecer para o salto ou descompasso, pois o dispositivo tenta acompanhar-se nesse ambiente dinâmico. É recomendável usar o dispositivo em um ambiente menos dinâmico se você atingir esse cenário.
 
-### <a name="headset-tracks-incorrectly-because-the-environment-has-changed-significantly-over-time"></a>Headset rastreia incorretamente porque o ambiente foi alterado significativamente ao longo do tempo
+### <a name="headset-tracks-incorrectly-because-the-environment-has-changed-significantly-over-time"></a>O fone de ouvido acompanha incorretamente porque o ambiente mudou significativamente ao longo do tempo
 
-Às vezes, quando você começar a usar um fone de ouvido em um ambiente que passou por muitas alterações (por exemplo, a movimentação significativa móvel, parede hangings etc.), é possível que alguns hologramas poderão parecer deslocadas de seus locais originais. As hologramas anteriores também podem pular em torno de quando o usuário move ao redor nesse novo espaço. Isso ocorre porque não contém uma compreensão do sistema do seu espaço e tenta remapear o ambiente durante a tentativa de reconciliar os recursos da sala. Nesse cenário, é recomendável encorajar os usuários a colocar novamente hologramas eles fixado no mundo se eles não estão aparecendo em que o esperado.
+Às vezes, quando você começa a usar um headset em um ambiente que passou por muitas alterações (por exemplo, movimento significativo de mobília, travamentos de parede etc.), é possível que alguns hologramas possam parecer deslocados de seus locais originais. Os hologramas anteriores também podem saltar à medida que o usuário se movimentar nesse novo espaço. Isso ocorre porque a compreensão do sistema do seu espaço não é mais segura e tenta remapear o ambiente ao tentar reconciliar os recursos da sala. Nesse cenário, é aconselhável encorajar os usuários a reposicionar os hologramas que eles fixaram no mundo se não estiverem aparecendo onde esperado.
 
-### <a name="headset-tracks-incorrectly-due-to-identical-spaces-in-an-environment"></a>Controla o fone de ouvido incorretamente devido a espaços idêntico em um ambiente
+### <a name="headset-tracks-incorrectly-due-to-identical-spaces-in-an-environment"></a>Fone de ouvido acompanha incorretamente devido a espaços idênticos em um ambiente
 
-Às vezes, uma casa ou outro espaço pode ter duas áreas idênticas. Por exemplo, duas salas de conferência idênticos, dois idênticos canto áreas, dois grandes cartazes idênticos que abrangem o campo de visão do dispositivo. Nesses cenários, o dispositivo pode, às vezes, ficam confuso entre as partes idênticas e marcá-los como o mesmo em sua representação interna. Isso pode causar as hologramas de algumas áreas para aparecer em outros locais. O dispositivo pode começar a perder o controle com frequência, pois sua representação interna do ambiente foi corrompida. Nesse caso, é aconselhável para redefinir a compreensão de ambiente do sistema. Observe que redefinir o mapa leva à perda de todos os posicionamentos de âncora espacial. Isso fará com que o headset controlar o exclusivo para áreas do ambiente. No entanto, o problema pode ocorrer novamente se o dispositivo obtém confuso entre as áreas idênticas novamente.
+Às vezes, uma casa ou outro espaço pode ter duas áreas idênticas. Por exemplo, duas salas de conferência idênticas, duas áreas de canto idênticas, dois grandes pôsteres idênticos que abrangem o campo de exibição do dispositivo. Nesses cenários, o dispositivo pode, às vezes, ficar confuso entre as partes idênticas e marcá-las como a mesma em sua representação interna. Isso pode fazer com que os hologramas de algumas áreas apareçam em outros locais. O dispositivo pode começar a perder o controle com frequência, pois sua representação interna do ambiente foi corrompida. Nesse caso, é aconselhável redefinir a compreensão ambiental do sistema. Observe que a redefinição do mapa leva à perda de todos os posicionamentos de âncora espaciais. Isso fará com que o fone de ouvido acompanhe bem nas áreas exclusivas do ambiente. No entanto, o problema pode ocorrer novamente se o dispositivo ficar confuso entre as áreas idênticas novamente.
 
 ## <a name="see-also"></a>Consulte também
-* [Apresentação do GDC 2017 na renderização holográfica e sistemas de coordenadas espaciais](https://channel9.msdn.com/events/GDC/GDC-2017/GDC2017-008)
+* [Apresentação do GDC 2017 em sistemas de coordenadas espaciais e renderização Holographic](https://channel9.msdn.com/events/GDC/GDC-2017/GDC2017-008)
 * [Sistemas de coordenadas no Unity](coordinate-systems-in-unity.md)
 * [Sistemas de coordenadas no DirectX](coordinate-systems-in-directx.md)
 * [Âncoras espaciais](spatial-anchors.md)
 * [Experiências compartilhadas em realidade misturada](shared-experiences-in-mixed-reality.md)
 * <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">Âncoras Espaciais do Azure</a>
-* [Estudo de caso - examinando buracos na sua realidade](case-study-looking-through-holes-in-your-reality.md)
+* [Estudo de caso - Como olhar através dos buracos na sua realidade](case-study-looking-through-holes-in-your-reality.md)
