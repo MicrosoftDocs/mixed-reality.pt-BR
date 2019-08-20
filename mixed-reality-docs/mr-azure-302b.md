@@ -276,7 +276,7 @@ A seguir está uma configuração típica para o desenvolvimento com realidade m
 Este curso requer o uso da biblioteca **Newtonsoft** , que você pode adicionar como uma DLL aos seus ativos. O pacote que contém [essa biblioteca pode ser baixado deste link](https://github.com/Microsoft/HolographicAcademy/raw/Azure-MixedReality-Labs/Azure%20Mixed%20Reality%20Labs/MR%20and%20Azure%20302b%20-%20Custom%20vision/NewtonsoftDLL.unitypackage).
 Para importar a biblioteca Newtonsoft para seu projeto, use o pacote do Unity que acompanha este curso.
 
-1.  Adicione o *.unitypackage* ao Unity usando a opção de menu **pacote* *personalizado*do *pacote* > *de importação* de *ativos* > * .
+1.  Adicione o *.unitypackage* ao Unity usando a opção de menu **pacote* *personalizado*do*pacote* > *de importação*de *ativos* > * .
 
 2.  Na caixa **Importar pacote de Unity** que é exibida, verifique se tudo em (e incluindo) **plug-ins** está selecionado.
 

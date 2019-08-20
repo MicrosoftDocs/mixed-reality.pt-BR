@@ -625,7 +625,7 @@ Para criar esta classe:
 
 1.  Vá para a pasta **scripts** que você criou anteriormente.
 
-2.  Clique com botão direito no **Project** painel, **crie* *C\# Script**. Nomeie o script **olhar**.
+2.  Clique com botão direito no **Project** painel, **crie* *C\#Script**. Nomeie o script **olhar**.
 
 3.  Clique duas vezes no novo script ***olhar*** para abri-lo com o **Visual Studio 2017.**
 
