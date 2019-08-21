@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realidade misturada, unity, tutorial, hololens
-ms.openlocfilehash: 925ab825c2716a847726ac763dc6800914d87c6b
-ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
+ms.openlocfilehash: 45833ba22305acedb45bfdc9752c0b278a693190
+ms.sourcegitcommit: 9636573eabdc78db6875e831a9c894a2ff173a99
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68702043"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69629180"
 ---
 # <a name="3-creating-user-interface-and-configure-mixed-reality-toolkit"></a>3. Criando interface do usuário e Configurando o kit de ferramentas de realidade mista 
 
@@ -34,7 +34,7 @@ Nesta seção, você aprenderá a personalizar e configurar os perfis de MRTK pa
 
 >Observação: Por padrão, os perfis do MRTK não são editáveis. Esses são modelos de perfil padrão que você pode copiar e personalizar. Há várias camadas de personalização e perfis. Portanto, é a prática padrão copiar e personalizar vários perfis ao configurar uma ou mais configurações.
 >
->Para descobrir mais sobre perfis de MRTK e sua arquitetura, visite a [documentação do MRTK](<https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Architecture/SpatialAwareness/SpatialAwarenessSystemArchitecture.html>).
+>Para descobrir mais sobre perfis de MRTK e sua arquitetura, visite a [documentação do MRTK](<https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/MixedRealityConfigurationGuide.html>).
 
 2. Crie uma cópia do perfil padrão para personalizá-lo. Para copiar um perfil padrão, clique em copiar & Personalizar (consulte imagem). Isso cria uma cópia do perfil do MRTK. Com sua própria cópia do perfil do MRTK, agora você pode personalizar as configurações nesse perfil. Você também precisará repetir a etapa de cópia e personalização para quaisquer perfis adicionais aninhados sob esse perfil, conforme descrito nas etapas subsequentes.
 
