@@ -1,17 +1,17 @@
 ---
 title: Processo de criação de ativos
 description: Orientação sobre a criação de ativos para experiências de realidade misturada.
-author: paseb
-ms.author: paseb
+author: shengkait
+ms.author: shentan
 ms.date: 03/21/2018
 ms.topic: article
 keywords: ativo, criação, processo, orçamento, polígonos, texturas, sombreadores, desempenho
-ms.openlocfilehash: 513a9856ac35e4229cfb7bc8bcb92d9d6a152980
-ms.sourcegitcommit: f20beea6a539d04e1d1fc98116f7601137eebebe
+ms.openlocfilehash: f7bee55249764af37453ea0fab01730b43907569
+ms.sourcegitcommit: c4d0132ea755c861c504dad46957e791b9c705d5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66692292"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69896502"
 ---
 # <a name="asset-creation-process"></a>Processo de criação de ativos
 
@@ -60,7 +60,7 @@ Veja abaixo um orçamento de exemplo para sua experiência. O desempenho geralme
 
 **Complexidade dos ativos**
 * Quantos triângulos/polígonos?
-* Quão complexo é o sombreador?
+* Quão complexo é o sombreador? Ao usar o kit de ferramentas de realidade mista, é recomendável usar o [sombreador standard do kit de ferramentas da realidade misturada](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_release/Documentation/README_MRTKStandardShader.md) para reduzir a complexidade do sombreador.
 
 Os desenvolvedores e os artistas precisam considerar os recursos do dispositivo e o mecanismo de gráficos. O Microsoft HoloLens tem todo o cálculo e os gráficos incorporados ao dispositivo. Ele compartilha os recursos que os desenvolvedores encontraria em uma plataforma móvel.
 

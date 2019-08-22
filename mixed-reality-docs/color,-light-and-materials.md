@@ -6,12 +6,12 @@ ms.author: pinkb
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Realidade mista do Windows, design, cor, luz, materiais
-ms.openlocfilehash: 3f8ee8edfe4cbbaf8a55b3c4a9125f752823be9c
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: bef0c8b63c109baa536e4192ce94919eb888faf2
+ms.sourcegitcommit: c4d0132ea755c861c504dad46957e791b9c705d5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63526490"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69896515"
 ---
 # <a name="color-light-and-materials"></a>Cor, luz e materiais
 
@@ -28,7 +28,7 @@ Sempre Reserve um tempo para testar suas experiências de Holographic em um head
 ## <a name="fundamentals-of-rendering-on-holographic-devices"></a>Conceitos básicos de renderização em dispositivos Holographic
 * **Dispositivos Holographic têm exibições aditivas** – os hologramas são criados com a adição de luz à luz do mundo real – o branco aparecerá com brilho, enquanto preto aparecerá transparente.
 * **O impacto das cores varia de acordo com o ambiente do usuário** – há muitas condições de iluminação diferentes na sala do usuário. Crie conteúdo com níveis apropriados de contraste para ajudar com a clareza.
-* **Evite a iluminação dinâmica** – os hologramas que são acesos uniformemente em experiências de Holographic são os mais eficientes. Usando a luminosidade avançada, a iluminação dinâmica provavelmente excederá os recursos de sombreadores móveis.
+* **Evite a iluminação dinâmica** – os hologramas que são acesos uniformemente em experiências de Holographic são os mais eficientes. Usando a luminosidade avançada, a iluminação dinâmica provavelmente excederá os recursos de dispositivos móveis. Quando a iluminação dinâmica é necessária, é recomendável usar o [sombreador standard do kit de ferramentas da realidade misturada](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_release/Documentation/README_MRTKStandardShader.md). 
 
 ## <a name="designing-with-color"></a>Criando com cor
 

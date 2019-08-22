@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: Azure, realidade mista, Academia, Unity, tutorial, API, serviços de mídia, vídeo de streaming, 360, imersão, VR
-ms.openlocfilehash: f6974ab6a72828a557649d5dc65b4e505a7484ff
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: e27bda2a9309f335feb0056703da492555c39fde
+ms.sourcegitcommit: c4d0132ea755c861c504dad46957e791b9c705d5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63555570"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69896580"
 ---
 >[!NOTE]
 >Os tutoriais misturados do Academia de realidade foram projetados com o HoloLens (1º gen) e com o fone de cabeça de imersão de realidade misturada.  Como tal, achamos que é importante deixar esses tutoriais em vigor para os desenvolvedores que ainda estão procurando orientação no desenvolvimento para esses dispositivos.  Esses tutoriais **_não_** serão atualizados com os conjuntos de ferramentas e as interações mais recentes usados para o HoloLens 2.  Eles serão mantidos para continuar a trabalhar nos dispositivos com suporte. Haverá uma nova série de tutoriais que serão publicados no futuro, que demonstrarão como desenvolver para o HoloLens 2.  Esse aviso será atualizado com um link para esses tutoriais quando eles forem postados.
@@ -226,7 +226,7 @@ Para usar o serviço de mídia do Azure, você precisará configurar uma instân
 
     ![O portal do Azure](images/AzureLabs-Lab6-21.png)
 
-20. Você verá seu vídeo, juntamente com outra, o que é do **tipo de ativo *múltiplas taxas de bits MP4***.
+20. Você verá seu vídeo junto com outro, que é do **tipo de ativo _MP4 com múltiplas taxas de bits_** .
 
     ![O portal do Azure](images/AzureLabs-Lab6-22.png)
 

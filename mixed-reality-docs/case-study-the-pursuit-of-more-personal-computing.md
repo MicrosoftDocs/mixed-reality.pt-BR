@@ -1,17 +1,17 @@
 ---
 title: Estudo de caso – a busca de mais computação pessoal
 description: As oportunidades do amanhã são descobertas pela criação de produtos hoje. As soluções que esses produtos fornecem revelam o que é necessário para avançar no futuro.
-author: mavitazk
-ms.author: mavitazk
+author: danielescudero
+ms.author: daescu
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Realidade mista do Windows, HoloLens, estudo de caso, visão, cenários
-ms.openlocfilehash: 64ec4b9e55758b760c294d933fb80a2a638e0088
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 9e142d72866079e34e6f4a8df78b79d6f846275e
+ms.sourcegitcommit: c4d0132ea755c861c504dad46957e791b9c705d5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63522987"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69896520"
 ---
 # <a name="case-study---the-pursuit-of-more-personal-computing"></a>Estudo de caso – a busca de mais computação pessoal
 

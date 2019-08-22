@@ -1,17 +1,17 @@
 ---
 title: Escala
 description: Uma chave para exibir o conteúdo que parece realista no formulário Holographic é imitar as estatísticas visuais do mundo real o mais próximo possível.
-author: mavitazk
-ms.author: mavitazk
+author: shengkait
+ms.author: shentan
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Realidade mista do Windows, estilo, design
-ms.openlocfilehash: f13414bff7d84692e8e87aa2abdcded15627346f
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 169665293e2cc612a546bbee5af14387855ae96b
+ms.sourcegitcommit: c4d0132ea755c861c504dad46957e791b9c705d5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63524125"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69896557"
 ---
 # <a name="scale"></a>Escala
 

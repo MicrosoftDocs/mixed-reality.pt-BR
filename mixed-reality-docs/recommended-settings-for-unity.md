@@ -6,12 +6,12 @@ ms.author: trferrel
 ms.date: 03/26/2019
 ms.topic: article
 keywords: Unity, configurações, realidade misturada
-ms.openlocfilehash: 8afcefb49a860d66a372ebd3d0c4bcdb43038813
-ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
+ms.openlocfilehash: 395363cb99fd7e9e61adbea8ebc341aab50755e0
+ms.sourcegitcommit: c4d0132ea755c861c504dad46957e791b9c705d5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67415452"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69896533"
 ---
 # <a name="recommended-settings-for-unity"></a>Configurações recomendadas para o Unity
 
@@ -25,7 +25,7 @@ O Unity fornece um conjunto de opções padrão que geralmente são o caso médi
 
 No Unity 2018 LTS +, o nível de qualidade do projeto pode ser definido por:
 
-Em **Editar** > **configurações**   do projeto qualidade > defina o padrão clicando na seta para baixo para o nível de qualidade muito baixo > 
+Em **Editar** > **configurações** do projeto qualidade > defina o padrão clicando na seta para baixo para o nível de qualidade muito baixo > 
 
 ### <a name="lighting-settings"></a>Configurações de iluminação
 
@@ -67,12 +67,12 @@ Além disso, é recomendável selecionar **profundidade de 16 bits** na configur
 
 Para que a plataforma Windows Mixed Reality Otimize a estabilidade do holograma, ela depende do buffer de profundidade para ser preciso e corresponder a qualquer holograma renderizado na tela. Portanto, com o compartilhamento de buffer de profundidade ativado, é importante ao renderizar a cor, além de renderizar a profundidade. No Unity, a maioria dos materiais opacos ou TransparentCutouts renderizará profundidade por padrão, mas os objetos de texto e transparente geralmente não renderizarão a profundidade, embora isso seja dependente de sombreador, etc. 
 
-Se estiver usando o sombreador standard do kit de ferramentas do reality, para renderizar a profundidade para objetos transparentes:
+Se estiver usando o [sombreador standard do kit de ferramentas](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_release/Documentation/README_MRTKStandardShader.md)do reality, para renderizar a profundidade para objetos transparentes:
 1) Selecione o material de transparente que está usando o sombreador padrão MRTK e abra a janela do editor de Inspetor
-2) Defina **o modo de renderização** como **personalizado** e defina **modo** como **transparente** e, por fim, defina a **gravação de profundidade** como **on**
+2) Selecione o botão **corrigir agora** dentro do aviso de compartilhamento de buffer de profundidade. Isso também pode ser executado manualmente definindo o **modo de renderização** como **personalizado** e, em seguida, definir **modo** como **transparente** e, por fim, definir a **gravação de profundidade** como **on**
 
 >[!NOTE]
-> Os desenvolvedores devem ter cuidado com o combate ao Z ao alterar esses valores juntamente com as configurações de plano próximo/longe da câmera. O combate ao Z ocorre quando dois Gameobjects tentam renderizar para o mesmo pixel e devido a limitações na fidelidade do buffer de profundidade (ou seja, z Depth), Unity não pode distinguir qual objeto está na frente do outro. Os desenvolvedores notarão uma cintilação entre dois objetos de jogo  à medida que eles lutarem pelo mesmo valor de profundidade z. Isso pode ser resolvido alternando para o formato de profundidade de 24 bits, pois haverá um intervalo maior de valores para cada objeto a ser calculado para a profundidade z da câmera.
+> Os desenvolvedores devem ter cuidado com o combate ao Z ao alterar esses valores juntamente com as configurações de plano próximo/longe da câmera. O combate ao Z ocorre quando dois Gameobjects tentam renderizar para o mesmo pixel e devido a limitações na fidelidade do buffer de profundidade (ou seja, z Depth), Unity não pode distinguir qual objeto está na frente do outro. Os desenvolvedores notarão uma cintilação entre dois objetos de jogo à medida que eles lutarem pelo mesmo valor de profundidade z. Isso pode ser resolvido alternando para o formato de profundidade de 24 bits, pois haverá um intervalo maior de valores para cada objeto a ser calculado para a profundidade z da câmera.
 >
 > No entanto, é recomendável, especialmente para o desenvolvimento do Hololens, modificar os planos próximos e distantes da câmera para um intervalo menor, em vez disso, mantendo o formato de profundidade de 16 bits. A profundidade z é mapeada de forma não linear para o intervalo de valores nos planos de câmera próximos e distantes. Isso pode ser modificado selecionando a *câmera principal* em sua cena e, em **Inspetor**, alterar os valores de plano de **recorte próximo & longe** para reduzir seu intervalo (ou seja, de 1000m para 100 ms ou outro valor x, etc.)
 
@@ -100,7 +100,7 @@ Leia otimizando os [tempos de compilação para IL2CPP](https://docs.unity3d.com
 O HoloLens tem uma CPU e uma GPU de classe móvel, o que significa que os aplicativos podem demorar um pouco mais para carregar. Enquanto o aplicativo estiver sendo carregado, os usuários verão apenas preto e, portanto, poderão imaginar o que está acontecendo. Para assegurá-los durante o carregamento, você pode adicionar uma tela inicial do Holographic.
 
 Para alternar a tela inicial do Holographic:
-1) Ir para**a página** **Editar** > **configurações** > do projeto
+1) Ir para a página **Editar** > configurações > do**projeto**
 2) Clique na guia **Windows Store** e abra a seção **imagem de abertura**
 3) Aplique a imagem desejada na propriedade **imagem de abertura do Windows Holographic > Holographic** .
     - Alternar a opção **Mostrar tela inicial do Unity** habilitará ou desabilitará a tela inicial com marca do Unity. Se você não tiver uma licença do Unity pro, a tela inicial da marca do Unity será sempre exibida.
@@ -122,7 +122,7 @@ Um headset de realidade misturada depende da visualização do ambiente em rela�
 Se ocorrer uma perda de controle, o comportamento padrão do Unity será parar de renderizar os hologramas, pausar o [loop do jogo](http://docs.unity3d.com/Manual/ExecutionOrder.html)e exibir uma notificação de rastreamento perdido que siga confortavelmente os usuários olhar. As notificações personalizadas também podem ser fornecidas na forma de uma imagem de perda de rastreamento. Para aplicativos que dependem do acompanhamento de toda a sua experiência, é suficiente deixar que o Unity manipule isso totalmente até que o rastreamento seja readquirido. Os desenvolvedores podem fornecer uma imagem personalizada a ser mostrada durante a perda de controle. 
 
 Para personalizar a imagem perdida de rastreamento:
-1) Ir para**a página** **Editar** > **configurações** > do projeto
+1) Ir para a página **Editar** > configurações > do**projeto**
 2) Clique na guia **Windows Store** e abra a seção **imagem de abertura**
 3) Aplique a imagem desejada na propriedade de **imagem de perda de > do Windows Holographic de rastreamento** .
 
@@ -131,7 +131,7 @@ Para personalizar a imagem perdida de rastreamento:
 Alguns aplicativos podem não exigir acompanhamento (por exemplo, [aplicativos somente de orientação](coordinate-systems-in-unity.md) , como visualizadores de vídeo de 360 graus) ou talvez precisem continuar o processamento ininterrupto enquanto o rastreamento é perdido. Nesses casos, os aplicativos podem recusar a perda padrão de comportamento de controle. Os desenvolvedores que escolhem isso são responsáveis por ocultar/desabilitar todos os objetos que não são renderizados corretamente em um cenário de perda de rastreamento. Na maioria dos casos, o único conteúdo que é recomendado para ser renderizado nesse caso é o conteúdo de corpo bloqueado, centralizado em toda a câmera principal.
 
 Para recusar o comportamento de pausa automática:
-1) Ir para**a página** **Editar** > **configurações** > do projeto
+1) Ir para a página **Editar** > configurações > do**projeto**
 2) Clique na guia **Windows Store** e abra a seção **imagem de abertura**
 3) Modifique a caixa de seleção **> do Windows Holographic na pausa de controle de perda e mostrar imagem** .
 
@@ -144,13 +144,13 @@ Para definir o comportamento personalizado quando o rastreamento é perdido, man
 Para que um aplicativo aproveite determinadas funcionalidades, ele deve declarar os recursos apropriados em seu manifesto. As declarações de manifesto podem ser feitas no Unity para que elas sejam incluídas em todas as exportações de projeto subsequentes. 
 
 Os recursos podem ser habilitados para um aplicativo de realidade misturada:
-1) Ir para**a página** **Editar** > **configurações** > do projeto
+1) Ir para a página **Editar** > configurações > do**projeto**
 2) Clique na guia **Windows Store** e abra a seção **configurações de publicação** e procure a lista de **recursos**
 
 Os recursos aplicáveis para habilitar as APIs comumente usadas para aplicativos Holographic são:
 <br>
 
-|  Capacidade  |  APIs que exigem capacidade |
+|  Funcionalidade  |  APIs que exigem capacidade |
 |----------|----------|
 |  SpatialPerception  |  SurfaceObserver | 
 |  Integrada  |  VideoCapture e fotocaptura | 
