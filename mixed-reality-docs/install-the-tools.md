@@ -7,12 +7,12 @@ ms.date: 2/11/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: atualizado, ferramentas, começar, noções básicas, unity, visual studio, kit de ferramentas
-ms.openlocfilehash: bf1c7090a3de6265ce0d31cd8f3316c2e077c7a5
-ms.sourcegitcommit: 06c27acdac24c845952f9c1d3611770756f25820
+ms.openlocfilehash: 180520bae954c5b3b96f14ce844d65cce04a4592
+ms.sourcegitcommit: c4d0132ea755c861c504dad46957e791b9c705d5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69030167"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69896568"
 ---
 # <a name="install-the-tools"></a>Instalar as ferramentas
 
@@ -39,7 +39,7 @@ Não tem um dispositivo de realidade misturada? Você pode instalar o [emulador 
 | ![Logotipo do Windows](images/Windows10_logo.png)<br><br><a href="https://developer.microsoft.com/en-US/windows/downloads/windows-10-sdk" target="_blank">**SDK do Windows 10 (10.0.18362.0)**<br>(Link de instalação manual)</a> | Fornece os cabeçalhos, bibliotecas, metadados e ferramentas mais recentes para a compilação de aplicativos do Windows 10 no HoloLens 2. | Para compilar aplicativos do HoloLens 2, você precisará instalar o SDK do Windows, build 18362 ou posterior.<br> <br> Se você estiver desenvolvendo aplicativos somente para headsets do Windows Mixed Reality de área de trabalho ou HoloLens (1º geração), poderá usar o SDK do Windows instalado pelo Visual Studio 2017. |
 | ![Logotipo do Visual Studio](images/HoloLensIcon.jpg)<br><br><a href="https://go.microsoft.com/fwlink/?linkid=2101019" target="_blank">**Emulador do HoloLens 2**<br>(Link de instalação: 10.0.18362.1028)</a><br> <br><a href="https://go.microsoft.com/fwlink/?linkid=2065980" target="_blank">**Emulador do HoloLens (1ª geração)**<br>(Link de instalação: 10.0.17763.253)</a> | O emulador permite executar aplicativos em uma imagem de máquina virtual do HoloLens sem um HoloLens físico.<br> <br> | Veja [Usando o emulador do HoloLens](using-the-hololens-emulator.md) para obter mais informações sobre como começar a usar o emulador.<br> <br> **O sistema deve ser compatível com Hyper-V** para a instalação do emulador ser bem-sucedida. Consulte a seção de Requisitos de sistema abaixo para obter detalhes. <br>|
 | ![Logotipo do Unity](images/unity_logo.png)<br><br><a href="https://unity3d.com/unity/qa/lts-releases?version=2018.4" target="_blank">**Unity 2018.4**<br>(Link de instalação)</a> | O mecanismo de jogos do Unity é a maneira mais fácil de criar experiências de realidade misturada, com suporte integrado aos recursos do Windows Mixed Reality. | É recomendável usar o fluxo LTS (suporte a longo prazo) do Unity, que é a melhor versão para iniciar novos projetos. Atualize para a revisão mais recente para obter as correções estáveis mais recentes.<br> <br>A recomendação atual é usar o **Unity 2018.4.x**, que é o build LTS necessário para o MRTK v2 abaixo.<br> <br>Alguns desenvolvedores talvez queiram usar uma versão diferente do Unity por motivos específicos. Nesses casos, o Unity oferece suporte a instalações lado a lado de versões diferentes. |
-| ![Logotipo do MRTK](images/MRTKIcon.jpg)<br><br><a href="https://github.com/Microsoft/MixedRealityToolkit-Unity/releases" target="_blank">**Kit de ferramentas de realidade misturada (MRTK v2) para Unity**</a> | O MRTK v2 para Unity é um kit de desenvolvimento multiplataforma com código aberto para aplicativos de realidade misturada.<br><br> O MRTK v2 destina-se a acelerar o desenvolvimento de aplicativos voltados para o Microsoft HoloLens, os headsets imersivos (VR) do Windows Mixed Reality e a plataforma OpenVR. O projeto visa reduzir as barreiras de entrada para criar aplicativos de realidade misturada e contribuir com a comunidade à medida que nosso trabalho progride. | Estamos trabalhando rumo à primeira versão oficial do MRTK v2. Enquanto isso, recomendamos que você baixe a versão mais recente do MRTK (RC 2.1), que inclui todas as correções de bug mais recentes. Saiba mais sobre o MRTK v2 visitando o <a href="https://github.com/Microsoft/MixedRealityToolkit-Unity/wiki" target="_blank">wiki do GitHub</a> do projeto. |
+| ![Logotipo do MRTK](images/MRTKIcon.jpg)<br><br><a href="https://github.com/Microsoft/MixedRealityToolkit-Unity/releases" target="_blank">**Kit de ferramentas de realidade misturada (MRTK v2) para Unity**</a> | O MRTK v2 para Unity é um kit de desenvolvimento multiplataforma com código aberto para aplicativos de realidade misturada.<br><br> O MRTK v2 destina-se a acelerar o desenvolvimento de aplicativos voltados para o Microsoft HoloLens, os headsets imersivos (VR) do Windows Mixed Reality e a plataforma OpenVR. O projeto visa reduzir as barreiras de entrada para criar aplicativos de realidade misturada e contribuir com a comunidade à medida que nosso trabalho progride. | É recomendável baixar a versão mais recente do MRTK (2.0.0) que inclua todas as últimas correções de bug. Saiba mais sobre o MRTK v2 visitando o <a href="https://github.com/Microsoft/MixedRealityToolkit-Unity/wiki" target="_blank">wiki do GitHub</a> do projeto. |
 
 
 ## <a name="mixed-reality-toolkit"></a>Kit de ferramentas de realidade misturada
