@@ -6,12 +6,12 @@ ms.author: xerxesb
 ms.date: 02/24/2019
 ms.topic: article
 keywords: calibragem, conforto, visuais, qualidade, IPD
-ms.openlocfilehash: 354d7eb74666471f24a6b5774e5772260b1e3570
-ms.sourcegitcommit: 5d3be2d7569d912011ea114c0a283bc3c635d5df
+ms.openlocfilehash: 1fc3904f4b3e441a967616f20e4287dbc7f08835
+ms.sourcegitcommit: 3b32339c5d5c79eaecd84ed27254a8f4321731f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69979478"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70047048"
 ---
 # <a name="improve-visual-quality-and-comfort"></a>Aprimore a qualidade visual e o conforto
 O HoloLens, o HoloLens 2 e os headsets de imersão de realidade misturada do Windows oferecem maneiras diferentes de melhorar a qualidade da experiência visual. 
@@ -52,12 +52,12 @@ Se você seguiu todas as diretrizes e a calibragem ainda falha, você pode desab
 3. **Configurações**de inicialização.
 4. Navegue até calibragem de**olho** do **sistema** >  > e selecione executar calibragem de **olho**.
 
-### <a name="calibration-when-sharing-a-device--session"></a>Calibragem ao compartilhar um dispositivo/sessão
+### <a name="calibration-when-sharing-a-devicesession"></a>Calibragem ao compartilhar um dispositivo/sessão
 
 O Hololens 2 pode ser compartilhado entre pessoas, sem a necessidade de que cada pessoa passe pela configuração do dispositivo. O Hololens 2 solicitará que o usuário calibre os visuais quando o dispositivo for colocado na cabeça se o usuário for novo no dispositivo. Se o usuário tiver calibrado os visuais anteriormente no dispositivo, a exibição será ajustada diretamente para qualidade e uma experiência de exibição confortável quando o usuário colocar o dispositivo no cabeçalho. 
 
 
-## <a name="hololens"></a>Hololens
+## <a name="hololens-v1"></a>Hololens (v1)
 
 A calibragem do IPD (distância interpupillary) pode melhorar a qualidade dos visuais.
 

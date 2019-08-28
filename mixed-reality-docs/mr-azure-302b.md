@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/03/2018
 ms.topic: article
 keywords: Azure, realidade mista, Academia, Unity, tutorial, API, visão personalizada, hololens, imersão, VR
-ms.openlocfilehash: e6e9782a8d559af660dc4765556f1e926c5360b1
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: b173648e2e829e94e47306277bd7814a19842cae
+ms.sourcegitcommit: 3b32339c5d5c79eaecd84ed27254a8f4321731f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63553910"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70047216"
 ---
 >[!NOTE]
 >Os tutoriais misturados do Academia de realidade foram projetados com o HoloLens (1º gen) e com o fone de cabeça de imersão de realidade misturada.  Como tal, achamos que é importante deixar esses tutoriais em vigor para os desenvolvedores que ainda estão procurando orientação no desenvolvimento para esses dispositivos.  Esses tutoriais **_não_** serão atualizados com os conjuntos de ferramentas e as interações mais recentes usados para o HoloLens 2.  Eles serão mantidos para continuar a trabalhar nos dispositivos com suporte. Haverá uma nova série de tutoriais que serão publicados no futuro, que demonstrarão como desenvolver para o HoloLens 2.  Esse aviso será atualizado com um link para esses tutoriais quando eles forem postados.
@@ -72,7 +72,7 @@ Recomendamos o seguinte hardware e software para este curso:
 2.  Configure e teste seu HoloLens. Se você precisar de suporte para configurar seu HoloLens, [visite o artigo configuração do hololens](https://docs.microsoft.com/hololens/hololens-setup). 
 3.  É uma boa ideia executar a calibragem e o ajuste do sensor ao começar a desenvolver um novo aplicativo do HoloLens (às vezes, ele pode ajudar a executar essas tarefas para cada usuário). 
 
-Para obter ajuda sobre calibragem, siga este [link para o artigo Calibration do HoloLens](calibration.md#hololens).
+Para obter ajuda sobre calibragem, siga este [link para o artigo Calibration do HoloLens](calibration.md#hololens-2).
 
 Para obter ajuda sobre o ajuste do sensor, siga este [link para o artigo de ajuste do sensor do HoloLens](sensor-tuning.md).
 
@@ -82,7 +82,7 @@ Para usar o *serviço de visão personalizada* no Azure, você precisará config
 
 1.  Primeiro, [navegue até a página principal do *serviço de visão personalizada* ](https://azure.microsoft.com/services/cognitive-services/custom-vision-service/).
 
-2.  Clique **no botão introdução** .
+2.  Clique no botão introdução.
 
     ![](images/AzureLabs-Lab302b-01.png)
 
@@ -781,7 +781,7 @@ Para criar esta classe:
     ```
 
     > [!IMPORTANT]
-    > Certifique-se de adicionar o valor da **chave de serviço** (chave de treinamento) e o valor da **ID do projeto** , que você anotou anteriormente; Esses são os valores que você [coletou do portal anteriormente no curso (capítulo 2, etapa 10 em diante)](#chapter-2---training-your-custom-vision-oroject).
+    > Certifique-se de adicionar o valor da **chave de serviço** (chave de treinamento) e o valor da **ID do projeto** , que você anotou anteriormente; Esses são os valores que você [coletou do portal anteriormente no curso (capítulo 2, etapa 10 em diante)](#chapter-2---training-your-custom-vision-project).
 
 5.  Adicione os seguintes métodos **Start ()** e **ativo ()** . Esses métodos são chamados na inicialização e contêm a chamada para configurar a interface do usuário:
 

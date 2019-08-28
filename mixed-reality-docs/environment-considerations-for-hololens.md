@@ -6,12 +6,12 @@ ms.author: dobrown
 ms.date: 04/22/2019
 ms.topic: article
 keywords: quadro Holographic, campo de exibição, FOV, calibração, espaços, ambiente, instruções
-ms.openlocfilehash: fd5c5020916b3fde6f91663135c3bc2b6c334b44
-ms.sourcegitcommit: 60f73ca23023c17c1da833c83d2a02f4dcc4d17b
+ms.openlocfilehash: cc856c42aaf4ddfca8365f63ab0c7df1a1a3b248
+ms.sourcegitcommit: 3b32339c5d5c79eaecd84ed27254a8f4321731f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69565992"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70047084"
 ---
 # <a name="environment-considerations-for-hololens"></a>Considerações de ambiente para o HoloLens
 
@@ -37,7 +37,7 @@ Se você tiver um luxmeter, um Lux de 500-1000 estável é um bom lugar para com
 #### <a name="types-of-lighting"></a>Tipos de iluminação
 Tipos diferentes de luz em um espaço também podem influenciar o controle. O pulso de lâmpadas com a eletricidade AC em execução por ela – se a frequência AC for 50Hz, então os pulsos de luz em 50Hz. Para uma pessoa, essa Pulsing não é percebida. No entanto, a câmera ' 30fps ' do HoloLens vê essas alterações – alguns quadros estarão bem acesos, alguns ficarão insatisfatórios e outros serão superexpostos à medida que a câmera tentar compensar os pulsos leves.
 
-Nos EUA, o padrão de frequência de eletricidade é 60, portanto, os pulsos de lâmpada são padronizados com a taxa de quadros de taxa de bits-60Hz de HoloLens alinhada com o Hololens de 30 FPS. No entanto, muitos países têm um padrão de frequência de AC de 50Hz, o que significa que alguns quadros do Hololens serão feitos durante pulsos e outros não. Em particular, a iluminação fluorescente na Europa tem sido conhecida por causar problemas. 
+Nos EUA, o padrão de frequência de eletricidade é 60, portanto, os pulsos de lâmpada são padronizados com a taxa de quadros de taxa de bits-60Hz de HoloLens alinhada com o HoloLens de 30 FPS. No entanto, muitos países têm um padrão de frequência de AC de 50Hz, o que significa que alguns quadros do HoloLens serão feitos durante pulsos e outros não. Em particular, a iluminação fluorescente na Europa tem sido conhecida por causar problemas. 
 
 Há algumas coisas que você pode tentar resolver problemas de cintilação. A temperatura, a idade da lâmpada e os ciclos de aquecimento são causas comuns de oscilação fluorescente e substituição de lâmpadas pode ajudar. A restrição de lâmpadas e a garantia de que o desenho atual são constantes também podem ajudar. 
 
@@ -46,7 +46,7 @@ O HoloLens usa pontos de referência ambientais exclusivos, também conhecidos c
 
 Um dispositivo quase nunca pode rastrear em uma área de recursos insatisfatórios, pois o dispositivo não tem como saber onde está o espaço. A adição de recursos às paredes de um espaço é geralmente uma boa maneira de melhorar o controle. Todos os cartazes, símbolos dipostos a uma parede, plantas, objetos exclusivos ou outros itens semelhantes ajudam. Uma mesa confusa é um bom exemplo de um ambiente que leva a um bom acompanhamento: há muitos recursos diferentes em uma única área. 
 
-Além disso, use recursos exclusivos no mesmo espaço. O mesmo pôster repetido várias vezes em uma parede, por exemplo, causará confusão no dispositivo, pois o HoloLens não saberá qual dos cartazes repetitivos ele está olhando. Uma maneira comum de adicionar recursos exclusivos é usar linhas de fita de mascaramento para criar padrões de nonrepetitve exclusivos ao longo das paredes e piso de um espaço. 
+Além disso, use recursos exclusivos no mesmo espaço. O mesmo pôster repetido várias vezes em uma parede, por exemplo, causará confusão no dispositivo, pois o HoloLens não saberá qual dos cartazes repetitivos ele está olhando. Uma maneira comum de adicionar recursos exclusivos é usar linhas de fita de mascaramento para criar padrões exclusivos e não repetitivos ao longo das paredes e piso de um espaço. 
 
 Uma boa pergunta é se perguntar: se você viu apenas uma pequena quantidade da cena, poderia se localizar exclusivamente no espaço? Caso contrário, é provável que o dispositivo também tenha problemas de acompanhamento.
 
@@ -54,6 +54,15 @@ Uma boa pergunta é se perguntar: se você viu apenas uma pequena quantidade da 
 Se você tiver duas áreas ou regiões que parecem iguais, o rastreador poderá imaginar que são as mesmas. Isso resulta no dispositivo que se engana para pensar que ele é outro lugar. Chamamos esses tipos de áreas de *fenda espaciais*. 
 
 Para evitar fendas espaciais, tente evitar áreas idênticas no mesmo espaço. As áreas idênticas às vezes podem incluir estações de fábrica, janelas em um prédio, racks de servidor ou estações de trabalho. As áreas de rotulagem ou a adição de recursos exclusivos a cada área de aparência semelhante podem ajudar a reduzir as fendas espaciais.
+
+### <a name="qr-codes-in-environments"></a>Códigos QR em ambientes.
+O HoloLens pode usar [códigos QR](qr-code-tracking.md) por vários motivos, como rotular objetos ou fornecer contexto adicional para ambientes, mas eles também podem ser usados para melhorar a qualidade do rastreamento. O HoloLens usará automaticamente os códigos QR para ajudar a criar um mapa, mesmo que você não esteja consumindo os dados inseridos nos códigos.
+
+Se você estiver usando códigos QR para auxiliar no rastreamento, você desejará de dois a três códigos em qualquer campo de exibição específico. Para muitos cenários, isso se traduz em colocar um código QR a cada 2-3 metros ou 6-9 pés.
+
+Verifique se os códigos QR são simples e firmemente anexados a paredes ou outras superfícies.
+
+As práticas recomendadas para gerar e imprimir códigos QR podem ser encontradas nas [práticas recomendadas para detecção de código QR](qr-code-tracking.md#best-practices-for-qr-code-detection).
  
 ### <a name="movement-in-a-space"></a>Movimento em um espaço
 Se o seu ambiente estiver constantemente mudando e mudando, o dispositivo não terá recursos estáveis para localização. 
@@ -110,4 +119,4 @@ Se outra pessoa estiver usando seu HoloLens, ele deverá executar o aplicativo d
 * [Projeto de mapeamento espacial](spatial-mapping-design.md)
 * [Hologramas](hologram.md)
 * [Calibragem](calibration.md)
-* [Usar o Hololens em novos espaços](use-hololens-in-new-spaces.md)
+* [Usar o HoloLens em novos espaços](use-hololens-in-new-spaces.md)

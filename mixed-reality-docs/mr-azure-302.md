@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: Azure, realidade mista, Academia, Unity, tutorial, API, pesquisa Visual computacional, hololens, imersão, VR
-ms.openlocfilehash: 9d5288904dd6cae08a995ae40a31b00fea655776
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 9cc526afdc36b8056afd61948fea5cf98015bb35
+ms.sourcegitcommit: 3b32339c5d5c79eaecd84ed27254a8f4321731f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63552122"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70047192"
 ---
 >[!NOTE]
 >Os tutoriais misturados do Academia de realidade foram projetados com o HoloLens (1º gen) e com o fone de cabeça de imersão de realidade misturada.  Como tal, achamos que é importante deixar esses tutoriais em vigor para os desenvolvedores que ainda estão procurando orientação no desenvolvimento para esses dispositivos.  Esses tutoriais **_não_** serão atualizados com os conjuntos de ferramentas e as interações mais recentes usados para o HoloLens 2.  Eles serão mantidos para continuar a trabalhar nos dispositivos com suporte. Haverá uma nova série de tutoriais que serão publicados no futuro, que demonstrarão como desenvolver para o HoloLens 2.  Esse aviso será atualizado com um link para esses tutoriais quando eles forem postados.
@@ -71,7 +71,7 @@ Recomendamos o seguinte hardware e software para este curso:
 2.  Configure e teste seu HoloLens. Se você precisar de suporte para configurar seu HoloLens, [visite o artigo configuração do hololens](https://docs.microsoft.com/hololens/hololens-setup). 
 3.  É uma boa ideia executar a calibragem e o ajuste do sensor ao começar a desenvolver um novo aplicativo do HoloLens (às vezes, ele pode ajudar a executar essas tarefas para cada usuário). 
 
-Para obter ajuda sobre calibragem, siga este [link para o artigo Calibration do HoloLens](calibration.md#hololens).
+Para obter ajuda sobre calibragem, siga este [link para o artigo Calibration do HoloLens](calibration.md#hololens-2).
 
 Para obter ajuda sobre o ajuste do sensor, siga este [link para o artigo de ajuste do sensor do HoloLens](sensor-tuning.md).
 
@@ -515,11 +515,11 @@ Esse método chama o método *ExecuteImageCaptureAndAnalysis ()* para iniciar a 
     ```
  
 > [!WARNING] 
-> Neste ponto, você observará um erro exibido no *painel de console do editor do Unity*. Isso ocorre porque o código faz referência  à classe visionmanager que você criará no próximo capítulo.
+> Neste ponto, você observará um erro exibido no *painel de console do editor do Unity*. Isso ocorre porque o código faz referência à classe visionmanager que você criará no próximo capítulo.
 
 ## <a name="chapter-7--call-to-azure-and-image-analysis"></a>Capítulo 7 – chamar o Azure e a análise de imagem
 
-O último script que você precisa criar é a  classe visionmanager. 
+O último script que você precisa criar é a classe visionmanager. 
 
 Essa classe é responsável por:
 
@@ -544,7 +544,7 @@ Para criar esta classe:
         using UnityEngine.Networking;
     ```
  
-5.  Na parte superior do seu script, *dentro* da  classe visionmanager (acima do método *Start ()* ), agora você precisa criar duas *classes* que irão representar a resposta JSON desserializada do Azure:
+5.  Na parte superior do seu script, *dentro* da classe visionmanager (acima do método *Start ()* ), agora você precisa criar duas *classes* que irão representar a resposta JSON desserializada do Azure:
 
     ```csharp
         [System.Serializable]
@@ -677,7 +677,7 @@ Para criar esta classe:
     ```
 
 9.  Certifique-se de salvar suas alterações no *Visual Studio* antes de retornar ao *Unity*.
-10. De volta ao editor do Unity, clique e arraste  as classes visionmanager e *ImageCapture* da pasta **scripts** para o objeto da **câmera principal** no *painel hierarquia*. 
+10. De volta ao editor do Unity, clique e arraste as classes visionmanager e *ImageCapture* da pasta **scripts** para o objeto da **câmera principal** no *painel hierarquia*. 
 
 ## <a name="chapter-8--before-building"></a>Capítulo 8 – antes de Compilar
 
@@ -688,7 +688,7 @@ Antes de fazer isso, verifique se:
 -   Todos os scripts são anexados ao objeto da **câmera principal** . 
 -   Todos os campos no *painel principal do Inspetor de câmera* são atribuídos corretamente.
 -   Certifique-se de inserir sua **chave de autenticação** na variável **authorizationKey** .
--   Verifique se você também verificou seu ponto de extremidade  em seu script do visionmanager e se ele está alinhado à *sua* região (este documento usa o *Oeste-EUA* por padrão).
+-   Verifique se você também verificou seu ponto de extremidade em seu script do visionmanager e se ele está alinhado à *sua* região (este documento usa o *Oeste-EUA* por padrão).
 
 ## <a name="chapter-9--build-the-uwp-solution-and-sideload-the-application"></a>Capítulo 9 – criar a solução UWP e sideloadr o aplicativo
 Tudo o que é necessário para a seção do Unity deste projeto foi concluído, portanto, é hora de compilá-lo a partir do Unity.

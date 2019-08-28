@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/11/2018
 ms.topic: article
 keywords: Azure, realidade mista, Academia, borda, IOT Edge, tutorial, API, notificação, funções, tabelas, hololens, imersão, VR, IOT, máquina virtual, Ubuntu, Python
-ms.openlocfilehash: 93f7dc64426360d2e02b0ee0a9b1796fc8f2b469
-ms.sourcegitcommit: 06ac2200d10b50fb5bcc413ce2a839e0ab6d6ed1
+ms.openlocfilehash: ec669b799e7c46a9a4ed87674ed78e50f816c9e9
+ms.sourcegitcommit: 3b32339c5d5c79eaecd84ed27254a8f4321731f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67694596"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70047238"
 ---
 >[!NOTE]
 >Os tutoriais misturados do Academia de realidade foram projetados com o HoloLens (1º gen) e com o fone de cabeça de imersão de realidade misturada.  Como tal, achamos que é importante deixar esses tutoriais em vigor para os desenvolvedores que ainda estão procurando orientação no desenvolvimento para esses dispositivos.  Esses tutoriais **_não_** serão atualizados com os conjuntos de ferramentas e as interações mais recentes usados para o HoloLens 2.  Eles serão mantidos para continuar a trabalhar nos dispositivos com suporte. Haverá uma nova série de tutoriais que serão publicados no futuro, que demonstrarão como desenvolver para o HoloLens 2.  Esse aviso será atualizado com um link para esses tutoriais quando eles forem postados.
@@ -84,7 +84,7 @@ O hardware e o software a seguir são necessários:
 1. Configure e teste seu HoloLens. Se você precisar de suporte para configurar seu HoloLens, [visite o artigo configuração do hololens](https://docs.microsoft.com/hololens/hololens-setup).
 2. É uma boa ideia executar a calibragem e o **ajuste do sensor** ao começar a desenvolver um novo aplicativo do HoloLens (às vezes, ele pode ajudar a executar essas tarefas para cada usuário).
 
-Para obter ajuda sobre calibragem, siga este [link para o artigo Calibration do HoloLens](calibration.md#hololens).
+Para obter ajuda sobre calibragem, siga este [link para o artigo Calibration do HoloLens](calibration.md#hololens-2).
 
 Para obter ajuda sobre o ajuste do sensor, siga este [link para o artigo de ajuste do sensor do HoloLens](sensor-tuning.md).
 
@@ -279,7 +279,7 @@ Agora você pode passar para a configuração de seu dispositivo **que executa o
 
 2.  Ao longo deste capítulo, você pode ser solicitado, por *terminal*, por permissão para usar o armazenamento do dispositivo e, para inserir **y/n** (Sim ou não), digite **' y '** e pressione a tecla **Enter** , para aceitar.
 
-3.  Depois que esse comando for concluído, use o seguinte comando para instalar a ondulação:
+3.  Depois que esse comando for concluído, use o seguinte comando parainstalar a ondulação:
 
     ```bash
         sudo apt install curl
@@ -744,7 +744,7 @@ Em seguida, você criará a pasta *imagens* , usada pelo script Python para veri
 
 ## <a name="chapter-9---package-the-solution-as-a-container"></a>Capítulo 9-empacotar a solução como um contêiner
 
-1.  Agora você está pronto para "empacotar" seus arquivos como um contêiner e enviá-los por push para o **registro de contêiner do Azure**. Em vs Code, abra o *terminal integrado* (**Exibir** > **terminal integrado** ou **Ctrl**+ **\`** ) e use a linha a seguir para fazer logon  no Docker (substitua os valores do comando com as credenciais do seu **ACR (registro de contêiner do Azure)** ):
+1.  Agora você está pronto para "empacotar" seus arquivos como um contêiner e enviá-los por push para o **registro de contêiner do Azure**. Em vs Code, abra o *terminal integrado* (**Exibir** > **terminal integrado** ou **Ctrl**+ **\`** ) e use a linha a seguir para fazer logon no Docker (substitua os valores do comando com as credenciais do seu **ACR (registro de contêiner do Azure)** ):
 
     ```bash
         docker login -u <ACR username> -p <ACR password> <ACR login server>
@@ -752,7 +752,7 @@ Em seguida, você criará a pasta *imagens* , usada pelo script Python para veri
 
 2. Clique com o botão direito do mouse no arquivo **Deployment. Template. JSON**e clique em **Compilar IOT Edge solução**. Esse processo de compilação leva algum tempo (dependendo do seu dispositivo), portanto, esteja preparado para aguardar. Após a conclusão do processo de compilação, um arquivo **Deployment. JSON** será criado dentro de uma nova pasta chamada **config**.
 
-    ![Criar implantação](images/AzureLabs-Lab313-30.png)
+    ![criar implantação](images/AzureLabs-Lab313-30.png)
 
 3. Abra a **paleta de comandos** novamente e pesquise pelo **Azure:** Entre. Siga os prompts usando suas credenciais de conta do Azure; VS Code fornecerá uma opção para *copiar e abrir*, que copiará o código do dispositivo que você precisará em breve e abrirá o navegador da Web padrão. Quando solicitado, Cole o código do dispositivo para autenticar seu computador.
 
@@ -766,11 +766,11 @@ Em seguida, você criará a pasta *imagens* , usada pelo script Python para veri
 
 6. Seu dispositivo deve ser carregado e exibido. Clique com o botão direito do mouse no nome do dispositivo e clique em **criar implantação para um único dispositivo**.
 
-    ![Criar implantação](images/AzureLabs-Lab313-33b.png)
+    ![criar implantação](images/AzureLabs-Lab313-33b.png)
 
 7. Você obterá um prompt do *Explorador de arquivos* , onde poderá navegar para a pasta **config** e, em seguida, selecionar o arquivo **Deployment. JSON** . Com esse arquivo selecionado, clique no botão **selecionar manifesto de implantação de borda** .
 
-    ![Criar implantação](images/AzureLabs-Lab313-34.png)
+    ![criar implantação](images/AzureLabs-Lab313-34.png)
 
 8. Neste ponto, você forneceu ao seu **serviço de Hub IOT** o manifesto para implantar seu contêiner, como um módulo, do registro de **contêiner do Azure**, implantando-o efetivamente em seu dispositivo.
 
@@ -886,11 +886,11 @@ Navegue de volta para o portal do Azure, no qual você criará um serviço de ta
 
 8. Clique no botão **ir para recurso** na notificação e você será levado para a página de visão geral da nova instância do serviço de armazenamento.
 
-    ![Ir para o recurso](images/AzureLabs-Lab313-39.png)
+    ![ir para o recurso](images/AzureLabs-Lab313-39.png)
 
 9. Na página Visão geral, no lado direito, clique em **tabelas**.
     
-    ![Tabelas](images/AzureLabs-Lab313-40.png)
+    ![tabelas](images/AzureLabs-Lab313-40.png)
 
 10. O painel à direita será alterado para mostrar as informações do **serviço tabela** , onde você precisa adicionar uma nova tabela. Para fazer isso, clique no botão **+ tabela** no canto superior esquerdo.
 
@@ -1037,7 +1037,7 @@ Primeiro, você precisa criar um arquivo que permitirá que o Azure function car
 
 10. Clique no botão **ir para recurso** na notificação para explorar sua nova instância de serviço. 
 
-    ![Ir para o recurso](images/AzureLabs-Lab313-57.png)
+    ![ir para o recurso](images/AzureLabs-Lab313-57.png)
 
 11. No lado esquerdo do painel novo, clique no **+** ícone (mais) ao lado de *funções*, para criar uma nova função.
 

@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: Azure, realidade mista, Academia, Unity, tutorial, API, Microsoft Graph, hololens, imersão, VR
-ms.openlocfilehash: 04c72a7ef7724cfcc27867f7f003c171a6f7851f
-ms.sourcegitcommit: 06ac2200d10b50fb5bcc413ce2a839e0ab6d6ed1
+ms.openlocfilehash: 775971c4e4289d2dc963dfa2bf033192d9f3489e
+ms.sourcegitcommit: 3b32339c5d5c79eaecd84ed27254a8f4321731f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67694523"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70047201"
 ---
 >[!NOTE]
 >Os tutoriais misturados do Academia de realidade foram projetados com o HoloLens (1º gen) e com o fone de cabeça de imersão de realidade misturada.  Como tal, achamos que é importante deixar esses tutoriais em vigor para os desenvolvedores que ainda estão procurando orientação no desenvolvimento para esses dispositivos.  Esses tutoriais **_não_** serão atualizados com os conjuntos de ferramentas e as interações mais recentes usados para o HoloLens 2.  Eles serão mantidos para continuar a trabalhar nos dispositivos com suporte. Haverá uma nova série de tutoriais que serão publicados no futuro, que demonstrarão como desenvolver para o HoloLens 2.  Esse aviso será atualizado com um link para esses tutoriais quando eles forem postados.
@@ -66,7 +66,7 @@ Recomendamos o seguinte hardware e software para este curso:
 2.  Configure e teste seu HoloLens. Se você precisar de suporte para configurar seu HoloLens, [visite o artigo configuração do hololens](https://docs.microsoft.com/hololens/hololens-setup). 
 3.  É uma boa ideia executar a calibragem e o ajuste do sensor ao começar a desenvolver um novo aplicativo do HoloLens (às vezes, ele pode ajudar a executar essas tarefas para cada usuário). 
 
-Para obter ajuda sobre calibragem, siga este [link para o artigo Calibration do HoloLens](calibration.md#hololens).
+Para obter ajuda sobre calibragem, siga este [link para o artigo Calibration do HoloLens](calibration.md#hololens-2).
 
 Para obter ajuda sobre o ajuste do sensor, siga este [link para o artigo de ajuste do sensor do HoloLens](sensor-tuning.md).
 
@@ -226,7 +226,7 @@ Para importar o pacote:
 
 6.  Em seguida, você precisa abrir a pasta **WSA** , dentro da pasta **MSGraph** . Você verá uma cópia do mesmo arquivo que acabou de configurar. Selecione o arquivo e, em seguida, no Inspetor:
 
-    -   Verifique se **qualquer plataforma** está desmarcada e se **somente** **WSAPlayer** está **marcado**.
+    -   Verifique se **qualquer plataforma** estádesmarcada e se **somente** **WSAPlayer** está **marcado**.
 
     -   Verifique se o **SDK** está definido como **UWP**e se o **back-end de script** está definido como **dot net**
 
@@ -818,7 +818,7 @@ Para criar o script:
 
 1.  Clique duas vezes na pasta **scripts** para abri-la.
 
-2.  Clique com botão direito dentro de **Scripts** pasta, clique em **Create** >  **C# Script**. Nomeie o script de interações.
+2.  Clique com botão direito dentro de **Scripts** pasta, clique em **Create** >  **C# Script**. Nomeie o scriptde interações.
 
 3.  Clique duas vezes no script para abri-lo com o Visual Studio.
 
@@ -909,9 +909,9 @@ Para criar o script:
 
 ## <a name="chapter-9---set-up-the-script-references"></a>Capítulo 9-configurar as referências de script
 
-Neste capítulo, você precisa posicionar o  script de interações na **câmera principal**. Esse script manipulará a colocação dos outros scripts onde eles precisam ser.
+Neste capítulo, você precisa posicionar o script de interações na **câmera principal**. Esse script manipulará a colocação dos outros scripts onde eles precisam ser.
 
--  Na pasta **scripts** do *painel Projeto*, arraste as interações de  script para o objeto da **câmera principal** , conforme mostrado abaixo.
+-  Na pasta **scripts** do *painel Projeto*, arraste as interações de script para o objeto da **câmera principal** , conforme mostrado abaixo.
 
     ![](images/AzureLabs-Lab311-29.png)
 
@@ -923,7 +923,7 @@ Para criar a marca:
 
 1.  No editor do Unity, clique na **câmera principal** no *painel hierarquia*.
 
-2.  No *painel Inspetor* , clique na marca **MainCamera**  para abrir uma lista suspensa. Clique em **adicionar marca..** .
+2.  No *painel Inspetor* , clique na marca **MainCamera** para abrir uma lista suspensa. Clique em **adicionar marca..** .
 
     ![](images/AzureLabs-Lab311-30.png)
 
