@@ -104,8 +104,7 @@
 #### [Comando de voz](Voice-design.md)
 #### [Focar com a cabeça e esperar](Gaze-and-dwell.md)
 ### [Focar com a cabeça e confirmar](gaze-and-commit.md)
-### Interações complementares
-#### [Olhar fixo](eye-tracking.md)
+### [Olhar fixo](eye-tracking.md)
 ## Estilo
 ### [Cor, luz e materiais](color,-light-and-materials.md)
 ### [Projeto de som espacial](spatial-sound-design.md)
@@ -296,7 +295,7 @@
 ### [Conexão segura com a comunicação remota holográfica](holographic-remoting-secure-connection.md)
 ### [Solução de problemas e limitações](holographic-remoting-troubleshooting.md)
 ### [Termos de licença de software de comunicação remota holográfica](https://docs.microsoft.com/en-us/legal/mixed-reality/microsoft-holographic-remoting-software-license-terms)
-### Comunicação remota holográfica para o HoloLens 1
+### Comunicação remota holográfica para o HoloLens (1ª geração)
 #### [Adicionar comunicação remota holográfica](add-holographic-remoting.md)
 ## Outro
 ### [Acompanhamento de código QR](qr-code-tracking.md)
