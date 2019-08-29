@@ -6,12 +6,12 @@ ms.author: xerxesb
 ms.date: 02/24/2019
 ms.topic: article
 keywords: calibragem, conforto, visuais, qualidade, IPD
-ms.openlocfilehash: 1fc3904f4b3e441a967616f20e4287dbc7f08835
-ms.sourcegitcommit: 3b32339c5d5c79eaecd84ed27254a8f4321731f1
+ms.openlocfilehash: e86319dadeda02f71427b87980268eaf18942c49
+ms.sourcegitcommit: ff330a7e36e5ff7ae0e9a08c0e99eb7f3f81361f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70047048"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70122086"
 ---
 # <a name="improve-visual-quality-and-comfort"></a>Aprimore a qualidade visual e o conforto
 O HoloLens, o HoloLens 2 e os headsets de imersão de realidade misturada do Windows oferecem maneiras diferentes de melhorar a qualidade da experiência visual. 
@@ -21,19 +21,23 @@ O HoloLens, o HoloLens 2 e os headsets de imersão de realidade misturada do Win
 ### <a name="calibration"></a>Calibragem
 
 O Hololens 2 foi projetado para fornecer as imagens visuais de qualidade mais alta e o conforto para nossos clientes. A tecnologia de controle de olho é usada para melhorar a experiência do usuário de ver e interagir com o ambiente virtual.  
-No HoloLens 2, você será solicitado a calibrar seus visuais durante a configuração do dispositivo. Os usuários são solicitados a examinar o conjunto de destinos fixação da. Isso permite que o dispositivo ajuste a renderização de holograma para o usuário para garantir que os hologramas posicionados com precisão, a experiência de exibição 3D confortável e a qualidade de exibição aprimorada. Todos os ajustes ocorrem em tempo real sem necessidade de ajuste manual. Usando os olhos como pontos de referência, o dispositivo é ajustado para cada usuário e os visuais são ajustados conforme o fone de ouvido muda um pouco durante o uso. O controle de posição de olho é usado internamente pelo sistema e os desenvolvedores não precisam fazer nada para aproveitar esse recurso. Essas informações não estão disponíveis para os desenvolvedores. No Hololens 2, a execução da calibragem também garante o acompanhamento preciso de olhar para cada usuário. O acompanhamento ocular permite que os aplicativos acompanhem para que local o usuário está olhando em tempo real. Esse é o principal recurso que os desenvolvedores podem aproveitar para habilitar um nível totalmente novo de contexto, compreensão humana e interações dentro da experiência do Holographic.  
-A calibragem é armazenada localmente no dispositivo e não está associada a nenhuma informação de conta. Não há registro de quem usou o dispositivo sem calibragem. Isso significa que novos usuários receberão uma solicitação para calibrar visuais quando usarem o dispositivo pela primeira vez, bem como os usuários que optaram pela recalibração anteriormente ou se a calibragem não tiver sido bem-sucedida. A calibragem sempre pode ser excluída do dispositivo em **configurações** > **rastreador**de**privacidade** > . 
+
+No HoloLens 2, você será solicitado a calibrar seus visuais durante a configuração do dispositivo. Os usuários são solicitados a examinar um conjunto de destinos fixação da. Isso permite que o dispositivo ajuste a renderização de hologramas para o usuário para garantir que os hologramas posicionados com precisão, uma experiência de exibição 3D confortável e qualidade de exibição aprimorada. Todos os ajustes ocorrem imediatamente sem a necessidade de ajuste manual. Usando os olhos como pontos de referência, o dispositivo é ajustado individualmente para cada usuário, e os visuais são ajustados conforme o fone de ouvido muda um pouco ao longo do uso. O controle de posição de olho é usado internamente pelo sistema e os desenvolvedores não precisam fazer nada para aproveitar esse recurso. Na verdade, essas informações não estão disponíveis para os desenvolvedores.
+Consulte as APIs de [acompanhamento de olho](https://docs.microsoft.com/en-us/uwp/api/windows.perception.people.eyespose) para saber mais sobre o tipo de dados que o sistema de controle de olhos fornece aos desenvolvedores.
+
+No Hololens 2, a execução da calibragem também garante o acompanhamento preciso de olhar para cada usuário. O acompanhamento ocular permite que os aplicativos acompanhem para que local o usuário está olhando em tempo real. Esse é o principal recurso que os desenvolvedores podem aproveitar para habilitar um nível totalmente novo de contexto, compreensão humana e interações dentro da experiência do Holographic.  
+
+Os dados de calibragem são armazenados localmente no dispositivo e não são associados a nenhuma informação de conta. Não há registro de quem usou o dispositivo sem calibragem. Isso significa que os usuários receberão uma solicitação para calibrar quando usarem o dispositivo pela primeira vez, bem como os usuários que optaram pela rescalibragem anteriormente ou se a calibração não tiver sido bem-sucedida. Os dados de calibragem sempre podem ser excluídos do dispositivo em **configurações** > **rastreador**de**privacidade** > . 
 
 ### <a name="calibration-failures"></a>Falhas de calibragem
-
 A calibragem deve funcionar para a maioria dos usuários, mas há casos em que o usuário pode não conseguir calibrar com êxito.  
 Alguns exemplos de falhas de calibragem são devido a:
-- Usuário recebendo distraídos e não seguindo os destinos de calibragem durante a experiência de calibragem
+- O usuário obteve distraídos e não confira os alvos de calibragem durante a experiência de calibragem
 - Visor ou visor de dispositivo sujo ou arranhado não está posicionado corretamente 
-- Óculos sujos ou arranhados
 - Certos tipos de lentes de contato e óculos (lentes de contato coloridas, algumas lentes de contato toric, óculos de bloqueio de IR, alguns óculos altos de receita, óculos, etc.)
-- Composição mais pronunciada, algumas extensões Eyelash
-- Occlusions de olho e/ou visor do dispositivo (cabelo, alguns quadros eyeglass grossos)
+- Óculos sujos ou arranhados
+- Mais uma composição pronunciada, algumas extensões Eyelash
+- Occlusions de olho e/ou visor do dispositivo (cabelo, alguns quadros óculos grossos)
 - Olho physiology, certas condições de olho e/ou cirurgia de olho (alguns olhos estreitos, longa eyelashes, amblyopia, Nystagmus, alguns casos de LASIK ou outros olhos Surgeries, etc.)
 
 Se a calibragem não for bem-sucedida, tente uma destas correções: 
@@ -44,21 +48,22 @@ Se a calibragem não for bem-sucedida, tente uma destas correções:
 - Verifique se há luz suficiente em sua sala e se você não está sob a luz do sol direta
 - Verifique se você está seguindo cuidadosamente os destinos durante a calibragem
 
-Se você seguiu todas as diretrizes e a calibragem ainda falha, você pode desabilitar o prompt de calibragem em **configurações** > calibragem do**sistema** > . ' Quando uma nova pessoa usa esse Hololens, pedir automaticamente para executar a calibragem de olho ' deve ser ajustada. Entenda que isso pode resultar na pior qualidade de renderização de holograma e discomfort.
+Se você seguiu todas as diretrizes e a calibragem ainda estiver falhando, você poderá desabilitar o prompt de calibragem em **configurações** > calibragem do**sistema** > : *"Quando uma nova pessoa usa esse Hololens, pedir automaticamente para executar a calibragem de olho"* deve ser desativada. Entenda que isso pode resultar na pior qualidade de renderização de holograma e discomfort.
 
 ### <a name="launching-the-calibration-app-from-settings"></a>Iniciando o aplicativo de calibragem de configurações
-1. Use o gesto de início para acessar o [menu iniciar](navigating-the-windows-mixed-reality-home.md#start-menu).
-2. Selecione **todos os aplicativos** para exibir todos os aplicativos se **as configurações** não estiverem fixadas no início.
-3. **Configurações**de inicialização.
-4. Navegue até calibragem de**olho** do **sistema** >  > e selecione executar calibragem de **olho**.
+1. Vá para a página configurações no seu HoloLens 2
+    * Use o *"gesto de início"* para abrir o [menu iniciar](navigating-the-windows-mixed-reality-home.md#start-menu). Como alternativa, você também pode simplesmente dizer *"ir para o início"* .
+    * Se **as configurações** não estiverem fixadas em Iniciar, selecione **todos os aplicativos** para exibir todos os aplicativos
+    * **Configurações** de inicialização
+2. Navegue até calibragem de**olho** do **sistema** >  > e selecione executar calibragem de **olho**
+
 
 ### <a name="calibration-when-sharing-a-devicesession"></a>Calibragem ao compartilhar um dispositivo/sessão
+O Hololens 2 pode ser compartilhado entre as pessoas sem a necessidade de cada pessoa passar pela experiência de configuração do dispositivo.
+O Hololens 2 solicitará que o usuário calibre os visuais quando o dispositivo for colocado na cabeça se o usuário for novo no dispositivo. Se o usuário tiver calibrado os visuais anteriormente no dispositivo, a exibição será ajustada diretamente para qualidade e uma experiência de exibição confortável quando o usuário colocar o dispositivo no cabeçalho. 
 
-O Hololens 2 pode ser compartilhado entre pessoas, sem a necessidade de que cada pessoa passe pela configuração do dispositivo. O Hololens 2 solicitará que o usuário calibre os visuais quando o dispositivo for colocado na cabeça se o usuário for novo no dispositivo. Se o usuário tiver calibrado os visuais anteriormente no dispositivo, a exibição será ajustada diretamente para qualidade e uma experiência de exibição confortável quando o usuário colocar o dispositivo no cabeçalho. 
 
-
-## <a name="hololens-v1"></a>Hololens (v1)
-
+## <a name="hololens-v1"></a>HoloLens (v1)
 A calibragem do IPD (distância interpupillary) pode melhorar a qualidade dos visuais.
 
 ### <a name="during-setup"></a>Durante a instalação
