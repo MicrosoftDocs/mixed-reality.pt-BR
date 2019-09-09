@@ -1,144 +1,170 @@
 ---
-title: Compartilhado experiências na realidade mista
-description: Aplicativos holográfico podem compartilhar âncoras espaciais do um HoloLens para outro, permitindo que os usuários renderizar um holograma no mesmo lugar no mundo real em vários dispositivos.
+title: Experiências compartilhadas em realidade misturada
+description: Os aplicativos Holographic podem compartilhar âncoras espaciais de um HoloLens para outro, permitindo que os usuários processem um holograma no mesmo lugar do mundo real em vários dispositivos.
 author: thetuvix
 ms.author: grbury
 ms.date: 02/10/2019
 ms.topic: article
-keywords: experiência compartilhada, misturadas realidade, holograma, âncora espacial, multiusuário, vários
-ms.openlocfilehash: b27da1e73c927a26e33746cd2db08e67c6f70acc
-ms.sourcegitcommit: f7fc9afdf4632dd9e59bd5493e974e4fec412fc4
+keywords: experiência compartilhada, realidade misturada, holograma, âncora espacial, vários usuários, vários
+ms.openlocfilehash: fbc636a5d65e605ae9e9f9655eb15550ff8de7b7
+ms.sourcegitcommit: e5b677f92ac4b1dff9aad6c329345a5aca4fcef5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2019
-ms.locfileid: "59591026"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69020203"
 ---
-# <a name="shared-experiences-in-mixed-reality"></a>Compartilhado experiências na realidade mista
+# <a name="shared-experiences-in-mixed-reality"></a>Experiências compartilhadas em realidade misturada
 
-Hologramas não precisam permanecer particulares para apenas um usuário. Aplicativos holográfico podem compartilhar [âncoras espaciais](coordinate-systems.md) de um HoloLens, dispositivo iOS ou Android para outro, permitindo que os usuários renderizar um holograma no mesmo lugar no mundo real em vários dispositivos.
+Os hologramas não precisam permanecer privados a apenas um usuário. Os aplicativos Holographic podem compartilhar [âncoras espaciais](coordinate-systems.md) de um dispositivo HoloLens, Ios ou Android para outro, permitindo que os usuários processem um holograma no mesmo local do mundo real em vários dispositivos.
 
 ## <a name="six-questions-to-define-shared-scenarios"></a>Seis perguntas para definir cenários compartilhados
 
-Antes de começar a criação de experiências compartilhadas, é importante definir os cenários de destino. Esses cenários ajudar a esclarecer o que você está projetando e estabelecer um vocabulário comum para ajudar a comparar e contrastar os recursos necessários em sua experiência. Noções básicas sobre o problema principal e os caminhos diferentes para soluções, é fundamental para descobrir oportunidades inerentes essa nova mídia.
+Antes de começar a projetar para experiências compartilhadas, é importante definir os cenários de destino. Esses cenários ajudam a esclarecer o que você está criando e estabelecem um vocabulário comum para ajudar a comparar e contrastar os recursos necessários em sua experiência. Compreender o problema principal, e os diferentes caminhos para soluções, é a chave para descobrir oportunidades inerentes a esse novo meio.
 
-Por meio de protótipos internos e explorações de nosso agências de parceiro do HoloLens, criamos seis perguntas para ajudá-lo a definir cenários compartilhados. Essas perguntas formam uma estrutura, que não se destina a ser completa, para ajudar a extrair os atributos importantes de seus cenários.
+Por meio de protótipos internos e explorações de nossos órgãos de parceiros de HoloLens, criamos seis perguntas para ajudá-lo a definir cenários compartilhados. Essas perguntas formam uma estrutura, não deve ser exaustiva, para ajudar a filtrar os atributos importantes dos seus cenários.
 
 ### <a name="1-how-are-they-sharing"></a>1. Como eles estão compartilhando?
 
-Uma apresentação pode ser levada por um único usuário virtual, enquanto os vários usuários podem colaborar, ou quando um professor pode fornecer orientação para os alunos virtuais trabalhar com materiais virtuais — a complexidade do experiências aumenta com base no nível da agência, um usuário tem ou pode ter em um cenário.
+Uma apresentação pode ser conduzida por um único usuário virtual, enquanto vários usuários podem colaborar ou um professor pode fornecer orientação para estudantes virtuais trabalhando com materiais virtuais – a complexidade das experiências aumenta com base no nível de agência que um usuário tem ou pode ter em um cenário.
 
-![Homem e mulher com holograph na tabela](images/man-and-women-with-holograph-on-table-500px.png)
+![Homem e mulheres com holograph na tabela](images/man-and-women-with-holograph-on-table-500px.png)
 
-Há muitas maneiras de compartilhar, mas descobrimos que a maioria delas se enquadram em três categorias:
-* **Apresentação**: Quando o mesmo conteúdo está sendo exibido para vários usuários. Por exemplo: Professor é fornecer uma palestra para vários alunos usando o mesmo material holográfico sendo apresentado para todos. O professor Entretanto pode ter seu próprias dicas e anotações que podem não estar visíveis para outras pessoas.
-* **Colaboração**: Quando as pessoas estão trabalhando juntos para atingir alguns objetivos comuns. Por exemplo:  O professor deu a um projeto para saber mais sobre como executar uma cirurgia do coração. Os alunos ao emparelhar e criar uma experiência de laboratório de habilidades compartilhado que permite que os alunos médicos colaborar no modelo de coração e aprender.
-* **Diretrizes de**: Quando uma pessoa está ajudando a alguém para resolver um problema em uma interação de estilo mais um. Por exemplo: O professor fornecendo diretrizes para um aluno quando ele está executando o laboratório de habilidades de cirurgia do coração na experiência de compartilhado.
+Há várias maneiras de compartilhar, mas descobrimos que a maioria deles se enquadra em três categorias:
+* **Apresentação**: Quando o mesmo conteúdo está sendo mostrado para vários usuários. Por exemplo: Um professor está dando uma palestra para vários alunos usando o mesmo material de Holographic que está sendo apresentado a todos. No entanto, o professor poderia ter suas próprias dicas e anotações que podem não estar visíveis para outras pessoas.
+* **Colaboração**: Quando as pessoas trabalham em conjunto para alcançar algumas metas comuns. Por exemplo: O professor deu um projeto para aprender sobre a execução de um coração cirurgia. Os alunos emparelham e criam uma experiência de laboratório de habilidades compartilhadas que permite que os alunos médicos colaborem no modelo de coração e aprendam.
+* **Diretrizes**: Quando uma pessoa está ajudando alguém a resolver um problema em uma interação de estilo um ou mais um. Por exemplo: O professor que oferece orientação a um aluno quando ele está realizando o laboratório de conhecimentos de cirurgia de coração na experiência compartilhada.
 
-### <a name="2-what-is-the-group-size"></a>2. O que é o tamanho do grupo?
+### <a name="2-what-is-the-group-size"></a>2. Qual é o tamanho do grupo?
 
-**Um para um** compartilhando experiências pode fornecer uma linha de base forte e o ideal é que suas provas de conceito podem ser criadas nesse nível. Mas lembre-se de que compartilhando com grandes grupos (além de 6 pessoas) pode levar a dificuldade da técnica (dados e sistema de rede) para social (o impacto de haver uma sala com [avatares vários](https://vimeo.com/160704056)). Complexidade aumenta exponencialmente conforme você vai **pequena** à **grandes grupos**.
+As experiências de compartilhamento de **um para um** podem fornecer uma linha de base forte e, teoricamente, suas provas de conceito podem ser criadas nesse nível. Mas esteja ciente de que o compartilhamento com grupos grandes (além de 6 pessoas) pode levar a dificuldades de técnicas (dados e rede) para o social (o impacto de estar em sala com [vários avatars](https://vimeo.com/160704056)). A complexidade aumenta exponencialmente à medida que você vai de **pequenos** a **grandes grupos**.
 
 Descobrimos que as necessidades dos grupos podem se enquadrar em três categorias de tamanho:
 * 1:1
 * Pequeno < 7
-* Grande > = 7
+* > Grande = 7
 
-Tamanho do grupo torna-se para uma pergunta importante porque ela influencia:
-* Representações de pessoas no espaço holográfica
+O tamanho do grupo faz uma pergunta importante porque ele influencia:
+* Representações de pessoas no espaço de Holographic
 * Escala de objetos
-* Escala do ambiente
+* Escala de ambiente
 
-### <a name="3-where-is-everyone"></a>3. Onde estão todos?
+### <a name="3-where-is-everyone"></a>3. Onde está todos?
 
-A intensidade da realidade misturada entra em jogo quando uma experiência compartilhada podem ocorrer no mesmo local. Chamamos esse **colocalizado**. Por outro lado, quando o grupo é distribuído e pelo menos um participante que não está no mesmo espaço físico (como é geralmente o caso com VR) chamamos que uma experiência remota. Geralmente é o caso em que seu grupo tem **ambos** participantes colocalizados e remotos (por exemplo, dois grupos em salas de conferência).
+A força da realidade misturada entra em cena quando uma experiência compartilhada pode ocorrer no mesmo local. Chamamos isso de **colocalizado**. Por outro lado, quando o grupo é distribuído e pelo menos um participante não está no mesmo espaço físico (como geralmente é o caso com VR), chamamos isso de uma experiência remota. Geralmente, é o caso de seu **grupo ter participantes** colocalizados e remotos (por exemplo, dois grupos em salas de conferência).
 
 ![Três pessoas com holograph na tabela](images/three-people-with-holograph-on-table-500px.png)
 
-Categorias a seguir ajudam a transmitir onde os usuários estão localizados:
-* Localizado em conjunto: Todos os seus usuários será no mesmo espaço físico.
-* Remoto: Todos os seus usuários será em espaços físicos separados.
-* Ambos: Seus usuários ficarão uma mistura de espaços colocalizados e remotos.
+As categorias a seguir ajudam a transmitir onde os usuários estão localizados:
+* Colocalizado: Todos os usuários estarão no mesmo espaço físico.
+* Controle Todos os usuários estarão em espaços físicos separados.
+* Mesmo Os usuários serão uma combinação de espaços colocalizados e remotos.
 
-Algumas razões por que essa pergunta é crucial porque ela influencia:
-* Como as pessoas se comunicar?
-* Por exemplo:  Se eles devem ter avatares?
-* Quais objetos que eles veem. Todos os objetos são compartilhados?
-* Se é necessário para se adaptar ao seu ambiente?
+Alguns motivos pelos quais essa pergunta é crucial porque influencia:
+* Como as pessoas se comunicam?
+* Por exemplo: Se eles devem ter avatars?
+* Quais objetos eles veem. Todos os objetos são compartilhados?
+* Se precisamos adaptar-se ao seu ambiente?
 
-### <a name="4-when-are-they-sharing"></a>4. Quando estiver compartilhando?
+### <a name="4-when-are-they-sharing"></a>4. Quando estão compartilhando?
 
-Costumamos pensar **síncrona** experiências quando experiências compartilhadas vêm à mente: Estamos todos fazendo-la em conjunto. Mas incluir um único elemento virtual que foi adicionado por outra pessoa, e você tem um **assíncrona** cenário. Imagine uma nota ou Memorando de voz, à esquerda em um ambiente virtual. Como você lida com 100 memorandos virtuais deixados no seu design? E se forem de dezenas de pessoas com diferentes níveis de privacidade?
+Normalmente, pensamos em experiências **síncronas** quando as experiências compartilhadas vêm à mente: Estamos todos fazendo isso juntos. Mas inclua um único elemento virtual que foi adicionado por outra pessoa e que você tenha um cenário **assíncrono** . Imagine uma nota, ou memorando de voz, deixado em um ambiente virtual. Como você lida com os memorandos virtuais 100 no seu design? E se eles forem de dezenas de pessoas com diferentes níveis de privacidade?
 
 Considere suas experiências como uma destas categorias de tempo:
-* **Forma síncrona**: Compartilhando a experiência holográfica ao mesmo tempo. Por exemplo:  Dois alunos a execução do laboratório de habilidades ao mesmo tempo.
-* **Assincronamente**: Compartilhando a experiência holográfica em momentos diferentes. Por exemplo:  Dois alunos a execução do laboratório de habilidades, mas trabalhando em seções separadas em momentos diferentes.
-* **Ambos**: Os usuários às vezes, compartilhará forma síncrona, mas outras vezes assincronamente. Por exemplo:  Professor de classificação a atribuição executada pelos alunos em um momento posterior e deixando notas do aluno para o próximo dia.
+* De forma **síncrona**: Compartilhar a experiência do Holographic ao mesmo tempo. Por exemplo: Dois alunos que executam o laboratório de habilidades ao mesmo tempo.
+* De **forma assíncrona**: Compartilhar a experiência do Holographic em momentos diferentes. Por exemplo: Dois alunos executando o laboratório de habilidades, mas trabalhando em seções separadas em momentos diferentes.
+* **Ambos**: Os usuários às vezes serão compartilhados de forma síncrona, mas outras vezes assincronamente. Por exemplo: O professor está interrompendo a atribuição realizada pelos alunos em um momento posterior e deixando as anotações para o aluno no dia seguinte.
 
-Algumas razões por que essa pergunta é importante porque ela influencia:
-* Persistência de objeto e o ambiente. Por exemplo: Armazenando os estados para que eles possam ser recuperados.
-* Perspectiva do usuário. Por exemplo: Talvez lembrar-se de que o usuário estava observando ao sair de notas.
+Alguns motivos pelos quais essa pergunta é importante porque influencia:
+* Persistência de objeto e ambiente. Por exemplo: Armazenando os Estados para que eles possam ser recuperados.
+* Perspectiva do usuário. Por exemplo: Talvez se lembre do que o usuário estava olhando ao deixar anotações.
 
-### <a name="5-how-similar-are-their-physical-environments"></a>5. A semelhança são seus ambientes físicos?
+### <a name="5-how-similar-are-their-physical-environments"></a>5. Quão semelhantes são seus ambientes físicos?
 
-A probabilidade de dois ambientes reais idênticos, fora de experiências colocalizadas, é reduzida, a menos que esses ambientes foram projetados para ser idênticos. Provavelmente você ter **semelhante** ambientes. Por exemplo, salas de conferência são semelhantes, eles normalmente têm uma tabela localizada centralmente cercada por cadeiras. Salas de estar, por outro lado, são geralmente **diferentes** e pode incluir qualquer número de itens de móveis em uma matriz de infinita de layouts.
+A probabilidade de dois ambientes reais idênticos, fora de experiências colocalizadas, é Slim, a menos que esses ambientes tenham sido projetados para serem idênticos. É mais provável que você tenha ambientes **semelhantes** . Por exemplo, as salas de conferência são semelhantes — elas normalmente têm uma tabela localizada centralmente envolvida por cadeiras. As salas de vida, por outro lado, geralmente são **diferentes** e podem incluir qualquer número de peças de mobília em uma matriz infinita de layouts.
 
 ![Holograph na tabela](images/holograph-on-table-500px.png)
 
-Considere suas experiências de compartilhamento ajustando-se em uma dessas duas categorias:
-* **Semelhante**: Ambientes que tendem a ter móveis semelhante, luz ambiente e som, tamanho do espaço físico. Por exemplo:  Professor está em um de sala de aula e os alunos estão em palestra hall hall palestra de B. um pode ter menos cadeiras que B, mas ambos podem ter uma mesa de física para colocar hologramas no.
-* **Diferentes tipos**: Ambientes que são bastante diferentes em configurações móveis, tamanhos de sala, considerações de luz e som. Por exemplo:  Professor está em uma sala de foco, enquanto que os alunos estão em uma sala de palestra grande preenchida com os alunos e professores.
+Considere suas experiências de compartilhamento se ajustando a uma destas duas categorias:
+* **Semelhante**: Ambientes que tendem a ter móveis semelhantes, luz ambiente e som, tamanho da sala física. Por exemplo: O professor está na sala de palestras A e os alunos estão na sala de palestras B. a Hall da palestra A pode ter menos cadeiras que B, mas ambas podem ter uma escrivaninha física para posicionar os hologramas.
+* **Diferente**: Ambientes que são bastante diferentes nas configurações de mobília, tamanhos de sala, considerações de luz e som. Por exemplo: O professor está em um quarto de foco, enquanto os alunos estão em uma grande sala de palestras preenchida com alunos e professores.
 
-É importante pensar sobre o ambiente conforme ela influenciará:
-* Como as pessoas receberão a esses objetos. Por exemplo: Se a sua experiência funciona melhor em uma tabela e o usuário não tem nenhuma tabela? Ou, em uma superfície plana floor, mas o usuário tem um espaço desorganizado.
-* Escala dos objetos. Por exemplo:  Colocar um modelo de 6 pés humano em uma tabela pode ser um desafio, mas um modelo de coração funcionaria muito bem.
+É importante pensar no ambiente, pois ele influenciará:
+* Como as pessoas irão experimentar esses objetos. Por exemplo: Se sua experiência funciona melhor em uma tabela e o usuário não tem nenhuma tabela? Ou em uma superfície de piso plana, mas o usuário tem um espaço desorganizado.
+* Escala dos objetos. Por exemplo: Colocar um modelo humano de 6 pés em uma tabela pode ser desafiador, mas um modelo de coração funcionaria muito bem.
 
 ### <a name="6-what-devices-are-they-using"></a>6. Quais dispositivos estão usando?
 
-Hoje você muitas vezes é provável ver experiências compartilhadas entre dois **dispositivos imersivos** (esses dispositivos podem diferir ligeiramente em termos de botões e a capacidade relativa, mas não muito) ou dois **dispositivos holográfico** considerando as soluções que está sendo direcionadas a esses dispositivos. Mas considere que **dispositivos 2D** (um participante mobile/área de trabalho ou observador) serão considerados necessários, especialmente em situações de **misto dispositivos 2D e 3D**. Noções básicas sobre os tipos de dispositivos que usando o dos participantes é importante, não apenas porque elas vêm com fidelidade diferente e restrições de dados e oportunidades, mas porque os usuários têm expectativas exclusivas para cada plataforma.
+Hoje, geralmente é provável que você veja experiências compartilhadas entre dois **dispositivos de imersão** (esses dispositivos podem diferir ligeiramente em termos de botões e recursos relativos, mas não muito) ou dois **dispositivos holographics** dadas as soluções que estão sendo direcionadas nesses dispositivos. Mas considere que os **dispositivos 2D** (um participante móvel/de área de trabalho ou observador) serão uma consideração necessária, especialmente em situações de **dispositivos 2D e 3D mistos**. Compreender os tipos de dispositivos que seus participantes usarão é importante, não só porque eles vêm com diferentes limitações de fidelidade e de dados e oportunidades, mas porque os usuários têm expectativas exclusivas para cada plataforma.
 
-## <a name="exploring-the-potential-of-shared-experiences"></a>Explorar o potencial de experiências compartilhadas
+## <a name="exploring-the-potential-of-shared-experiences"></a>Explorando o potencial de experiências compartilhadas
 
-Respostas às perguntas acima podem ser combinadas para entender melhor o seu cenário compartilhado, crystallizing os desafios, como expandir a experiência. Para a equipe da Microsoft, isso ajudou a estabelecer um roteiro para melhorar as experiências usamos hoje em dia, Noções básicas sobre a nuance desses problemas complexos e como tirar proveito das experiências compartilhadas na realidade mista.
+As respostas às perguntas acima podem ser combinadas para entender melhor seu cenário compartilhado, crystallizingndo os desafios à medida que você expandir a experiência. Para a equipe da Microsoft, isso ajudou a estabelecer um mapa de estrada para melhorar as experiências que usamos hoje, compreendendo a nuance desses problemas complexos e como aproveitar as experiências compartilhadas na realidade misturada.
 
-Por exemplo, considere um dos cenários do Skype desde o lançamento do HoloLens: um usuário trabalhou por meio [como corrigir um comutador de luz quebrado](https://www.youtube.com/watch?v=iBfzs3G8BEA) com a Ajuda de uma especialista em localizado remotamente.
+Por exemplo, considere um dos cenários do Skype do lançamento do HoloLens: um usuário trabalhou por meio de [como corrigir uma mudança de luz quebrada](https://www.youtube.com/watch?v=iBfzs3G8BEA) com a ajuda de um especialista localizado remotamente.
 
-![Correção de um comutador de luz com assistência por meio do Skype para HoloLens](images/fix-a-broken-switch-with-hololens-640px.jpg)
+![Corrigindo uma mudança de luz com assistência por meio do Skype para o HoloLens](images/fix-a-broken-switch-with-hololens-640px.jpg)
 
-<i>Fornece um especialista <b>1:1</b> diretrizes de sua <b>2D</b>, computador desktop para um usuário de um <b>3D, a realidade misturada</b> dispositivo. O <b>orientações</b> é <b>síncrona</b> e os ambientes físicos são <b>diferentes</b>.</i>
+<i>Um especialista fornece diretrizes de <b>1:1</b> de seu computador desktop <b>2D</b>para um usuário de um dispositivo <b>3D, de realidade mista</b> . A <b>diretriz</b> é <b>síncrona</b> e os ambientes físicos são <b>diferentes</b>.</i>
 
-Uma experiência como essa é uma alteração de etapa de nossa experiência atual — aplicando o paradigma de voz e vídeo para uma nova mídia. Mas como podemos olhar para o futuro, devemos melhor definir a oportunidade de nossos cenários e criar experiências que refletem a intensidade da realidade misturada.
+Uma experiência como esta é uma mudança na nossa experiência atual, aplicando o paradigma de vídeo e voz a um novo meio. Mas à medida que olhamos para o futuro, devemos definir melhor a oportunidade de nossos cenários e criar experiências que reflitam a força da realidade misturada.
 
-Considere a [ferramenta de colaboração OnSight](https://www.youtube.com/watch?v=ZOWQp0-Bkkw) desenvolvido pela laboratório de propulsão Jet do NASA. Cientistas trabalhando nos dados de missões a Marte de exploração de Marte podem colaborar com colegas em tempo real dentro dos dados do cenário Martian.
+Considere a [ferramenta de colaboração do onsight](https://www.youtube.com/watch?v=ZOWQp0-Bkkw) desenvolvida pelo laboratório Jet propulsão da NASA. Os cientistas que trabalham com dados das missões de Rover do Mars podem colaborar com colegas em tempo real dentro dos dados do Martian Landscape.
 
-![Colaborando com os colegas separados remotamente para planejar o trabalho para a exploração de Marte](images/onsight-nasa-jpl.gif)
+![Colaboração entre colegas separados remotamente para planejar o trabalho para o Rover Mars](images/onsight-nasa-jpl.gif)
 
-<i>Um cientista explora um ambiente usando um <b>3D, a realidade misturada</b> dispositivo com um <b>pequeno</b> grupo de <b>remoto</b> colegas usando <b>3D e 2D</b> dispositivos. O <b>colaboração</b> é <b>síncrona</b> (mas pode ser revisto de forma assíncrona) e os ambientes físicos (virtualmente) são <b>semelhante</b>.</i>
+<i>Um cientista explora um ambiente usando um dispositivo <b>3D, de realidade misturada,</b> com um <b>pequeno</b> grupo de colegas <b>remotos</b> usando dispositivos <b>3D e 2D</b> . A <b>colaboração</b> é <b>síncrona</b> (mas pode ser revisitada de forma assíncrona) e os ambientes físicos são (virtualmente) <b>semelhantes</b>.</i>
 
-Experiências, como OnSight apresentam novas oportunidades para colaborar. De fisicamente apontando os elementos no ambiente virtual alocado ao lado de um colega e compartilhar sua perspectiva conforme eles explicam suas descobertas. OnSight usa das lentes de presença e de imersão para repensar o compartilhamento de experiências na realidade mista.
+Experiências como o onsight apresentam novas oportunidades para colaborar. De apontar elementos fisicamente no ambiente virtual para posicionar ao lado de um colega e compartilhar sua perspectiva à medida que eles explicam suas descobertas. O onsight usa a lente de imersão e a presença para reconsiderar as experiências de compartilhamento em realidade misturada.
 
-Colaboração intuitiva é o alicerce de conversa e trabalhando juntos e é fundamental compreender como podemos aplicar este intuição a complexidade de realidade misturada. Se podemos pode não só recriar o compartilhamento de experiências na realidade mista, mas incremente-los, será uma mudança de paradigma para o futuro do trabalho. A criação de experiências compartilhadas na realidade mista é um espaço e coisas interessante — e é só o começo.
+A colaboração intuitiva é a Fundação da conversa e o trabalho em conjunto e a compreensão de como podemos aplicar essa intuição à complexidade da realidade misturada é crucial. Se não pudermos recriar experiências de compartilhamento apenas em realidade misturada, mas Potencialize-las, será uma mudança de paradigma para o futuro do trabalho. A criação de experiências compartilhadas na realidade misturada é um espaço novo e empolgante, e estamos apenas no começo.
 
-## <a name="get-started-sharing-experiences"></a>Comece a compartilhar experiências
+## <a name="get-started-building-shared-experiences"></a>Introdução à criação de experiências compartilhadas
 
-Dependendo do aplicativo e o cenário, haverá vários requisitos para alcançar a experiência desejada. Alguns deles incluem
-* Tomada de correspondência: Capacidade para criar sessões, sessão, de anunciar e descobrir e convidar pessoas específicas, tanto localmente e remotamente para ingressarem em sua sessão.
-* Ancorar compartilhamento: Capacidade de alinhar coordenadas em vários dispositivos em um espaço local comum, portanto, hologramas aparecem no mesmo lugar para todas as pessoas.
-* Rede: Capacidade de ter posiciona, interações, e os movimentos de pessoas e hologramas sincronizada em tempo real em todos os participantes.
-* Armazenamento de estado: Capacidade de armazenar características holograma e locais de espaço para associação de sessão intermediário, lembre-se em uma hora posterior e robustez em relação a problemas de rede.
+Dependendo do seu aplicativo e cenário, haverá vários requisitos para atingir a experiência desejada. Alguns desses incluem
+* Criação de correspondência: Capacidade de criar sessões, anunciar sessão e descobrir e convidar pessoas específicas, localmente e remotamente, para ingressar na sua sessão.
+* Compartilhamento de âncora: Capacidade de alinhar as coordenadas em vários dispositivos em um espaço local comum, portanto, os hologramas aparecem no mesmo lugar para todas as pessoas.
+* Rede Capacidade de ter posições, interações e movimentos de pessoas e hologramas sincronizados em tempo real em todos os participantes.
+* Armazenamento de Estado: Capacidade de armazenar as características e os locais do holograma em espaço para a junção de sessão intermediária, recall em um momento posterior e robustez contra problemas de rede.
 
 
-A chave para experiências compartilhadas está vendo as mesmas hologramas no mundo em seus próprios dispositivos, frequentemente feito por meio do compartilhamento âncoras para alinhar as coordenadas entre dispositivos de vários usuários.
-Para compartilhar as âncoras, use o <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">âncoras espacial do Azure</a>:
+A chave para experiências compartilhadas é que vários usuários veem os mesmos hologramas no mundo em seu próprio dispositivo, frequentemente feito por meio do compartilhamento de âncoras para alinhar as coordenadas entre os dispositivos.
+Para compartilhar âncoras, use as <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">âncoras espaciais do Azure</a>:
 * Primeiro, o usuário coloca o holograma.
-* Aplicativo cria uma [âncora espacial](coordinate-systems.md) para fixar esse holograma precisamente no mundo.
-* As âncoras podem ser compartilhadas para HoloLens, dispositivos iOS e Android por meio de <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">âncoras espacial do Azure</a>. 
+* O aplicativo cria uma [âncora espacial](coordinate-systems.md) para fixar esse holograma precisamente no mundo.
+* As âncoras podem ser compartilhadas para dispositivos de HoloLens, iOS e Android por meio das <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">âncoras espaciais do Azure</a>. 
 
-Com uma âncora espacial compartilhada, o aplicativo em cada dispositivo agora tem um sistema de coordenadas comuns nos quais eles podem colocar o conteúdo. Agora o aplicativo pode garantir para posicionar e orientar o holograma no mesmo local.
-Em dispositivos do HoloLens, você também pode compartilhar as âncoras offline de um dispositivo para outro.  Use os links abaixo para decidir o que é melhor para seu aplicativo.
+Com uma âncora espacial compartilhada, o aplicativo em cada dispositivo agora tem um sistema de coordenadas comum no qual eles podem inserir conteúdo. Agora o aplicativo pode garantir a posição e a orientação do holograma no mesmo local.
+Em dispositivos HoloLens, você também pode compartilhar âncoras offline de um dispositivo para outro.  Use os links abaixo para decidir o que é melhor para seu aplicativo.
+
+
+## <a name="evaluating-tech-options"></a>Avaliando opções de tecnologia:
+Há várias opções de serviço e tecnologia disponíveis para ajudar a criar experiências de realidade mista de vários usuários.  Pode ser difícil escolher um caminho, portanto, tomando uma perspectiva com foco no cenário, algumas opções são detalhadas abaixo.
+
+## <a name="shared-static-holograms-no-interactions"></a>Hologramas estáticos compartilhados (sem interações):
+Aproveite as <a href="https://docs.microsoft.com/azure/spatial-anchors/" target="_blank">âncoras espaciais do Azure</a> em seu aplicativo.  A habilitação e o compartilhamento de âncoras espaciais entre dispositivos permite que você crie um aplicativo onde os usuários vejam os hologramas no mesmo local ao mesmo tempo.  A sincronização adicional entre dispositivos é necessária para permitir que os usuários interajam com hologramas e veja movimentos ou atualizações de estado de hologramas.
+
+## <a name="share-1st-person-perspective"></a>Compartilhar a perspectiva da 1ª pessoa:
+Aproveite o suporte ao Miracast interno, para usuários locais quando você tem um receptor de Miracast com suporte, como um PC ou TV, nenhum código de aplicativo adicional é necessário.
+
+Aproveite o <a href="https://github.com/microsoft/mixedreality-webrtc" target="_blank">MixedReality-WebRTC</a> em seu aplicativo, para usuários remotos ou quando você tiver dispositivos não Miracast que gostaria de compartilhar.  A habilitação de uma conexão WebRTC permite fluxos de áudio/vídeo 1:1 entre usuários, com um canal de dados para mensagens entre dispositivos também.  A implementação da realidade misturada otimiza para o HoloLens, fornecendo um fluxo de vídeo de captura de realidade misturada da exibição do usuário do HoloLens para outras pessoas.  Se você quiser escalar verticalmente o streaming de vídeo para vários clientes remotos, um <a href="https://webrtcglossary.com/mcu/" target="_blank">provedor de serviços de MCU</a> (unidade de conferência do MultiPoint) normalmente será usado, como SignalWire.  Uma implantação de SignalWire de um clique no Azure está disponível por meio do <a href="https://github.com/andywolk/azure-freeswitch-gpu-windows" target="_blank">FreeSwitch</a>.  Observe que este é um serviço pago e o SignalWire não é de propriedade/afiliado à Microsoft.
+
+## <a name="presenter-spectator-applications-and-demos"></a>Apresentador-Spectator aplicativos e demonstrações:
+Aproveite o <a href="https://github.com/microsoft/MixedReality-SpectatorView" target="_blank">MixedReality-SpectatorView</a> em seu aplicativo.  Habilite outros dispositivos (HL, Android, iOS e câmeras de vídeo) para ver o que o HoloLens vê de uma perspectiva diferente no mesmo local e receber atualizações de interações do usuário de HoloLens host interagindo com os hologramas.  Assista, tire fotos * e grave vídeo sobre o que o host faz com os hologramas no aplicativo de sua própria perspectiva espacial com o Spectator Companion do mesmo aplicativo.
+
+Anotações As imagens são obtidas por meio de captura de tela em dispositivos iOS/Android.
+
+## <a name="multi-user-collaborative-experience"></a>Experiência colaborativa de vários usuários:
+Comece com nosso [tutorial de aprendizado de vários usuários](mrlearning-sharing(photon)-ch1.md), que aproveita as <a href="https://docs.microsoft.com/azure/spatial-anchors/" target="_blank">âncoras espaciais do Azure</a> para usuários locais e o <a href="https://www.photonengine.com/PUN" target="_blank">SDK do Photon</a> para sincronizar o conteúdo/estado na cena.  Crie aplicativos de colaboração localmente em que cada usuário tem sua própria perspectiva sobre os hologramas na cena e pode interagir totalmente com os hologramas.  As atualizações são fornecidas em todos os dispositivos e o gerenciamento de conflitos de interação é tratado pelo Photon.  Observe que o Photon é um produto que não é da Microsoft, portanto, uma relação de cobrança com Photon pode ser necessária para produto e dimensionamento para maior uso.
+
+## <a name="future-work"></a>Trabalho futuro:
+As interfaces e os recursos do componente ajudarão a fornecer consistência comum e suporte robusto em vários cenários e tecnologias subjacentes.  Até lá, escolha o melhor caminho que se alinhe ao cenário que você está tentando atingir em seu aplicativo.
+
+Cenário diferente ou desejo de usar um Tech/Service diferente?  
+Forneça comentários como problemas do GitHub no repositório correspondente, na parte inferior desta página ou entre em contato com a <a href="https://holodevelopers.slack.com/">margem de atraso do HoloDevelopers</a>.
 
 
 ## <a name="see-also"></a>Consulte também
-* <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">Âncoras espaciais do Azure</a>
-* [Compartilhado âncoras espaciais no DirectX](shared-spatial-anchors-in-directx.md)
+* <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">Âncoras Espaciais do Azure</a>
+* [Âncoras espaciais compartilhadas no DirectX](shared-spatial-anchors-in-directx.md)
 * [Experiências compartilhadas no Unity](shared-experiences-in-unity.md)
-* [Modo de exibição spectator](spectator-view.md)
+* [Modo de exibição Espectador](spectator-view.md)
