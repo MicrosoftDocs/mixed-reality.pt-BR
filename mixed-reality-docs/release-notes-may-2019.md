@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 07/11/2019
 ms.topic: article
 keywords: notas de versão, versão, Windows 10, Build, 19h1, so, maio de 2019
-ms.openlocfilehash: fe2532429842a2acd7868349a8df19214e9ae155
-ms.sourcegitcommit: 8f3ff9738397d9b9fdf4703b14b89d416f0186a5
+ms.openlocfilehash: f5163e128c3f1e1b68d827b09078b565a58c5a4d
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67843303"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438312"
 ---
 # <a name="release-notes---may-2019"></a>Notas de versão – maio de 2019
 
@@ -38,7 +38,7 @@ Para iniciar um aplicativo Win32 no Windows Mixed Reality, abra o painel Pins po
 ![Pin_Panel Win32](images/mr-win32-slates-pinspanel.png)
 
 #### <a name="please-help-us-improve"></a>Ajude-nos a melhorar!
-Estamos continuamente procurando melhorar a compatibilidade.  Se você achar que seu aplicativo Win32 clássico favorito não está se comportando corretamente durante a realidade mista do Windows, envie comentários por meio de nosso [Hub de comentários](https://support.microsoft.com/en-us/help/4021566/windows-10-send-feedback-to-microsoft-with-feedback-hub).
+Estamos continuamente procurando melhorar a compatibilidade.  Se você achar que seu aplicativo Win32 clássico favorito não está se comportando corretamente durante a realidade mista do Windows, envie comentários por meio de nosso [Hub de comentários](https://support.microsoft.com//help/4021566/windows-10-send-feedback-to-microsoft-with-feedback-hub).
 
 ## <a name="hololens-1st-gen-long-term-servicing"></a>Serviço de longo prazo do HoloLens (1ª gen)
 

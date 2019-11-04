@@ -6,12 +6,12 @@ ms.author: davidkl
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Unity, mapeamento espacial, renderizador, colisor, malha, verificação, componente
-ms.openlocfilehash: 8f7bad1651ab31b2e83ad9d9c8f465547fbbdc5a
-ms.sourcegitcommit: 2f600e5ad00cd447b180b0f89192b4b9d86bbc7e
+ms.openlocfilehash: 452e629a877df585ffbc0a6466ffeb2588b66ecf
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "67148646"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438038"
 ---
 # <a name="spatial-mapping-in-unity"></a>Mapeamento espacial no Unity
 
@@ -22,6 +22,29 @@ O Unity inclui suporte completo para o mapeamento espacial, que é exposto aos d
 2. APIs de mapeamento espacial de nível inferior, que fornecem controle total e permitem uma personalização mais sofisticada específica do aplicativo
 
 Para usar o mapeamento espacial em seu aplicativo, o recurso spatialPerception precisa ser definido em seu AppxManifest.
+
+## <a name="device-support"></a>Suporte a dispositivos
+
+<table>
+    <colgroup>
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+    </colgroup>
+    <tr>
+        <td><strong>Recurso</strong></td>
+        <td><a href="hololens-hardware-details.md"><strong>HoloLens (1ª geração)</strong></a></td>
+        <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Headsets imersivos</strong></a></td>
+    </tr>
+     <tr>
+        <td>Mapeamento espacial</td>
+        <td>✔️</td>
+        <td>✔️</td>
+        <td>❌</td>
+    </tr>
+</table>
 
 ## <a name="setting-the-spatialperception-capability"></a>Configurando o recurso SpatialPerception
 
@@ -41,7 +64,7 @@ O mapeamento espacial também requer um MaxVersionTested de pelo menos 10.0.1058
 
 ## <a name="getting-started-with-unitys-built-in-spatial-mapping-components"></a>Introdução aos componentes de mapeamento espacial interno do Unity
 
-O Unity oferece 2 componentes para adicionar facilmente o mapeamento espacial ao seu aplicativo, o renderizador de **mapeamento espacial** e o **Colisor de mapeamento espacial**.
+O Unity oferece 2 componentes para adicionar facilmente o mapeamento espacial ao seu aplicativo, o **renderizador de mapeamento espacial** e o **Colisor de mapeamento espacial**.
 
 ### <a name="spatial-mapping-renderer"></a>Renderizador de mapeamento espacial
 
@@ -61,7 +84,7 @@ Você pode adicionar ambos os componentes ao seu aplicativo se desejar visualiza
 
 Para usar esses dois componentes em seu aplicativo do Unity:
 1. Selecione um gameobject no centro da área na qual você gostaria de detectar malhas de superfície espacial.
-2. Na janela Inspetor, adicione o processador de**mapeamento espacial** do **componente** > **XR** > ou o renderizador de **mapeamento espacial**.
+2. Na janela Inspetor, **adicione o componente** > **XR** > **Colisor de mapeamento espacial** ou o **renderizador de mapeamento espacial**.
 
 Você pode encontrar mais detalhes sobre como usar esses componentes no site de <a href="https://docs.unity3d.com/Manual/SpatialMappingComponents.html" target="_blank">documentação do Unity</a>.
 
@@ -239,7 +262,7 @@ Internamente, o Raycast é calculado em relação à representação computada 8
 
 No exemplo de Unity, o cursor converte um raio cada quadro. Primeiro, em relação aos conflitantes da Unity. Em segundo lugar, em relação à representação Mundial do módulo de compreensão. E, finalmente, os elementos da interface do usuário. Neste aplicativo, a interface do usuário obtém prioridade, em seguida o resultado da compreensão e, por fim, os coliders do Unity. O Surfacetype é relatado como texto ao lado do cursor.
 
-![O tipo de superfície é rotulado ao lado do cursor](images/su-raycastresults-300px.jpg)<br>
+![tipo de superfície é rotulado ao lado do cursor](images/su-raycastresults-300px.jpg)<br>
 *O tipo de superfície é rotulado ao lado do cursor*
 
 ### <a name="topology-queries"></a>Consultas de topologia
@@ -324,7 +347,7 @@ shapeConstraints = new List<ShapeConstraint>()
 
 As funções de wrapper são fornecidas no módulo do Unity para facilitar a criação de definições de formas personalizadas. A lista completa de restrições de componente e forma pode ser encontrada em "SpatialUnderstandingDll.cs" nas estruturas "ShapeComponentConstraint" e "ShapeConstraint".
 
-![A forma de retângulo foi encontrada nesta superfície](images/su-shapequery-300px.jpg)<br>
+![forma de retângulo é encontrada nesta superfície](images/su-shapequery-300px.jpg)<br>
 *A forma de retângulo foi encontrada nesta superfície*
 
 ### <a name="object-placement-solver"></a>Resolvedor de posicionamento de objeto
@@ -395,8 +418,8 @@ Solver_PlaceObject(
 
 Se for bem-sucedida, uma estrutura "ObjectPlacementResult" contendo a posição de posicionamento, as dimensões e a orientação serão retornadas. Além disso, o posicionamento é adicionado à lista interna de objetos posicionados da dll. As consultas de posicionamento subsequentes levarão esse objeto à conta. O arquivo "LevelSolver.cs" no exemplo de Unity contém mais consultas de exemplo.
 
-![Resultados da colocação do objeto](images/su-objectplacement-1000px.jpg)<br>
-*Figura 3: As caixas azuis de como o resultado de três lugares em consultas de piso distantes das regras de posição da câmera*
+![resultados da colocação do objeto](images/su-objectplacement-1000px.jpg)<br>
+*Figura 3: as caixas azuis como o resultado de três lugares em consultas de piso com afastamento das regras de posição da câmera*
 
 Ao resolver o local de posicionamento de vários objetos necessários para um cenário de nível ou aplicativo, primeiro resolva os objetos indispensável e grandes para maximizar a probabilidade de que um espaço possa ser encontrado. A ordem de posicionamento é importante. Se os posicionamentos de objeto não puderem ser encontrados, tente configurações menos restritas. Ter um conjunto de configurações de fallback é essencial para dar suporte à funcionalidade em várias configurações de sala.
 
@@ -444,10 +467,10 @@ O fluxo de verificação, controlado pelo comportamento "SpatialUnderstanding", 
 
 A DLL de compreensão armazena internamente o Playspace como uma grade de cubos VOXEL dimensionados do 8cm. Durante a parte inicial da verificação, uma análise de componente primário é concluída para determinar os eixos da sala. Internamente, ele armazena seu espaço VOXEL alinhado a esses eixos. Uma malha é gerada aproximadamente a cada segundo, extraindo o isosurface do volume VOXEL. 
 
-![Malha gerada produzida a partir do volume VOXEL](images/su-custommesh.jpg)<br>
+![malha gerada produzida do volume VOXEL](images/su-custommesh.jpg)<br>
 *Malha gerada produzida a partir do volume VOXEL*
 
-## <a name="troubleshooting"></a>Solução de problemas
+## <a name="troubleshooting"></a>Painel de controle da
 * Verifique se você definiu o recurso [SpatialPerception](#setting-the-spatialperception-capability)
 * Quando o rastreamento for perdido, o próximo evento onsurfacechanged removerá todas as malhas.
 
@@ -455,10 +478,10 @@ A DLL de compreensão armazena internamente o Playspace como uma grade de cubos 
 Para obter mais informações sobre como usar o mapeamento espacial com o kit de ferramentas de realidade misturada v2, consulte a <a href="https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/SpatialAwareness/SpatialAwarenessGettingStarted.html" target="_blank">seção reconhecimento espacial</a> do docs MRTK.
 
 ## <a name="see-also"></a>Consulte também
-* [MR Espacial 230: mapeamento espacial](holograms-230.md)
+* [MR espacial 230: mapeamento espacial](holograms-230.md)
 * [Sistemas de coordenadas](coordinate-systems.md)
 * [Sistemas de coordenadas no Unity](coordinate-systems-in-unity.md)
 * <a href="https://github.com/Microsoft/MixedRealityToolkit-Unity" target="_blank">MixedRealityToolkit</a>
-* <a href="http://docs.unity3d.com/ScriptReference/MeshFilter.html" target="_blank">UnityEngine.MeshFilter</a>
-* <a href="http://docs.unity3d.com/ScriptReference/MeshCollider.html" target="_blank">UnityEngine.MeshCollider</a>
-* <a href="http://docs.unity3d.com/ScriptReference/Bounds.html" target="_blank">UnityEngine. Bounds</a>
+* <a href="https://docs.unity3d.com/ScriptReference/MeshFilter.html" target="_blank">UnityEngine.MeshFilter</a>
+* <a href="https://docs.unity3d.com/ScriptReference/MeshCollider.html" target="_blank">UnityEngine.MeshCollider</a>
+* <a href="https://docs.unity3d.com/ScriptReference/Bounds.html" target="_blank">UnityEngine. Bounds</a>

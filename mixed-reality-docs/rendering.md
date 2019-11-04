@@ -1,19 +1,19 @@
 ---
-title: tratamento
+title: Renderização
 description: A renderização Holographic permite que seu aplicativo desenhe um holograma em um local preciso no mundo todo, seja com precisão no mundo físico ou em um realm que você criou.
 author: thetuvix
 ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
 keywords: renderização, holograma
-ms.openlocfilehash: 45713fd7a30fc55a799da7e89ef52aff8f7eec46
-ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
+ms.openlocfilehash: a974b9d8a00713c28c27963a9f96379693db9b60
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67415408"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437527"
 ---
-# <a name="rendering"></a>tratamento
+# <a name="rendering"></a>Renderização
 
 A renderização de Holographic permite que seu aplicativo desenhe um holograma em um local preciso no mundo todo, seja precisamente colocado no mundo físico ou em um realm que você criou. Os [hologramas](hologram.md) são objetos compostos de som e luz. A renderização permite que seu Application adicione a luz.
 
@@ -29,11 +29,11 @@ A renderização de Holographic permite que seu aplicativo desenhe um holograma 
     <tr>
         <td><strong>Recurso</strong></td>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens (1ª geração)</strong></a></td>
-        <td><strong>HoloLens 2</strong></td>
+        <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></td>
         <td><a href="immersive-headset-hardware-details.md"><strong>Headsets imersivos</strong></a></td>
     </tr>
      <tr>
-        <td>tratamento</td>
+        <td>Renderização</td>
         <td>✔️</td>
         <td>✔️</td>
         <td>✔️</td>
@@ -46,9 +46,9 @@ A chave para a renderização de Holographic é saber se você está renderizand
 
 Dispositivos com **telas de exibição**, tais [HoloLens](hololens-hardware-details.md), adicionam luz ao mundo. Os pixels pretos são totalmente transparentes, enquanto os pixels mais brilhantes são cada vez mais opacos. Como a luz das telas é adicionada à luz do mundo real, os pixels brancos são, de certa forma, translúcidas.
 
-Embora a renderização de estereoscópico forneça uma indicação de profundidade para os hologramas, adicionar [efeitos](interaction-fundamentals.md) de aterramento pode ajudar os usuários a ver mais facilmente qual superfície um holograma está próximo. Uma técnica de aterramento é adicionar um brilho em um holograma na superfície adjacente e renderizar uma sombra em relação a esse brilho. Dessa forma, sua sombra parece subtrair a luz do ambiente. O [som espacial](spatial-sound.md) é outra indicação de profundidade extremamente importante, permitindo aos usuários o motivo da distância e do local relativo de um holograma.
+Embora a renderização de estereoscópico forneça uma indicação de profundidade para os hologramas, adicionar [efeitos de aterramento](interaction-fundamentals.md) pode ajudar os usuários a ver mais facilmente qual superfície um holograma está próximo. Uma técnica de aterramento é adicionar um brilho em um holograma na superfície adjacente e renderizar uma sombra em relação a esse brilho. Dessa forma, sua sombra parece subtrair a luz do ambiente. O [som espacial](spatial-sound.md) é outra indicação de profundidade extremamente importante, permitindo aos usuários o motivo da distância e do local relativo de um holograma.
 
-Dispositivos com **telas opacas**, como headsets de [imersão de realidade do Windows](immersive-headset-hardware-details.md), bloqueiam o mundo. Os pixels pretos são pretos sólidos e qualquer outra cor aparecerá como essa cor para o usuário. Seu aplicativo é responsável por renderizar tudo o que o usuário vê. Isso torna ainda mais importante manter uma taxa de atualização constante para que os usuários tenham uma experiência confortável.
+Dispositivos com **telas opacas**, como [headsets de imersão de realidade do Windows](immersive-headset-hardware-details.md), bloqueiam o mundo. Os pixels pretos são pretos sólidos e qualquer outra cor aparecerá como essa cor para o usuário. Seu aplicativo é responsável por renderizar tudo o que o usuário vê. Isso torna ainda mais importante manter uma taxa de atualização constante para que os usuários tenham uma experiência confortável.
 
 ## <a name="predicted-rendering-parameters"></a>Parâmetros de renderização previstos
 
@@ -62,7 +62,7 @@ Os aplicativos que usam técnicas avançadas para aumentar a previsão do sistem
 
 Ao renderizar um quadro, o sistema especifica o visor de buffer de fundo no qual seu aplicativo deve desenhar. Esse visor é geralmente menor do que o tamanho total do buffer de quadro. Independentemente do tamanho do visor, depois que o quadro for renderizado pelo aplicativo, o sistema ampliará a imagem para preencher todo o exibido.
 
-Para aplicativos que não conseguem renderizar na taxa de atualização necessária, os [parâmetros de renderização do sistema podem ser](https://docs.microsoft.com/uwp/api/Windows.Graphics.Holographic.HolographicViewConfiguration#Windows_Graphics_Holographic_HolographicViewConfiguration) configurados para reduzir a pressão de memória e o custo de renderização no custo do aumento de alias de pixel. O formato de buffer de fundo também pode ser alterado, o que para alguns aplicativos pode ajudar a melhorar a largura de banda de memória e a taxa de transferência de pixel.
+Para aplicativos que não conseguem renderizar na taxa de atualização necessária, os [parâmetros de renderização do sistema podem ser configurados](https://docs.microsoft.com/uwp/api/Windows.Graphics.Holographic.HolographicViewConfiguration#Windows_Graphics_Holographic_HolographicViewConfiguration) para reduzir a pressão de memória e o custo de renderização no custo do aumento de alias de pixel. O formato de buffer de fundo também pode ser alterado, o que para alguns aplicativos pode ajudar a melhorar a largura de banda de memória e a taxa de transferência de pixel.
 
 O frustum de renderização, a resolução e a taxa de quadros em que seu aplicativo é solicitado a renderizar também podem mudar de quadro para quadro e podem ser diferentes nos olhos esquerdo e direito. Por exemplo, quando a MRC ( [captura de realidade mista](mixed-reality-capture.md) ) está ativa e a [configuração de exibição de câmera de foto/vídeo](https://docs.microsoft.com/uwp/api/Windows.Graphics.Holographic.HolographicViewConfigurationKind#Windows_Graphics_Holographic_HolographicViewConfigurationKind) não é aceita, um olho pode ser renderizado com um FOV ou resolução maior.
 
@@ -76,7 +76,7 @@ Consulte o artigo [renderizando no DirectX](rendering-in-directx.md) para obter 
 
 A realidade mista do Windows apresenta o conceito de uma **câmera Holographic**. As câmeras Holographic são semelhantes à câmera tradicional encontrada em textos de gráficos 3D: elas definem a extrínsecos (posição e a orientação) e as propriedades intrínsecas da câmera. (Por exemplo:, campo de exibição é usado para exibir uma cena 3D virtual.) Ao contrário das câmeras 3D tradicionais, o aplicativo não está no controle da posição, da orientação e das propriedades intrínsecas da câmera. Em vez disso, a posição e a orientação da câmera Holographic são implicitamente controladas pelo movimento do usuário. O movimento do usuário é retransmitido para o aplicativo em uma base quadro a quadro por meio de uma transformação de exibição. Da mesma forma, as propriedades intrínsecas da câmera são definidas pela ótica calibrada do dispositivo e retransmitidas quadro a quadro por meio da transformação projeção.
 
-Em geral, seu aplicativo será renderizado para uma única câmera estéreo. No entanto, um loop de renderização robusto dará suporte a várias câmeras e dará suporte a câmeras mono e estéreo. Por exemplo, o sistema pode solicitar que seu aplicativo seja renderizado de uma perspectiva alternativa quando o usuário ativar um recurso como a MRC ( [captura de realidade misturada](mixed-reality-capture.md) ), dependendo da forma do headset em questão. Os aplicativos que podem dar suporte a várias câmeras [os obtêm](https://docs.microsoft.com/uwp/api/Windows.Graphics.Holographic.HolographicViewConfiguration#Windows_Graphics_Holographic_HolographicViewConfiguration) conferendo ao [tipo](https://docs.microsoft.com/uwp/api/Windows.Graphics.Holographic.HolographicViewConfigurationKind#Windows_Graphics_Holographic_HolographicViewConfigurationKind) de câmeras às quais eles podem dar suporte.
+Em geral, seu aplicativo será renderizado para uma única câmera estéreo. No entanto, um loop de renderização robusto dará suporte a várias câmeras e dará suporte a câmeras mono e estéreo. Por exemplo, o sistema pode solicitar que seu aplicativo seja renderizado de uma perspectiva alternativa quando o usuário ativar um recurso como a MRC ( [captura de realidade misturada](mixed-reality-capture.md) ), dependendo da forma do headset em questão. Os aplicativos que podem dar suporte a várias câmeras os obtêm conferendo ao [tipo](https://docs.microsoft.com/uwp/api/Windows.Graphics.Holographic.HolographicViewConfigurationKind#Windows_Graphics_Holographic_HolographicViewConfigurationKind) de [câmeras às quais](https://docs.microsoft.com/uwp/api/Windows.Graphics.Holographic.HolographicViewConfiguration#Windows_Graphics_Holographic_HolographicViewConfiguration) eles podem dar suporte.
 
 ## <a name="volume-rendering"></a>Renderização de volume
 
@@ -93,7 +93,7 @@ Ao renderizar MRIs médicos ou volumes de engenharia em 3D, as técnicas de [ren
 ## <a name="supported-resolutions-on-hololens-2"></a>Resoluções com suporte no HoloLens 2
 
 > [!NOTE]
-> Mais diretrizes específicas para o HoloLens 2 em [breve](index.md#news-and-notes).
+> Mais diretrizes específicas para o HoloLens 2 em [breve](news.md).
 
 
 ## <a name="see-also"></a>Consulte também

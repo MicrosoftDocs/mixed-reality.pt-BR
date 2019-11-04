@@ -1,17 +1,17 @@
 ---
 title: Configurar um novo projeto do Unity para a realidade mista do Windows
 description: configurar projeto do Unity sem MRTK
-author: yoyoz
-ms.author: Yoyoz
+author: thetuvix
+ms.author: alexturn
 ms.date: 04/15/2018
 ms.topic: article
 keywords: Unity, realidade mista, desenvolvimento, introdução, novo projeto
-ms.openlocfilehash: 68dded9d0fc9e861bdda56c4954d72ddafafa686
-ms.sourcegitcommit: 30246ab9b9be44a3c707061753e53d4bf401eb6b
+ms.openlocfilehash: af30cf91eda1b654bea6048c34f63c61238626c7
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/22/2019
-ms.locfileid: "67326099"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437116"
 ---
 # <a name="configure-a-new-unity-project-for-windows-mixed-reality"></a>Configurar um novo projeto do Unity para a realidade mista do Windows 
 
@@ -36,14 +36,14 @@ Em seguida, precisamos deixar a Unity saber que o aplicativo que estamos tentand
 4. Na seção **configurações de XR** , marque a caixa de seleção **suporte à realidade virtual** para adicionar a lista de **dispositivos de realidade virtual** .
 5. No grupo de **configurações XR** , confirme se **"Windows Mixed Realm"** está listado como um dispositivo com suporte. (isso pode aparecer como "Windows Holographic" em versões mais antigas do Unity)
 
-![Configurações de qualidade do Unity](images/getting-started-unity-quality-settings.jpg)<br>
+![configurações de qualidade do Unity](images/getting-started-unity-quality-settings.jpg)<br>
 *Configurações de Unity XR*
 
 Seu aplicativo agora pode fazer a renderização Holographic básica e a entrada espacial. Para ir além e aproveitar determinadas funcionalidades, seu aplicativo deve declarar os recursos apropriados em seu manifesto. As declarações de manifesto podem ser feitas no Unity para que elas sejam incluídas em todas as exportações de projeto subsequentes. A configuração é encontrada nas configurações do **Player > configurações para Plataforma Universal do Windows > configurações de publicação > recursos**. Os recursos aplicáveis para habilitar as APIs do Unity comumente usadas para realidade misturada são:
 
 |  Capacidade  |  APIs que exigem capacidade | 
 |----------|----------|
-|  SpatialPerception  |  SurfaceObserver (acesso a malhas de [mapeamento espacial](spatial-mapping.md) no HoloLens&mdash;)*nenhum recurso necessário para acompanhamento espacial geral do headset* | 
+|  SpatialPerception  |  SurfaceObserver (acesso a malhas de [mapeamento espacial](spatial-mapping.md) no HoloLens)&mdash;*nenhum recurso necessário para acompanhamento espacial geral do headset* | 
 |  Integrada  |  VideoCapture e fotocaptura | 
 |  PicturesLibrary / VideosLibrary  |  VideoCapture, respectivamente (ao armazenar o conteúdo capturado) | 
 |  Microfone  |  VideoCapture (ao capturar áudio), DictationRecognizer, GrammarRecognizer e KeywordRecognizer | 
@@ -51,7 +51,7 @@ Seu aplicativo agora pode fazer a renderização Holographic básica e a entrada
 
 **Configurações de qualidade do Unity**
 
-![Configurações de qualidade do Unity](images/getting-started-unity-quality-settings.jpg)<br>
+![configurações de qualidade do Unity](images/getting-started-unity-quality-settings.jpg)<br>
 *Configurações de qualidade do Unity*
 
 O HoloLens tem uma GPU de classe móvel. Se seu aplicativo estiver direcionando para o HoloLens, você desejará que as configurações de qualidade sejam ajustadas para um desempenho mais rápido para garantir que mantemos a taxa de quadros completa
@@ -62,7 +62,7 @@ O HoloLens tem uma GPU de classe móvel. Se seu aplicativo estiver direcionando 
 
 **Configurações da câmera do Unity**
 
-![Configurações da câmera do Unity](images/Unitycamerasettings.png)<br>
+![configurações da câmera do Unity](images/Unitycamerasettings.png)<br>
 *Configurações da câmera do Unity*
 
 Depois de habilitar a caixa de seleção "realidade virtual com suporte", o componente [câmera do Unity](camera-in-unity.md) lida com o [controle de cabeçalho e a renderização estereoscópico](rendering.md). Não é necessário substituí-lo por uma câmera personalizada para fazer isso.

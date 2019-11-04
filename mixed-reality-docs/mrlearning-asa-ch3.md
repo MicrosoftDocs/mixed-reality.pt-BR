@@ -6,14 +6,14 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realidade misturada, unity, tutorial, hololens
-ms.openlocfilehash: 45a71cada97dff4a2fb32f2eaf7700816f2e0d42
-ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
+ms.openlocfilehash: 77d639a88d8b4c71dc5fbe1c78565c4c3f91d36c
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68702025"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438418"
 ---
-# <a name="3-displaying-azure-spatial-anchor-feedback"></a>3. Exibindo comentários de âncora espacial do Azure
+# <a name="3-displaying-azure-spatial-anchor-feedback"></a>3. exibindo comentários de âncora espacial do Azure
 
 Nesta lição, você aprenderá a fornecer aos usuários comentários sobre a descoberta de âncora, eventos e status ao usar âncoras espaciais do Azure.
 
@@ -27,12 +27,12 @@ Nesta lição, você aprenderá a fornecer aos usuários comentários sobre a de
 
 ### <a name="set-up-asa-feedback-ui-panel"></a>Configurar o painel de IU de comentários do ASA
 
-1. Nesta lição, não estamos usando os botões "SaveAnchorToDisk" e "ShareAnchor", portanto, selecione ambos os botões e desmarque a caixa de seleção no painel de Inspetor (como mostrado abaixo) para ocultar esses botões.
+1. Nesta lição, não estamos usando os botões "SaveAnchorToDisk" e "ShareAnchor", portanto, selecione ambos os botões e desmarque a caixa de seleção no painel Inspetor (conforme mostrado abaixo) para ocultar esses botões.
    
 
 ![module2chapter3step1im](images/module2chapter3step1im.PNG)
 
-2. Em seguida, crie o painel de instruções. Comece clicando com o botão direito no botão "instruções", passe o mouse sobre "objeto 3D" e selecione "textmeshpro-Text".
+2. Crie o painel de instruções. Comece clicando com o botão direito do mouse em "instruções", focalize o "objeto 3D" e selecione "textmeshpro-Text".
 
 ![module2chapter3step2im](images/module2chapter3step2im.PNG)
 
@@ -50,19 +50,19 @@ Nesta lição, você aprenderá a fornecer aos usuários comentários sobre a de
 
 ![module2chapter3step4im](images/module2chapter3step5im.PNG)
 
-Agora, clique [aqui](https://onedrive.live.com/?authkey=%21ABXEC8PvyQu8Qd8&id=5B7335C4342BCB0E%21395636&cid=5B7335C4342BCB0E) para baixar os arquivos necessários nas próximas etapas.
+Clique [aqui](https://onedrive.live.com/?authkey=%21ABXEC8PvyQu8Qd8&id=5B7335C4342BCB0E%21395636&cid=5B7335C4342BCB0E) para baixar os arquivos necessários nas próximas etapas.
 
 6. Quando o Explorer for aberto, selecione a pasta ativos, em seguida, a pasta "ASAmodulesAssets" e copie o script de comentários âncora e os arquivos de script do módulo âncora para a pasta. 
 
 ![module2chapter3step5im](images/module2chapter3step6im.PNG)
 
-> Observação: se você receber um pop-up perguntando se deseja substituir o antigo ou manter o antigo, certifique-se de selecionar substituir.
+> Observação: se você receber uma mensagem pop-up perguntando se deseja substituir o antigo ou manter o antigo, selecione substituir.
 
-7. Agora, retorne à pasta ativos. Em seguida, vá para a pasta "AzureSpatialAnchorsPlugin" e, em seguida, a pasta de exemplos e, por fim, a pasta scripts e copie o wrapper de demonstração de âncoras espaciais do Azure nessa pasta. 
+7. Retorne para a pasta ativos. Em seguida, vá para a pasta "AzureSpatialAnchorsPlugin", seguida pela pasta de exemplos e, por fim, a pasta scripts. Em seguida, copie o wrapper de demonstração de âncoras espaciais do Azure nessa pasta. 
 
 ![module2chapter3step8im](images/module2chapter3step7im.PNG)
 
-8. Agora que os arquivos foram carregados, verifique se o texto "feedbackpanel" está selecionado na hierarquia ASA_feedback e clique em "Adicionar componente" e adicione o script de comentários de âncora pesquisando-o e selecionando-o quando ele for exibido. 
+8. Agora que os arquivos foram carregados, verifique se o texto "feedbackpanel" está selecionado na hierarquia ASA_feedback, clique em "Adicionar componente" e adicione o script de comentários de âncora pesquisando-o e selecionando-o quando ele for exibido. 
 
 ![module2chapter3step8im](images/module2chapter3step8im.PNG)
 

@@ -2,22 +2,22 @@
 title: Gestos e controladores de movimento no Unity
 description: Há duas maneiras principais de agir em seu olhar no Unity, gestos de mão e controladores de movimento.
 author: thetuvix
-ms.author: yoyoz
+ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
 keywords: gestos, controladores de movimento, Unity, olhar, entrada
-ms.openlocfilehash: f0d2835a08ef534af1310db35ccb81888e49aeb8
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: a7ca5a895015ba0458f0f64f1422612e797f5067
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63525767"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73435231"
 ---
 # <a name="gestures-and-motion-controllers-in-unity"></a>Gestos e controladores de movimento no Unity
 
-Há duas maneiras principais de agir em sua [olhar no Unity](gaze-in-unity.md), gestos de [mão](gestures.md) e [controladores de movimento](motion-controllers.md) no HoloLens e HMD de imersão. Você acessa os dados de ambas as fontes de entrada espacial por meio das mesmas APIs no Unity.
+Há duas maneiras principais de agir em sua [olhar no Unity](gaze-in-unity.md), [gestos de mão](gaze-and-commit.md#composite-gestures) e [controladores de movimento](motion-controllers.md) no HoloLens e HMD de imersão. Você acessa os dados de ambas as fontes de entrada espacial por meio das mesmas APIs no Unity.
 
-O Unity fornece duas maneiras principais de acessar dados de entrada espaciais para a realidade mista do Windows, as APIs comuns *Input. getbutton/Input. getaxis* que funcionam em vários SDKs do Unity XR e uma API interactionmanager */GestureRecognizer* específica para A realidade mista do Windows que expõe o conjunto completo de dados de entrada espaciais disponíveis.
+O Unity fornece duas maneiras principais de acessar dados de entrada espaciais para a realidade mista do Windows, as APIs comuns *Input. getbutton/Input. getaxis* que funcionam em vários SDKs do Unity XR e uma API *interactionmanager/GestureRecognizer* específica para A realidade mista do Windows que expõe o conjunto completo de dados de entrada espaciais disponíveis.
 
 ## <a name="unity-buttonaxis-mapping-table"></a>Tabela de mapeamento de botões/eixos do Unity
 
@@ -39,7 +39,7 @@ Os mapeamentos de ID de botão/eixo para a realidade mista do Windows diferem do
 </tr><tr>
 <td> Selecionar valor analógico do gatilho </td><td> Eixo 9 </td><td> Eixo 10 </td><td> selectPressedAmount</td>
 </tr><tr>
-<td> Selecionar gatilho parcialmente pressionado </td><td> Botão 14 <i>(compatível com gamepad)</i> </td><td> Botão 15 <i>(compatível com gamepad)</i> </td><td> selectPressedAmount &gt; 0,0</td>
+<td> Selecionar gatilho parcialmente pressionado </td><td> Botão 14 <i>(o compatível com gamepad)</i> </td><td> Botão 15 <i>(compatível com gamepad)</i> </td><td> selectPressedAmount &gt; 0,0</td>
 </tr><tr>
 <td> Botão de menu pressionado </td><td> Botão 6 * </td><td> Botão 7 * </td><td> menuPressed</td>
 </tr><tr>
@@ -59,9 +59,9 @@ Os mapeamentos de ID de botão/eixo para a realidade mista do Windows diferem do
 </tr><tr>
 <td> Touchpad pressionado </td><td> Botão 16 * </td><td> Botão 17 * </td><td> touchpadPressed</td>
 </tr><tr>
-<td> pose da alça de 6DoF de pose ou de ponteiro </td><td colspan="2"> <i>Segurar</i> somente pose: <a href="https://docs.unity3d.com/ScriptReference/XR.InputTracking.GetLocalPosition.html">XR. InputTracking.GetLocalPosition</a><br /><a href="https://docs.unity3d.com/ScriptReference/XR.InputTracking.GetLocalRotation.html">XR. InputTracking.GetLocalRotation</a></td><td> Passar <i>alça</i> ou <i>ponteiro</i> como um argumento: SourceState. sourcePose. TryGetPosition<br />origemstate. sourcePose. TryGetRotation<br /></td>
+<td> pose da alça de 6DoF de pose ou de ponteiro </td><td colspan="2"> <i>Segure</i> somente pose: <a href="https://docs.unity3d.com/ScriptReference/XR.InputTracking.GetLocalPosition.html">XR. InputTracking. GetLocalPosition</a><br /><a href="https://docs.unity3d.com/ScriptReference/XR.InputTracking.GetLocalRotation.html">XR. InputTracking.GetLocalRotation</a></td><td> Passar <i>alça</i> ou <i>ponteiro</i> como um argumento: SourceState. sourcePose. TryGetPosition<br />origemstate. sourcePose. TryGetRotation<br /></td>
 </tr><tr>
-<td> Estado de acompanhamento </td><td colspan="2"> <i>A precisão da posição e o risco de perda de origem só estão disponíveis por meio da API específica do MR</i> </td><td> <a href="https://docs.unity3d.com/ScriptReference/XR.WSA.Input.InteractionSourcePose-positionAccuracy.html">origemstate. sourcePose. positionAccuracy</a><br /><a href="https://docs.unity3d.com/ScriptReference/XR.WSA.Input.InteractionSourceProperties-sourceLossRisk.html">SourceState. Properties. sourceLossRisk</a></td>
+<td> Estado de acompanhamento </td><td colspan="2"> A <i>precisão da posição e o risco de perda de origem só estão disponíveis por meio da API específica do MR</i> </td><td> <a href="https://docs.unity3d.com/ScriptReference/XR.WSA.Input.InteractionSourcePose-positionAccuracy.html">origemstate. sourcePose. positionAccuracy</a><br /><a href="https://docs.unity3d.com/ScriptReference/XR.WSA.Input.InteractionSourceProperties-sourceLossRisk.html">SourceState. Properties. sourceLossRisk</a></td>
 </tr>
 </table>
 
@@ -81,10 +81,10 @@ A **alça de pose** representa o local da palma de uma mão detectada por um Hol
 Em headsets de imersão, a alça de fixação é mais bem usada para renderizar **a mão do usuário** ou **um objeto mantido na mão do usuário**, como uma gumes ou uma arma. A pose de alça também é usada ao visualizar um controlador de movimento, pois o **modelo renderizado** fornecido pelo Windows para um controlador de movimento usa a alça de pose como sua origem e o centro de rotação.
 
 A pose de alça é definida especificamente da seguinte maneira:
-* A **posição da alça**: O Palm centróide ao manter o controlador naturalmente, ajustado para a esquerda ou para a direita para centralizar a posição dentro da alça. No controlador de movimento de realidade mista do Windows, essa posição geralmente se alinha com o botão compreender.
-* O **eixo direito da orientação de alça**: Quando você abre completamente a mão para formar uma pose plana de 5 dedos, o raio normal para o Palm (para frente do Palm esquerdo, para trás do Palm direito)
-* O **eixo de avanço da orientação de alça**: Quando você fecha a sua mão parcialmente (como se você mantiver o controlador), o raio que aponta para "encaminhar" por meio do tubo formado por seus dedos não-thumbs.
-* O **eixo superior da orientação de alça**: O eixo superior implícito pelas definições direita e avançar.
+* A **posição de alça**: o Palm centróide ao manter o controlador naturalmente, ajustado para a esquerda ou para a direita para centralizar a posição dentro da alça. No controlador de movimento de realidade mista do Windows, essa posição geralmente se alinha com o botão compreender.
+* O **eixo direito da orientação de alça**: quando você abre completamente a mão para formar uma pose plana de 5 dedos, o raio normal para o Palm (para frente do Palm esquerdo, para trás do Palm direito)
+* O **eixo de encaminhamento da orientação de alça**: quando você fecha a sua mão parcialmente (como se você mantiver o controlador), o raio que aponta para "encaminhar" por meio do tubo formado por seus dedos não-thumbs.
+* O **eixo superior da orientação de alça**: o eixo superior implícito pelas definições direita e avançar.
 
 Você pode acessar a alça de pose por meio da API de entrada entre fornecedores do Unity ( *[XR. InputTracking](https://docs.unity3d.com/ScriptReference/XR.InputTracking.html). GetLocalPosition/Rotation*) ou por meio da API específica do Windows Mr (*SourceState. SourcePose. TryGetPosition/Rotation*, solicitando dados de pose para o nó de **fixação** ).
 
@@ -118,9 +118,9 @@ Os aplicativos que desejam tratar as posições de forma diferente com base no e
 <tr>
 <th> Estado de acompanhamento </th><th> SourceLossRisk </th><th> PositionAccuracy </th><th> TryGetPosition</th>
 </tr><tr>
-<td> <b>Alta precisão</b> </td><td style="background-color: green; color: white"> &lt;1,0 </td><td style="background-color: green; color: white"> Alto </td><td style="background-color: green; color: white"> true</td>
+<td> <b>Alta precisão</b> </td><td style="background-color: green; color: white"> &lt; 1,0 </td><td style="background-color: green; color: white"> Alta </td><td style="background-color: green; color: white"> true</td>
 </tr><tr>
-<td> <b>Alta precisão (com risco de perda)</b> </td><td style="background-color: orange"> = = 1,0 </td><td style="background-color: green; color: white"> Alto </td><td style="background-color: green; color: white"> true</td>
+<td> <b>Alta precisão (com risco de perda)</b> </td><td style="background-color: orange"> = = 1,0 </td><td style="background-color: green; color: white"> Alta </td><td style="background-color: green; color: white"> true</td>
 </tr><tr>
 <td> <b>Precisão aproximada</b> </td><td style="background-color: orange"> = = 1,0 </td><td style="background-color: orange"> Aproximado </td><td style="background-color: green; color: white"> true</td>
 </tr><tr>
@@ -137,7 +137,7 @@ Esses Estados de acompanhamento do controlador de movimento são definidos da se
 ## <a name="common-unity-apis-inputgetbuttongetaxis"></a>APIs comuns do Unity (Input. getbutton/getaxis)
 
 **Namespace:** *UnityEngine*, *UnityEngine. XR*<br>
-**Tipos**: *Entrada*, *XR. InputTracking*
+**Tipos**: *Input*, *XR. InputTracking*
 
 No momento, o Unity usa suas APIs de *entrada geral. getbutton/Input. getaxis* para expor a entrada para [o SDK do OCULUS](https://docs.unity3d.com/Manual/OculusControllers.html), [o SDK do OpenVR e a](https://docs.unity3d.com/Manual/OpenVRControllers.html) realidade mista do Windows, incluindo controladores de mãos e de movimento. Se seu aplicativo usa essas APIs para entrada, ele pode facilmente dar suporte a controladores de movimento em vários SDKs do XR, incluindo a realidade mista do Windows.
 
@@ -145,9 +145,9 @@ No momento, o Unity usa suas APIs de *entrada geral. getbutton/Input. getaxis* p
 
 Para usar as APIs de entrada gerais da Unity, você normalmente começará com a vinculação de botões e eixos a nomes lógicos no [Gerenciador de entrada do Unity](https://docs.unity3d.com/Manual/ConventionalGameInput.html), ligando um botão ou IDs de eixo a cada nome. Em seguida, você pode escrever código que se refere a esse botão lógico/nome do eixo.
 
-Por exemplo, para mapear o botão de gatilho do controlador de movimento à esquerda para a ação enviar, acesse **editar > configurações do projeto > entrada** no Unity e expanda as propriedades da seção enviar em eixos. Altere o **botão** de postagem ou a propriedade do **botão Alt positivo** para ler o **botão 14 do joystick**, desta forma:
+Por exemplo, para mapear o botão de gatilho do controlador de movimento à esquerda para a ação enviar, acesse **editar > configurações do projeto > entrada** no Unity e expanda as propriedades da seção enviar em eixos. Altere o **botão de postagem** ou a propriedade do **botão Alt positivo** para ler o **botão 14 do joystick**, desta forma:
 
-![InputManager do Unity](images/unity-input-manager.png)<br>
+](images/unity-input-manager.png) InputManager do ![Unity<br>
 *InputManager do Unity*
 
 O script pode, então, verificar a ação de envio usando *Input. getbutton*:
@@ -187,7 +187,7 @@ Observe que a relação entre essa pose de alça e a pose do ponteiro (onde a po
 ## <a name="windows-specific-apis-xrwsainput"></a>APIs específicas do Windows (XR. WSA. Entrada
 
 **Namespace:** *UnityEngine. XR. WSA. Input*<br>
-**Tipos**: Interactionmanager, *InteractionSourceState*, peractionname, *InteractionSourceProperties*, *InteractionSourceKind*, *InteractionSourceLocation*
+**Tipos**: *interactionmanager*, *InteractionSourceState*, *peractionname*, *InteractionSourceProperties*, *InteractionSourceKind*, *InteractionSourceLocation*
 
 Para obter informações mais detalhadas sobre a entrada da mão de realidade mista do Windows (para o HoloLens) e os controladores de movimento, você pode optar por usar as APIs de entrada espaciais específicas do Windows no namespace *UnityEngine. XR. WSA. Input* . Isso permite que você acesse informações adicionais, como precisão de posição ou tipo de fonte, permitindo que você diga as mãos e os controladores.
 
@@ -228,7 +228,7 @@ Cada *InteractionSourceState* que você retorna representa uma fonte de interaç
 
 ### <a name="polling-for-forward-predicted-rendering-poses"></a>Sondagem para encaminhar representações de renderização previstas
 
-* Durante a sondagem de dados de origem de interação de mãos e controladores, as poses que você obtém são as mais previstas para o momento em que o fótons do quadro atingirá os olhos do usuário.  Essas poses previstas antecipadas são mais  bem usadas para renderizar o controlador ou um objeto mantido em cada quadro.  Se você estiver direcionando um determinado Press ou Release com o controlador, isso será mais preciso se você usar as APIs de eventos de histórico descritas abaixo.
+* Durante a sondagem de dados de origem de interação de mãos e controladores, as poses que você obtém são as mais previstas para o momento em que o fótons do quadro atingirá os olhos do usuário.  Essas poses previstas antecipadas são mais bem usadas para **renderizar** o controlador ou um objeto mantido em cada quadro.  Se você estiver direcionando um determinado Press ou Release com o controlador, isso será mais preciso se você usar as APIs de eventos de histórico descritas abaixo.
 
    ```cs
    var sourcePose = interactionSourceState.sourcePose;
@@ -240,7 +240,7 @@ Cada *InteractionSourceState* que você retorna representa uma fonte de interaç
    }
    ```
 
-* Você também pode obter a pose de cabeça prevista para este quadro atual.  Assim como acontece com o pose de origem, isso  é útil para renderizar um cursor, embora o direcionamento de uma determinada prensa ou versão seja mais preciso se você usar as APIs de evento históricas descritas abaixo.
+* Você também pode obter a pose de cabeça prevista para este quadro atual.  Assim como acontece com o pose de origem, isso é útil para **renderizar** um cursor, embora o direcionamento de uma determinada prensa ou versão seja mais preciso se você usar as APIs de evento históricas descritas abaixo.
 
    ```cs
    var headPose = interactionSourceState.headPose;
@@ -290,9 +290,9 @@ InteractionManager.InteractionSourcePressed -= InteractionManager_InteractionSou
 Os eventos de origem de interação disponíveis são:
 * *InteractionSourceDetected* (a origem se torna ativa)
 * *InteractionSourceLost* (torna-se inativo)
-* *InteractionSourcePressed* (toque, pressionamento de botão ou "selecionar" com total)
-* *InteractionSourceReleased* (fim de um toque, botão liberado ou fim de "selecionar" com liberação)
-* *InteractionSourceUpdated* (move ou altera algum outro Estado)
+* *InteractionSourcePressed* (toque, pressionamento de botão ou "selecionar" desmarcado)
+* *InteractionSourceReleased* (fim de um toque, botão liberado ou fim de "selecionar" exmovida)
+* *InteractionSourceUpdated* (move ou altera qualquer Estado)
 
 ### <a name="events-for-historical-targeting-poses-that-most-accurately-match-a-press-or-release"></a>Os eventos de direcionamento histórico representam que correspondem mais precisamente a uma prensa ou liberação
 
@@ -305,7 +305,7 @@ Isso significa que a sondagem fornece uma pose de origem ou uma pose de cabeça 
 Para ter um destino com precisão com base na intenção original do usuário para um pressionamento de mão ou de controlador, você deve usar a pose de origem histórica ou de cabeçalho desse evento de entrada *InteractionSourcePressed* ou *InteractionSourceReleased* .
 
 Você pode direcionar um Press ou Release com dados históricos de pose do cabeçalho do usuário ou de seu controlador:
-* A parte de cabeça no momento em que uma ocorrência de gesto ou controlador ocorreu, que pode ser **usada para determinar** o que o usuário estava [nuvensndo](gaze.md) :
+* A parte de cabeça no momento em que uma ocorrência de gesto ou controlador ocorreu, que pode ser **usada para determinar** o que o usuário estava [nuvensndo](gaze-and-commit.md) :
 
    ```cs
    void InteractionManager_InteractionSourcePressed(InteractionSourcePressedEventArgs args) {
@@ -319,7 +319,7 @@ Você pode direcionar um Press ou Release com dados históricos de pose do cabe�
    }
    ```
 
-* A origem representa no momento em que uma ocorrência de controlador de movimento ocorreu, que pode ser **usada para determinar** a que o usuário estava apontando o controlador.  Esse será o estado do controlador que sofreu a prensa.  Se você estiver renderizando o próprio controlador, poderá solicitar a pose do ponteiro em vez da pose de alça, para atingir o direcionamento de raio a partir do que o usuário considerará a dica natural desse controlador renderizado:
+* A origem representa no momento em que uma ocorrência de controlador de movimento ocorreu, que pode ser **usada para determinar a que o** usuário estava apontando o controlador.  Esse será o estado do controlador que sofreu a prensa.  Se você estiver renderizando o próprio controlador, poderá solicitar a pose do ponteiro em vez da pose de alça, para atingir o direcionamento de raio a partir do que o usuário considerará a dica natural desse controlador renderizado:
 
    ```cs
    void InteractionManager_InteractionSourcePressed(InteractionSourcePressedEventArgs args)
@@ -401,7 +401,7 @@ void InteractionManager_InteractionSourceUpdated(InteractionSourceUpdatedEventAr
 **Namespace:** *UnityEngine. XR. WSA. Input*<br>
 **Tipos**: *GestureRecognizer*, *GestureSettings*, *InteractionSourceKind*
 
-Seu aplicativo também pode reconhecer gestos de composição de nível superior para fontes de entrada espaciais, toque, retenção, manipulação e gestos de navegação. Você pode reconhecer esses gestos compostos entre os controladores de [mão](gestures.md) e de [movimento](motion-controllers.md) usando o GestureRecognizer.
+Seu aplicativo também pode reconhecer gestos de composição de nível superior para fontes de entrada espaciais, toque, retenção, manipulação e gestos de navegação. Você pode reconhecer esses gestos compostos entre os controladores de [mão](gaze-and-commit.md#composite-gestures) e de [movimento](motion-controllers.md) usando o GestureRecognizer.
 
 Cada evento de gesto no GestureRecognizer fornece o SourceKind para a entrada, bem como a cabeça de destino Ray no momento do evento. Alguns eventos fornecem informações adicionais específicas do contexto.
 
@@ -476,7 +476,7 @@ void OnDestroy()
 
 ## <a name="rendering-the-motion-controller-model-in-unity"></a>Renderizando o modelo de controlador de movimento no Unity
 
-![Modelo de controlador de movimento e teleportação](images/motioncontrollertest-teleport-1000px.png)<br>
+modelo de controlador de movimento ![e teleportação](images/motioncontrollertest-teleport-1000px.png)<br>
 *Modelo de controlador de movimento e teleportação*
 
 Para renderizar os controladores de movimento em seu aplicativo que correspondam aos controladores físicos que os usuários estão mantendo e articulados conforme vários botões são pressionados, você pode usar o **MotionController pré-fabricado** no [Kit de ferramentas da realidade misturada](https://github.com/Microsoft/MixedRealityToolkit-Unity/).  Esse pré-fabricado dinamicamente carrega o modelo de glTF correto em tempo de execução do driver do controlador de movimento instalado do sistema.  É importante carregar esses modelos dinamicamente, em vez de importá-los manualmente no editor, para que seu aplicativo mostre modelos 3D fisicamente precisos para todos os controladores atuais e futuros que seus usuários possam ter.
@@ -490,8 +490,8 @@ A geração de objetos na realidade virtual é um problema mais difícil e, em p
 
 Você pode encontrar um exemplo de como é recomendável implementar o lançamento [aqui](https://github.com/keluecke/MixedRealityToolkit-Unity/blob/master/External/Unitypackages/ThrowingStarter.unitypackage). Este exemplo segue estas quatro diretrizes:
 * **Use a *velocidade* do controlador em vez da posição**. Na atualização de novembro do Windows, apresentamos uma alteração no comportamento no estado de [controle posicional ' ' aproximado](motion-controllers.md#controller-tracking-state)'. Quando nesse estado, as informações de velocidade sobre o controlador continuarão sendo relatadas durante o período em que acreditamos que seja alta precisão, o que geralmente é maior que a posição permanece com alta precisão.
-* **Incorpore a *velocidade angular* do controlador**. Essa lógica está todas contidas no `throwing.cs` arquivo `GetThrownObjectVelAngVel` no método estático, dentro do pacote vinculado acima:
-   1. À medida que a velocidade angular é conservada, o objeto gerado deve manter a mesma velocidade angular que tinha no momento do lançamento:`objectAngularVelocity = throwingControllerAngularVelocity;`
+* **Incorpore a *velocidade angular* do controlador**. Essa lógica está incluída no arquivo `throwing.cs` no método estático `GetThrownObjectVelAngVel`, dentro do pacote vinculado acima:
+   1. À medida que a velocidade angular é conservada, o objeto gerado deve manter a mesma velocidade angular que tinha no momento do lançamento: `objectAngularVelocity = throwingControllerAngularVelocity;`
    2. Como o centro da massa do objeto gerado provavelmente não está na origem da pose de alça, ele provavelmente tem uma velocidade diferente do controlador no quadro de referência do usuário. A parte da velocidade do objeto que contribuiu dessa forma é a velocidade tangential instantânea do centro da massa do objeto gerado em relação à origem do controlador. Essa velocidade de tangential é o produto cruzado da velocidade angular do controlador com o vetor que representa a distância entre a origem do controlador e o centro da massa do objeto gerado.
     
       ```cs
@@ -499,11 +499,11 @@ Você pode encontrar um exemplo de como é recomendável implementar o lançamen
       Vector3 tangentialVelocity = Vector3.Cross(throwingControllerAngularVelocity, radialVec);
       ```
    
-   3. A velocidade total do objeto gerado é, portanto, a soma da velocidade do controlador e dessa velocidade de tangential:`objectVelocity = throwingControllerVelocity + tangentialVelocity;`
+   3. A velocidade total do objeto gerado é, portanto, a soma da velocidade do controlador e dessa velocidade de tangential: `objectVelocity = throwingControllerVelocity + tangentialVelocity;`
 
-* **Preste muita atenção à *hora* em que aplicamos a velocidade**. Quando um botão é pressionado, pode levar até 20 ms para que esse evento seja emergido por meio do Bluetooth para o sistema operacional. Isso significa que, se você sondar uma alteração de estado do controlador de pressionado para não pressionado ou vice-versa, o controlador apresentará as informações que você obtém com ele, na verdade, estará à frente dessa alteração no estado. Além disso, a pose do controlador apresentada por nossa API de sondagem está prevista para refletir uma causa provável no momento em que o quadro será exibido, o que poderia ser mais 20 ms no futuro. Isso é bom para *renderizar* objetos mantidos, mas aumenta nosso problema de  tempo para direcionar o objeto à medida que calculamos a trajetória para o momento em que o usuário lançou o seu lançamento. Felizmente, com a atualização de novembro, quando um evento do Unity como *InteractionSourcePressed* ou *InteractionSourceReleased* é enviado, o estado inclui os dados históricos de back quando o botão foi realmente pressionado ou liberado.  Para obter a renderização de controlador e o direcionamento de controlador mais precisos durante as jogadas, você deve usar corretamente a sondagem e o evento, conforme apropriado:
-   * Para renderizar cada quadro do **controlador** , seu aplicativo deve posicionar o *gameobject* do controlador no controlador previsto para o momento da Photon do quadro atual.  Você obtém esses dados de APIs de sondagem do Unity como a *[XR. InputTracking. GetLocalPosition](https://docs.unity3d.com/ScriptReference/XR.InputTracking.GetLocalPosition.html)* ou *[XR. WSA. Entrada. interactionmanager. GetCurrentReading](https://docs.unity3d.com/ScriptReference/XR.WSA.Input.InteractionManager.GetCurrentReading.html)* .
-   * Para **direcionamento de controlador** em uma prensa ou liberação, seu aplicativo deve Raycast e calcular as trajetórias com base na pose do controlador histórico para esse evento de Press ou Release.  Você obtém esses dados das APIs de eventos do Unity, como interactionmanager *[. InteractionSourcePressed](https://docs.unity3d.com/ScriptReference/XR.WSA.Input.InteractionManager.InteractionSourcePressed.html)* .
+* **Preste muita atenção à *hora* em que aplicamos a velocidade**. Quando um botão é pressionado, pode levar até 20 ms para que esse evento seja emergido por meio do Bluetooth para o sistema operacional. Isso significa que, se você sondar uma alteração de estado do controlador de pressionado para não pressionado ou vice-versa, o controlador apresentará as informações que você obtém com ele, na verdade, estará à frente dessa alteração no estado. Além disso, a pose do controlador apresentada por nossa API de sondagem está prevista para refletir uma causa provável no momento em que o quadro será exibido, o que poderia ser mais 20 ms no futuro. Isso é bom para *renderizar* objetos mantidos, mas aumenta nosso problema de tempo para *direcionar* o objeto à medida que calculamos a trajetória para o momento em que o usuário lançou o seu lançamento. Felizmente, com a atualização de novembro, quando um evento do Unity como *InteractionSourcePressed* ou *InteractionSourceReleased* é enviado, o estado inclui os dados históricos de back quando o botão foi realmente pressionado ou liberado.  Para obter a renderização de controlador e o direcionamento de controlador mais precisos durante as jogadas, você deve usar corretamente a sondagem e o evento, conforme apropriado:
+   * Para **renderizar** cada quadro do controlador, seu aplicativo deve posicionar o *gameobject* do controlador no controlador previsto para o momento da Photon do quadro atual.  Você obtém esses dados de APIs de sondagem do Unity como a *[XR. InputTracking. GetLocalPosition](https://docs.unity3d.com/ScriptReference/XR.InputTracking.GetLocalPosition.html)* ou *[XR. WSA. Entrada. interactionmanager. GetCurrentReading](https://docs.unity3d.com/ScriptReference/XR.WSA.Input.InteractionManager.GetCurrentReading.html)* .
+   * Para **direcionamento de controlador** em uma prensa ou liberação, seu aplicativo deve Raycast e calcular as trajetórias com base na pose do controlador histórico para esse evento de Press ou Release.  Você obtém esses dados das APIs de eventos do Unity, como *[interactionmanager. InteractionSourcePressed](https://docs.unity3d.com/ScriptReference/XR.WSA.Input.InteractionManager.InteractionSourcePressed.html)* .
 * **Use a pose de alça**. A velocidade angular e a velocidade são relatadas em relação à pose de alça, não à pose de ponteiro.
 
 O lançamento continuará a melhorar com futuras atualizações do Windows e você poderá esperar mais informações sobre ela aqui.
@@ -519,15 +519,15 @@ Você pode acessar o gesto e o controlador de movimento do Gerenciador de entrad
 
 Os tutoriais passo a passo, com exemplos de personalização mais detalhados, estão disponíveis na Academia de realidade misturada:
 
-- [Entrada do MR 211: gesto](holograms-211.md)
-- [Entrada do MR 213: controladores de movimentos](mixed-reality-213.md)
+- [Entrada MR 211: gesto](holograms-211.md)
+- [Entrada MR 213: controladores de movimento](mixed-reality-213.md)
 
-[![Entrada MR 213-controlador de movimento](images/mr213-main-600px.jpg)](https://docs.microsoft.com/windows/mixed-reality/mixed-reality-213)<br>
+[![Sr Input 213-controlador de movimento](images/mr213-main-600px.jpg)](https://docs.microsoft.com/windows/mixed-reality/mixed-reality-213)<br>
 *Entrada MR 213-controlador de movimento*
 
 ## <a name="see-also"></a>Consulte também
 
-* [Gestos](gestures.md)
+* [Focar com a cabeça e confirmar](gaze-and-commit.md)
 * [Controladores de movimentos](motion-controllers.md)
 
 

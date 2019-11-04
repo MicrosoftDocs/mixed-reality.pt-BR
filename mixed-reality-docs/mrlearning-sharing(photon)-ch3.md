@@ -6,16 +6,16 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realidade misturada, unity, tutorial, hololens
-ms.openlocfilehash: d3068a1ebbbc2b6db8b563be8bf8c6e488e9491a
-ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
+ms.openlocfilehash: a6d1a269f45b4aaf7cbd8fea948ddcbdf0bf18e2
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68701937"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437739"
 ---
-# <a name="3-connecting-multiple-users"></a>3. Conectando vários usuários
+# <a name="3-connecting-multiple-users"></a>3. conectando vários usuários
 
-Nesta lição, aprenderemos como conectar vários usuários como parte de uma experiência compartilhada ao vivo. Ao final desta lição, você poderá abrir o aplicativo em vários dispositivos e ver o Avatar, representado por uma esfera, representações de cada pessoa que ingressar. 
+Nesta lição, aprenderemos como conectar vários usuários como parte de uma experiência compartilhada ao vivo. Ao final desta lição, você poderá abrir o aplicativo em vários dispositivos e ver o Avatar, representado por uma esfera para cada pessoa que une. 
 
 Seus
 
@@ -25,7 +25,7 @@ Seus
 
 ## <a name="instructions"></a>Instruções
 
-1. Na pasta ativos-> recursos-> pré-fabricados no painel projeto, arraste e solte o NetworkLobby pré-fabricado para a hierarquia, conforme mostrado na imagem abaixo.
+1. Na pasta ativos-> recursos-> pré-fabricados do painel projeto, arraste e solte o NetworkLobby pré-fabricado na hierarquia, conforme mostrado na imagem abaixo.
 
 ![Module3Chapter3step1im](images/module3chapter3step1im.PNG)
 
@@ -37,7 +37,7 @@ Seus
 
 ![Module3Chapter3step3im](images/module3chapter3step3im.PNG)
 
-4. Clique em Adicionar componente e digite sincronização de rede genérica. Selecione a classe genérica net Sync. Quando a classe for exibida, clique na caixa de seleção do usuário para ativá-la. 
+4. Clique em Adicionar componente e digite net Sync genérico. Selecione a classe genérica net Sync. Quando a classe for exibida, clique na caixa de seleção do usuário para ativá-la. 
 
 ![module3chapter3updateStep4im](images/module3chapter3updateStep4im.png)
 
@@ -49,7 +49,7 @@ Seus
 
 ![module3chapter3updateStep6im. png](images/module3chapter3updateStep6im.png) 
 
-7. Em seguida, criamos um aqui para representar cada pessoa que une uma experiência compartilhada. Clique com o botão direito do mouse no objeto PhotonUser que você acabou de criar e scrolldown para "objeto 3D e clique em esfera. Isso criará um objeto de jogo de esfera como um filho do objeto PhotonUser.
+7. Em seguida, criamos um aqui para representar cada pessoa que une uma experiência compartilhada. Clique com o botão direito do mouse no objeto PhotonUser que você acabou de criar, role para baixo até "objeto 3D e clique em esfera. Isso criará um objeto de jogo de esfera como um filho do objeto PhotonUser.
 
 ![Module3Chapter3step4im](images/module3chapter3step4im.PNG)
 
@@ -57,13 +57,13 @@ Seus
 
 ![Module3hapter3step5im](images/module3chapter3step5im.PNG)
 
-9. Arraste o objeto de jogo PhotonUser para a pasta pré-fabricados no painel projeto e, em seguida, exclua-o da cena. Agora, criamos um pré-fabricado que pode ser usado ao gerar ou criar uma instância de novos jogadores em uma experiência compartilhada.
+9. Arraste o objeto de jogo PhotonUser para a pasta pré-fabricados no painel projeto e, em seguida, exclua-o da cena. Agora você criou um pré-fabricado que pode ser usado ao gerar ou criar uma instância de novos jogadores em uma experiência compartilhada.
 
 ![Module3Chapter3step6im](images/module3chapter3step6im.PNG)
 
 > Observação: Verifique se o objeto de jogo foi copiado com êxito na pasta pré-fabricados antes de excluí-lo da sua hierarquia.
 
-10. Crie um novo objeto na hierarquia seguindo as instruções na etapa 3 e nomeie-o SharedPlayground. Em seguida, clique em Adicionar componente e pesquise Gerenciador de rede genérico e clique nele para adicionar o componente do Gerenciador de rede genérico. Altere a posição do objeto para x = 0, y = 0 e z = 0.
+10. Crie um novo objeto na hierarquia seguindo as instruções na etapa 3 e nomeie-o SharedPlayground. Em seguida, clique em Adicionar componente e pesquise por Gerenciador de rede genérico.  Clique novamente para adicionar o componente do Gerenciador de rede genérico. Altere a posição do objeto para x = 0, y = 0 e z = 0.
 
 ![Module3Chapter3step7im](images/module3chapter3step7im.PNG)
 
@@ -72,5 +72,5 @@ Seus
 
 Depois que todas as etapas acima forem concluídas e o processo de compilação também for concluído, pressione o botão reproduzir e conecte seu HoloLens 2. Você deve ver uma esfera se movimentando à medida que move sua cabeça. Isso será mostrado para qualquer usuário que ingressar em seu projeto do Unity!
 
-[Próxima lição: 4. Compartilhar movimentações de objeto com vários usuários](mrlearning-sharing(photon)-ch4.md)
+[Próxima lição: 4. compartilhando movimentos de objeto com vários usuários](mrlearning-sharing(photon)-ch4.md)
 

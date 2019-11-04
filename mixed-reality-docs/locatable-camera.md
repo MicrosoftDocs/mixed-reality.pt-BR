@@ -2,16 +2,16 @@
 title: Câmera localizável
 description: Informações gerais sobre a câmera frontal do HoloLens, como ela funciona e os perfis e as resoluções disponíveis para os desenvolvedores.
 author: cdedmonds
-ms.author: wguyman, cdedmonds
+ms.author: wguyman
 ms.date: 06/12/2019
 ms.topic: article
 keywords: câmera, hololens, câmera colorida, frente, hololens 2, CV, pesquisa Visual computacional, fiducial, marcadores, código QR, QR, foto, vídeo
-ms.openlocfilehash: 368943dd70c721a41ca7c265a19ecb7c394db312
-ms.sourcegitcommit: 4ac761fed7a9570977f6d031ba4f870585d6630a
+ms.openlocfilehash: e906da63b07643ccbf386c6fc72cc3c58006ae72
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68861720"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438509"
 ---
 # <a name="locatable-camera"></a>Câmera localizável
 
@@ -25,7 +25,7 @@ O HoloLens inclui uma câmera voltada para o mundo montada na frente do disposit
 * O LED de privacidade branco enfrentado pelo mundo se acenderá sempre que a câmera estiver ativa
 * A câmera dá suporte aos seguintes modos (todos os modos são 16:9 taxa de proporção) a 30, 24, 20, 15 e 5 fps:
 
-  |  Vídeo  |  Visualizar  |  Também  |  Campo de exibição horizontal (H-FOV) |  Uso sugerido | 
+  |  Vídeo  |  Preview  |  Também  |  Campo de exibição horizontal (H-FOV) |  Uso sugerido | 
   |----------|----------|----------|----------|----------|
   |  1280x720 |  1280x720 |  1280x720 |  45deg  |  (modo padrão com estabilização de vídeo) | 
   |  N/D |  N/D |  2048x1152 |  67deg |  Imagem da resolução mais alta ainda | 
@@ -37,10 +37,10 @@ O HoloLens inclui uma câmera voltada para o mundo montada na frente do disposit
 
 * Câmera de foto/vídeo (PV) de foco automático com balanceamento de branco automático, exposição automática e pipeline de processamento de imagem completo.
 * O LED de privacidade branco enfrentado pelo mundo se acenderá sempre que a câmera estiver ativa.
-* O HoloLens 2 dá suporte a perfis de câmera diferentes. Saiba como [descobrir e selecionar recursos de câmera](https://docs.microsoft.com/en-us/windows/uwp/audio-video-camera/camera-profiles).
+* O HoloLens 2 dá suporte a perfis de câmera diferentes. Saiba como [descobrir e selecionar recursos de câmera](https://docs.microsoft.com//windows/uwp/audio-video-camera/camera-profiles).
 * A câmera dá suporte aos seguintes perfis e resoluções (todos os modos de vídeo são taxa de proporção de 16:9):
   
-  | Perfil                                         | Vídeo     | Visualizar   | Também     | Taxas de quadros | Campo de exibição horizontal (H-FOV) | Uso sugerido                             |
+  | Perfil                                         | Vídeo     | Preview   | Também     | Taxas de quadros | Campo de exibição horizontal (H-FOV) | Uso sugerido                             |
   |-------------------------------------------------|-----------|-----------|-----------|-------------|----------------------------------|---------------------------------------------|
   | Herdado, 0 BalancedVideoAndPhoto, 100             | 2272x1278 | 2272x1278 |           | 15, 30       | 64,69                            | Gravação de vídeo de alta qualidade                |
   | Herdado, 0 BalancedVideoAndPhoto, 100             | 896x504   | 896x504   |           | 15, 30       | 64,69                            | Fluxo de visualização para captura de foto de alta qualidade |
@@ -49,7 +49,7 @@ O HoloLens inclui uma câmera voltada para o mundo montada na frente do disposit
   | BalancedVideoAndPhoto, 120                       | 1504x846  | 1504x846  |           | 15, 30       | 64,69                            | Cenários de duração longa                     |
   | Videoconferência, 100                           | 1952x1100 | 1952x1100 | 1952x1100 | 15, 30, 60    | 64,69                            | Videoconferência, cenários de longa duração |
   | Videoconferência, 100                           | 1504x846  | 1504x846  |           | 5, 15, 30, 60  | 64,69                            | Videoconferência, cenários de longa duração |
-  | Videoconferência, 100 BalancedVideoAndPhoto, 120 | 1920x1080 | 1920x1080 | 1920x1080 | 15, 30       | 64,69                            | Videoconferência, cenários de longa duração |
+  | Videoconferência, 100 BalancedVideoAndPhoto, 120 | 1920 x 1080 | 1920 x 1080 | 1920 x 1080 | 15, 30       | 64,69                            | Videoconferência, cenários de longa duração |
   | Videoconferência, 100 BalancedVideoAndPhoto, 120 | 1280x720  | 1280x720  | 1280x720  | 15, 30       | 64,69                            | Videoconferência, cenários de longa duração |
   | Videoconferência, 100 BalancedVideoAndPhoto, 120 | 1128x636  |           |           | 15, 30       | 64,69                            | Videoconferência, cenários de longa duração |
   | Videoconferência, 100 BalancedVideoAndPhoto, 120 | 960 x 540   |           |           | 15, 30       | 64,69                            | Videoconferência, cenários de longa duração |
@@ -69,22 +69,22 @@ Quando o HoloLens usa fotos e vídeos, os quadros capturados incluem o local da 
 
 A "câmera" em outro lugar na documentação do HoloLens pode se referir à "câmera do jogo virtual" (o frustum ao qual o aplicativo é renderizado). A menos que seja indicado de outra forma, "câmera" nesta página refere-se à câmera de cores RGB do mundo real.
 
-Os detalhes nesta página abrangem o uso da classe [MediaFrameReference](https://docs.microsoft.com/en-us/uwp/api/windows.media.capture.frames.mediaframereference) , no entanto, também há APIs para efetuar pull de intrínsecos e locais de câmera usando [atributos de Media Foundation](https://msdn.microsoft.com/library/windows/desktop/mt740395(v=vs.85).aspx). Consulte o exemplo de [acompanhamento facial do Holographic](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/HolographicFaceTracking) para obter mais informações.
+Os detalhes nesta página abrangem o uso da classe [MediaFrameReference](https://docs.microsoft.com//uwp/api/windows.media.capture.frames.mediaframereference) , no entanto, também há APIs para efetuar pull de intrínsecos e locais de câmera usando [atributos de Media Foundation](https://msdn.microsoft.com/library/windows/desktop/mt740395(v=vs.85).aspx). Consulte o exemplo de [acompanhamento facial do Holographic](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/HolographicFaceTracking) para obter mais informações.
 
 ### <a name="images-with-coordinate-systems"></a>Imagens com sistemas de coordenadas
 
-Cada quadro de imagem (seja foto ou vídeo) inclui um [SpatialCoordinateSystem](https://docs.microsoft.com/en-us/uwp/api/windows.perception.spatial.spatialcoordinatesystem) com raiz na câmera no momento da captura que pode ser acessada usando a propriedade [CoordinateSystem](https://docs.microsoft.com/en-us/uwp/api/windows.media.capture.frames.mediaframereference.coordinatesystem#Windows_Media_Capture_Frames_MediaFrameReference_CoordinateSystem) de seu [MediaFrameReference](https://docs.microsoft.com/en-us/uwp/api/Windows.Media.Capture.Frames.MediaFrameReference). Além disso, cada quadro contém uma descrição do modelo de lente da câmera que pode ser encontrado na propriedade [CameraIntrinsics](https://docs.microsoft.com/en-us/uwp/api/windows.media.capture.frames.videomediaframe.cameraintrinsics#Windows_Media_Capture_Frames_VideoMediaFrame_CameraIntrinsics) . Juntas, essas transformações definem para cada pixel um raio em um espaço 3D que representa o caminho usado pelo fótons que produziu o pixel. Esses raios podem estar relacionados a outro conteúdo no aplicativo por meio da obtenção da transformação do sistema de coordenadas do quadro para outro sistema de coordenadas (por exemplo, de um [quadro estacionário de referência](coordinate-systems.md#stationary-frame-of-reference)). Para resumir, cada quadro de imagem fornece o seguinte:
+Cada quadro de imagem (seja foto ou vídeo) inclui um [SpatialCoordinateSystem](https://docs.microsoft.com//uwp/api/windows.perception.spatial.spatialcoordinatesystem) com raiz na câmera no momento da captura que pode ser acessada usando a propriedade [CoordinateSystem](https://docs.microsoft.com//uwp/api/windows.media.capture.frames.mediaframereference.coordinatesystem#Windows_Media_Capture_Frames_MediaFrameReference_CoordinateSystem) de seu [MediaFrameReference](https://docs.microsoft.com//uwp/api/Windows.Media.Capture.Frames.MediaFrameReference). Além disso, cada quadro contém uma descrição do modelo de lente da câmera que pode ser encontrado na propriedade [CameraIntrinsics](https://docs.microsoft.com//uwp/api/windows.media.capture.frames.videomediaframe.cameraintrinsics#Windows_Media_Capture_Frames_VideoMediaFrame_CameraIntrinsics) . Juntas, essas transformações definem para cada pixel um raio em um espaço 3D que representa o caminho usado pelo fótons que produziu o pixel. Esses raios podem estar relacionados a outro conteúdo no aplicativo por meio da obtenção da transformação do sistema de coordenadas do quadro para outro sistema de coordenadas (por exemplo, de um [quadro estacionário de referência](coordinate-systems.md#stationary-frame-of-reference)). Para resumir, cada quadro de imagem fornece o seguinte:
 * Dados de pixel (em formato RGB/NV12/JPEG/etc.)
-* Um [SpatialCoordinateSystem](https://docs.microsoft.com/en-us/uwp/api/windows.perception.spatial.spatialcoordinatesystem) do local da captura
-* Uma classe [CameraIntrinsics](https://docs.microsoft.com/en-us/uwp/api/windows.media.capture.frames.videomediaframe.cameraintrinsics#Windows_Media_Capture_Frames_VideoMediaFrame_CameraIntrinsics) que contém o modo de lente da câmera
+* Um [SpatialCoordinateSystem](https://docs.microsoft.com//uwp/api/windows.perception.spatial.spatialcoordinatesystem) do local da captura
+* Uma classe [CameraIntrinsics](https://docs.microsoft.com//uwp/api/windows.media.capture.frames.videomediaframe.cameraintrinsics#Windows_Media_Capture_Frames_VideoMediaFrame_CameraIntrinsics) que contém o modo de lente da câmera
 
 ### <a name="camera-to-application-specified-coordinate-system"></a>Câmera para o sistema de coordenadas especificado pelo aplicativo
 
 Para ir do ' CameraIntrinsics ' e ' CameraCoordinateSystem ' para seu sistema/coordenado do mundo, você precisará do seguinte:
 
-[Câmera localizável no Unity](locatable-camera-in-unity.md): O CameraToWorldMatrix é fornecido automaticamente pela classe PhotoCaptureFrame (portanto, você não precisa se preocupar com as transformações CameraCoordinateSystem).
+A [câmera localizável no Unity](locatable-camera-in-unity.md): CameraToWorldMatrix é fornecida automaticamente pela classe PhotoCaptureFrame (portanto, você não precisa se preocupar com as transformações CameraCoordinateSystem).
 
-[Câmera localizável no DirectX](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/HolographicFaceTracking): O exemplo de acompanhamento facial do Holographic mostra a maneira bastante simples de consultar a transformação entre o sistema de coordenadas da câmera e seu próprio sistema de coordenadas do aplicativo.
+[Câmera localizável no DirectX](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/HolographicFaceTracking): o exemplo de acompanhamento facial Holographic mostra a maneira bastante simples de consultar a transformação entre o sistema de coordenadas da câmera e seu próprio sistema de coordenadas do aplicativo.
 
 ### <a name="distortion-error"></a>Erro de distorção
 
@@ -109,9 +109,9 @@ Para reconhecer um padrão Visual e, em seguida, colocar esse objeto no espaço 
 4. Posicione seus modelos virtuais nesses locais mundiais
 
 Alguns links importantes de processamento de imagens:
-* [OpenCV](http://opencv.org/)
+* [OpenCV](https://opencv.org/)
 * [Marcas QR](https://en.wikipedia.org/wiki/QR_code)
-* [FaceSDK](http://research.microsoft.com/projects/facesdk/)
+* [FaceSDK](https://research.microsoft.com/projects/facesdk/)
 * [Microsoft Translator](https://www.microsoft.com/translator/business)
 
 Manter uma taxa de quadros de aplicativo interativo é fundamental, especialmente ao lidar com algoritmos de reconhecimento de imagem de longa execução. Por esse motivo, normalmente usamos o seguinte padrão:

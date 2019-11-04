@@ -6,19 +6,19 @@ ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: Azure, realidade mista, Academia, Unity, tutorial, API, reconhecimento facial, hololens, imersão, VR
-ms.openlocfilehash: 7cd2a6683c80279129934c619a9b9cb857badf67
-ms.sourcegitcommit: 3b32339c5d5c79eaecd84ed27254a8f4321731f1
+ms.openlocfilehash: ef75be5485f85538eb8b3db3eebec63b166f7aa3
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70047181"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438498"
 ---
 >[!NOTE]
 >Os tutoriais misturados do Academia de realidade foram projetados com o HoloLens (1º gen) e com o fone de cabeça de imersão de realidade misturada.  Como tal, achamos que é importante deixar esses tutoriais em vigor para os desenvolvedores que ainda estão procurando orientação no desenvolvimento para esses dispositivos.  Esses tutoriais **_não_** serão atualizados com os conjuntos de ferramentas e as interações mais recentes usados para o HoloLens 2.  Eles serão mantidos para continuar a trabalhar nos dispositivos com suporte. Haverá uma nova série de tutoriais que serão publicados no futuro, que demonstrarão como desenvolver para o HoloLens 2.  Esse aviso será atualizado com um link para esses tutoriais quando eles forem postados.
 
 <br> 
 
-# <a name="mr-and-azure-304-face-recognition"></a>Sr e Azure 304: Reconhecimento facial
+# <a name="mr-and-azure-304-face-recognition"></a>Sr e Azure 304: reconhecimento facial
 
 ![resultado da conclusão deste curso](images/AzureLabs-Lab4-00.png)
 
@@ -43,7 +43,7 @@ Em seu aplicativo, cabe a você como você integrará os resultados com seu desi
 <tr>
 <th>Course</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Headsets imersivos</a></th>
 </tr><tr>
-<td> Sr e Azure 304: Reconhecimento facial</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
+<td> Sr e Azure 304: reconhecimento facial</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
 </tr>
 </table>
 
@@ -112,11 +112,11 @@ Para usar o serviço de *API de detecção facial* no Azure, você precisará co
 
     6. Você também precisará confirmar que entendeu os termos e condições aplicados a esse serviço.
 
-    7. Selecione **criar*.**
+    7. Selecione **criar *.**
 
         ![Criar serviço de API facial](images/AzureLabs-Lab4-03.png)
 
-5.  Depois de clicar em **criar*** você terá que aguardar o serviço a ser criado, isso pode levar um minuto.
+5.  Depois de clicar em **criar *,** você precisará aguardar a criação do serviço; isso pode levar um minuto.
 
 6.  Uma notificação será exibida no portal assim que a instância do serviço for criada.
 
@@ -269,7 +269,7 @@ A seguir está uma configuração típica para o desenvolvimento com realidade m
 
     1. Na guia **outras configurações** :
 
-        1. **Criando scripts** A **versão de tempo de execução** deve ser **Experimental** (.NET 4,6 equivalente). Alterar isso irá disparar a necessidade de reiniciar o editor.
+        1. A **versão de tempo de execução** de **script** deve ser **experimental** (.NET 4,6 equivalente). Alterar isso irá disparar a necessidade de reiniciar o editor.
         2. O **back-end de script** deve ser **.net**
         3. O **nível de compatibilidade da API** deve ser **.NET 4,6**
 
@@ -282,7 +282,7 @@ A seguir está uma configuração típica para o desenvolvimento com realidade m
 
             ![Atualizando configurações de publicação.](images/AzureLabs-Lab4-17.png)
 
-    3. Mais adiante no painel, em **configurações de XR** (encontradas abaixo de **configurações de publicação**), **suporte à realidade virtual**em escala, verifique se o SDK do **Windows Mixed Reality** foi adicionado.
+    3. Mais adiante no painel, em **configurações de XR** (encontradas abaixo de **configurações de publicação**), **suporte à realidade virtual**em escala, verifique se o **SDK do Windows Mixed Reality** foi adicionado.
 
         ![Atualize as configurações de X R.](images/AzureLabs-Lab4-18.png)
 
@@ -344,7 +344,7 @@ Para criar a classe *FaceAnalysis* :
     ![Crie a classe FaceAnalysis.](images/AzureLabs-Lab4-22.png)
 
 2.  Clique duas vezes na pasta recém-criada para abri-la. 
-3.  Clique com o botão direito do mouse dentro da pasta e clique em **criar**  >   **C# script**. Chame o script *FaceAnalysis*. 
+3.  Clique com o botão direito do mouse dentro da pasta e clique em **criar** >  **C# script**. Chame o script *FaceAnalysis*. 
 4.  Clique duas vezes no novo script *FaceAnalysis* para abri-lo com o Visual Studio 2017.
 5.  Insira os seguintes namespaces acima da classe *FaceAnalysis* :
 
@@ -834,7 +834,7 @@ Para implantar no HoloLens:
 6.  Seu aplicativo agora deve aparecer na lista de aplicativos instalados em seu HoloLens, pronto para ser iniciado!
 
 > [!NOTE]
-> Para implantar em headsets de imersão, defina a **plataforma da solução** como *computador local*e defina a **configuração** a ser depurada, com *x86* como a **plataforma**. Em seguida, implante no computador local, usando o **menu Compilar**, selecionando *implantar solução*. 
+> Para implantar em headsets de imersão, defina a **plataforma da solução** como *computador local*e defina a **configuração** a ser *depurada*, com *x86* como a **plataforma**. Em seguida, implante no computador local, usando o **menu Compilar**, selecionando *implantar solução*. 
 
 
 ## <a name="chapter-10---using-the-application"></a>Capítulo 10-usando o aplicativo
@@ -864,4 +864,4 @@ A **API de detecção facial do Azure** é eficiente o suficiente para detectar 
 
 ### <a name="exercise-2"></a>Exercício 2
 
-O **API de detecção facial do Azure** também é capaz de fornecer de volta todos os tipos de informações de atributo. Integre-o ao aplicativo. Isso pode ser ainda mais interessante, quando combinado com o [API de detecção de emoções](https://azure.microsoft.com/en-au/services/cognitive-services/emotion/).
+O **API de detecção facial do Azure** também é capaz de fornecer de volta todos os tipos de informações de atributo. Integre-o ao aplicativo. Isso pode ser ainda mais interessante, quando combinado com o [API de detecção de emoções](https://azure.microsoft.com/services/cognitive-services/emotion/).

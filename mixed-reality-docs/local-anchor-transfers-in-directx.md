@@ -6,12 +6,12 @@ ms.author: mriches
 ms.date: 03/21/2018
 ms.topic: article
 keywords: HoloLens, sincronizar, âncora espacial, transferência, vários participantes, exibição, cenário, passo a passos, código de exemplo, transferência, transferência de âncora local, exportação de âncora, importação de âncora
-ms.openlocfilehash: 5d03f4bfa764b9948ec4718bce86127cfcc3e303
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: f961862c3c49872484683e264fb9c62b5d0b60ee
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63515464"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437959"
 ---
 # <a name="local-anchor-transfers-in-directx"></a>Transferências de âncora local no DirectX
 
@@ -33,7 +33,7 @@ Observe que as âncoras espaciais não podem ser transferidas entre diferentes t
 
 Seu aplicativo deve receber permissão para usar o recurso spatialPerception antes de poder usar o [SpatialAnchorTransferManager](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.spatialanchortransfermanager.aspx). Isso é necessário porque a transferência de uma âncora espacial envolve o compartilhamento de imagens do sensor reunidas ao longo do tempo na proximidade da âncora, que pode incluir informações confidenciais.
 
-Declare esse recurso no arquivo Package. appxmanifest para seu aplicativo. Veja um exemplo:
+Declare esse recurso no arquivo Package. appxmanifest para seu aplicativo. Aqui está um exemplo:
 
 ```
 <Capabilities>
@@ -41,19 +41,19 @@ Declare esse recurso no arquivo Package. appxmanifest para seu aplicativo. Veja 
 </Capabilities>
 ```
 
-A funcionalidade vem do namespace **uap2** . Para obter acesso a esse namespace em seu manifesto, inclua-o como um atributo *xlmns* no &lt;elemento > do pacote. Veja um exemplo:
+A funcionalidade vem do namespace **uap2** . Para obter acesso a esse namespace em seu manifesto, inclua-o como um atributo *xlmns* no elemento > do pacote de &lt;. Aqui está um exemplo:
 
 ```
 <Package
-    xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
-    xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
-    xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
-    xmlns:uap2="http://schemas.microsoft.com/appx/manifest/uap/windows10/2"
+    xmlns="https://schemas.microsoft.com/appx/manifest/foundation/windows10"
+    xmlns:mp="https://schemas.microsoft.com/appx/2014/phone/manifest"
+    xmlns:uap="https://schemas.microsoft.com/appx/manifest/uap/windows10"
+    xmlns:uap2="https://schemas.microsoft.com/appx/manifest/uap/windows10/2"
     IgnorableNamespaces="uap mp"
     >
 ```
 
-**OBSERVAÇÃO:** Seu aplicativo precisará solicitar o recurso em tempo de execução antes de poder acessar as APIs de exportação/importação do SpatialAnchor. Consulte [RequestAccessAsync](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.spatialanchortransfermanager.requestaccessasync.aspx) nos exemplos abaixo.
+**Observação:** Seu aplicativo precisará solicitar o recurso em tempo de execução antes de poder acessar as APIs de exportação/importação do SpatialAnchor. Consulte [RequestAccessAsync](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.spatialanchortransfermanager.requestaccessasync.aspx) nos exemplos abaixo.
 
 ## <a name="serialize-anchor-data-by-exporting-it-with-the-spatialanchortransfermanager"></a>Serialize os dados de ancoragem exportando-os com o SpatialAnchorTransferManager
 
@@ -72,7 +72,7 @@ task<bool> SpatialAnchorImportExportHelper::ExportAnchorDataAsync(
 {
 ```
 
-Primeiro, precisamos configurar o fluxo de dados. Isso nos permitirá 1.) Use TryExportAnchorsAsync para colocar os dados em um buffer de Propriedade do aplicativo e 2.) ler dados do fluxo de buffer de bytes exportado, que é um fluxo de dados do WinRT, em nosso próprio buffer de memória, que&lt;é um > de bytes de vetor padrão.
+Primeiro, precisamos configurar o fluxo de dados. Isso nos permitirá 1.) Use TryExportAnchorsAsync para colocar os dados em um buffer de Propriedade do aplicativo e 2.) ler dados do fluxo de buffer de bytes exportado, que é um fluxo de dados do WinRT, em nosso próprio buffer de memória, que é um > de bytes std:: vector&lt;.
 
 ```
 // Create a random access stream to process the anchor byte data.
@@ -270,7 +270,7 @@ Se os dados puderem ser importados, obteremos uma exibição de mapa de pares ch
 }
 ```
 
-**OBSERVAÇÃO:** Só porque você pode importar uma âncora, não significa necessariamente que você pode usá-la imediatamente. A âncora pode estar em uma sala diferente ou em outra localização física; a âncora não será localizável até que o dispositivo que o recebeu tenha informações visuais suficientes sobre o ambiente em que a âncora foi criada, para restaurar a posição da âncora relativa ao ambiente atual conhecido. A implementação do cliente deve tentar localizar a âncora relativa ao seu sistema de coordenadas local ou quadro de referência antes de prosseguir para tentar usá-la para conteúdo ao vivo. Por exemplo, tente localizar a âncora relativa a um sistema de coordenadas atual periodicamente até que a âncora comece a ser localizável.
+**Observação:** Só porque você pode importar uma âncora, não significa necessariamente que você pode usá-la imediatamente. A âncora pode estar em uma sala diferente ou em outra localização física; a âncora não será localizável até que o dispositivo que o recebeu tenha informações visuais suficientes sobre o ambiente em que a âncora foi criada, para restaurar a posição da âncora relativa ao ambiente atual conhecido. A implementação do cliente deve tentar localizar a âncora relativa ao seu sistema de coordenadas local ou quadro de referência antes de prosseguir para tentar usá-la para conteúdo ao vivo. Por exemplo, tente localizar a âncora relativa a um sistema de coordenadas atual periodicamente até que a âncora comece a ser localizável.
 
 ## <a name="special-considerations"></a>Considerações especiais
 
@@ -288,7 +288,7 @@ Como a exportação de um único SpatialAnchor, o BLOB contém uma representaç�
 
 ![Várias âncoras exportadas usando uma única chamada TryExportAnchorsAsync](images/multipleanchors.png) ![Várias âncoras exportadas usando uma chamada TryExportAnchorsAsync separada para cada âncora](images/separateanchors.png)
 
-## <a name="example-send-anchor-data-using-a-windowsnetworkingstreamsocket"></a>Exemplo: Envie dados de âncora usando um Windows:: Networking:: StreamSocket
+## <a name="example-send-anchor-data-using-a-windowsnetworkingstreamsocket"></a>Exemplo: enviar dados de âncora usando um Windows:: Networking:: StreamSocket
 
 Aqui, fornecemos um exemplo de como usar dados de âncora exportados enviando-os por uma rede TCP. Isso é de HolographicSpatialAnchorTransferSample.
 
@@ -464,7 +464,7 @@ void SampleAnchorTcpServer::HandleException(Exception^ exception)
 
 Primeiro, precisamos se conectar ao servidor. Este exemplo de código mostra como criar e configurar um StreamSocket e criar um DataReader que você pode usar para adquirir dados de rede usando a conexão de soquete.
 
-**OBSERVAÇÃO:** Se você executar este código de exemplo, certifique-se de configurar e iniciar o servidor antes de iniciar o cliente.
+**Observação:** Se você executar este código de exemplo, certifique-se de configurar e iniciar o servidor antes de iniciar o cliente.
 
 ```
 task<bool> SampleAnchorTcpClient::ConnectToServer()
@@ -672,7 +672,7 @@ void SampleAnchorTcpClient::HandleException(Exception^ exception)
 }
 ```
 
-É só isso! Agora, você deve ter informações suficientes para tentar localizar as âncoras recebidas pela rede. Novamente, observe que o cliente deve ter dados de controle visual suficientes para o espaço localizar a âncora com êxito; Se não funcionar imediatamente, tente percorrer um tempo. Se ainda não funcionar, faça com que o servidor envie mais âncoras e use as comunicações de rede para concordar em uma que funcione para o cliente. Você pode experimentar isso baixando o HolographicSpatialAnchorTransferSample, configurando seus IPs de cliente e de servidor e implantando-os em dispositivos HoloLens de cliente e servidor.
+Pronto! Agora, você deve ter informações suficientes para tentar localizar as âncoras recebidas pela rede. Novamente, observe que o cliente deve ter dados de controle visual suficientes para o espaço localizar a âncora com êxito; Se não funcionar imediatamente, tente percorrer um tempo. Se ainda não funcionar, faça com que o servidor envie mais âncoras e use as comunicações de rede para concordar em uma que funcione para o cliente. Você pode experimentar isso baixando o HolographicSpatialAnchorTransferSample, configurando seus IPs de cliente e de servidor e implantando-os em dispositivos HoloLens de cliente e servidor.
 
 ## <a name="see-also"></a>Consulte também
 * [Biblioteca de padrões paralelos (PPL)](https://msdn.microsoft.com/library/dd492418.aspx)

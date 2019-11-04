@@ -6,19 +6,19 @@ ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: Azure, realidade mista, Academia, Unity, tutorial, API, pesquisa Visual computacional, hololens, imersão, VR
-ms.openlocfilehash: 9cc526afdc36b8056afd61948fea5cf98015bb35
-ms.sourcegitcommit: 3b32339c5d5c79eaecd84ed27254a8f4321731f1
+ms.openlocfilehash: d6f792a67adfd1038ca4cdbc44b2ef1bf12a1173
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70047192"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437948"
 ---
 >[!NOTE]
 >Os tutoriais misturados do Academia de realidade foram projetados com o HoloLens (1º gen) e com o fone de cabeça de imersão de realidade misturada.  Como tal, achamos que é importante deixar esses tutoriais em vigor para os desenvolvedores que ainda estão procurando orientação no desenvolvimento para esses dispositivos.  Esses tutoriais **_não_** serão atualizados com os conjuntos de ferramentas e as interações mais recentes usados para o HoloLens 2.  Eles serão mantidos para continuar a trabalhar nos dispositivos com suporte. Haverá uma nova série de tutoriais que serão publicados no futuro, que demonstrarão como desenvolver para o HoloLens 2.  Esse aviso será atualizado com um link para esses tutoriais quando eles forem postados.
 
 <br>
 
-# <a name="mr-and-azure-302-computer-vision"></a>Sr e Azure 302: Pesquisa Visual computacional
+# <a name="mr-and-azure-302-computer-vision"></a>Sr e Azure 302: visão computacional
 
 Neste curso, você aprenderá a reconhecer o conteúdo visual dentro de uma imagem fornecida, usando os recursos de Pesquisa Visual Computacional do Azure em um aplicativo de realidade misturada.
 
@@ -42,7 +42,7 @@ Em seu aplicativo, cabe a você como você integrará os resultados com seu desi
 <tr>
 <th>Course</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Headsets imersivos</a></th>
 </tr><tr>
-<td> Sr e Azure 302: Pesquisa Visual computacional</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
+<td> Sr e Azure 302: visão computacional</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
 </tr>
 </table>
 
@@ -204,7 +204,7 @@ A seguir está uma configuração típica para o desenvolvimento com realidade m
 
             ![Atualizando configurações de publicação.](images/AzureLabs-Lab2-16.png)
 
-    3. Mais adiante no painel, em **configurações de XR** (encontradas abaixo de **configurações de publicação**), **suporte à realidade virtual**em escala, verifique se o SDK do **Windows Mixed Reality** foi adicionado.
+    3. Mais adiante no painel, em **configurações de XR** (encontradas abaixo de **configurações de publicação**), **suporte à realidade virtual**em escala, verifique se o **SDK do Windows Mixed Reality** foi adicionado.
 
         ![Atualize as configurações de X R.](images/AzureLabs-Lab2-17.png)
 
@@ -361,7 +361,7 @@ Para criar esta classe:
 7.  De volta ao *Editor do Unity*, clique e arraste a classe *ResultsLabel* da pasta **scripts** para o objeto da **câmera principal** no *painel hierarquia*.
 8.  Clique na **câmera principal** e examine o *painel Inspetor*.
 
-Você observará que, a partir do script que você acabou de arrastar para a câmera, há dois campos: Pré-fabricado de **cursor** e **rótulo**.
+Você observará que, a partir do script que acabou de arrastar para a câmera, há dois campos: **cursor** e **Label pré-fabricado**.
 
 9.  Arraste o objeto chamado **cursor** do *painel hierarquia* para o slot chamado **cursor**, conforme mostrado na imagem abaixo.
 10. Arraste o objeto chamado **LabelText** da *pasta ativos* no *painel Projeto* para o slot chamado **rótulo pré-fabricado**, conforme mostrado na imagem abaixo. 
@@ -413,7 +413,7 @@ A variável **tapsCount** armazenará o número de gestos de toque capturados do
 
         void Start()
         {
-            // subscribing to the Hololens API gesture recognizer to track user gestures
+            // subscribing to the HoloLens API gesture recognizer to track user gestures
             recognizer = new GestureRecognizer();
             recognizer.SetRecognizableGestures(GestureSettings.Tap);
             recognizer.Tapped += TapHandler;
@@ -515,11 +515,11 @@ Esse método chama o método *ExecuteImageCaptureAndAnalysis ()* para iniciar a 
     ```
  
 > [!WARNING] 
-> Neste ponto, você observará um erro exibido no *painel de console do editor do Unity*. Isso ocorre porque o código faz referência à classe visionmanager que você criará no próximo capítulo.
+> Neste ponto, você observará um erro exibido no *painel de console do editor do Unity*. Isso ocorre porque o código faz referência à classe *visionmanager* que você criará no próximo capítulo.
 
 ## <a name="chapter-7--call-to-azure-and-image-analysis"></a>Capítulo 7 – chamar o Azure e a análise de imagem
 
-O último script que você precisa criar é a classe visionmanager. 
+O último script que você precisa criar é a classe *visionmanager* . 
 
 Essa classe é responsável por:
 
@@ -544,7 +544,7 @@ Para criar esta classe:
         using UnityEngine.Networking;
     ```
  
-5.  Na parte superior do seu script, *dentro* da classe visionmanager (acima do método *Start ()* ), agora você precisa criar duas *classes* que irão representar a resposta JSON desserializada do Azure:
+5.  Na parte superior do seu script, *dentro* da classe *visionmanager* (acima do método *Start ()* ), agora você precisa criar duas *classes* que irão representar a resposta JSON desserializada do Azure:
 
     ```csharp
         [System.Serializable]
@@ -586,9 +586,9 @@ Para criar esta classe:
 
     > [!WARNING] 
     > A variável **visionAnalysisEndpoint** pode ser diferente da especificada neste exemplo. O **oeste-US** se refere estritamente a instâncias de serviço criadas para a região oeste dos EUA. Atualize isso com a [URL do ponto de extremidade](https://westus.dev.cognitive.microsoft.com/docs/services/56f91f2d778daf23d8ec6739/operations/56f91f2e778daf14a499e1fa); Aqui estão alguns exemplos de como isso pode ser:
-    > - Europa Ocidental:`https://westeurope.api.cognitive.microsoft.com/vision/v1.0/analyze?visualFeatures=Tags`
-    > - Sudeste da Ásia:`https://southeastasia.api.cognitive.microsoft.com/vision/v1.0/analyze?visualFeatures=Tags`
-    > - Leste da Austrália:`https://australiaeast.api.cognitive.microsoft.com/vision/v1.0/analyze?visualFeatures=Tags`
+    > - Europa Ocidental: `https://westeurope.api.cognitive.microsoft.com/vision/v1.0/analyze?visualFeatures=Tags`
+    > - Sudeste da Ásia: `https://southeastasia.api.cognitive.microsoft.com/vision/v1.0/analyze?visualFeatures=Tags`
+    > - Leste da Austrália: `https://australiaeast.api.cognitive.microsoft.com/vision/v1.0/analyze?visualFeatures=Tags`
 
 7.  O código para ativo agora precisa ser adicionado. 
 
@@ -677,7 +677,7 @@ Para criar esta classe:
     ```
 
 9.  Certifique-se de salvar suas alterações no *Visual Studio* antes de retornar ao *Unity*.
-10. De volta ao editor do Unity, clique e arraste as classes visionmanager e *ImageCapture* da pasta **scripts** para o objeto da **câmera principal** no *painel hierarquia*. 
+10. De volta ao editor do Unity, clique e arraste as classes *visionmanager* e *ImageCapture* da pasta **scripts** para o objeto da **câmera principal** no *painel hierarquia*. 
 
 ## <a name="chapter-8--before-building"></a>Capítulo 8 – antes de Compilar
 
@@ -688,12 +688,12 @@ Antes de fazer isso, verifique se:
 -   Todos os scripts são anexados ao objeto da **câmera principal** . 
 -   Todos os campos no *painel principal do Inspetor de câmera* são atribuídos corretamente.
 -   Certifique-se de inserir sua **chave de autenticação** na variável **authorizationKey** .
--   Verifique se você também verificou seu ponto de extremidade em seu script do visionmanager e se ele está alinhado à *sua* região (este documento usa o *Oeste-EUA* por padrão).
+-   Verifique se você também verificou seu ponto de extremidade em seu script do *visionmanager* e se ele está alinhado à *sua* região (este documento usa o *Oeste-EUA* por padrão).
 
 ## <a name="chapter-9--build-the-uwp-solution-and-sideload-the-application"></a>Capítulo 9 – criar a solução UWP e sideloadr o aplicativo
 Tudo o que é necessário para a seção do Unity deste projeto foi concluído, portanto, é hora de compilá-lo a partir do Unity.
 
-1.  Navegue até *criar configurações* - **arquivo > configurações de Build...**
+1.  Navegue até *configurações de compilação* - **arquivo > configurações de compilação...**
 2.  Na janela *configurações de compilação* , clique em **Compilar**.
 
     ![Compilando o aplicativo do Unity](images/AzureLabs-Lab2-26.png)
@@ -725,7 +725,7 @@ Para implantar no HoloLens:
 6.  Seu aplicativo agora deve aparecer na lista de aplicativos instalados em seu HoloLens, pronto para ser iniciado!
 
 > [!NOTE]
-> Para implantar em headsets de imersão, defina a **plataforma da solução** como *computador local*e defina a **configuração** a ser depurada, com *x86* como a **plataforma**. Em seguida, implante no computador local, usando o **menu Compilar**, selecionando *implantar solução*. 
+> Para implantar em headsets de imersão, defina a **plataforma da solução** como *computador local*e defina a **configuração** a ser *depurada*, com *x86* como a **plataforma**. Em seguida, implante no computador local, usando o **menu Compilar**, selecionando *implantar solução*. 
 
 ## <a name="your-finished-computer-vision-api-application"></a>Seu aplicativo API da Pesquisa Visual Computacional concluído
 

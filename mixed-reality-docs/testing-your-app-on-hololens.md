@@ -6,12 +6,12 @@ ms.author: jlyons
 ms.date: 02/24/2019
 ms.topic: article
 keywords: HoloLens, teste
-ms.openlocfilehash: b8c8e7ea8f90633cbb3b2aa01764398ef9a5c12a
-ms.sourcegitcommit: 76a7aa6e64e114b63ace058dd6d6d662b3c9f09e
+ms.openlocfilehash: 9a189bf139c97fc13034d94f05aa8f5974cc19b9
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68507905"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437389"
 ---
 # <a name="testing-your-app-on-hololens"></a>Testando seu aplicativo no HoloLens
 
@@ -42,18 +42,16 @@ Os aplicativos Holographic precisam ser executados sem problemas em um conjunto 
 3. **Siga as diretrizes de qualidade do holograma.** Aplicativos de alto desempenho que implementam as [diretrizes de qualidade do holograma](hologram-stability.md) são menos prováveis de resultar no discomfort do usuário.
 4. **Distribua os hologramas horizontalmente em vez de verticalmente.** Forçar o usuário a gastar períodos prolongados de tempo de pesquisa ou redução pode levar a fadiga no pescoço.
 
+
 ## <a name="input"></a>Entrada
 
-### <a name="gaze-and-gestures"></a>Olhar e gestos
+### <a name="interaction-models"></a>Modelos de interação
 
-[Olhar](gaze.md) é uma forma básica de entrada no HoloLens que permite aos usuários visar em hologramas e no ambiente. Você pode ver visualmente onde seu olhar está direcionando com base na posição do cursor. É comum associar o cursor olhar a um cursor do mouse.
-
-Os [gestos](gestures.md) são como você interage com os hologramas, como um clique do mouse. Na maioria das vezes, os comportamentos de mouse e toque são os mesmos, mas é importante entender e validar quando eles diferem.
+Verifique se as interações de holograma funcionam com o [modelo de interação](interaction-fundamentals.md)escolhido.
+Também é uma boa ideia validar com acessórios diferentes, como mouse e teclado, se esses acessórios forem necessários para dar suporte à acessibilidade.
 
 **Valide quando seu aplicativo tiver um comportamento diferente com o mouse e o toque.** Isso identificará inconsistências e ajudará com decisões de design para tornar a experiência mais natural para os usuários. Por exemplo, disparar uma ação com base no foco.
 
-> [!NOTE]
-> Mais diretrizes específicas para o HoloLens 2 em [breve](index.md#news-and-notes).
 
 ### <a name="custom-voice-commands"></a>Comandos de voz personalizados
 
@@ -89,7 +87,7 @@ Valide a funcionalidade principal do aplicativo ao alternar entre aplicativos, e
 
 ## <a name="telemetry"></a>Telemetria
 
-Use a telemetria e a análise para orientá-lo. A integração da análise em seu aplicativo ajudará você a obter informações sobre seu aplicativo dos testadores beta e dos usuários finais. Esses dados podem ser usados para ajudar a otimizar seu aplicativo antes do envio para a loja e para atualizações futuras. Há muitas opções de análise por aí. Se você não tiver certeza de onde começar, confira o [app](https://www.visualstudio.com/products/application-insights-vs.aspx)insights.
+Use a telemetria e a análise para orientá-lo. A integração da análise em seu aplicativo ajudará você a obter informações sobre seu aplicativo dos testadores beta e dos usuários finais. Esses dados podem ser usados para ajudar a otimizar seu aplicativo antes do envio para a loja e para atualizações futuras. Há muitas opções de análise por aí. Se você não tiver certeza de onde começar, confira o [app insights](https://www.visualstudio.com/products/application-insights-vs.aspx).
 
 Perguntas a serem consideradas:
 1. Como os usuários estão usando o espaço?

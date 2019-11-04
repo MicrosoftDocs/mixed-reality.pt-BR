@@ -6,12 +6,12 @@ ms.author: joekelly
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Realidade mista do Windows, som espacial, design, estilo
-ms.openlocfilehash: c758037300392d9365c16933677fb0f026976c2a
-ms.sourcegitcommit: c2a5bff423feba7d29d5431c870b6017c2fe1bc2
+ms.openlocfilehash: acc568eeb08d2a27574dcfbc9f132519e1e31843
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66750310"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438283"
 ---
 # <a name="spatial-sound-design"></a>Design de som espacial
 
@@ -21,7 +21,7 @@ Se você já tiver jogado [Marco aquático](https://en.wikipedia.org/wiki/Marco_
 
 <br>
 
-> [!VIDEO https://www.youtube.com/embed/aB3TDjYklmo]
+<iframe width="940" height="530" src="https://www.youtube.com/embed/aB3TDjYklmo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## <a name="device-support"></a>Suporte a dispositivos
 

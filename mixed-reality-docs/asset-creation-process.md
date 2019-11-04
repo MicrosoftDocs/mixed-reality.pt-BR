@@ -6,12 +6,12 @@ ms.author: shentan
 ms.date: 03/21/2018
 ms.topic: article
 keywords: ativo, criação, processo, orçamento, polígonos, texturas, sombreadores, desempenho
-ms.openlocfilehash: f7bee55249764af37453ea0fab01730b43907569
-ms.sourcegitcommit: c4d0132ea755c861c504dad46957e791b9c705d5
+ms.openlocfilehash: fb8266a018e11a8fb944819a0cac5ace38f2cb25
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69896502"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437004"
 ---
 # <a name="asset-creation-process"></a>Processo de criação de ativos
 
@@ -19,7 +19,7 @@ O Windows Mixed Reality se baseia em décadas de investimento que a Microsoft fe
 
 Os ativos que você cria para um projeto vêm em muitas formas e formulários. Eles podem ser compostos por uma série de texturas/imagens, áudio, vídeo, modelos 3D e animações. Não podemos começar a abordar todas as ferramentas disponíveis para criar os diferentes tipos de ativos usados em um projeto. Para este artigo, vamos nos concentrar nos métodos de criação de ativos 3D.
 
-![Conceito, criação, integração e fluxo de iteração](images/concept-creation-integration-iteration-flow-640px.jpg)<br>
+![conceito, criação, integração e fluxo de iteração](images/concept-creation-integration-iteration-flow-640px.jpg)<br>
 *Conceito, criação, integração e fluxo de iteração*
 
 ## <a name="things-to-consider"></a>O que deve ser considerado
@@ -84,7 +84,7 @@ Também há a opção de capturar objetos em 3D. Capturar objetos inanimados em 
 
 ### <a name="purchasing-assets"></a>Comprando ativos
 
-Outra opção excelente é comprar ativos para sua experiência. Há uma infinidade de ativos disponíveis por meio de serviços como o [repositório de ativos de Unity](https://www.assetstore.unity3d.com/) ou o [TurboSquid](http://www.turbosquid.com/) entre outros.
+Outra opção excelente é comprar ativos para sua experiência. Há uma infinidade de ativos disponíveis por meio de serviços como o [repositório de ativos de Unity](https://www.assetstore.unity3d.com/) ou o [TurboSquid](https://www.turbosquid.com/) entre outros.
 
 Ao comprar ativos de um terceiro, você sempre deseja verificar o seguinte:
 * **O que é o número de polylines?**
@@ -92,7 +92,7 @@ Ao comprar ativos de um terceiro, você sempre deseja verificar o seguinte:
 * **Há níveis de detalhes (LODs) para o modelo?**
   * O nível de detalhe de um modelo permite que você dimensione os detalhes de um modelo para o desempenho.
 * **O arquivo de origem está disponível?**
-  * Geralmente não está incluído no [repositório de ativos do Unity](https://www.assetstore.unity3d.com/) , mas sempre incluído com serviços como [TurboSquid](http://www.turbosquid.com/).
+  * Geralmente não está incluído no [repositório de ativos do Unity](https://www.assetstore.unity3d.com/) , mas sempre incluído com serviços como [TurboSquid](https://www.turbosquid.com/).
   * Sem o arquivo de origem, você não poderá modificar o ativo.
   * Verifique se o arquivo de origem fornecido pode ser importado por suas ferramentas 3D.
 * **Saiba o que você está obtendo**

@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
 keywords: sistema de coordenadas, sistema de coordenadas espaciais, dimensionamento do mundo, mundo, escala, posição, orientação, âncora, âncora espacial, bloqueado pelo mundo, bloqueio de mundo, persistência, compartilhamento
-ms.openlocfilehash: 27b1dcd86c7edba176ca54840bdd27550736a16d
-ms.sourcegitcommit: b0b1b8e1182cce93929d409706cdaa99ff24fdee
+ms.openlocfilehash: f65cf582db43399814737d581ece4694646a144c
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68387733"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438023"
 ---
 # <a name="spatial-anchors"></a>Âncoras espaciais
 
@@ -22,7 +22,7 @@ Você também pode persistir e compartilhar âncoras espaciais entre sessões de
 * Usando <a href="https://docs.microsoft.com/azure/spatial-anchors/overview" target="_blank">âncoras espaciais do Azure</a> para criar uma âncora de nuvem, seu aplicativo pode compartilhar uma âncora espacial entre vários dispositivos HoloLens, Ios e Android. Ao fazer com que cada dispositivo processe um holograma usando a mesma âncora espacial, os usuários verão que o holograma aparecerá no mesmo lugar do mundo real. Isso permite experiências compartilhadas em tempo real.
 * Você também pode usar <a href="https://docs.microsoft.com/azure/spatial-anchors/overview" target="_blank">Âncoras Espaciais do Azure</a> para persistência assíncrona de holograma em dispositivos HoloLens, iOS e Android. Ao compartilhar uma âncora espacial em nuvem durável, vários dispositivos podem observar o mesmo holograma persistente ao longo do tempo, mesmo que os dispositivos não estejam presentes ao mesmo tempo.
 
-Para experiências em escala de pé ou em escala de sala para headsets de área de trabalho de compartilhamento de Internet que permanecerão dentro de um diâmetro de 5 metros, você pode usar o [quadro de referência](coordinate-systems.md#stage-frame-of-reference) em vez de âncoras espaciais, que fornece um único sistema de coordenadas no qual renderiza todo o conteúdo. No entanto, se seu aplicativo pretende permitir que os usuários perfrentem mais de 5 metros no HoloLens, talvez operando em todo um andar de um edifício, você precisará de âncoras espaciais para manter o conteúdo estável.
+Para experiências em escala de pé ou de sala para headsets de área de trabalho que permanecerão dentro de um diâmetro de 5 metros, você normalmente pode usar o [quadro de referência](coordinate-systems.md#stage-frame-of-reference) em vez de âncoras espaciais, que fornece um único sistema de coordenadas no qual renderiza todo o conteúdo. No entanto, se seu aplicativo pretende permitir que os usuários perfrentem mais de 5 metros no HoloLens, talvez operando em todo um andar de um edifício, você precisará de âncoras espaciais para manter o conteúdo estável.
 
 Ainda que as âncoras espaciais sejam excelentes para hologramas que devam permanecer fixos no mundo, quando uma âncora é colocada, ela não pode ser movida. Há alternativas para âncoras que são mais apropriadas para hologramas dinâmicos que marcam junto com o usuário. É melhor posicionar os hologramas dinâmicos usando um quadro de referência fixo (a base das coordenadas do mundo Unity) ou um quadro de referência anexado.
 
@@ -34,7 +34,7 @@ Essas diretrizes de âncora espacial vão ajudá-lo a renderizar hologramas est�
 
 Normalmente, os usuários são aqueles explicitamente colocando âncoras espaciais.
 
-Por exemplo, no HoloLens, um aplicativo pode interceptar o [olhar](gaze.md) Ray do usuário com a malha de [mapeamento espacial](spatial-mapping.md) para permitir que o usuário decida onde posicionar um holograma. Quando o usuário toca para posicionar esse holograma, crie uma âncora espacial no ponto de interseção e coloque o holograma na origem do sistema de coordenadas da âncora.
+Por exemplo, no HoloLens, um aplicativo pode interceptar o [olhar](gaze-and-commit.md) Ray do usuário com a malha de [mapeamento espacial](spatial-mapping.md) para permitir que o usuário decida onde posicionar um holograma. Quando o usuário toca para posicionar esse holograma, crie uma âncora espacial no ponto de interseção e coloque o holograma na origem do sistema de coordenadas da âncora.
 
 Âncoras espaciais locais são fáceis e de alto desempenho para criar. O sistema consolidará seus dados internos se várias âncoras puderem compartilhar seus dados de sensor subjacentes. Normalmente, você deve criar uma nova âncora espacial local para cada holograma que um usuário insere explicitamente, exceto nos casos descritos abaixo, como grupos rígidos de hologramas.
 

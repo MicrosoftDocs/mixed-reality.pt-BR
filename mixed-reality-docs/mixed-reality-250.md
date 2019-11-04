@@ -3,22 +3,22 @@ title: Sr Sharing 250-o HoloLens e os headsets de imersão
 description: Siga este passo a passo de codificação usando headsets de Unity, Visual Studio, HoloLens e Windows Mixed Reality para aprender os detalhes do compartilhamento de hologramas entre dispositivos de realidade misturada.
 author: keveleigh
 ms.author: kurtie
-ms.date: 03/21/2018
+ms.date: 10/22/2019
 ms.topic: article
 keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit-Unity, imersiva, controlador de movimento, compartilhamento, controlador Xbox, rede, dispositivo cruzado
-ms.openlocfilehash: 9e1cb0d168b8bf830b4477190516cd19caef7972
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: c8d341f75424887ca1b0994c8a4d16a0bded671e
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63506118"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437868"
 ---
 >[!NOTE]
->Os tutoriais misturados do Academia de realidade foram projetados com o HoloLens (1º gen) e com o fone de cabeça de imersão de realidade misturada.  Como tal, achamos que é importante deixar esses tutoriais em vigor para os desenvolvedores que ainda estão procurando orientação no desenvolvimento para esses dispositivos.  Esses tutoriais **_não_** serão atualizados com os conjuntos de ferramentas e as interações mais recentes usados para o HoloLens 2.  Eles serão mantidos para continuar a trabalhar nos dispositivos com suporte. Haverá uma nova série de tutoriais que serão publicados no futuro, que demonstrarão como desenvolver para o HoloLens 2.  Esse aviso será atualizado com um link para esses tutoriais quando eles forem postados.
+>Os tutoriais misturados do Academia de realidade foram projetados com o HoloLens (1º gen) e com o fone de cabeça de imersão de realidade misturada.  Como tal, achamos que é importante deixar esses tutoriais em vigor para os desenvolvedores que ainda estão procurando orientação no desenvolvimento para esses dispositivos.  Esses tutoriais **_não_** serão atualizados com os conjuntos de ferramentas e as interações mais recentes usados para o HoloLens 2.  Eles serão mantidos para continuar a trabalhar nos dispositivos com suporte. [Uma nova série de tutoriais](mrlearning-base.md) foi postada para o HoloLens 2.
 
 <br>
 
-# <a name="mr-sharing-250-hololens-and-immersive-headsets"></a>Sr Sharing 250: Headsets de HoloLens e de imersão
+# <a name="mr-sharing-250-hololens-and-immersive-headsets"></a>Sr Sharing 250: os headsets de HoloLens e de imersão
 
 Com a flexibilidade do Plataforma Universal do Windows (UWP), é fácil criar um aplicativo que abranja vários dispositivos. Com essa flexibilidade, podemos criar experiências que aproveitam os pontos fortes de cada dispositivo. Este tutorial abordará uma experiência compartilhada básica que é executada em headsets de uso de realidade mista do HoloLens e do Windows. Este conteúdo foi originalmente entregue na conferência do Microsoft Build 2017 em Seattle, WA.
 
@@ -35,7 +35,7 @@ Com a flexibilidade do Plataforma Universal do Windows (UWP), é fácil criar um
 <tr>
 <th>Course</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Headsets imersivos</a></th>
 </tr><tr>
-<td>Sr Sharing 250: Headsets de HoloLens e de imersão</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
+<td>Sr Sharing 250: os headsets de HoloLens e de imersão</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
 </tr>
 </table>
 
@@ -69,6 +69,7 @@ Verifique se o ambiente de desenvolvimento está pronto para ser usado com um pr
 Um aplicativo que mostra um holograma sobre o HoloLens ou um headset de imersão de realidade mista do Windows.
 
 ### <a name="steps"></a>Etapas
+
 * Abra o Unity.
     * Selecione **abrir**.
     * Navegue até onde você extraiu os arquivos de projeto.
@@ -112,7 +113,7 @@ Um aplicativo que mostra um holograma sobre o HoloLens ou um headset de imersão
 
 No painel projeto, navegue até **Assets\HoloToolkit\Input\Scripts\Utilities** e clique duas vezes em **MixedRealityCameraManager.cs** para abri-lo.
 
-**Sobre** MixedRealityCameraManager.cs é um script simples que ajusta as configurações de nível de qualidade e de segundo plano com base no dispositivo. A chave aqui é HolographicSettings. IsDisplayOpaque, que permite que um script detecte se o dispositivo é um HoloLens (IsDisplayOpaque retorna false) ou um headset de imersão (IsDisplayOpaque retorna true).
+**Visão geral:** MixedRealityCameraManager.cs é um script simples que ajusta as configurações de nível de qualidade e de segundo plano com base no dispositivo. A chave aqui é HolographicSettings. IsDisplayOpaque, que permite que um script detecte se o dispositivo é um HoloLens (IsDisplayOpaque retorna false) ou um headset de imersão (IsDisplayOpaque retorna true).
 
 ### <a name="enjoy-your-progress"></a>Aproveite seu progresso
 
@@ -130,9 +131,10 @@ Mostre como tratar a entrada para um aplicativo do Windows Mixed Reality.
 
 Criando o aplicativo no capítulo 1, adicionaremos funcionalidade para permitir que o usuário pegue o holograma e coloque-o em uma superfície do mundo real no HoloLens ou em uma tabela virtual em um headset de imersão.
 
-**Atualizador de entrada:** No HoloLens, o gesto de seleção é o **toque de ar**. Em headsets de imersão, usaremos **o botão a** no controlador Xbox. Para obter mais informações sobre a entrada, [comece aqui](gestures.md).
+**Atualizador de entrada:** No HoloLens, o gesto de seleção é o **toque de ar**. Em headsets de imersão, usaremos **o botão a** no controlador Xbox. Para obter mais informações, confira a [visão geral do modelo de interação](interaction-fundamentals.md).
 
 ### <a name="steps"></a>Etapas
+
 * Adicionar Gerenciador de entrada
     * Em **HoloToolkit > entrada > pré-fabricados** arraste **InputManager** para **hierarquia** como um filho de **gerentes**.
     * From **HoloToolkit > entrada > pré-fabricados >** cursor arrastar **cursor** para **hierarquia**.
@@ -193,6 +195,7 @@ Verifique se a rede está configurada corretamente e detalhe como as âncoras es
 Converteremos nosso projeto em um projeto de vários participantes. Adicionaremos a interface do usuário e a lógica para hospedar ou ingressar em sessões. Os usuários do HoloLens verão um ao outro na sessão com nuvens em seus cabeçotes e os usuários do headset de imersão têm nuvens perto de onde está a âncora. Os usuários em headsets de imersão verão os usuários do HoloLens em relação à origem da cena. Os usuários do HoloLens verão o holograma da ilha no mesmo local. É importante observar que os usuários nos headsets de imersão não estarão na ilha durante este capítulo, mas se comportarão de forma semelhante ao HoloLens, com uma visão de olho da ilha.
 
 ### <a name="steps"></a>Etapas
+
 * Remover ilha e VRRoom
     * Em **hierarquia** , clique com o botão direito do mouse em **ilha** selecionar **excluir**
     * Em **hierarquia** , clique com o botão direito do mouse em **VRRoom** selecionar **excluir**
@@ -250,10 +253,12 @@ Atenda à experiência de cada tipo de dispositivo de realidade misturada.
 Atualizaremos o aplicativo para colocar os usuários de headsets imersivas na ilha com uma exibição imersiva. Os usuários do HoloLens ainda terão a visão panorâmica da ilha. Os usuários de cada tipo de dispositivo podem ver outros usuários como aparecem no mundo. Por exemplo, os usuários de headsets de imersão podem ver os outros avatars em outros caminhos na ilha e eles veem os usuários do HoloLens como nuvens Giant acima da ilha. Os usuários do headset de imersão também verão o cursor do olhar Ray do usuário do HoloLens se o usuário do HoloLens estiver olhando para a ilha. Os usuários do HoloLens verão um avatar na ilha para representar cada usuário do headset de imersão.
 
 **Entrada atualizada para o dispositivo de imersão:**
+
 * Os botões do amortecedor esquerdo e do amortecedor direito no controlador Xbox giram o Player
 * Manter o botão Y no controlador Xbox habilitará um cursor [teleport](navigating-the-windows-mixed-reality-home.md#getting-around-your-home) . Se o cursor tiver um indicador de seta girando quando você liberar o botão Y, você será teleportado para o local do cursor.
 
 ### <a name="steps"></a>Etapas
+
 * Adicionar MixedRealityTeleport a MixedRealityCameraParent
     * Em **hierarquia**, selecione **Usland**.
     * No **Inspetor**, habilite o **controle de nível**.
@@ -288,6 +293,7 @@ Desta vez, você precisará encontrar um amigo.
 Mais uma vez, um usuário com o HoloLens hospedará uma sessão. Outros usuários ingressarão na sessão. O aplicativo fará com que os três primeiros usuários ingressem de um headset de imersão em um dos três caminhos na ilha. Sinta-se à vontade para explorar a ilha nesta seção.
 
 Detalhes a serem observados:
+
 1. Você pode ver os rostos nas nuvens, o que ajuda um usuário imersos a ver qual direção um usuário do HoloLens está olhando.
 2. Os avatars na ilha têm pescoços que giram. Eles não seguirão o que o usuário está fazendo é realidade real (não temos essas informações), mas isso faz uma boa experiência.
 3. Se o usuário do HoloLens estiver olhando para a ilha, os usuários do imersos poderão ver o cursor.
@@ -306,6 +312,7 @@ Crie uma experiência interativa colaborativa entre os dois tipos de dispositivo
 Com base no capítulo 4, quando um usuário com um headset de imersão fica perto de um quebra-cabeça na ilha, os usuários do HoloLens terão uma dica de ferramenta com uma pista para o quebra-cabeça. Depois que todos os usuários do headset de imersão passarem do quebra-cabeças e para a "área pronta" na sala de Rocket, o Rocket será iniciado.
 
 ### <a name="steps"></a>Etapas
+
 * Em **hierarquia**, selecione **Usland**.
 * No **Inspetor**, em **controle de nível**, marque **habilitar colaboração**.
 
@@ -323,20 +330,20 @@ CheckGoal faz algumas matemáticas para ver se estamos mais ou menos em pé no p
 
 ```cs
 private void CmdSendAtGoal(int GoalIndex)
-       {
-           levelState.SetGoalIndex(GoalIndex);
-       }
+{
+    levelState.SetGoalIndex(GoalIndex);
+}
 ```
 
 ```cs
 public void SendAtGoal(int GoalIndex)
-       {
-           if (isLocalPlayer)
-           {
-               Debug.Log("sending at goal " + GoalIndex);
-               CmdSendAtGoal(GoalIndex);
-           }
-       }
+{
+    if (isLocalPlayer)
+    {
+        Debug.Log("sending at goal " + GoalIndex);
+        CmdSendAtGoal(GoalIndex);
+    }
+}
 ```
 
 Observe que SendAtGoalMessage chama CmdSendAtGoal, que chama levelstate. SetGoalIndex, que está de volta em LevelControl.cs. À primeira vista, isso parece estranho. Por que não apenas chamar SetGoalIndex em vez desse roteamento estranho por meio do controlador do jogador? O motivo é que estamos em conformidade com o modelo de dados que o UNET usa para manter os dados sincronizados. Para evitar trapaceando e ultrapaginação, o UNET requer que cada objeto tenha um usuário que tenha autoridade para alterar as variáveis sincronizadas. Além disso, somente o host (o usuário que iniciou a sessão) pode alterar os dados diretamente. Os usuários que não são o host, mas têm autoridade, precisam enviar um ' Command ' para o host que alterará a variável. Por padrão, o host tem autoridade sobre todos os objetos, exceto pelo objeto gerado para representar o usuário. Em nosso caso, esse objeto tem o script playercontroller. Há uma maneira de solicitar autoridade para um objeto e, em seguida, fazer alterações, mas optamos por aproveitar o fato de que o controlador do Player tem comandos Self Authority e Route por meio do controlador do jogador.
@@ -350,4 +357,5 @@ De volta ao LevelControl.cs, consulte SetGoalIndex. Aqui, estamos definindo o va
 Criando no capítulo anterior, iniciaremos a sessão como antes. Desta vez, à medida que os usuários no headset de imersão chegarem à "porta" em seu caminho, uma dica de ferramenta aparecerá para que apenas os usuários do HoloLens possam ver. Os usuários do HoloLens são responsáveis por comunicar essa pista aos usuários no headset de imersão. O Rocket será iniciado em espaço depois que cada avatar tiver passado em seu painel marrom correspondente dentro do vulcão. A cena será redefinida após 60 segundos para que você possa fazer isso novamente.
 
 ## <a name="see-also"></a>Consulte também
-* [Entrada do MR 213: controladores de movimentos](mixed-reality-213.md)
+
+* [Entrada MR 213: controladores de movimento](mixed-reality-213.md)

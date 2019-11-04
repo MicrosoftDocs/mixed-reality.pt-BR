@@ -6,33 +6,33 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realidade misturada, unity, tutorial, hololens
-ms.openlocfilehash: 2e676d319ba7221cf9549b200b3d748f26025aa7
-ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
+ms.openlocfilehash: b4713caf2c4d913fe8f5b01c08b3cd0152e32cd9
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68701894"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438371"
 ---
-# <a name="4-sharing-object-movements-with-multiple-users"></a>4. Compartilhando movimentos de objetos com vários usuários
+# <a name="4-sharing-object-movements-with-multiple-users"></a>4. compartilhando movimentos de objeto com vários usuários
 
-Neste tutorial, aprenderemos como compartilhar os movimentos dos objetos para que todos os participantes de uma sessão compartilhada possam colaborar juntos e exibir as interações de cada um deles. Esta lição baseia-se no iniciador lunar criado como parte dos [tutoriais do módulo base](mrlearning-base.md).
+Neste tutorial, você aprenderá a compartilhar os movimentos de objetos para que todos os participantes de uma sessão compartilhada possam colaborar e exibir as interações de cada uma das outras. Esta lição baseia-se no iniciador lunar criado como parte dos [tutoriais do módulo base](mrlearning-base.md).
 
 Seus
 
 - Traga o iniciador lunar como o modelo 3D a ser compartilhado
-- Configure seu projeto para compartilhar os movimentos do modelo 3D.
+- Configurar seu projeto para compartilhar os movimentos do modelo 3D
 - Saiba como criar um aplicativo de colaboração de vários usuários básico
 
 ## <a name="instructions"></a>Instruções
 
 
-1. Salve a cena da lição anterior (Control + S). Você pode nomeá-lo, HLSharedProjectMainPart4. Unity, para que seja mais fácil encontrá-lo quando precisar.
+1. Salve a cena da lição anterior (Control + S). Você pode nomeá-lo de HLSharedProjectMainPart4. Unity para que seja mais fácil encontrá-lo quando precisar.
 
 2. Na janela do projeto, na pasta ativos-> scripts, clique duas vezes em GenericNetSync para abri-lo no Visual Studio ou no editor de código que você está usando.  
 
 ![module3chapter4updatestep2](images/module3chapter4updatestep2.png)
 
-3. Nas linhas 34 e 38, remova o//para ativar o código da tabela que usaremos nesta lição. em seguida, salve o arquivo. 
+3. Nas linhas 34 e 38, remova "//" para ativar o código da tabela que será usada nesta lição. Em seguida, salve o arquivo. 
 
 ![module3chapter4updatestep3](images/module3chapter4updatestep3.png)
 
@@ -40,7 +40,7 @@ Seus
 
 ![module3chapter4updatestep4](images/module3chapter4updatestep4.png)
 
-5. Assim como na etapa 3, precisamos remover o//para ativar o código nas linhas 25, 26 e 106.
+5. Assim como na etapa 3, precisamos remover "//" para ativar o código nas linhas 25, 26 e 106.
 
 ![module3chapter4updatestep5a](images/module3chapter4updatestep5a.png) 
 
@@ -54,12 +54,12 @@ Seus
 
 ![module3chapter4updatestep7](images/module3chapter4updatestep7.png)
 
-   Observação: Se você clicar em um dos objetos pré-fabricado e liberar, o Inspetor alternará para esse objeto. Clique em, arraste, solte e libere cada objeto para seu slot apropriado.
+Observação: se você clicar em um dos objetos pré-fabricado e liberar, o Inspetor alternará para esse objeto. Clique em, arraste, solte e libere cada objeto para seu slot apropriado.
 
-8. Clique na seta à esquerda de MixedRealityPlayspace e mova o objeto de jogo filho, MainCamera para baixo até o SharedPlayground pré-fabricado. Em seguida, exclua o pré-fabricado, MixedRealityPlayspace, para excluir, selecione o pré-fabricado e toque em "excluir" no teclado).
+8. Clique na seta à esquerda de MixedRealityPlayspace e mova o objeto de jogo filho MainCamera para baixo para o SharedPlayground pré-fabricado. Em seguida, exclua o pré-fabricado, MixedRealityPlayspace selecionando o pré-fabricado e toque em "excluir" no teclado).
 ![Module3hapter4step5im](images/module3chapter4step5im.PNG)
 
->Observação:  Verifique se as posições principal da câmera e do SharedPlayground estão definidas como 0, 0, 0.
+>Observação: Verifique se as posições principal da câmera e do SharedPlayground estão definidas como 0, 0, 0.
 >
 
 9. Crie um novo objeto Game definido como um objeto filho para o objeto pai SharedPlayground para criar um novo objeto. Clique com o botão direito do mouse no objeto pai e selecione criar vazio. 
@@ -68,11 +68,11 @@ Seus
 
 ![Module3Chapter4step6im](images/module3chapter4step7im.PNG)
 
-11. Agora, no painel projeto na pasta pré-fabricados, arraste a tabela pré-fabricado para o objeto filho "TableAnchor" que você acabou de criar.
+11. No painel projeto na pasta pré-fabricados, arraste a tabela pré-fabricado para o objeto filho "TableAnchor" que você acabou de criar.
 
 ![Module3Chapter4step8im](images/module3chapter4step8im.PNG)
 
-12. Por fim, no objeto DebugWindow, altere a largura para 50 e a altura para 20.
+12. No objeto DebugWindow, altere a largura para 50 e a altura para 20.
 
 ![Module3Chapter4step9im](images/module3chapter4step11im.PNG)
 
@@ -81,9 +81,9 @@ Seus
 
 Depois que isso for concluído, todos os usuários que ingressarem em seu projeto do Unity poderão mover o iniciador lunar. Todos os movimentos são sincronizados para que cada usuário possa ver as interações das outras pessoas. Esses conceitos servem como os blocos de construção fundamentais para experiências de colaboração compartilhadas com recursos completos. 
 
-Embora todos os usuários estejam conectados como parte de uma experiência compartilhada e possam ver os movimentos relativos dos objetos, o aplicativo ainda não consegue alinhar com precisão os avatars e os objetos para que os usuários locais vejam uns aos outros e os objetos no mesmo local dentro do físico países. Para ancorar experiências compartilhadas locais, cada dispositivo requer uma compreensão comum do ambiente físico. Neste módulo, faremos isso usando o asa ( [âncoras espaciais) do Azure](<https://azure.microsoft.com/en-us/services/spatial-anchors/>) que será implementado na próxima lição.
+Embora todos os usuários estejam conectados como parte de uma experiência compartilhada e possam ver os movimentos relativos dos objetos, o aplicativo ainda não consegue alinhar precisamente os avatars e objetos para que os usuários locais vejam uns aos outros e que estejam no mesmo local dentro do físico países. Para ancorar experiências compartilhadas locais, cada dispositivo requer uma compreensão comum do ambiente físico. Neste módulo, faremos isso usando o asa ( [âncoras espaciais) do Azure](<https://azure.microsoft.com//services/spatial-anchors/>) que será implementado na próxima lição.
 
-Antes de prosseguir para a próxima lição, precisaremos concluir o módulo de aprendizado do ASA que aborda noções básicas do ASA, criação de contas e recursos do Azure e outros blocos de edifícios fundamentais necessários para que possamos integrá-lo à nossa experiência compartilhada.
+Antes de prosseguir para a próxima lição, precisaremos concluir o módulo de aprendizagem do ASA que aborda as noções básicas do ASA, a criação de contas e recursos do Azure, bem como outros blocos de edifícios fundamentais necessários para que possamos integrá-lo à nossa experiência compartilhada.
 
-[Próxima lição: 5. Integrar Âncoras Espaciais do Azure em uma experiência compartilhada](mrlearning-sharing(photon)-ch5.md)
+[Próxima lição: 5. integração das âncoras espaciais do Azure em uma experiência compartilhada](mrlearning-sharing(photon)-ch5.md)
 

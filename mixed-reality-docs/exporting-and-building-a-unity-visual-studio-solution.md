@@ -1,17 +1,17 @@
 ---
 title: Exportando e compilando uma solução do Unity Visual Studio
 description: Este artigo descreve como exportar seu projeto de realidade misturada do Unity para que você possa compilar e implantar no Visual Studio.
-author: ''
+author: mattzmsft
 ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Unity, Visual Studio, exportar, compilar, implantar
-ms.openlocfilehash: 68c86fdfe0e589536dafe2bf53c7d4e5dffcc514
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 752a9dd002d27d24d9b80a1a97cb07a44237b9e0
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63525842"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73435569"
 ---
 # <a name="exporting-and-building-a-unity-visual-studio-solution"></a>Exportando e compilando uma solução do Unity Visual Studio
 
@@ -19,16 +19,16 @@ Se você não pretende usar o teclado do sistema em seu aplicativo, nossa recome
 
 ## <a name="how-to-export-from-unity"></a>Como exportar do Unity
 
-![Configurações de Build do Unity](images/unitybuildsettings-300px.png)<br>
+![configurações de Build do Unity](images/unitybuildsettings-300px.png)<br>
 *Configurações de Build do Unity*
 
 1. Quando você estiver pronto para exportar seu projeto do Unity, abra o menu **arquivo** e selecione **configurações de compilação...**
 2. Clique em **Adicionar abrir cenas** para adicionar sua cena à compilação.
 3. Na caixa de diálogo **configurações de compilação** , escolha as seguintes opções para exportar para o HoloLens:
-   * **Plataforma** *Plataforma universal do Windows* e certifique-se de selecionar **alternar plataforma** para sua seleção entrar em vigor.
-   * **SDK** *Universal 10*.
+   * **Plataforma:** *plataforma universal do Windows* e certifique-se de selecionar **alternar plataforma** para sua seleção entrar em vigor.
+   * **SDK:** *Universal 10*.
    * **Tipo de compilação UWP:** *D3D*.
-4. **Opcional**: **Projetos C# do Unity:** Check.
+4. **Opcional**: **projetos C# de Unity:** marcado.
 
 >[!NOTE]
 >Marcar essa caixa permite que você:
@@ -60,12 +60,12 @@ O restante da criação e implantação de aplicativos acontece no [Visual Studi
 
 |  Configuração  |  Explicação | 
 |----------|----------|
-|  Depurar  |  Todas as otimizações desativadas e o criador de perfil está habilitado. Usado para depurar scripts. | 
+|  Depuração  |  Todas as otimizações desativadas e o criador de perfil está habilitado. Usado para depurar scripts. | 
 |  Mestre  |  Todas as otimizações são ativadas e o criador de perfil está desabilitado. Usado para enviar aplicativos para a loja. | 
 |  Versão  |  Todas as otimizações são ativadas e o criador de perfil está habilitado. Usado para avaliar o desempenho do aplicativo. | 
 
 Observe que a lista acima é um subconjunto dos gatilhos comuns que farão com que o projeto do Visual Studio precise ser gerado. Em geral, a edição de arquivos. cs de dentro do Visual Studio não exigirá que o projeto seja regenerado no Unity.
 
-## <a name="troubleshooting"></a>Solução de problemas
+## <a name="troubleshooting"></a>Painel de controle da
 
 Se você achar que as edições em seus arquivos. cs não estão sendo reconhecidas em seu projeto do Visual Studio, certifique C# -se de que "projetos do Unity" esteja marcado ao gerar o projeto do vs no menu de Build do Unity.

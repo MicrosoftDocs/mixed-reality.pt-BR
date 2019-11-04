@@ -6,12 +6,12 @@ ms.author: hakons
 ms.date: 03/21/2018
 ms.topic: article
 keywords: som espacial, som surround, áudio 3D, som 3D, áudio espacial
-ms.openlocfilehash: a30a484c4e47593556fbd1786158262551e11d22
-ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
+ms.openlocfilehash: 31ec8f88a060127daab9bf3afc970457ec7c90a3
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66829920"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437398"
 ---
 # <a name="spatial-sound"></a>Som espacial
 
@@ -21,7 +21,7 @@ Embora os hologramas só possam aparecer visualmente em que o olhar do usuário 
 
 <br>
 
->[!VIDEO https://www.youtube.com/embed/PTPvx7mDon4]
+<iframe width="940" height="530" src="https://www.youtube.com/embed/PTPvx7mDon4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## <a name="device-support"></a>Suporte a dispositivos
 
@@ -35,7 +35,7 @@ Embora os hologramas só possam aparecer visualmente em que o olhar do usuário 
     <tr>
         <td><strong>Recurso</strong></td>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens (1ª geração)</strong></a></td>
-        <td><strong>HoloLens 2</strong></td>
+        <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></td>
         <td><a href="immersive-headset-hardware-details.md"><strong>Headsets imersivos</strong></a></td>
     </tr>
      <tr>
@@ -52,7 +52,7 @@ Ao analisar como o som atinge ambos os ouvidos, nosso cérebro determina a dist�
 
 <br>
 
->[!VIDEO https://www.youtube.com/embed/aB3TDjYklmo]
+<iframe width="940" height="530" src="https://www.youtube.com/embed/aB3TDjYklmo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Indicações de áudio esquerda ou direita (Azimuth) originam-se das diferenças no momento em que o som chega a cada Ear. As indicações para cima e para baixo se originam de alterações Spectral produzidas pela forma de Ear externa (pinnae). Ao designar a origem do áudio, o sistema pode simular a experiência de som chegando em momentos diferentes para nossos ouvidos. Observe que no HoloLens, enquanto a espacial Azimuth é personalizada, a simulação de elevação é baseada em um conjunto médio de anthropometrics. Portanto, a precisão da elevação pode ser menos precisa do que a precisão do Azimuth.
 

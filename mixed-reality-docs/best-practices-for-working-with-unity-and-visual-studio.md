@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
 keywords: implantar, Unity, Visual Studio, HoloLens, HoloLens 2, headset de imersão
-ms.openlocfilehash: b2c345a8cc9bddcbc447531eb5f6cdacc62f2e98
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: f897c9280505b1e84f8e6342729f1598d4b2f559
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63522316"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73436969"
 ---
 # <a name="best-practices-for-working-with-unity-and-visual-studio"></a>Práticas recomendadas para trabalhar com o Unity e o Visual Studio
 
@@ -29,13 +29,13 @@ O suporte para o back-end de script do .NET no Unity está sendo substituído no
    - Clique em **Adicionar uma exclusão** e selecione a pasta que contém o código do projeto do Unity e as saídas da compilação
 3) Utilizar um SSD para compilação
 
-Leia otimizando os [tempos de compilação para IL2CPP](https://docs.unity3d.com/Manual/IL2CPP-OptimizingBuildTimes.html) para obter mais informações. Além disso, leia [depuração em back-end de script IL2CPP](https://docs.unity3d.com/Manual/windowsstore-debugging-il2cpp.html).
+Leia [otimizando os tempos de compilação para IL2CPP](https://docs.unity3d.com/Manual/IL2CPP-OptimizingBuildTimes.html) para obter mais informações. Além disso, leia [depuração em back-end de script IL2CPP](https://docs.unity3d.com/Manual/windowsstore-debugging-il2cpp.html).
 
 Além disso, considere instalar a [extensão do Visual Studio *UnityScriptAnalyzer* ](https://github.com/Microsoft/MixedRealityCompanionKit/tree/master/UnityScriptAnalyzer). Essa ferramenta analisa seus scripts de C# Unity para o código que pode ser capaz de ser escrito de maneira mais otimizada.
 
 ## <a name="visual-studio-tools-for-unity"></a>Ferramentas do Visual Studio para Unity
 
-Baixar [Ferramentas do Visual Studio para Unity](https://docs.microsoft.com/en-us/visualstudio/cross-platform/getting-started-with-visual-studio-tools-for-unity?view=vs-2019)
+Baixar [Ferramentas do Visual Studio para Unity](https://docs.microsoft.com/visualstudio/cross-platform/getting-started-with-visual-studio-tools-for-unity?view=vs-2019)
 
 **Benefícios do Ferramentas do Visual Studio para Unity**
 * Depure o modo de reprodução do Unity no editor do Visual Studio colocando pontos de interrupção, avaliando variáveis e expressões complexas.

@@ -6,19 +6,19 @@ ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Unity, ponto de foco, plano de foco, plano de estabilização, ponto de estabilização, Reprojeção, LSR, buffer de profundidade
-ms.openlocfilehash: 0f43c37df66ecada86dcb309fcd58d822f0f3481
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: d48f6f1878a68a17be263f10b809229dc2705c58
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63525464"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73435418"
 ---
 # <a name="focus-point-in-unity"></a>Ponto de foco no Unity
 
 **Namespace:** *UnityEngine. XR. WSA*<br>
 **Tipo**: *HolographicSettings*
 
-O [ponto de foco](hologram-stability.md#stabilization-plane) pode ser definido para fornecer uma dica sobre como executar melhor a estabilização nos hologramas que estão sendo exibidos no momento.
+O [ponto de foco](hologram-stability.md#reprojection) pode ser definido para fornecer uma dica sobre como executar melhor a estabilização nos hologramas que estão sendo exibidos no momento.
 
 Se você quiser definir o ponto de foco no Unity, ele precisará ser definido a cada quadro usando *HolographicSettings. SetFocusPointForFrame ()* . Se o ponto de foco não estiver definido para um quadro, o plano de estabilização padrão será usado.
 
@@ -51,4 +51,4 @@ void Update()
 Observe que o código simples acima pode acabar reduzindo a estabilidade do holograma se o objeto focalizado terminar por trás do usuário.  É por isso que você geralmente deve definir "habilitar o compartilhamento de buffer de profundidade" em vez de especificar manualmente um ponto de foco.
 
 ### <a name="see-also"></a>Consulte também
-* [Plano de estabilização](hologram-stability.md#stabilization-plane)
+* [Plano de estabilização](hologram-stability.md#reprojection)

@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Headset de imersão, otimização de desempenho, VR, estudo de caso
-ms.openlocfilehash: 990a5ee6de07b6416e3150a7885220409a9c8d93
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 05f97188c81d85685540be998111ecfc47d9ef9c
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63523382"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73436509"
 ---
 # <a name="case-study---scaling-datascape-across-devices-with-different-performance"></a>Estudo de caso-dimensionamento de Datascape em dispositivos com desempenho diferente
 
@@ -43,7 +43,7 @@ Nós gerenciamos para obter a interface do usuário e o mapa para renderizar no 
 
 ## <a name="background-on-cloud-data"></a>Plano de fundo em dados de nuvem
 
-Nossos dados de nuvem foram baixados de servidores http://nomads.ncep.noaa.gov/) NOAA (e nos vieram em três camadas 2D distintas, cada uma com a altura superior e inferior da nuvem, bem como a densidade da nuvem para cada célula da grade. Os dados foram processados em uma textura de informações de nuvem, em que cada componente foi armazenado no componente vermelho, verde e azul da textura para facilitar o acesso na GPU.
+Nossos dados de nuvem foram baixados de servidores NOAA (https://nomads.ncep.noaa.gov/) e nos vieram em três camadas 2D distintas, cada uma com a altura superior e inferior da nuvem, bem como a densidade da nuvem para cada célula da grade. Os dados foram processados em uma textura de informações de nuvem, em que cada componente foi armazenado no componente vermelho, verde e azul da textura para facilitar o acesso na GPU.
 
 ## <a name="geometry-clouds"></a>Nuvens de geometria
 
@@ -306,11 +306,11 @@ Design para cenários de pior caso e talvez considere o uso de processamento ada
 <table style="border:0">
 <tr>
 <td style="border:0" width="60px"><img alt="Picture of Robert Ferrese" width="60" height="60" src="images/robert-ferrese-60px.jpg"></td>
-<td style="border:0"><b>Robert Ferrese</b><br>Engenheiro de software@Microsoft</td>
+<td style="border:0"><b>Robert Ferrese</b><br>Engenheiro de software @Microsoft</td>
 </tr>
 <tr>
 <td style="border:0" width="60px"><img alt="Picture of Dan Andersson" width="60" height="60" src="images/dan-andersson-60px.jpg"></td>
-<td style="border:0"><b>Dan Andersson</b><br>Engenheiro de software@Microsoft</td>
+<td style="border:0"><b>Dan Andersson</b><br>Engenheiro de software @Microsoft</td>
 </tr>
 </table>
 

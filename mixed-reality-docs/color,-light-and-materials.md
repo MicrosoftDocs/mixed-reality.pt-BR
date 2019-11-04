@@ -6,12 +6,12 @@ ms.author: pinkb
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Realidade mista do Windows, design, cor, luz, materiais
-ms.openlocfilehash: bef0c8b63c109baa536e4192ce94919eb888faf2
-ms.sourcegitcommit: c4d0132ea755c861c504dad46957e791b9c705d5
+ms.openlocfilehash: c49d88c2bb53c07adcb77e8dbb0e3cd77e1e78ae
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69896515"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73436409"
 ---
 # <a name="color-light-and-materials"></a>Cor, luz e materiais
 
@@ -36,14 +36,14 @@ Devido à natureza de exibições aditivas, determinadas cores podem aparecer di
 * Os benefícios da **gama** -HoloLens de uma "ampla gama" de cores, conceitualmente semelhante ao Adobe RGB. Como resultado, algumas cores podem apresentar qualidades e representação diferentes no dispositivo.
 * **Gama** -o brilho e o contraste da imagem renderizada irão variar entre os dispositivos de imersão e Holographic. Essas diferenças de dispositivo geralmente parecem tornar áreas escuras de cores e sombras, mais ou menos brilhantes.
 * **Separação de cores** – também chamada de "cor divisão" ou "borda colorida", a separação de cores geralmente ocorre com o movimento de holograma (incluindo o cursor) quando um usuário rastreia objetos com seus olhos.
-* Uniformidade de **cores** -normalmente, os hologramas são renderizados com brilho suficiente para que mantenham a uniformidade de cores, independentemente do plano de fundo. Áreas grandes podem se tornar blotchy. Evite grandes regiões de cores brilhantes e sólidas.
+* **Uniformidade de cores** -normalmente, os hologramas são renderizados com brilho suficiente para que mantenham a uniformidade de cores, independentemente do plano de fundo. Áreas grandes podem se tornar blotchy. Evite grandes regiões de cores brilhantes e sólidas.
 * **Renderizando cores claras** -o branco parece muito brilhante e deve ser usado com moderação. Na maioria dos casos, considere um valor branco em volta de R 235 G 235 B 235. Grandes áreas brilhantes podem causar discomfort do usuário.
 
 **Renderizando cores escuras**
 
 Devido à natureza de exibições aditivas, as cores escuras aparecem transparentes. Um objeto preto sólido não aparecerá de forma diferente do mundo real. Consulte canal alfa abaixo. Para dar a aparência de "preto", experimente um valor RGB cinza muito escuro, como 16, 16, 16.
 
-![Gama de cores normal versus ampla](images/640px-widegamut.png)<br>
+![gama de cores normal versus ampla](images/640px-widegamut.png)<br>
 *Gama de cores normal versus ampla*
 
 ## <a name="technical-considerations"></a>Considerações técnicas
@@ -54,11 +54,23 @@ Devido à natureza de exibições aditivas, as cores escuras aparecem transparen
 ## <a name="storytelling-with-light-and-color"></a>Narração com luz e cor
 
 A luz e a cor podem ajudar a tornar seus hologramas mais naturalmente no ambiente de um usuário, bem como orientações de oferta e ajuda para o usuário. Para experiências de Holographic, considere esses fatores ao explorar a iluminação e a cor:
-* **Vignetting** -um efeito ' Vignette ' para escurecer materiais pode ajudar a concentrar a atenção do usuário no centro do campo de exibição. Esse efeito escurece o material do holograma em algum raio do vetor olhar do usuário. Observe que isso também é eficaz quando o usuário exibe os hologramas de um ângulo oblíquo ou glancing.
-* **Ênfase** -desenhando a atenção para objetos ou pontos de interação por contraste com cores, brilho e iluminação. Para obter uma visão mais detalhada dos métodos de iluminação no narração, consulte [pixel Cinematography-uma abordagem de iluminação para gráficos de computador](http://media.siggraph.org/education/cgsource/Archive/ConfereceCourses/S96/course30.pdf).
 
-![Uso de cor para mostrar ênfase para elementos narração, mostrados aqui em uma cena de fragmentos.](images/640px-fragments.jpg)<br>
-*Uso de cor para mostrar ênfase para elementos narração, mostrados aqui em uma cena de [fragmentos](https://www.microsoft.com/p/fragments/9nblggh5ggm8).*
+:::row:::
+    :::column:::
+* **Vignetting** -um efeito ' Vignette ' para escurecer materiais pode ajudar a concentrar a atenção do usuário no centro do campo de exibição. Esse efeito escurece o material do holograma em algum raio do vetor olhar do usuário. Observe que isso também é eficaz quando o usuário exibe os hologramas de um ângulo oblíquo ou glancing.<br>
+* **Ênfase** -desenhando a atenção para objetos ou pontos de interação por contraste com cores, brilho e iluminação. Para obter uma visão mais detalhada dos métodos de iluminação no narração, consulte [pixel Cinematography-uma abordagem de iluminação para gráficos de computador](https://media.siggraph.org/education/cgsource/Archive/ConfereceCourses/S96/course30.pdf).<br>
+        <br>
+        *Imagem: uso de cor para mostrar ênfase para elementos narração, mostrados aqui em uma cena de [fragmentos](https://www.microsoft.com/p/fragments/9nblggh5ggm8).*
+    :::column-end:::
+        :::column:::
+        ![Uso de cor para mostrar ênfase para elementos narração, mostrados aqui em uma cena de fragmentos.](images/640px-fragments.jpg)<br>
+    :::column-end:::
+:::row-end:::
+
+
+<br>
+
+---
 
 ## <a name="see-also"></a>Consulte também
 * [Separação de cores](hologram-stability.md#color-separation)

@@ -2,16 +2,16 @@
 title: Estudo de caso-examinando os buracos em sua realidade
 description: Este estudo de caso explica como implementar o efeito de "janela mágica" no HoloLens, permitindo que o usuário veja por trás das paredes, sob o andar e em aberturas virtuais dentro de seu ambiente real.
 author: EricRehmeyer
-ms.author: ericrehm
-ms.date: 03/21/2018
+ms.author: bestruku
+ms.date: 10/18/2019
 ms.topic: article
 keywords: Realidade mista do Windows, HoloLens, janela mágica, da Parallax
-ms.openlocfilehash: 945a09614fbc77400825b524f4e0b591bf7b1f6b
-ms.sourcegitcommit: 90ce9415889e7121dd2fd76a893dc3734672881b
+ms.openlocfilehash: a1b9f0b2e576379846a867f3d3bffef7d8ec277e
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64873934"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73436671"
 ---
 # <a name="case-study---looking-through-holes-in-your-reality"></a>Estudo de caso-examinando os buracos em sua realidade
 
@@ -67,7 +67,7 @@ O que você vê em capturas de tela e vídeo:
 ( Reality * ( 1 - hologram_alpha ) ) + Holograms * hologram_alpha
 ```
 
-Em inglês: O que você vê por meio do HoloLens é uma combinação simples de realidade escurecida (como por meio de óculos) e de qualquer holograma que o aplicativo queira mostrar. Mas quando você faz uma captura de tela, a imagem da câmera é combinada com os hologramas do aplicativo de acordo com o valor de transparência por pixel.
+Em inglês: o que você vê por meio do HoloLens é uma combinação simples de realidade escurecida (como por meio de óculos) e de qualquer holograma que o aplicativo queira mostrar. Mas quando você faz uma captura de tela, a imagem da câmera é combinada com os hologramas do aplicativo de acordo com o valor de transparência por pixel.
 
 Uma maneira de contornar isso é alterar o material de "caixa preta" para gravar apenas no buffer de profundidade e classificar todos os outros materiais opacos. Para obter um exemplo disso, confira o [arquivo WindowOcclusion. Shader no MixedRealityToolkit no GitHub](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit/Common/Shaders/WindowOcclusion.shader). As linhas relevantes são copiadas aqui:
 
@@ -104,12 +104,12 @@ Aqui estão algumas ideias de onde você pode tomar essa ideia em seguida:
 <table style="border-collapse:collapse">
 <tr>
 <td style="border-style: none" width="60px"><img alt="Picture of Eric Rehmeyer" width="60" height="60" src="images/genericusertile.jpg"></td>
-<td style="border-style: none"><b>Eric Rehmeyer</b><br>Engenheiro de software sênior@Microsoft</td>
+<td style="border-style: none"><b>Eric Rehmeyer</b><br>Engenheiro de software sênior @Microsoft</td>
 </tr>
 </table>
 
 ## <a name="see-also"></a>Consulte também
-* [Noções básicas do MR 101: projeto completo com dispositivo](holograms-101.md)
+* [Sr Basics 101: concluir o projeto com o dispositivo](holograms-101.md)
 * [Sistemas de coordenadas](coordinate-systems.md)
 * [Âncoras espaciais](spatial-anchors.md)
 * [Mapeamento espacial](spatial-mapping.md)

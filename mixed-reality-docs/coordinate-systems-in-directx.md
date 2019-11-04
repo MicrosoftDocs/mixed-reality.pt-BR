@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
 keywords: Realidade misturada, localizador espacial, quadro de referência espacial, sistema de coordenadas espaciais, estágio espacial, código de exemplo, estabilização de imagem, âncora espacial, repositório de âncora espacial, perda de controle, passo a passos
-ms.openlocfilehash: 5a48e0a829ba8647718e28ec20760d8a764b13fe
-ms.sourcegitcommit: 45676da11ebe33a2aa3dccec0e8ad7d714420853
+ms.openlocfilehash: a0bce897c1982715af24f0bf7c398cdee10f017f
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65628979"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73436229"
 ---
 # <a name="coordinate-systems-in-directx"></a>Coordenar sistemas no DirectX
 
@@ -37,7 +37,7 @@ Seu aplicativo não deve criar SpatialCoordinateSystems diretamente-em vez disso
 
 Todos os sistemas de coordenadas retornados por esses objetos são destros, com + y up, + x à direita e + z para trás. Você pode se lembrar de qual direção os pontos positivos do eixo z apontando os dedos de sua mão esquerda ou direita na direção x positiva e enrolando-os para a direção y positiva. A direção do seu polegar aponta em sua direção ou para longe de você, é a direção em que o eixo z positivo aponta para esse sistema de coordenadas. A ilustração a seguir mostra esses dois sistemas de coordenadas.
 
-![Sistemas de coordenadas do lado esquerdo e direito](images/left-hand-right-hand.gif)<br>
+![sistemas de coordenadas à esquerda e à direita](images/left-hand-right-hand.gif)<br>
 *Sistemas de coordenadas do lado esquerdo e direito*
 
 Para se inicializar em um SpatialCoordinateSystem com base na posição de um HoloLens, use a classe <a href="https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatiallocator" target="_blank">SpatialLocator</a> para criar um quadro de referência ou em anexo, conforme descrito nas seções abaixo.
@@ -175,7 +175,7 @@ void SpatialStageManager::OnCurrentChanged(Object^ /*o*/)
 O conjunto de vértices que definem o limite de estágio é fornecido na ordem horária. O Shell de realidade mista do Windows desenha uma cerca no limite quando o usuário a aproxima; Talvez você queira triangular a área que pode ser orientada para suas próprias finalidades. O algoritmo a seguir pode ser usado para triangular o palco.
 
 
-Código para triangularização de **estágio espacial**
+Código para **triangularização de estágio espacial**
 
 ```
 std::vector<unsigned short> SpatialStageManager::TriangulatePoints(std::vector<float3> const& vertices)
@@ -549,7 +549,7 @@ Usando nossa classe auxiliar, é quase desnecessário encapsular a função Clea
    }
 ```
 
-### <a name="example-relating-anchor-coordinate-systems-to-stationary-reference-frame-coordinate-systems"></a>Exemplo: Relacionando sistemas de coordenadas de ancoragem a sistemas de coordenadas de quadros de referência estacionários
+### <a name="example-relating-anchor-coordinate-systems-to-stationary-reference-frame-coordinate-systems"></a>Exemplo: relacionando sistemas de coordenadas de âncora a sistemas de coordenadas de quadros de referência de estacionários
 
 Digamos que você tenha uma âncora e queira relacionar algo no sistema de coordenadas da âncora ao SpatialStationaryReferenceFrame que você já está usando para a maior parte de seu outro conteúdo. Você pode usar [TryGetTransformTo](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.spatialcoordinatesystem.trygettransformto.aspx) para obter uma transformação do sistema de coordenadas da âncora para a do quadro de referência estacionário:
 
@@ -616,7 +616,7 @@ Durante a atualização, agora obtemos o sistema de coordenadas no carimbo de da
 
 ### <a name="get-a-spatial-pointer-pose-and-follow-the-users-gaze"></a>Obter uma pose de ponteiro espacial e seguir o olhar do usuário
 
-Queremos que nosso holograma de exemplo siga o [olhar](gaze.md)do usuário, semelhante a como o Shell Holographic pode seguir o olhar do usuário. Para isso, precisamos obter o SpatialPointerPose do mesmo carimbo de data/hora.
+Queremos que nosso holograma de exemplo siga o [olhar](gaze-and-commit.md)do usuário, semelhante a como o Shell Holographic pode seguir o olhar do usuário. Para isso, precisamos obter o SpatialPointerPose do mesmo carimbo de data/hora.
 
 ```
 SpatialPointerPose^ pose = SpatialPointerPose::TryGetAtTimestamp(currentCoordinateSystem, prediction->Timestamp);
@@ -730,7 +730,7 @@ De **HolographicTagAlongSampleMain:: render**:
        );
 ```
 
-É só isso! O holograma agora "colocará" uma posição que seja de 2 metros na frente da direção do olhar do usuário.
+Pronto! O holograma agora "colocará" uma posição que seja de 2 metros na frente da direção do olhar do usuário.
 
 >[!NOTE]
 >Este exemplo também carrega conteúdo adicional-consulte StationaryQuadRenderer. cpp.

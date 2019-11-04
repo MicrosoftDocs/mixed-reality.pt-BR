@@ -2,29 +2,29 @@
 title: Olhar no Unity
 description: Olhar é uma maneira primária para os usuários direcionarem os hologramas que seu aplicativo cria em realidade misturada.
 author: thetuvix
-ms.author: yoyoz
+ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
 keywords: olho-olhar, cabeça olhar, Unity, holograma, realidade misturada
-ms.openlocfilehash: 43e643bac00e3c889b14000331d2ed95014fdcc5
-ms.sourcegitcommit: ff330a7e36e5ff7ae0e9a08c0e99eb7f3f81361f
+ms.openlocfilehash: 8222a5199cc1ea35429f21e7490e1eff49fcd1bc
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70122034"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73435299"
 ---
 # <a name="head-gaze-in-unity"></a>Cabeça-olhar no Unity
 
-[Olhar](gaze.md) é uma maneira primária para os usuários direcionarem os [hologramas](hologram.md) que seu aplicativo cria em [realidade misturada](mixed-reality.md).
+[Olhar](gaze-and-commit.md) é uma maneira primária para os usuários direcionarem os [hologramas](hologram.md) que seu aplicativo cria em [realidade misturada](mixed-reality.md).
 
 
 ## <a name="implementing-head-gaze"></a>Implementando o Head-olhar
 
-Conceitualmente, o [Head-olhar](gaze.md) é implementado projetando um raio a partir da cabeça do usuário onde o headset está, na direção de encaminhamento que estão enfrentando e determinando o que o raio colide com. No Unity, a posição e a direção da cabeça do usuário são expostas por meio da [câmera](camera-in-unity.md)principal do Unity, especificamente [UnityEngine. Camera. Main](http://docs.unity3d.com/ScriptReference/Camera-main.html). [Transform. Forward](http://docs.unity3d.com/ScriptReference/Transform-forward.html) e [UnityEngine. Camera. Main](http://docs.unity3d.com/ScriptReference/Camera-main.html). [Transform. Position](http://docs.unity3d.com/ScriptReference/Transform-position.html).
+Conceitualmente, o [Head-olhar](gaze-and-commit.md) é implementado projetando um raio a partir da cabeça do usuário onde o headset está, na direção de encaminhamento que estão enfrentando e determinando o que o raio colide com. No Unity, a posição e a direção da cabeça do usuário são expostas por meio da [câmera](camera-in-unity.md)principal do Unity, especificamente [UnityEngine. Camera. Main](https://docs.unity3d.com/ScriptReference/Camera-main.html). [Transform. Forward](https://docs.unity3d.com/ScriptReference/Transform-forward.html) e [UnityEngine. Camera. Main](https://docs.unity3d.com/ScriptReference/Camera-main.html). [Transform. Position](https://docs.unity3d.com/ScriptReference/Transform-position.html).
 
-Chamar o [física. RayCast](http://docs.unity3d.com/ScriptReference/Physics.Raycast.html) resulta em uma estrutura [RaycastHit](http://docs.unity3d.com/ScriptReference/RaycastHit.html) que contém informações sobre a colisão, incluindo o ponto 3D em que ocorreu a colisão e o outro gameobject com o cabeçalho-olhar Ray colisado.
+Chamar o [física. RayCast](https://docs.unity3d.com/ScriptReference/Physics.Raycast.html) resulta em uma estrutura [RaycastHit](https://docs.unity3d.com/ScriptReference/RaycastHit.html) que contém informações sobre a colisão, incluindo o ponto 3D em que ocorreu a colisão e o outro gameobject com o cabeçalho-olhar Ray colisado.
 
-### <a name="example-implement-head-gaze"></a>Exemplo: Implementar o Head-olhar
+### <a name="example-implement-head-gaze"></a>Exemplo: implementar Head-olhar
 
 ```cs
 void Update()
@@ -58,5 +58,4 @@ Você pode acessar o Head-olhar do [Gerenciador de entrada](https://microsoft.gi
 ## <a name="see-also"></a>Consulte também
 * [Câmera](camera-in-unity.md)
 * [Cursores](cursors.md)
-* [Entrada olhar](gaze.md)
-* [Focar direcionamento](gaze-targeting.md)
+* [Focar com a cabeça e confirmar](gaze-and-commit.md)

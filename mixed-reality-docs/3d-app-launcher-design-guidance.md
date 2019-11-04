@@ -6,18 +6,18 @@ ms.author: thmignon
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, design, iniciador de aplicativos 3D, headset de imersão, cubo ao vivo
-ms.openlocfilehash: 47db5bffa121c0cc11d246dc749c464e5f187270
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: ce9d242e26d67c8fe5af7ac32f4e910a15715d25
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63517651"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437222"
 ---
 # <a name="3d-app-launcher-design-guidance"></a>Diretrizes de design do iniciador de aplicativo 3D
 
 Quando você coloca em um headset do Windows Mixed Reality (VR), entra na casa do Windows Mixed Reality, é visualizado como uma casa em uma Cliff cercada por montanhas e água (embora você possa [escolher outros ambientes e até mesmo criar o seu próprio](add-custom-home-environments.md)). No espaço desta página inicial, um usuário é livre para organizar e organizar os objetos 3D e os aplicativos que eles se preocupam de qualquer forma que desejarem. Um **iniciador de aplicativo 3D** é um objeto "físico" na casa de realidade misturada do usuário que pode selecionar para iniciar um aplicativo.
 
-![Exemplo: Inicializador de aplicativo 3D de pássaro flutuante](images/20171016-151526-mixedreality1-1200px-1000px.jpg)<br>
+![exemplo: inicializador de aplicativo 3D de pássaro flutuante](images/20171016-151526-mixedreality1-1200px-1000px.jpg)<br>
 *Exemplo de inicializador de aplicativo 3D de pássaro flutuante (aplicativo fictício)*
 
 ## <a name="3d-app-launcher-creation-process"></a>processo de criação do inicializador de aplicativo 3D
@@ -39,7 +39,7 @@ O ambiente de realidade mista do Windows em que seu inicializador de aplicativo 
 
 Ao examinar seu iniciador de aplicativo, sua finalidade-para iniciar seu aplicativo-deve ser óbvio e não deve causar qualquer confusão. Por exemplo, certifique-se de que o iniciador é um representante óbvio o suficiente do seu aplicativo que não será confundido por uma parte do décor na casa Cliff. Seu iniciador de aplicativo deve convidar pessoas para tocar/selecionar.
 
-![Exemplo: Atualizado o iniciador do aplicativo 3D](images/20171016-152145-mixedreality1-1200px-1000px.jpg)<br>
+![exemplo: recente observação do iniciador de aplicativos 3D](images/20171016-152145-mixedreality1-1200px-1000px.jpg)<br>
 *Observação de novo exemplo de inicializador de aplicativo 3D (aplicativo fictício)*
 
 ### <a name="home-scale"></a>Escala inicial
@@ -50,7 +50,7 @@ os iniciadores de aplicativos 3D residem na casa Cliff e seu tamanho padrão dev
 
 O inicializador de aplicativos deve se parecer com um objeto que uma pessoa estaria empolgando em seu espaço. Eles estarão praticamente circundando-se com essas coisas, portanto, o iniciador deve se sentir como algo que o usuário pensava o suficiente para buscar e manter o próximo.
 
-![Exemplo: Inicializador de aplicativo 3D Astro Warp](images/20171016-132936-mixedreality-1200px-1000px.jpg)<br>
+![exemplo: inicializador de aplicativo 3D Astro Warp](images/20171016-132936-mixedreality-1200px-1000px.jpg)<br>
 *Exemplo de inicializador de aplicativo 3D Astro Warp (aplicativo fictício)*
 
 ### <a name="recognizable"></a>Reconhecível
@@ -64,24 +64,20 @@ Seu aplicativo merece mais do que apenas colocar seu logotipo em um plano plano 
 
 :::row:::
     :::column:::
-        ![Logo only](images/20171016-140436-mixedreality-640px.jpg)
-        *Logo only*
+        ![logotipo somente](images/20171016-140436-mixedreality-640px.jpg) *logotipo*
     :::column-end:::
     :::column:::
-        ![More recognizable with a character](images/20171016-140557-mixedreality-640px.jpg)
-        *More recognizable with a character*
+        ![mais reconhecíveis com um caractere](images/20171016-140557-mixedreality-640px.jpg) *mais reconhecível com um caractere*
     :::column-end:::
 :::row-end:::
 
 
 :::row:::
     :::column:::
-        ![Flat approach, not surprisingly, feels flat](images/20171016-155101-mixedreality-640px.jpg)
-        *Flat approach, not surprisingly, feels flat*
+        ![abordagem simples, não surpreendentemente, sente simples](images/20171016-155101-mixedreality-640px.jpg) *abordagem simples, não surpreendentemente, parece simples*
     :::column-end:::
     :::column:::
-        ![Volumetric approach better showcases your app](images/20171016-161407-mixedreality-640px.jpg)
-        *Volumetric approach better showcases your app*
+        ![abordagem volumétricos melhor demonstra o seu aplicativo](images/20171016-161407-mixedreality-640px.jpg) *abordagem de volumétricos melhor apresenta seu aplicativo*
     :::column-end:::
 :::row-end:::
 
@@ -98,7 +94,7 @@ Seu aplicativo merece mais do que apenas colocar seu logotipo em um plano plano 
 * Certifique-se de que seu modelo Leia bem em diferentes distâncias e tamanhos.
 * Quando seu modelo estiver pronto para começar, leia as [diretrizes de exportação de ativos](creating-3d-models-for-use-in-the-windows-mixed-reality-home.md#asset-requirements-overview).
 
-![Modelo com detalhes sutis na textura](images/20171013-143334-mixedreality-640px.jpg)<br>
+Modelo de ![com detalhes sutis na](images/20171013-143334-mixedreality-640px.jpg) de textura<br>
 *Modelo com detalhes sutis na textura*
 
 ### <a name="what-to-avoid"></a>O que evitar
@@ -106,7 +102,7 @@ Seu aplicativo merece mais do que apenas colocar seu logotipo em um plano plano 
 * Não use a geometria fina – ela não funciona bem em uma distância e terá alias incorreto.
 * Não deixe que partes do seu modelo estendam muito além da proporção de tamanho de 1:1:1. Ele criará problemas de dimensionamento.
 
-![Evitar padrões de alto contraste e pequenos ocupados](images/20171013-143603-mixedreality-640px.jpg)<br>
+![evitar padrões de alto contraste e pequenos ocupados](images/20171013-143603-mixedreality-640px.jpg)<br>
 *Evitar padrões de alto contraste, pequenos e ocupados*
 
 ## <a name="how-to-handle-type"></a>Como tratar o tipo
@@ -120,36 +116,33 @@ Seu aplicativo merece mais do que apenas colocar seu logotipo em um plano plano 
 
 :::row:::
     :::column:::
-        ![Flat type without a backdrop can be hard to view from certain angles and in certain environments](images/flattype-640px.png)
-        *Flat type without a backdrop can be hard to view from certain angles and in certain environments*
+        ![tipo simples sem um pano de fundo pode ser difícil de Exibir de determinados ângulos e em determinados ambientes](images/flattype-640px.png) *tipo simples sem um pano de fundo pode ser difícil de Exibir de determinados ângulos e em determinados ambientes*
     :::column-end:::
     :::column:::
-        ![Type with a built-in backdrop can work well](images/flattypeandbkg-640px.png)
-        *Type with a built-in backdrop can work well*
+        ![tipo com um pano de fundo interno pode funcionar bem](images/flattypeandbkg-640px.png) *tipo com um pano de fundo interno pode funcionar bem*
     :::column-end:::
     :::column:::
-        ![Extruded type can work well if you shade the sides](images/20171016-160221-mixedreality-640px.jpg)
-        *Extruded type can work well if you shade the sides*
+        ![tipo de extrusão pode funcionar bem se você Sombrear os lados](images/20171016-160221-mixedreality-640px.jpg) *tipo de extrusão pode funcionar bem se você Sombrear os lados*
     :::column-end:::
 :::row-end:::
 
 
 **Digitar cores que funcionam**
 * Branco
-* Preto
+* Afasta
 * Cor semisaturada brilhante
 
-![Digite as cores que funcionam.](images/20171016-112111-mixedreality-640px.jpg)<br>
+![digitar as cores que funcionam.](images/20171016-112111-mixedreality-640px.jpg)<br>
 *Digitar cores que funcionam*
 
 ### <a name="what-to-avoid"></a>O que evitar
 
 **Digitar cores que causam problemas**
 * Tons médios
-* Cinza
+* tonalidade
 * Cores sobresaturadas ou cores dessaturadas
 
-![Digite as cores que causam problemas.](images/20171016-112246-mixedreality-640px.jpg)<br>
+![digitar as cores que causam problemas.](images/20171016-112246-mixedreality-640px.jpg)<br>
 *Digitar cores que causam problemas*
 
 ## <a name="lighting"></a>Iluminação
@@ -165,9 +158,9 @@ Bons lugares para testar como o iniciador analisa as várias luzes no ambiente s
 
 ### <a name="authoring-your-textures"></a>Criando suas texturas
 
-O formato final do seu iniciador de aplicativo 3D será um arquivo. glb, que é feito usando o pipeline PBR (processamento com base fisicamente). Isso pode ser um processo complicado – agora é um bom momento para empregar um artista técnico, caso ainda não tenha feito isso. Se você for um corajoso DIY, dedicar o tempo para [Pesquisar e aprender a terminologia do PBR](http://wiki.polycount.com/wiki/PBR) e o que está acontecendo nos bastidores antes de começar irá ajudá-lo a evitar erros comuns. 
+O formato final do seu iniciador de aplicativo 3D será um arquivo. glb, que é feito usando o pipeline PBR (processamento com base fisicamente). Isso pode ser um processo complicado – agora é um bom momento para empregar um artista técnico, caso ainda não tenha feito isso. Se você for um corajoso DIY, dedicar o tempo para [Pesquisar e aprender a terminologia do PBR](https://wiki.polycount.com/wiki/PBR) e o que está acontecendo nos bastidores antes de começar irá ajudá-lo a evitar erros comuns. 
 
-![Exemplo: Novo aplicativo de anotações](images/pbr-freshnote1-640px-500px.png)<br>
+![exemplo: aplicativo de observações recentes](images/pbr-freshnote1-640px-500px.png)<br>
 *Observação de novo exemplo de inicializador de aplicativo 3D (aplicativo fictício)*
 
 **Ferramenta de criação recomendada**

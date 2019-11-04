@@ -6,12 +6,12 @@ ms.author: mriches
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Walkthrough, comando de voz, frase, reconhecimento, fala, DirectX, plataforma, Cortana, realidade do Windows Mixed
-ms.openlocfilehash: 728457a495616e5f65ec3986dfb6ac60231f9e46
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: be8c0e570a0e112e01b580ad571c06fe3482ff9f
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63548669"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437195"
 ---
 # <a name="voice-input-in-directx"></a>Entrada de voz no DirectX
 
@@ -22,7 +22,7 @@ Este tópico explica como implementar [comandos de voz](voice-input.md)e um pequ
 
 ## <a name="use-a-speechrecognizer-for-continuous-recognition-of-voice-commands"></a>Usar um SpeechRecognizer para reconhecimento contínuo de comandos de voz
 
-Nesta seção, descreveremos como usar o reconhecimento de fala contínuo para habilitar comandos de voz em seu aplicativo. Este passo a passos usa o código do exemplo [HolographicVoiceInput](http://go.microsoft.com/fwlink/p/?LinkId=844964) . Quando o exemplo estiver em execução, fale o nome de um dos comandos de cor registrados para alterar a cor do cubo girando.
+Nesta seção, descreveremos como usar o reconhecimento de fala contínuo para habilitar comandos de voz em seu aplicativo. Este passo a passos usa o código do exemplo [HolographicVoiceInput](https://go.microsoft.com/fwlink/p/?LinkId=844964) . Quando o exemplo estiver em execução, fale o nome de um dos comandos de cor registrados para alterar a cor do cubo girando.
 
 Primeiro, crie uma nova instância do **Windows:: Media:: SpeechRecognition:: SpeechRecognizer** .
 
@@ -252,7 +252,7 @@ catch (Exception^ exception)
    });
 ```
 
-**OBSERVAÇÃO:** Há vários [SpeechRecognitionScenarios](https://msdn.microsoft.com/library/windows/apps/windows.media.speechrecognition.speechrecognitionscenario.aspx) predefinidos disponíveis para otimizar o reconhecimento de fala.
+**Observação:** Há vários [SpeechRecognitionScenarios](https://msdn.microsoft.com/library/windows/apps/windows.media.speechrecognition.speechrecognitionscenario.aspx) predefinidos disponíveis para otimizar o reconhecimento de fala.
 * Se você quiser otimizar para o ditado, use o cenário de ditado:
 
 ```

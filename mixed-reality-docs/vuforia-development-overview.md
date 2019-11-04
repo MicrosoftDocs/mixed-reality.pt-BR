@@ -1,17 +1,17 @@
 ---
 title: Usando o Vuforia com o Unity
 description: Aproveite o Vuforia para criar aplicativos de realidade mista do Windows no Unity.
-author: ailyadis
-ms.author: ''
+author: thetuvix
+ms.author: alexturn
 ms.date: 01/28/2019
 ms.topic: article
 keywords: Vuforia, marcadores, coordenadas, quadro de referência, acompanhamento
-ms.openlocfilehash: c0d2f6d0707e1ddd3ee00d3eb80af9fb459f252b
-ms.sourcegitcommit: c2a5bff423feba7d29d5431c870b6017c2fe1bc2
+ms.openlocfilehash: 0ab87a6262cbe74fd116fdc0a7045961bf8695d9
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66750346"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437140"
 ---
 # <a name="using-vuforia-engine-with-unity"></a>Usando o mecanismo do Vuforia com o Unity
 
@@ -60,7 +60,7 @@ Desenvolver um aplicativo de mecanismo Vuforia para o HoloLens é fundamentalmen
 10. Selecione Compilar para gerar um projeto do Visual Studio
 11. Compilar o executável do Visual Studio e instalá-lo em seu HoloLens
 
-Observação: A partir da versão 7,2, o exemplo do mecanismo Vuforia para o HoloLens inclui uma cena de exemplo, incluindo o uso de exemplos de destinos de modelo
+Observação: a partir da versão 7,2, o exemplo do mecanismo Vuforia para o HoloLens inclui uma cena de exemplo, incluindo o uso de exemplos de destinos de modelo
 
 ## <a name="the-vuforia-developer-portal"></a>O portal do desenvolvedor do Vuforia
 
@@ -70,12 +70,12 @@ Os desenvolvedores que desejam criar suas próprias experiências de AR com o Vu
 
 O [controle estendido](https://library.vuforia.com/articles/Training/Extended-Tracking) cria um mapa do ambiente para manter o controle mesmo quando um destino não está mais na exibição. É a contraparte do Vuforia Engines para o mapeamento espacial executado pelo HoloLens. Quando você habilita o acompanhamento estendido em um destino, permite que a pose desse destino seja passada para o sistema de mapeamento espacial. Dessa forma, os destinos podem existir nos sistemas de coordenadas espaciais do mecanismo Vuforia e do HoloLens, embora não sejam simultaneamente.
 
-![Janela Configurações do Unity](images/vuforia-extendedtracking.png)<br>
+![janela Configurações do Unity](images/vuforia-extendedtracking.png)<br>
 *Janela Configurações do Unity*
 
 **Habilitando o controle estendido em um destino**
 
-O mecanismo de Vuforia automaticamente transformará a pose de um destino que usa o controle estendido no sistema de coordenadas espaciais do HoloLens. Isso permite que o HoloLens assuma o controle e integre qualquer conteúdo que aumente o mapa espacial do ambiente de destino. Esse processo ocorre entre o mecanismo Vuforia e as APIs de realidade misturadas no Unity e não requer programação pelo desenvolvedor. ele é manipulado automaticamente.
+O mecanismo de Vuforia automaticamente transformará a pose de um destino que usa o controle estendido no sistema de coordenadas espaciais do HoloLens. Isso permite que o HoloLens assuma o controle e integre qualquer conteúdo que aumente o mapeamento espacial do ambiente de destino. Esse processo ocorre entre o mecanismo Vuforia e as APIs de realidade misturadas no Unity e não requer programação pelo desenvolvedor. ele é manipulado automaticamente.
 
 **Aqui está o que ocorre...**
 1. O controlador de destino do Vuforia reconhece o destino
@@ -86,7 +86,7 @@ O mecanismo de Vuforia automaticamente transformará a pose de um destino que us
 
 O desenvolvedor pode controlar esse processo para retornar o controle ao Vuforia, desabilitando o controle estendido no TargetBehaviour.
 
-**OBSERVAÇÃO:** A partir do Vuforia 7,2, o controle estendido não é mais habilitado em uma base por destino. Em vez disso, os desenvolvedores podem ativar o rastreamento de dispositivos para habilitar a funcionalidade semelhante em todos os destinos na cena.
+**Observação:** A partir do Vuforia 7,2, o controle estendido não é mais habilitado em uma base por destino. Em vez disso, os desenvolvedores podem ativar o rastreamento de dispositivos para habilitar a funcionalidade semelhante em todos os destinos na cena.
 
 
 ## <a name="see-also"></a>Consulte também
@@ -95,7 +95,7 @@ O desenvolvedor pode controlar esse processo para retornar o controle ao Vuforia
 * [Mapeamento espacial](spatial-mapping.md)
 * [Câmera no Unity](camera-in-unity.md)
 * [Como exportar e criar uma solução do Visual Studio do Unity](exporting-and-building-a-unity-visual-studio-solution.md)
-* [Documentação do Vuforia: Desenvolvendo para Windows 10 no Unity](https://library.vuforia.com/articles/Solution/Developing-for-Windows-10-in-Unity)
-* [Documentação do Vuforia: Como instalar a extensão do Unity Vuforia](https://library.vuforia.com/articles/Solution/Installing-the-Unity-Extension)
-* [Documentação do Vuforia: Trabalhando com o exemplo de HoloLens no Unity](https://library.vuforia.com/articles/Solution/Working-with-the-HoloLens-sample-in-Unity)
-* [Documentação do Vuforia: Acompanhamento estendido em Vuforia](https://library.vuforia.com/articles/Training/Extended-Tracking)
+* [Documentação do Vuforia: desenvolvendo para o Windows 10 no Unity](https://library.vuforia.com/articles/Solution/Developing-for-Windows-10-in-Unity)
+* [Documentação do Vuforia: como instalar a extensão do Vuforia Unity](https://library.vuforia.com/articles/Solution/Installing-the-Unity-Extension)
+* [Documentação do Vuforia: trabalhando com o exemplo de HoloLens no Unity](https://library.vuforia.com/articles/Solution/Working-with-the-HoloLens-sample-in-Unity)
+* [Documentação do Vuforia: controle estendido em Vuforia](https://library.vuforia.com/articles/Training/Extended-Tracking)

@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
 keywords: aplicativo 2D, UWP, aplicativo simples, HoloLens, headset de imersão, modelo de aplicativo, botão voltar, barra de aplicativos, DPI, resolução, escala
-ms.openlocfilehash: f9792a7e5fd9729bf9f5f632c699c74c58c10ddf
-ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
+ms.openlocfilehash: 46d2a9ca044dee977faecc84d610dc0811a4bfb7
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67414217"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73436990"
 ---
 # <a name="updating-2d-uwp-apps-for-mixed-reality"></a>Atualizando aplicativos UWP 2D para realidade misturada
 
@@ -60,7 +60,7 @@ Seu aplicativo agora é capaz de ser executado em dispositivos do Windows de hoj
 Agora, vamos ir para seu manifesto AppX para garantir que seu aplicativo UWP do Windows 10 possa ser executado no HoloLens:
 * Abra o arquivo de solução do aplicativo com o **Visual Studio** e navegue até o manifesto do pacote do aplicativo
 * Clique com o botão direito do mouse no arquivo **Package. appxmanifest** em sua solução e vá para **Exibir código**<br>
-  ![Package. appxmanifest em Gerenciador de Soluções](images/openappxmanifest-500px.png)<br>
+  ![Package. appxmanifest no Gerenciador de Soluções](images/openappxmanifest-500px.png)<br>
 * Verifique se a plataforma de destino é Windows. universal na seção de dependências
   ```
   <Dependencies>
@@ -73,7 +73,7 @@ Se você não usar o Visual Studio para seu ambiente de desenvolvimento, poderá
 
 ### <a name="run-in-the-hololens-emulator"></a>Executar no emulador do HoloLens
 
-Agora que seu aplicativo UWP tem como alvo "Windows. universal", vamos compilar seu aplicativo e executá-lo no emulador do [HoloLens](using-the-hololens-emulator.md).
+Agora que seu aplicativo UWP tem como alvo "Windows. universal", vamos compilar seu aplicativo e executá-lo no [emulador do HoloLens](using-the-hololens-emulator.md).
 * Verifique se você [instalou o emulador do HoloLens](install-the-tools.md).
 * No Visual Studio, selecione a configuração de compilação **x86** para seu aplicativo
 
@@ -110,17 +110,17 @@ Essas etapas o orientarão na depuração do seu aplicativo UWP usando o depurad
 
 Agora que seu aplicativo UWP está em execução em headsets de imersão e/ou HoloLens como um holograma de 2D, vamos garantir que ele parece lindo. Aqui estão algumas coisas a serem consideradas:
 * A realidade mista do Windows executará todos os aplicativos 2D em uma resolução fixa e um DPI equivalente a 853x480 pixels efetivos. Considere se seu design precisa ser refinado nessa escala e examine as diretrizes de design abaixo para melhorar sua experiência em headsets de HoloLens e de imersão.
-* A realidade mista do Windows [não dá suporte](app-model.md) a blocos dinâmicos 2D. Se sua funcionalidade principal estiver mostrando informações em um bloco dinâmico, considere mover essas informações de volta para seu aplicativo ou explorar os iniciadores de [aplicativos 3D](3d-app-launcher-design-guidance.md).
+* A realidade mista do Windows [não dá suporte](app-model.md) a blocos dinâmicos 2D. Se sua funcionalidade principal estiver mostrando informações em um bloco dinâmico, considere mover essas informações de volta para seu aplicativo ou explorar os [iniciadores de aplicativos 3D](3d-app-launcher-design-guidance.md).
 
 ### <a name="2d-app-view-resolution-and-scale-factor"></a>resolução de exibição de aplicativo 2D e fator de escala
 
 ![Do design responsivo](images/scale-500px.png)
 
-O Windows 10 move todo o Design Visual de pixels de tela reais para **pixels efetivos**. Isso significa que os desenvolvedores projetam suas interfaces de usuário seguindo as diretrizes de interface humana do Windows 10 para pixels efetivos, e o dimensionamento do Windows garante que os pixels efetivos sejam o tamanho certo para usabilidade em dispositivos, resoluções, DPI, etc. Veja essa [excelente leitura no MSDN](https://msdn.microsoft.com/library/windows/apps/Dn958435.aspx) para saber mais, bem como esta [apresentação de Build](http://video.ch9.ms/sessions/build/2015/2-63_Build_2015_Windows_Scaling.pptx).
+O Windows 10 move todo o Design Visual de pixels de tela reais para **pixels efetivos**. Isso significa que os desenvolvedores projetam suas interfaces de usuário seguindo as diretrizes de interface humana do Windows 10 para pixels efetivos, e o dimensionamento do Windows garante que os pixels efetivos sejam o tamanho certo para usabilidade em dispositivos, resoluções, DPI, etc. Veja essa [excelente leitura no MSDN](https://msdn.microsoft.com/library/windows/apps/Dn958435.aspx) para saber mais, bem como esta [apresentação de Build](https://video.ch9.ms/sessions/build/2015/2-63_Build_2015_Windows_Scaling.pptx).
 
 Mesmo com a capacidade exclusiva de posicionar aplicativos em seu mundo em uma variedade de distâncias, as distâncias de exibição do tipo TV são recomendadas para produzir a melhor legibilidade e interação com o olhar/gesto. Por isso, um Slate virtual na página inicial da realidade misturada exibirá sua exibição de UWP plana em:
 
-**1280x720, 150% de DPI** (853x480 de pixels efetivos)
+**1280x720, 150% de DPI** (853x480 efetivo pixels)
 
 Essa resolução tem várias vantagens:
 * Esse layout de pixel efetivo terá sobre a mesma densidade de informações que um Tablet ou uma área de trabalho pequena.
@@ -147,25 +147,25 @@ exibições 2D são decoradas com uma barra de aplicativo acima do seu conteúdo
 
 **Título:** exibe o *DisplayName* do bloco associado à instância do aplicativo
 
-**Botão voltar:** gera o evento *[BackRequested](https://msdn.microsoft.com/library/windows/apps/windows.ui.core.systemnavigationmanager.backrequested.aspx)* quando pressionado. A visibilidade do botão voltar é controlada por *[SystemNavigationManager. AppViewBackButtonVisibility](https://msdn.microsoft.com/library/windows/apps/windows.ui.core.systemnavigationmanager.aspx)* .
+**Botão voltar:** gera o evento *[requested](https://msdn.microsoft.com/library/windows/apps/windows.ui.core.systemnavigationmanager.backrequested.aspx)* quando pressionado. A visibilidade do botão voltar é controlada por *[SystemNavigationManager. AppViewBackButtonVisibility](https://msdn.microsoft.com/library/windows/apps/windows.ui.core.systemnavigationmanager.aspx)* .
 
-![Interface do usuário da barra de aplicativos na exibição de aplicativo 2D](images/12697297-10104100857470613-1470416918759008487-o-500px.jpg)<br>
+![interface do usuário da barra de aplicativos na exibição de aplicativo 2D](images/12697297-10104100857470613-1470416918759008487-o-500px.jpg)<br>
 *Interface do usuário da barra de aplicativos na exibição de aplicativo 2D*
 
 ### <a name="test-your-2d-apps-design"></a>Testar o design de seu aplicativo 2D
 
-É importante testar seu aplicativo para ter certeza de que o texto está legível, os botões são direcionáveis e o aplicativo geral parece correto. Você pode [testar](testing-your-app-on-hololens.md) em um headset de desktop, um HoloLens, um emulador ou um dispositivo de toque com a resolução @150definida como 1280x720%.
+É importante testar seu aplicativo para ter certeza de que o texto está legível, os botões são direcionáveis e o aplicativo geral parece correto. Você pode [testar](testing-your-app-on-hololens.md) em um headset de área de trabalho, um HoloLens, um emulador ou um dispositivo de toque com a resolução definida como 1280x720 @150%.
 
 ## <a name="new-input-possibilities"></a>Novas possibilidades de entrada
 
-O HoloLens usa sensores de profundidade avançada para ver o mundo e ver os usuários. Isso permite gestos avançados de mão, como [flor](gestures.md#bloom) e [toque de ar](gestures.md#air-tap). Os microfones avançados também habilitam [experiências de voz](voice-input.md).
+O HoloLens usa sensores de profundidade avançada para ver o mundo e ver os usuários. Isso permite gestos avançados de mão, como [flor](system-gesture.md#bloom) e [toque de ar](gaze-and-commit.md#composite-gestures). Os microfones avançados também habilitam [experiências de voz](voice-input.md).
 
 Com os headsets da área de trabalho, os usuários podem usar os controladores de movimento para apontar para os aplicativos e tomar medidas. Eles também podem usar um gamepad, direcionando objetos com seus olhar.
 
-O Windows cuida de toda essa complexidade para aplicativos UWP, traduzindo sua entrada de controlador [olhar](gaze.md), gestos, voz e movimento para [eventos de ponteiro](https://msdn.microsoft.com/library/windows/apps/mt404610#pointer_events) que abstraim o mecanismo de entrada. Por exemplo, um usuário pode ter feito um toque de ar com sua mão ou ter recebido o gatilho SELECT em um controlador de movimento, mas os aplicativos 2D não precisam saber de onde veio a entrada – eles simplesmente veem um Press Touch 2D, como se fosse em uma tela touch.
+O Windows cuida de toda essa complexidade para aplicativos UWP, traduzindo sua entrada de controlador [olhar](gaze-and-commit.md), gestos, voz e movimento para [eventos de ponteiro](https://msdn.microsoft.com/library/windows/apps/mt404610#pointer_events) que abstraim o mecanismo de entrada. Por exemplo, um usuário pode ter feito um toque de ar com sua mão ou ter recebido o gatilho SELECT em um controlador de movimento, mas os aplicativos 2D não precisam saber de onde veio a entrada – eles simplesmente veem um Press Touch 2D, como se fosse em uma tela touch.
 
 Aqui estão os conceitos/cenários de alto nível que você deve entender para entrada ao trazer seu aplicativo UWP para o HoloLens:
-* O [olhar](gaze.md) se transforma em eventos em foco, o que pode disparar inesperadamente menus, submenus ou outros elementos da interface do usuário para pop-up apenas por nuvens em todo o seu aplicativo.
+* O [olhar](gaze-and-commit.md) se transforma em eventos em foco, o que pode disparar inesperadamente menus, submenus ou outros elementos da interface do usuário para pop-up apenas por nuvens em todo o seu aplicativo.
 * Olhar não é tão preciso como entrada do mouse. Use destinos de visita de tamanho adequado para o HoloLens, semelhante a aplicativos móveis amigáveis para toque. Elementos pequenos próximos às bordas do aplicativo são especialmente difíceis de interagir.
 * Os usuários devem mudar os modos de entrada para passar da rolagem para a arrastar para o movimento panorâmico de dois dedos. Se seu aplicativo foi projetado para entrada por toque, considere garantir que nenhuma funcionalidade principal seja bloqueada por trás de dois panorâmicas de dedo. Nesse caso, considere ter mecanismos de entrada alternativos como botões que podem iniciar o movimento panorâmico de dois dedos. Por exemplo, o aplicativo Maps pode aplicar zoom com dois panorâmicas de dedo, mas tem um botão de adição, subtração e rotação para simular as mesmas interações de zoom com cliques únicos.
 
@@ -177,8 +177,7 @@ Quando seu aplicativo estiver em execução, empacote seu aplicativo para [envi�
 
 ## <a name="see-also"></a>Consulte também
 * [Modelo de aplicativo](app-model.md)
-* [Foco](gaze.md)
-* [Gesture](gestures.md)
+* [Focar com a cabeça e confirmar](gaze-and-commit.md)
 * [Controladores de movimentos](motion-controllers.md)
 * [Entrada de voz](voice-input.md)
 * [Como enviar um aplicativo para a Microsoft Store](submitting-an-app-to-the-microsoft-store.md)

@@ -6,12 +6,12 @@ ms.author: jonwie
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Realidade mista do Windows, design, introdução, orientação
-ms.openlocfilehash: 0e5601898c2b1f351b5ab2aaa491a7c64ae57f7e
-ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
+ms.openlocfilehash: fd2b8d704c9053d9eeb63ab2cceca1e4257d86ed
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67414158"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437100"
 ---
 # <a name="about-this-design-guidance"></a>Sobre estas diretrizes de design
 
@@ -29,14 +29,12 @@ E sabemos, muitas inovações serão geradas pela comunidade de design maior. En
 
 ## <a name="overview"></a>Visão geral
 
-Aqui está uma rápida visão geral de como essas diretrizes de design são organizadas. Você encontrará seções para cada uma dessas áreas com links para vários artigos.
-* **[Introdução ao design](mixed-reality.md)** -Leia nossos pensamentos de alto nível e entenda os princípios que seguimos.
-* **[Interações de instinctual](interaction-fundamentals.md)** – Aprenda sobre entrada, comandos, navegação e outras noções básicas de interação para criar seus aplicativos.
-* **[Estilo](typography.md)** -torne seu aplicativo interessantes usando cor, tipografia e movimento.
-* **[Padrões de aplicativo](types-of-mixed-reality-apps.md)** – saiba como os aplicativos podem abranger cenários em ambientes de imersão e do mundo real.
-* **[Controles](interactable-object.md)** – use controles e padrões como blocos de construção para criar sua própria experiência de aplicativo.
-* **[Aplicativos de exemplo](design.md#sample-apps)** – crie grandes experiências de exemplos criados e criados por nossa equipe.
-* **[Ferramentas e recursos de design](design.md#design-tools)** – Inicie seu projeto com ferramentas e modelos de design.
+Aqui está uma rápida visão geral de como essas diretrizes de design são organizadas. 
+* **[Visão geral](design.md)** -saiba mais sobre o processo de design, os principais conceitos e fatores de interação a serem considerados.
+* **[Conceitos principais](core-concepts-landingpage.md)** -saiba mais sobre o conforto, o quadro Holographic, o mapeamento espacial e outros conceitos principais a serem considerados.
+* **[Modelos de interação](interaction-fundamentals.md)** – estas diretrizes são estruturadas em três modelos principais de interação.
+* **[Elementos de UX](app-patterns-landingpage.md)** – use controles e comportamentos como blocos de construção para criar sua própria experiência de aplicativo.
+* **[Recursos](design.md#choose-a-prototyping-option)** -Inicie seu projeto com as ferramentas de design e as opções de protótipo.
 
 Para todos os itens acima, visamos fornecer a combinação certa de texto, ilustrações e diagramas, e vídeos, para que você nos veja experimentando diferentes formatos e técnicas, tudo com a intenção de fornecer o que você precisa. E, nos meses de antecedência, expandiremos essa taxonomia para incluir um conjunto mais amplo de tópicos de design. Sempre que possível, daremos um cara sobre o que está chegando em seguida, portanto, continue verificando novamente.
 
@@ -72,7 +70,7 @@ Um dos desafios de oferecer diretrizes de design nesse novo 3D medido é que nem
 
 ![O equilíbrio certo entre design global e local](images/500px-fluentdesign.jpg) <br>
 
-Ofereceremos dois níveis de diretrizes de design: global e local. Nossas diretrizes de design ' globais ' estão incorporadas ao [sistema de design fluente](http://fluent.microsoft.com). Detalhes fluentes de como achamos sobre conceitos básicos como luz, profundidade, movimento, material e escala em todo o design da Microsoft – nossos dispositivos, produtos, ferramentas e serviços. Dito isso, existem diferenças significativas específicas do dispositivo em um sistema maior. Portanto, nossas diretrizes de design "locais" para os monitores montados na cabeça descrevem o design de dispositivos Holographic e imersiva que geralmente têm diferentes métodos de entrada e saída, bem como diferentes necessidades e cenários de usuários. As diretrizes de design local abordam os tópicos exclusivos do HMDs. Por exemplo:  ambientes e objetos 3D; ambientes compartilhados; o uso de sensores, controle de olho e mapeamento espacial; e as oportunidades de áudio espacial. Em nossas diretrizes, você provavelmente verá que nos vemos com esses aspectos globais e locais. Espero que isso o ajudará a aumentar seu trabalho em uma base maior de design, aproveitando as diferenças de design entre dispositivos específicos.
+Ofereceremos dois níveis de diretrizes de design: global e local. Nossas diretrizes de design ' globais ' estão incorporadas ao [sistema de design fluente](https://fluent.microsoft.com). Detalhes fluentes de como achamos sobre conceitos básicos como luz, profundidade, movimento, material e escala em todo o design da Microsoft – nossos dispositivos, produtos, ferramentas e serviços. Dito isso, existem diferenças significativas específicas do dispositivo em um sistema maior. Portanto, nossas diretrizes de design "locais" para os monitores montados na cabeça descrevem o design de dispositivos Holographic e imersiva que geralmente têm diferentes métodos de entrada e saída, bem como diferentes necessidades e cenários de usuários. As diretrizes de design local abordam os tópicos exclusivos do HMDs. Por exemplo: ambientes e objetos 3D; ambientes compartilhados; o uso de sensores, controle de olho e mapeamento espacial; e as oportunidades de áudio espacial. Em nossas diretrizes, você provavelmente verá que nos vemos com esses aspectos globais e locais. Espero que isso o ajudará a aumentar seu trabalho em uma base maior de design, aproveitando as diferenças de design entre dispositivos específicos.
 
 ### <a name="have-a-discussion"></a>Ter uma discussão
 

@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Gerenciador do Galaxy, estudo de caso, projeto, exemplo
-ms.openlocfilehash: a33a1541ef97298facfa9b0ef2d126654dd02f51
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 11cb2ad17f42fe49d84a61480dc8d43698386a1c
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63526551"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73435406"
 ---
 # <a name="galaxy-explorer"></a>Gerenciador do Galaxy
 
@@ -41,25 +41,25 @@ Você compartilhou mais de 5000 ideias incríveis durante essas semanas! Nossa e
 
 Após uma sondagem do Twitter de 24 horas, o Galaxy Explorer foi a ideia vencedora! Nossa equipe de desenvolvimento do HoloLens de designers, artistas e desenvolvedores criou o Galaxy Explorer e convidou todos vocês a fazer parte dessa jornada com eles. Você pode seguir o processo de desenvolvimento nos vídeos abaixo.
 
-## <a name="ep-1-trust-the-process"></a>EP 1: Confiar no processo
+## <a name="ep-1-trust-the-process"></a>EP 1: confiar no processo
 
 >[!VIDEO https://www.youtube.com/embed/rIX2XrRQgDg]
 
 No episódio 1, a equipe de desenvolvimento começa o processo criativo: debate, conceito e decisão sobre o que deve ser protótipo.
 
-## <a name="ep-2-lets-do-this"></a>EP 2: Vamos fazer isso
+## <a name="ep-2-lets-do-this"></a>EP 2: vamos fazer isso
 
 >[!VIDEO https://www.youtube.com/embed/q1ee8a-84Ro]
 
 No episódio 2, a equipe de desenvolvimento conclui a fase de protótipos – Solucionando problemas difíceis e descobrindo quais ideias buscar mais.
 
-## <a name="ep-3-laying-foundations"></a>EP 3: Bases de layout
+## <a name="ep-3-laying-foundations"></a>EP 3: bases de layout
 
 >[!VIDEO https://www.youtube.com/embed/fUqni6C4nmo]
 
 No episódio 3, a equipe inicia a primeira semana de desenvolvimento – criando um plano, escrevendo código de produção, criando ativos de arte e descobrindo a interface do usuário.
 
-## <a name="ep-4-make-it-real"></a>EP 4: Torne-o real
+## <a name="ep-4-make-it-real"></a>EP 4: torná-lo real
 
 >[!VIDEO https://www.youtube.com/embed/ePA6hcaqoug]
 
@@ -71,13 +71,13 @@ No episódio 4, a equipe se aprofunda mais no desenvolvimento – trazendo dados
 
 No episódio 5, a equipe de desenvolvimento testa o aplicativo, procura bugs que precisam ser corrigidos e restringe a experiência.
 
-## <a name="ep-6-coming-to-life"></a>EP 6: Chegando à vida
+## <a name="ep-6-coming-to-life"></a>EP 6: chegando à vida
 
 >[!VIDEO https://www.youtube.com/embed/sMuJFKbylY4]
 
 No episódio 6, a equipe conclui a última semana de desenvolvimento, prepara para duas semanas de trabalho em polonês e reflete o progresso que eles fizeram
 
-## <a name="ep-7-the-final-product"></a>EP 7: O produto final
+## <a name="ep-7-the-final-product"></a>EP 7: o produto final
 
 >[!VIDEO https://www.youtube.com/embed/HsnH2Q7HxOA]
 
@@ -89,10 +89,10 @@ Você pode encontrar ainda mais ideias e lições do desenvolvimento do Galaxy E
 
 ## <a name="meet-the-team"></a>Conheça a equipe
 
-![Equipe de desenvolvimento do Galaxy Explorer](images/syiteampic.jpg)<br>
+![equipe de desenvolvimento do Galaxy Explorer](images/syiteampic.jpg)<br>
 *Equipe de desenvolvimento do Galaxy Explorer*
 
-Aprendemos que a criação da equipe certa é um dos investimentos mais importantes que poderíamos fazer. Decidimos organizar de forma semelhante a um estúdio de jogos para aqueles que você conhece com esse modelo de desenvolvimento. Optamos por ter onze membros da equipe principal para controlar o escopo, pois tínhamos um período de tempo fixo (crie algo interessante antes de criar em 30 de março).
+Aprendemos que a criação da equipe certa é um dos investimentos mais importantes que poderíamos fazer. Decidimos organizar de forma semelhante a um estúdio de jogos para aqueles que você conhece com esse modelo de desenvolvimento. Optamos por ter onze membros da equipe principal para controlar o escopo, pois tivemos um período de tempo fixo (crie algo interessante antes de criar em 30 de março de 2016).
 
 Para este projeto, começamos com um produtor, Jessica que conduziu o planejamento, revisando o progresso e mantendo as coisas em execução dia a dia. Ela é aquela com cabelo rosa. Tínhamos um diretor de design (Jon) e um designer sênior (Peter). Eles mantinham a visão criativa do Galaxy Explorer. Jon é o que está em óculos na linha frontal e Peter é o segundo da direita na parte posterior.
 

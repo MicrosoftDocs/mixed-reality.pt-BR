@@ -6,18 +6,18 @@ ms.author: trferrel
 ms.date: 3/26/2019
 ms.topic: article
 keywords: Realidade mista do Windows, realidade misturada, realidade virtual, VR, Sr, desempenho, otimização, CPU, GPU
-ms.openlocfilehash: ce59f9023c21dc7c981a2bb97d9fbd0c57622dbf
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 7d8a0c95d59ec7e42e11bc1e1b6b40c702e01529
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63548837"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438239"
 ---
 # <a name="understanding-performance-for-mixed-reality"></a>Entendendo o desempenho da realidade misturada
 
-Este artigo é uma introdução à racionalização do significado do desempenho para seu aplicativo de realidade misturada.  A experiência do usuário pode ser bastante degradada se seu aplicativo não for executado em uma taxa de quadros ideal. Os hologramas aparecerão instáveis e o controle de carga do ambiente não será preciso, levando a uma experiência ruim para o usuário. Na verdade, o desempenho deve ser considerado como um recurso de primeira classe para o desenvolvimento de realidade misturada e não uma tarefa de fim de ciclo.
+Este artigo é uma introdução ao entendimento do significado do desempenho para seu aplicativo de realidade misturada.  A experiência do usuário pode ser bastante degradada se seu aplicativo não for executado em uma taxa de quadros ideal. Os hologramas aparecerão instáveis e o controle de cabeça do ambiente será impreciso, levando a uma experiência ruim para o usuário. O desempenho deve ser considerado um recurso de primeira classe para o desenvolvimento de realidade misturada e não uma tarefa em polonês.
 
-Para revisão, os valores de taxa de quadros de alto desempenho para cada plataforma de destino são listados abaixo.
+Os valores de taxa de quadros de alto desempenho para cada plataforma de destino são listados abaixo.
 
 | Plataforma | Taxa de quadros de destino |
 |----------|-------------------|
@@ -25,26 +25,25 @@ Para revisão, os valores de taxa de quadros de alto desempenho para cada plataf
 | [Windows Mixed Reality ultra PCs](immersive-headset-hardware-details.md) | 90 FPS |
 | [Computadores Windows Mixed Reality](immersive-headset-hardware-details.md) | 60 FPS |
 
-A estrutura a seguir fornece uma estrutura geral para práticas recomendadas e entendimentos para atingir as taxas de quadros de destino. Para aprofundar-se nos detalhes, considere ler o [artigo recomendações de desempenho para o Unity](performance-recommendations-for-unity.md). Em particular, este artigo relacionado discutirá como medir a taxa de quadros em seu aplicativo do Unity Windows Mixed Reality, bem como as etapas a serem executadas no ambiente do Unity para melhorar o desempenho.
+A estrutura a seguir descreve as práticas recomendadas para atingir as taxas de quadros de destino. Se estiver desenvolvendo no Unity, considere ler o [artigo recomendações de desempenho para o Unity](performance-recommendations-for-unity.md) para obter dicas sobre como medir e melhorar a taxa de quadros no ambiente do Unity.
 
 ## <a name="understanding-performance-bottlenecks"></a>Noções básicas sobre afunilamentos de desempenho
 
-Se seu aplicativo tiver uma taxa de quadros com desempenho alto, a primeira etapa será analisar e entender onde o aplicativo é computacionalmente intensivo. Há dois processadores principais responsáveis pelo trabalho de renderizar sua cena: a CPU e a GPU. Cada um desses dois componentes lida com operações e estágios diferentes de seu aplicativo de realidade misturada. Há três locais principais onde os afunilamentos podem ocorrer. 
+Se seu aplicativo tiver uma taxa de quadros com desempenho alto, a primeira etapa será analisar e entender onde o aplicativo é computacionalmente intensivo. Há dois processadores principais responsáveis pelo trabalho de renderizar sua cena: a CPU e a GPU. Cada um deles lida com diferentes aspectos do seu aplicativo de realidade misturada. Há três locais principais onde os afunilamentos podem ocorrer: 
 
-1. **Thread de aplicativo-CPU** -esse thread é responsável pela lógica do aplicativo. Isso inclui o processamento de entrada, animações, física e outra lógica/estado do aplicativo
-2. **Renderizar thread-CPU para GPU** -esse thread é responsável por enviar suas chamadas de desenho para a GPU. Quando seu aplicativo deseja renderizar um objeto, como um cubo ou modelo, esse thread envia uma solicitação para a GPU, que tem uma arquitetura otimizada para renderização, para executar essas operações.
-3. **GPU** - 
-    Esse processador geralmente manipula a pipeline gráfica de seu aplicativo para transformar dados 3D (modelos, texturas, etc.) em pixels e, por fim, produzir uma imagem 2D para enviar à tela do dispositivo.
+1. **Thread de aplicativo-CPU** -esse thread é responsável pela lógica do aplicativo. Isso inclui o processamento de entrada, animações, física e outras lógicas de aplicativo.
+2. **Renderizar thread-CPU para GPU** -esse thread é responsável por enviar suas chamadas de desenho para a GPU. Quando seu aplicativo deseja renderizar um objeto como um cubo ou modelo, esse thread envia uma solicitação para a GPU para executar essas operações.
+3. **GPU** -esse processador geralmente manipula a pipeline gráfica do seu aplicativo para transformar dados 3D (modelos, texturas, etc.) em pixels. Ele finalmente produz uma imagem 2D para enviar à tela do seu dispositivo.
 
 ![Tempo de vida de um quadro](images/lifetime-of-a-frame.png)
 
-Em geral, os aplicativos do HoloLens serão ligados à GPU. No entanto, isso não é verdadeiro em todos os aplicativos e, portanto, é recomendável usar as ferramentas & técnicas abaixo para chegar à verdade para o seu aplicativo em particular.
+Geralmente, os aplicativos do HoloLens serão associados à GPU, mas nem sempre. Use as ferramentas e técnicas abaixo para entender onde seu aplicativo específico está afunilado.
 
 ## <a name="how-to-analyze-your-application"></a>Como analisar seu aplicativo
 
-Há muitas ferramentas que permitem que você como desenvolvedor entenda o perfil de desempenho do seu aplicativo de realidade misturada. Eles permitirão que você faça o destino onde você tem gargalos e como eles se manifestam para depurá-los.
+Há muitas ferramentas que permitem que você entenda o perfil de desempenho do seu aplicativo de realidade misturada. Eles permitirão que você localize onde e por que você tem afunilamentos, para que possa solucioná-los.
 
-Esta é uma lista de ferramentas populares e poderosas para obter informações aprofundadas de criação de perfil para seu aplicativo.
+Abaixo estão algumas ferramentas comuns para obter informações detalhadas de criação de perfil para seu aplicativo:
 - [Analisadores de desempenho de gráficos Intel](https://software.intel.com/gpa)
 - [Depuradores de gráficos do Visual Studio](https://docs.microsoft.com/visualstudio/debugger/graphics/visual-studio-graphics-diagnostics?view=vs-2017)
 - [Criador de perfil do Unity](https://docs.unity3d.com/Manual/Profiler.html)
@@ -52,11 +51,11 @@ Esta é uma lista de ferramentas populares e poderosas para obter informações 
 
 ### <a name="how-to-profile-in-any-environment"></a>Como criar um perfil em qualquer ambiente
 
-Há um teste simples para determinar rapidamente se você provavelmente está ligado à GPU ou à CPU limitada em seu aplicativo. Se você diminuir a resolução da saída de destino de renderização, haverá menos pixels para calcular e, portanto, menos trabalho que a GPU precisa executar para renderizar uma imagem. O dimensionamento de visor (dimensionamento de resolução dinâmica) é a prática de renderizar a imagem para um destino de renderização menor, e o dispositivo de saída pode ser exibido. O dispositivo terá um exemplo de um conjunto menor de pixels para exibir a imagem final.
+Uma maneira de determinar se você está ligado à GPU ou a CPU associada ao seu aplicativo é diminuir a resolução da saída de destino de renderização. Ao reduzir o número de pixels a serem calculados, isso reduzirá sua carga de GPU. O dispositivo será renderizado para uma textura menor e, em seguida, a amostra para exibir a imagem final.
 
 Depois de diminuir a resolução de renderização, se:
 1) **Aumento**da taxa de quadros do aplicativo; provavelmente, você está **vinculado à GPU**
-1) Taxa de quadros do aplicativo inalterada, provavelmente você está **limitado à CPU**
+1) Taxa de quadros do aplicativo **inalterada**, provavelmente você está com a **CPU associada**
 
 >[!NOTE]
 >O Unity fornece a capacidade de modificar facilmente a resolução de destino de renderização de seu aplicativo em tempo de execução por meio da propriedade *[XRSettings. renderViewportScale](https://docs.unity3d.com/ScriptReference/XR.XRSettings-renderViewportScale.html)* . A imagem final apresentada no dispositivo tem uma resolução fixa. A plataforma obterá uma amostra da saída de resolução mais baixa para criar uma imagem de resolução mais alta para renderização em exibições. 
@@ -69,69 +68,69 @@ Depois de diminuir a resolução de renderização, se:
 
 ### <a name="cpu-performance-recommendations"></a>Recomendações de desempenho da CPU
 
-Em geral, a maior parte do trabalho em um aplicativo de realidade misturada na CPU envolve a execução da "simulação" da cena e o processamento de uma lógica de aplicativo extensivamente exclusiva. Portanto, as áreas a seguir geralmente são destinadas à otimização.
+Em geral, a maior parte do trabalho em um aplicativo de realidade misturada na CPU envolve a execução da "simulação" da cena e o processamento da lógica do aplicativo. As seguintes áreas geralmente são destinadas à otimização:
 
-- Animations
-- Simplificar a física
+- Animações
+- Professor
 - Alocações de memória
 - Algoritmos complexos (ou seja, cinemática inversa, localização de caminho)
 
 ### <a name="gpu-performance-recommendations"></a>Recomendações de desempenho de GPU
 
-#### <a name="understanding-bandwidth-vs-fill-rate"></a>Noções básicas sobre largura de banda vs. taxa de preenchimento
-Ao renderizar um quadro na GPU, um aplicativo geralmente é limitado pela largura de banda da memória ou pela taxa de preenchimento.
+#### <a name="understanding-bandwidth-vs-fill-rate"></a>Compreendendo a largura de banda versus a taxa de preenchimento
+Ao renderizar um quadro na GPU, um aplicativo é geralmente ligado pela largura de banda da memória ou pela taxa de preenchimento.
 
 - **Largura de banda de memória** é a taxa de leituras e gravações que a GPU pode executar da memória
-    - Para identificar limitações de largura de banda, reduza a qualidade da textura e verifique se a taxa de quadros melhorou
-    - No Unity, isso pode ser feito alterando **a qualidade da textura** em **Editar** > **configurações** > do projeto configurações de **[qualidade](https://docs.unity3d.com/Manual/class-QualitySettings.html)** .
-- A **taxa de preenchimento** refere-se à taxa de transferência de pixels renderizados que podem ser desenhados por segundo pela GPU.
+    - Para identificar as limitações de largura de banda, reduza a qualidade da textura e verifique se a taxa de quadros foi aprimorada.
+    - No Unity, isso pode ser feito alterando a **qualidade da textura** em **Editar** **configurações do projeto** >  > configurações de **[qualidade](https://docs.unity3d.com/Manual/class-QualitySettings.html)** .
+- A **taxa de preenchimento** refere-se aos pixels que podem ser desenhados por segundo pela GPU.
     - Para identificar as limitações da taxa de preenchimento, diminua a resolução de vídeo e verifique se a taxa de quadros foi aprimorada. 
     - No Unity, isso pode ser feito por meio da propriedade *[XRSettings. renderViewportScale](https://docs.unity3d.com/ScriptReference/XR.XRSettings-renderViewportScale.html)*
 
-A largura de banda de memória geralmente envolve otimizações para
-1) diminuir as resoluções de textura
-2) utilizar menos texturas (ou seja, Normals, especular etc.)
+A largura de banda de memória geralmente envolve otimizações para:
+1) Diminuir as resoluções de textura
+2) Utilizar menos texturas (normais, especulares, etc.)
 
-A taxa de preenchimento se concentra principalmente na redução do número de operações que precisam ser computadas para um pixel renderizado final. Exemplos disso normalmente se enquadram na redução
-1) número de objetos a serem renderizados/processados
-2) número de operações por sombreador
-3) número de estágios de GPU para o resultado final (sombreadores de geometria, efeitos de pós-processamento, etc)
-4) número de pixels a serem renderizados (ou seja, resolução de vídeo)
+A taxa de preenchimento concentra-se na redução do número de operações que precisam ser computadas para um pixel renderizado final. Isso inclui a redução:
+1) Número de objetos a serem renderizados/processados
+2) Número de operações por sombreador
+3) Número de estágios de GPU para o resultado final (sombreadores de geometria, efeitos de pós-processamento, etc.)
+4) Número de pixels a serem renderizados (resolução de vídeo)
 
-#### <a name="reduce-poly-count"></a>Reduzir número de polylines
-Contagens de polígono mais altas resultam em mais operações para a GPU e a redução do número de polígonos em sua cena reduzirá a quantidade de tempo para renderizar essa geometria. Também há outros fatores envolvidos no sombreamento da geometria que ainda pode ser cara, mas a contagem de polígonos é a métrica base para determinar o quão caro será a renderização de uma cena.
+#### <a name="reduce-polygon-count"></a>Reduzir contagem de polígonos
+Contagens de polígono mais altas resultam em mais operações para a GPU; reduzir o número de polígonos em sua cena reduzirá o tempo de renderização. Há outros fatores envolvidos no sombreamento da geometria que pode ser cara, mas a contagem de polígonos é a métrica mais simples para determinar o quão caro será a renderização de uma cena.
 
 #### <a name="limit-overdraw"></a>Limite de extração
 
-O alto sobreempate ocorre quando vários objetos são processados, mas não são enviados para a tela, pois eles ficam ocultos por outro objeto occluding, geralmente mais próximo,. Imagine examinar uma parede que tinha várias salas e geometria por trás dela. Toda a geometria seria processada para renderização, mas apenas a parede opaca realmente precisa ser renderizada, pois ela occludes a exibição de todo o outro conteúdo. Isso resulta em desperdício de operações que não são necessárias para a exibição atual.
+O alto sobreempate ocorre quando vários objetos são renderizados, mas não são mostrados na tela, pois ficam ocultos por um objeto occluding. Imagine examinar uma parede que contém objetos por trás dela. Toda a geometria seria processada para renderização, mas apenas a parede opaca precisa ser renderizada. Isso resulta em operações desnecessárias.
 
 #### <a name="shaders"></a>Sombreadores
 
-Os sombreadores são programas pequenos que são executados na GPU e geralmente determinam duas etapas importantes na renderização:
-1) quais vértices do objeto devem ser desenhados na tela e onde estão no espaço da tela (ou seja, o sombreador de vértice)
-    - O sombreador de vértice geralmente é executado por vértice para cada gameobject
-2) o que colorir esses pixels (ou seja, o sombreador de pixel)
-    - O sombreador de pixel é executado por pixel para a textura que está sendo renderizada para o dispositivo presente
+Os sombreadores são programas pequenos que são executados na GPU e executam duas etapas importantes na renderização:
+1) Determinando quais vértices devem ser desenhados e onde estão no espaço da tela (o sombreador de vértice)
+    - O sombreador de vértice geralmente é executado por vértice para cada malha.
+2) Determinando a cor de cada pixel (o sombreador de pixel)
+    - O sombreador de pixel é executado por pixel renderizado pela geometria à qual a textura está sendo renderizada.
 
-Normalmente, os sombreadores executam muitas transformações e cálculos de iluminação. Embora modelos de iluminação complexos, sombras e outras operações possam gerar resultados fantásticos, eles também têm um preço. Reduzir o número de operações computadas em sombreadores pode reduzir muito o trabalho geral necessário para ser feito por uma GPU por quadro.
+Normalmente, os sombreadores executam muitas transformações e cálculos de iluminação. Embora modelos de iluminação complexos, sombras e outras operações possam gerar resultados fantásticos, eles também têm um preço. Reduzir o número de operações computadas em sombreadores pode reduzir muito o trabalho necessário para a GPU por quadro.
 
 ##### <a name="shader-coding-recommendations"></a>Recomendações de codificação de sombreador
 
-- Use a filtragem biline sempre que possível
+- Use a filtragem biline, sempre que possível
 - Reorganize as expressões para usar o MAD intrínsecos a fim de fazer uma multiplicação e uma adição ao mesmo tempo
 - Precalcule o máximo possível na CPU e passe como constantes para o material
 - **Favorecer operações de movimentação do sombreador de pixel para o sombreador de vértice**
-    - Geralmente, o número de vértices < < # de pixels (ou seja, 720p = = 921.600 pixels, 1080p = = 2.073.600 pixels, etc.)
+    - Em geral, o número de vértices é muito menor do que o número de pixels (720p é de 921.600 pixels, 1080p é 2.073.600 pixels, etc.)
 
 #### <a name="remove-gpu-stages"></a>Remover estágios de GPU
-Os efeitos de pós-processamento podem ser muito caros e geralmente inibim a taxa de preenchimento do seu aplicativo. Isso também inclui técnicas de suavização de alias, como MSAA. No HoloLens, é recomendável evitar essas técnicas inteiramente. Além disso, os estágios adicionais do sombreador, como Geometry, envoltória e sombreadores de computação, devem ser evitados quando possível.
+Os efeitos de pós-processamento podem ser muito caros e aumentar a taxa de preenchimento do seu aplicativo. Isso inclui técnicas de suavização de alias, como MSAA. No HoloLens, é recomendável evitar essas técnicas totalmente, bem como os estágios de sombreador adicionais, como geometria, envoltória e sombreadores de computação.
 
 ## <a name="memory-recommendations"></a>Recomendações de memória
-A alocação de memória excessiva & as operações de desalocação podem ter efeitos adversos em seu aplicativo Holographic, resultando em desempenho inconsistente, quadros congelados e outros comportamentos prejudiciais. É especialmente importante entender as considerações de memória ao desenvolver no Unity, uma vez que o gerenciamento de memória é controlado pelo coletor de lixo.
+As operações de alocação e desalocação de memória excessivas podem resultar em desempenho inconsistente, quadros congelados e outros comportamentos prejudiciais. É especialmente importante entender as considerações de memória ao desenvolver no Unity, pois o gerenciamento de memória é controlado pelo coletor de lixo.
 
 #### <a name="object-pooling"></a>Pooling de objetos
 
-O pooling de objetos é uma técnica popular para reduzir o custo de alocações contínuas & desalocações de objetos. Isso é feito alocando um grande pool de objetos idênticos e reutilizando instâncias disponíveis inativas desse pool em vez de constantemente gerar e destruir objetos ao longo do tempo. Os pools de objetos são ótimos para componentes reutilizados que têm tempo de vida variável durante um aplicativo.
+O pool de objetos é uma técnica popular para reduzir o custo de alocações e desalocações contínuas de objetos. Isso é feito alocando um grande pool de objetos idênticos e reutilizando instâncias disponíveis inativas desse pool em vez de constantemente gerar e destruir objetos ao longo do tempo. Os pools de objetos são ótimos para componentes reutilizados que têm tempo de vida variável durante um aplicativo.
 
 ## <a name="see-also"></a>Consulte também
 - [Recomendações de desempenho para Unity](performance-recommendations-for-unity.md)

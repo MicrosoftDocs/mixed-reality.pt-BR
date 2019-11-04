@@ -6,20 +6,43 @@ ms.author: alreynol
 ms.date: 05/16/2019
 ms.topic: article
 keywords: LBE, MixedRealitySpatialDataPackager. exe, MixedRealitySpatialDataPackager
-ms.openlocfilehash: 7ad1159af9eecd3ca3622dd25cc1f49fb0b1700a
-ms.sourcegitcommit: d565a69a9320e736304372b3f010af1a4d286a62
+ms.openlocfilehash: 52556e4028407086f943c4b765a8bcfad2744eac
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65942102"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438479"
 ---
 # <a name="mixed-reality-spatial-data-packager-documentation"></a>Documentação do pacote de dados espaciais da realidade misturada
 
 >[!NOTE]
 > Essa ferramenta e sua operação são oferecidas no estado em que se encontram. Ele está sujeito a alterações sem aviso e pode não ser compatível com versões futuras do Windows ou do Windows Mixed Reality HMD.
 
-## <a name="download"></a>Download
- Baixe o [MixedRealitySpatialDataPackager aqui](http://download.microsoft.com/download/A/1/2/A12B8A90-B3F7-4ED9-A4BB-D59DDCDAA125/MixedRealitySpatialDataPackager.zip)
+## <a name="download"></a>Baixar
+ Baixe o [MixedRealitySpatialDataPackager aqui](https://download.microsoft.com/download/A/1/2/A12B8A90-B3F7-4ED9-A4BB-D59DDCDAA125/MixedRealitySpatialDataPackager.zip)
+
+## <a name="device-support"></a>Suporte a dispositivos
+
+<table>
+    <colgroup>
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+    </colgroup>
+    <tr>
+        <td><strong>Recurso</strong></td>
+        <td><a href="hololens-hardware-details.md"><strong>HoloLens (1ª geração)</strong></a></td>
+        <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Headsets imersivos</strong></a></td>
+    </tr>
+     <tr>
+        <td>Empacotador de dados espaciais da realidade misturada</td>
+        <td>❌</td>
+        <td>❌</td>
+        <td>✔️</td>
+    </tr>
+</table>
 
 ## <a name="quickstart"></a>TUTORIAIS
 

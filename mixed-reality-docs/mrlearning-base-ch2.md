@@ -6,16 +6,16 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realidade misturada, unity, tutorial, hololens
-ms.openlocfilehash: 45833ba22305acedb45bfdc9752c0b278a693190
-ms.sourcegitcommit: 9636573eabdc78db6875e831a9c894a2ff173a99
+ms.openlocfilehash: 6ce5d96e98fd5489632f942c9b9f4885a7aa1480
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69629180"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437772"
 ---
-# <a name="3-creating-user-interface-and-configure-mixed-reality-toolkit"></a>3. Criando interface do usuário e Configurando o kit de ferramentas de realidade mista 
+# <a name="3-creating-user-interface-and-configure-mixed-reality-toolkit"></a>3. criando a interface do usuário e Configurando o kit de ferramentas de realidade mista 
 
-Na lição anterior, você aprendeu sobre alguns dos recursos que o MRTK (Kit de ferramentas de realidade misturada) tem a oferecer ao iniciar seu primeiro aplicativo para o HoloLens 2. Nesta próxima lição, você aprenderá a criar e organizar botões juntamente com os painéis de texto da interface do usuário e usar a interação padrão (toque) para interagir com cada botão. Você também explorará a adição de ações e efeitos simples, como alterar o tamanho, o som e a cor de objetos. Este módulo apresentará conceitos básicos sobre a modificação de perfis MRTK, começando pela desativação da visualização de malha espacial. 
+Na lição anterior, você aprendeu sobre alguns dos recursos que o MRTK (Kit de ferramentas de realidade misturada) tem a oferecer ao iniciar seu primeiro aplicativo para o HoloLens 2. Nesta próxima lição, você aprenderá a criar e organizar botões juntamente com os painéis de texto da interface do usuário e usar a interação padrão (toque) para interagir com cada botão. Você também explorará a adição de ações e efeitos simples, como alterar o tamanho, o som e a cor de objetos. Este módulo apresentará conceitos básicos sobre a modificação de perfis MRTK, começando pela desativação da visualização de malha de [mapeamento espacial](spatial-mapping.md) . 
 
 ## <a name="objectives"></a>Objetivos
 
@@ -32,7 +32,7 @@ Nesta seção, você aprenderá a personalizar e configurar os perfis de MRTK pa
 
 ![MR213_BuildSettings](images/mrlearning-base-ch2-1step1im.PNG)
 
->Observação: Por padrão, os perfis do MRTK não são editáveis. Esses são modelos de perfil padrão que você pode copiar e personalizar. Há várias camadas de personalização e perfis. Portanto, é a prática padrão copiar e personalizar vários perfis ao configurar uma ou mais configurações.
+>Observação: por padrão, os perfis de MRTK não são editáveis. Esses são modelos de perfil padrão que você pode copiar e personalizar. Há várias camadas de personalização e perfis. Portanto, é a prática padrão copiar e personalizar vários perfis ao configurar uma ou mais configurações.
 >
 >Para descobrir mais sobre perfis de MRTK e sua arquitetura, visite a [documentação do MRTK](<https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/MixedRealityConfigurationGuide.html>).
 
@@ -50,11 +50,11 @@ Nesta seção, você aprenderá a personalizar e configurar os perfis de MRTK pa
 
 ![MR213_BuildSettings](images/mrlearning-base-ch2-1step4im.PNG)
 
-5. Em seguida, você ajustará as configurações para a opção de exibição dizer "oclusão". Isso torna a malha espacial invisível, mas ainda oculta objetos de jogo por trás da malha espacial, também conhecida como oclusão.
+5. Em seguida, você ajustará as configurações para a opção de exibição dizer "oclusão". Isso torna a malha de mapeamento espacial invisível, mas ainda oculta objetos de jogo por trás da malha de mapeamento espacial, também conhecida como oclusão.
 
 ![MR213_BuildSettings](images/mrlearning-base-ch2-1step5im.PNG)
 
->Observação: Embora a malha de mapeamento espacial não esteja visível, ela ainda está presente e você pode interagir com ela. Qualquer holograma por trás da malha de mapeamento espacial, como um holograma por trás de sua parede visível, não será visível devido à configuração oclusão.
+>Observação: embora a malha de mapeamento espacial não esteja visível, ela ainda está presente e você pode interagir com ela. Qualquer holograma por trás da malha de mapeamento espacial, como um holograma por trás de sua parede visível, não será visível devido à configuração oclusão.
 
 Parabéns! Você acabou de aprender como modificar uma configuração do perfil do MRTK. Como é possível ver, para modificar as configurações do MRTK, você precisa criar cópias dos perfis padrão para poder editá-los. Você sempre terá os perfis padrão, que não são editáveis, para voltar a se desejar criar um perfil com novas configurações ou se você puder consultar os perfis padrão. Há várias configurações que você pode ajustar. Para obter uma referência completa para as configurações de perfil do MRTK, consulte a documentação do MRTK aqui: https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/GettingStartedWithTheMRTK.html
 
@@ -69,7 +69,7 @@ Nesta seção, você aprenderá a usar o acompanhamento à mão para pressionar 
 
 3. Arraste o pré-fabricado (representado por uma caixa azul) chamado "PressableButton" na sua hierarquia. 
 
-   > Observação: Se você receber uma mensagem sobre "importando o TMP Essentials", importe-a neste momento. Se o TMP Essentials ainda não tiver feito parte do seu projeto, talvez seja necessário repetir essa etapa depois de importar os conceitos básicos do TMP, caso contrário, o texto do botão pode não aparecer.
+   > Observação: se você receber uma mensagem sobre "importando o TMP Essentials", importe-a neste momento. Se o TMP Essentials ainda não tiver feito parte do seu projeto, talvez seja necessário repetir essa etapa depois de importar os conceitos básicos do TMP, caso contrário, o texto do botão pode não aparecer.
 
 ![MR213_BuildSettings](images/mrlearning-base-ch2-2step3im.PNG)
 
@@ -83,7 +83,7 @@ Nesta seção, você aprenderá a usar o acompanhamento à mão para pressionar 
 
 6. Adicione um cubo à cena. Clique com o botão direito do mouse na área hierarquia, selecione um objeto 3D e clique em cubo. Agora, um cubo deve estar na exibição. Ele aparecerá muito grande. Você pode ajustar as coordenadas (enquanto o cubo ainda está selecionado na área hierarquia) para diminuir o tamanho. Defina os valores de escala para x = 0,1, y = 0,1 e z = 0,1. Certifique-se de posicionar o cubo na sua cena para colocá-lo próximo ao botão pressionável, mas sem sobrepor o botão. Na imagem abaixo, a posição do cubo é x = 0, y = 0,2 e z = 1. 
 
-   > Observação: Em geral, 1 unidade no Unity é aproximadamente equivalente a 1 metro no mundo físico. Há exceções, por exemplo, quando objetos são filhos de objetos dimensionados.
+   > Observação: em geral, 1 unidade no Unity é aproximadamente equivalente a 1 metro no mundo físico. Há exceções, por exemplo, quando objetos são filhos de objetos dimensionados.
    
    ![MR213_BuildSettings](images/mrlearning-base-ch2-1step6ima.PNG)
 
@@ -143,7 +143,7 @@ O componente coleção de objetos de grade permite organizar botões ou qualquer
 
 ![Mrlearning Base Ch2 3Step5im](images/mrlearning-base-ch2-3step5im.PNG)
 
->Observação: Dependendo da orientação dos objetos pai ou objetos filho, provavelmente você precisará ajustar a orientação de configuração de forma diferente em projetos futuros. Os campos Largura da Célula e Altura da Célula também podem precisar ser definidos de forma diferente, dependendo do tamanho dos objetos na sua coleção.
+>Observação: dependendo da orientação dos objetos filho ou do objeto pai, você provavelmente precisará ajustar a configuração de orientação de forma diferente em projetos futuros. Os campos Largura da Célula e Altura da Célula também podem precisar ser definidos de forma diferente, dependendo do tamanho dos objetos na sua coleção.
 
 ### <a name="adding-text-into-your-scene"></a>Adicionando texto na sua cena
 
@@ -160,7 +160,7 @@ Nesta seção, você aprenderá como adicionar e editar o texto às suas experi�
 
 3. No campo de texto do componente TextMeshPro no painel Inspetor, conforme mostrado abaixo. Digite o texto da coleção de botões. O texto aparece na cena, mas ficará oculto atrás dos botões e/ou do tamanho errado.
 
-![Lição 2 Chapter4 etapa 2](images/Lesson2_Chapter4_Step2.JPG)
+![lição 2 Chapter4 etapa 2](images/Lesson2_Chapter4_Step2.JPG)
 ![lição 2 Chapter4 etapa 4](images/Lesson2_Chapter4_Step4.JPG)
 
 4. Para modificar os valores de texto nos objetos de botão, clique na seta ao lado de qualquer botão para expandi-lo e navegue até o objeto SeeItSayItLabel. Navegue até TextMeshPro, em que você pode editar o texto em seus botões, conforme descrito nas etapas acima.
@@ -168,7 +168,7 @@ Nesta seção, você aprenderá como adicionar e editar o texto às suas experi�
 ![Lesson2 Chapter4 Step5](images/Lesson2_Chapter4_Step5.JPG)
 
 ## <a name="congratulations"></a>Parabéns
-Nesta lição, você aprendeu como copiar, personalizar e definir uma configuração de perfil do MRTK (ou seja, visibilidade de malha de percepção espacial.) Você também aprendeu como interagir com um botão para disparar eventos usando mãos rastreadas no HoloLens 2. Por fim, você aprendeu a criar uma interface do usuário simples usando a Malha de Texto Pro do Unity do componente da Coleção de Objetos de Grade do MRTK.
+Nesta lição, você aprendeu a copiar, personalizar e configurar uma configuração de perfil MRTK (ou seja, a visibilidade da malha de conscientização espacial). Você também aprendeu como interagir com um botão para disparar eventos usando mãos controladas no HoloLens 2. Por fim, você aprendeu a criar uma interface do usuário simples usando a Malha de Texto Pro do Unity do componente da Coleção de Objetos de Grade do MRTK.
 
-[Próxima lição: 4. Colocar o conteúdo dinâmico e usar solucionadores](mrlearning-base-ch3.md)
+[Próxima lição: 4. colocando o conteúdo dinâmico e usando os solveres](mrlearning-base-ch3.md)
 

@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
 keywords: problemas, Bug, solução de problemas, correção, ajuda, suporte, HoloLens
-ms.openlocfilehash: 7b7a32a9a358ff75b2675d265445d9ef1acc1b9e
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 855bb0cafb0d3fba0d8d97c93d9415b51bcc2fb3
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63550886"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438277"
 ---
 # <a name="hololens-troubleshooting"></a>Solução de problemas do HoloLens
 
@@ -33,12 +33,12 @@ Se os hologramas estiverem instáveis, com salto ou não estiverem corretos, ten
 * Limpe o visor do dispositivo e certifique-se de que nada esteja obstruindo os sensores.
 * Verifique se há luz suficiente em sua sala.
 * Tente percorrer e olhar seu lugar para que o HoloLens possa examiná-los mais completamente.
-* Tente executar o aplicativo de calibragem. Ele Calibra o seu HoloLens para funcionar melhor para seus olhos. Vá para **configurações** > **utilitários**do**sistema** > . Em calibragem, selecione **abrir**calibragem.
-* Se você ainda tiver problemas depois de executar o aplicativo de calibragem, use o aplicativo de ajuste de sensor para ajustar os sensores do dispositivo. Vá para **configurações** > **utilitários**do**sistema** > . Em ajuste do sensor, selecione **abrir ajuste do sensor**.
+* Tente executar o aplicativo de calibragem. Ele Calibra o seu HoloLens para funcionar melhor para seus olhos. Acesse **configurações** > **sistema** > **utilitários**. Em calibragem, selecione **abrir calibragem**.
+* Se você ainda tiver problemas depois de executar o aplicativo de calibragem, use o aplicativo de ajuste de sensor para ajustar os sensores do dispositivo. Acesse **configurações** > **sistema** > **utilitários**. Em ajuste do sensor, selecione **abrir ajuste do sensor**.
 
 ## <a name="hololens-doesnt-respond-to-my-gestures"></a>O HoloLens não responde aos meus gestos.
 
-Para garantir que o HoloLens possa ver seus gestos, mantenha sua mão no quadro do gesto, que estende alguns pés em ambos os lados. Quando o HoloLens pode ver sua mão, o cursor será alterado de um ponto para um anel. Saiba mais sobre como usar [gestos](gestures.md).
+Para garantir que o HoloLens possa ver seus gestos, mantenha sua mão no quadro do gesto, que estende alguns pés em ambos os lados. Quando o HoloLens pode ver sua mão, o cursor será alterado de um ponto para um anel. Saiba mais sobre como usar [gestos](gaze-and-commit.md#composite-gestures).
 
 Se o seu ambiente for muito escuro, o HoloLens poderá não ver sua mão, portanto, verifique se há muita luz suficiente.
 
@@ -54,7 +54,7 @@ Se o HoloLens não puder mapear ou carregar seu espaço, ele entrará no modo li
 * Verifique se há luz suficiente em seu ambiente para que o HoloLens possa ver e mapear o espaço.
 * Verifique se você está conectado a uma rede Wi-Fi. Se você não estiver conectado ao Wi-Fi, o HoloLens não poderá identificar e carregar um espaço conhecido.
 * Se você precisar criar um novo espaço, conecte-se ao Wi-Fi e reinicie o HoloLens.
-* Para ver se o espaço correto está ativo ou para carregar manualmente um espaço, acesse **configurações** > **espaços**do**sistema** > .
+* Para ver se o espaço correto está ativo ou para carregar manualmente um espaço, vá para **configurações** > **espaço**de > do **sistema** .
 * Se o espaço correto for carregado e você ainda tiver problemas, o espaço poderá estar corrompido. Para corrigir isso, selecione o espaço e, em seguida, selecione remover. Depois que o espaço for removido, o HoloLens começará a mapear seus arredores e criará um novo espaço.
 
 ## <a name="my-hololens-frequently-enters-limited-mode-or-shows-a-tracking-lost-message"></a>Meu HoloLens frequentemente entra no modo limitado ou mostra uma mensagem de "rastreamento perdido".
@@ -63,12 +63,12 @@ Se o dispositivo costuma mostrar uma mensagem "modo limitado" ou "controle perdi
 
 ## <a name="my-hololens-cant-tell-what-space-im-in"></a>Meu HoloLens não pode saber em que espaço estou.
 
-Se o seu HoloLens não puder identificar e carregar automaticamente o espaço em que você está, verifique se você está conectado ao Wi-Fi, se há muita luz na sala e não houve nenhuma alteração importante no ambiente. Você também pode carregar um espaço manualmente ou gerenciar seus espaços acessando **configurações** > **espaços**do**sistema** > .
+Se o seu HoloLens não puder identificar e carregar automaticamente o espaço em que você está, verifique se você está conectado ao Wi-Fi, se há muita luz na sala e não houve nenhuma alteração importante no ambiente. Você também pode carregar um espaço manualmente ou gerenciar seus espaços acessando **configurações** > **espaço**de > do **sistema** .
 
 ## <a name="im-getting-a-low-disk-space-error"></a>Estou recebendo um erro de "pouco espaço em disco".
 
 Você precisará liberar espaço de armazenamento seguindo um ou mais destes procedimentos:
-* Exclua alguns espaços não utilizados. Acesse **configurações** > **espaços**do**sistema** > , selecione um espaço que não seja mais necessário e, em seguida, selecione **remover**.
+* Exclua alguns espaços não utilizados. Vá para **configurações** > **espaço**de > do **sistema** , selecione um espaço que não seja mais necessário e, em seguida, selecione **remover**.
 * Remova alguns dos hologramas que você colocou.
 * Exclua algumas imagens e vídeos no aplicativo fotos.
 * Desinstale alguns aplicativos do seu HoloLens. Na lista todos os aplicativos, toque e mantenha o aplicativo que você deseja desinstalar e, em seguida, selecione **desinstalar**.

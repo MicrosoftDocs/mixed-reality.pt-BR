@@ -1,17 +1,17 @@
 ---
 title: Contas no HoloLens
 description: Como configurar e gerenciar contas de usuário no HoloLens.
-author: ''
+author: tmlyon
 ms.author: toddly
 ms.date: 03/21/2018
 ms.topic: article
 keywords: HoloLens, usuário, conta, AAD, ADFS, conta da Microsoft, MSA, credenciais
-ms.openlocfilehash: 14f43b08b6ccb396bcf39c4082c840c65ac78cf9
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 5579cf53948b8bdbd4b41973dde7b8fc70a5aa31
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63516818"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437089"
 ---
 # <a name="accounts-on-hololens"></a>Contas no HoloLens
 
@@ -40,7 +40,7 @@ Em uma única conta de dispositivo, os usuários podem vincular credenciais de c
 
 ## <a name="using-single-sign-on-within-an-app"></a>Usando o logon único em um aplicativo
 
-Como desenvolvedor de aplicativos, você pode aproveitar a existência de uma identidade conectada no HoloLens com as [APIs do Gerenciador de contas do Windows](https://msdn.microsoft.com/library/windows/apps/xaml/windows.security.authentication.web.core.aspx), assim como faria em outros dispositivos Windows. Alguns exemplos de código para essas APIs estão disponíveis [aqui](http://go.microsoft.com/fwlink/p/?LinkId=620621).
+Como desenvolvedor de aplicativos, você pode aproveitar a existência de uma identidade conectada no HoloLens com as [APIs do Gerenciador de contas do Windows](https://msdn.microsoft.com/library/windows/apps/xaml/windows.security.authentication.web.core.aspx), assim como faria em outros dispositivos Windows. Alguns exemplos de código para essas APIs estão disponíveis [aqui](https://go.microsoft.com/fwlink/p/?LinkId=620621).
 
 Qualquer interrupção de conta que possa ocorrer, como solicitação de consentimento do usuário para informações de conta, autenticação de dois fatores etc., deve ser tratada quando o aplicativo solicita um token de autenticação.
 

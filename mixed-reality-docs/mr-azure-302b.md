@@ -6,19 +6,19 @@ ms.author: jemccull
 ms.date: 07/03/2018
 ms.topic: article
 keywords: Azure, realidade mista, Academia, Unity, tutorial, API, visão personalizada, hololens, imersão, VR
-ms.openlocfilehash: b173648e2e829e94e47306277bd7814a19842cae
-ms.sourcegitcommit: 3b32339c5d5c79eaecd84ed27254a8f4321731f1
+ms.openlocfilehash: 2c8bd31958cca3b0e27fb0e97839d75fcdebe8c5
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70047216"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438513"
 ---
 >[!NOTE]
 >Os tutoriais misturados do Academia de realidade foram projetados com o HoloLens (1º gen) e com o fone de cabeça de imersão de realidade misturada.  Como tal, achamos que é importante deixar esses tutoriais em vigor para os desenvolvedores que ainda estão procurando orientação no desenvolvimento para esses dispositivos.  Esses tutoriais **_não_** serão atualizados com os conjuntos de ferramentas e as interações mais recentes usados para o HoloLens 2.  Eles serão mantidos para continuar a trabalhar nos dispositivos com suporte. Haverá uma nova série de tutoriais que serão publicados no futuro, que demonstrarão como desenvolver para o HoloLens 2.  Esse aviso será atualizado com um link para esses tutoriais quando eles forem postados.
 
 <br>
 
-# <a name="mr-and-azure-302b-custom-vision"></a>302b do Sr e do Azure: Visão personalizada
+# <a name="mr-and-azure-302b-custom-vision"></a>Sr e Azure 302b: visão personalizada
 
 Neste curso, você aprenderá a reconhecer o conteúdo Visual personalizado dentro de uma imagem fornecida, usando os recursos de Visão Personalizada do Azure em um aplicativo de realidade misturada.
 
@@ -42,7 +42,7 @@ Este curso ensinará a você como obter os resultados do Serviço de Visão Pers
 <tr>
 <th>Course</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Headsets imersivos</a></th>
 </tr><tr>
-<td> 302b do Sr e do Azure: Visão personalizada</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
+<td> Sr e Azure 302b: visão personalizada</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
 </tr>
 </table>
 
@@ -82,7 +82,7 @@ Para usar o *serviço de visão personalizada* no Azure, você precisará config
 
 1.  Primeiro, [navegue até a página principal do *serviço de visão personalizada* ](https://azure.microsoft.com/services/cognitive-services/custom-vision-service/).
 
-2.  Clique no botão introdução.
+2.  Clique **no botão introdução** .
 
     ![](images/AzureLabs-Lab302b-01.png)
 
@@ -125,7 +125,7 @@ Uma vez no portal de Visão Personalizada, seu objetivo principal é treinar seu
 
 Para treinar seu projeto de Serviço de Visão Personalizada:
 
-1.  Clique no **+** botão ao lado de **marcas.**
+1.  Clique no botão **+** ao lado de **marcas.**
 
     ![](images/AzureLabs-Lab302b-06.png)
 
@@ -154,13 +154,13 @@ Para treinar seu projeto de Serviço de Visão Personalizada:
 
     ![](images/AzureLabs-Lab302b-11.png)
 
-8.  Repita o mesmo processo para criar uma nova **marca** chamada **teclado** e carregar as fotos apropriadas para ela. Certifique-se de desmarcar a **seleção** do *mouse* depois de criar as novas marcas, para mostrar a janela *Adicionar imagens* .
+8.  Repita o mesmo processo para criar uma nova **marca** chamada **teclado** e carregar as fotos apropriadas para ela. Certifique-se de **desmarcar a seleção** do *mouse* depois de criar as novas marcas, para mostrar a janela *Adicionar imagens* .
 
 9.  Depois de configurar as duas marcas, clique em **treinar**e a primeira iteração de treinamento começará a criar.
 
     ![](images/AzureLabs-Lab302b-12.png)
 
-10. Depois de compilado, você poderá ver dois botões chamados **Make Default** e predição **URL**. Clique em **tornar padrão** primeiro e, em seguida, clique em **URL de previsão**.
+10. Depois de compilado, você poderá ver dois botões chamados **Make Default** e **predição URL**. Clique em **tornar padrão** primeiro e, em seguida, clique em **URL de previsão**.
 
     ![](images/AzureLabs-Lab302b-13.png)
 
@@ -195,7 +195,7 @@ A seguir está uma configuração típica para o desenvolvimento com realidade m
 
     ![](images/AzureLabs-Lab302b-18.png)
 
-3.  Com o Unity Open, vale a pena verificar se o **Editor de script** padrão está definido como **Visual Studio**. Vá para **Editar* > *preferências** e, em seguida, na janela novo, navegue até **Ferramentas externas**. Altere o **Editor de script externo** para o **Visual Studio 2017**. Feche a janela **preferências** .
+3.  Com o Unity Open, vale a pena verificar se o **Editor de script** padrão está definido como **Visual Studio**. Vá para  **Editar* *preferências* de > * e, em seguida, na nova janela, navegue até **Ferramentas externas**. Altere o **Editor de script externo** para o **Visual Studio 2017**. Feche a janela **preferências** .
 
     ![](images/AzureLabs-Lab302b-19.png)
 
@@ -205,7 +205,7 @@ A seguir está uma configuração típica para o desenvolvimento com realidade m
 
 5.  Ainda no **arquivo > configurações de compilação** e certifique-se de que:
 
-    1.  O **dispositivo de destino** está definido como **Hololens**
+    1.  O **dispositivo de destino** está definido como **HoloLens**
 
         > Para os headsets de imersão, defina **dispositivo de destino** para *qualquer dispositivo*.
         
@@ -257,11 +257,11 @@ A seguir está uma configuração típica para o desenvolvimento com realidade m
 
         ![](images/AzureLabs-Lab302b-26.png)
 
-    3.  Mais adiante no painel, em **configurações de XR** (encontradas abaixo de **configurações de publicação**), **suporte à realidade virtual**em escala, verifique se o SDK do **Windows Mixed Reality** foi adicionado.
+    3.  Mais adiante no painel, em **configurações de XR** (encontradas abaixo de **configurações de publicação**), **suporte à realidade virtual**em escala, verifique se o **SDK do Windows Mixed Reality** foi adicionado.
 
     ![](images/AzureLabs-Lab302b-27.png)
 
-8.  De volta às *configurações de compilação* , projetos do *Unity C\#*  não ficam mais esmaecidos; marque a caixa de seleção ao lado disso.
+8.  De volta *às configurações de Build* , o *Unity C\# projetos* não está mais esmaecido; Marque a caixa de seleção ao lado deste.
 
 9.  Feche a janela configurações de compilação.
 
@@ -276,7 +276,7 @@ A seguir está uma configuração típica para o desenvolvimento com realidade m
 Este curso requer o uso da biblioteca **Newtonsoft** , que você pode adicionar como uma DLL aos seus ativos. O pacote que contém [essa biblioteca pode ser baixado deste link](https://github.com/Microsoft/HolographicAcademy/raw/Azure-MixedReality-Labs/Azure%20Mixed%20Reality%20Labs/MR%20and%20Azure%20302b%20-%20Custom%20vision/NewtonsoftDLL.unitypackage).
 Para importar a biblioteca Newtonsoft para seu projeto, use o pacote do Unity que acompanha este curso.
 
-1.  Adicione o *.unitypackage* ao Unity usando a opção de menu **pacote* *personalizado*do*pacote* > *de importação*de *ativos* > * .
+1.  Adicione o *. unitypackage* ao Unity usando a opção de menu **ativos* > *importar* *pacote* > *pacote* *personalizado** .
 
 2.  Na caixa **Importar pacote de Unity** que é exibida, verifique se tudo em (e incluindo) **plug-ins** está selecionado.
 
@@ -288,7 +288,7 @@ Para importar a biblioteca Newtonsoft para seu projeto, use o pacote do Unity qu
 
     ![](images/AzureLabs-Lab302b-29.png)
 
-5.  Com o *plug-in Newtonsoft. JSON* selecionado, verifique se **qualquer plataforma** está desmarcada e, em seguida, verifique se **WSAPlayer** também está desmarcado e clique em **aplicar**. Isso é apenas para confirmar que os arquivos estão configurados corretamente.
+5.  Com o *plug-in Newtonsoft. JSON* selecionado, verifique se **qualquer plataforma** está **desmarcada**e, em seguida, verifique se **WSAPlayer** também está **desmarcado**e clique em **aplicar**. Isso é apenas para confirmar que os arquivos estão configurados corretamente.
 
     ![](images/AzureLabs-Lab302b-30.png)
 
@@ -296,7 +296,7 @@ Para importar a biblioteca Newtonsoft para seu projeto, use o pacote do Unity qu
     > Marcar esses plug-ins os configura para ser usado apenas no editor do Unity. Há um conjunto diferente deles na pasta WSA que será usada depois que o projeto for exportado do Unity.
 
 6.  Em seguida, você precisa abrir a pasta **WSA** , dentro da pasta **Newtonsoft** . Você verá uma cópia do mesmo arquivo que acabou de configurar. Selecione o arquivo e, no Inspetor, verifique se
-    -   **Qualquer plataforma** está desmarcada 
+    -   **Qualquer plataforma** está **desmarcada** 
     -   **somente** **WSAPlayer** está **marcado**
     -   Não **processar** está **marcado**
 
@@ -348,7 +348,7 @@ Para criar esta classe:
 
 2.  Clique duas vezes na pasta recém-criada para abri-la.
 
-3.  Clique com o botão direito do mouse dentro da pasta e clique em **criar** > **script C\#** . Nomeie o script *CustomVisionAnalyser*.
+3.  Clique com o botão direito do mouse dentro da pasta e clique em **criar** > **C\# script**. Nomeie o script *CustomVisionAnalyser*.
 
 4.  Clique duas vezes no novo script *CustomVisionAnalyser* para abri-lo com o **Visual Studio**.
 
@@ -473,7 +473,7 @@ Esse script contém vários objetos usados por outras classes para serializar e 
 
 Para criar esta classe:
 
-1.  Clique com o botão direito do mouse na pasta **scripts** e clique em **criar** > **script C\#** . Chame o script *CustomVisionObjects*.
+1.  Clique com o botão direito do mouse na pasta **scripts** e clique em **criar** > **C\# script**. Chame o script *CustomVisionObjects*.
 
 2.  Clique duas vezes no novo script **CustomVisionObjects** para abri-lo com o **Visual Studio**.
 
@@ -610,7 +610,7 @@ Essa classe reconhecerá a entrada de voz do usuário.
 
 Para criar esta classe:
 
-1.  Clique com o botão direito do mouse na pasta **scripts** e clique em **criar** > **script C\#** . Chame o script *VoiceRecognizer*.
+1.  Clique com o botão direito do mouse na pasta **scripts** e clique em **criar** > **C\# script**. Chame o script *VoiceRecognizer*.
 
 2.  Clique duas vezes no novo script **VoiceRecognizer** para abri-lo com o **Visual Studio**.
 
@@ -718,7 +718,7 @@ Essa classe encadeará uma série de chamadas Web para treinar o *serviço de vi
 
 Para criar esta classe:
 
-1.  Clique com o botão direito do mouse na pasta **scripts** e clique em **criar** > **script C\#** . Chame o script *CustomVisionTrainer*.
+1.  Clique com o botão direito do mouse na pasta **scripts** e clique em **criar** > **C\# script**. Chame o script *CustomVisionTrainer*.
 
 2.  Clique duas vezes no novo script *CustomVisionTrainer* para abri-lo com o **Visual Studio**.
 
@@ -905,7 +905,7 @@ Para criar esta classe:
         }
     ```
 
-10. Adicione o método **TrainCustomVisionProject ()** . Depois que a imagem for enviada e marcada, esse método será chamado. Ele criará uma nova iteração que será treinada com todas as imagens anteriores enviadas ao serviço mais a imagem que acabou de ser carregada. Depois que o treinamento for concluído, esse método chamará um método para definir a iteração recém-criada como **padrão**, para que o ponto de extremidade que você está usando para análise seja a iteração mais recente treinada.
+10. Adicione o método **TrainCustomVisionProject ()** . Depois que a imagem for enviada e marcada, esse método será chamado. Ele criará uma nova iteração que será treinada com todas as imagens anteriores enviadas ao serviço mais a imagem que acabou de ser carregada. Depois que o treinamento for concluído, esse método chamará um método para definir a **iteração** recém-criada como **padrão**, para que o ponto de extremidade que você está usando para análise seja a iteração mais recente treinada.
 
     ```csharp
         /// <summary>
@@ -1079,7 +1079,7 @@ Essa classe irá:
 
 Para criar esta classe:
 
-1.  Clique com o botão direito do mouse na pasta **scripts** e clique em **criar** > **script C\#** . Nomeie o script *SceneOrganiser*.
+1.  Clique com o botão direito do mouse na pasta **scripts** e clique em **criar** > **C\# script**. Nomeie o script *SceneOrganiser*.
 
 2.  Clique duas vezes no novo script *SceneOrganiser* para abri-lo com o **Visual Studio**.
 
@@ -1172,7 +1172,7 @@ Para criar esta classe:
         }
     ```
 
-7.  Agora, adicione o método **CreateCameraCursor ()** que cria e posiciona o cursor de câmera principal e o método CreateLabel **()** , que cria o objeto de **rótulo de análise** .
+7.  Agora, adicione o método **CreateCameraCursor ()** que cria e posiciona o cursor de câmera principal e o método **CreateLabel ()** , que cria o objeto de **rótulo de análise** .
 
     ```csharp
         /// <summary>
@@ -1349,7 +1349,7 @@ Para criar esta classe:
 
 1.  Vá para a pasta **scripts** que você criou anteriormente.
 
-2.  Clique com o botão direito do mouse dentro da pasta e clique em **criar > script C\#** . Nomeie o script *ImageCapture*.
+2.  Clique com o botão direito do mouse dentro da pasta e clique em **criar > C\# script**. Nomeie o script *ImageCapture*.
 
 3.  Clique duas vezes no novo script **ImageCapture** para abri-lo com o **Visual Studio**.
 
@@ -1447,7 +1447,7 @@ Para criar esta classe:
                 }
             } 
 
-            // Subscribing to the Hololens API gesture recognizer to track user gestures
+            // Subscribing to the HoloLens API gesture recognizer to track user gestures
             recognizer = new GestureRecognizer();
             recognizer.SetRecognizableGestures(GestureSettings.Tap);
             recognizer.Tapped += TapHandler;
@@ -1641,7 +1641,7 @@ Antes de fazer isso, verifique se:
 
 - Você inseriu sua **chave de treinamento** na variável **TrainingKey** da classe *CustomVisionTrainer* .
 
-- Você inseriu a **ID do projeto** na variável ProjectId da classe *CustomVisionTrainer* .
+- Você inseriu a **ID do projeto** na variável **ProjectId** da classe *CustomVisionTrainer* .
 
 ## <a name="chapter-13---build-and-sideload-your-application"></a>Capítulo 13-criar e sideloadr seu aplicativo
 
@@ -1649,7 +1649,7 @@ Para iniciar o processo de *compilação* :
 
 1.  Vá para **arquivo > configurações de Build**.
 
-2.  **Projetos em tique\# Unity C**.
+2.  Os **projetos\# Unity C**de tiques.
 
 3.  Clique em **Compilar**. O Unity iniciará uma janela **Explorador de arquivos** , onde você precisará criar e, em seguida, selecionar uma pasta na qual o aplicativo será compilado. Crie essa pasta agora e nomeie-a como **aplicativo**. Em seguida, com a pasta de **aplicativo** selecionada, clique em **Selecionar pasta**.
 
@@ -1663,11 +1663,11 @@ Para implantar no HoloLens:
 
     1.  Enquanto estiver desgastando seu HoloLens, abra as **configurações**.
 
-    2.  Vá para **rede &**  > **Opções avançadas** **de Internet Wi-Fi** > 
+    2.  Acessar opções de **rede & Internet** > **Wi-Fi** > **avançado**
 
     3.  Anote o endereço **IPv4** .
 
-    4.  Em seguida, navegue de volta para **configurações**e, em seguida, para **Atualizar & segurança** > **para desenvolvedores**
+    4.  Em seguida, navegue de volta para **configurações**e, em seguida, **atualize &**  > **de segurança para desenvolvedores**
 
     5.  Defina o **modo de desenvolvedor em**.
 
@@ -1684,7 +1684,7 @@ Para implantar no HoloLens:
 6. Seu aplicativo agora deve aparecer na lista de aplicativos instalados em seu HoloLens, pronto para ser iniciado!
 
 > [!NOTE]
-> Para implantar em headsets de imersão, defina a **plataforma da solução** como *computador local*e defina a **configuração** a ser depurada, com *x86* como a **plataforma**. Em seguida, implante no computador local, usando o item de menu **Compilar** , selecionando *implantar solução*. 
+> Para implantar em headsets de imersão, defina a **plataforma da solução** como *computador local*e defina a **configuração** a ser *depurada*, com *x86* como a **plataforma**. Em seguida, implante no computador local, usando o item de menu **Compilar** , selecionando *implantar solução*. 
 
 ## <a name="to-use-the-application"></a>Para usar o aplicativo:
 

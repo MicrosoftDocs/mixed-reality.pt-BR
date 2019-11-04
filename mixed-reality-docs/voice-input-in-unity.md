@@ -6,14 +6,17 @@ ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Entrada de voz, KeywordRecognizer, GrammarRecognizer, microfone, ditado, voz
-ms.openlocfilehash: ef8114a1c877fe9b858122e0c64628d4b71a69cd
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: d1cd2a2b954a195bc3f2688d915965f89aa30f98
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63548686"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438192"
 ---
 # <a name="voice-input-in-unity"></a>Entrada de voz no Unity
+
+>[!NOTE]
+>Em vez das informações abaixo, considere usar o plug-in do Unity para o SDK de serviços de fala cognitiva que tem resultados de precisão de fala muito melhores e fornece acesso fácil a decodificação de fala a texto e recursos de fala avançados, como diálogo, baseado em intenção interação, tradução, síntese de conversão de texto em fala e reconhecimento de fala em idioma natural. Encontre o exemplo e documentação aqui: https://docs.microsoft.com//azure/cognitive-services/speech-service/quickstart-csharp-unity   
 
 O Unity expõe três maneiras de adicionar [entrada de voz](voice-input.md) ao aplicativo Unity.
 
@@ -38,7 +41,7 @@ Para permitir que seu aplicativo Ouça frases específicas faladas pelo usuário
 ### <a name="keywordrecognizer"></a>KeywordRecognizer
 
 **Namespace:** *UnityEngine. Windows. Speech*<br>
-**Digita** *KeywordRecognizer*, *PhraseRecognizedEventArgs*, *SpeechError*, *SpeechSystemStatus*
+**Tipos:** *KeywordRecognizer*, *PhraseRecognizedEventArgs*, *SpeechError*, *SpeechSystemStatus*
 
 Precisaremos de algumas instruções de uso para salvar alguns pressionamentos de tecla:
 
@@ -102,9 +105,9 @@ keywordRecognizer.Start();
 **Namespace:** *UnityEngine. Windows. Speech*<br>
 **Tipos**: *GrammarRecognizer*, *PhraseRecognizedEventArgs*, *SpeechError*, *SpeechSystemStatus*
 
-O GrammarRecognizer será usado se você estiver especificando a gramática de reconhecimento usando o SRGS. Isso pode ser útil se seu aplicativo tiver mais do que apenas algumas palavras-chave, se você quiser reconhecer frases mais complexas ou se quiser ativar e desativar facilmente conjuntos de comandos. Consulte: [Crie gramáticas usando o XML SRGS](https://msdn.microsoft.com/library/hh378349(v=office.14).aspx) para informações de formato de arquivo.
+O GrammarRecognizer será usado se você estiver especificando a gramática de reconhecimento usando o SRGS. Isso pode ser útil se seu aplicativo tiver mais do que apenas algumas palavras-chave, se você quiser reconhecer frases mais complexas ou se quiser ativar e desativar facilmente conjuntos de comandos. Consulte: [criar gramáticas usando o XML SRGS](https://msdn.microsoft.com/library/hh378349(v=office.14).aspx) para informações de formato de arquivo.
 
-Quando você tiver sua gramática SRGS e ele estiver em seu projeto em uma [pasta StreamingAssets](http://docs.unity3d.com/Manual/StreamingAssets.html):
+Quando você tiver sua gramática SRGS e ele estiver em seu projeto em uma [pasta StreamingAssets](https://docs.unity3d.com/Manual/StreamingAssets.html):
 
 ```
 <PROJECT_ROOT>/Assets/StreamingAssets/SRGS/myGrammar.xml
@@ -144,7 +147,7 @@ grammarRecognizer.Start();
 **Namespace:** *UnityEngine. Windows. Speech*<br>
 **Tipos**: *DictationRecognizer*, *SpeechError*, *SpeechSystemStatus*
 
-Use o DictationRecognizer para converter a fala do usuário em texto. O DictationRecognizer expõe a funcionalidade [de ditado](voice-input.md#dictation) e dá suporte ao registro e à escuta de eventos de hipótese e de expressão concluídas, para que você possa fornecer comentários ao seu usuário enquanto eles falam e depois. Métodos Start () e Stop () respectivamente habilitam e desabilitam o reconhecimento de ditado. Depois de feito com o reconhecedor, ele deve ser descartado usando o método Dispose () para liberar os recursos que ele usa. Ele liberará esses recursos automaticamente durante a coleta de lixo com um custo de desempenho adicional se eles não forem lançados antes disso.
+Use o DictationRecognizer para converter a fala do usuário em texto. O DictationRecognizer expõe a funcionalidade de [ditado](voice-input.md#dictation) e dá suporte ao registro e à escuta de eventos de hipótese e de expressão concluídas, para que você possa fornecer comentários ao seu usuário enquanto eles falam e depois. Métodos Start () e Stop () respectivamente habilitam e desabilitam o reconhecimento de ditado. Depois de feito com o reconhecedor, ele deve ser descartado usando o método Dispose () para liberar os recursos que ele usa. Ele liberará esses recursos automaticamente durante a coleta de lixo com um custo de desempenho adicional se eles não forem lançados antes disso.
 
 Há apenas algumas etapas necessárias para começar a usar o ditado:
 1. Criar um novo DictationRecognizer

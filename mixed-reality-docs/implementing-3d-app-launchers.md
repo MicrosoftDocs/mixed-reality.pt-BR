@@ -6,12 +6,12 @@ ms.author: thmignon
 ms.date: 07/12/2018
 ms.topic: article
 keywords: 3D, logotipo, ícone, modelagem, iniciador, iniciador 3D, bloco, cubo ao vivo, link profundo, secondarytile, bloco secundário, UWP
-ms.openlocfilehash: 4a8d4a696ff6ef19d7332b20580f1f5ee67bf045
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: be47b590e4fd1a847ac47d9cfbcbe824c544dd59
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63516733"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438019"
 ---
 # <a name="implement-3d-app-launchers-uwp-apps"></a>Implementar iniciadores de aplicativos 3D (aplicativos UWP)
 
@@ -42,12 +42,12 @@ Primeiro, localize o manifesto do pacote do aplicativo em seu projeto atual. Por
 Na parte superior do manifesto, adicione o esquema uap5 e inclua-o como um namespace ignorável:
 
 ```xml
-<Package xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" 
-         xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" 
-         xmlns:uap2="http://schemas.microsoft.com/appx/manifest/uap/windows10/2" 
-         xmlns:uap5="http://schemas.microsoft.com/appx/manifest/uap/windows10/5"
+<Package xmlns:mp="https://schemas.microsoft.com/appx/2014/phone/manifest" 
+         xmlns:uap="https://schemas.microsoft.com/appx/manifest/uap/windows10" 
+         xmlns:uap2="https://schemas.microsoft.com/appx/manifest/uap/windows10/2" 
+         xmlns:uap5="https://schemas.microsoft.com/appx/manifest/uap/windows10/5"
          IgnorableNamespaces="uap uap2 uap5 mp"
-         xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10">
+         xmlns="https://schemas.microsoft.com/appx/manifest/foundation/windows10">
 ```
 
 Em seguida, especifique o "MixedRealityModel" no bloco padrão para seu aplicativo:
@@ -75,7 +75,7 @@ Em seguida, especifique o "MixedRealityModel" no bloco padrão para seu aplicati
 Os elementos MixedRealityModel aceitam um caminho de arquivo que aponta para um ativo 3D armazenado em seu pacote de aplicativo. Atualmente, apenas modelos 3D entregues usando o formato de arquivo. glb e criados em relação às [instruções de criação de ativos 3D da realidade do Windows Mixed](creating-3d-models-for-use-in-the-windows-mixed-reality-home.md) têm suporte. Os ativos devem ser armazenados no pacote do aplicativo e a animação não tem suporte no momento. Se o parâmetro "Path" for deixado em branco, o Windows mostrará o Tablet 2D em vez do iniciador 3D. **Observação:** o ativo. glb deve ser marcado como "conteúdo" em suas configurações de compilação antes de compilar e executar seu aplicativo.
 
 
-![Selecione o. glb no Gerenciador de soluções e use a seção Propriedades para marcá-lo como "conteúdo" nas configurações de compilação](images/buildsetting-content-300px.png)<br>
+![selecione o. glb no Gerenciador de soluções e use a seção Propriedades para marcá-lo como "conteúdo" nas configurações de compilação](images/buildsetting-content-300px.png)<br>
 *Selecione o. glb no Gerenciador de soluções e use a seção Propriedades para marcá-lo como "conteúdo" nas configurações de compilação*
 
 ### <a name="bounding-box"></a>Caixa delimitadora
@@ -85,13 +85,13 @@ Uma caixa delimitadora pode ser usada para adicionar opcionalmente uma região d
 O suporte para o atributo da caixa delimitadora será fornecido com a atualização RS4 do Windows como uma propriedade no elemento MixedRealityModel. Para definir uma caixa delimitadora primeiro na parte superior do manifesto do aplicativo, adicione o esquema uap6 e inclua-o como namespaces ignoráveis:
 
 ```xml
-<Package xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" 
-         xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" 
-         xmlns:uap2="http://schemas.microsoft.com/appx/manifest/uap/windows10/2" 
-         xmlns:uap5="http://schemas.microsoft.com/appx/manifest/uap/windows10/5"
-         xmlns:uap6="http://schemas.microsoft.com/appx/manifest/uap/windows10/6"
+<Package xmlns:mp="https://schemas.microsoft.com/appx/2014/phone/manifest" 
+         xmlns:uap="https://schemas.microsoft.com/appx/manifest/uap/windows10" 
+         xmlns:uap2="https://schemas.microsoft.com/appx/manifest/uap/windows10/2" 
+         xmlns:uap5="https://schemas.microsoft.com/appx/manifest/uap/windows10/5"
+         xmlns:uap6="https://schemas.microsoft.com/appx/manifest/uap/windows10/6"
          IgnorableNamespaces="uap uap2 uap5 uap6 mp"
-         xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10">
+         xmlns="https://schemas.microsoft.com/appx/manifest/foundation/windows10">
 ```
 Em seguida, no MixedRealityModel, defina a propriedade SpatialBoundingBox para definir a caixa delimitadora: 
 
@@ -116,7 +116,7 @@ Ao trabalhar com o Unity, o projeto deve ser compilado e aberto no Visual Studio
 > Esse recurso foi adicionado como parte da RS3 (atualização para criadores de outono) de 2017 para fones de ouvido (VR) e como parte da atualização de abril de 2018 (RS4) para o HoloLens. Verifique se seu aplicativo está direcionando para uma versão do SDK do Windows maior ou igual a 10.0.16299 em headsets de imersão (VR) e 10.0.17125 no HoloLens. Você pode encontrar as SDK do Windows mais recentes [aqui](https://developer.microsoft.com/windows/downloads/windows-10-sdk).
 
 >[!IMPORTANT]
->os secondaryTiles (3D Deep links) funcionam apenas com aplicativos UWP 2D. No entanto, você pode criar um iniciador de [aplicativo 3D](implementing-3d-app-launchers.md) para iniciar um aplicativo exclusivo na página inicial do Windows Mixed Reality.
+>os secondaryTiles (3D Deep links) funcionam apenas com aplicativos UWP 2D. No entanto, você pode criar um [iniciador de aplicativo 3D](implementing-3d-app-launchers.md) para iniciar um aplicativo exclusivo na página inicial do Windows Mixed Reality.
 
 Seus aplicativos 2D podem ser aprimorados para a realidade mista do Windows, adicionando a capacidade de posicionar modelos 3D de seu aplicativo na [casa do Windows Mixed Realm](navigating-the-windows-mixed-reality-home.md) como links profundos para conteúdo em seu aplicativo 2D, assim como [blocos 2D secundários](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-secondary-tiles) na inicialização do Windows AdicionarMenu. Por exemplo, você pode criar fotografias de 360 ° que se vinculam diretamente a um aplicativo de visualizador de fotos 360 ° ou permitem que os usuários coloquem o conteúdo 3D de uma coleção de ativos que abre uma página de detalhes sobre o autor. Essas são apenas duas maneiras de expandir a funcionalidade do seu aplicativo 2D com conteúdo 3D.
 
@@ -165,8 +165,8 @@ Uma caixa delimitadora pode ser usada para adicionar uma região de buffer adici
 > Esse recurso terá suporte a partir da atualização RS4 do Windows. Verifique se seu aplicativo está direcionando para uma versão do SDK do Windows maior ou igual a 10.0.17125 se você planeja usar esse recurso
 
 Você pode definir o comportamento de ativação para um secondaryTile 3D para controlar como ele reage quando um usuário o seleciona. Isso pode ser usado para posicionar objetos 3D no início da realidade misturada que são informativos ou decorativos Purleys. Há suporte para os seguintes tipos de comportamento de ativação:
-1. Padrão: Quando um usuário seleciona o secondaryTile 3D, o aplicativo é ativado
-2. Nenhum: Quando os usuários selecionam o 3D secondaryTile, nada acontece e o aplicativo não é ativado.
+1. Padrão: quando um usuário seleciona o secondaryTile 3D, o aplicativo é ativado
+2. Nenhum: quando os usuários selecionam o 3D secondaryTile, nada acontece e o aplicativo não é ativado.
 
 ### <a name="obtaining-and-updating-an-existing-secondarytile"></a>Obtendo e atualizando um "secondaryTile" existente
 
@@ -196,7 +196,7 @@ os links de 3D Deep (secondaryTiles) só podem ser criados enquanto a exibição
 ## <a name="tile-notifications"></a>Notificações de bloco
 
 No momento, as notificações de bloco não dão suporte ao envio de uma atualização com um ativo 3D. Isso significa que os desenvolvedores não poderão fazer o seguinte
-* Notificações por Push
+* Notificações por push
 * Sondagem periódica
 * Notificações agendadas
 

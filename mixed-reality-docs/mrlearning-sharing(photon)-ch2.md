@@ -6,17 +6,17 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realidade misturada, unity, tutorial, hololens
-ms.openlocfilehash: 9d42811157db108baad51eab3f367a06a11b7f7b
-ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
+ms.openlocfilehash: 5d8194e9a51bdb0ce32f345b4adfbfaf408c5396
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68701974"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438385"
 ---
-# <a name="2-getting-unity-ready-for-development"></a>2. Obtendo o Unity pronto para desenvolvimento 
+# <a name="2-getting-unity-ready-for-development"></a>2. obtendo o Unity pronto para desenvolvimento 
 
 
-Neste tutorial, aprendemos como preparar e configurar o Unity para o desenvolvimento de aplicativos, incluindo a importação do kit de ferramentas de realidade misturada, a definição de configurações de compilação e a preparação de nossa cena.
+Neste tutorial, você aprenderá a preparar e configurar o Unity para o desenvolvimento de aplicativos, incluindo a importação do kit de ferramentas de realidade mista, a definição de configurações de compilação e a preparação de sua cena.
 
 ## <a name="objectives"></a>Objetivos
 
@@ -34,13 +34,13 @@ Neste tutorial, aprendemos como preparar e configurar o Unity para o desenvolvim
 
 ![Module3Chapter2step2im](images/module3chapter2step2im.PNG)
 
-3. Selecione o pacote do Unity que você acabou de baixar do link fornecido na etapa 1. Depois que a janela pop-up importar aparecer no Unity, clique no botão importar para começar a importação. A importação do MRTK pode levar vários minutos.
+3. Selecione o pacote do Unity que você acabou de baixar do link fornecido na etapa 1. Depois que a janela pop-up importar aparecer no Unity, clique no botão importar para começar a importar o MRTK. Isso pode levar vários minutos.
 
 ![Module3Chapter2step3im](images/module3chapter2step3im.PNG)
 
-> Observação: O pacote baixado está na pasta local em que você salvou o arquivo. A imagem acima não retrata onde você encontrará o pacote.
+> Observação: o pacote baixado está em sua pasta local, em que você salvou o arquivo. A imagem acima não retrata onde você encontrará o pacote.
 
-4. Crie uma nova cena. Isso pode ser feito clicando em arquivo e selecionando nova cena "). Salve a cena como HLSharedProjectMain.
+4. Crie uma nova cena. Isso pode ser feito clicando em arquivo e selecionando nova cena ". Salve-o como HLSharedProjectMain.
 
 > Observação: você pode receber um pop-up parecido com a imagem abaixo. Por enquanto, clique em não.
 >
@@ -58,7 +58,7 @@ Neste tutorial, aprendemos como preparar e configurar o Unity para o desenvolvim
 
 ![Module3Chapter2step6imc](images/module3chapter2step6imc.PNG)
 
-7. Role para baixo e desmarque Habilitar o sistema de diagnóstico se desejar ocultar a janela de diagnóstico. É recomendável manter a janela de diagnóstico habilitada durante o desenvolvimento do aplicativo para monitorar o desempenho e desabilitá-lo durante as demonstrações de produção ou de aplicativo. 
+7. Role para baixo e desmarque Habilitar o sistema de diagnóstico se desejar ocultar a janela de diagnóstico. É recomendável manter a janela de diagnóstico habilitada durante o desenvolvimento do aplicativo para monitorar o desempenho e, em seguida, desabilitá-lo durante as demonstrações de produção ou de aplicativo. 
 
 ![Module3Chapter2step7ima](images/module3chapter2step7ima.PNG)
 
@@ -66,7 +66,7 @@ Neste tutorial, aprendemos como preparar e configurar o Unity para o desenvolvim
 
 ![Module3Chapter2step8im](images/module3chapter2step8im.PNG)
 
-9. Após a conclusão, clique na caixa que diz adicionar cenas abertas. Agora, acesse o painel Inspetor e verifique se a caixa de seleção à direita da realidade virtual com suporte (conforme mostrado na imagem abaixo) está marcada. Verifique também se a caixa de seleção ao lado de cenas/HLSharedProjectMain também está marcada, conforme mostrado na imagem abaixo.
+9. Após a conclusão, clique na caixa chamada Add Open bastidores. Agora, acesse o painel Inspetor e verifique se a caixa de seleção à direita da realidade virtual com suporte (conforme mostrado na imagem abaixo) está marcada. Verifique também se a caixa de seleção ao lado de cenas/HLSharedProjectMain também está marcada, conforme mostrado na imagem abaixo.
 
 ![Module3Chapter2step9im](images/module3chapter2step9im.PNG)
 
@@ -78,11 +78,11 @@ Neste tutorial, aprendemos como preparar e configurar o Unity para o desenvolvim
 
 ![Module3Chapter2step12im](images/module3chapter2step11im.PNG)
 
-12. No painel projeto, vá para a pasta pré-fabricados. Nas próximas etapas, você implementará alguns pré-fabricados na cena. Na pasta pré-fabricados, clique e arraste a janela pré-fabricado, depurar para a hierarquia. Quando terminar, salve o projeto clicando em arquivo e, em seguida, salve ou pressione Control + S.
+12. No painel projeto, vá para a pasta pré-fabricados. Nas etapas a seguir, você implementará algumas pré-fabricados na cena. Na pasta pré-fabricados, clique e arraste a janela pré-fabricado, depurar para a hierarquia. Quando terminar, salve o projeto clicando em arquivo e, em seguida, salve ou pressione Control + S.
 
 ![Module3Chapter2step12im](images/module3chapter2step12im.PNG)
 
-   > Observação: Você pode observar que um pop-up aparece ao clicar no pré-fabricado, solicitando-lhe informações sobre o TMP Essentials. Clique em importar o TMP Essentials conforme necessário. Se essa janela pop-up for exibida, talvez seja necessário excluir o pré-fabricado de sua hierarquia e arrastá-lo novamente para a hierarquia para evitar possíveis erros relacionados a texto.
+   > Observação: você pode notar que um pop-up aparece ao clicar no pré-fabricado, solicitando-lhe informações sobre o TMP Essentials. Clique em importar o TMP Essentials conforme necessário. Se essa janela pop-up for exibida, talvez seja necessário excluir o pré-fabricado de sua hierarquia e arrastá-lo novamente para a hierarquia para evitar possíveis erros relacionados a texto.
    >
 >![Module3Chapter2note2im](images/module3chapter2note2im.PNG)
 
@@ -91,5 +91,5 @@ Neste tutorial, aprendemos como preparar e configurar o Unity para o desenvolvim
 
 Seu projeto de Unity agora está pronto para Photon. Nos próximos tutoriais, vamos criar essa cena e nosso projeto de Unity em direção a uma experiência compartilhada completa.
 
-[Próximo tutorial: 3. Conectar vários usuários](mrlearning-sharing(photon)-ch3.md)
+[Próximo tutorial: 3. conectando vários usuários](mrlearning-sharing(photon)-ch3.md)
 

@@ -6,16 +6,16 @@ ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
 keywords: HoloLens, notas de versão, sistema operacional, plataforma, recursos, pacote comercial
-ms.openlocfilehash: 2fde8665f3572589abd3dcdfb3747ca487b66afb
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: dcac64524cd8d1b1f2b0a496c4dcd2ad2fc7b690
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63524296"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438097"
 ---
 # <a name="release-notes---august-2016"></a>Notas de versão – agosto de 2016
 
-A equipe do HoloLens está ouvindo comentários de desenvolvedores no programa Windows Insider para priorizar nosso trabalho. Continue a enviar [comentários](give-us-feedback.md) por meio do hub de comentários, dos [fóruns de desenvolvedores](https://forums.hololens.com) e do [ @HoloLensTwitter por meio ](https://twitter.com/hololens)do. À medida que o Windows 10 adota a atualização de aniversário, a equipe do HoloLens tem o prazer de oferecer melhor melhoria para a experiência de Holographic. Nesta atualização, nos concentramos em correções principais, melhorias e introdução de recursos solicitados por empresas e disponíveis no pacote comercial do Microsoft HoloLens.
+A equipe do HoloLens está ouvindo comentários de desenvolvedores no programa Windows Insider para priorizar nosso trabalho. Continue a enviar [comentários](give-us-feedback.md) por meio do hub de comentários, dos [fóruns de desenvolvedores](https://forums.hololens.com) e do [Twitter por meio de @HoloLens](https://twitter.com/hololens). À medida que o Windows 10 adota a atualização de aniversário, a equipe do HoloLens tem o prazer de oferecer melhor melhoria para a experiência de Holographic. Nesta atualização, nos concentramos em correções principais, melhorias e introdução de recursos solicitados por empresas e disponíveis no pacote comercial do Microsoft HoloLens.
 
 **Versão mais recente:** Atualização do Windows Holographic de agosto de 2016 (**10.0.14393.0**, versão de aniversário do Windows 10)
 
@@ -29,11 +29,11 @@ Para [atualizar para a versão atual](updating-hololens.md), abra o aplicativo *
 
 **Emulador do HoloLens atualizado** Também lançamos uma versão atualizada do emulador do HoloLens.
 
-**Suporte a gamepad** Agora você pode emparelhar e usar o Bluetooth gamepads com o HoloLens! Os S recursos de Bluetooth do Xbox Wireless recentemente lançados e podem ser usados para reproduzir seus jogos e aplicativos favoritos habilitados para Gamepad. Uma [atualização do controlador](http://support.xbox.com/xbox-one/accessories/update-controller-for-stereo-headset-adapter) deve ser aplicada antes que você possa conectar os S do controlador sem fio do Xbox com o HoloLens. Os S do controlador sem fio do Xbox são compatíveis com as APIs [XInput](https://msdn.microsoft.com/library/windows/desktop/hh405053(v=vs.85).aspx) e [Windows. Gaming. Input](https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.aspx) . Modelos adicionais de controladores Bluetooth podem ser acessados por meio da API [Windows. Gaming. Input](https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.aspx) .
+**Suporte a gamepad** Agora você pode emparelhar e usar o Bluetooth gamepads com o HoloLens! Os S recursos de Bluetooth do Xbox Wireless recentemente lançados e podem ser usados para reproduzir seus jogos e aplicativos favoritos habilitados para Gamepad. Uma [atualização do controlador](https://support.xbox.com/xbox-one/accessories/update-controller-for-stereo-headset-adapter) deve ser aplicada antes que você possa conectar os S do controlador sem fio do Xbox com o HoloLens. Os S do controlador sem fio do Xbox são compatíveis com as APIs [XInput](https://msdn.microsoft.com/library/windows/desktop/hh405053(v=vs.85).aspx) e [Windows. Gaming. Input](https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.aspx) . Modelos adicionais de controladores Bluetooth podem ser acessados por meio da API [Windows. Gaming. Input](https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.aspx) .
 
 ## <a name="improvements-and-fixes"></a>Melhorias e correções
 
-Estamos sincronizados com o restante da atualização de aniversário do Windows 10, assim, além das correções específicas do Hololens, você também está recebendo todas as impedições do Windows Update para aumentar a confiabilidade e o desempenho da plataforma. Seus comentários são altamente valorizados e priorizados para correções na versão.
+Estamos sincronizados com o restante da atualização de aniversário do Windows 10, assim, além das correções específicas do HoloLens, você também está recebendo todas as impedições do Windows Update para aumentar a confiabilidade e o desempenho da plataforma. Seus comentários são altamente valorizados e priorizados para correções na versão.
 
 Melhoramos as seguintes experiências:
 * experiências de logon.
@@ -60,15 +60,15 @@ Entre em contato com seu Gerenciador de conta Microsoft local para comprar o pac
 ### <a name="key-commercial-features"></a>Principais recursos comerciais 
 
 * **Modo de quiosque.** Com o modo de quiosque do HoloLens, você pode limitar quais aplicativos executar para habilitar experiências de demonstração ou demonstrações.<br>
-  ![Com o modo de quiosque, o HoloLens é iniciado diretamente no aplicativo de sua escolha.](images/201608-kioskmode-400px.png)
-* **MDM (gerenciamento de dispositivo móvel) para o HoloLens.** O departamento de ti pode gerenciar vários dispositivos HoloLens simultaneamente usando soluções como Microsoft Intune. Você poderá gerenciar as configurações, selecionar aplicativos para instalar e configurar as configurações de segurança personalizadas às necessidades da organização.<br>
-  ![O gerenciamento de dispositivos móveis no HoloLens fornece gerenciamento de dispositivos de nível empresarial em vários dispositivos.](images/201608-enterprisemanagement-400px.png)
+  ![com o modo de quiosque, o HoloLens é iniciado diretamente no aplicativo de sua escolha.](images/201608-kioskmode-400px.png)
+* **MDM (gerenciamento de dispositivo móvel) para o HoloLens.** O departamento de ti pode gerenciar vários dispositivos HoloLens simultaneamente usando soluções como Microsoft Intune. Você poderá gerenciar as configurações, selecionar aplicativos para instalar e definir as configurações de segurança adaptadas às necessidades da organização.<br>
+  ![gerenciamento de dispositivo móvel no HoloLens fornece gerenciamento de dispositivos de nível empresarial em vários dispositivos.](images/201608-enterprisemanagement-400px.png)
 * **Windows Update para negócios.** Atualizações controladas do sistema operacional para dispositivos e suporte para o Branch de manutenção em longo prazo.
 * **Segurança de dados.** A criptografia de dados do BitLocker é habilitada no HoloLens para fornecer o mesmo nível de proteção de segurança que qualquer outro dispositivo Windows.
 * **Acesso corporativo.** Qualquer pessoa em sua organização pode se conectar remotamente à rede corporativa por meio da rede virtual privada em um HoloLens. O HoloLens também pode acessar redes Wi-Fi que exigem credenciais.
 * **Microsoft Store para negócios.** Seu departamento de ti também pode configurar um repositório privado corporativo, contendo somente os aplicativos da sua empresa para seu uso específico de HoloLens. Distribua com segurança seu software corporativo para o grupo selecionado de usuários corporativos.
 
-### <a name="development-edition-vs-commercial-suite"></a>Edição de desenvolvimento vs. Pacote comercial
+### <a name="development-edition-vs-commercial-suite"></a>Edição de desenvolvimento versus pacote comercial
 
 <table>
 <tr>

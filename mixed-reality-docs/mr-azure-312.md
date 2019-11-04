@@ -6,17 +6,17 @@ ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: Azure, realidade mista, Academia, Unity, tutorial, API, pesquisa Visual computacional, hololens, imersão, VR, Microsoft bot Framework v4, bot de aplicativo Web, bot Framework, Microsoft bot
-ms.openlocfilehash: 481693b5af8c946e1cb45dda5144e78a175fa771
-ms.sourcegitcommit: 3b32339c5d5c79eaecd84ed27254a8f4321731f1
+ms.openlocfilehash: dc428f01a8333bf812fe03c59a46b7a2fa20df83
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70047236"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438488"
 ---
 >[!NOTE]
 >Os tutoriais misturados do Academia de realidade foram projetados com o HoloLens (1º gen) e com o fone de cabeça de imersão de realidade misturada.  Como tal, achamos que é importante deixar esses tutoriais em vigor para os desenvolvedores que ainda estão procurando orientação no desenvolvimento para esses dispositivos.  Esses tutoriais **_não_** serão atualizados com os conjuntos de ferramentas e as interações mais recentes usados para o HoloLens 2.  Eles serão mantidos para continuar a trabalhar nos dispositivos com suporte. Haverá uma nova série de tutoriais que serão publicados no futuro, que demonstrarão como desenvolver para o HoloLens 2.  Esse aviso será atualizado com um link para esses tutoriais quando eles forem postados.
 
-# <a name="mr-and-azure-312-bot-integration"></a>Sr e Azure 312: Integração de bot
+# <a name="mr-and-azure-312-bot-integration"></a>Sr e Azure 312: integração de bot
 
 Neste curso, você aprenderá a criar e a implantar um bot usando o Microsoft bot Framework v4 e se comunicar com ele por meio de um aplicativo do Windows Mixed Reality. 
 
@@ -38,7 +38,7 @@ Em seu aplicativo, cabe a você como você integrará os resultados com seu desi
 <tr>
 <th>Course</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Headsets imersivos</a></th>
 </tr><tr>
-<td> Sr e Azure 312: Integração de bot</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
+<td> Sr e Azure 312: integração de bot</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
 </tr>
 </table>
 
@@ -88,7 +88,7 @@ A primeira etapa é criar o bot como um aplicativo Web ASP.Net Core local. Depoi
 
     ![Criar o aplicativo bot](images/AzureLabs-Lab312-03.png)
 
-5.  Clique com o botão direito do mouse em seu *projeto*, **MyBot**, na **Gerenciador de soluções** e clique em **Adicionar** **|** **classe**.
+5.  Clique com o botão direito do mouse em seu *projeto*, **MyBot**, na **Gerenciador de Soluções** e clique em **Adicionar** **|** **classe**.
 
     ![Criar o aplicativo bot](images/AzureLabs-Lab312-04.png)
 
@@ -98,7 +98,7 @@ A primeira etapa é criar o bot como um aplicativo Web ASP.Net Core local. Depoi
 
 7.  Repita o ponto anterior para criar outra classe chamada **ConversationContext**. 
 
-8.  Clique com o botão direito do mouse em **wwwroot** no **Gerenciador de soluções** e clique em **Adicionar** **|** **novo item**. Selecione a **página HTML** (você a encontrará na subseção Web). Nomeie o arquivo **como default. html**. Clique em **Adicionar** .
+8.  Clique com o botão direito do mouse em **wwwroot** no **Gerenciador de soluções** e clique em **Adicionar** **|** **novo item**. Selecione a **página HTML** (você a encontrará na subseção Web). Nomeie o arquivo **como default. html**. Clique em **Adicionar**.
 
     ![Criar o aplicativo bot](images/AzureLabs-Lab312-06.png)
 
@@ -342,7 +342,7 @@ A seguir está uma configuração típica para o desenvolvimento com realidade m
 
     ![Configurar o projeto do Unity](images/AzureLabs-Lab312-20.png)
 
-2.  Agora, você precisará fornecer um nome de projeto de Unity. Inserir **bot do Hololens**. Verifique se o modelo de projeto está definido como **3D**. Defina o **local** como algum lugar apropriado para você (Lembre-se de que, mais próximo de diretórios raiz é melhor). Em seguida, clique em **criar projeto**.
+2.  Agora, você precisará fornecer um nome de projeto de Unity. Inserir **bot do HoloLens**. Verifique se o modelo de projeto está definido como **3D**. Defina o **local** como algum lugar apropriado para você (Lembre-se de que, mais próximo de diretórios raiz é melhor). Em seguida, clique em **criar projeto**.
 
     ![Configurar o projeto do Unity](images/AzureLabs-Lab312-21.png)
 
@@ -356,7 +356,7 @@ A seguir está uma configuração típica para o desenvolvimento com realidade m
 
 5.  Ainda no **arquivo > configurações de compilação** e certifique-se de que:
 
-    1.  O **dispositivo de destino** está definido como **Hololens**
+    1.  O **dispositivo de destino** está definido como **HoloLens**
 
         > Para os headsets de imersão, defina **dispositivo de destino** para *qualquer dispositivo*.
 
@@ -405,7 +405,7 @@ A seguir está uma configuração típica para o desenvolvimento com realidade m
 
             ![Configurar o projeto do Unity](images/AzureLabs-Lab312-29.png)
 
-    3. Mais adiante no painel, em **configurações de XR** (encontradas abaixo de **configurações de publicação**), **suporte à realidade virtual**em escala, verifique se o SDK do **Windows Mixed Reality** foi adicionado.
+    3. Mais adiante no painel, em **configurações de XR** (encontradas abaixo de **configurações de publicação**), **suporte à realidade virtual**em escala, verifique se o **SDK do Windows Mixed Reality** foi adicionado.
 
         ![Configurar o projeto do Unity](images/AzureLabs-Lab312-30.png)
 
@@ -437,7 +437,7 @@ Para ajudá-lo a desserializar e serializar objetos recebidos e enviados ao serv
 
 Para importar a biblioteca Newtonsoft para seu projeto, use o pacote do Unity que acompanha este curso.
 
-1.  Adicione o *. unitypackage* ao Unity usando a opção de menu**pacote personalizado** do**pacote** > de importação de **ativos** > .
+1.  Adicione o *. unitypackage* ao Unity usando a opção de menu **ativos** > **Importar pacote** > **pacote personalizado** .
 
     ![Importar a biblioteca Newtonsoft](images/AzureLabs-Lab312-34.png)
 
@@ -451,7 +451,7 @@ Para importar a biblioteca Newtonsoft para seu projeto, use o pacote do Unity qu
 
     ![](images/AzureLabs-Lab312-35b.png)
 
-5.  Com o plug-in Newtonsoft selecionado, verifique se **qualquer plataforma** está desmarcada e, em seguida, verifique se o **WSAPlayer** também está desmarcado e clique em **aplicar**. Isso é apenas para confirmar que os arquivos estão configurados corretamente.
+5.  Com o plug-in Newtonsoft selecionado, verifique se **qualquer plataforma** está **desmarcada**e, em seguida, verifique se o **WSAPlayer** também está **desmarcado**e clique em **aplicar**. Isso é apenas para confirmar que os arquivos estão configurados corretamente.
 
     ![](images/AzureLabs-Lab312-35c.png)
 
@@ -459,7 +459,7 @@ Para importar a biblioteca Newtonsoft para seu projeto, use o pacote do Unity qu
     > Marcar esses plug-ins os configura para ser usado apenas no editor do Unity. Há um conjunto diferente deles na pasta WSA que será usada depois que o projeto for exportado do Unity.
 
 6.  Em seguida, você precisa abrir a pasta **WSA** , dentro da pasta **Newtonsoft** . Você verá uma cópia do mesmo arquivo que acabou de configurar. Selecione o arquivo e, no Inspetor, verifique se
-    -   **Qualquer plataforma** está desmarcada 
+    -   **Qualquer plataforma** está **desmarcada** 
     -   **somente** **WSAPlayer** está **marcado**
     -   Não **processar** está **marcado**
 
@@ -471,7 +471,7 @@ Para importar a biblioteca Newtonsoft para seu projeto, use o pacote do Unity qu
 
     ![Configuração da câmera](images/AzureLabs-Lab312-32.png)
  
-2.  Clique no **+** símbolo. Nomeie a nova **marca** como **BotTag**, *salve*.
+2.  Clique no símbolo de **+** . Nomeie a nova **marca** como **BotTag**, *salve*.
 
     ![Configuração da câmera](images/AzureLabs-Lab312-33.png)
 
@@ -1046,9 +1046,9 @@ Essa classe herda da classe **GazeInput** e, portanto, é capaz de fazer referê
 Para criar esta classe:
 
 1.  Clique duas vezes na pasta **scripts** para abri-la. 
-2.  Clique com o botão direito do mouse na pasta **scripts** , clique em **criar > C# script**. Nomeie o scriptde interações. 
+2.  Clique com o botão direito do mouse na pasta **scripts** , clique em **criar > C# script**. Nomeie o script de **interações**. 
 3.  Clique duas vezes no novo script para abri-lo com o Visual Studio.
-4.  Atualize os namespaces e a herança de classe para ser o mesmo que o seguinte, na parte superior da classe interações:
+4.  Atualize os namespaces e a herança de classe para ser o mesmo que o seguinte, na parte superior da classe **interações** :
 
     ```csharp
     using UnityEngine.XR.WSA.Input;
@@ -1057,7 +1057,7 @@ Para criar esta classe:
     {
     ```
 
-5.  Dentro da classe interações, adicione a seguinte variável:
+5.  Dentro da classe **interações** , adicione a seguinte variável:
 
     ```csharp
         /// <summary>
@@ -1269,7 +1269,7 @@ Para implantar no HoloLens:
 6.  Seu aplicativo agora deve aparecer na lista de aplicativos instalados em seu HoloLens, pronto para ser iniciado!
 
     > [!NOTE]
-    > Para implantar em headsets de imersão, defina a **plataforma da solução** como *computador local*e defina a **configuração** a ser depurada, com *x86* como a **plataforma**. Em seguida, implante no computador local, usando o **menu Compilar**, selecionando *implantar solução*. 
+    > Para implantar em headsets de imersão, defina a **plataforma da solução** como *computador local*e defina a **configuração** a ser *depurada*, com *x86* como a **plataforma**. Em seguida, implante no computador local, usando o **menu Compilar**, selecionando *implantar solução*. 
 
 ## <a name="chapter-16--using-the-application-on-the-hololens"></a>Capítulo 16 – usando o aplicativo no HoloLens
 

@@ -6,14 +6,14 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realidade misturada, unity, tutorial, hololens
-ms.openlocfilehash: a6367a1be1bcaeab911b925641dbb3a66998c2dc
-ms.sourcegitcommit: 599bbdd861ce6ff11b6cfb345a0a995f8b7bf85b
+ms.openlocfilehash: 4baef90f8e00e5da1063c708ae24d2057e0dc227
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68977989"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438378"
 ---
-# <a name="1-integrating-and-using-speech-recognition-and-transcription"></a>1. Integrando e usando o reconhecimento de fala e a transcrição
+# <a name="1-integrating-and-using-speech-recognition-and-transcription"></a>1. integrando e usando o reconhecimento de fala e a transcrição
 
 Este tutorial cria um aplicativo de realidade misturada que explora o uso do SDK de fala dos serviços cognitivas do Azure com o HoloLens 2. Quando terminar com esta série de tutoriais, você poderá usar o microfone do dispositivo para transcrever a fala para o texto em tempo real, traduzir sua fala em outras linguagens e aproveitar o recurso de intenção do SDK de fala para entender os comandos de voz usando inteligência artificial.
 
@@ -25,7 +25,7 @@ Este tutorial cria um aplicativo de realidade misturada que explora o uso do SDK
 
 ## <a name="instructions"></a>Instruções
 
-### <a name="getting-started"></a>Guia de Introdução
+### <a name="getting-started"></a>Introdução
 
 1. Inicie o Unity e crie um novo projeto. Insira o nome do projeto módulo de aprendizagem do SDK de fala. Escolha um local para onde salvar o projeto. Em seguida, clique em criar projeto.
 
@@ -58,7 +58,7 @@ Este tutorial cria um aplicativo de realidade misturada que explora o uso do SDK
 
 8. Sua cena agora tem vários novos itens da MRTK. Salve sua cena com um nome diferente clicando em "arquivo" e, em seguida, em "salvar como" e nomeie sua cena como SpeechScene. 
 
-> Observação: Se você pressionar reproduzir em sua cena depois de adicionar o MRTK ao seu projeto e ele não entrar no modo de reprodução, talvez seja necessário reiniciar o Unity. 
+> Observação: se você pressionar reproduzir em sua cena depois de adicionar o MRTK ao seu projeto e ele não entrar no modo de reprodução, talvez seja necessário reiniciar o Unity. 
 
 9. Com o objeto MixedRealityToolkit selecionado em sua hierarquia, clique em copiar e personalizar no painel inspetor.
 
@@ -96,7 +96,7 @@ Este tutorial cria um aplicativo de realidade misturada que explora o uso do SDK
 
 ![Module4Chapter1step13im](images/module4chapter1step13im.PNG)
 
-17. Para conectar nosso aplicativo aos serviços cognitivas do Azure, você deve inserir uma chave de assinatura (também conhecida como chave de API) para o serviço de fala. Siga as instruções [aqui](https://docs.microsoft.com/en-us/azure/cognitive-services/speech-service/get-started) para obter uma chave de assinatura gratuita. Depois de obter a chave de assinatura, insira-a no campo chave de API do serviço de fala do componente LunarcomController no painel Inspetor, conforme mostrado na imagem abaixo.
+17. Para conectar nosso aplicativo aos serviços cognitivas do Azure, você deve inserir uma chave de assinatura (também conhecida como chave de API) para o serviço de fala. Siga as instruções [aqui](https://docs.microsoft.com//azure/cognitive-services/speech-service/get-started) para obter uma chave de assinatura gratuita. Depois de obter a chave de assinatura, insira-a no campo chave de API do serviço de fala do componente LunarcomController no painel Inspetor, conforme mostrado na imagem abaixo.
 
 18. Insira a região que você escolheu ao se inscrever na chave de assinatura no campo região do serviço de fala do componente LunarcomController no painel inspetor. Por exemplo, para o tipo de região "oeste dos EUA" em "westus"
 
@@ -133,7 +133,7 @@ Este tutorial cria um aplicativo de realidade misturada que explora o uso do SDK
 ![Lição 1 Chapter5 etapa 1](images/Lesson1Chapter5Step1.JPG)
 
 2. Verifique se a cena que você deseja experimentar está na lista de "Cenas em Compilação", clicando no botão "Adicionar Cenas Abertas".
-3. Pressione o botão Configurações do Player e vá para publicando configurações. Em recursos, habilite: Internet, servidor de cliente de Internet, servidor de cliente de rede privada, microfone e percepção espacial.
+3. Pressione o botão Configurações do Player e vá para publicando configurações. Em recursos, habilite: Internet, servidor de cliente de Internet, servidor cliente de rede privada, microfone e percepção espacial.
 4. Nas mesmas configurações do Player, vá para configurações de XR e selecione a realidade virtual com suporte para ativado.
 5. Pressione o botão Compilar para iniciar o processo de compilação.
 
@@ -143,18 +143,18 @@ Este tutorial cria um aplicativo de realidade misturada que explora o uso do SDK
 
 ![Lição 1 Chapter5 etapa 4](images/Lesson1Chapter5Step4.JPG)
 
-> OBSERVAÇÃO: se a compilação falhar, tente compilar novamente ou reiniciar o Unity e compilar novamente. Se você vir um erro, como "Erro: CS0246 = O nome do tipo ou do namespace ‘XX’ não pôde ser encontrado (não pode ser encontrado (está faltando uma diretiva using ou uma referência de assembly?) ", talvez precise instalar o [SDK do Windows 10 (10.0.18362.0)](<https://developer.microsoft.com/en-us/windows/downloads/windows-10-sdk>).
+> Observação: se a compilação falhar, tente Compilar novamente ou reiniciar o Unity e compilar novamente. Se você vir um erro como "erro: CS0246 = o tipo ou nome do namespace" XX "não pôde ser encontrado (está faltando uma diretiva using ou uma referência de assembly?)", talvez seja necessário instalar o [SDK do Windows 10 (10.0.18362.0)](<https://developer.microsoft.com//windows/downloads/windows-10-sdk>)
 
 7. Depois que a compilação for concluída, abra a pasta recém-criada que contém os arquivos do novo aplicativo. Clique duas vezes no arquivo de solução ". sln" para abrir o arquivo de solução no Visual Studio.
 
-> Observação: certifique-se de abrir a pasta recém-criada (ou seja, "Aplicativo", se estiver seguindo as convenções de nomenclatura das etapas anteriores), pois haverá um arquivo .sln com nome semelhante fora dessa pasta que não deve ser confundido com o arquivo .sln dentro da pasta de compilação. 
+> Observação: não se esqueça de abrir a pasta recém-criada (ou seja, a pasta "aplicativo", se seguir as convenções de nomenclatura das etapas anteriores), pois haverá um arquivo. sln nomeado de forma semelhante fora dessa pasta que não deve ser confundido com o arquivo. sln dentro da pasta de compilação. 
 
 ![Lição1 Capítulo5 Etapa5](images/Lesson1Chapter5Step5.JPG)
 
-> Observação: se o Visual Studio solicitar a instalação de novos componentes, reserve um momento para garantir que todos os componentes necessários sejam instalados conforme especificado na [página "Instalar as ferramentas"](install-the-tools.md).
+> Observação: se o Visual Studio solicitar que você instale novos componentes, Reserve um momento para garantir que todos os componentes de pré-requisito estejam instalados conforme especificado na [página "instalar as ferramentas"](install-the-tools.md)
 
-8. Conecte o HoloLens 2 ao computador usando o cabo USB. Embora essas instruções pressuponham que você esteja implantando um teste com um dispositivo HoloLens 2, também é possível optar por implantar o [emulador do HoloLens 2](using-the-hololens-emulator.md) ou criar um [pacote do aplicativo para sideload](<https://docs.microsoft.com/en-us/windows/uwp/packaging/packaging-uwp-apps>).
-9. Antes de compilar para seu dispositivo, verifique se ele está no Modo de Desenvolvedor. Se for a primeira vez que você implanta o HoloLens 2, o Visual Studio pode solicitar o emparelhamento do seu HoloLens 2 com um pin. Siga [estas instruções](https://docs.microsoft.com/en-us/windows/mixed-reality/using-visual-studio) se você precisar ativar o modo de desenvolvedor ou emparelhar com o Visual Studio.
+8. Conecte o HoloLens 2 ao computador usando o cabo USB. Embora essas instruções pressuponham que você esteja implantando um teste com um dispositivo HoloLens 2, também é possível optar por implantar o [emulador do HoloLens 2](using-the-hololens-emulator.md) ou criar um [pacote do aplicativo para sideload](<https://docs.microsoft.com//windows/uwp/packaging/packaging-uwp-apps>).
+9. Antes de compilar para seu dispositivo, verifique se ele está no Modo de Desenvolvedor. Se for a primeira vez que você implanta o HoloLens 2, o Visual Studio pode solicitar o emparelhamento do seu HoloLens 2 com um pin. Siga [estas instruções](https://docs.microsoft.com//windows/mixed-reality/using-visual-studio) se você precisar ativar o modo de desenvolvedor ou emparelhar com o Visual Studio.
 
 10. Configure o Visual Studio para compilar seu HoloLens 2, selecionando a configuração "Versão" e a arquitetura "ARM".
 
@@ -168,5 +168,5 @@ Este tutorial cria um aplicativo de realidade misturada que explora o uso do SDK
 
 Você configurou o reconhecimento de voz em seu aplicativo, da plataforma Azure. Execute o aplicativo para garantir que todas as funções e recursos estejam funcionando corretamente. Comece dizendo a palavra de ativação que você digitou na etapa 22, ativar terminal. Selecione o botão de microfone para iniciar o reconhecimento de voz. Comece a falar. Você verá suas palavras transcritas no terminal enquanto fala. Pressione o botão de microfone uma segunda vez para parar o reconhecimento de voz. Diga ignorar terminal para ocultar o terminal Lunarcom. Na próxima lição, aprenderemos como alternar dinamicamente para usar o reconhecimento de voz alimentada por dispositivo em situações em que o SDK de fala do Azure não está disponível devido ao HoloLens 2 estar offline.
 
-[Próximo tutorial: 2. Adicionar um modo offline para tradução de fala em texto local](mrlearning-speechSDK-ch2.md)
+[Próximo tutorial: 2. adicionando um modo offline para conversão de fala em texto local](mrlearning-speechSDK-ch2.md)
 

@@ -6,19 +6,19 @@ ms.author: daescu
 ms.date: 04/06/2019
 ms.topic: article
 keywords: Realidade, mostrar, calendário, Academia, agenda, it, San Francisco, reator
-ms.openlocfilehash: 0a568e5d72bb7ed502d783df2f0815f2d9c75364
-ms.sourcegitcommit: e5b677f92ac4b1dff9aad6c329345a5aca4fcef5
+ms.openlocfilehash: ebecfa59d1c1b60ba7f3bf546816ed33b4910ad7
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69020183"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438326"
 ---
 # <a name="the-realities-show"></a>A realidade mostra
 ![Design para realidade misturada](images/therealitiesshow.jpg)
 
 **A realidade mostra um transmissão ao vivo de 30 minutos sobre o HoloLens 2, os serviços de realidade misturada e o Sr Technologies. Em cada episódio, veremos os recursos, as capacidades, a tecnologia por trás dele, como desenvolver para os diferentes dispositivos, recomendar as práticas recomendadas e responder a perguntas de nosso público. Transmitido para desenvolvedores em todo o mundo de nossa configuração de estágio de reator de San Francisco como um ambiente de sala de vida (e, ocasionalmente, de outros sites).**
 
-**[Assista a episódios ao vivo e anteriores aqui](http://aka.ms/trs)**
+**[Assista a episódios ao vivo e anteriores aqui](https://aka.ms/trs)**
 ___
 
 ## <a name="hololens-2-and-mixed-reality-services---march-12-2019-8-am-pdt"></a>**Serviços do HoloLens 2 e da realidade misturada** -12 de março de 2019, 8:00 (PDT)

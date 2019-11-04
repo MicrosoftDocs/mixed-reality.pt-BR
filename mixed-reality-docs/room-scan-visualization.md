@@ -5,13 +5,13 @@ author: mattzmsft
 ms.author: alexpf
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Realidade mista do Windows, padrões de aplicativo, design, HoloLens, verificação de sala, mapeamento espacial, reconstrução de superfície, malha
-ms.openlocfilehash: 09df4464ea4dac01dfad637886b07b861f468d4d
-ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
+keywords: Realidade mista do Windows, padrões de aplicativo, design, HoloLens, verificação de sala, mapeamento espacial, malha
+ms.openlocfilehash: bdb070407f27d04046bd022894c7a8a01b9658d1
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66829909"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437519"
 ---
 # <a name="room-scan-visualization"></a>Visualização da verificação de sala
 
@@ -93,6 +93,6 @@ Determinados aplicativos podem depender da varredura para atualizar dados de map
 Um bom caso para esse método é um em que os hologramas são esperados para interagir com a movimentação de objetos, por exemplo, um carro Holographic que as unidades no chão podem desejar aumentar corretamente em uma porta dependendo se ela está aberta ou fechada.
 
 ## <a name="see-also"></a>Consulte também
-* [Projeto de mapeamento espacial](spatial-mapping-design.md)
+* [Mapeamento espacial](spatial-mapping.md)
 * [Sistemas de coordenadas](coordinate-systems.md)
 * [Projeto de som espacial](spatial-sound-design.md)

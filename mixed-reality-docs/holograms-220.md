@@ -3,28 +3,28 @@ title: MR espacial 220-som espacial
 description: Siga este passo a passo de codificação usando o Unity, o Visual Studio e o HoloLens para aprender os detalhes dos conceitos de som espaciais.
 author: keveleigh
 ms.author: kurtie
-ms.date: 03/21/2018
+ms.date: 10/22/2019
 ms.topic: article
 keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit-Unity, Academia, tutorial, som espacial
-ms.openlocfilehash: 50d17fe8c9a6e3f18b1309a59c9c41af982a7505
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: a3fc054927d73cf9ac21f831caa4ec23875977bd
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63526903"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73434728"
 ---
 >[!NOTE]
->Os tutoriais misturados do Academia de realidade foram projetados com o HoloLens (1º gen) e com o fone de cabeça de imersão de realidade misturada.  Como tal, achamos que é importante deixar esses tutoriais em vigor para os desenvolvedores que ainda estão procurando orientação no desenvolvimento para esses dispositivos.  Esses tutoriais **_não_** serão atualizados com os conjuntos de ferramentas e as interações mais recentes usados para o HoloLens 2.  Eles serão mantidos para continuar a trabalhar nos dispositivos com suporte. Haverá uma nova série de tutoriais que serão publicados no futuro, que demonstrarão como desenvolver para o HoloLens 2.  Esse aviso será atualizado com um link para esses tutoriais quando eles forem postados.
+>Os tutoriais misturados do Academia de realidade foram projetados com o HoloLens (1º gen) e com o fone de cabeça de imersão de realidade misturada.  Como tal, achamos que é importante deixar esses tutoriais em vigor para os desenvolvedores que ainda estão procurando orientação no desenvolvimento para esses dispositivos.  Esses tutoriais **_não_** serão atualizados com os conjuntos de ferramentas e as interações mais recentes usados para o HoloLens 2.  Eles serão mantidos para continuar a trabalhar nos dispositivos com suporte. [Uma nova série de tutoriais](mrlearning-base.md) foi postada para o HoloLens 2.
 
 <br>
 
-# <a name="mr-spatial-220-spatial-sound"></a>MR espacial 220: Som espacial
+# <a name="mr-spatial-220-spatial-sound"></a>MR espacial 220: som espacial
 
 O [som espacial](spatial-sound.md) traz a vida para os hologramas e dá a eles presença em nosso mundo. Os hologramas são compostos por luz e som e, se você perder a visão de seus hologramas, o som espacial poderá ajudá-lo a encontrá-los. O som espacial não é como o som típico que você ouviria no rádio, é um som posicionado no espaço 3D. Com o som espacial, você pode fazer com que os hologramas pareçam estar por trás de você, ao lado de você ou mesmo à sua cabeça! Neste curso, você vai:
 
 * Configure seu ambiente de desenvolvimento para usar o som espacial da Microsoft.
 * Use o som espacial para aprimorar as interações.
-* Use o som espacial em conjunto com o mapeamento espacial.
+* Use o som espacial em conjunto com o [mapeamento espacial](spatial-mapping.md).
 * Entenda as práticas recomendadas de design e mistura de som.
 * Use o som para aprimorar os efeitos especiais e trazer o usuário para o mundo da realidade misturada.
 
@@ -34,7 +34,7 @@ O [som espacial](spatial-sound.md) traz a vida para os hologramas e dá a eles p
 <tr>
 <th>Course</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Headsets imersivos</a></th>
 </tr><tr>
-<td>MR espacial 220: Som espacial</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
+<td>MR espacial 220: som espacial</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
 </tr>
 </table>
 
@@ -42,7 +42,7 @@ O [som espacial](spatial-sound.md) traz a vida para os hologramas e dá a eles p
 
 ### <a name="prerequisites"></a>Pré-requisitos
 
-* Um PC com Windows 10 configurado com as [ferramentas](install-the-tools.md)corretas instaladas.
+* Um PC com Windows 10 configurado com as [ferramentas corretas instaladas](install-the-tools.md).
 * Alguma capacidade C# básica de programação.
 * Você deve ter concluído o [Sr noções básicas 101](holograms-101.md).
 * Um dispositivo HoloLens [configurado para desenvolvimento](using-visual-studio.md#enabling-developer-mode).
@@ -60,7 +60,7 @@ O [som espacial](spatial-sound.md) traz a vida para os hologramas e dá a eles p
 
 ### <a name="errata-and-notes"></a>Errata e observações
 
-* "Habilitar Apenas Meu Código" precisa ser desabilitado (desmarcado) no Visual Studio em ferramentas-> opções-> depuração para acessar os pontos de interrupção no código.
+* "Habilitar Apenas Meu Código" precisa ser desabilitado (*desmarcado*) no Visual Studio em ferramentas-> opções-> depuração para acessar os pontos de interrupção no código.
 
 ## <a name="chapter-1---unity-setup"></a>Capítulo 1 – configuração do Unity
 
@@ -86,7 +86,7 @@ Por padrão, o Unity não carrega um plug-in spatializer. As etapas a seguir hab
 * Localize a lista suspensa **plug-in do Spatializer** e selecione **MS HRTF Spatializer**.
 * No painel **hierarquia** , selecione **hologramacollection > P0LY**.
 * No painel **Inspetor** , localize o componente **fonte de áudio** .
-* Marque a  caixa de seleção espacialize.
+* Marque a caixa de seleção **espacialize** .
 * Arraste o controle deslizante de **mistura espacial** para **3D**ou digite **1** na caixa de edição.
 
 Agora, criaremos o projeto no Unity e configuraremos a solução no Visual Studio.
@@ -111,7 +111,7 @@ Se estiver implantando no HoloLens:
 1. Usando a barra de ferramentas superior no Visual Studio, altere o destino de debug para **Release** e de ARM para **x86**.
 2. Clique na seta suspensa ao lado do botão computador local e selecione **computador remoto**.
 3. Insira **o endereço IP do dispositivo de HoloLens** e defina o modo de autenticação como **Universal (protocolo não criptografado)** . Clique em **Selecionar**. Se você não souber o endereço IP do dispositivo, examine **configurações > rede & Internet > opções avançadas**.
-4. Na barra de menus superior, clique em **depurar-> iniciar sem Depurar** ou pressione **Ctrl + F5**. Se esta for a primeira vez que você está implantando em seu dispositivo, será necessário [emparelhar com o Visual Studio](using-visual-studio.md#pairing-your-device---hololens-1st-gen).
+4. Na barra de menus superior, clique em **depurar-> iniciar sem Depurar** ou pressione **Ctrl + F5**. Se esta for a primeira vez que você está implantando em seu dispositivo, será necessário [emparelhar com o Visual Studio](using-visual-studio.md#pairing-your-device).
 
 Se estiver implantando em um headset de imersão:
 
@@ -129,7 +129,7 @@ Se estiver implantando em um headset de imersão:
 
 ### <a name="part-1---enhancing-realism"></a>Parte 1-aprimorando o realm
 
-#### <a name="key-concepts"></a>Conceitos Principais
+#### <a name="key-concepts"></a>Principais conceitos
 
 * Esespaciair sons de holograma.
 * As fontes de som devem ser colocadas em um local apropriado no holograma.
@@ -141,7 +141,7 @@ O local apropriado para o som vai depender do holograma. Por exemplo, se o holog
 As instruções a seguir anexarão um som espacial a um holograma.
 
 * No painel **hierarquia** , expanda **hologramacollection** e selecione **P0LY**.
-* No painel **Inspetor** , na mensagem de **áudio**, clique no círculo ao lado de **AudioClip** e selecione  polifocalizar no pop-up.
+* No painel **Inspetor** , na mensagem de **áudio**, clique no círculo ao lado de **AudioClip** e selecione **polifocalizar** no pop-up.
 * Clique no círculo ao lado de **saída** e selecione **SoundEffects** no pop-up.
 
 O projeto Decibéi usa um componente **AudioMixer** do Unity para habilitar o ajuste dos níveis de som para grupos de sons. Ao agrupar sons dessa forma, o volume geral pode ser ajustado mantendo o volume relativo de cada som.
@@ -153,7 +153,7 @@ Definir o nível de Doppler como zero desabilita as alterações em pitch causad
 
 ### <a name="part-2---directing-the-users-gaze"></a>Parte 2-direcionando o olhar do usuário
 
-#### <a name="key-concepts"></a>Conceitos Principais
+#### <a name="key-concepts"></a>Principais conceitos
 
 * Use o som para chamar a atenção para hologramas importantes.
 * Os ouvidos ajudam a direcionar onde devem ser os olhos.
@@ -170,11 +170,11 @@ As instruções a seguir permitem que P0LY sejam ocultadas para trás, para que 
 * Em **manipulador de entrada de fala**, expanda **ir ocultar**.
 * Altere **nenhuma função** para **GoHide**.
 
-![Chaves Ir para ocultar](images/gohide.png)
+![Palavra-chave: ir ocultar](images/gohide.png)
 
 ### <a name="part-3---gesture-feedback"></a>Parte 3-comentários do gesto
 
-#### <a name="key-concepts"></a>Conceitos Principais
+#### <a name="key-concepts"></a>Principais conceitos
 
 * Fornecer ao usuário uma confirmação de gesto positivo usando som
 * Não sobrecarregar os sons do usuário em alta
@@ -191,7 +191,7 @@ As instruções a seguir permitem que P0LY sejam ocultadas para trás, para que 
 O manipulador de som de gesto executa as seguintes tarefas:
 
 * Criar e configurar um **áudio**.
-* Coloque a **audioname** no local do gameobject apropriado .
+* Coloque a **audioname** no local do **gameobject**apropriado.
 * Reproduz o **AudioClip** associado ao gesto.
 
 #### <a name="build-and-deploy"></a>Compilar e implantar
@@ -212,7 +212,7 @@ Após a implantação do aplicativo:
 * Digamos que *"Vá ocultar"* para fazer com que o P0LY se mova para um local por trás de você. Encontre-o pelo som.
 * Olhar na base do hub de energia. Toque e arraste para a esquerda ou direita para girar o holograma e observe como o clique do som confirma o gesto.
 
-Observação: Há um painel de texto que será rotulado com você. Isso conterá os comandos de voz disponíveis que você pode usar ao longo deste curso.
+Observação: há um painel de texto que será rotulado com você. Isso conterá os comandos de voz disponíveis que você pode usar ao longo deste curso.
 
 ## <a name="chapter-3---spatial-sound-and-spatial-mapping"></a>Capítulo 3-som espacial e mapeamento espacial
 
@@ -223,7 +223,7 @@ Observação: Há um painel de texto que será rotulado com você. Isso conterá
 
 ### <a name="part-1---physical-world-interaction"></a>Parte 1-interação física do mundo
 
-#### <a name="key-concepts"></a>Conceitos Principais
+#### <a name="key-concepts"></a>Principais conceitos
 
 * Os objetos físicos geralmente fazem um som ao encontrar uma superfície ou outro objeto.
 * Os sons devem ser apropriados para o contexto na experiência.
@@ -247,7 +247,7 @@ Por exemplo, definir uma xícara em uma tabela deve fazer um som mais silencioso
 
 ### <a name="part-2---sound-occlusion"></a>Parte 2-som oclusão
 
-#### <a name="key-concepts"></a>Conceitos Principais
+#### <a name="key-concepts"></a>Principais conceitos
 
 * Som, como claro, pode ser obstruído.
 
@@ -260,8 +260,8 @@ Um exemplo clássico é uma sala de concerto. Quando um ouvinte está fora do Ha
 
 A classe emissor de áudio fornece os seguintes recursos:
 
-* Restaura todas as alterações no volume de Audioname.
-* Executa uma **física. RaycastNonAlloc** da posição do usuário na direção do gameobject ao  qual o **AudioEmitter** está anexado.
+* Restaura todas as alterações no volume de **audioname**.
+* Executa uma **física. RaycastNonAlloc** da posição do usuário na direção do **gameobject** ao qual o **AudioEmitter** está anexado.
 
 O método RaycastNonAlloc é usado como uma otimização de desempenho para limitar as alocações, bem como o número de resultados retornados.
 
@@ -304,12 +304,12 @@ Quando vários occluders estão no caminho entre o usuário e o **AudioEmitter**
 * Em **manipulador de entrada de fala**, expanda ir para o **encargo**.
 * Altere **nenhuma função** para **GoCharge**.
 
-![Chaves Custo](images/gocharge.png)
+![Palavra-chave: ir para a carga](images/gocharge.png)
 
 * Expanda **aqui**.
 * Altere **nenhuma função** para **ComeBack**.
 
-![Chaves Vem cá](images/comehere.png)
+![Palavra-chave: Venha aqui](images/comehere.png)
 
 #### <a name="build-and-deploy"></a>Compilar e implantar
 
@@ -327,7 +327,7 @@ Observe que o som oclusão é removido quando o P0LY sai do hub de energia. Se v
 
 ### <a name="part-3---room-models"></a>Parte 3-modelos de sala
 
-#### <a name="key-concepts"></a>Conceitos Principais
+#### <a name="key-concepts"></a>Principais conceitos
 
 * O tamanho do espaço fornece filas subliminal que contribuem para a localização de som.
 * Os modelos de sala são definidos por**áudio**.
@@ -405,7 +405,7 @@ Ao imaginar sua mistura como um funil invertido, com o menos importante (e geral
 
 A voz é um cenário interessante. Com base na experiência que você está criando, talvez você queira ter um som estéreo (não localizado) ou para espacialar sua voz. Duas experiências publicadas da Microsoft ilustram excelentes exemplos de cada cenário.
 
-O [HoloTour](http://www.microsoft.com/store/p/holotour/9nblggh5pj87) usa uma voz estéreo. Quando o narrador está descrevendo o local que está sendo exibido, o som é consistente e não varia de acordo com a posição do usuário. Isso permite que o narrador descreva a cena sem sair dos sons espaciais do ambiente.
+O [HoloTour](https://www.microsoft.com/store/p/holotour/9nblggh5pj87) usa uma voz estéreo. Quando o narrador está descrevendo o local que está sendo exibido, o som é consistente e não varia de acordo com a posição do usuário. Isso permite que o narrador descreva a cena sem sair dos sons espaciais do ambiente.
 
 Os [fragmentos](https://www.microsoft.com/store/p/fragments/9nblggh5ggm8) utilizam uma voz espacialada na forma de uma detecção. A voz da detecção é usada para ajudar a levar a atenção do usuário a uma pista importante como se um humano real estivesse na sala. Isso permite um sentido ainda maior de imersão na experiência de resolver o mistério.
 
@@ -432,7 +432,7 @@ No Unity, você pode marcar um arquivo de áudio para streaming nas configuraç�
 
 ### <a name="magic-windows"></a>Janelas mágicas
 
-#### <a name="key-concepts"></a>Conceitos Principais
+#### <a name="key-concepts"></a>Principais conceitos
 
 * Criar exibições em um mundo oculto é visualmente atraente.
 * Aprimore o realm adicionando efeitos de áudio quando um holograma ou o usuário estiver perto do mundo oculto.
@@ -440,13 +440,13 @@ No Unity, você pode marcar um arquivo de áudio para streaming nas configuraç�
 #### <a name="instructions"></a>Instruções
 
 * No painel **hierarquia** , expanda **hologramacollection** e selecione **Underworld**.
-* Expanda **Underworld** e selecione voicename.
+* Expanda **Underworld** e selecione **voicename**.
 * No painel **Inspetor** , clique em **Adicionar componente** e adicionar **efeito de voz do usuário**.
 
 Um componente de **aúdio** será adicionado à **voiceprovider**.
 
 * Em **áudio**, defina **saída** para **UserVoice (mixer)** .
-* Marque a  caixa de seleção espacialize.
+* Marque a caixa de seleção **espacialize** .
 * Arraste o controle deslizante de **mistura espacial** para **3D**ou digite **1** na caixa de edição.
 * Expanda **configurações de som 3D**.
 * Defina o **nível de Doppler** como **0**.
@@ -471,8 +471,8 @@ As configurações anteriores configuram os parâmetros do Unity **AudioEchoFilt
 
 O script de efeito de voz do usuário é responsável por:
 
-* Medindo a distância entre o usuário e  o gameobject ao qual o script está anexado.
-* Determinando se o usuário está voltado para o gameobject.
+* Medindo a distância entre o usuário e o **gameobject** ao qual o script está anexado.
+* Determinando se o usuário está voltado para o **gameobject**.
 
 O usuário deve estar voltado para o gameobject, independentemente da distância, para que o efeito seja habilitado.
 
@@ -486,12 +486,12 @@ O efeito de voz do usuário usa o componente seletor de fluxo do MIC, do [MixedR
 * Em **manipulador de entrada de fala**, expanda **Mostrar Underworld**.
 * Altere **nenhuma função** para **UnderworldBase. OnEnable**.
 
-![Chaves Mostrar Underworld](images/showunderworld.png)
+![Palavra-chave: show Underworld](images/showunderworld.png)
 
 * Expanda **ocultar Underworld**.
 * Altere **nenhuma função** para **UnderworldBase. ondisable**.
 
-![Chaves Ocultar Underworld](images/hideunderworld.png)
+![Palavra-chave: Ocultar Underworld](images/hideunderworld.png)
 
 #### <a name="build-and-deploy"></a>Compilar e implantar
 
@@ -514,6 +514,6 @@ O Underworld ficará oculto e os hologramas ocultos anteriormente serão exibido
 
 ## <a name="the-end"></a>Fim
 
-Parabéns! Agora você concluiu **o Sr Spatial 220: Som**espacial.
+Parabéns! Agora você concluiu o **Sr spatial 220: som espacial**.
 
 Ouça o mundo e dê vida às suas experiências com o som!

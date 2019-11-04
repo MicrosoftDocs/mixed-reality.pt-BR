@@ -6,12 +6,12 @@ ms.author: kaluccin
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Galaxy Explorer, HoloLens, realidade mista do Windows, compartilhe sua ideia, estudo de caso
-ms.openlocfilehash: a478eaa35144a8ee0fbeaeb43cec4b9f901890ab
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 696662eb92371708389f8a128dcee6a61acf1816
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63523838"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73436876"
 ---
 # <a name="case-study---creating-a-galaxy-in-mixed-reality"></a>Estudo de caso-criando um Galaxy em realidade misturada
 
@@ -25,7 +25,7 @@ Andy Zibits, líder de arte do projeto e Karim Luccin, engenheiro de gráficos d
 
 Queríamos aproveitar ao máximo a capacidade do HoloLens de processar objetos 3D diretamente em seu espaço de vida, então decidimos que queríamos criar um Galaxy de aparência realista, em que as pessoas poderiam ampliar e ver as estrelas individuais, cada uma em suas próprias trajetórias .
 
-Na primeira semana do desenvolvimento, nós reunimos algumas metas para nossa representação da forma de leite do galáxia: Ele precisava ter profundidade, movimento e sensação de volumétricos – cheio de estrelas que ajudam a criar a forma do Galaxy.
+Na primeira semana do desenvolvimento, nós reunimos algumas metas para nossa representação da nossa forma de leite: a ti precisava ter profundidade, movimento e sensação de volumétricos – cheia de estrelas que ajudam a criar a forma do Galaxy.
 
 O problema da criação de um Galaxy animado que tinha bilhões de estrelas era que o número enorme de elementos únicos que precisam de atualização seria muito grande por quadro para o HoloLens animar usando a CPU. Nossa solução envolvia uma mistura complexa de arte e ciência.
 
@@ -41,9 +41,9 @@ Começamos testes de estresse com milhares de partículas de ponto em vários pa
 
 ### <a name="creating-the-position-of-the-stars"></a>Criando a posição das estrelas
 
-Um dos nossos membros da equipe já escreveu o C# código que geraria estrelas em sua posição inicial. As estrelas estão em uma elipse e sua posição pode ser descrita por (**curveOffset**, **ellipseSize**, **elevação**), em que **curveOffset** é o ângulo da estrela ao longo da elipse, **ellipseSize** é a dimensão da elipse ao longo de X e Z, e elevação da elevação adequada da estrela no Galaxy. Assim, podemos criar um buffer ([ComputeBuffer do Unity](http://docs.unity3d.com/ScriptReference/ComputeBuffer.html)) que seria inicializado com cada atributo Star e enviá-lo na GPU onde ele residiria para o restante da experiência. Para desenhar esse buffer, usamos o [DrawProcedural do Unity](http://docs.unity3d.com/ScriptReference/Graphics.DrawProcedural.html) , que permite executar um sombreador (código em uma GPU) em um conjunto arbitrário de pontos sem ter uma malha real que represente o Galaxy:
+Um dos nossos membros da equipe já escreveu o C# código que geraria estrelas em sua posição inicial. As estrelas estão em uma elipse e sua posição pode ser descrita por (**curveOffset**, **ellipseSize**, **elevação**), em que **curveOffset** é o ângulo da estrela ao longo da elipse, **ellipseSize** é a dimensão da elipse ao longo de X e Z, e elevação da elevação adequada da estrela no Galaxy. Assim, podemos criar um buffer ([ComputeBuffer do Unity](https://docs.unity3d.com/ScriptReference/ComputeBuffer.html)) que seria inicializado com cada atributo Star e enviá-lo na GPU onde ele residiria para o restante da experiência. Para desenhar esse buffer, usamos o [DrawProcedural do Unity](https://docs.unity3d.com/ScriptReference/Graphics.DrawProcedural.html) , que permite executar um sombreador (código em uma GPU) em um conjunto arbitrário de pontos sem ter uma malha real que represente o Galaxy:
 
-**CPUS**
+**CPUs**
 
 
 

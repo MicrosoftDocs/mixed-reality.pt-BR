@@ -6,16 +6,16 @@ ms.author: jlyons
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Unity, comunicação remota, comunicação remota Holographic, player de comunicação remota Holographic
-ms.openlocfilehash: c118c4af61c6eb2706ef851a6654c18ff7313453
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 6164d7ae1bc2d9ac13135f17132aca089e63ecdf
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63548722"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438229"
 ---
 # <a name="unity-play-mode"></a>Modo de reprodução do Unity
 
-Uma maneira rápida de trabalhar em seu projeto de Unity é usar o "modo de reprodução". Isso executa seu aplicativo localmente no editor do Unity em seu computador. O Unity usa a comunicação remota do Holographic para fornecer uma maneira rápida de visualizar o conteúdo em um dispositivo de HoloLens real.
+Uma maneira rápida de trabalhar em seu projeto de Unity é usar o "modo de reprodução". Isso executa seu aplicativo localmente no editor do Unity em seu computador. O Unity usa a comunicação remota do Holographic para fornecer uma maneira rápida de visualizar o conteúdo em um dispositivo de HoloLens real. O modo de reprodução também pode ser usado com um headset de realidade mista do Windows anexado ao seu PC de desenvolvimento.
 
 ## <a name="unity-play-mode-with-holographic-remoting"></a>Modo de reprodução do Unity com comunicação remota do Holographic
 
@@ -23,7 +23,7 @@ Com a comunicação remota do Holographic, você pode experimentar seu aplicativ
 1. No seu HoloLens, vá para a **Microsoft Store** e instale o aplicativo de **[player de comunicação remota do Holographic](https://www.microsoft.com/store/p/holographic-remoting-player/9nblggh4sv40)** .
 2. No seu HoloLens, inicie o aplicativo do **player de comunicação remota do Holographic** .
 3. No Unity, vá para o menu **janela** e selecione **emulação Holographic**.
-4. Defina o **modo** de emulação como **remoto para dispositivo**.
+4. Defina o **modo de emulação** como **remoto para dispositivo**.
 5. Para **computador remoto**, insira o endereço IP do seu HoloLens.
 6. Clique em **Conectar**. Você deve ver o **status da conexão** alterado para **conectado** e ver a tela ficar em branco no HoloLens.
 7. Clique no botão **reproduzir** para iniciar o modo de reprodução e experimentar o aplicativo em seu HoloLens.

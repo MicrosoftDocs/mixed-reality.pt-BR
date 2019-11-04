@@ -6,28 +6,29 @@ ms.author: jemccull
 ms.date: 06/27/2019
 ms.topic: article
 keywords: realidade misturada, unity, tutorial, hololens
-ms.openlocfilehash: 1dd6c01768ddf5dda954f50e0f7507022bd59c3b
-ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
+ms.openlocfilehash: 5382a1cce38e8607042c21b8dd3157d1da2fa72e
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68701856"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437558"
 ---
-# <a name="2-adding-an-offline-mode-for-local-speech-to-text-translation"></a>2. Adicionando um modo offline para tradução de fala em texto local
+# <a name="2-adding-an-offline-mode-for-local-speech-to-text-translation"></a>2. adicionando um modo offline para conversão de fala em texto local
 
-Neste tutorial, adicionaremos um modo offline que permite executar a tradução de fala para texto local quando não for possível se conectar ao serviço do Azure. Também simularemos um estado desconectado.
+Neste tutorial, adicionaremos um modo offline que permite executar a tradução de fala para texto local quando não for possível se conectar ao serviço do Azure. Também *simularemos* um estado desconectado.
 
 ## <a name="instructions"></a>Instruções
 
-1. Selecione o objeto Lunarcom_Base na hierarquia e clique em Adicionar componente no painel inspetor. Procure e selecione o reconhecimento offline do Lunarcom.
+1. Selecione o objeto Lunarcom_Base na hierarquia.
+2. Clique em Adicionar componente no painel inspetor. Procure e selecione o reconhecimento offline do Lunarcom.
 
 ![Module4Chapter2step1im](images/module4chapter2step1im.PNG)
 
-2. Clique na lista suspensa no LunarcomOfflineRecognizer e selecione habilitado. Este programa o projeto para agir como o usuário não tem uma conexão. 
+3. Clique na lista suspensa no LunarcomOfflineRecognizer e selecione habilitado. Este programa o projeto para agir como o usuário não tem uma conexão. 
 
 ![Module4Chapter2step1im](images/module4chapter2step2im.PNG)
 
-3. Agora, pressione reproduzir no editor do Unity e teste-o. Pressione o microfone no canto inferior esquerdo da cena e comece a falar. 
+4. Pressione reproduzir no editor do Unity e teste-o. Pressione o microfone no canto inferior esquerdo da cena e comece a falar. 
 
 > [!NOTE]
 > Como estamos offline, a funcionalidade wake Word foi desabilitada. Você precisará clicar fisicamente no microfone toda vez que desejar que sua fala seja reconhecida quando estiver offline. 
@@ -41,5 +42,5 @@ Veja abaixo um exemplo de como seria a sua cena.
 O modo offline foi habilitado. Agora, quando você estiver offline, ainda poderá trabalhar em seu projeto com o Speech-SDK! 
 
 
-[Próximo tutorial: 3.  Adicionando o componente de tradução de fala dos serviços cognitivas do Azure](mrlearning-speechSDK-ch3.md)
+[Próximo tutorial: 3. adicionando o componente de tradução de fala dos serviços cognitivas do Azure](mrlearning-speechSDK-ch3.md)
 

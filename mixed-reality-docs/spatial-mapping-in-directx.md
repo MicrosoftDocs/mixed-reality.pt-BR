@@ -6,12 +6,12 @@ ms.author: mriches
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Realidade mista do Windows, mapeamento espacial, ambiente, interação, DirectX, winrt, API, código de exemplo, UWP, SDK, passo a passos
-ms.openlocfilehash: db3f1464158c04127e456cadd5fb633336909344
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 456fcf1c00e23a287a741673e94b3f8d2d2d346c
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63550690"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437449"
 ---
 # <a name="spatial-mapping-in-directx"></a>Mapeamento espacial no DirectX
 
@@ -21,6 +21,29 @@ Este tópico usa código do exemplo de código [HolographicSpatialMapping](https
 
 >[!NOTE]
 >Os trechos de código neste artigo demonstram atualmente o C++uso de/CX em vez de/WinRT em C++conformidade com C + +17, conforme usado no [ C++ modelo de projeto Holographic](creating-a-holographic-directx-project.md).  Os conceitos são equivalentes a C++um projeto/WinRT, embora você precise converter o código.
+
+## <a name="device-support"></a>Suporte a dispositivos
+
+<table>
+    <colgroup>
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+    </colgroup>
+    <tr>
+        <td><strong>Recurso</strong></td>
+        <td><a href="hololens-hardware-details.md"><strong>HoloLens (1ª geração)</strong></a></td>
+        <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Headsets imersivos</strong></a></td>
+    </tr>
+     <tr>
+        <td>Mapeamento espacial</td>
+        <td>✔️</td>
+        <td>✔️</td>
+        <td>❌</td>
+    </tr>
+</table>
 
 ## <a name="directx-development-overview"></a>Visão geral de desenvolvimento do DirectX
 
@@ -51,7 +74,7 @@ Ao desenvolver um aplicativo usando essas APIs, o fluxo de programa básico ter�
   - A partir daqui, o aplicativo pode opcionalmente executar a análise ou o [processamento](spatial-mapping.md#mesh-processing) dos dados de malha e usá-lo para [renderização](spatial-mapping.md#rendering) e [raycasting física e colisão](spatial-mapping.md#raycasting-and-collision).
   - Um detalhe importante a ser observado é que você deve aplicar uma escala às posições de vértice de malha (por exemplo, no sombreador de vértice usado para renderizar as malhas), para convertê-las das unidades de inteiros otimizadas nas quais elas são armazenadas no buffer, em metros. Você pode recuperar essa escala chamando [VertexPositionScale](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.surfaces.spatialsurfacemesh.vertexpositionscale.aspx).
 
-### <a name="troubleshooting"></a>Solução de problemas
+### <a name="troubleshooting"></a>Painel de controle da
 * Não se esqueça de dimensionar as posições de vértice de malha em seu sombreador de vértice, usando a escala retornada por [SpatialSurfaceMesh. VertexPositionScale](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.surfaces.spatialsurfacemesh.vertexpositionscale.aspx)
 
 ## <a name="spatial-mapping-code-sample-walkthrough"></a>Instruções de exemplo de código de mapeamento espacial
@@ -62,7 +85,7 @@ Agora, vamos examinar como adicionar o recurso de mapeamento de superfície ao s
 
 ### <a name="set-up-your-app-to-use-the-spatialperception-capability"></a>Configurar seu aplicativo para usar o recurso spatialPerception
 
-Seu aplicativo deve ser capaz de usar o recurso de mapeamento espacial. Isso é necessário porque a malha espacial é uma representação do ambiente do usuário, que pode ser considerado dados privados. Declare esse recurso no arquivo Package. appxmanifest para seu aplicativo. Veja um exemplo:
+Seu aplicativo deve ser capaz de usar o recurso de mapeamento espacial. Isso é necessário porque a malha espacial é uma representação do ambiente do usuário, que pode ser considerado dados privados. Declare esse recurso no arquivo Package. appxmanifest para seu aplicativo. Aqui está um exemplo:
 
 ```xml
 <Capabilities>
@@ -70,14 +93,14 @@ Seu aplicativo deve ser capaz de usar o recurso de mapeamento espacial. Isso é 
 </Capabilities>
 ```
 
-A funcionalidade vem do namespace **uap2** . Para obter acesso a esse namespace em seu manifesto, inclua-o como um atributo *xlmns* no &lt;elemento > do pacote. Veja um exemplo:
+A funcionalidade vem do namespace **uap2** . Para obter acesso a esse namespace em seu manifesto, inclua-o como um atributo *xlmns* no elemento > do pacote de &lt;. Aqui está um exemplo:
 
 ```xml
 <Package
-    xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
-    xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
-    xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
-    xmlns:uap2="http://schemas.microsoft.com/appx/manifest/uap/windows10/2"
+    xmlns="https://schemas.microsoft.com/appx/manifest/foundation/windows10"
+    xmlns:mp="https://schemas.microsoft.com/appx/2014/phone/manifest"
+    xmlns:uap="https://schemas.microsoft.com/appx/manifest/uap/windows10"
+    xmlns:uap2="https://schemas.microsoft.com/appx/manifest/uap/windows10/2"
     IgnorableNamespaces="uap uap2 mp"
     >
 ```
@@ -222,7 +245,7 @@ m_surfaceObserver->ObservedSurfacesChanged += ref new TypedEventHandler<SpatialS
 
 Nosso exemplo de código também é configurado para responder a esses eventos. Vamos examinar como fazemos isso.
 
-**OBSERVAÇÃO:** Essa pode não ser a maneira mais eficiente para seu aplicativo manipular dados de malha. Esse código é escrito para fins de clareza e não é otimizado.
+**Observação:** Essa pode não ser a maneira mais eficiente para seu aplicativo manipular dados de malha. Esse código é escrito para fins de clareza e não é otimizado.
 
 Os dados de malha de superfície são fornecidos em um mapa somente leitura que armazena objetos [SpatialSurfaceInfo](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.surfaces.spatialsurfaceinfo.aspx) usando [Platform:: GUIDs](https://msdn.microsoft.com/library/windows/desktop/aa373931.aspx) como valores de chave.
 
@@ -367,7 +390,7 @@ CreateDirectXBuffer(device, D3D11_BIND_VERTEX_BUFFER, positions, m_vertexPositio
 }
 ```
 
-**OBSERVAÇÃO:** Para a função auxiliar CreateDirectXBuffer usada no trecho anterior, consulte o exemplo de código de mapeamento de superfície: SurfaceMesh. cpp, GetDataFromIBuffer. h. Agora a criação do recurso do dispositivo está concluída e a malha é considerada como carregada e pronta para atualização e renderização.
+**Observação:** Para a função auxiliar CreateDirectXBuffer usada no trecho anterior, consulte o exemplo de código de mapeamento de superfície: SurfaceMesh. cpp, GetDataFromIBuffer. h. Agora a criação do recurso do dispositivo está concluída e a malha é considerada como carregada e pronta para atualização e renderização.
 
 ### <a name="update-and-render-surface-meshes"></a>Atualizar e renderizar malhas de superfície
 
@@ -474,7 +497,7 @@ else
 }
 ```
 
-Quando isso for feito, vamos fazer um loop em nossas malhas e dizer a cada uma delas para se desenhar. **OBSERVAÇÃO:** Este código de exemplo não é otimizado para usar qualquer tipo de remoção de frustum, mas você deve incluir esse recurso em seu aplicativo.
+Quando isso for feito, vamos fazer um loop em nossas malhas e dizer a cada uma delas para se desenhar. **Observação:** Este código de exemplo não é otimizado para usar qualquer tipo de remoção de frustum, mas você deve incluir esse recurso em seu aplicativo.
 
 ```cpp
 std::lock_guard<std::mutex> guard(m_meshCollectionLock);
@@ -638,7 +661,7 @@ Também podemos simplesmente desenhar as malhas de superfície para os buffers d
 Aqui, nosso exemplo de código diz ao renderizador de malha para desenhar a coleção. Desta vez, não especificamos uma passagem somente de profundidade, portanto, ele anexará um sombreador de pixel e concluirá o pipeline de renderização usando os destinos que especificamos para a câmera virtual atual.
 
 ```cpp
-// SR mesh rendering pass: Draw SR mesh over the world.
+// Spatial Mapping mesh rendering pass: Draw Spatial Mapping mesh over the world.
 context->ClearDepthStencilView(pCameraResources->GetSurfaceOcclusionDepthStencilView(), D3D11_CLEAR_DEPTH | D3D11_CLEAR_STENCIL, 1.0f, 0);
 
 // Set the render target to the current holographic camera's back buffer, and set the depth buffer.

@@ -6,20 +6,20 @@ ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
 keywords: sistema de coordenadas, sistema de coordenadas espaciais, somente orientação, escala em posição, escala de posto, escala de sala, escala mundial, 360 graus, encaixado, posicionado, sala, mundo, escala, posição, orientação, fixo, anexado, estágio, âncora, âncora espacial, World-Locked, bloqueio mundial, corpo-bloqueado, bloqueio de corpo, limites, persistência, compartilhamento, perda de rastreamento, âncora espacial da nuvem
-ms.openlocfilehash: f4b945a3ffb83b9ac0a94e0d793a19939aece3bb
-ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
+ms.openlocfilehash: 228f46f1962c39012571234da47ccec07aa67118
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66829865"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73436147"
 ---
 # <a name="coordinate-systems"></a>Sistemas de coordenadas
 
-Em seu núcleo, os aplicativos de realidade misturada colocam os [hologramas](hologram.md) em seu mundo que parecem e são semelhantes a objetos reais. Isso envolve o posicionamento preciso e a orientação desses hologramas em lugares do mundo que são significativos para o usuário, seja o mundo de sua sala física ou um realm que você criou. Ao se deparar com a posição e a orientação de seus hologramas, ou qualquer outra geometria como as posições [olhar](gaze.md) Ray ou [Hand](gestures.md), o Windows fornece vários sistemas de coordenadas do mundo real em que a geometria pode ser expressa, conhecida como  **sistemas de coordenadas espaciais**.
+Em seu núcleo, os aplicativos de realidade misturada colocam os [hologramas](hologram.md) em seu mundo que parecem e são semelhantes a objetos reais. Isso envolve o posicionamento preciso e a orientação desses hologramas em lugares do mundo que são significativos para o usuário, seja o mundo de sua sala física ou um realm que você criou. Ao se deparar com a posição e a orientação de seus hologramas, ou qualquer outra geometria como as posições [olhar](gaze-and-commit.md) Ray ou [Hand](hands-and-tools.md), o Windows fornece vários sistemas de coordenadas do mundo real em que a geometria pode ser expressa, conhecida como  **sistemas de coordenadas espaciais**.
 
 <br>
 
->[!VIDEO https://www.youtube.com/embed/TneGSeqVAXQ]
+<iframe width="940" height="530" src="https://www.youtube.com/embed/TneGSeqVAXQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## <a name="device-support"></a>Suporte a dispositivos
 
@@ -33,7 +33,7 @@ Em seu núcleo, os aplicativos de realidade misturada colocam os [hologramas](ho
     <tr>
         <td><strong>Recurso</strong></td>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens (1ª geração)</strong></a></td>
-        <td><strong>HoloLens 2</strong></td>
+        <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></td>
         <td><a href="immersive-headset-hardware-details.md"><strong>Headsets imersivos</strong></a></td>
     </tr>
      <tr>
@@ -66,6 +66,12 @@ Em seu núcleo, os aplicativos de realidade misturada colocam os [hologramas](ho
         <td>✔️</td>
         <td>❌</td>
     </tr>
+    <tr>
+        <td><a href="scene-understanding.md">Reconhecimento de cena</a></td>
+        <td>❌</td>
+        <td>✔️</td>
+        <td>❌</td>
+    </tr>
 </table>
 
 ## <a name="mixed-reality-experience-scales"></a>Escalas de experiência de realidade misturada
@@ -75,7 +81,7 @@ Os aplicativos de realidade misturada podem projetar para uma ampla gama de expe
 
 | Escala de experiência | Requisitos | Experiência de exemplo | 
 |----------|----------|----------|
-|  **Somente orientação** |  **Orientação do headset** (alinhado por gravidade) |  Visualizador de vídeo 360 ° | 
+|  **Somente orientação** |  **Orientação do headset** (alinhada a gravidade) |  Visualizador de vídeo 360 ° | 
 |  **Escala colocada** |  Acima, além da **posição do headset** em relação à posição zero |  Jogo de corrida ou simulador de espaço | 
 |  **Escala em posição** |  Acima, mais a **origem do estágio de andar** |  Jogo de ação onde você Patou e subexposição em vigor  | 
 |  **Espaço em escala** |  Acima, mais o **polígono dos limites do estágio** |  Jogo de quebra-cabeça onde você se movimenta pelo quebra-cabeça | 
@@ -93,7 +99,7 @@ Esses dimensionamentos de experiência seguem um modelo de "aninhamento de bobbl
 |  **Sim** |  **Sim** |  **Sim** |  **Sim** |  Não |  **Espaço** | 
 |  **Sim** |  **Sim** |  **Sim** |  **Sim** |  **Sim** |  **Países** | 
 
-Observe que o conjunto de teste de referência ainda não tem suporte no HoloLens. Um aplicativo de escala de sala no HoloLens atualmente precisa usar o [mapeamento espacial](spatial-mapping.md) para localizar o piso do usuário e as paredes.
+Observe que o conjunto de teste de referência ainda não tem suporte no HoloLens. Um aplicativo de escala de sala no HoloLens atualmente precisa usar o [mapeamento espacial](spatial-mapping.md) ou a [compreensão da cena](scene-understanding.md) para localizar o piso e as paredes do usuário.
 
 ## <a name="spatial-coordinate-systems"></a>Sistemas de coordenadas espaciais
 

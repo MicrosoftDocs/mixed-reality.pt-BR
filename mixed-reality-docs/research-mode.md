@@ -6,24 +6,24 @@ ms.author: dgedye
 ms.date: 05/03/2018
 ms.topic: article
 keywords: modo de pesquisa, CV, RS4, visão computacional, pesquisa, HoloLens
-ms.openlocfilehash: e9a7683f8d582b459185066e74655e8f2b236db4
-ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
+ms.openlocfilehash: 307df0c226221422f13af09d8f4944c22ead3865
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66829936"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438309"
 ---
 # <a name="hololens-research-mode"></a>Modo de pesquisa do HoloLens
 
 > [!NOTE]
 > Esse recurso foi adicionado como parte da [atualização do Windows 10 de abril de 2018](release-notes-april-2018.md) para o HoloLens e não está disponível em versões anteriores.
 
-O modo de pesquisa é um novo recurso do HoloLens que fornece acesso de aplicativo aos sensores de chave no dispositivo. Elas incluem:
+O modo de pesquisa é um novo recurso do HoloLens que fornece acesso de aplicativo aos sensores de chave no dispositivo. São elas:
 - As quatro câmeras de acompanhamento de ambiente usadas pelo sistema para criação de mapa e acompanhamento de cabeçalho.
-- Duas versões dos dados da câmera de profundidade – uma para a detecção de alta frequência (30 FPS) de profundidade, normalmente usada e a outra para a detecção de profundidade de menor frequência (1 FPS), usada atualmente pelo mapeamento espacial,
+- Duas versões dos dados da câmera de profundidade – uma para a detecção de alta frequência (30 FPS) de profundidade, normalmente usada e a outra para a detecção de profundidade de extrema frequência (1-5 FPS), atualmente usada pelo mapeamento espacial,
 - Duas versões de um fluxo IR-reflectivity, usadas pelo HoloLens para computar a profundidade, mas valiosas por si só, à medida que essas imagens são acesas do HoloLens e não afetam razoavelmente por luz ambiente.
 
-![Captura de tela do aplicativo de modo de pesquisa](images/sensor-stream-viewer.jpg)<br>
+captura de tela do aplicativo do modo de pesquisa ![](images/sensor-stream-viewer.jpg)<br>
 *Uma captura de realidade misturada de um aplicativo de teste que exibe os oito fluxos de sensor disponíveis no modo de pesquisa*
 
 ## <a name="device-support"></a>Suporte a dispositivos
@@ -59,7 +59,7 @@ O modo de pesquisa é um submodo do modo de desenvolvedor. Primeiro, você preci
 
 Em seguida, usando um navegador da Web que está conectado à mesma rede Wi-Fi que o seu HoloLens, navegue até o endereço IP do seu HoloLens (obtido por meio **das configurações > rede & Internet > Wi-Fi > Propriedades de hardware**). Este é o [portal do dispositivo](using-the-windows-device-portal.md)e você encontrará uma página "modo de pesquisa" na seção "sistema" do portal:
 
-![Guia modo de pesquisa do portal do dispositivo do HoloLens](images/ResearchModeDevPortal.png)<br>
+guia modo de pesquisa ![do portal do dispositivo de HoloLens](images/ResearchModeDevPortal.png)<br>
 *Modo de pesquisa no portal do dispositivo do HoloLens*
 
 Depois de selecionar **permitir o acesso aos fluxos de sensor**, você precisará reinicializar o HoloLens. Você pode fazer isso no portal do dispositivo, sob o item de menu "Power" na parte superior da página.

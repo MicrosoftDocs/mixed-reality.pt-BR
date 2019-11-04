@@ -6,12 +6,12 @@ ms.author: crderr
 ms.date: 03/21/2018
 ms.topic: article
 keywords: critérios de qualidade do aplicativo, realidade misturada, aplicativo de realidade misturada
-ms.openlocfilehash: 8e635585c0981d81bf71fb5577232af28f2a0fdd
-ms.sourcegitcommit: 150d258a23130026c8792da383a3993657841fb4
+ms.openlocfilehash: f98111ebe9aacc30778e86501be41e6ac5f6d165
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67024489"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437042"
 ---
 # <a name="app-quality-criteria"></a>Critérios de qualidade do aplicativo
 
@@ -203,7 +203,7 @@ Os desalinhamentos de hologramas com objetos físicos (se a intenção de serem 
 
 #### <a name="tools-and-tutorials"></a>Ferramentas e tutoriais
 
-* [MR Espacial 230: mapeamento espacial](holograms-230.md)
+* [MR espacial 230: mapeamento espacial](holograms-230.md)
 * [Sr Toolkit, bibliotecas de mapeamento espacial](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit/SpatialMapping/README.md)
 * [Sr Companion Kit, exemplo de calibração de pôster](https://github.com/Microsoft/MixedRealityCompanionKit/tree/master/PosterCalibrationSample)
 * [Sr Companion Kit, Kinect IPD](https://github.com/Microsoft/MixedRealityCompanionKit/tree/master/KinectIPD)
@@ -246,7 +246,7 @@ Os desenvolvedores de aplicativos controlam onde os olhos dos usuários converge
 </tr><tr>
 <td> Corresponde</td><td> O conteúdo está dentro das diretrizes de visualização e movimentação, mas uso inadequado ou não uso do plano de recorte.</td>
 </tr><tr>
-<td> Recuperação </td><td> O conteúdo é apresentado muito próximo ( &lt;normalmente 1,25 m ou &lt;50cm para hologramas estáticos que exigem uma observação mais detalhada.)</td>
+<td> Recuperação </td><td> O conteúdo é apresentado muito próximo (normalmente &lt;1,25 m ou &lt;50cm para hologramas fixos que exigem uma observação mais detalhada.)</td>
 </tr>
 </table>
 
@@ -368,7 +368,7 @@ No Windows Mixed Reality, o mecanismo de áudio fornece o componente auricular d
 
 #### <a name="tools-and-tutorials"></a>Ferramentas e tutoriais
 
-* [MR Espacial 220: som espacial](holograms-220.md)
+* [MR espacial 220: som espacial](holograms-220.md)
 * [MRToolkit, áudio espacial](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit/SpatialSound/README.md)
 
 ## <a name="focus-on-holographic-frame-fov-boundaries"></a>Foco nos limites do quadro Holographic (FOV)
@@ -488,7 +488,7 @@ Os hologramas devem reagir à posição do usuário praticamente da mesma maneir
 
 #### <a name="tools-and-tutorials"></a>Ferramentas e tutoriais
 
-* [Entrada do MR 210: foco](holograms-210.md)
+* [Entrada MR 210: olhar](holograms-210.md)
 
 ## <a name="input-interaction-clarity"></a>Clareza da interação de entrada
 
@@ -546,9 +546,7 @@ A clareza da interação de entrada é essencial para a usabilidade de um aplica
 * [Focar com a cabeça e esperar](gaze-and-dwell.md)
 * [Cursores](cursors.md)
 * [Conforto e olhar](comfort.md#gaze-direction)
-* [Gestos](gestures.md)
 * [Entrada de voz](voice-input.md)
-* [Comando de voz](voice-design.md)
 * [Controladores de movimentos](motion-controllers.md)
 * [Guia de portabilidade de entrada para Unity](input-porting-guide-for-unity.md)
 * [Entrada do teclado no Unity](keyboard-input-in-unity.md)
@@ -562,13 +560,13 @@ A clareza da interação de entrada é essencial para a usabilidade de um aplica
 
 #### <a name="tools-and-tutorials"></a>Ferramentas e tutoriais
 
-* [Estudo de caso: A busca de computação mais pessoal](case-study-the-pursuit-of-more-personal-computing.md#less-interface-in-your-face)
-* [Estudo de conversão: HoloStudio da interface do usuário e de design de interação](case-study-3-holostudio-ui-and-interaction-design-learnings.md)
-* [Aplicativo de exemplo: Tabela periódica dos elementos](periodic-table-of-the-elements.md)
-* [Aplicativo de exemplo: Módulo lunar](lunar-module.md)
-* [Entrada do MR 210: foco](holograms-210.md)
-* [Entrada do MR 211: Gestos](holograms-211.md)
-* [Entrada do MR 212: voz](holograms-212.md)
+* [Estudo de caso: a busca de mais computação pessoal](case-study-the-pursuit-of-more-personal-computing.md#less-interface-in-your-face)
+* [Estudo de conversão: aprendizado de HoloStudio de interface do usuário e interação do projeto](case-study-3-holostudio-ui-and-interaction-design-learnings.md)
+* [Aplicativo de exemplo: tabela periódica dos elementos](periodic-table-of-the-elements.md)
+* [Aplicativo de exemplo: módulo lunar](lunar-module.md)
+* [Entrada MR 210: olhar](holograms-210.md)
+* [Entrada MR 211: gestos](holograms-211.md)
+* [Entrada MR 212: voz](holograms-212.md)
 
 ## <a name="interactable-objects"></a>Objetos que interagem
 
@@ -619,7 +617,7 @@ Um botão tem muito tempo uma metáfora usada para disparar um evento no mundo a
 * [Objeto interativo](interactable-object.md)
 * [Texto no Unity](text-in-unity.md)
 * [Caixa delimitadora e barra de aplicativos](app-bar-and-bounding-box.md)
-* [Comando de voz](voice-design.md)
+* [Entrada de voz](voice-input.md)
 
 #### <a name="tools-and-tutorials"></a>Ferramentas e tutoriais
 
@@ -672,9 +670,9 @@ Os aplicativos que exigem dados de mapeamento espacial dependem do dispositivo p
 #### <a name="documentation"></a>Documentação
 
 * [Visualização de varredura do ambiente](room-scan-visualization.md)
-* [Estudo de caso: Expandindo os recursos de mapeamento espacial do HoloLens](case-study-expanding-the-spatial-mapping-capabilities-of-hololens.md)
-* [Estudo de caso: Design de som espacial para HoloTour](case-study-spatial-sound-design-for-holotour.md)
-* [Estudo de caso: Criando uma experiência de imersão em fragmentos](case-study-creating-an-immersive-experience-in-fragments.md)
+* [Estudo de caso: expandindo os recursos de mapeamento espacial do HoloLens](case-study-expanding-the-spatial-mapping-capabilities-of-hololens.md)
+* [Estudo de caso: design de som espacial para HoloTour](case-study-spatial-sound-design-for-holotour.md)
+* [Estudo de caso: criando uma experiência de imersão em fragmentos](case-study-creating-an-immersive-experience-in-fragments.md)
 
 #### <a name="tools-and-tutorials"></a>Ferramentas e tutoriais
 

@@ -6,21 +6,21 @@ ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
 keywords: teclado, entrada, Unity, touchscreenkeyboard
-ms.openlocfilehash: 35f6f0df993931eea35db7b167110b341ea0c0f2
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: f506415f9658d9723bf31b339d63fe4569100ace
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63515732"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438556"
 ---
 # <a name="keyboard-input-in-unity"></a>Entrada de teclado no Unity
 
 **Namespace:** *UnityEngine*<br>
- **Tipo**: *[TouchScreenKeyboard](http://docs.unity3d.com/ScriptReference/TouchScreenKeyboard.html)*
+ **Tipo**:  *[TouchScreenKeyboard](https://docs.unity3d.com/ScriptReference/TouchScreenKeyboard.html)*
 
 Embora o HoloLens dê suporte a muitas formas de entrada, incluindo teclados Bluetooth, a maioria dos aplicativos não pode pressupor que todos os usuários terão um Keyboard físico disponível. Se seu aplicativo exigir entrada de texto, alguma forma de teclado na tela deverá ser fornecida.
 
-O Unity fornece a classe *[TouchScreenKeyboard](http://docs.unity3d.com/ScriptReference/TouchScreenKeyboard.html)* para aceitar a entrada de teclado quando não há nenhum teclado físico disponível.
+O Unity fornece a classe *[TouchScreenKeyboard](https://docs.unity3d.com/ScriptReference/TouchScreenKeyboard.html)* para aceitar a entrada de teclado quando não há nenhum teclado físico disponível.
 
 ## <a name="hololens-system-keyboard-behavior-in-unity"></a>Comportamento do teclado do sistema do HoloLens no Unity
 

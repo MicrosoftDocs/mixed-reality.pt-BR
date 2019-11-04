@@ -1,19 +1,19 @@
 ---
-title: Estudo de caso-previsão de processo do AfterNow, criação de protótipos, construção
+title: Estudo de caso – processo do AfterNow
 description: Processo – previsão, criação de protótipos do AfterNow
 author: rwinj
 ms.author: randyw
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Realidade mista do Windows, AfterNow, previsão, criação de protótipos, compilação
-ms.openlocfilehash: 778ce2ff8ff69a5cdff1cc22b192100a9ab33347
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: d555c61c5c8ba917c99a94da594551658a717e70
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63523472"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73436941"
 ---
-# <a name="case-study---afternows-process---envisioning-prototyping-building"></a>Estudo de caso-previsão de processo do AfterNow, criação de protótipos, construção
+# <a name="case-study---afternows-process"></a>Estudo de caso – processo do AfterNow
 
 Em [AfterNow](https://www.afternow.io/), trabalhamos com você para transformar suas ideias e aspirações em produtos concretos e totalmente operacionais e experiências prontas para o mercado. Mas antes de escrevermos uma única linha de código, criamos um plano gráfico por meio de um processo chamado previsão.
 
@@ -67,7 +67,7 @@ O objetivo deste exercício é aprimorar nossa compreensão coletiva do problema
 
 Nossa prática recomendada para esse processo ocorre quando pegamos observações individuais em como podemos (HMW) o formato. HMW é uma técnica desenvolvida por P & G no 70s. É um método de observação que assume a forma de uma pergunta que, por fim, resulta em anotações organizadas e priorizadas. Vamos anotar uma ideia por nota auto-adesiva, que começa com a frase "como isso é possível". Por exemplo, como podemos comunicar os valores de [sua empresa] em realidade misturada?
 
-![Organizar e decidir](images/organize-and-decide-640px.png)<br>
+![organizar e decidir](images/organize-and-decide-640px.png)<br>
 *Organizar e decidir*
 
 **Organizar HMW notas**
@@ -88,7 +88,7 @@ Circule o cliente mais importante e um momento de destino no mapa e examine as p
 
 Todos no grupo Sprint pesquisarão os produtos que eles gostam que resolvem problemas semelhantes aos que estamos lidando. Em seguida, demonstraremos nossas descobertas para o restante do grupo. Isso nos dá uma boa ideia dos recursos que encontramos interessantes.
 
-**Observações**
+**Registra**
 
 Passamos 20 minutos acompanhando silenciosamente a sala para reunir anotações.
 
@@ -104,7 +104,7 @@ Gastamos oito minutos criando oito quadros. É aí que podemos esboçar rapidame
 
 Passamos 30 minutos esboçando storyboards. Pegamos as melhores variações de ideias de 8s de louco e criamos um storyboard de três painéis da ideia.
 
-![Esboço de storyboards](images/sketching-storyboards-640px.png)<br>
+![esboços dos storyboards](images/sketching-storyboards-640px.png)<br>
 *Esboço de storyboards*
 
 ## <a name="day-3---decide"></a>DIA 3-decidir

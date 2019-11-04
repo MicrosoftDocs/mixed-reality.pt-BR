@@ -6,17 +6,17 @@ ms.author: jemccull
 ms.date: 07/11/2018
 ms.topic: article
 keywords: Azure, realidade mista, Academia, borda, IOT Edge, tutorial, API, notificação, funções, tabelas, hololens, imersão, VR, IOT, máquina virtual, Ubuntu, Python
-ms.openlocfilehash: ec669b799e7c46a9a4ed87674ed78e50f816c9e9
-ms.sourcegitcommit: 3b32339c5d5c79eaecd84ed27254a8f4321731f1
+ms.openlocfilehash: 7f56c7931bb036d14ab3aa9156706b1f6247195c
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70047238"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437968"
 ---
 >[!NOTE]
 >Os tutoriais misturados do Academia de realidade foram projetados com o HoloLens (1º gen) e com o fone de cabeça de imersão de realidade misturada.  Como tal, achamos que é importante deixar esses tutoriais em vigor para os desenvolvedores que ainda estão procurando orientação no desenvolvimento para esses dispositivos.  Esses tutoriais **_não_** serão atualizados com os conjuntos de ferramentas e as interações mais recentes usados para o HoloLens 2.  Eles serão mantidos para continuar a trabalhar nos dispositivos com suporte. Haverá uma nova série de tutoriais que serão publicados no futuro, que demonstrarão como desenvolver para o HoloLens 2.  Esse aviso será atualizado com um link para esses tutoriais quando eles forem postados.
 
-# <a name="mr-and-azure-313-iot-hub-service"></a>Sr e Azure 313: Serviço do Hub IoT
+# <a name="mr-and-azure-313-iot-hub-service"></a>Sr e Azure 313: serviço do Hub IoT
 
 ![resultado do curso](images/AzureLabs-Lab313-00.png)
 
@@ -35,13 +35,13 @@ Ao concluir este curso, você aprenderá a:
 
 Os serviços que serão usados incluem:
 
-- O **Hub IOT do Azure** é um serviço Microsoft Azure que permite aos desenvolvedores conectar, monitorar e gerenciar ativos de IOT. Para obter mais informações, visite a página de [ **serviço do Hub IOT do Azure** ](https://azure.microsoft.com/en-au/services/iot-hub/).
+- O **Hub IOT do Azure** é um serviço Microsoft Azure que permite aos desenvolvedores conectar, monitorar e gerenciar ativos de IOT. Para obter mais informações, visite a página de [ **serviço do Hub IOT do Azure** ](https://azure.microsoft.com/services/iot-hub/).
 
-- O **registro de contêiner do Azure** é um serviço Microsoft Azure que permite aos desenvolvedores armazenar imagens de contêiner para vários tipos de contêineres. Para obter mais informações, visite a página de [ **serviço do registro de contêiner do Azure** ](https://azure.microsoft.com/en-au/services/container-registry/).
+- O **registro de contêiner do Azure** é um serviço Microsoft Azure que permite aos desenvolvedores armazenar imagens de contêiner para vários tipos de contêineres. Para obter mais informações, visite a página de [ **serviço do registro de contêiner do Azure** ](https://azure.microsoft.com/services/container-registry/).
 
-- O **azure aplicativo de funções** é um serviço Microsoft Azure, que permite aos desenvolvedores executar pequenas partes de código, ' Functions ', no Azure. Isso fornece uma maneira de delegar trabalho para a nuvem, em vez de seu aplicativo local, que pode ter muitos benefícios. O **Azure Functions** dá suporte a várias linguagens\#de desenvolvimento\#, incluindo C, F, Node. js, Java e php. Para obter mais informações, visite a [página **Azure Functions** ](https://docs.microsoft.com/azure/azure-functions/functions-overview).
+- O **azure aplicativo de funções** é um serviço Microsoft Azure, que permite aos desenvolvedores executar pequenas partes de código, ' Functions ', no Azure. Isso fornece uma maneira de delegar trabalho para a nuvem, em vez de seu aplicativo local, que pode ter muitos benefícios. O **Azure Functions** dá suporte a várias linguagens de desenvolvimento, incluindo C\#, F\#, Node. js, Java e php. Para obter mais informações, visite a [página **Azure Functions** ](https://docs.microsoft.com/azure/azure-functions/functions-overview).
 
-- **Armazenamento do Azure: As** tabelas são um serviço Microsoft Azure, que permite aos desenvolvedores armazenar dados estruturados, não SQL, na nuvem, tornando-os facilmente acessíveis em qualquer lugar. O serviço apresenta um design sem esquema, permitindo a evolução das tabelas conforme necessário e, portanto, é muito flexível. Para obter mais informações, visite a [página **tabelas do Azure**](https://docs.microsoft.com/azure/cosmos-db/table-storage-overview)
+- **Armazenamento do Azure: as tabelas** são um serviço Microsoft Azure, que permite aos desenvolvedores armazenar dados estruturados, não SQL, na nuvem, tornando-os facilmente acessíveis em qualquer lugar. O serviço apresenta um design sem esquema, permitindo a evolução das tabelas conforme necessário e, portanto, é muito flexível. Para obter mais informações, visite a [página **tabelas do Azure**](https://docs.microsoft.com/azure/cosmos-db/table-storage-overview)
 
 Este curso ensinará a você como configurar e usar o serviço do Hub IoT e, em seguida, Visualizar uma resposta fornecida por um dispositivo. Será necessário aplicar esses conceitos a uma configuração de serviço do Hub IoT personalizada, que você pode estar criando.
 
@@ -51,7 +51,7 @@ Este curso ensinará a você como configurar e usar o serviço do Hub IoT e, em 
 <tr>
 <th>Course</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Headsets imersivos</a></th>
 </tr><tr>
-<td> Sr e Azure 313: Serviço do Hub IoT</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
+<td> Sr e Azure 313: serviço do Hub IoT</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
 </tr>
 </table>
 
@@ -72,7 +72,7 @@ O hardware e o software a seguir são necessários:
 - SDK do Windows 10 (versão mais recente)
 - Um HoloLens, **modo de desenvolvedor habilitado**
 - Visual Studio 2017.15.4 (usado somente para acessar o Azure cloud Explorer)
-- Acesso à Internet para o Azure e para o serviço Hub IoT. Para obter mais informações, siga este [link para a página de serviço do Hub IOT](https://azure.microsoft.com/en-au/services/iot-hub/)
+- Acesso à Internet para o Azure e para o serviço Hub IoT. Para obter mais informações, siga este [link para a página de serviço do Hub IOT](https://azure.microsoft.com/services/iot-hub/)
 - Um modelo de aprendizado de máquina. Se você não tiver seu próprio modelo pronto para usar, [poderá usar o modelo fornecido com este curso](https://github.com/Microsoft/HolographicAcademy/raw/Azure-MixedReality-Labs/Azure%20Mixed%20Reality%20Labs/MR%20and%20Azure%20313%20-%20IoT%20Hub%20Service/Custom%20Vision%20Model.zip).
 - Software **Hyper-V** habilitado em seu computador de desenvolvimento do Windows 10.
 - Uma máquina virtual executando o Ubuntu (16,4 ou 18,4), em execução em seu computador de desenvolvimento ou, como alternativa, você pode usar um computador separado executando o Linux (Ubuntu 16,4 ou 18,4). Você pode encontrar mais informações sobre como criar uma VM no Windows usando o Hyper-V no [capítulo "antes de começar"](#before-you-start). (https://docs.microsoft.com/virtualization/hyper-v-on-windows/quick-start/quick-create-virtual-machine).  
@@ -82,14 +82,14 @@ O hardware e o software a seguir são necessários:
 ### <a name="before-you-start"></a>Antes de começar
 
 1. Configure e teste seu HoloLens. Se você precisar de suporte para configurar seu HoloLens, [visite o artigo configuração do hololens](https://docs.microsoft.com/hololens/hololens-setup).
-2. É uma boa ideia executar a calibragem e o **ajuste do sensor** ao começar a desenvolver um novo aplicativo do HoloLens (às vezes, ele pode ajudar a executar essas tarefas para cada usuário).
+2. É uma boa ideia executar a **calibragem** e o **ajuste do sensor** ao começar a desenvolver um novo aplicativo do HoloLens (às vezes, ele pode ajudar a executar essas tarefas para cada usuário).
 
 Para obter ajuda sobre calibragem, siga este [link para o artigo Calibration do HoloLens](calibration.md#hololens-2).
 
 Para obter ajuda sobre o ajuste do sensor, siga este [link para o artigo de ajuste do sensor do HoloLens](sensor-tuning.md).
 
 3. Configure sua **máquina virtual Ubuntu** usando o **Hyper-V**. Os recursos a seguir ajudarão você com o processo.
-    1.  Primeiro, siga este link para [baixar o ISO 16.04.4 LTS (Xenial Xerus)](http://au.releases.ubuntu.com/16.04/). Selecione a **imagem da área de trabalho do PC de 64 bits (amd64)** .
+    1.  Primeiro, siga este link para [baixar o ISO 16.04.4 LTS (Xenial Xerus)](https://au.releases.ubuntu.com/16.04/). Selecione a **imagem da área de trabalho do PC de 64 bits (amd64)** .
     2.  Verifique se o **Hyper-V** está habilitado em seu computador com Windows 10. Você pode seguir este link para obter orientação sobre como [instalar e habilitar o Hyper-V no Windows 10](https://docs.microsoft.com/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v).
     3.  Inicie o Hyper-V e crie uma nova VM Ubuntu. Você pode seguir este link para obter um [guia passo a passo sobre como criar uma VM com o Hyper-V](https://docs.microsoft.com/virtualization/hyper-v-on-windows/quick-start/create-virtual-machine). Quando solicitado a **"instalar um sistema operacional de um arquivo de imagem inicializável"** , selecione a **ISO do Ubuntu** que você baixou anteriormente.
 
@@ -113,7 +113,7 @@ No entanto, você pode seguir estas etapas se desejar usar seu próprio modelo d
 
     ![folha de exportação](images/AzureLabs-Lab313-02.png)
 
-3. Na folha, clique em **arquivo**do Docker.
+3. Na folha, clique em **arquivo do Docker**.
 
     ![selecionar Docker](images/AzureLabs-Lab313-03.png)
 
@@ -193,7 +193,7 @@ Agora, você começará a criação e a configuração do seu **serviço de Hub 
 
     3. Insira o **nome** desejado para esta instância de serviço.    
 
-5.  Na parte inferior da página, clique em **avançar: Tamanho e escala**.
+5.  Na parte inferior da página, clique em **Avançar: tamanho e escala**.
 
     ![criar instância de armazenamento](images/AzureLabs-Lab313-12.png)
 
@@ -246,7 +246,7 @@ Para criar e implantar módulos para borda do *Hub IOT*, você precisará dos se
     [![baixar o Docker para Windows](images/AzureLabs-Lab313-21.png)](https://store.docker.com/editions/community/docker-ce-desktop-windows)
 
     > [!IMPORTANT]
-    > O Docker requer *Windows 10 pro*, *Enterprise 14393*ou *Windows Server 2016 RTM*para ser executado. Se você estiver executando outras versões do Windows 10, poderá tentar instalar o Docker usando a caixa de [ferramentas](https://docs.docker.com/toolbox/toolbox_install_windows/)do Docker.
+    > O Docker requer *Windows 10 pro*, *Enterprise 14393*ou *Windows Server 2016 RTM*para ser executado. Se você estiver executando outras versões do Windows 10, poderá tentar instalar o Docker usando a caixa de [Ferramentas do Docker](https://docs.docker.com/toolbox/toolbox_install_windows/).
 
 2.  [Python 3,6](https://www.python.org/downloads/).
 
@@ -254,7 +254,7 @@ Para criar e implantar módulos para borda do *Hub IOT*, você precisará dos se
 
 3.  [Visual Studio Code (também conhecido como vs Code)](https://code.visualstudio.com/download).
 
-    [![baixar VS Code](images/AzureLabs-Lab313-23.png)](https://code.visualstudio.com/download)
+    [Download de ![VS Code](images/AzureLabs-Lab313-23.png)](https://code.visualstudio.com/download)
 
 Depois de instalar o software mencionado acima, será necessário reiniciar o computador.
 
@@ -279,7 +279,7 @@ Agora você pode passar para a configuração de seu dispositivo **que executa o
 
 2.  Ao longo deste capítulo, você pode ser solicitado, por *terminal*, por permissão para usar o armazenamento do dispositivo e, para inserir **y/n** (Sim ou não), digite **' y '** e pressione a tecla **Enter** , para aceitar.
 
-3.  Depois que esse comando for concluído, use o seguinte comando parainstalar a ondulação:
+3.  Depois que esse comando for concluído, use o seguinte comando para instalar a **ondulação**:
 
     ```bash
         sudo apt install curl
@@ -320,7 +320,7 @@ Agora você pode passar para a configuração de seu dispositivo **que executa o
 
     1.  Use as teclas de direção do teclado para rolar para baixo (você precisará rolar uma pequena maneira) para chegar à linha que contém ":
 
-        "ADICIONAR CADEIA DE CONEXÃO DE**DISPOSITIVOAQUI>"\<** .
+        " **\<adicionar cadeia de conexão de dispositivo aqui >** ".
 
     2. Substitua a linha, **incluindo os colchetes**, pela **cadeia de conexão do dispositivo** que você anotou anteriormente.
 
@@ -370,7 +370,7 @@ Agora você pode passar para a configuração de seu dispositivo **que executa o
 
 4. Depois que as extensões forem instaladas, feche e abra novamente VS Code.
 
-5. Com vs Code abrir mais uma vez, navegue para **Exibir** > **terminal integrado**.
+5. Com VS Code abrir mais uma vez, navegue para **exibir** > **terminal integrado**.
 
 6. Agora, você instalará o **CookieCutter**. No terminal, execute o seguinte comando bash:
 
@@ -381,7 +381,7 @@ Agora você pode passar para a configuração de seu dispositivo **que executa o
     > [! Dica] se você tiver problemas com este comando: 
     >1. Reinicie VS Code e/ou seu computador.
     >2. Pode ser necessário alternar o terminal de **vs Code** para aquele que você esteve usando para instalar o Python, ou seja, o **PowerShell** (especialmente caso o ambiente do Python já tenha sido instalado em seu computador). Com o terminal aberto, você encontrará o menu suspenso no lado direito do terminal.
-     ![Criar seu contêiner](images/AzureLabs-Lab313-24b.png) 
+     ![criar seu contêiner](images/AzureLabs-Lab313-24b.png) 
     >3. Verifique se o caminho de instalação do **Python** foi adicionado como **variável de ambiente** em seu computador. CookieCutter deve fazer parte do mesmo caminho de local. Siga este [link para obter mais informações sobre variáveis de ambiente](https://msdn.microsoft.com/library/windows/desktop/ms682653(v=vs.85).aspx), 
 
 7. Depois que o **CookieCutter** terminar de instalar, você deverá reiniciar o computador para que o **CookieCutter** seja reconhecido como um comando, no ambiente do sistema.
@@ -390,9 +390,9 @@ Agora você pode passar para a configuração de seu dispositivo **que executa o
 
 Neste ponto, você precisa criar o contêiner, com o módulo, para ser enviado por push para o *registro de contêiner*. Depois de enviar o contêiner por push, você usará o serviço de *borda do Hub IOT* para implantá-lo em seu dispositivo, que está executando o *tempo de execução de IOT Edge*.
 
-1. Em vs Code, clique em **Exibir** > **paleta de comandos**.
+1. Em VS Code, clique em **exibir** > **paleta de comandos**.
 
-2. Na paleta, pesquise e execute **Azure IOT Edge: Nova solução**do IOT Edge.
+2. Na paleta, pesquise e execute **Azure IOT Edge: nova solução do IOT Edge**.
 
 3. Navegue até um local onde você deseja criar sua solução. Pressione a tecla **Enter** para aceitar o local.
 
@@ -402,7 +402,7 @@ Neste ponto, você precisa criar o contêiner, com o módulo, para ser enviado p
 
 6. Dê um nome ao seu módulo. Pressione a tecla **Enter** para confirmar o nome do seu módulo. Certifique-se de anotar (com o bloco de notas) do nome do módulo, pois ele será usado posteriormente.
 
-7. Você observará que um endereço de *repositório de imagem* do Docker predefinido aparecerá na paleta. Ele se parecerá com:
+7. Você observará que um endereço de *repositório de imagem do Docker* predefinido aparecerá na paleta. Ele se parecerá com:
 
     **localhost: 5000/-o nome do seu módulo-** . 
 
@@ -674,7 +674,7 @@ Em seguida, você criará a pasta *imagens* , usada pelo script Python para veri
 4.  Abra o arquivo chamado **Deployment. Template. JSON**e substitua seu conteúdo seguindo a diretriz abaixo:
 
     1. Como você terá sua própria estrutura JSON exclusiva, será necessário editá-la manualmente (em vez de copiar um exemplo). Para facilitar, use a imagem abaixo como guia.
-    2. Áreas que terão aparência diferente da sua, mas que **não devem**ser alteradas, serão realçadas como amarelos.
+    2. Áreas que terão aparência diferente da sua, mas que **não devem ser alteradas, serão realçadas como amarelos**.
     3. **As seções que você precisa excluir são um vermelho realçado.**
     4. Tenha cuidado para excluir os colchetes corretos e também remova as vírgulas.
 
@@ -744,7 +744,7 @@ Em seguida, você criará a pasta *imagens* , usada pelo script Python para veri
 
 ## <a name="chapter-9---package-the-solution-as-a-container"></a>Capítulo 9-empacotar a solução como um contêiner
 
-1.  Agora você está pronto para "empacotar" seus arquivos como um contêiner e enviá-los por push para o **registro de contêiner do Azure**. Em vs Code, abra o *terminal integrado* (**Exibir** > **terminal integrado** ou **Ctrl**+ **\`** ) e use a linha a seguir para fazer logon no Docker (substitua os valores do comando com as credenciais do seu **ACR (registro de contêiner do Azure)** ):
+1.  Agora você está pronto para "empacotar" seus arquivos como um contêiner e enviá-los por push para o **registro de contêiner do Azure**. Em VS Code, abra o *terminal integrado* (**exibição** > **terminal integrado** ou **+** **\`** ) e use a linha a seguir para fazer logon no **Docker** (substitua os valores do comando por as credenciais do seu **ACR (registro de contêiner do Azure)** ):
 
     ```bash
         docker login -u <ACR username> -p <ACR password> <ACR login server>
@@ -754,7 +754,7 @@ Em seguida, você criará a pasta *imagens* , usada pelo script Python para veri
 
     ![criar implantação](images/AzureLabs-Lab313-30.png)
 
-3. Abra a **paleta de comandos** novamente e pesquise pelo **Azure:** Entre. Siga os prompts usando suas credenciais de conta do Azure; VS Code fornecerá uma opção para *copiar e abrir*, que copiará o código do dispositivo que você precisará em breve e abrirá o navegador da Web padrão. Quando solicitado, Cole o código do dispositivo para autenticar seu computador.
+3. Abra a **paleta de comandos** novamente e pesquise **Azure: entrar**. Siga os prompts usando suas credenciais de conta do Azure; VS Code fornecerá uma opção para *copiar e abrir*, que copiará o código do dispositivo que você precisará em breve e abrirá o navegador da Web padrão. Quando solicitado, Cole o código do dispositivo para autenticar seu computador.
 
     ![copiar e abrir](images/AzureLabs-Lab313-31.png)
 
@@ -890,7 +890,7 @@ Navegue de volta para o portal do Azure, no qual você criará um serviço de ta
 
 9. Na página Visão geral, no lado direito, clique em **tabelas**.
     
-    ![tabelas](images/AzureLabs-Lab313-40.png)
+    ![Tabelas](images/AzureLabs-Lab313-40.png)
 
 10. O painel à direita será alterado para mostrar as informações do **serviço tabela** , onde você precisa adicionar uma nova tabela. Para fazer isso, clique no botão **+ tabela** no canto superior esquerdo.
 
@@ -916,7 +916,7 @@ Agora que a conta de armazenamento do **serviço de tabela** foi configurada, é
 
 1. Abra o **Visual Studio** (**não** Visual Studio Code).
 
-2. No menu, clique em **Exibir** > **Cloud Explorer**.
+2. No menu, clique em **exibir** > **Cloud Explorer**.
 
     ![abrir o Cloud Explorer](images/AzureLabs-Lab313-45.png)
 
@@ -935,7 +935,7 @@ Agora que a conta de armazenamento do **serviço de tabela** foi configurada, é
 
 5. Uma vez expandido, sua **conta de armazenamento** recém-criada deve estar disponível. Clique na seta à esquerda do armazenamento e, depois de expandida, localize as **tabelas** e clique na seta ao lado dela para revelar a **tabela** que você criou no último capítulo. Clique duas vezes em sua **tabela**.
 
-6. Sua tabela será aberta no centro da janela do Visual Studio. Clique no ícone de tabela com **+** o (mais) nele.
+6. Sua tabela será aberta no centro da janela do Visual Studio. Clique no ícone de tabela com o **+** (mais) nele.
 
     ![Adicionar nova tabela](images/AzureLabs-Lab313-48.png)
 
@@ -1039,7 +1039,7 @@ Primeiro, você precisa criar um arquivo que permitirá que o Azure function car
 
     ![ir para o recurso](images/AzureLabs-Lab313-57.png)
 
-11. No lado esquerdo do painel novo, clique no **+** ícone (mais) ao lado de *funções*, para criar uma nova função.
+11. No lado esquerdo do painel novo, clique no ícone de **+** (mais) ao lado de *funções*, para criar uma nova função.
 
     ![Adicionar nova função](images/AzureLabs-Lab313-58.png)
 
@@ -1143,7 +1143,7 @@ Primeiro, você precisa criar um arquivo que permitirá que o Azure function car
 
 20. Com o código em vigor, clique em **salvar**.
 
-21. Em seguida, clique **\<** no ícone (seta), no lado direito da página.
+21. Em seguida, clique no ícone **\<** (seta), no lado direito da página.
 
     ![função personalizada](images/AzureLabs-Lab313-66.png)
 

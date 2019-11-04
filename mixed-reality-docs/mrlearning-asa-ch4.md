@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realidade misturada, unity, tutorial, hololens
-ms.openlocfilehash: b29f27284c352d27fb1d4d4de701a1ebc2a7cd1c
-ms.sourcegitcommit: 30246ab9b9be44a3c707061753e53d4bf401eb6b
+ms.openlocfilehash: 141aa90f2bf5d90527a0fe1e6a812c1ce56bd0eb
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/22/2019
-ms.locfileid: "67327978"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437796"
 ---
 # <a name="photon-correct-me-if-im-wrong"></a>Photon (corrigir-me se eu estiver errado)
 
@@ -29,7 +29,7 @@ Seus
 
 ### <a name="setting-up-photon"></a>Configurando o Photon
 
-1. Configure uma conta do [Photon](https://dashboard.photonengine.com/en-US/Account/SignUp) . Fazer isso consistirá em entrada seu email e passar por algumas etapas de verificação.
+1. Configure uma conta do [Photon](https://dashboard.photonengine.com//Account/SignUp) . Fazer isso consistirá em entrada seu email e passar por algumas etapas de verificação.
    
 
 ![Module2Chapter4step1im](images/Module2chapter4step1im.png)
@@ -62,7 +62,7 @@ Seus
 
 ![Module2Chapter4step4im](images/Module2chapter4step5im.png)
 
-> Observação: Se você tiver alguma dúvida sobre o endereço IP ou outras perguntas semelhantes, poderá encontrar a maioria das suas informações na barra de ferramentas (conforme mostrado na imagem abaixo).
+> Observação: se você tiver alguma dúvida sobre o endereço IP ou outras perguntas semelhantes, poderá encontrar a maioria das suas informações na barra de ferramentas (conforme mostrado na imagem abaixo).
 >
 > ![Module2Chapter4step4im](images/Module2chapter4noteim.png)
 
@@ -86,7 +86,7 @@ Seus
 
 9. Crie um novo projeto do Unity. Abra o Hub do Unity e clique em "novo". Nomeie-o como "HLSharingProject". Em seguida, clique em criar. 
 
-   > Anotações Isso pode levar até 2 minutos para ser carregado, com base na velocidade do seu computador.
+   > Observação: isso pode levar até 2 minutos para ser carregado, com base na velocidade do seu computador.
 
 ![Module2Chapter4step9im](images/Module2chapter4step9im.png)
 
@@ -140,7 +140,7 @@ Seus
 
 ![Module2Chapter4step19im](images/Module2chapter4step19im.png)
 
-> Anotações Verifique também se a caixa de seleção ao lado de "cenas/HLSharedProjectMain" também está marcada.
+> Observação: Verifique também se a caixa de seleção ao lado de "cenas/HLSharedProjectMain" também está marcada.
 
 20. Em "configurações de publicação" no painel Inspetor, role para baixo até "recursos" e verifique se apenas as seguintes caixas de seleção estão marcadas:
 
@@ -148,7 +148,7 @@ Seus
 - servidor de cliente de Internet
 - servidor de cliente de rede privada
 - câmera/Webcam
-- Microfone
+- microfone
 
 21. Da mesma forma que a etapa 12, a próxima etapa seria importar outro pacote personalizado chamado "lição 2", que pode ser baixado [aqui.] [o link do lição 2. unitypackage é inserido aqui] Importe esse pacote.
 
@@ -158,7 +158,7 @@ Seus
 
 ![Module2Chapter4step22im](images/Module2chapter4step21im.PNG)
 
-> Anotações Você pode observar que um pop-up aparece ao clicar no pré-fabricado, solicitando-lhe informações sobre o TMP Essentials. Clique em "importar os fundamentos do TMP", pois eles serão necessários.
+> Observação: você pode notar que um pop-up aparece ao clicar no pré-fabricado, solicitando-lhe informações sobre o TMP Essentials. Clique em "importar os fundamentos do TMP", pois eles serão necessários.
 >
 > ![Module2Chapter4note3im](images/Module2chapter4note3im.PNG)
 

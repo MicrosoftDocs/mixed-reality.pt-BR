@@ -1,17 +1,17 @@
 ---
 title: Comando de voz
 description: Foco, gestos e voz (GGV) são o principal meio de interação do HoloLens. Este artigo fornece orientação sobre design de voz.
-author: shentan
+author: shengkait
 ms.author: shentan
 ms.date: 04/21/2019
 ms.topic: article
 keywords: Windows Mixed Reality, design, interação, voz
-ms.openlocfilehash: 724ef87dae1c731289af51504a518193c20b7d96
-ms.sourcegitcommit: b0b1b8e1182cce93929d409706cdaa99ff24fdee
+ms.openlocfilehash: bfcaef787b22f17da9627a53c92c43f5cb1e1d9b
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68387648"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437219"
 ---
 # <a name="voice-commanding"></a>Comando de voz
 
@@ -30,7 +30,7 @@ Ao usar comandos de voz, o olhar normalmente é usado como mecanismo de focaliza
     <tr>
         <td><strong>Recurso</strong></td>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens (1ª geração)</strong></a></td>
-        <td><strong>HoloLens 2</strong></td>
+        <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></td>
         <td><a href="immersive-headset-hardware-details.md"><strong>Headsets imersivos</strong></a></td>
     </tr>
      <tr>
@@ -50,10 +50,10 @@ Considere a adição de comandos de voz em qualquer experiência que você criar
 ### <a name="best-practices"></a>Práticas recomendadas
 
 A seguir, algumas práticas que auxiliarão em um reconhecimento de fala perfeito.
-* **Use comandos concisos** - quando possível, escolha palavras com duas ou mais sílabas. Palavras com uma sílaba tendem a empregar sons de vogais diferentes quando faladas por pessoas com sotaques diferentes. Exemplo: "Reproduzir o vídeo" é melhor do que "Reproduzir o vídeo selecionado no momento"
-* **Use vocabulário simples** - exemplo: "Mostrar nota" é melhor do que "Mostrar observação"
+* **Use comandos concisos** - quando possível, escolha palavras com duas ou mais sílabas. Palavras com uma sílaba tendem a empregar sons de vogais diferentes quando faladas por pessoas com sotaques diferentes. Exemplo: "reproduzir vídeo" é melhor do que "reproduzir o vídeo selecionado no momento"
+* **Usar vocabulário simples** -exemplo: "mostrar nota" é melhor do que "mostrar letreiro"
 * **Certifique-se de que os comandos não sejam destrutivos** - certifique-se de que as ações que podem ser executadas por um comando de voz não sejam destrutivas e possam ser facilmente desfeitas caso outra pessoa falando nas proximidades do usuário acidentalmente acione um comando.
-* **Evite comandos com sons semelhantes** - evite registrar vários comandos de fala muito semelhantes. Exemplo: "Mostrar mais" e "Mostrar gerais" tem sons semelhantes.
+* **Evite comandos com sons semelhantes** - evite registrar vários comandos de fala muito semelhantes. Exemplo: "mostrar mais" e "mostrar armazenamento" pode ser um som muito semelhante.
 * **Cancele o registro do aplicativo quando não estiver em uso** - quando seu aplicativo não estiver em um estado em que um determinado comando de fala seja válido, considere cancelar seu registro para evitar a confusão com outros comandos.
 * **Teste com sotaques diferentes** - teste seu aplicativo com usuários que tenham sotaques diferentes.
 * **Mantenha a consistência nos comandos de voz** - se "Voltar" vai para a página anterior, mantenha esse comportamento em seus aplicativos.
@@ -65,7 +65,7 @@ A seguir, algumas práticas que auxiliarão em um reconhecimento de fala perfeit
 
 Dizer "selecionar" a qualquer momento ativará tudo o que o cursor estiver apontando. 
 
->Observação: No HoloLens 2, o cursor de foco primeiro precisa ser invocado pela palavra "selecionar". Diga, "selecionar" novamente para ativar. Para ocultar o cursor de foco, basta usar as mãos – feche e abra os dedos indicador e polegar, ou toque em um objeto. 
+>Observação: no HoloLens 2, o cursor olhar precisa primeiro ser invocado dizendo a palavra "Select". Diga, "selecionar" novamente para ativar. Para ocultar o cursor de foco, basta usar as mãos – feche e abra os dedos indicador e polegar, ou toque em um objeto. 
 
 ### <a name="see-it-say-it"></a>Veja e diga
 
@@ -114,5 +114,5 @@ Quando a voz é aplicada corretamente, o usuário sabe **o que pode dizer e obt�
 * Posso usar a voz para comandar as coisas no quadro holográfico do HoloLens?
 
 ## <a name="see-also"></a>Consulte também
-* [Gestos](gestures.md)
+* [Gestos](gaze-and-commit.md#composite-gestures)
 * [Focar com a cabeça e esperar](gaze-and-dwell.md)

@@ -6,33 +6,33 @@ ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
 keywords: exibição de imersão, exibição 2D, Slate, aplicativo
-ms.openlocfilehash: 2cf65941616ac6906d40e4b4616311317ac705d3
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: a5b50df5be31d66a866e691d9e059bcf38672064
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63516927"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437018"
 ---
 # <a name="app-views"></a>Modos de exibição do aplicativo
 
-Os aplicativos do Windows podem conter dois tipos de exibições, exibições de **imersão** e **exibições 2D**. Os aplicativos podem alternar entre suas várias exibições de imersão e exibições 2D, mostrando suas exibições 2D em um monitor como uma janela ou um headset como um Slate. Os aplicativos que têm pelo menos uma exibição de imersão são categorizados como **aplicativos de realidade misturada**. Aplicativos que nunca têm uma exibição imersiva são **aplicativos 2D**.
+Os aplicativos do Windows podem conter dois tipos de exibições, **exibições de imersão** e **exibições 2D**. Os aplicativos podem alternar entre suas várias exibições de imersão e exibições 2D, mostrando suas exibições 2D em um monitor como uma janela ou um headset como um Slate. Os aplicativos que têm pelo menos uma exibição de imersão são categorizados como **aplicativos de realidade misturada**. Aplicativos que nunca têm uma exibição imersiva são **aplicativos 2D**.
 
 ## <a name="immersive-views"></a>Exibições de imersão
 
-Uma exibição imersiva dá ao seu aplicativo a capacidade de criar hologramas no mundo todo ou aprofundarr o usuário em um ambiente virtual. Quando um aplicativo está desenhando na exibição de imersão, nenhum outro aplicativo está desenhando&mdash;ao mesmo tempo que os hologramas de vários aplicativos não são compostos juntos. Ao ajustar continuamente a perspectiva da qual seu [aplicativo renderiza](rendering.md) sua cena para corresponder aos movimentos de cabeça do usuário, seu aplicativo pode renderizar hologramas trancados ao [mundo](coordinate-systems.md) que permanecem em um ponto fixo no mundo real, ou pode renderizar um mundo virtual que contém sua posição como um usuário se move dentro dela.
+Uma exibição imersiva dá ao seu aplicativo a capacidade de criar hologramas no mundo todo ou aprofundarr o usuário em um ambiente virtual. Quando um aplicativo está desenhando na exibição de imersão, nenhum outro aplicativo está desenhando ao mesmo tempo&mdash;os hologramas de vários aplicativos não são compostos juntos. Ao ajustar continuamente a perspectiva da qual seu [aplicativo renderiza](rendering.md) sua cena para corresponder aos movimentos de cabeça do usuário, seu aplicativo pode renderizar hologramas [trancados ao mundo](coordinate-systems.md) que permanecem em um ponto fixo no mundo real, ou pode renderizar um mundo virtual que contém sua posição como um usuário se move dentro dela.
 
-![Quando estiver em uma exibição de imersão, os hologramas podem ser colocados no mundo todo.](images/designoverview.jpg)<br>
+![em uma exibição de imersão, os hologramas podem ser colocados no mundo todo.](images/designoverview-940px.jpg)<br>
 *Quando estiver em uma exibição de imersão, os hologramas podem ser colocados no mundo todo*
 
 No [HoloLens](hololens-hardware-details.md), seu aplicativo renderiza seus hologramas sobre os arredores do mundo real do usuário. Em um [headset de imersão de realidade mista do Windows](immersive-headset-hardware-details.md), o usuário não pode ver o mundo real e, portanto, seu aplicativo deve renderizar tudo o que o usuário verá.
 
 O [Windows Mixed Reality Home](navigating-the-windows-mixed-reality-home.md) (incluindo o menu iniciar e os hologramas que você colocou em todo o ambiente) também não é renderizado em uma exibição imersiva. No HoloLens, todas as notificações do sistema que ocorrem enquanto uma exibição imersiva é exibida serão retransmitidas forma audível pela Cortana e o usuário poderá responder com a entrada de voz.
 
-Enquanto estiver em uma exibição de imersão, seu aplicativo também será responsável por lidar com todas as entradas. A entrada na realidade mista do Windows é composta de [olhar](gaze.md), [gestos](gestures.md) (somente de HoloLens), controladores de [voz](voice-input.md) e de [animação](motion-controllers.md) (somente headsets de imersão).
+Enquanto estiver em uma exibição de imersão, seu aplicativo também será responsável por lidar com todas as entradas. A entrada na realidade mista do Windows é composta de [olhar](gaze-and-commit.md), [gestos](gaze-and-commit.md#composite-gestures) (somente de HoloLens), controladores de [voz](voice-input.md) e de [animação](motion-controllers.md) (somente headsets de imersão).
 
 ## <a name="2d-views"></a>exibições 2D
 
-![Vários modos de exibição 2D dispostos em toda a página inicial do Windows Mixed Reality](images/teleportation-640px.png)<br>
+![várias exibições 2D dispostas em relação à página inicial do Windows Mixed Reality](images/teleportation-940px.png)<br>
 *Vários aplicativos com uma exibição 2D posicionada em toda a página inicial do Windows Mixed Reality*
 
 Um aplicativo com uma exibição 2D é exibido na [página inicial do Windows Mixed Reality](navigating-the-windows-mixed-reality-home.md) (às vezes chamada de "Shell") como um Slate virtual, renderizado junto com os iniciadores de aplicativo e outros hologramas que o usuário colocou em seu mundo. O usuário pode ajustar esse Slate para movê-lo e dimensioná-lo, embora permaneça em uma resolução fixa, independentemente de seu tamanho. Se o primeiro modo de exibição do seu aplicativo for uma exibição 2D, seu conteúdo 2D preencherá o mesmo Tablet usado para iniciar o aplicativo.

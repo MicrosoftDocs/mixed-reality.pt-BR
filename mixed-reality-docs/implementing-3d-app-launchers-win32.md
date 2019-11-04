@@ -6,21 +6,21 @@ ms.author: thmignon
 ms.date: 07/12/2018
 ms.topic: article
 keywords: 3D, logotipo, ícone, modelagem, iniciador, iniciador 3D, bloco, cubo ao vivo, Win32
-ms.openlocfilehash: ac3d5e17614bcd1072f6843a46bf0525f441f130
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 87eadfb5184f9fb5f8d513ab00a2a954e71df376
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63515607"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438577"
 ---
 # <a name="implement-3d-app-launchers-win32-apps"></a>Implementar inicializadores de aplicativo 3D (aplicativos Win32)
 
 > [!NOTE]
-> Esse recurso só está disponível para computadores que executam os vôos mais recentes do [Windows](https://insider.windows.com) Insider (RS5), compilação 17704 e mais recente.
+> Esse recurso só está disponível para computadores que executam os vôos mais recentes do [Windows Insider](https://insider.windows.com) (RS5), compilação 17704 e mais recente.
 
 O [Windows Mixed Reality Home](navigating-the-windows-mixed-reality-home.md) é o ponto de partida onde os usuários vão antes de iniciar os aplicativos. Por padrão, os aplicativos e jogos de imersão do Win32 devem ser iniciados de fora do headset e não aparecerão na lista "todos os aplicativos" no menu Iniciar da realidade do Windows Mixed. No entanto, seguindo as instruções neste artigo para implementar um inicializador de aplicativo 3D, sua experiência de imersão do Win32 VR pode ser iniciada no menu iniciar e no ambiente inicial do Windows Mixed Reality.
 
-Isso só é verdadeiro para experiências de imersão do Win32 distributied fora do fluxo. Para experiências de VR [distribuídas por meio do vapor](updating-your-steamvr-application-for-windows-mixed-reality.md), atualizamos [a realidade mista do Windows para SteamVR beta](https://steamcommunity.com/games/719950/announcements/detail/1687045485866139800) junto com os vôos do Windows Insider RS5 mais recentes para que os títulos de SteamVR sejam exibidos no menu Iniciar do Windows Mixed Reality na lista "todos os aplicativos" automaticamente usando um iniciador padrão. Em outras palavras, o método descrito neste artigo é desnecessário para títulos SteamVR e será substituído pela funcionalidade Windows Mixed Reality para SteamVR beta.
+Isso só é verdadeiro para experiências de imersão do Win32 distributied fora do fluxo. Para experiências de VR [distribuídas por meio do vapor](updating-your-steamvr-application-for-windows-mixed-reality.md), [atualizamos a realidade mista do Windows para SteamVR beta](https://steamcommunity.com/games/719950/announcements/detail/1687045485866139800) junto com os vôos do Windows Insider RS5 mais recentes para que os títulos de SteamVR sejam exibidos no menu Iniciar do Windows Mixed Reality na lista "todos os aplicativos" automaticamente usando um iniciador padrão. Em outras palavras, o método descrito neste artigo é desnecessário para títulos SteamVR e será substituído pela funcionalidade Windows Mixed Reality para SteamVR beta.
 
 ## <a name="3d-app-launcher-creation-process"></a>processo de criação do inicializador de aplicativo 3D
 
@@ -42,18 +42,18 @@ Os aplicativos Win32 serão exibidos na lista "todos os aplicativos" no menu Ini
         * Eles serão usados para o logotipo 2D do aplicativo na lista todos os aplicativos do Windows Mixed Reality e para o menu iniciar na área de trabalho.
         * O caminho do arquivo é relativo à pasta que contém o manifesto dos elementos visuais.
         * Você ainda precisa fornecer um ícone do menu Iniciar do desktop para seu aplicativo por meio dos mecanismos padrão. Isso pode ser diretamente no executável ou no atalho que você criar (por exemplo, via IShellLink:: SetIconLocation).
-        * *Adicional* Você pode usar um arquivo Resources. pri se desejar que o MRT forneça vários tamanhos de ativos para diferentes escalas de resolução e temas de alto contraste.
+        * *Opcional:* Você pode usar um arquivo Resources. pri se desejar que o MRT forneça vários tamanhos de ativos para diferentes escalas de resolução e temas de alto contraste.
     3. Atualize o **caminho do MixedRealityModel** para apontar para o glb para o iniciador do aplicativo 3D
     4. Salve o arquivo com o mesmo nome do arquivo executável, com uma extensão de ". VisualElementsManifest. xml "e salve-o no mesmo diretório. Por exemplo, para o arquivo executável "contoso. exe", o arquivo XML que o acompanha é denominado "contoso. visualelementsmanifest. xml".
 3. **Adicione um atalho** ao seu aplicativo no menu Iniciar do Windows da área de trabalho. Consulte o [exemplo abaixo](#sample-app-launcher-shortcut-creation) para obter uma C++ implementação de exemplo. 
     * Criá-lo em%ALLUSERSPROFILE%\Microsoft\Windows\Start Iniciar\programas (Machine) ou%APPDATA%\Microsoft\Windows\Start Iniciar\programas (User)
     * Se uma atualização alterar o manifesto dos elementos visuais ou os ativos referenciados por ele, o atualizador ou o instalador deverá atualizar o atalho de modo que o manifesto seja analisado e os ativos em cache sejam atualizados.
-4. *Adicional* Se o seu atalho de área de trabalho não apontar diretamente para o EXE do seu aplicativo (por exemplo, se ele invocar um manipulador de protocolo personalizado como "myapp://"), o menu Iniciar não localizará automaticamente o arquivo VisualElementsManifest. XML do aplicativo. Para resolver isso, o atalho deve especificar o caminho do arquivo do manifesto dos elementos visuais usando System. AppUserModel. VisualElementsManifestHintPath (). Isso pode ser definido no atalho usando as mesmas técnicas que System.AppUserModel.ID. Não é necessário usar System.AppUserModel.ID, mas você pode fazer isso se desejar que o atalho corresponda à ID do modelo de usuário do aplicativo explícito, se um for usado.  Consulte a seção [criação de atalho](#sample-app-launcher-shortcut-creation) do iniciador de aplicativo C++ de exemplo abaixo para obter um exemplo.
+4. *Opcional:* Se o seu atalho de área de trabalho não apontar diretamente para o EXE do seu aplicativo (por exemplo, se ele invocar um manipulador de protocolo personalizado como "myapp://"), o menu Iniciar não localizará automaticamente o arquivo VisualElementsManifest. XML do aplicativo. Para resolver isso, o atalho deve especificar o caminho do arquivo do manifesto dos elementos visuais usando System. AppUserModel. VisualElementsManifestHintPath (). Isso pode ser definido no atalho usando as mesmas técnicas que System.AppUserModel.ID. Não é necessário usar System.AppUserModel.ID, mas você pode fazer isso se desejar que o atalho corresponda à ID do modelo de usuário do aplicativo explícito, se um for usado.  Consulte a seção [criação de atalho do iniciador de aplicativo de exemplo](#sample-app-launcher-shortcut-creation) abaixo para obter um C++ exemplo.
 
 ### <a name="sample-visual-elements-manifest"></a>Manifesto de elementos visuais de exemplo
 
 ```xml
-<Application xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Application xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">
   <VisualElements
     ShowNameOnSquare150x150Logo="on"
     Square150x150Logo="YOUR_APP_LOGO_150X150.png"

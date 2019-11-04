@@ -1,25 +1,24 @@
 ---
-title: Atualizando seu aplicativo SteamVR para a realidade mista do Windows
+title: Atualizando seu aplicativo SteamVR
 description: Práticas recomendadas para atualizar seu aplicativo SteamVR para maximizar o compatibilidade com headsets de realidade mista do Windows.
 author: thmignon
 ms.author: thmignon
 ms.date: 03/21/2018
 ms.topic: article
 keywords: SteamVR, compatibilidade
-ms.openlocfilehash: db21651df8e586edf500f0d05def4b1ea5474284
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 6479130b14b8b50828ebecd3a648fd8a425aec15
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63548670"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438208"
 ---
-# <a name="updating-your-steamvr-application-for-windows-mixed-reality"></a>Atualizando seu aplicativo SteamVR para a realidade mista do Windows
-
+# <a name="updating-your-steamvr-application"></a>Atualizando seu aplicativo SteamVR
 Incentivamos os desenvolvedores a testar e otimizar suas experiências de SteamVR para serem executadas em headsets de realidade mista do Windows. Esta documentação aborda os aprimoramentos comuns que os desenvolvedores podem fazer para garantir que sua experiência seja muito boa no Windows Mixed Reality.
 
 ## <a name="initial-setup-instructions"></a>Instruções de instalação inicial
 
-Para começar a testar seu jogo ou aplicativo no Windows Mixed Reality, siga primeiro o nosso [Guia de introdução.](http://aka.ms/WindowsMixedRealitySteamVR)
+Para começar a testar seu jogo ou aplicativo no Windows Mixed Reality, siga primeiro o nosso [Guia de introdução.](https://aka.ms/WindowsMixedRealitySteamVR)
 
 ## <a name="controller-models"></a>Modelos de controlador
 1. Se seu aplicativo renderizar modelos de controlador:
@@ -49,7 +48,7 @@ Os controladores de movimento do Windows Mixed Reality usam um motor haptics pad
 
 ## <a name="launching-steamvr-apps-from-windows-mixed-reality-start-menu"></a>Iniciando aplicativos SteamVR no menu Iniciar do Windows Mixed Reality
 
-Para experiências de VR distribuídas por meio do vapor, [atualizamos a realidade mista do Windows para SteamVR beta](https://steamcommunity.com/games/719950/announcements/detail/1687045485866139800) junto com os vôos do [Windows](https://insider.windows.com) Insider RS5 mais recentes para que os títulos de SteamVR agora apareçam no menu Iniciar do Windows Mixed realm em "todos os aplicativos" listar automaticamente. Com essas versões de software instaladas, os clientes agora podem iniciar títulos de SteamVR diretamente de dentro do Windows Mixed Reality Home sem remover seus headsets.
+Para experiências de VR distribuídas por meio do vapor, [atualizamos a realidade mista do Windows para SteamVR beta](https://steamcommunity.com/games/719950/announcements/detail/1687045485866139800) junto com os vôos do [Windows Insider](https://insider.windows.com) RS5 mais recentes para que os títulos de SteamVR agora apareçam no menu Iniciar do Windows Mixed realm em "todos os aplicativos" listar automaticamente. Com essas versões de software instaladas, os clientes agora podem iniciar títulos de SteamVR diretamente de dentro do Windows Mixed Reality Home sem remover seus headsets.
 
 ## <a name="windows-mixed-reality-logo"></a>Logotipo do Windows Mixed Reality
 
@@ -59,7 +58,7 @@ Para exibir o suporte à realidade mista do Windows para seu título, vá para o
 
 Seus comentários são inúteis quando se trata de melhorar a experiência de SteamVR do Windows Mixed Reality. Envie todos os comentários e bugs por meio do [Hub de comentários do Windows](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/filing-feedback). Aqui estão algumas [dicas sobre como tornar seus comentários do SteamVR tão úteis quanto possível](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/using-steamvr-with-windows-mixed-reality#sharing-feedback-on-steamvr).
 
-Se você tiver dúvidas ou comentários para compartilhar, também poderá entrar em contato conosco em nosso [Fórum de fluxo](http://steamcommunity.com/app/719950/discussions/).
+Se você tiver dúvidas ou comentários para compartilhar, também poderá entrar em contato conosco em nosso [Fórum de fluxo](https://steamcommunity.com/app/719950/discussions/).
 
 ## <a name="faqs-and-troubleshooting"></a>Perguntas frequentes e solução de problemas
 

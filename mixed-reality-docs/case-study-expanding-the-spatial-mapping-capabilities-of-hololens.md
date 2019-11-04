@@ -2,20 +2,23 @@
 title: Estudo de caso – expandindo os recursos de mapeamento espacial do HoloLens
 description: Ao criar nossos primeiros aplicativos para o Microsoft HoloLens, estamos ansiosos para ver a distância dos limites do mapeamento espacial no dispositivo.
 author: jevertt
-ms.author: jevertt
+ms.author: jemccull
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Realidade mista do Windows, HoloLens, mapeamento espacial
-ms.openlocfilehash: 602b629afa5900ff34c28b3a3a32725af06590b7
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 5142cb383d4408b29eb17eb5ede84d19b2533dc4
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63522670"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73436726"
 ---
 # <a name="case-study---expanding-the-spatial-mapping-capabilities-of-hololens"></a>Estudo de caso – expandindo os recursos de mapeamento espacial do HoloLens
 
 Ao criar nossos primeiros aplicativos para o Microsoft HoloLens, estamos ansiosos para ver a distância dos limites do mapeamento espacial no dispositivo. Jeff Evertt, engenheiro de software da Microsoft estúdios, explica como uma nova tecnologia foi desenvolvida fora da necessidade de mais controle sobre como os hologramas são colocados no ambiente real do usuário.
+
+> [!NOTE]
+> O HoloLens 2 implementa uma nova [cena que entende o tempo de execução](scene-understanding.md), que fornece aos desenvolvedores de realidade misturada uma representação de ambiente estruturada e de alto nível projetada para tornar o desenvolvimento para aplicativos com reconhecimento de ambiente intuitivo. 
 
 ## <a name="watch-the-video"></a>Assista ao vídeo
 
@@ -23,9 +26,9 @@ Ao criar nossos primeiros aplicativos para o Microsoft HoloLens, estamos ansioso
 
 ## <a name="beyond-spatial-mapping"></a>Além do mapeamento espacial
 
-Enquanto estávamos trabalhando em [fragmentos](https://www.microsoft.com/p/fragments/9nblggh5ggm8) e [jovens conkers](https://www.microsoft.com/p/young-conker/9nblggh5ggk1), dois dos primeiros jogos para o HoloLens, descobrimos que, ao fazer o posicionamento de procedimentos dos hologramas no mundo físico, precisávamos de um nível mais alto de compreensão sobre o ambiente. Cada jogo teve suas próprias necessidades de posicionamento específicas: Em fragmentos, por exemplo, queríamos ser capaz de distinguir entre superfícies diferentes, como a base ou uma tabela, para inserir pistas em locais relevantes. Também queríamos ser capazes de identificar superfícies em que os caracteres Holographic de tamanho de vida pudessem se sentar, como um sofá ou uma cadeira. Em Conker jovem, queríamos que Conker e seus adversários consigam usar superfícies levantadas na sala de um jogador como plataformas.
+Enquanto estávamos trabalhando em [fragmentos](https://www.microsoft.com/p/fragments/9nblggh5ggm8) e [jovens conkers](https://www.microsoft.com/p/young-conker/9nblggh5ggk1), dois dos primeiros jogos para o HoloLens, descobrimos que, ao fazer o posicionamento de procedimentos dos hologramas no mundo físico, precisávamos de um nível mais alto de compreensão sobre o ambiente. Cada jogo teve suas próprias necessidades de posicionamento específicas: em fragmentos, por exemplo, queríamos ser capaz de distinguir entre diferentes superfícies, como o piso ou uma tabela, para colocar pistas em locais relevantes. Também queríamos ser capazes de identificar superfícies em que os caracteres Holographic de tamanho de vida pudessem se sentar, como um sofá ou uma cadeira. Em Conker jovem, queríamos que Conker e seus adversários consigam usar superfícies levantadas na sala de um jogador como plataformas.
 
-[Asobo estúdios](http://www.asobostudio.com/index.html), nosso parceiro de desenvolvimento para esses jogos, enfrentou esse problema e criou uma tecnologia que estende os recursos de mapeamento espacial do HoloLens. Usando isso, poderíamos analisar a sala de um jogador e identificar superfícies como paredes, tabelas, cadeiras e andares. Ele também nos forneceu a capacidade de otimizar em relação a um conjunto de restrições para determinar o melhor posicionamento para objetos Holographic.
+[Asobo estúdios](https://www.asobostudio.com/index.html), nosso parceiro de desenvolvimento para esses jogos, enfrentou esse problema e criou uma tecnologia que estende os recursos de mapeamento espacial do HoloLens. Usando isso, poderíamos analisar a sala de um jogador e identificar superfícies como paredes, tabelas, cadeiras e andares. Ele também nos forneceu a capacidade de otimizar em relação a um conjunto de restrições para determinar o melhor posicionamento para objetos Holographic.
 
 ## <a name="the-spatial-understanding-code"></a>O código de compreensão espacial
 
@@ -34,10 +37,10 @@ Pegamos o código original de Asobo e criamos uma biblioteca que encapsula essa 
 Há muitas consultas úteis incluídas no exemplo de Unity que permitirão que você encontre espaços vazios em paredes, coloque objetos no teto ou em espaços grandes no chão, identifique os locais para os caracteres a serem colocados e uma infinidade de outras consultas de compreensão espacial.
 
 Embora a solução de mapeamento espacial fornecida pelo HoloLens seja projetada para ser genérica o suficiente para atender às necessidades de toda a gama de espaços problemáticos, o módulo de compreensão espacial foi criado para dar suporte às necessidades de dois jogos específicos. Dessa forma, sua solução é estruturada em um processo específico e um conjunto de suposições:
-* **Playspace de tamanho fixo**: O usuário especifica o tamanho máximo de Playspace na chamada de inicialização.
-* **Processo de verificação única**: O processo requer uma fase de verificação discreta na qual o usuário percorra, definindo o Playspace. As funções de consulta não funcionarão até que a verificação seja finalizada.
-* **"Pintura" Playspace controlado por usuário**: Durante a fase de verificação, o usuário move e procura o Playspace, pintando efetivamente as áreas que devem ser incluídas. A malha gerada é importante para fornecer comentários do usuário durante essa fase.
-* **Inportações domésticas ou configuração do Office**: As funções de consulta são projetadas em relação a superfícies simples e paredes em ângulos retos. Essa é uma limitação flexível. No entanto, durante a fase de verificação, uma análise de eixo primário é concluída para otimizar o mosaico de malha ao longo do eixo principal e secundário.
+* **Tamanho fixo Playspace**: o usuário especifica o tamanho máximo de Playspace na chamada de inicialização.
+* **Processo de verificação única**: o processo requer uma fase de verificação discreta na qual o usuário percorra, definindo o Playspace. As funções de consulta não funcionarão até que a verificação seja finalizada.
+* **Playspace controlado pelo usuário "pintando**": durante a fase de verificação, o usuário se move e procura o Playspace, pintando efetivamente as áreas que devem ser incluídas. A malha gerada é importante para fornecer comentários do usuário durante essa fase.
+* **Inportações domésticas ou de instalação do Office**: as funções de consulta são projetadas em relação a superfícies simples e paredes em ângulos retos. Essa é uma limitação flexível. No entanto, durante a fase de verificação, uma análise de eixo primário é concluída para otimizar o mosaico de malha ao longo do eixo principal e secundário.
 
 ### <a name="room-scanning-process"></a>Processo de verificação de sala
 
@@ -52,20 +55,20 @@ Malha de mapeamento espacial em branco e entendendo a malha Playspace em verde
 
 
 O arquivo SpatialUnderstanding.cs incluído gerencia o processo da fase de verificação. Ele chama as seguintes funções:
-* **SpatialUnderstanding_Init**: Chamado uma vez no início.
-* **GeneratePlayspace_InitScan**: Indica que a fase de verificação deve começar.
-* **GeneratePlayspace_UpdateScan_DynamicScan**: Chamado cada quadro para atualizar o processo de verificação. A posição e a orientação da câmera são passadas e são usadas para o processo de pintura Playspace, descrito acima.
-* **GeneratePlayspace_RequestFinish**: Chamado para finalizar o Playspace. Isso usará as áreas "pintadas" durante a fase de verificação para definir e bloquear o Playspace. O aplicativo pode consultar estatísticas durante a fase de verificação, bem como consultar a malha personalizada para fornecer comentários do usuário.
-* **Import_UnderstandingMesh**: Durante a verificação, o comportamento de **SpatialUnderstandingCustomMesh** fornecido pelo módulo e colocado no pré-fabricado de compreensão consultará periodicamente a malha personalizada gerada pelo processo. Além disso, isso é feito mais uma vez após a verificação ter sido finalizada.
+* **SpatialUnderstanding_Init**: chamado uma vez no início.
+* **GeneratePlayspace_InitScan**: indica que a fase de verificação deve começar.
+* **GeneratePlayspace_UpdateScan_DynamicScan**: chamado cada quadro para atualizar o processo de verificação. A posição e a orientação da câmera são passadas e são usadas para o processo de pintura Playspace, descrito acima.
+* **GeneratePlayspace_RequestFinish**: chamado para finalizar o Playspace. Isso usará as áreas "pintadas" durante a fase de verificação para definir e bloquear o Playspace. O aplicativo pode consultar estatísticas durante a fase de verificação, bem como consultar a malha personalizada para fornecer comentários do usuário.
+* **Import_UnderstandingMesh**: durante a verificação, o comportamento de **SpatialUnderstandingCustomMesh** fornecido pelo módulo e colocado na compreensão pré-fabricado consultará periodicamente a malha personalizada gerada pelo processo. Além disso, isso é feito mais uma vez após a verificação ter sido finalizada.
 
 O fluxo de verificação, orientado pelo comportamento **SpatialUnderstanding** , chama **InitScan**e, em seguida, **UpdateScan** cada quadro. Quando a consulta de estatísticas relata cobertura razoável, o usuário pode airtap chamar **RequestFinish** para indicar o fim da fase de verificação. **UpdateScan** continua sendo chamado até que o valor de retorno indique que a dll concluiu o processamento.
 
 ## <a name="the-queries"></a>As consultas
 
 Quando a verificação for concluída, você poderá acessar três tipos diferentes de consultas na interface:
-* **Consultas de topologia**: Essas são consultas rápidas que se baseiam na topologia da sala digitalizada.
-* **Consultas de forma**: Eles utilizam os resultados de suas consultas de topologia para encontrar superfícies horizontais que são uma boa correspondência para as formas personalizadas que você define.
-* **Consultas de posicionamento de objeto**: Essas são consultas mais complexas que encontram o local de melhor ajuste com base em um conjunto de regras e restrições para o objeto.
+* **Consultas de topologia**: essas são consultas rápidas que se baseiam na topologia da sala digitalizada.
+* **Consultas de forma**: elas utilizam os resultados de suas consultas de topologia para localizar superfícies horizontais que são uma boa correspondência para formas personalizadas que você define.
+* **Consultas de posicionamento de objeto**: são consultas mais complexas que encontram o local de melhor ajuste com base em um conjunto de regras e restrições para o objeto.
 
 Além das três consultas principais, há uma interface raycasting que pode ser usada para recuperar tipos de superfície marcada e uma malha de sala Watertight personalizada pode ser copiada.
 
@@ -320,7 +323,7 @@ O código-fonte aberto está disponível em [MixedRealityToolkit](https://github
 
 ## <a name="see-also"></a>Consulte também
 * [Mapeamento espacial](spatial-mapping.md)
-* [Projeto de mapeamento espacial](spatial-mapping-design.md)
+* [Reconhecimento de cena](scene-understanding.md)
 * [Visualização de varredura do ambiente](room-scan-visualization.md)
 * [MixedRealityToolkit-Unity](https://github.com/Microsoft/MixedRealityToolkit-Unity)
-* [Asobo Studio: Lições da frente do desenvolvimento do HoloLens](http://www.gamesindustry.biz/articles/2016-05-12-asobo-lessons-from-the-frontline-of-ar-development)
+* [Asobo Studio: lições da frente do desenvolvimento do HoloLens](https://www.gamesindustry.biz/articles/2016-05-12-asobo-lessons-from-the-frontline-of-ar-development)

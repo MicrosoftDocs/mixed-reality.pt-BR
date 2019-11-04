@@ -1,21 +1,21 @@
 ---
-title: Estudo de caso-capturando e criando conteúdo para HoloTour
-description: O HoloTour para Microsoft HoloLens fornece Tours pessoais 3D de imersão de locais de icônico em todo o mundo.
+title: Estudo de caso-HoloTour
+description: O HoloTour para Microsoft HoloLens fornece Tours pessoais 3D de imersão de locais de icônico em todo o mundo. Esse estudo de caso examinará o processo de captura e criação do conteúdo usado para HoloTour.
 author: DannyAskew
 ms.author: daaske
 ms.date: 03/21/2018
 ms.topic: article
 keywords: HoloTour, HoloLens, realidade misturada do Windows
-ms.openlocfilehash: 6c9e5f44c439310883c8b0271187a7b2263b0854
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 035bec9b0d46a31978bc91f23bfb3a5ee47d6247
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63518241"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73436929"
 ---
-# <a name="case-study---capturing-and-creating-content-for-holotour"></a>Estudo de caso-capturando e criando conteúdo para HoloTour
+# <a name="case-study---holotour"></a>Estudo de caso-HoloTour
 
-O HoloTour para Microsoft HoloLens fornece Tours pessoais 3D de imersão de locais de icônico em todo o mundo. Como os designers, artistas, produtores, designers de áudio e desenvolvedores que trabalham neste projeto foram encontrados, criar uma renderização 3D realmente conhecida de um local conhecido leva a uma mistura exclusiva de criativo e wizardry tecnológicos.
+O HoloTour para Microsoft HoloLens fornece Tours pessoais 3D de imersão de locais de icônico em todo o mundo. Como os designers, artistas, produtores, designers de áudio e desenvolvedores que trabalham neste projeto foram encontrados, criar uma renderização 3D realmente conhecida de um local conhecido leva a uma mistura exclusiva de criativo e wizardry tecnológicos. Esse estudo de caso examinará o processo de captura e criação do conteúdo usado para HoloTour.
 
 ## <a name="the-tech"></a>O Tech
 
@@ -42,7 +42,6 @@ Atualizamos nosso Rig de velcro e papel para um invólucro de câmera impresso e
 
 The 360 ° Camera Rig filming em Machu Picchu. 
 
-
 ## <a name="behind-the-scenes"></a>Nos bastidores
 
 Antes de filming, precisávamos descobrir quais locais queríamos incluir em nosso tour virtual. Roma foi o primeiro local que pretendemos fornecer e queríamos obtê-lo certo, então decidimos fazer uma viagem de protetor com antecedência. Enviamos uma equipe de seis pessoas, incluindo artistas, designers e produtores, para uma visita pessoalmente aos sites que estávamos considerando. A corrida levou cerca de 9 dias – 2,5 para viagem, o restante para filming. (Para Machu Picchu, optamos por não fazer uma corrida de atendente, Pesquisar antecipadamente e reservar alguns dias de buffer para filming.)
@@ -58,7 +57,7 @@ Após a conclusão da corrida do Scout, foi feito um plano final para filming re
 
 ### <a name="capturing-the-video"></a>Capturando o vídeo
 
-Fazer algumas coisas simples durante a captura pode tornar o pós-processamento muito mais fácil. Por exemplo, sempre que unir imagens de várias câmeras, você acabará com os artefatos visuais, pois cada câmera tem uma exibição um pouco diferente. Os objetos mais próximos são a câmera, quanto maior a diferença entre as exibições e quanto maior os artefatos de costura serão. Aqui está uma maneira fácil de visualizar o problema: Mantenha seu polegar na frente do seu rosto e examine-o com apenas um olho. Agora, mude os olhos. Você verá que seu thumb parece se mover em relação ao plano de fundo. Se você mantiver seu polegar mais longe de seu rosto e repetir o experimento, seu thumb parecerá ser movido para menos. Esse movimento aparente é semelhante ao problema de costura que enfrentamos: Seus olhos, como nossas câmeras, não veem exatamente a mesma imagem porque elas são separadas por uma pequena distância.
+Fazer algumas coisas simples durante a captura pode tornar o pós-processamento muito mais fácil. Por exemplo, sempre que unir imagens de várias câmeras, você acabará com os artefatos visuais, pois cada câmera tem uma exibição um pouco diferente. Os objetos mais próximos são a câmera, quanto maior a diferença entre as exibições e quanto maior os artefatos de costura serão. Aqui está uma maneira fácil de visualizar o problema: Mantenha seu polegar na frente do seu rosto e examine-o com apenas um olho. Agora, mude os olhos. Você verá que seu thumb parece se mover em relação ao plano de fundo. Se você mantiver seu polegar mais longe de seu rosto e repetir o experimento, seu thumb parecerá ser movido para menos. Esse movimento aparente é semelhante ao problema de junção que enfrentamos: seus olhos, como nossas câmeras, não veem exatamente a mesma imagem porque elas são separadas por uma pequena distância.
 
 Como é muito mais fácil evitar os piores artefatos enquanto filming do que é necessário corrigi-los no pós-processamento, tentamos manter as pessoas e as coisas longe da câmera na esperança que poderíamos eliminar a necessidade de unir objetos de fechamento. A manutenção de uma grande limpeza em nossa câmera era provavelmente um dos maiores desafios que tínhamos durante a solução e tivemos que fazer com que ela funcione. Trabalhar com guias locais foi uma enorme ajuda no gerenciamento de áreas de trabalho, mas também descobrimos que o uso de sinais — e, às vezes, pequenos coness ou de bolsas de Beans — para marcar nosso espaço de filming era razoavelmente eficaz, especialmente porque só precisávamos obter uma pequena quantidade de imagens em cada local. Geralmente, a melhor maneira de obter uma boa captura era apenas chegar muito cedo na manhã, antes que a maioria das pessoas fosse mostrada.
 
@@ -77,7 +76,7 @@ Capturar o conteúdo de 360 ° é apenas a primeira etapa — é necessário mui
 Um corte aproximado da Pantheon de imagens antes de unir. 
 
 
-Para unir os vídeos, usamos uma ferramenta chamada [PTGui](http://www.ptgui.com/) e a integro ao nosso pipeline de processamento. Como parte do pós-processamento, extraímos os quadros de nossos vídeos e encontramos um padrão de costura que parecia bom para um desses quadros. Em seguida, aplicamos esse padrão a um plug-in personalizado que escrevemos, que permitia que nossos artistas de vídeo ajustassem e ajustassem o padrão de costura diretamente durante a composição nos efeitos após. 
+Para unir os vídeos, usamos uma ferramenta chamada [PTGui](https://www.ptgui.com/) e a integro ao nosso pipeline de processamento. Como parte do pós-processamento, extraímos os quadros de nossos vídeos e encontramos um padrão de costura que parecia bom para um desses quadros. Em seguida, aplicamos esse padrão a um plug-in personalizado que escrevemos, que permitia que nossos artistas de vídeo ajustassem e ajustassem o padrão de costura diretamente durante a composição nos efeitos após. 
 
 ![Captura de tela de PTGui mostrando a seqüência de Pantheon costurada.](images/stitching-tool-pantheon-500px.png)
 

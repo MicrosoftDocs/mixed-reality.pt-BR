@@ -6,12 +6,12 @@ ms.author: ishitak
 ms.date: 08/22/2019
 ms.topic: article
 keywords: realidade misturada, VR, LBE, local
-ms.openlocfilehash: e23d17ff2b07c636c98a9f19a5dd20f4dc558bf7
-ms.sourcegitcommit: 5d3be2d7569d912011ea114c0a283bc3c635d5df
+ms.openlocfilehash: de9cfdaca77574bbbbec96c2e94fddeaa2712c33
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69983394"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437933"
 ---
 # <a name="location-based-entertainment-with-windows-mixed-reality"></a>Entretenimento baseado na localização com realidade do Windows Mixed
 
@@ -23,27 +23,27 @@ Este documento é um guia para começar a usar a realidade mista do Windows na c
 
 ### <a name="hardware"></a>Hardware
 
-**PERGUNTAS Qual hardware está disponível da Microsoft e de seus parceiros que posso usar na minha configuração?**
+**P: qual hardware está disponível na Microsoft e seus parceiros que posso usar na minha configuração?**
 
-R: A Microsoft e seus parceiros OEM oferecem um portfólio atraente de dispositivos para sua escolha, dependendo de suas necessidades.  
+R: a Microsoft e seus parceiros OEM oferecem um portfólio atraente de dispositivos para sua escolha, dependendo de suas necessidades.  
 
 Se as experiências que você está fornecendo aos seus clientes exigem headsets de realidade virtual, os seguintes headsets no mercado da HP, Samsung e Acer são uma ótima opção. Cada headset tem seus próprios atributos diferenciados. Mais detalhes sobre cada um deles.
 
-Reverbo HP: [Detalhes](https://hp.com/go/Reverbpro)
+Reverbo da HP: [detalhes](https://hp.com/go/Reverbpro)
 
-Samsung Odyssey +: [Detalhes](https://www.samsung.com/us/computing/hmd/windows-mixed-reality/hmd-odyssey-windows-mixed-reality-headset-xe800zba-hc1us/)
+Samsung Odyssey +: [detalhes](https://www.samsung.com/us/computing/hmd/windows-mixed-reality/hmd-odyssey-windows-mixed-reality-headset-xe800zba-hc1us/)
 
-Acer [Detalhes](https://www.acer.com/ac/en/US/content/model/VD.R05AP.002)
+Acer: [detalhes](https://www.acer.com/ac/en/US/content/model/VD.R05AP.002)
 
 Se o seu local for especializado em experiências de realidade mistas ou incrementais que exigem o uso de um headset, você poderá adquirir o Microsoft HoloLens 2 (agora aberto para interesse de ordem anterior).  
 
-HoloLens 2: [Interesse de pré-ordem](https://www.microsoft.com/en-us/hololens/buy)
+HoloLens 2: [interesse de pré-ordem](https://www.microsoft.com//hololens/buy)
 
 Se você estiver experimentando experiências que exigem visão avançada da computação, fala e controle de corpo, você pode encontrar o Azure Kinect DK para atender às suas necessidades.  
 
-Kinect do Azure: [Detalhes](https://azure.microsoft.com/en-us/services/kinect-dk/)
+Kinect do Azure: [detalhes](https://azure.microsoft.com//services/kinect-dk/)
 
-**PERGUNTAS Qual é o portfólio de PCs mochila que posso usar para executar minhas experiências de VR no meu PC?**
+**P: Qual é o portfólio de PCs mochila que posso usar para executar minhas experiências de VR no meu PC?**
 
 Para experiências de VR para PC, nossos OEMs oferecem uma seleção incrível de PCs mochila criados exatamente para essa necessidade.
 
@@ -51,7 +51,7 @@ A HP acabou de lançar seu HP VR mochila G2, o PC de portátil mais poderoso do 
 
 ### <a name="setup"></a>Configuração
 
-**PERGUNTAS Como posso configurar com mais facilidade a instalação e personalizar o portal de realidade misturada para o LBE?**
+**P: como posso configurar com mais facilidade a instalação e personalizar o portal de realidade misturada para o LBE?**
 
 >[!NOTE]
 >Este recurso requer a versão 2000.19061.1011.0 ou superior.  
@@ -72,9 +72,9 @@ Ocultar novo no painel lateral – isso impede que o novo painel para você seja
 
 #### <a name="how-to-configure"></a>Como configurar:  
 
-Para definir qualquer uma dessas configurações, você precisa criar um arquivo chamado _userconfig. JSON_ neste diretório: _\\ $env: LOCALAPPDATA\Packages\Microsoft.MixedReality.Portal_8wekyb3d8bbwe\LocalState_
+Para definir qualquer uma dessas configurações, você precisa criar um arquivo chamado _userconfig. JSON_ neste diretório: _$env: LOCALAPPDATA\Packages\Microsoft.MixedReality.Portal_8wekyb3d8bbwe\LocalState\\_
 
-Para a maioria dos usuários, isso parecerá _C:\Users\<username\\ > \AppData\Local\Packages\microsoft.mixedreality.portal_8wekyb3d8bbwe\LocalState_
+Para a maioria dos usuários, isso será como _C:\Users\<nome de usuário > \AppData\Local\Packages\microsoft.mixedreality.portal_8wekyb3d8bbwe\LocalState\\_
 
 O arquivo JSON deve ter o conteúdo abaixo com "true" definido para qualquer uma das configurações acima que você deseja habilitar:  
 
@@ -96,50 +96,60 @@ O arquivo JSON deve ter o conteúdo abaixo com "true" definido para qualquer uma
 }
 ```
  
-**PERGUNTAS Há alguma orientação sobre como configurar o Playspace?**
+**P: há alguma orientação sobre como configurar o Playspace?**
 
-R: A configuração de um Playspace deve ser feita como você faria com uma experiência de configuração do consumidor. O processo de configuração de sala também permitirá que você defina os limites de sala. Mais detalhes sobre como configurar os limites de sala podem ser lidos [aqui](https://docs.microsoft.com/en-us/windows/mixed-reality/enthusiast-guide/set-up-windows-mixed-reality#set-up-your-room-boundary).
+R: a configuração de um Playspace deve ser feita como você faria com uma experiência de configuração do consumidor. O processo de configuração de sala também permitirá que você defina os limites de sala. Mais detalhes sobre como configurar os limites de sala podem ser lidos [aqui](https://docs.microsoft.com//windows/mixed-reality/enthusiast-guide/set-up-windows-mixed-reality#set-up-your-room-boundary).
 
 Conforme discutido no documento acima, a Playspace de coordenadas únicas razoável máxima é cerca de 5mx5m. Se você quiser ter uma área maior, poderá usar o recurso âncoras espaciais na pilha da API do Windows Holographic. Usar essa API exigirá engenharia personalizada nas experiências que você está produzindo.  
 
-Mais detalhes sobre como otimizar o conteúdo para diferentes tamanhos de espaço podem ser lidos [aqui](https://docs.microsoft.com/en-us/windows/mixed-reality/coordinate-systems).
+Mais detalhes sobre como otimizar o conteúdo para diferentes tamanhos de espaço podem ser lidos [aqui](https://docs.microsoft.com//windows/mixed-reality/coordinate-systems).
  
 
-**PERGUNTAS Meu espaço é muito grande e estou com erros quando tento configurar uma experiência de navegação com limites. O que devo fazer para configurar minha experiência de grande roaming de alta disponibilidade?**
+**P: meu espaço é muito grande e estou executando erros quando tento configurar uma experiência de navegação com limites. O que devo fazer para configurar minha experiência de grande roaming de alta disponibilidade?**
 
-R: Para configurar um espaço maior que ~ 18x18ft, você não poderá usar a experiência de limite fornecida pelo sistema.  Os sistemas de limite se baseiam no aproveitamento de uma única "âncora" de coordenada fixa, que pode se tornar instável quando um usuário estiver muito longe da âncora do estágio central. 
+R: para configurar um espaço maior que ~ 18x18ft, você não poderá usar a experiência de limite fornecida pelo sistema.  Os sistemas de limite se baseiam no aproveitamento de uma única "âncora" de coordenada fixa, que pode se tornar instável quando um usuário estiver muito longe da âncora do estágio central. 
 
 Em vez disso, você pode configurar o modo "encaixado", que não exibirá o limite ou configurará um limite de estágio ou Playspace.  Em seguida, você precisará configurar várias âncoras espaciais dentro do aplicativo para fazer referência a áreas de limite físicas. 
 
 O desenvolvedor do aplicativo é responsável por exibir as proteções necessárias para que os usuários não colidem com os arredores físicos.  Elas podem ser paredes digitais dentro da experiência ou um Visual personalizado de limite de jogo. 
 
-Orientação sobre como configurar o limite de sala com WMR pode ser encontrada [aqui](https://docs.microsoft.com/en-us/windows/mixed-reality/enthusiast-guide/set-up-windows-mixed-reality#set-up-your-room-boundary).
+Orientação sobre como configurar o limite de sala com WMR pode ser encontrada [aqui](https://docs.microsoft.com//windows/mixed-reality/enthusiast-guide/set-up-windows-mixed-reality#set-up-your-room-boundary).
 
-**PERGUNTAS Onde está a origem do Playspace?**
+**P: onde está a origem do Playspace?**
 
-R: A origem do Playspace é determinada pela experiência de configuração da sala, mais especificamente a posição de HMD quando o botão central é pressionado durante a instalação. 
+R: a origem do Playspace é determinada pela experiência de configuração da sala, mais especificamente a posição de HMD quando o botão central é pressionado durante a instalação. 
 
 ### <a name="multi-player-setup"></a>INSTALAÇÃO DE VÁRIOS JOGADORES
 
-**PERGUNTAS Estou implantando uma experiência de vários jogadores no meu local. Isso tem suporte no Windows Mixed Reality?**
+**P: Estou implantando uma experiência de vários jogadores em meu local. Isso tem suporte no Windows Mixed Reality?**
 
-R: A ferramenta de pacote de dados espaciais da realidade misturada é um recurso beta que permite localizar vários players no mesmo espaço, permitindo a portabilidade dos dados espaciais de um PC para outro. Você pode acessar a ferramenta e saber mais sobre ela [aqui](mixedrealityspatialdatapackager.md).
+R: a ferramenta de pacote de dados espaciais da realidade misturada é um recurso beta que permite localizar vários players no mesmo espaço, permitindo a portabilidade dos dados espaciais de um PC para outro. Você pode acessar a ferramenta e saber mais sobre ela [aqui](mixedrealityspatialdatapackager.md).
 
-### <a name="tracking"></a>CONTROLE ALTERAÇÕES
+Se você optar pelas compilações do Windows 20H1 ou posteriores (por meio de nosso programa [Insider](https://docs.microsoft.com//windows-insider/at-home/get-started) ), poderá acessar uma nova interface para compartilhamento de mapa. Essa nova funcionalidade está disponível por meio da interface do Gerenciador de mapa do portal do dispositivo do Windows. Para usar essa ferramenta, siga estas etapas:
+- Certifique-se de que você tenha optado pelo 20H1 ou posterior (a partir de setembro de 2019 isso significa usar nosso programa Insider)
+- Habilitar o portal de dispositivos do Windows (WDP), as instruções estão [aqui](https://docs.microsoft.com//windows/uwp/debug-test-perf/device-portal-desktop)
+- Conecte um HMD de realidade mista do Windows que você deseja baixar um mapa existente ou importar um novo mapa
+- Navegue até o WDP no navegador de sua escolha usando a URL fornecida na tela Configurações. 
+  - Depois de navegar até a seção "realidade misturada" e selecione "Gerenciador de mapa". 
+  - Agora você pode usar o botão "baixar" para exportar um mapa existente do computador. 
+  - Você pode usar o botão "carregar um arquivo de mapa" para importar um mapa de uma exportação anterior (talvez em um computador diferente). 
+  - Você pode usar "importar" para habilitar o sistema a usar esse mapa para este HMD neste computador.
+  
+### <a name="tracking"></a>CONTROLE alterações
 
-P: Como funciona a tecnologia de rastreamento em headsets de realidade mista do Windows?  
+P: como funciona a tecnologia de rastreamento em headsets de realidade mista do Windows?  
 
-A realidade misturada compartilha a mesma tecnologia de controle que o HoloLens. Para saber mais sobre o sistema de acompanhamento interno, confira a documentação [aqui](https://docs.microsoft.com/en-us/windows/mixed-reality/enthusiast-guide/tracking-system).
+A realidade misturada compartilha a mesma tecnologia de controle que o HoloLens. Para saber mais sobre o sistema de acompanhamento interno, confira a documentação [aqui](https://docs.microsoft.com//windows/mixed-reality/enthusiast-guide/tracking-system).
 
-Para obter uma descrição de como o sistema de mapeamento espacial de nível superior funciona, você pode ler nossa descrição [aqui](spatial-mapping-design.md).
+Para obter uma descrição de como o sistema de mapeamento espacial de nível superior funciona, você pode ler nossa descrição [aqui](spatial-mapping.md).
 
-**PERGUNTAS Há alguma prática recomendada para obter um volume de controle confiável?**
+**P: há alguma prática recomendada para obter um volume de controle confiável?**
 
 Para configurar melhor o ambiente para acompanhar o sucesso, você pode ler as práticas recomendadas nesta [postagem](environment-considerations-for-hololens.md).
 
-**PERGUNTAS Há alguma nuance específica com acompanhamento em espaços de escala de depósito ou otimizações a serem consideradas?**
+**P: existem nuances específicas com acompanhamento em espaços de escala de depósito ou otimizações a serem consideradas?**
 
-R: As práticas a seguir podem ajudar com a obtenção de um volume de controle mais confiável:  
+R: as práticas a seguir podem ajudar com a obtenção de um volume de controle mais confiável:  
 
 Fornecer uma variedade de recursos na sala que se sobrepõem a várias posições ajudará o sistema de controle a obter um bloqueio sólido. Imagine a interlinhagem de pintura aleatória e a hachura, em vez de usar linhas de estilo de delimitação sólida. 
 
@@ -149,9 +159,9 @@ Destaques em uma sala (até mesmo sobrecarga) que estão na exibição se as câ
 
 ### <a name="mixed-reality-cloud-services-and-azure"></a>SERVIÇOS DE NUVEM DE REALIDADE MISTURADA E AZURE 
 
-**PERGUNTAS Como Microsoft Azure pode ajudar minha escala comercial?**
+**P: como Microsoft Azure pode ajudar minha escala comercial?**
 
-R: O gerenciamento remoto e local com base no Azure podem ajudar sua empresa a ser controlado por dados, reduzir os custos operacionais e dimensionar a implantação em locais novos e existentes. Os serviços de nuvem do Azure, como o armazenamento do Azure, Azure Functions, serviço de aplicativo, rede do Azure e Hub IOT podem ajudar com os seguintes casos de uso:  
+R: o gerenciamento remoto e local com base no Azure podem ajudar sua empresa a ser controlado por dados, reduzir os custos operacionais e dimensionar a implantação em locais novos e existentes. Os serviços de nuvem do Azure, como o armazenamento do Azure, Azure Functions, serviço de aplicativo, rede do Azure e Hub IOT podem ajudar com os seguintes casos de uso:  
 
 Gerenciamento de & de implantação de dispositivo remoto 
 
@@ -165,30 +175,30 @@ Calor de preferência do LBE Player
 
 LBE reserva e sistema de reservas 
 
-**PERGUNTAS Estou desenvolvendo um MMOG espacial para implantar em grande quantidade de espaço. Todos os serviços que me ajudam a gerenciar meu conteúdo e minha persistência de objetos?**
+**P: estou desenvolvendo um MMOG espacial para implantar em grande quantidade de espaço. Todos os serviços que me ajudam a gerenciar meu conteúdo e minha persistência de objetos?**
 
-R: As âncoras espaciais do Azure são um novo serviço de realidade misturada que permite experiências de realidade mista de vários usuários, com reconhecimento espacial, em dispositivos de HoloLens, iOS e Android. Você pode aprender mais sobre as âncoras espaciais do Azure [aqui](https://azure.microsoft.com/en-us/services/spatial-anchors/).
+R: as âncoras espaciais do Azure são um novo serviço de realidade misturada que permite experiências de realidade mista de vários usuários, com reconhecimento espacial, em dispositivos de HoloLens, iOS e Android. Você pode aprender mais sobre as âncoras espaciais do Azure [aqui](https://azure.microsoft.com//services/spatial-anchors/).
 
-**PERGUNTAS. Nosso local é especialista em experiências de vários jogadores e gostaria de concentrar nosso tempo de desenvolvimento em conteúdo e desenvolvimento de front-end. Há ofertas que podem me ajudar a inicializar ou descarregar o desenvolvimento de back-end?**
+**P. nosso local é especialista em experiências de vários jogadores e gostaria de concentrar nosso tempo de desenvolvimento em conteúdo e desenvolvimento de front-end. Há ofertas que podem me ajudar a inicializar ou descarregar o desenvolvimento de back-end?**
 
-R: O Azure PlayFab é uma plataforma de back-end completa para jogos ao vivo. Você pode aprender mais sobre isso [aqui](https://playfab.com/).
+R: o Azure PlayFab é uma plataforma de back-end completa para jogos ao vivo. Você pode aprender mais sobre isso [aqui](https://playfab.com/).
 
 ### <a name="misc"></a>Diversos
 
-**PERGUNTAS Eu uso o SteamVR para implantar minhas experiências. A realidade mista do Windows funciona com o SteamVR?**
+**P: Eu uso SteamVR para implantar minhas experiências. A realidade mista do Windows funciona com o SteamVR?**
 
-R: O Windows Mixed Reality for SteamVR permite que os usuários executem experiências de SteamVR em headsets de imersão de realidade mista do Windows. Saiba mais sobre SteamVR com WMR [aqui](https://docs.microsoft.com/en-us/windows/mixed-reality/enthusiast-guide/using-steamvr-with-windows-mixed-reality).
+R: a realidade mista do Windows para SteamVR permite que os usuários executem experiências de SteamVR em headsets de imersão de realidade mista do Windows. Saiba mais sobre SteamVR com WMR [aqui](https://docs.microsoft.com//windows/mixed-reality/enthusiast-guide/using-steamvr-with-windows-mixed-reality).
 
 ### <a name="support-and-community"></a>Suporte e comunidade  
 
 Abaixo estão alguns recursos úteis para envolver especialistas em nossa equipe, obter suporte para solução de problemas e contribuir para a comunidade de desenvolvimento de realidade misturada mais ampla.  
 
-Se você tiver problemas com recursos lançados publicamente, registre um bug usando o Hub de comentários. para obter diretrizes, consulte esta [página](https://docs.microsoft.com/en-us/windows/mixed-reality/enthusiast-guide/filing-feedback).
+Se você tiver problemas com recursos lançados publicamente, registre um bug usando o Hub de comentários. para obter diretrizes, consulte esta [página](https://docs.microsoft.com//windows/mixed-reality/enthusiast-guide/filing-feedback).
 
-Para obter ajuda adicional sobre solução de problemas com o WMR, entre em contato com nossa equipe de suporte ao cliente ao arquivar uma [solicitação de suporte](https://support.microsoft.com/en-us/supportforbusiness/productselection?sapId=96bfb202-bc79-741b-bf7a-774d8b767782).
+Para obter ajuda adicional sobre solução de problemas com o WMR, entre em contato com nossa equipe de suporte ao cliente ao arquivar uma [solicitação de suporte](https://support.microsoft.com//supportforbusiness/productselection?sapId=96bfb202-bc79-741b-bf7a-774d8b767782).
 
 Junte-se ao nosso canal de margem de atraso HoloDevelopers para envolver os desenvolvedores que trabalham em realidade misturada e especialistas no assunto da equipe: [aka.ms/holodevelopers](https://aka.ms/holodevelopers)
 
-Twitter Siga nossa equipe de relações de desenvolvedor da realidade misturada para notícias, eventos e atualizações@MxdRealityDev 
+Twitter: Siga nossa equipe de relações de desenvolvedor de realidade misturada para notícias, eventos e atualizações @MxdRealityDev 
 
-Se você estiver em ou em volta de San Francisco, sempre haverá algo acontecendo no reator da Microsoft. Você pode ver nosso calendário de eventos [aqui](https://developer.microsoft.com/en-us/reactor/Location/San%20Francisco).
+Se você estiver em ou em volta de San Francisco, sempre haverá algo acontecendo no reator da Microsoft. Você pode ver nosso calendário de eventos [aqui](https://developer.microsoft.com//reactor/Location/San%20Francisco).

@@ -6,16 +6,16 @@ ms.author: hakons
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Realidade mista do Windows, HoloLens, RoboRaid, som espacial
-ms.openlocfilehash: 4bb050b4a4051c121c488ea38e150a8973bd7c04
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 9be5c461c1546d241e559f6b2f874656a29b019a
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63524164"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73436492"
 ---
 # <a name="case-study---using-spatial-sound-in-roboraid"></a>Estudo de caso-usando som espacial em RoboRaid
 
-Charles Sinex, líder de áudio na equipe de experiência do Microsoft HoloLens, fala sobre os desafios exclusivos que ele encontrou ao criar áudio para [RoboRaid](https://www.microsoft.com/en-us/p/roboraid/9nblggh5fv3j), uma realidade misturada de primeira pessoa shooter.
+Charles Sinex, líder de áudio na equipe de experiência do Microsoft HoloLens, fala sobre os desafios exclusivos que ele encontrou ao criar áudio para [RoboRaid](https://www.microsoft.com/p/roboraid/9nblggh5fv3j), uma realidade misturada de primeira pessoa shooter.
 
 ## <a name="the-tech"></a>O Tech
 
@@ -35,9 +35,9 @@ O som espacial pode ser exigente na CPU. Para uma experiência ocupada como o Ro
 
 O dodging mecânico é um dos aspectos mais importantes do jogo em RoboRaid, e também algo que sentimos ser verdadeiramente exclusivos à experiência do HoloLens. Como tal, queríamos tornar as subexposiçãos bem-sucedidas muito compensadoras para o jogador. Temos o Doppler "Whizz-by" para soar bastante cedo no desenvolvimento. Inicialmente, meu plano era usar um loop e manipulá-lo em tempo real usando volume, densidade e filtro. A implementação para isso seria muito elaborada, portanto, antes de confirmar os recursos para criar isso, criamos um protótipo barato usando um ativo com o efeito Doppler inclusas em apenas para descobrir como ele parecia *. Nosso desenvolvimento de talentos fez isso para que esse ativo de whizzção reproduza exatamente 0,7 segundos antes que o Projectile tenha passado pelo ear do jogador e os resultados sejam realmente impressionantes! Não é necessário dizer que nós eliminoumos a solução mais complexa e implementamos o protótipo.
 
-\* * (Se você quiser obter mais informações sobre como criar um ativo de áudio com o efeito Doppler interno, confira um artigo por Sound Designer Charles Deenan chamado [100 whooshes em 2 minutos](http://designingsound.org/2010/02/charles-deenen-special-100-whooshes-in-2-minutes/).) *
+\* * (Se você quiser obter mais informações sobre como criar um ativo de áudio com o efeito Doppler interno, confira um artigo por Sound Designer Charles Deenan chamado [100 whooshes em 2 minutos](https://designingsound.org/2010/02/charles-deenen-special-100-whooshes-in-2-minutes/).) *
 <br>
-![Dodging Projectile de um inimigo recompensa o jogador com um som Whizz-por satisfatório.](images/successful-dodge-roboraid-500px.jpg)
+![dodging Projectile de um inimigo recompensa o jogador com um som Whizz-por satisfatório.](images/successful-dodge-roboraid-500px.jpg)
 
 ### <a name="ditching-ineffective-sounds"></a>Sons ineficazes do ditching
 
@@ -49,7 +49,7 @@ Um problema interessante que encontramos, que sentimos ser exclusivos da experi�
 
 Obviamente, os jogadores não sentirão nada quando chegarem, então tivemos que encontrar uma maneira de realmente convencer o jogador de que algo mau happed a eles. Em jogos convencionais, você pode ver uma animação que lhe permite saber que seu caractere levou um clique, ou a tela pode piscar vermelho e seu caractere pode Grunt um pouco. Como esses tipos de indicações não funcionam em uma experiência de realidade misturada, decidimos combinar a indicação visual com um som bem exagerado que indica que você teve danos. Eu criei um grande som e o fiz tão proeminente na mistura de que ele espatou tudo. Em seguida, para deixá-lo se destacar ainda mais, adicionamos um pequeno som de aviso como se uma sub-rotina nuclear estivesse afundando. 
 <br>
-![Quando um jogador é atingido no RoboRaid, ele vê uma indicação visual, mas também obtém uma indicação de áudio exagerada que diz a eles que eles levaram danos.](images/player-hit-roboraid-500px.jpg)
+![quando um jogador é atingido no RoboRaid, eles veem uma indicação visual, mas também recebem uma indicação de áudio exagerada que informa que eles levaram danos.](images/player-hit-roboraid-500px.jpg)
 
 ### <a name="getting-big-sound-from-small-speakers"></a>Obtendo som grande de alto-falantes pequenos
 
@@ -88,10 +88,10 @@ Você pode experimentar isso usando os ativos de áudio abaixo:
 <table style="border-collapse:collapse">
 <tr>
 <td style="border-style: none" width="60px"><img alt="Picture of Charles Sinex" width="60" height="60" src="images/genericusertile.jpg"></td>
-<td style="border-style: none"><b>Charles Sinex</b><br>Engenheiro de áudio@Microsoft</td>
+<td style="border-style: none"><b>Charles Sinex</b><br>@Microsoft de engenharia de áudio</td>
 </tr>
 </table>
 
 ## <a name="see-also"></a>Consulte também
 * [Som espacial](spatial-sound.md)
-* [RoboRaid para Microsoft HoloLens](https://www.microsoft.com/en-us/p/roboraid/9nblggh5fv3j)
+* [RoboRaid para Microsoft HoloLens](https://www.microsoft.com/p/roboraid/9nblggh5fv3j)

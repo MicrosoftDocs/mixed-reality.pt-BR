@@ -1,24 +1,24 @@
 ---
-title: Adicionar ambientes domésticos personalizados
+title: Projete seus próprios ambientes de imersão
 description: Além dos ambientes domésticos de realidade mista do Windows que fornecemos, você pode experimentar criar e usar suas próprias.
 author: thmignon
 ms.author: thmignon
 ms.date: 04/30/2018
 ms.topic: article
 keywords: Realidade mista do Windows, realidade misturada, realidade virtual, VR, Sr, Home, ambientes personalizados, lugares, Cliff House, skyloft, usuário, criar
-ms.openlocfilehash: d0cdb878f1994cb5f898f06b98d74dee3dd4fdf1
-ms.sourcegitcommit: 150d258a23130026c8792da383a3993657841fb4
+ms.openlocfilehash: e133e1438410540592a51f54ed136aecd04c6244
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67024535"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437072"
 ---
-# <a name="add-custom-home-environments"></a>Adicionar ambientes domésticos personalizados
+# <a name="design-your-own-immersive-environments"></a>Projete seus próprios ambientes de imersão
 
 >[!NOTE]
 >Esse é um recurso experimental. Experimente e divirta-se com ele, mas não se surpreenda se tudo não funcionar tão bem quanto o esperado. Estamos avaliando a viabilidade desse recurso e interesse em usá-lo, portanto, conte-nos sobre sua experiência (e quaisquer bugs que você encontrar) nos [fóruns de desenvolvedores](https://forums.hololens.com/categories/custom-home-environments).
 
-A partir da [atualização do Windows 10 de abril de 2018](#release-notes-april-2018.md), habilitamos um recurso experimental que permite adicionar ambientes personalizados ao seletor de locais (no menu Iniciar) para usar como a [página inicial do Windows Mixed Reality](#navigating-the-windows-mixed-reality-home.md). O Windows Mixed Reality tem dois ambientes padrão, Cliff House e Skyloft, que você pode escolher como sua casa. A criação de ambientes personalizados permite expandir essa lista com suas próprias criações. Estamos disponibilizando isso em um estado inicial para avaliar o interesse de criadores e desenvolvedores, confira quais tipos de mundos você cria e entenda como trabalhar com diferentes ferramentas de criação.
+A partir da [atualização do Windows 10 de abril de 2018](release-notes-april-2018.md), habilitamos um recurso experimental que permite adicionar ambientes personalizados ao seletor de locais (no menu Iniciar) para usar como a [página inicial do Windows Mixed Reality](navigating-the-windows-mixed-reality-home.md). O Windows Mixed Reality tem dois ambientes padrão, Cliff House e Skyloft, que você pode escolher como sua casa. A criação de ambientes personalizados permite expandir essa lista com suas próprias criações. Estamos disponibilizando isso em um estado inicial para avaliar o interesse de criadores e desenvolvedores, confira quais tipos de mundos você cria e entenda como trabalhar com diferentes ferramentas de criação.
 
 Ao usar um ambiente personalizado, você observará que o teleportamento, a interação com os aplicativos e o posicionamento de hologramas funciona exatamente como no Cliff House e Skyloft. Você pode navegar na Web em um cenário de fantasia ou preencher uma cidade fractais com hologramas-as possibilidades são infinitas!
 
@@ -45,9 +45,9 @@ Ao usar um ambiente personalizado, você observará que o teleportamento, a inte
 ## <a name="trying-a-sample-environment"></a>Experimentando um ambiente de exemplo
 
 Criamos um ambiente de exemplo que mostra algumas das possibilidades criativas de ambientes domésticos personalizados. Siga estas etapas para experimentar:
-1. [Baixe nosso ambiente de ilha de fantasia de exemplo](https://download.microsoft.com/download/B/2/5/B25C1AEF-40CD-4B03-A596-4BCA3D33035A/Fantasy_Island.exe) (link aponta para o executável de extração automática).
+1. [Baixe nosso ambiente de ilha de fantasia de exemplo](https://download.microsoft.com/download/B/2/5/B25C1AEF-40CD-4B03-A596-4BCA3D33035A/Fantasy_Island.exe) (pontos de link para o executável de extração automática).
 
-    ![Ambiente de exemplo da ilha de fantasia](images/FantasyLand.jpg)<br>
+    ambiente de exemplo da ilha de fantasia ![](images/FantasyLand.jpg)<br>
     *Ambiente de exemplo da ilha de fantasia*<br>
 
 2. Execute o arquivo **Fantasy_Island. exe** que você acabou de baixar.
@@ -55,7 +55,7 @@ Criamos um ambiente de exemplo que mostra algumas das possibilidades criativas d
     > [!NOTE]
     > Ao tentar executar um arquivo. exe baixado da Web (como este), você pode encontrar um pop-up "protegido pelo Windows". Para executar o Fantasy_Island. exe a partir desse pop-up, selecione **mais informações** e, em seguida, **executar mesmo assim**. Essa configuração de segurança destina-se a protegê-lo de baixar arquivos que talvez você não queira confiar, portanto, escolha apenas essa opção ao confiar na origem do arquivo.
 
-3. Abra o **Explorador de arquivos** e navegue até a pasta ambientes colando o seguinte na barra de endereços `%LOCALAPPDATA%\Packages\EnvironmentsApp_cw5n1h2txyewy\LocalState`:.
+3. Abra o **Explorador de arquivos** e navegue até a pasta ambientes colando o seguinte na barra de endereços: `%LOCALAPPDATA%\Packages\EnvironmentsApp_cw5n1h2txyewy\LocalState`.
 4. Copie o ambiente de exemplo que você baixou para essa pasta.
 5. Reinicie o **portal de realidade misturada**. Isso atualizará a lista de ambientes no seletor de locais.
 6. Coloque seu headset. Quando estiver em casa, abra o **menu iniciar** usando o botão do Windows seu controlador.
@@ -111,7 +111,7 @@ WindowsMRAssetConverter FileToConvert.gltf -max-texture-size 1024 -min-version 1
 
 Depois de ter seu ambiente. glb final, você estará pronto para testá-lo no headset. Comece na etapa 2 na seção ["experimentando um ambiente de exemplo"](#trying-a-sample-environment) para usar seu ambiente personalizado como a casa de realidade misturada. 
 
-## <a name="feedback"></a>Comentários
+## <a name="feedback"></a>Feedback
 
 Enquanto estamos avaliando esse recurso experimental, estamos interessados em aprender como você está usando ambientes personalizados, todos os bugs que você pode encontrar e como gosta o recurso. Compartilhe todos os comentários para criar e usar ambientes domésticos personalizados nos fóruns de [desenvolvedores](https://forums.hololens.com/categories/custom-home-environments).
 
@@ -123,7 +123,7 @@ O nome do arquivo na pasta ambientes será usado no seletor de locais. Para alte
 
 ### <a name="how-do-i-remove-custom-environments-from-my-places-picker"></a>Como fazer remover ambientes personalizados do meu seletor de locais?
 
-Para remover um ambiente personalizado, abra a pasta ambientes no seu computador (`%LOCALAPPDATA%\Packages\EnvironmentsApp_cw5n1h2txyewy\LocalState`) e exclua o ambiente. Depois de reiniciar o portal de realidade misturada, esse ambiente não aparecerá mais no seletor de locais. 
+Para remover um ambiente personalizado, abra a pasta ambientes no seu PC (`%LOCALAPPDATA%\Packages\EnvironmentsApp_cw5n1h2txyewy\LocalState`) e exclua o ambiente. Depois de reiniciar o portal de realidade misturada, esse ambiente não aparecerá mais no seletor de locais. 
 
 ### <a name="how-do-i-default-to-my-favorite-custom-environment"></a>Como fazer o padrão para meu ambiente personalizado favorito?
 

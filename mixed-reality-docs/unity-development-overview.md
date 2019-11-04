@@ -2,43 +2,43 @@
 title: Visão geral do desenvolvimento do Unity
 description: Introdução à criação de aplicativos de realidade misturada no Unity.
 author: thetuvix
-ms.author: Yoyoz
-ms.date: 04/15/2018
+ms.author: kurtie
+ms.date: 10/25/2018
 ms.topic: article
 keywords: Unity, realidade mista, desenvolvimento, introdução, novo projeto, portabilidade, capacidade, câmera, simulação, emulação, documentação
-ms.openlocfilehash: b1384e886a2b4d0b3ed9f8008fca6af6ad4b78d5
-ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
+ms.openlocfilehash: b78afb0cf6557ec9b61a029e2d557debbd0b6b46
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68701788"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437379"
 ---
 # <a name="unity-development-overview"></a>Visão geral do desenvolvimento do Unity
 
-O caminho mais rápido para criar um [aplicativo de realidade misturada](app-views.md) é com o [Unity](http://aka.ms/HoloLensUnity). Recomendamos que você reserve um tempo para explorar os [tutoriais do Unity](https://unity3d.com/learn/tutorials). Se você precisar de ativos, o Unity terá um [repositório de ativos](https://www.assetstore.unity3d.com/)abrangente. Depois de criar uma compreensão básica do Unity, você pode visitar os [tutoriais](tutorials.md) para aprender as especificações do desenvolvimento de realidade misturada com o Unity. Visite os [fóruns de realidade misturada no Unity](http://forum.unity3d.com/forums/hololens.102/) para se envolver com o restante da Comunidade criando aplicativos de realidade misturada no Unity e encontre soluções para os problemas que você pode encontrar.
+O caminho mais rápido para criar um [aplicativo de realidade misturada](app-views.md) é com o [Unity](https://unity.com). Recomendamos que você reserve um tempo para explorar os [tutoriais do Unity](https://unity3d.com/learn/tutorials). Se você precisar de ativos, o Unity terá um [repositório de ativos](https://www.assetstore.unity3d.com/)abrangente. Depois de criar uma compreensão básica do Unity, você pode visitar os [tutoriais](tutorials.md) para aprender as especificações do desenvolvimento de realidade misturada com o Unity. Visite os [fóruns de realidade misturada no Unity](https://forum.unity3d.com/forums/hololens.102/) para se envolver com o restante da Comunidade criando aplicativos de realidade misturada no Unity e encontre soluções para os problemas que você pode encontrar.
 
 Para começar a criar aplicativos de realidade misturada com o Unity, primeiro [Instale as ferramentas](install-the-tools.md). 
 
 ## <a name="new-unity-project-with-mixed-reality-toolkit"></a>Novo projeto do Unity com o Mixed Reality Toolkit 
 
-A maneira mais fácil de desenvolver no Unity é com a ajuda do Mixed Reality Toolkit. Ele o ajudará a configurar com o projeto automaticamente e fornecerá um conjunto de recursos de realidade misturada para acelerar seu desenvolvimento. Confira o [Kit de ferramentas da realidade mista v2](mrtk-getting-started.md) para saber mais e começar. 
+A maneira mais fácil de desenvolver no Unity é com o kit de ferramentas de realidade misturada. Isso o ajudará a configurar com o projeto automaticamente e a fornecer um conjunto de recursos de realidade misturada para acelerar seu desenvolvimento. Confira o [Kit de ferramentas da realidade mista v2](mrtk-getting-started.md) para saber mais e começar. 
 
 ## <a name="porting-an-existing-unity-app-to-windows-mixed-reality"></a>Portando um aplicativo de Unity existente para a realidade mista do Windows
 
-Se você tiver um projeto de Unity existente que está portando para a realidade mista do Windows, acompanhe o [guia](porting-guides.md) de portagem do Unity para começar.
+Se você tiver um projeto de Unity existente que está portando para a realidade mista do Windows, acompanhe o [Guia de portagem do Unity](porting-guides.md) para começar.
 
 ## <a name="configuring-new-unity-project-for-windows-mixed-reality"></a>Configurando o novo projeto do Unity para a realidade mista do Windows
 
-Se você quiser criar um novo projeto de Unity sem importar o kit de ferramentas de realidade misturada, há um pequeno conjunto de configurações de Unity que você precisará alterar manualmente para a realidade mista do Windows. Elas são divididas em duas categorias: por projeto e por cena. Consulte aqui para obter o guia passo a passo para [Configurar o novo projeto do Unity para a realidade mista do Windows](Configure-Unity-Project.md)
+Se você quiser criar um novo projeto do Unity sem importar o kit de ferramentas de realidade misturada, há um pequeno conjunto de configurações de Unity que você precisará alterar manualmente para a realidade mista do Windows. Elas são divididas em duas categorias: por projeto e por cena. Consulte aqui para obter um guia passo a passo para [Configurar o novo projeto do Unity para a realidade mista do Windows](Configure-Unity-Project.md)
 
 ## <a name="adding-mixed-reality-capabilities-and-inputs"></a>Adicionando entradas e recursos de realidade misturada
 
-Depois de configurar o MRTK V2 com seu projeto, ou configurar seu projeto conforme descrito acima, os objetos de jogo do Unity Standard (como a câmera) se acenderão imediatamente para uma **experiência em escala**, com a posição da câmera atualizada automaticamente como a o usuário move sua cabeça pelo mundo.
+Depois de configurar o MRTK V2 com seu projeto ou configurar seu projeto, conforme descrito acima, os objetos de jogo do Unity Standard (como a câmera) se acenderão imediatamente para uma **experiência em escala**em forma de estação, com a posição da câmera atualizada automaticamente como o usuário move sua cabeça pelo mundo.
 
-A adição de suporte para recursos de realidade mista do Windows, como [estágios espaciais](coordinate-systems.md#spatial-coordinate-systems), [gestos, controladores de movimento](gestures-and-motion-controllers-in-unity.md) ou entrada de [voz](voice-input-in-unity.md) , é obtida usando APIs criadas diretamente no Unity. 
+A adição de suporte para recursos de realidade mista do Windows, como [estágios espaciais](coordinate-systems.md#spatial-coordinate-systems), [gestos, controladores de movimento](gestures-and-motion-controllers-in-unity.md) ou [entrada de voz](voice-input-in-unity.md) , é obtida usando APIs criadas diretamente no Unity. 
 
 Primeiro, examine as [escalas de experiência](coordinate-systems.md) que seu applicatioin pode atingir:
-* Se você pretende criar uma **experiência**de dimensionamento ou **somente de orientação** , você precisará definir o tipo de espaço de rastreamento do Unity como [estático](coordinate-systems-in-unity.md#building-an-orientation-only-or-seated-scale-experience).
+* Se você pretende criar uma **experiência de dimensionamento**ou **somente de orientação** , você precisará definir o tipo de espaço de rastreamento do Unity como [estático](coordinate-systems-in-unity.md#building-an-orientation-only-or-seated-scale-experience).
 * Se você pretende criar uma experiência em **escala** ou em **escala de sala**, precisará garantir que o tipo de espaço de rastreamento do Unity seja definido com êxito como [RoomScale](coordinate-systems-in-unity.md#building-an-orientation-only-or-seated-scale-experience).
 * Se você pretende criar uma experiência de **escala mundial** no HoloLens que permita que os usuários se movimentem além de 5 metros, você precisará usar o componente [WorldAnchor](coordinate-systems-in-unity.md#building-a-world-scale-experience) .
 
@@ -80,7 +80,7 @@ Além desta documentação disponível no docs.microsoft.com, o Unity instala a 
 
 ## <a name="see-also"></a>Consulte também
 * [Kit de ferramentas de realidade misturada v2](mrtk-getting-started.md)
-* [Noções básicas do MR 100: introdução ao Unity](holograms-100.md)
+* [Sr noções básicas 100: introdução ao Unity](holograms-100.md)
 * [Configurações recomendadas do Unity](recommended-settings-for-unity.md)
 * [Recomendações de desempenho para Unity](performance-recommendations-for-unity.md)
 * [Como exportar e criar uma solução do Visual Studio do Unity](exporting-and-building-a-unity-visual-studio-solution.md)

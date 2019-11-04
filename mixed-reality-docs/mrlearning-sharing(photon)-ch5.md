@@ -6,14 +6,14 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realidade misturada, unity, tutorial, hololens
-ms.openlocfilehash: cb4645d197238d8712719625bf11eac0650a8246
-ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
+ms.openlocfilehash: b83c7ac39d522fc2b799591fa02608d5fc5cc930
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68701865"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437562"
 ---
-# <a name="5-integrating-azure-spatial-anchors-into-a-shared-experience"></a>5. Integrando âncoras espaciais do Azure em uma experiência compartilhada
+# <a name="5-integrating-azure-spatial-anchors-into-a-shared-experience"></a>5. integrando âncoras espaciais do Azure em uma experiência compartilhada
 
 Nesta lição, aprenderemos a integrar o ASA (âncoras espaciais) do Azure em nossa experiência compartilhada. O ASA permite que vários dispositivos colocalizados tenham uma referência comum se o seu ambiente físico for ancorar experiências virtuais de forma que todos os participantes vejam objetos no mesmo local físico.
 
@@ -37,7 +37,7 @@ Seus
 
 ![Module3hapter5step5im](images/module3chapter5step5im.PNG)
 
-4. Agora, na hierarquia, selecione ShareAzureAnchorButton e mova sua atenção para o painel do inaspectr. Role para baixo até o menu suspenso mostrado na imagem abaixo e selecione AnchorModuleScript e clique em ShareAnchorNetework ().
+4. Agora, na hierarquia, selecione ShareAzureAnchorButton e mova sua atenção para o painel do inaspectr. Role para baixo até o menu suspenso mostrado na imagem abaixo, selecione AnchorModuleScript e clique em ShareAnchorNetework ().
 
 ![Module3hapter5step6im](images/module3chapter5step6im.PNG)
 
@@ -45,13 +45,15 @@ Seus
 
 ![Module3hapter5step7im](images/module3chapter5step7im.PNG)
 
-6. Para testar o módulo de compartilhamento, clique no botão "iniciar sessão do ASA do Azure", que iniciará a sessão de âncoras espaciais do Azure e, em seguida, criará a âncora do Azure clicando no botão "criar âncora do Azure" e aguarde um momento até que a âncora do Azure seja criada. Depois que a âncora do Azure for criada, clique no botão "compartilhar âncora do Azure" para compartilhar a âncora do Azure criada do HoloLens.
+6. Para testar o módulo de compartilhamento, clique no botão "iniciar sessão do ASA do Azure", que iniciará a sessão de âncoras espaciais do Azure e, em seguida, criará a âncora do Azure clicando no botão "criar âncora do Azure". Aguarde até que a âncora do Azure seja criada. Depois que a âncora do Azure for criada, clique no botão "compartilhar âncora do Azure" para compartilhar a âncora do Azure criada do HoloLens.
 
-7. Para receber a âncora do Azure compartilhada em outro HoloLens, clique em "iniciar a sessão do ASA do Azure" para iniciar e entrar na sessão atual do ASA e clique no botão "obter âncora do Azure" para obter a âncora do Azure compartilhada do outro HoloLens.
+7. Para receber a âncora do Azure compartilhada em outro HoloLens, clique em "iniciar a sessão do ASA do Azure" para iniciar e entrar na sessão do ASA atual
 
-   > Observação: Todos os detalhes das ações correspondentes nos botões individuais serão exibidos na janela Depurar.
+8. Clique no botão "obter âncora do Azure" para obter a âncora do Azure compartilhada do outro HoloLens.
+
+   > Observação: todos os detalhes das ações correspondentes nos botões individuais serão exibidos na janela Depurar.
 
 ## <a name="congratulations"></a>Parabéns
 
-Nesta lição, você aprendeu a integrar as novas âncoras espaciais do Azure para alinhar dispositivos colocalizados em uma experiência compartilhada! Esta lição também conclui o módulo de compartilhamento. Aprendemos como configurar uma nova conta do Photon, integrar o Photon e o trocadilho em um novo aplicativo Unity, configurar avatars e objetos compartilhados e, finalmente, alinhar vários participantes usando o ASA. 
+Nesta lição, você aprendeu a integrar as novas âncoras espaciais do Azure para alinhar dispositivos colocalizados em uma experiência compartilhada! Isso também conclui o módulo de compartilhamento. Aprendemos como configurar uma nova conta do Photon, integrar Photon e trocadilho em um novo aplicativo Unity, configurar avatars e objetos compartilhados e, por fim, alinhar vários participantes usando o ASA. 
 
