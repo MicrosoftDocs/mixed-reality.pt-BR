@@ -1,23 +1,31 @@
 ---
-title: Som espacial
-description: Usar o som espacial em um aplicativo de realidade misturada permite que você coloque os sons de forma convincente em um espaço 3D.
-author: hak0n
-ms.author: hakons
-ms.date: 03/21/2018
+title: Áudio em realidade misturada
+description: O áudio em realidade misturada pode aumentar a confiança do usuário em interações de interface de usuário e aprofundar os usuários na experiência.
+author: kegodin
+ms.author: kegodin
+ms.date: 11/07/2019
 ms.topic: article
 keywords: som espacial, som surround, áudio 3D, som 3D, áudio espacial
-ms.openlocfilehash: 31ec8f88a060127daab9bf3afc970457ec7c90a3
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 1930017903439aee3ac53b6c4be344fdc44c356f
+ms.sourcegitcommit: 2e54d0aff91dc31aa0020c865dada3ae57ae0ffc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437398"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73641112"
 ---
-# <a name="spatial-sound"></a>Som espacial
+# <a name="audio-in-mixed-reality"></a>Áudio em realidade misturada
+O áudio é uma parte essencial do design e da produtividade na realidade misturada e pode:
+* Aumentar a confiança do usuário em interações baseadas em gestos e em voz
+* Orientar os usuários para as próximas etapas
+* Combine efetivamente os objetos virtuais com o mundo real
 
-Quando os objetos estão fora de nossa linha de visão, uma das maneiras de percebermos o que está acontecendo em torno deles é por som. No Windows Mixed Reality, o mecanismo de áudio fornece o componente auricular da experiência de realidade misturada por meio da simulação de som 3D usando a direção, a distância e as simulações ambientais. O uso de som espacial em um aplicativo permite que os desenvolvedores coloquem os sons de forma convincente em um espaço 3 dimensional (esfera) em todo o usuário. Esses sons parecerão como se estivessem vindo de objetos físicos reais ou de hologramas de realidade misturada no ambiente do usuário. Considerando que os [hologramas](hologram.md) são objetos compostos de luz e, às vezes, som, o componente de som ajuda a aterrar os hologramas, tornando-os mais verossímeiss e criando uma experiência mais imersiva.
+O rastreamento de cabeça de baixa latência de headsets de realidade misturada, incluindo o HoloLens, permite o uso de alta qualidade de espacial baseada em HRTF. A espacial de áudio em seu aplicativo pode:
+* Chame atenção para elementos visuais
+* Ajude os usuários a manter a conscientização de seus arredores do mundo real
 
-Embora os hologramas só possam aparecer visualmente em que o olhar do usuário esteja apontando, o som do seu aplicativo pode vir de todas as direções; acima, abaixo, atrás, ao lado, etc. Você pode usar esse recurso para chamar a atenção para um objeto que pode não estar no modo de exibição do usuário no momento. Um usuário pode perceber que os sons estão emanando de uma fonte no mundo de realidade misturada. Por exemplo, à medida que o usuário fica mais próximo de um objeto ou o objeto se aproxima deles, o volume aumenta. Da mesma forma, à medida que os objetos se movem em torno de um usuário, ou vice-versa, os sons espaciais fornecem a ilusão de que os sons são provenientes diretamente do objeto.
+A adição de acústicos conecta mais profundamente os hologramas ao mundo misto e pode fornecer indicações sobre o ambiente e o estado do objeto.
+
+Para obter exemplos mais detalhados de design usando áudio, confira [design de som](spatial-sound-design.md).
 
 <br>
 
@@ -39,38 +47,52 @@ Embora os hologramas só possam aparecer visualmente em que o olhar do usuário 
         <td><a href="immersive-headset-hardware-details.md"><strong>Headsets imersivos</strong></a></td>
     </tr>
      <tr>
-        <td>Som espacial</td>
+        <td>Espacialização</td>
         <td>✔️</td>
         <td>✔️</td>
-        <td>✔️ (com fones de ouvido)</td>
+        <td>✔️</td>
+    </tr>
+     <tr>
+        <td>Aceleração de hardware de espacial</td>
+        <td>❌</td>
+        <td>✔️</td>
+        <td>❌</td>
     </tr>
 </table>
 
-## <a name="simulating-the-perceived-location-and-distance-of-sounds"></a>Simulando o local percebido e a distância dos sons
+## <a name="using-sounds-in-mixed-reality"></a>Usando sons em realidade misturada
+[Usar sons em realidade mista](spatial-sound-design.md) pode exigir uma abordagem diferente do que em aplicativos de toque e teclado e mouse. As decisões de design de sons-chave incluem quais sons são espaciais e quais interações sonify. Essas decisões podem ter um efeito forte na confiança do usuário, na produtividade e na curva de aprendizado.
 
-Ao analisar como o som atinge ambos os ouvidos, nosso cérebro determina a distância e a direção do objeto que emite o som. Uma HRTF (ou função de transferência relacionada à cabeça) simula essa interação modelando a resposta Spectral que caracteriza como um Ear recebe som de um ponto no espaço. O mecanismo de áudio espacial usa HRTFs personalizadas para expandir a experiência de realidade misturada e simular sons provenientes de várias direções e distâncias.
+### <a name="case-studies"></a>Estudos de caso
+O HoloTour praticamente leva os usuários para os sites Tourist e históricos em todo o mundo. O seguinte estudo de caso descreve o design de som para HoloTour: [design de som para HoloTour](case-study-spatial-sound-design-for-holotour.md). Um microfone especial e uma configuração de renderização foram usados para capturar os espaços de assunto.
+
+RoboRaid é um shooter de alta energia para o HoloLens. O seguinte estudo de caso descreve as opções de design feitas para garantir que o áudio espacial foi usado para um efeito mais completo: [design de som para RoboRaid](case-study-using-spatial-sound-in-roboraid.md).
+
+## <a name="spatialization"></a>Espacialização
+A espacialização é o componente direcional do áudio espacial. Ao usar uma configuração de Home Theater 7,1, a espacial é tão simples quanto a visão panorâmica entre alto-falantes. Mas com fones de ouvido em realidade misturada, é essencial usar uma tecnologia baseada em HRTF para precisão e conforto. O Windows oferece a espacial baseada em HRTF, e esse suporte é acelerado por hardware no HoloLens 2.
 
 <br>
 
 <iframe width="940" height="530" src="https://www.youtube.com/embed/aB3TDjYklmo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-Indicações de áudio esquerda ou direita (Azimuth) originam-se das diferenças no momento em que o som chega a cada Ear. As indicações para cima e para baixo se originam de alterações Spectral produzidas pela forma de Ear externa (pinnae). Ao designar a origem do áudio, o sistema pode simular a experiência de som chegando em momentos diferentes para nossos ouvidos. Observe que no HoloLens, enquanto a espacial Azimuth é personalizada, a simulação de elevação é baseada em um conjunto médio de anthropometrics. Portanto, a precisão da elevação pode ser menos precisa do que a precisão do Azimuth.
+### <a name="should-i-spatialize"></a>Devo me esespacial?
+Muitos sons em aplicativos de realidade misturados se beneficiam da espacial, que tira um som da cabeça do ouvinte e o coloca no mundo. Consulte [design de som espacial](spatial-sound-design.md) para obter sugestões sobre os usos mais eficientes da espacialização em seu aplicativo.
 
-As características dos sons também são alteradas com base no ambiente no qual existem. Por exemplo, gritar em um côncavo fará com que sua voz salte as paredes, os andares e os tetos, criando um efeito de eco. A configuração de modelo de sala de som espacial reproduz essas reflexos para inserir sons em um ambiente de áudio específico. Você pode usar essa configuração para corresponder o local real do usuário para simulação de sons nesse espaço para criar uma experiência de áudio mais imersiva.
+### <a name="spatializer-personalization"></a>Personalização de Spatializer
+HRTFs Manipule as diferenças de nível e fase entre os ouvidos pelo espectro de frequência. Elas se baseiam em modelos físicos e medidas de pinnae (torso), de cabeça humana e de formas Ear. Nosso cérebro responde a essas diferenças para dar uma percepção de direção em som. 
 
-## <a name="integrating-spatial-sound"></a>Integrando som espacial
+Cada indivíduo tem uma forma Ear exclusiva, tamanho da cabeça e posição ear, portanto, os melhores HRTFs são aqueles que estão em conformidade com você. O HoloLens aumenta a precisão da espacial usando a pupilaryy (distância) do headset exibido para ajustar o HRTFs para o tamanho da cabeça.
 
-Como o princípio geral da realidade misturada é o aterramento de [hologramas](hologram.md) no mundo físico do usuário ou no ambiente virtual, a maioria dos sons de hologramas deve ser espacial. No HoloLens, há considerações de orçamento de memória e CPU naturalmente, mas você pode usar vozes de som espacial de 10-12 ao usar menos de aproximadamente 12% da CPU (aproximadamente 70% de um dos quatro núcleos). O uso recomendado para vozes de som espacial inclui:
-* Combinação de olhar (realce de objetos, particularmente quando fora da exibição). Quando um holograma precisar de atenção de um usuário, jogue um som nesse holograma (por exemplo, tenha um latido Virtual Dog). Isso ajuda o usuário a encontrar o holograma quando ele não está no modo de exibição.
-* Áudio haptics (áudio reativo para interações sem toque). Por exemplo, jogue um som quando o controlador da mão ou de movimento do usuário entra e sai do quadro de gesto. Ou tocar um som quando o usuário selecionar um holograma.
-* Imersão (sons de ambiente em torno do usuário).
+### <a name="spatializer-platform-support"></a>Suporte à plataforma Spatializer
+O Windows oferece a espacialização, incluindo HRTFs, por meio da [API do ISpatialAudioClient](https://docs.microsoft.com/windows/win32/coreaudio/spatial-sound). Essa API expõe a aceleração de hardware de HRTF do HoloLens 2 para aplicativos.
 
-Também é importante observar que, embora misturar sons estéreo padrão com som espacial possa ser eficaz na criação de ambientes realistas, os sons estéreos devem ser relativamente silenciosos para deixar espaço para os aspectos sutis do som espacial, como reflexos ( indicações de distância) que podem ser difíceis de ouvir em um ambiente barulhento.
+### <a name="spatializer-middleware-support"></a>Suporte de middleware Spatializer
+O suporte para o Windows ' HRTFs está disponível para alguns mecanismos de áudio de terceiros:
+* Um plug-in do [mecanismo de áudio do Unity](spatial-sound-in-unity.md) chama o HRTF XAPO
+* Um [plug-in do mecanismo de áudio WWise](https://www.audiokinetic.com/products/plug-ins/msspatial/) chama a API ISpatialAudioClient
 
-O mecanismo de som espacial do Windows só dá suporte a uma taxa de amostra de 48K para reprodução. A maioria dos middlewares, como o Unity, converterá automaticamente os arquivos de som no formato com suporte, mas ao usar as APIs de áudio do Windows diretamente, corresponda ao formato do conteúdo ao formato suportado pelo efeito.
+## <a name="acoustics"></a>Acústica
+O áudio espacial pode ser maior que a direção. Outras dimensões, incluindo oclusão, obstrução, reverberação, portal e modelagem de origem, são coletivamente chamadas de ' acústicas '. Sem acústicas, os sons espaciais não têm uma distância percebida.
 
-## <a name="see-also"></a>Consulte também
-* [MR espacial 220](holograms-220.md)
-* [Som espacial no Unity](spatial-sound-in-unity.md)
-* [Som espacial no DirectX](spatial-sound-in-directx.md)
-* [Projeto de som espacial](spatial-sound-design.md)
+O tratamento acústico pode variar de simples a muito complexo. Usando um simples reverbo, como o que tem suporte de qualquer mecanismo de áudio, você pode enviar sons espaciais para o ambiente ao redor do ouvinte. O tratamento acústico mais atrativo e mais atraente está disponível em sistemas acústicos como [acústicos de projetos](https://aka.ms/acoustics). Os acústicos de projeto podem modelar o efeito de paredes, portas e outras geometrias de cena em um som e é uma opção eficaz para casos em que a geometria de cena relevante é conhecida no momento do desenvolvimento.
+

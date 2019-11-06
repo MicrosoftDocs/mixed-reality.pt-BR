@@ -1,111 +1,118 @@
 ---
-title: Design de som espacial
+title: Usando som em aplicativos de realidade misturada
 description: O som espacial é uma ferramenta poderosa para imersão, acessibilidade e design de UX em aplicativos de realidade misturada.
-author: joekellyms
-ms.author: joekelly
-ms.date: 03/21/2018
+author: kegodin
+ms.author: kegodin
+ms.date: 11/02/2019
 ms.topic: article
 keywords: Realidade mista do Windows, som espacial, design, estilo
-ms.openlocfilehash: acc568eeb08d2a27574dcfbc9f132519e1e31843
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: c069095808eaa9d31b1ffa41dbaa29c9f635837b
+ms.sourcegitcommit: 2e54d0aff91dc31aa0020c865dada3ae57ae0ffc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438283"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73641058"
 ---
-# <a name="spatial-sound-design"></a>Design de som espacial
+# <a name="using-sound-in-mixed-reality-applications"></a>Usando som em aplicativos de realidade misturada
 
-O som espacial é uma ferramenta poderosa para imersão, acessibilidade e design de UX em aplicativos de realidade misturada.
-
-Se você já tiver jogado [Marco aquático](https://en.wikipedia.org/wiki/Marco_Polo_(game))ou alguém ligar para seu telefone para ajudá-lo a localizá-lo, você já está familiarizado com a importância do som espacial. Usamos indicações de som em nossas vidas diárias para localizar objetos, obter a atenção de alguém ou obter uma compreensão melhor de nosso ambiente. Quanto mais próximo o som do seu aplicativo se comparecer com o mundo real, mais convincente e envolvente seu mundo virtual será.
+Use o som para informar e reforçar o modelo mental do usuário do estado do aplicativo. Use a espacial, quando apropriado, para inserir sons no mundo misto. Conectar a auditoria e o Visual dessa maneira aprofunda a natureza intuitiva de muitas interações e leva a uma maior confiança do usuário.
 
 <br>
 
 <iframe width="940" height="530" src="https://www.youtube.com/embed/aB3TDjYklmo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-## <a name="device-support"></a>Suporte a dispositivos
+## <a name="when-should-i-add-sounds"></a>Quando devo adicionar sons?
+Os aplicativos de realidade misturada geralmente têm uma necessidade maior de sons do que aplicativos em uma tela 2D, devido à falta de uma interface física. Os sons devem ser adicionados quando informam ao usuário ou reforçam as interações.
 
-<table>
-    <colgroup>
-    <col width="33%" />
-    <col width="33%" />
-    <col width="33%" />
-    </colgroup>
-    <tr>
-        <td><strong>Recurso</strong></td>
-        <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>Headsets imersivos</strong></a></td>
-    </tr>
-     <tr>
-        <td>Design de som espacial</td>
-        <td>✔️</td>
-        <td>✔️</td>
-    </tr>
-</table>
+### <a name="inform-and-reinforce"></a>Informar e reforçar
+* Para eventos não iniciados pelo usuário, como notificações, considere adicionar sons para informar ao usuário que ocorreu uma alteração.
+* As interações podem ter vários estágios. Considere o uso de sons para reforçar as transições de estágio.
+
+Veja abaixo exemplos de interações, eventos e características de som sugeridas.
+
+### <a name="exercise-restraint"></a>Retentor exercício
+Os usuários não têm uma capacidade ilimitada para informações de áudio:
+* Cada som deve comunicar uma informação específica e valiosa
+* Ao reproduzir sons para informar o usuário, reduza temporariamente o volume de outros sons
+* Para sons de botão de mouse (veja abaixo), adicione um atraso de tempo para evitar o disparo excessivo de sons
+
+### <a name="dont-rely-solely-on-sounds"></a>Não confie exclusivamente em sons
+Os sons usados também serão valiosos quando os usuários puderem ouvi-los, mas garantir que seu aplicativo seja utilizável mesmo com o som desativado.
+* Os usuários podem estar com deficiência auditiva
+* Seu aplicativo pode ser usado em um ambiente alto
+* Os usuários podem ter privacidade ou outros motivos para desabilitar o áudio do dispositivo
+
+## <a name="how-should-i-sonify-interactions"></a>Como devo sonifyr as interações?
+Os tipos de interação na realidade misturada incluem gesto, manipulação direta e voz. Use as características sugeridas a seguir para selecionar ou criar sons para essas interações.
+
+### <a name="gesture-interactions"></a>Interações de gesto
+Em realidade misturada, os usuários podem interagir com botões usando um cursor. As ações de botão geralmente são executadas quando o usuário libera o botão, em vez de quando ele foi pressionado, para permitir que o usuário tenha a chance de cancelar a interação. Use sons para reforçar esses estágios. Além disso, para ajudar os usuários a se destinarem a botões distantes, considere usar um som de foco do cursor.
+* Os sons de pressionamento de botão devem ter um breve clique tactile. Exemplo: [MRTK_ButtonPress. wav](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MixedRealityToolkit.SDK/StandardAssets/Audio/MRTK_ButtonPress.wav)
+* Os sons de botão não pressionados devem ter uma aparência tactile semelhante. Ter um tom elevado versus o som de imprensa reforça a sensação de conclusão. Exemplo: [MRTK_ButtonUnpress. wav](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MixedRealityToolkit.SDK/StandardAssets/Audio/MRTK_ButtonUnpress.wav)
+* Para sons de foco, considere usar um som sutil e sem ameaça, como um Thud ou um choque de baixa frequência.
 
 
-## <a name="four-key-things-spatial-sound-does-for-mixed-reality-development"></a>As quatro principais coisas que o som espacial faz para o desenvolvimento de realidade misturada
+### <a name="direct-manipulation"></a>Manipulação direta
+No HoloLens 2, o controle de mão articulado dá suporte à manipulação direta de elementos da interface do usuário. Os sons são substituições importantes para a falta de comentários físicos.
 
-Por padrão, os sons são reproduzidos no estéreo. Isso significa que o som será tocado sem nenhuma posição espacial, portanto, o usuário não sabe de onde veio o som. O som espacial faz quatro coisas importantes para o desenvolvimento de realidade misturada:
+Um som de **pressionamento de botão** é importante na manipulação direta porque o usuário não tem indicação física de quando atingiu a parte inferior da viagem principal. Indicadores visuais de viagem de chave podem ser pequenos, sutis e obstruído. Assim como acontece com as interações de gestos, os pressionamentos de botão devem ter um som curto, tactile, como um clique, e as prensas devem ter um clique semelhante com uma densidade elevada.
+* Exemplo: [MRTK_ButtonPress. wav](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MixedRealityToolkit.SDK/StandardAssets/Audio/MRTK_ButtonPress.wav)
+* Exemplo: [MRTK_ButtonUnpress. wav](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MixedRealityToolkit.SDK/StandardAssets/Audio/MRTK_ButtonUnpress)
 
-**Aterramento**
+A confirmação visual de uma **captura** ou **liberação** na manipulação direta é difícil de se comunicar. A mão do usuário geralmente estará no caminho de qualquer efeito visual, e os objetos apto para não têm um análogo visual real de "captação". Por outro lado, os sons podem comunicar efetivamente as interações de captura e liberação bem-sucedidas.
+* As ações de captura devem ter um som curto, um pouco muffled tactile, que evoca a ideia de fechar os dedos em um objeto. Às vezes, isso é acompanhado por um som "whoosh" que leva o impacto do som para comunicar o movimento da mão durante a captura. Exemplo: [MRTK_Move_Start. wav](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MixedRealityToolkit.SDK/StandardAssets/Audio/MRTK_Move_Start.wav)
+* As ações de liberação devem ter um som de tactile e curto, geralmente com um efeito de som de captura e em uma ordem inversa no tempo, tendo um impacto e, em seguida, um "whoosh" para comunicar a liquidação do objeto no lugar. Exemplo: [MRTK_Move_End. wav](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MixedRealityToolkit.SDK/StandardAssets/Audio/MRTK_Move_End.wav)
 
-Sem som, os objetos virtuais deixam de existir efetivamente quando viramos o nosso nosso rumo. Assim como os objetos reais, você deseja ser capaz de ouvir esses objetos mesmo quando não consegue vê-los e deseja localizá-los em qualquer lugar em sua parte. Assim como os objetos virtuais precisam ser aterrados visualmente para misturar com o mundo real, eles também precisam ser forma audíveldos. O som espacial combina diretamente o seu ambiente de áudio real no mundo inteiro com o ambiente de áudio digital.
+Uma interação de **desenho** deve ter um som persistente e em loop que tenha seu volume controlado pela movimentação da mão do usuário, com que ele seja completamente silencioso quando a mão do usuário ainda estiver e em seu volume máximo quando a mão do usuário estiver se movendo rapidamente.
 
-**Atenção do usuário**
 
-Em experiências de realidade misturada, você não pode supor onde seu usuário está olhando e esperar que eles vejam algo que você coloca no mundo visualmente. Mas os usuários sempre podem ouvir uma reprodução de som mesmo quando o objeto que está tocando o som está por trás deles. As pessoas são usadas para ter sua atenção desenhada por som-nós instinctuallymos em direção a um objeto que ouvimos em nosso lugar. Quando você deseja direcionar o olhar do usuário para um local específico, em vez de usar uma seta para apontar visualmente, colocar um som nesse local é uma maneira muito natural e rápida de orientá-los.
 
-**Imersão**
+### <a name="voice-interactions"></a>Interações de voz
+As interações de voz geralmente têm elementos visuais sutis. Reforce os estágios de interação usando sons. Considere a escolha de mais sons de tons para diferenciá-los dos sons de gesto e de manipulação direta.
 
-Quando os objetos se movem ou colidem, geralmente ouvimos essas interações entre os materiais. Então, quando os objetos não fazem o mesmo som que fariam no mundo real, um nível de imersão é perdido, como assistir a um filme assustador com o volume em todo o caminho. Todos os sons do mundo real são provenientes de um ponto específico no espaço, quando viramos nossos cabeçotes, ouvimos a alteração de onde esses sons estão vindos em relação aos nossos ouvidos e podemos acompanhar o local de qualquer som dessa maneira. Os sons espaciais formam a "sensação" de um lugar além do que podemos ver.
+* Use um tom de som positivo para **confirmações**de comando de voz. Os tons crescentes e os principais intervalos musicais são eficazes.
+* Use um tom de som mais curto e menos positivo para a **falha**de comando de voz. Evitar sons negativos; em vez disso, use um som mais percussive, neutro para comunicar que o aplicativo está mudando da interação.
+* Se seu aplicativo usar uma palavra de ativação, use um tom curto de AdaBoost quando o dispositivo **começar a escutar**e um som de loop sutil enquanto o aplicativo escuta. 
 
-**Design de interação**
+### <a name="notifications"></a>Notificações
+As notificações comunicam as alterações de estado do aplicativo e outros eventos não iniciados pelo usuário, como conclusões de processo, mensagens e chamadas.
 
-Na maioria das experiências interativas tradicionais, a interação parece que os efeitos de som da interface do usuário são reproduzidos em mono ou estéreo padrão. Mas como tudo em realidade misturada existe no espaço 3D-incluindo a interface do usuário-esses objetos se beneficiam de sons espaciais. Quando pressionamos um botão no mundo real, o som que ouvimos é proveniente desse botão. Ao espacialar os sons de interação, fornecemos novamente uma experiência de usuário mais natural e realista.
+Na realidade misturada, os objetos que se movem podem sair do campo de exibição do usuário. Acompanha **objetos animados** com um som espacial que depende do objeto e da velocidade de movimento.
+* Também ajuda a reproduzir um som espacial no final de uma animação para informar o usuário da nova posição
+* Para movimentos graduais, um som "whoosh" durante a movimentação ajudará o usuário a controlar o objeto
 
-## <a name="best-practices-when-using-spatial-sound"></a>Práticas recomendadas ao usar som espacial
+As **notificações de mensagem** provavelmente serão ouvidos várias vezes e, às vezes, em uma rápida sucessão. É importante que ele não se sobressaia ou fique sem som. Sons de tons positivos de médio alcance são eficazes aqui.
 
-**Sons reais funcionam melhor do que sons sintetizados ou não naturais**
+* As chamadas devem ter qualidades semelhantes a um toque de telefone celular. Em geral, eles são repetindo frases musicais que são executadas até que o usuário responda à chamada.
+* A conexão de comunicação de voz e a desconexão devem ter um som tonal curto. O som de conexão deve ter um tom positivo, indicando a conexão bem-sucedida, enquanto o som de desconexão deve ser um som neutro indicando a conclusão da chamada.
 
-Quanto mais familiar o usuário estiver com um tipo de som, mais real ele se sentirá e, mais facilmente, ele poderá localizá-lo em seu ambiente. Uma voz humana, por exemplo, é um tipo muito comum de som, e os usuários vão localizá-lo tão rapidamente quanto uma pessoa na sala conversando com eles.
+## <a name="spatialization"></a>Espacialização
+A espacialização usa fones estéreo ou alto-falantes para inserir sons no mundo misto.
 
-**Simulação de trunfos de expectativa**
+### <a name="which-sounds-should-i-spatialize"></a>Quais sons devo ter uma espacial?
+Um som deve ser espacial quando estiver associado a um evento que tenha um local espacial. Isso inclui a interface do usuário, as vozes de ia incorporadas e os indicadores visuais.
 
-Se você for usado para um som proveniente de uma determinada direção, sua atenção será guiada nessa direção, independentemente das indicações espaciais. Por exemplo, na maioria das vezes que ouvimos pássaros, eles estão acima dos EUA. Tocar o som de um pássaro provavelmente fará com que o usuário pesquise, mesmo que você coloque o som abaixo deles. Isso geralmente é confuso e é recomendável que você trabalhe com expectativas como essas em vez de ir contra elas para uma experiência mais natural.
+A espacial dos elementos da **interface do usuário** ajuda a desorganizar o "espaço" do Sonic do usuário, limitando o número de sons estéreo bloqueados a seus cabeçotes. Especialmente em interações de manipulação direta, o toque, a captura e a liberação se sentem mais naturais quando os comentários de áudio são espaciais. No entanto, veja abaixo a atenuação de distância para esses elementos.
 
-**A maioria dos sons deve ser espacial**
+A espacialação de **indicadores visuais** e **vozes de ia _incorporadas_**  informam intuitivamente os usuários quando estão fora do campo de exibição.
+    
+Por outro lado, evite a espacial de **vozes de ia _face_** e outros elementos sem um local espacial bem definido. A espacialização sem um elemento visual relacionado pode distrair os usuários de pensar que há um elemento visual que ele não pode localizar.
 
-Conforme mencionado acima, tudo em realidade misturada existe no espaço 3D-seus sons também devem ser. Às vezes, as músicas podem se beneficiar da espacial, especialmente quando estão ligadas a um menu ou a alguma outra interface do usuário.
+Adicionar a spatialização será acompanhado com algum custo de CPU. Muitos aplicativos terão, no máximo, dois sons que são executados simultaneamente. O custo da espacial, nesse caso, pode ser insignificante. Você pode usar o monitor de taxa de quadros MRTK para avaliar o impacto da adição de espacial. 
 
-**Evitar emissores invisíveis**
+### <a name="when-and-how-should-i-apply-distance-based-attenuation"></a>Quando e como devo aplicar a atenuação baseada em distância?
+No mundo físico, os sons mais distantes são mais silenciosos. O mecanismo de áudio pode modelar essa atenuação com base na distância de origem. Use a atenuação baseada em distância ao comunicar informações relevantes.
 
-Como temos sido condicionados a olhar os sons que ouvimos em nosso lugar, pode ser uma experiência não natural e até mesmo unnerving para localizar um som que não tenha nenhuma presença Visual. Os sons do mundo real não vêm de espaço vazio, então certifique-se de que se um emissor de áudio for colocado dentro do ambiente imediato do usuário que ele também possa ser visto.
+As distâncias para **indicadores visuais**, **hologramas animados**e outros sons informativos geralmente são relevantes para o usuário. Use a atenuação baseada em distância para fornecer essa indicação intuitivamente.
+* Ajuste a curva de atenuação de cada fonte para se ajustar ao tamanho dos espaços do mundo mistos. A curva padrão do mecanismo de áudio geralmente é destinada a espaços muito grandes (até metade de Kilometer).
 
-**Evitar mascaramento espacial**
+Sons que reforçam os **estágios progressivos de botões** e outras interações não devem ter atenuação aplicada. Os efeitos de reforçamento desses sons são geralmente mais importantes do que a comunicação da distância com o botão. As variações podem ser discadas, especialmente com teclados, em que muitos cliques de botão serão ouvidos sucessivamente.
 
-O som espacial se baseia em indicações acústicas muito sutis que podem ser sobreligadas por outros sons. Se você tiver música estéreo ou sons de ambiente, verifique se eles são baixos o suficiente na combinação para dar espaço para os detalhes de seus sons espaciais que permitirão que os usuários os localizem facilmente e os mantenham informais reais e naturais.
+### <a name="which-spatialization-technology-should-i-use"></a>Qual tecnologia de espacial deve ser usada?
+Ao usar fones de ouvido ou os alto-falantes do HoloLens, use as tecnologias de espacial com base em HRTF (função de transferência relacionada ao cabeçalho). Eles modelam a propagação de som no mundo físico. Mesmo quando uma fonte de som está longe de um lado da cabeça, o som é propagado para o Ear distante com algumas atenuações e atrasos. A panorâmica do orador, por outro lado, depende apenas da atenuação e aplica a atenuação total no Ear esquerdo quando os sons estão no lado direito (e vice-versa). Isso pode ser desconfortável para ouvintes normais de audição e inacessível para ouvintes com deficiência auditiva em um Ear.
 
-## <a name="general-concepts-to-keep-in-mind-when-using-spatial-sound"></a>Conceitos gerais para ter em mente ao usar som espacial
+## <a name="next-steps"></a>Próximas etapas
+* [Usar som espacial no Unity](spatial-sound-in-unity.md)
+* [Estudo de caso do Roboraid](case-study-using-spatial-sound-in-roboraid.md)
+* [Estudo de caso do HoloTour](case-study-spatial-sound-design-for-holotour.md)
 
-**O som espacial é uma simulação**
-
-O uso mais frequente de som espacial é fazer com que pareça que ele está emanando de um objeto real ou virtual no mundo. Assim, os sons espaciais podem fazer mais sentido provenientes desses objetos.
-
-Observe que a precisão percebida do som espacial significa que um som não deve ser necessariamente emitido a partir do centro de um objeto, pois a diferença será perceptível, dependendo do tamanho do objeto e da distância do usuário. Com objetos pequenos, o ponto central do objeto geralmente é suficiente. Para objetos maiores, você pode querer um emissor de som ou vários emissores no local específico dentro do objeto que deve estar produzindo o som.
-
-**Normalizar todos os sons**
-
-A atenuação de distância ocorre rapidamente no primeiro medidor do usuário, como faz no mundo real. Todos os arquivos de áudio devem ser normalizados para garantir a atenuação de distância fisicamente precisa e garantir que um som possa ser ouvido quando houver vários medidores de distância (quando aplicável). O mecanismo de áudio espacial tratará a atenuação necessária para um som "sentir" como está em uma determinada distância (com uma combinação de atenuação e "indicações de distância") e a aplicação de qualquer atenuação sobre isso pode reduzir o efeito. Fora da simulação de um objeto real, a distância inicial decaimento de sons de *som espaciais* provavelmente será mais do que suficiente para uma combinação adequada do seu áudio.
-
-**Descoberta de objeto e interfaces de usuário**
-
-Ao usar as indicações de áudio para direcionar a atenção do usuário para além de sua exibição atual, o som deve ser audível e proeminente na mistura, bem acima de qualquer som estéreo, e quaisquer outros sons espaciais que possam atrapalhar a indicação de áudio direcional. Para sons e músicas associados a um elemento da interface do usuário (por exemplo, um menu), o emissor de som deve ser anexado a esse objeto. O estéreo e outra reprodução de áudio não posicional podem dificultar a localização de elementos espaciais para os usuários (veja acima: Evite mascaramento espacial).
-
-**Usar som espacial sobre som 3D padrão o máximo possível**
-
-Em realidade misturada, para a melhor experiência do usuário, o áudio 3D deve ser obtido usando o som espacial em vez de tecnologias de áudio 3D herdadas. Em geral, a espacial aprimorada vale a pena ter um pequeno custo de CPU em relação ao som 3D padrão. O áudio 3D padrão pode ser usado para sons de baixa prioridade, sons que são espaciais, mas não necessariamente vinculados a um objeto físico ou virtual, e os objetos que o usuário nunca precisam localizar para interagir com o aplicativo.
-
-## <a name="see-also"></a>Consulte também
-* [Som espacial](spatial-sound.md)
-* [Mapeamento espacial](spatial-mapping.md)

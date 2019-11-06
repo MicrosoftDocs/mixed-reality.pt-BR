@@ -1,31 +1,25 @@
 ---
 title: Acompanhamento ocular
-description: O HoloLens 2 permite um nível novo de contexto e entendimento humano dentro da experiência holográfica, fornecendo aos desenvolvedores a capacidade de usar as informações sobre o que os usuários estão vendo.
+description: O HoloLens 2 permite um novo nível de contexto e compreensão humana dentro da experiência do Holographic, fornecendo aos desenvolvedores a capacidade de usar informações sobre o que o usuário está olhando.
 author: sostel
 ms.author: sostel
 ms.date: 10/29/2019
 ms.topic: article
 keywords: Acompanhamento de olho, realidade misturada, entrada, olho-olhar, calibragem
-ms.openlocfilehash: 60de5ceb9f55ca7e2f74856af9bd75567763e382
-ms.sourcegitcommit: a5dc182da237f63f0487d40a2e11894027208b6c
+ms.openlocfilehash: 63520ee8d7d3ce73405776fccc62290cbbadd0a8
+ms.sourcegitcommit: 2e54d0aff91dc31aa0020c865dada3ae57ae0ffc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73441111"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73641139"
 ---
 # <a name="eye-tracking-on-hololens-2"></a>Acompanhamento ocular no HoloLens 2
 
 ![Demonstração de controle de olho no MRTK](images/mrtk_et_scenemenu.jpg)
 
-O HoloLens 2 permite um nível novo de contexto e entendimento humano dentro da experiência holográfica, fornecendo aos desenvolvedores a capacidade de usar as informações sobre o que os usuários estão vendo. Esta página fornece uma visão geral dessa nova funcionalidade para desenvolvedores e designers sobre como eles podem se beneficiar do controle de olho para vários casos de uso e diretrizes básicas para desenvolvedores. 
+O HoloLens 2 permite um novo nível de contexto e compreensão humana dentro da experiência do Holographic, fornecendo aos desenvolvedores a capacidade de usar informações sobre o que o usuário está olhando. Esta página fornece uma visão geral dessa nova funcionalidade para desenvolvedores e designers sobre como eles podem se beneficiar do controle de olho para vários casos de uso e diretrizes básicas para desenvolvedores. 
 
-
-## <a name="calibration"></a>Calibragem 
-Para que o acompanhamento de olho funcione com precisão, cada usuário precisa passar por uma [calibragem do usuário com acompanhamento de olho](calibration.md) para o qual o usuário precisa examinar um conjunto de destinos Holographic. Isso permite que o dispositivo ajuste o sistema para uma experiência de exibição de qualidade mais confortável e mais segura para o usuário e para garantir o acompanhamento preciso do controle de olho ao mesmo tempo. O controle de olhos deve funcionar para a maioria dos usuários, mas há casos raros em que um usuário pode não conseguir calibrar com êxito.
-Para saber mais sobre a calibração e sobre como garantir uma experiência tranqüila, consulte nossa página de [calibragem do usuário de acompanhamento de olho](calibration.md) .
-
-
-## <a name="device-support"></a>Suporte a dispositivos
+### <a name="device-support"></a>Suporte a dispositivos
 <table>
 <colgroup>
     <col width="25%" />
@@ -46,6 +40,24 @@ Para saber mais sobre a calibração e sobre como garantir uma experiência tran
      <td>❌</td>
 </tr>
 </table>
+
+<br>
+
+## <a name="calibration"></a>Calibragem 
+Para que o acompanhamento de olho funcione com precisão, cada usuário precisa passar por uma [calibragem do usuário com acompanhamento de olho](calibration.md) para o qual o usuário precisa examinar um conjunto de destinos Holographic. Isso permite que o dispositivo ajuste o sistema para uma experiência de exibição de qualidade mais confortável e mais segura para o usuário e para garantir o acompanhamento preciso do controle de olho ao mesmo tempo. 
+
+O controle de olhos deve funcionar para a maioria dos usuários, mas há casos raros em que um usuário pode não ser capaz de calibrar com êxito. A calibragem pode falhar por vários motivos, incluindo, mas não se limitando a: 
+* O usuário optou anteriormente pelo processo de calibragem
+* O usuário obteve distraídos e não segue os destinos de calibragem
+* O usuário tem determinados tipos de lentes de contato e óculos para os quais o sistema ainda não dá suporte 
+* O usuário tem certos olhos physiologys, condições de olho ou cirurgia e olho que o sistema ainda não dá suporte  
+* Fatores externos que impedem o acompanhamento de olho confiável, como manchas no visor ou óculos do HoloLens, luz direta direto intensa e occlusions devido ao cabelo na frente dos olhos
+
+Os desenvolvedores devem certificar-se de fornecer suporte adequado para usuários para os quais os dados de acompanhamento de olho podem não estar disponíveis (que não podem ser calibrados com êxito). Fornecemos recomendações para soluções de fallback na seção na parte inferior desta página. 
+
+Para saber mais sobre a calibração e sobre como garantir uma experiência tranqüila, consulte nossa página de [calibragem do usuário de acompanhamento de olho](calibration.md) .
+
+<br>
 
 ## <a name="available-eye-tracking-data"></a>Dados de acompanhamento de olho disponíveis
 Antes de entrar em detalhes sobre os casos de uso específicos para a entrada olhar, queremos destacar rapidamente os recursos fornecidos pela [API de acompanhamento ocular](https://docs.microsoft.com/uwp/api/windows.perception.people.eyespose) do HoloLens 2. Os desenvolvedores obtêm acesso a um único olhar Ray (olhar e direção) a aproximadamente _30 fps (30 Hz)_ .
@@ -103,35 +115,33 @@ Fique atento ao fato de não sobrecarregar o usuário – para saber mais, confi
 
 ## <a name="using-eye-gaze-for-interaction"></a>Usando olho-olhar para interação
 A criação de uma interação que aproveita o direcionamento de olho rápido pode ser desafiadora.
-Por um lado, os olhos se movem tão rapidamente que você precisa ter cuidado ao usar a entrada olhar, pois o usuário pode achar a experiência difícil ou atrapalhar. Por outro lado, você também pode criar experiências verdadeiramente mágicos que vão para seus usuários! Para ajudá-lo, Confira nossa visão geral das principais vantagens, desafios e recomendações de design para [olhar de interação](eye-gaze-interaction.md). 
+Por um lado, os olhos se movem tão rapidamente que você precisa ter cuidado ao usar a entrada olhar, pois os usuários podem achar a experiência difícil ou atrapalhar. Por outro lado, você também pode criar experiências verdadeiramente mágicos que vão para seus usuários! Para ajudá-lo, Confira nossa visão geral das principais vantagens, desafios e recomendações de design para [olhar de interação](eye-gaze-interaction.md). 
 
 <br>
  
-## <a name="dev-guidance-what-if-eye-tracking-is-not-available"></a>Diretrizes de desenvolvimento: e se o acompanhamento de olho não estiver disponível?
-Pode haver situações em que seu aplicativo não receberá nenhum dado de controle de olho devido a vários motivos, incluindo, mas não limitado a:
-* O usuário ignorou a calibragem de acompanhamento ocular.
-* O usuário foi calibrado, mas decidiu não conceder permissão ao seu aplicativo para usar seus dados de controle de olho.
-* O usuário tem óculos exclusivo ou alguma condição de olho que ainda não dá suporte ao sistema.
-* Fatores externos que impedem o acompanhamento de olho confiável, como manchas no visor ou óculos do HoloLens, luz de sol direta intensa e occlusions devido ao cabelo na frente dos olhos.
+## <a name="fallback-solutions-when-eye-tracking-is-not-available"></a>Soluções de fallback quando o acompanhamento de olho não está disponível
+Em casos raros, os dados de acompanhamento de olho podem não estar disponíveis.
+Isso pode ser devido a diferentes motivos dos quais as mais comuns são listadas abaixo:
+* Falha do sistema ao [calibrar o usuário](calibration.md).
+* O usuário ignorou a [calibração](calibration.md).   
+* O usuário é calibrado, mas decidiu não dar permissão ao seu aplicativo para usar seus dados de controle de olho.    
+* O usuário tem óculos exclusivo ou alguma condição de olho que ainda não dá suporte ao sistema.    
+* Fatores externos que impedem o acompanhamento de olho confiável, como manchas no visor ou óculos do HoloLens, luz de sol direta intensa e occlusions devido ao cabelo na frente dos olhos.   
+Portanto, os desenvolvedores devem garantir que haja suporte de fallback apropriado para esses usuários. Na página [controle de olho no DirectX](gaze-in-directx.md#fallback-when-eye-tracking-is-not-available) , explicamos as APIs necessárias para detectar se os dados de acompanhamento de olho estão disponíveis. 
 
-Para você como desenvolvedor de aplicativos, isso significa que você precisa considerar como dar suporte a usuários para os quais os dados de acompanhamento de olho podem não estar disponíveis. Abaixo, explicamos primeiro como detectar se o acompanhamento de olhos está disponível e como abordar quando ele não está disponível para aplicativos diferentes.
+Conforme descrito acima, há várias razões pelas quais os dados de acompanhamento de olho podem não estar disponíveis.   
+Embora alguns usuários possam ter decidido a revogar o acesso aos seus dados de controle de olho e estão ok com a compensação de uma experiência de usuário inferior à privacidade de não fornecer acesso aos seus dados de controle de olho, em alguns casos isso pode não ser intencional.  
+Portanto, se seu aplicativo usar o acompanhamento de olho, e essa for uma parte importante da experiência, recomendamos que você se comunique claramente com o usuário.     
+Informando, de maneira adequada, o usuário por que o acompanhamento de olho é essencial para seu aplicativo (talvez até mesmo listar alguns recursos avançados) para experimentar todo o potencial do seu aplicativo pode ajudar o usuário a entender melhor o que está desistindo.    
+Ajudar o usuário a identificar por que o controle de olhos pode não estar funcionando (com base nas verificações acima) e oferecer algumas sugestões para solucionar problemas em potencial rapidamente.  
+Por exemplo, se você puder detectar que o sistema dá suporte ao controle de olho, o usuário é calibrado e até mesmo recebeu sua permissão, mas nenhum dado de acompanhamento de olho é recebido, isso pode apontar para alguns outros problemas, como manchas ou olhos sendo obstruído.    
+Observe que há casos raros de usuários para os quais o acompanhamento de olho pode simplesmente não funcionar.    
+Portanto, seja obedientes disso, permitindo descartar ou até mesmo desabilitar lembretes para habilitar o acompanhamento de olho em seu aplicativo.
 
-### <a name="1-how-to-detect-that-eye-tracking-is-available"></a>1. como detectar se o acompanhamento de olho está disponível
-Há algumas verificações para determinar se os dados de acompanhamento de olho estão disponíveis. Verifique se...
-* ... o sistema dá suporte a acompanhamento de olho. Chame o seguinte *método*: [Windows. percepção. Peoples. EyesPose. IsSupported ()](https://docs.microsoft.com/uwp/api/windows.perception.people.eyespose.issupported#Windows_Perception_People_EyesPose_IsSupported)
-
-* ... o usuário é calibrado. Chame a seguinte *Propriedade*: [Windows. percepção. People. EyesPose. IsCalibrationValid](https://docs.microsoft.com/uwp/api/windows.perception.people.eyespose.iscalibrationvalid#Windows_Perception_People_EyesPose_IsCalibrationValid)
-
-* ... o usuário recebeu a permissão do seu aplicativo para usar seus dados de acompanhamento de olho: recuperar o _' GazeInputAccessStatus '_ atual. Um exemplo de como fazer isso é explicado em [solicitando acesso à entrada olhar](https://docs.microsoft.com/windows/mixed-reality/gaze-in-directX#requesting-access-to-gaze-input).
-
-Além disso, talvez você queira verificar se os dados de acompanhamento de olho não estão obsoletos adicionando um tempo limite entre atualizações de dados de acompanhamento de olho recebido e, caso contrário, fallback para o Head-olhar, conforme discutido abaixo. 
-
-Conforme descrito acima, há várias razões pelas quais os dados de acompanhamento de olho podem não estar disponíveis. Embora alguns usuários possam ter decidido a revogar o acesso aos seus dados de controle de olho e estão ok com a compensação de uma experiência de usuário inferior à privacidade de não fornecer acesso aos seus dados de controle de olho, em alguns casos isso pode não ser intencional. Portanto, se seu aplicativo usar o acompanhamento de olho, e essa for uma parte importante da experiência, recomendamos que você se comunique claramente com o usuário. Informando, de maneira adequada, o usuário por que o acompanhamento de olho é essencial para seu aplicativo (talvez até mesmo listar alguns recursos avançados) para experimentar todo o potencial do seu aplicativo pode ajudar o usuário a entender melhor o que está desistindo. Ajudar o usuário a identificar por que o controle de olhos pode não estar funcionando (com base nas verificações acima) e oferecer algumas sugestões para solucionar problemas em potencial rapidamente. Por exemplo, se você puder detectar que o sistema dá suporte ao controle de olho, o usuário é calibrado e até mesmo recebeu sua permissão, mas nenhum dado de acompanhamento de olho é recebido, isso pode apontar para alguns outros problemas, como manchas ou olhos sendo obstruído. Observe que há casos raros de usuários para os quais o acompanhamento de olho pode simplesmente não funcionar. Portanto, seja obedientes disso, permitindo descartar ou até mesmo desabilitar lembretes para habilitar o acompanhamento de olho em seu aplicativo.
-
-### <a name="2-fallback-for-apps-using-eye-gaze-as-a-primary-input-pointer"></a>2. fallback para aplicativos usando olho-olhar como um ponteiro de entrada primário
+### <a name="fallback-for-apps-using-eye-gaze-as-a-primary-input-pointer"></a>Fallback para aplicativos usando olhar de olho como um ponteiro de entrada primário
 Se seu aplicativo usa olhar como uma entrada de ponteiro para selecionar rapidamente os hologramas em toda a cena, mas os dados de acompanhamento de olho não estão disponíveis, é recomendável fazer o fallback para Head-olhar e começar a mostrar o cursor Head-olhar. É recomendável usar um tempo limite (por exemplo, 500 – 1500 MS) para determinar se deseja ou não alternar. Isso é para evitar o pop-up de um cursor toda vez que o sistema pode perder o controle rapidamente devido a movimentos ou winks de olhos rápidos e cintilações. Se você for um desenvolvedor do Unity, o fallback automático para Head-olhar já será tratado no kit de ferramentas da realidade misturada. Se você for um desenvolvedor do DirectX, precisará lidar com esse comutador por conta própria.
 
-### <a name="3-fallback-for-other-eye-tracking-specific-applications"></a>3. fallback para outros aplicativos específicos de controle de olho
+### <a name="fallback-for-other-eye-tracking-specific-applications"></a>Fallback para outros aplicativos específicos de acompanhamento de olho
 Seu aplicativo pode usar olhar de olho de forma exclusiva, especificamente para os olhos, por exemplo, para animar os olhos de um avatar ou para a atenção com base nos olhos, calor a depender de informações precisas sobre a atenção Visual. Nesse caso, não há nenhum fallback claro. Se o acompanhamento de olho não estiver disponível, esses recursos podem simplesmente ser desabilitados.
 Novamente, é recomendável comunicar claramente isso com o usuário que talvez não esteja ciente de que a funcionalidade não está funcionando.
 

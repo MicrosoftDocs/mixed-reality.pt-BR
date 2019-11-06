@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 7/29/2019
 ms.topic: article
 keywords: OpenXR, Khronos, BasicXRApp, Mixed Realm OpenXR portal do desenvolvedor, DirectX, nativo, mecanismo personalizado do aplicativo nativo, middleware
-ms.openlocfilehash: cf8795e6fed7db9fd0743d0902ce1585d56fa5e0
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: d29b59d7dec19e5423c83ea6e61bb5625c8981dd
+ms.sourcegitcommit: 2e54d0aff91dc31aa0020c865dada3ae57ae0ffc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438142"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73641130"
 ---
 # <a name="openxr"></a>OpenXR
 
@@ -90,7 +90,7 @@ Ao final do ano, o tempo de execução do Windows Mixed Reality OpenXR dará sup
 * [Mão Articulation + malha à mão](hands-and-tools.md)
 * [Foco com o olhar](eye-tracking.md)
 * [Configurações de exibição secundárias (captura de realidade mista)](mixed-reality-capture-for-developers.md#render-from-the-pv-camera-opt-in)
-* [Mapeamento espacial](spatial-mapping.md)
+* [Reconhecimento de cena](scene-understanding.md)
 * Interoperabilidade com APIs de SDK do Windows
 
 Embora algumas dessas extensões possam ser iniciadas como extensões de MSFT específicas do fornecedor, a Microsoft e outros fornecedores de tempo de execução OpenXR estão trabalhando juntos para projetar extensões de extensão ou KHR de vários fornecedores para muitas dessas áreas de recursos.  Isso permitirá que o código que você escreve para esses recursos seja portável em fornecedores de tempo de execução, assim como na Especificação principal.
