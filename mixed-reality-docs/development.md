@@ -1,240 +1,158 @@
 ---
 layout: LandingPage
-title: Desenvolvimento
+title: Conheça as ferramentas e a arquitetura
 description: Documentação do desenvolvedor de realidade misturada para HoloLens e headsets imersivos.
 author: grbury
 ms.author: grbury
-ms.date: 02/12/2019
-ms.topic: article
+ms.date: 08/27/2019
+ms.topic: overview
 ms.localizationpriority: high
 keywords: Realidade misturada, desenvolver, desenvolvimento, HoloLens, unity, directx
-ms.openlocfilehash: bf80b676d03fce9011f5952af476dcaa5e2b4eb2
-ms.sourcegitcommit: 76a7aa6e64e114b63ace058dd6d6d662b3c9f09e
+ms.openlocfilehash: b37a9261f56b19edb3dde11cbeedc40a6e503e35
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68507914"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73435692"
 ---
-# <a name="development-launchpad"></a>Barra inicial de desenvolvimento
-
-## <a name="article-categories"></a>Categorias de artigo
+# <a name="learn-the-tools-and-architecture"></a>Conheça as ferramentas e a arquitetura
 
 
-<ul class="panelContent cardsF">
-    <li>
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="images/GetStartedIcon.png" alt="Get started icon">
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <h3>Introdução</h3>
-                        <p>
-                            <a href="mixed-reality.md">O que é realidade misturada?</a>
-                        </p>
-                        <p>
-                            <a href="install-the-tools.md">Instalar as ferramentas</a>
-                        </p>
-                        <p>
-                            <a href="mrlearning-base-ch1.md">MR de aprendizado: HoloLens 2 e MRTK v2</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </li>
-        <li>
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="images/HoloLens_Icon_120x130.png" alt="Devices icon">
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <h3>Dispositivos</h3>
-                          <p>
-                            <a href="https://www.microsoft.com/hololens/hardware" target="_blank">HoloLens 2</a>
-                        </p>
-                        <p>
-                            <a href="hololens-hardware-details.md">HoloLens (1ª geração)</a>
-                        </p>
-                        <p>
-                            <a href="immersive-headset-hardware-details.md">Headsets imersivos</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </li>
-    <li>
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="images/AzureSpatialAnchors_Icon_120x130.png" alt="Azure Spatial Anchors icon">
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <h3>Serviços</h3>
-                        <p>
-                            <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">Âncoras espaciais do Azure</a>
-                        </p>
-                        <p>
-                            <a href="https://docs.microsoft.com/azure/cognitive-services/speech-service/" target="_blank">Serviços de fala</a>
-                        </p>
-                        <p>
-                            <a href="https://docs.microsoft.com/azure/cognitive-services/computer-vision/" target="_blank">Serviços de visão</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </li>
-    <li>
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="images/Unity_Icon_120x130.png" alt="Developer techologies icon">
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <h3>Tecnologias de desenvolvedor</h3>
-                        <p>
-                            <a href="unity-development-overview.md">Unity</a>
-                        </p>
-                        <p>
-                            <a href="directx-development-overview.md">Mecanismo personalizado (DirectX)</a>
-                        </p>
-                        <p>
-                            <a href="https://www.unrealengine.com/en-US/blog/unreal-engine-4-support-for-hololens-2-released-in-early-access">Unreal</a>
-                        </p>                
-                    </div>
-                </div>
-            </div>
-        </div>
-    </li>
-    <li>
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="images/PortingGuides-icon_120x130.png" alt="Porting guides icon">
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <h3>Guias de portabilidade</h3>
-                        <p>
-                            <a href="mrtk-porting-guide.md">Atualização de aplicativos para o HoloLens 2<br>do HoloLens (1ª geração)</a>
-                        </p>
-                        <p>
-                            <a href="https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/HTKToMRTKPortingGuide.html">Kit de ferramentas de realidade misturada (MRTK)<br>Guia de portabilidade da API</a>
-                        </p>
-                        <p>
-                            <a href="porting-guides.md">Aplicativos para headsets imersivos</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </li>
-    <li>
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="images/App_patterns_Icon_120x130.png" alt="Development fundamentals icon">
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <h3>Conceitos básicos do desenvolvimento</h3>
-                        <p>
-                            <a href="Interaction-fundamentals.md">Interações instintuais</a>
-                        </p>
-                        <p>
-                            <a href="rendering.md">Renderização holográfica</a>
-                        </p>
-                         <p>
-                            <a href="testing-your-app-on-hololens.md">Como testar o aplicativo</a>
-                        </p>                    
-                    </div>
-                </div>
-            </div>
-        </div>
-    </li>    
-</ul>
+![Equipes trabalhando com materiais na Academia de Realidade Misturada](images/Development_Hero.png)
 
-## <a name="overview"></a>Visão geral
+## <a name="expand-your-design-processcase-study-expanding-the-design-process-for-mixed-realitymd"></a>[Expanda seu processo de design](case-study-expanding-the-design-process-for-mixed-reality.md)
 
-Os aplicativos de realidade misturada são criados com a [UWP](https://dev.windows.com/getstarted) (Plataforma Universal do Windows). Todos os aplicativos de realidade misturada são aplicativos UWP. Todos os aplicativos UWP podem ser feitos para execução em dispositivos Windows Mixed Reality. Com o Windows 10 e a familiaridade com as ferramentas de middleware, tais como o Unity, você pode começar a criar experiências de realidade misturada hoje mesmo.
+Quando a Microsoft lançou o HoloLens para um público-alvo de desenvolvedores ansiosos em 2016, a equipe já tinha parceria com estúdios dentro e fora da Microsoft para criar as experiências de lançamento do dispositivo. Essas equipes aprenderam fazendo e encontrando as oportunidades e os desafios no novo campo de design de realidade misturada. [Leia mais](case-study-expanding-the-design-process-for-mixed-reality.md)
+
 
 <br>
 
->[!VIDEO https://www.youtube.com/embed/A784OdX8xzI]
-
-## <a name="basics-of-mixed-reality-development"></a>Conceitos básicos do desenvolvimento de realidade misturada
-
-As experiências de [realidade misturada](mixed-reality.md) são possibilitadas pelos novos recursos do Windows para noção ambiental. Esses recursos permitem que os desenvolvedores coloquem um [holograma](hologram.md) no mundo real e que os usuários percorram os mundos digitais literalmente caminhando. 
-
-Estes são os blocos principais de construção para o desenvolvimento da realidade misturada:
-
-<table>
-<tr>
-<th style="width:175px">Entrada</th><th style="width:125px; text-align: center;"><a href="hololens-hardware-details.md">HoloLens (1ª geração)</a></th><th style="width:125px; text-align: center;">HoloLens 2</a></th><th style="width:125px; text-align: center;"> <a href="immersive-headset-hardware-details.md">Headsets imersivos</a></th>
-</tr><tr>
-<td> <a href="gaze.md">Foco da cabeça</a></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td>
-</tr><tr>
-<td> <a href="gaze.md">Foco com o olhar</a></td><td></td><td style="text-align: center;">✔️</td><td></td>
-</tr><tr>
- <td> <a href="gestures.md">Mãos articuladas</a></td><td></td><td style="text-align: center;">✔️</td><td></td>
-</tr><tr>
-<td> <a href="gestures.md">Gestos</a></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td></td>
-</tr><tr>
-<td> <a href="voice-input.md">Voz</a></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td>
-</tr><tr>
-<td> <a href="hardware-accessories.md">Gamepad</a></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td>
-</tr><tr>
-<td> <a href="motion-controllers.md">Controladores de movimentos</a></td><td></td><td></td><td style="text-align: center;">✔️</td>
-</tr><tr>
-<th style="width:175px">Percepção e recursos espaciais</th><th style="width:125px; text-align: center;"><a href="hololens-hardware-details.md">HoloLens (1ª geração)</a></th><th style="width:125px; text-align: center;">HoloLens 2</a></th><th style="width:125px; text-align: center;"> <a href="immersive-headset-hardware-details.md">Headsets imersivos</a></th>
-</tr><tr>
-<td> <a href="coordinate-systems.md">Coordenadas mundiais</a></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td>
-</tr><tr>
-<td> <a href="spatial-sound.md">Som espacial</a></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td>
-</tr><tr>
-<td> <a href="spatial-mapping.md">Mapeamento espacial</a></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td></td>
-</tr>
-</table>
+---
 
 
+## <a name="what-technology-path-are-you-interested-in"></a>Em qual caminho de tecnologia você está interessado? 
 
-O modelo de interação básico do [HoloLens](hololens-hardware-details.md) se baseia em [foco ocular](gaze.md), [gestos](gestures.md) e [vozes](voice-input.md), às vezes chamados de *GGV* . [Os headsets imersivos do Windows Mixed Reality](immersive-headset-hardware-details.md) também usam foco ocular e vozes, mas usam os [controladores de movimento](motion-controllers.md) para os gestos.
 
-Todos os dispositivos de realidade misturada se beneficiam do ecossistema de entrada disponível no Windows, incluindo mouse, teclado, gamepads e muito mais. Com o HoloLens, os [acessórios de hardware](hardware-accessories.md) são conectados por Bluetooth. Com os headsets imersivos, os acessórios se conectam ao computador host por Bluetooth, USB e outros protocolos compatíveis.
+:::row:::   
+    :::column:::    
+       [![Unity](images/unity_logo.png)](development.md#unity)<br>
+        **[Unity](development.md#unity)**<br>   
+        O caminho mais rápido para criar um aplicativo de realidade misturada é com o Unity. 
+    :::column-end:::    
+    :::column:::    
+        [![Unreal](images/Unreal_logo.png)](development.md#unreal)<br>
+         **[Unreal](development.md#unreal)**<br>    
+        O suporte pronto para produção para HoloLens 2 também será incluído no Unreal Engine 4.23.    
+    :::column-end:::
+    :::column:::    
+        [![WebVR](images/WebVR_logo.png)](development.md#webvr)<br>
+        **[WebVR](development.md#webvr)**<br>
+        O WebVR é uma especificação aberta que possibilita experimentar o VR em seu navegador. 
+    :::column-end:::        
+    :::column:::    
+        [![Native](images/VisualStudio-small_logo.png)](development.md#native)<br>
+        **[Native](development.md#native)**<br> 
+        Crie aplicativos de realidade misturada codificando diretamente nas APIs do Windows Mixed Reality. 
+    :::column-end:::    
+:::row-end:::
 
-Os recursos de noção ambiental, tais como as [coordenadas](coordinate-systems.md), o [som espacial](spatial-sound.md) e o [mapeamento espacial](spatial-mapping.md), fornecem os recursos necessários para misturar a realidade. O mapeamento espacial é exclusivo do HoloLens e permite que os hologramas interajam com o usuário e o mundo físico ao redor deles. Os sistemas de coordenadas permitem que o movimento do usuário afete o movimento no mundo digital.
+<br>
 
-Os hologramas são feitos de luz e som, que dependem da [renderização](rendering.md). Entender a experiência de posicionamento e persistência, conforme demonstrado na [página inicial do Windows Mixed Reality](navigating-the-windows-mixed-reality-home.md) (também chamado de "shell"), é uma ótima maneira de projetar-se na experiência do usuário.
+---
 
-## <a name="tools-for-developing-mixed-reality"></a>Ferramentas para o desenvolvimento de realidade misturada
+## <a name="unity"></a>Unity
 
-As ferramentas utilizadas dependerão do [estilo do aplicativo](app-views.md) que você deseja compilar.
-* Os [aplicativos com exibição 2D](building-2d-apps.md) utilizam as ferramentas para criar aplicativos UWP adequados para ambientes como tablets, computadores e Windows Phone. A experiência desses aplicativos ocorre como projeções 2D colocadas no Windows Mixed Reality doméstico e funcionam em vários tipos de dispositivos, incluindo telefones e computadores.
-* Os aplicativos imersivos e holográficos precisam de ferramentas projetadas para tirar proveito das APIs do Windows Mixed Reality. [Recomendamos usar o Unity](unity-development-overview.md) para criar aplicativos de realidade misturada. Os desenvolvedores interessados em criar seus próprios mecanismos podem [usar DirectX e outras APIs do Windows](directx-development-overview.md).
 
-Seja qual for o tipo de aplicativo que você esteja compilando, essas ferramentas facilitarão a sua experiência de desenvolvimento:
-* [Visual Studio e o Windows SDK](using-visual-studio.md)
-* [Portal de Dispositivos do Windows](using-the-windows-device-portal.md)
-* [Emulador do HoloLens](using-the-hololens-emulator.md)
-* [Simulador do Windows Mixed Reality](using-the-windows-mixed-reality-simulator.md)
-* [Critérios de qualidade do aplicativo](app-quality-criteria.md)
+### <a name="unity-development-overviewunity-development-overviewmd"></a>[Visão geral do desenvolvimento do Unity](unity-development-overview.md)
+Recomendamos que você reserve um tempo para explorar os tutoriais do Unity. Se precisar de ativos, o Unity conta com uma Asset Store abrangente. 
 
+<br>
+
+### <a name="microsofts-mixed-reality-toolkit-mrtk-for-unitymrtk-getting-startedmd"></a>[MRTK (Kit de Ferramentas de Realidade Misturada) da Microsoft para Unity](mrtk-getting-started.md)
+O MRTK v2 com o Unity é um kit de desenvolvimento multiplataforma de software livre para aplicativos de realidade misturada. O MRTK versão 2 destina-se a acelerar o desenvolvimento de aplicativos voltados para o Microsoft HoloLens, os headsets imersivos (VR) do Windows Mixed Reality e a plataforma OpenVR.
+
+<br>
+
+### <a name="open-source-sample-apps-and-step-by-step-tutorialstutorialsmd"></a>[Exemplos de aplicativos de software livre e tutoriais passo a passo](tutorials.md)
+Os tutoriais do HoloLens 2 foram projetados para ajudar os desenvolvedores a aprender técnicas e melhores práticas para o desenvolvimento de aplicativos de realidade misturada. Os tutoriais se baseiam no MRTK 2.0 (Kit de Ferramentas de Realidade Misturada 2.0).
+
+<br>
+
+### <a name="hand-interaction-examples-scene-mrtk-for-unityhttpsmicrosoftgithubiomixedrealitytoolkit-unitydocumentationgettingstartedwiththemrtkhtmlopen-and-run-the-handinteractionexamples-scene-in-editor"></a>[Exemplos de cena de interação com as mãos (MRTK) para o Unity](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/GettingStartedWithTheMRTK.html#open-and-run-the-handinteractionexamples-scene-in-editor)
+A cena de exemplo HandInteractionExamples.unity contém vários tipos de interações e controles de interface do usuário que realçam a entrada de mão articulada.
+>[!NOTE]
+>Requer a instalação do MRTK Foundation e os pacotes do Unity de exemplo.
+
+### <a name="eye-tracking-examples-mrtk-for-unityhttpsmicrosoftgithubiomixedrealitytoolkit-unitydocumentationeyetrackingeyetracking_examplesoverviewhtml"></a>[Exemplos de acompanhamento ocular (MRTK) para o Unity](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_ExamplesOverview.html)
+Esta página aborda como começar rapidamente a usar o acompanhamento ocular no MRTK criando os exemplos de acompanhamento ocular do MRTK fornecidos.
+>[!NOTE]
+>Requer a instalação do MRTK Foundation e os pacotes do Unity de exemplo.
+
+<br>
+
+---
+
+## <a name="unreal"></a>Unreal
+
+### <a name="unreal-development-overviewunreal-development-overviewmd"></a>[Visão geral do desenvolvimento do Unreal](unreal-development-overview.md)
+Saiba como criar um aplicativo de realidade misturada usando o Unreal.
+
+<br>
+
+---
+
+## <a name="webvr"></a>WebVR    
+
+### <a name="babylon-development-overviewhttpsdocbabylonjscom"></a>[Visão geral de desenvolvimento do Babylon](https://doc.babylonjs.com/)  
+Saiba como criar um aplicativo de realidade misturada com o Babylon. Recomendamos que você reserve um tempo para explorar os tutoriais do Babylon.
+
+<br>
+
+---
+
+## <a name="native"></a>Nativo
+
+
+### <a name="native-development-overviewdirectx-development-overviewmd"></a>[Visão geral do desenvolvimento nativo](directx-development-overview.md)
+O caminho mais rápido para criar um aplicativo de realidade misturada nativo.
+
+<br>
+
+### <a name="directx-uwp-app-templates-for-mixed-realityhttpsmarketplacevisualstudiocomitemsitemnamewindowsmixedrealityteamwindowsmixedrealityapptemplatesvsix"></a>[Modelos de aplicativos UWP em DirectX para realidade misturada](https://marketplace.visualstudio.com/items?itemName=WindowsMixedRealityteam.WindowsMixedRealityAppTemplatesVSIX)
+Todos os conceitos básicos necessários de que você precisa para começar a escrever um aplicativo de realidade misturada usando o DirectX.
+
+<br>
+
+---
+
+
+## <a name="what-would-you-like-to-do-next"></a>O que você deseja fazer a seguir?
+
+
+:::row:::
+    :::column:::
+       [![Noções básicas](images/icon-lightbulb.jpg)](index.md#understand-the-basics)<br>
+        **[Noções básicas](index.md#understand-the-basics)**<br>
+        Entenda melhor o que define a realidade misturada e como ela está sendo usada.
+    :::column-end:::
+    :::column:::
+        [![Torne-se um criador](images/icon-design.jpg)](design.md)<br>
+         **[Torne-se um criador](design.md)**<br>
+        Aprenda os conceitos básicos de que você precisa para começar a projetar e a criar protótipos.
+    :::column-end:::
+    :::column:::
+        [![Instalar as ferramentas](images/icon-developer.jpg)](install-the-tools.md)<br>
+         **[Instalar as ferramentas](install-the-tools.md)**<br>
+        Use a lista de verificação de instalação para obter as ferramentas necessárias para criar aplicativos para HoloLens e realidade misturada.
+    :::column-end:::
+    :::column:::
+        [![Participe de um evento](images/icon-calendar.jpg)](sf-academy-events.md)<br>
+         **[Participe de um evento](sf-academy-events.md)**<br>
+        Consulte o hardware e obtenha um tutorial prático para criar seu primeiro aplicativo HoloLens 2.
+    :::column-end:::
+:::row-end:::
+
+
+<br>
+
+<br>
