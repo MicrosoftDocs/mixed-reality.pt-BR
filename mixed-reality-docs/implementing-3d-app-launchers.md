@@ -6,12 +6,12 @@ ms.author: thmignon
 ms.date: 07/12/2018
 ms.topic: article
 keywords: 3D, logotipo, ícone, modelagem, iniciador, iniciador 3D, bloco, cubo ao vivo, link profundo, secondarytile, bloco secundário, UWP
-ms.openlocfilehash: be47b590e4fd1a847ac47d9cfbcbe824c544dd59
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 5d18f699792760c39df4f814bde470fb9f889db7
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438019"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926765"
 ---
 # <a name="implement-3d-app-launchers-uwp-apps"></a>Implementar iniciadores de aplicativos 3D (aplicativos UWP)
 
@@ -164,7 +164,7 @@ Uma caixa delimitadora pode ser usada para adicionar uma região de buffer adici
 > [!NOTE]
 > Esse recurso terá suporte a partir da atualização RS4 do Windows. Verifique se seu aplicativo está direcionando para uma versão do SDK do Windows maior ou igual a 10.0.17125 se você planeja usar esse recurso
 
-Você pode definir o comportamento de ativação para um secondaryTile 3D para controlar como ele reage quando um usuário o seleciona. Isso pode ser usado para posicionar objetos 3D no início da realidade misturada que são informativos ou decorativos Purleys. Há suporte para os seguintes tipos de comportamento de ativação:
+Você pode definir o comportamento de ativação para um secondaryTile 3D para controlar como ele reage quando um usuário o seleciona. Isso pode ser usado para posicionar objetos 3D na casa misturada da realidade, que são puramente informativas ou decorativas. Há suporte para os seguintes tipos de comportamento de ativação:
 1. Padrão: quando um usuário seleciona o secondaryTile 3D, o aplicativo é ativado
 2. Nenhum: quando os usuários selecionam o 3D secondaryTile, nada acontece e o aplicativo não é ativado.
 

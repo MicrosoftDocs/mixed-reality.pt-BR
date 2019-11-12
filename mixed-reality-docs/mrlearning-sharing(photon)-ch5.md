@@ -6,18 +6,18 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realidade misturada, unity, tutorial, hololens
-ms.openlocfilehash: b83c7ac39d522fc2b799591fa02608d5fc5cc930
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 9d76d5323705c001dbafe4411a9334dd3403d0ca
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437562"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926236"
 ---
 # <a name="5-integrating-azure-spatial-anchors-into-a-shared-experience"></a>5. integrando âncoras espaciais do Azure em uma experiência compartilhada
 
-Nesta lição, aprenderemos a integrar o ASA (âncoras espaciais) do Azure em nossa experiência compartilhada. O ASA permite que vários dispositivos colocalizados tenham uma referência comum se o seu ambiente físico for ancorar experiências virtuais de forma que todos os participantes vejam objetos no mesmo local físico.
+Nesta lição, você aprenderá a integrar o ASA (âncoras espaciais) do Azure à nossa experiência compartilhada. O ASA permite que vários dispositivos colocalizados tenham uma referência comum se o seu ambiente físico for ancorar experiências virtuais de forma que todos os participantes vejam objetos no mesmo local físico.
 
-Antes de prosseguir com esta lição, precisaremos concluir o módulo de aprendizagem do ASA, que abordará as noções básicas do ASA, a criação de contas e recursos do Azure e outros blocos de edifícios fundamentais que são necessários antes que possamos integrar o ASA à nossa experiência compartilhada.
+Antes de prosseguir com esta lição, você precisará concluir o módulo de aprendizagem do ASA, que abordará as noções básicas do ASA, a criação de contas e recursos do Azure, bem como outros blocos de construção fundamentais necessários antes de integrar o ASA à nossa experiência compartilhada.
 
 Seus
 
@@ -37,11 +37,11 @@ Seus
 
 ![Module3hapter5step5im](images/module3chapter5step5im.PNG)
 
-4. Agora, na hierarquia, selecione ShareAzureAnchorButton e mova sua atenção para o painel do inaspectr. Role para baixo até o menu suspenso mostrado na imagem abaixo, selecione AnchorModuleScript e clique em ShareAnchorNetework ().
+4. Agora, na hierarquia, selecione ShareAzureAnchorButton e mova sua atenção para o painel inspetor. Role para baixo até o menu suspenso mostrado na imagem abaixo, selecione AnchorModuleScript e clique em ShareAnchorNetwork ().
 
 ![Module3hapter5step6im](images/module3chapter5step6im.PNG)
 
-5. Selecione GetAzureAnchorButton (consulte a etapa 4) e mude sua atenção de volta para o painel inspetor. Role para baixo até o menu suspenso mostrado na imagem abaixo e selecione AnchorModuleScript e clique em GetSharedAnchorNetwork () e em salvar.
+5. Selecione GetAzureAnchorButton (consulte a etapa 4) e mude sua atenção de volta para o painel inspetor. Role para baixo até o menu suspenso exibido na imagem abaixo, selecione AnchorModuleScript, clique em GetSharedAnchorNetwork () e salve.
 
 ![Module3hapter5step7im](images/module3chapter5step7im.PNG)
 

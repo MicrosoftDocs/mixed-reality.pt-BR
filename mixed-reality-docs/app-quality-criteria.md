@@ -6,12 +6,12 @@ ms.author: crderr
 ms.date: 03/21/2018
 ms.topic: article
 keywords: critérios de qualidade do aplicativo, realidade misturada, aplicativo de realidade misturada
-ms.openlocfilehash: f98111ebe9aacc30778e86501be41e6ac5f6d165
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: d167e141b536f9247d22e40afefa718ecc399f5a
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437042"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926583"
 ---
 # <a name="app-quality-criteria"></a>Critérios de qualidade do aplicativo
 
@@ -124,7 +124,7 @@ Ao desgastar o dispositivo e exibir a experiência:
 * Mova-se para os hologramas e o ambiente, procure comportamentos como, por exemplo, nada e salto. Esse tipo de movimento é provavelmente causado pelo dispositivo não rastreando o ambiente ou pela distância para a âncora espacial.
 * Se houver grandes ou vários hologramas no quadro, observe o comportamento do holograma em várias profundidades ao mover sua posição de cabeçalho de lado a lado, se shakiness parecer que isso é provavelmente causado pelo plano de estabilização.
 
-### <a name="recomendations"></a>Recomendações
+### <a name="recommendations"></a>Recomendações
 
 * Adicione um contador de taxa de quadros no início do trabalho de desenvolvimento.
 * Use o plano de estabilização.
@@ -188,7 +188,7 @@ Os desalinhamentos de hologramas com objetos físicos (se a intenção de serem 
 * O mapa espacial é útil para colocar objetos em superfícies quando a precisão não é necessária.
 * Para obter a melhor precisão, use marcadores ou cartazes para definir os hologramas e um controlador Xbox (ou algum mecanismo de alinhamento manual) para a calibragem final.
 * Considere quebrar hologramas grandes e extras em partes lógicas e alinhar cada parte à superfície.
-* O IPD (Interpupilary Distance) definido incorretamente também pode afetar o alinhamento do holograma. Sempre configure o HoloLens para o IPD do usuário.
+* O IPD (Interpupillary Distance) definido incorretamente também pode afetar o alinhamento do holograma. Sempre configure o HoloLens para o IPD do usuário.
 
 ### <a name="resources"></a>Recursos
 

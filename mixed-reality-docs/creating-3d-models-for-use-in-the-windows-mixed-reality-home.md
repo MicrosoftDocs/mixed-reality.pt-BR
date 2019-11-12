@@ -6,12 +6,12 @@ ms.author: thmignon
 ms.date: 03/21/2018
 ms.topic: article
 keywords: 3D, modelagem, diretrizes de modelagem, requisitos de ativos, diretrizes de criação, iniciador, iniciador 3D, textura, materiais, complexidade, triângulos, malha, polígonos, semicontagem, limites
-ms.openlocfilehash: 73af40cf2915742cab612625c8243a36ee74d748
-ms.sourcegitcommit: f20beea6a539d04e1d1fc98116f7601137eebebe
+ms.openlocfilehash: 536fd9bc2002d679ee3bf73d5c906b84c51e5d46
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66692287"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926574"
 ---
 # <a name="create-3d-models-for-use-in-the-home"></a>Crie modelos 3D para uso na página inicial
 
@@ -19,7 +19,7 @@ O [Windows Mixed Reality Home](navigating-the-windows-mixed-reality-home.md) é 
 
 ## <a name="asset-requirements-overview"></a>Visão geral dos requisitos de ativo
 Ao criar modelos 3D para a realidade mista do Windows, há alguns requisitos que todos os ativos devem atender: 
-1. [Exportando](#exporting-models) - os ativos devem ser entregues no formato de arquivo. glb (glTF binário)
+1. [Exportando](#exporting-models) -os ativos devem ser entregues no formato de arquivo. glb (glTF binário)
 2. [Modelagem](#modeling-guidelines) -os ativos devem ser inferiores a 10.000 triângulos, não têm mais de 64 nós e 32 submalhas por LOD
 3. Os [materiais](#material-guidelines) -texturas não podem ser maiores que 4096 x 4096 e o menor mapa MIP não deve ser maior que 4 em qualquer uma das dimensões
 4. [Animação](#animation-guidelines) -as animações não podem ter mais de 20 minutos a 30 FPS (36.000 quadros chave) e devem conter < = 8192 vértices de destino de Morph
@@ -67,7 +67,7 @@ A página inicial do Windows Mixed Reality não oferece suporte a modelos com ma
 
 ## <a name="material-guidelines"></a>Diretrizes do material
 
-As texturas devem ser preparadas usando um fluxo de trabalho de commãos de metal de PBR Comece criando um conjunto completo de texturas, incluindo albedo, normal, oclusão, metal e áspero. O Windows Mixed Reality dá suporte a texturas com resoluções até 4096x4096, mas recomendamos que você crie em 512x512. Além disso, as texturas devem ser criadas em resoluções em múltiplos de 4, pois esse é um requisito para o formato de compactação aplicado às texturas nas etapas de exportação descritas abaixo. Finalmente, quando os mapas MIP gerating ou uma textura, o MIP mais baixo deve ser um máximo de 4x4.
+As texturas devem ser preparadas usando um fluxo de trabalho de commãos de metal de PBR Comece criando um conjunto completo de texturas, incluindo albedo, normal, oclusão, metal e áspero. O Windows Mixed Reality dá suporte a texturas com resoluções até 4096x4096, mas recomendamos que você crie em 512x512. Além disso, as texturas devem ser criadas em resoluções em múltiplos de 4, pois esse é um requisito para o formato de compactação aplicado às texturas nas etapas de exportação descritas abaixo. Finalmente, ao gerar mapas MIP ou uma textura, o MIP mais baixo deve ser um máximo de 4x4.
 <br>
 
 |  Tamanho de textura recomendado  |  Tamanho máximo da textura | MIP mais baixo
@@ -96,7 +96,7 @@ Informa ao sombreador se algo está metal ou não. Metal bruto = 1,0 branco não
 
 ## <a name="optimizations"></a>Otimizações
 
-O Windows Mixed Reality Home oferece uma série de otimizações sobre a especificação glTF básica definida usando extensões personalizadas. Essas otimizações são necessárias em versões do Windows < = 1709 e recomendadas em versões mais recentes do Windows. Você pode otimizar facilmente qualquer modelo glTF 2,0 usando o [conversor de ativos do Windows Mixed Reality disponível no GitHub](https://github.com/Microsoft/glTF-Toolkit/releases). Essa ferramenta executará a embalagem e as otimizações de textura corretas, conforme especificado abaixo. Para uso geral, é recomendável usar o WindowsMRAssetConverter, mas se você precisar de mais controle sobre a experiência e quiser criar seu próprio pipeline otimização, poderá consultar a especificação detalhada abaixo.  
+O Windows Mixed Reality Home oferece uma série de otimizações sobre a especificação glTF básica definida usando extensões personalizadas. Essas otimizações são necessárias em versões do Windows < = 1709 e recomendadas em versões mais recentes do Windows. Você pode otimizar facilmente qualquer modelo glTF 2,0 usando o [conversor de ativos do Windows Mixed Reality disponível no GitHub](https://github.com/Microsoft/glTF-Toolkit/releases). Essa ferramenta executará a embalagem e as otimizações de textura corretas, conforme especificado abaixo. Para uso geral, é recomendável usar o WindowsMRAssetConverter, mas se você precisar de mais controle sobre a experiência e quiser criar seu próprio pipeline de otimização, poderá consultar a especificação detalhada abaixo.  
 
 ### <a name="materials"></a>Materiais
 
@@ -170,7 +170,7 @@ O Windows MR usa o nó Geometry LODs para renderizar modelos 3D em diferentes n�
 |  LOD 1 |  5\.000  |  10.000 | 
 |  LOD 2 |  2\.500  |  10.000 | 
 
-Ao usar LODs, sempre especifique 3 níveis de LOD. O LODs ausente fará com que o modelo não seja renderizado inesperadamente, pois o sistema LOD muda para o nível de LOD ausente. o glTF 2,0 atualmente não dá suporte a LODs como parte da especificação principal. O LODs deve, portanto, ser definido usando a [extensão MSFT_LOD](https://github.com/sbtron/glTF/tree/MSFT_lod/extensions/Vendor/MSFT_lod).
+Ao usar LODs, sempre especifique 3 níveis de LOD. O LODs ausente fará com que o modelo não seja renderizado inesperadamente, pois o sistema LOD muda para o nível de LOD ausente. o glTF 2,0 atualmente não dá suporte a LODs como parte da especificação principal. LODs deve, portanto, ser definido usando a [extensão MSFT_LOD](https://github.com/sbtron/glTF/tree/MSFT_lod/extensions/Vendor/MSFT_lod).
 
 ### <a name="screen-coverage"></a>Cobertura de tela
 
@@ -198,12 +198,12 @@ Primeiro, baixe as ferramentas a seguir se você ainda não as tiver. Essas ferr
 
 
 ### <a name="opening-and-previewing-the-model"></a>Abrindo e visualizando o modelo
-Comece abrindo o modelo glTF no VSCode arrastando o arquivo. glTF para a janela do editor. Observe que, se você tiver um. glb em vez de um arquivo. glTF, poderá importá-lo no VSCode usando o suplemento de ferramentas do glTF que você baixou. Acesse "Exibir-> paleta de comandos" e comece digitando "glTF" na paleta de comandos e selecione "glTF: Importar do glb "que exibirá um seletor de arquivos para você importar um. glb com. 
+Comece abrindo o modelo glTF no VSCode arrastando o arquivo. glTF para a janela do editor. Observe que, se você tiver um. glb em vez de um arquivo. glTF, poderá importá-lo no VSCode usando o complemento de ferramentas do glTF que você baixou. Acesse "Exibir-> paleta de comandos" e comece digitando "glTF" na paleta de comandos e selecione "glTF: Import from glb", que exibirá um seletor de arquivos para você importar um. glb com. 
 
-Depois de abrir o modelo do glTF, você deverá ver o JSON na janela do editor. Observe que você também pode visualizar o modelo em um visualizador 3D ao vivo usando o clicando com o botão direito do mouse no nome do arquivo e selecionando o "glTF: Visualizar modelo 3D "atalho de comando no menu de clique com o botão direito do mouse. 
+Depois de abrir o modelo do glTF, você deverá ver o JSON na janela do editor. Observe que você também pode visualizar o modelo em um visualizador 3D ao vivo usando o clicando com o botão direito do mouse no nome do arquivo e selecionando o atalho de comando "glTF: Preview 3D Model" no menu do clique com o botão direito do mouse. 
 
 ### <a name="adding-the-triggers"></a>Adicionando os gatilhos
-Os gatilhos de animação são adicionados ao modelo glTF JSON usando a extensão de mapa de animação. A extensão de mapa de animação está documentada publicamente [aqui no GitHub](https://github.com/msfeldstein/glTF/blob/04f7005206257cf97b215df5e3f469d7838c1fee/extensions/Vendor/FB_animation_map/README.md) (Observação: ESTA É UMA EXTENSÃO DE RASCUNHO). Para adicionar a extensão ao modelo, basta rolar até o final do arquivo glTF no editor e adicionar o bloco "extensionsUsed" e "Extensions" ao arquivo, caso ainda não existam. Na seção "extensionsUsed", você adicionará uma referência à extensão "EXT_animation_map" e no bloco "Extensions", adicionará seus mapeamentos às animações no modelo.
+Os gatilhos de animação são adicionados ao modelo glTF JSON usando a extensão de mapa de animação. A extensão de mapa de animação está documentada publicamente [aqui no GitHub](https://github.com/msfeldstein/glTF/blob/04f7005206257cf97b215df5e3f469d7838c1fee/extensions/Vendor/FB_animation_map/README.md) (Observação: esta é uma extensão de rascunho). Para adicionar a extensão ao modelo, basta rolar até o final do arquivo glTF no editor e adicionar o bloco "extensionsUsed" e "Extensions" ao arquivo, caso ainda não existam. Na seção "extensionsUsed", você adicionará uma referência à extensão "EXT_animation_map" e no bloco "Extensions", você adicionará seus mapeamentos às animações no modelo.
 
 Conforme observado [na especificação](https://github.com/msfeldstein/glTF/blob/04f7005206257cf97b215df5e3f469d7838c1fee/extensions/Vendor/FB_animation_map/README.md) , você define o que dispara a animação usando a cadeia de caracteres "semântica" em uma lista de "animações", que é uma matriz de índices de animação. No exemplo abaixo, especificamos a animação a ser reproduzida enquanto o usuário está nuvens no objeto:
 
@@ -223,17 +223,17 @@ Conforme observado [na especificação](https://github.com/msfeldstein/glTF/blob
   }
 ```
 A semântica de gatilhos de animação a seguir tem suporte na página inicial do Windows Mixed Reality.  
-* "SEMPRE": Loop constante de uma animação
-* "MANTIDO": Em loop durante toda a duração de um objeto ser capturado.
-* "OLHAR": Em loop enquanto um objeto está sendo examinado
-* "PROXIMIDADE": Em loop enquanto um visualizador está próximo a um objeto
-* "APONTANDO": Em loop enquanto um usuário está apontando para um objeto
+* "Sempre": loop de uma animação constantemente
+* "Retido": em loop durante toda a duração de um objeto ser capturado.
+* "Olhar": em loop enquanto um objeto está sendo examinado
+* "Proximidade": em loop enquanto um visualizador está próximo de um objeto
+* "Apontando": em loop enquanto um usuário está apontando para um objeto
 
 ### <a name="saving-and-exporting"></a>Salvando e exportando
-Depois de fazer as alterações no modelo glTF, você poderá salvá-las diretamente como glTF ou clicar com o botão direito do mouse no nome do arquivo no editor e selecionar "glTF: Exportar para GLB (arquivo binário) "em vez disso, exportar um. glb. 
+Depois de fazer as alterações no modelo glTF, você poderá salvá-las diretamente como glTF ou clicar com o botão direito do mouse no nome do arquivo no editor e selecionar "glTF: exportar para GLB (arquivo binário)" para exportar um. glb. 
 
 ### <a name="restrictions"></a>Restrições
-As animações não podem ter mais de 20 minutos e não podem conter mais de 36.000 quadros-chave (20 minutos a 30 FPS). Além disso, ao usar animações baseadas em destino Morph não exceda 8192 vértices de destino de Morph ou menos. Exceder essas contagens demoraremá que o ativo animado não terá suporte na página inicial do Windows Mixed Reality. 
+As animações não podem ter mais de 20 minutos e não podem conter mais de 36.000 quadros-chave (20 minutos a 30 FPS). Além disso, ao usar animações baseadas em destino Morph não exceda 8192 vértices de destino de Morph ou menos. Exceder essas contagens fará com que o ativo animado não seja suportado na página inicial do Windows Mixed Reality. 
 
 |Recurso|Máximo|
 |-----|-----|
@@ -251,17 +251,17 @@ O ativo glTF deve apontar para a cena padrão usando o atributo Scene a ser rend
 
 As seguintes propriedades de material são usadas na especificação Core glTF 2,0, mas não são necessárias:
 * baseColorFactor, metallicFactor, roughnessFactor
-* baseColorTexture: Deve apontar para uma textura armazenada em DDS.
-* emissiveTexture: Deve apontar para uma textura armazenada em DDS.
+* baseColorTexture: deve apontar para uma textura armazenada em DDS.
+* emissiveTexture: deve apontar para uma textura armazenada em DDS.
 * emissiveFactor
 * alphamode
 
 As seguintes propriedades de material são ignoradas da especificação principal:
 * Todos os UVs
-* metalRoughnessTexture: Em vez disso, deve usar a embalagem de textura otimizada da Microsoft definida abaixo
-* normalTexture: Em vez disso, deve usar a embalagem de textura otimizada da Microsoft definida abaixo
+* metalRoughnessTexture: deve usar a embalagem de textura otimizada da Microsoft definida abaixo
+* normalTexture: deve usar a embalagem de textura otimizada da Microsoft definida abaixo
 * normalScale
-* occlusionTexture: Em vez disso, deve usar a embalagem de textura otimizada da Microsoft definida abaixo
+* occlusionTexture: deve usar a embalagem de textura otimizada da Microsoft definida abaixo
 * occlusionStrength
 
 O Windows Sr não dá suporte a linhas e pontos de modo primitivo. 

@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
 keywords: implantar, Unity, Visual Studio, HoloLens, HoloLens 2, headset de imersão
-ms.openlocfilehash: f897c9280505b1e84f8e6342729f1598d4b2f559
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 88eaa69f1349e3303a93d9d634479d8265eb417c
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73436969"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926546"
 ---
 # <a name="best-practices-for-working-with-unity-and-visual-studio"></a>Práticas recomendadas para trabalhar com o Unity e o Visual Studio
 
@@ -45,7 +45,7 @@ Baixar [Ferramentas do Visual Studio para Unity](https://docs.microsoft.com/visu
 
 ## <a name="expose-c-class-variables-for-easy-tuning"></a>Expor C# variáveis de classe para um ajuste fácil
 
-Há duas maneiras de expor variáveis de classe. A maneira recomendada de fazer isso é adicionar o atributo [Serializefield] às suas variáveis privadas. Isso permite que eles sejam acessados do editor, mas não expostos de forma programática.  A outra opção é tornar C# as variáveis de classe públicas para expô-las na interface do usuário do editor. 
+Há duas maneiras de expor variáveis de classe. A maneira recomendada de fazer isso é adicionar o atributo [Serializefield] às suas variáveis privadas. Isso permite que eles sejam acessados do editor, mas não expostos programaticamente.  A outra opção é tornar C# as variáveis de classe públicas para expô-las na interface do usuário do editor. 
 
 Ambas as abordagens possibilitam o ajuste fácil de variáveis durante a execução no editor. Isso é especialmente útil para ajustar propriedades mecânicas de interação.
 

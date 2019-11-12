@@ -6,18 +6,21 @@ ms.author: sostel
 ms.date: 10/29/2019
 ms.topic: article
 keywords: Acompanhamento de olho, realidade misturada, entrada, olho-olhar, calibragem
-ms.openlocfilehash: 63520ee8d7d3ce73405776fccc62290cbbadd0a8
-ms.sourcegitcommit: 2e54d0aff91dc31aa0020c865dada3ae57ae0ffc
+ms.openlocfilehash: 88c1827d3656ceb851e8f778daa2303b88dd17c8
+ms.sourcegitcommit: b6b76275fad90df6d9645dd2bc074b7b2168c7c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73641139"
+ms.lasthandoff: 11/11/2019
+ms.locfileid: "73913226"
 ---
 # <a name="eye-tracking-on-hololens-2"></a>Acompanhamento ocular no HoloLens 2
 
 ![Demonstração de controle de olho no MRTK](images/mrtk_et_scenemenu.jpg)
 
-O HoloLens 2 permite um novo nível de contexto e compreensão humana dentro da experiência do Holographic, fornecendo aos desenvolvedores a capacidade de usar informações sobre o que o usuário está olhando. Esta página fornece uma visão geral dessa nova funcionalidade para desenvolvedores e designers sobre como eles podem se beneficiar do controle de olho para vários casos de uso e diretrizes básicas para desenvolvedores. 
+O HoloLens 2 permite um novo nível de contexto e compreensão humana dentro da experiência do Holographic, fornecendo aos desenvolvedores a capacidade de usar informações sobre o que o usuário está olhando. Esta página informa aos desenvolvedores como eles podem se beneficiar do controle de olho para vários casos de uso, bem como o que procurar ao projetar interações de usuário com base no olhar. 
+
+A API de acompanhamento de olho foi projetada com a privacidade do usuário em mente, evitando a aprovação de qualquer informação identificável, especialmente qualquer biometria. Para aplicativos compatíveis com acompanhamento de olho, o usuário precisa conceder permissão de aplicativo para usar informações de controle de olho. 
+
 
 ### <a name="device-support"></a>Suporte a dispositivos
 <table>
@@ -94,13 +97,16 @@ Casos de uso adicionais para _ações implícitas_ podem incluir:
 - **Hologramas de cuidadosa:** Hologramas que reagem sutilmente ao serem gazeddos. Isso pode variar de elementos de interface do usuário ligeiramente brilhantes, uma flor de intratação mais lenta para um cachorro virtual começando a olhar de volta para a usuária e wagging sua parte final. Essa interação pode fornecer uma noção interessante de conectividade e satisfação em seu aplicativo.
 
 ### <a name="attention-tracking"></a>Acompanhamento de atenção   
-As informações sobre onde ou o que os usuários examinam é uma ferramenta extremamente poderosa para avaliar a usabilidade de designs e identificar problemas em fluxos de trabalho eficientes. A visualização e a análise de controle de olho são uma prática comum em várias áreas de aplicativo. Com o HoloLens 2, fornecemos uma nova dimensão para essa compreensão, pois os hologramas de 3D podem ser colocados em contextos reais e avaliados de acordo. O [Kit de ferramentas de realidade misturada](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_Main.html) fornece exemplos básicos para registrar e carregar dados de acompanhamento de olho e como visualizá-los.
+As informações sobre onde ou o que os usuários examinam podem ser uma ferramenta extremamente poderosa – ela pode ajudar a avaliar a usabilidade de designs e identificar problemas em fluxos de trabalho para torná-los mais eficientes.
+A visualização e a análise de controle de olho são uma prática comum em várias áreas de aplicativo. Com o HoloLens 2, fornecemos uma nova dimensão para essa compreensão, pois os hologramas de 3D podem ser colocados em contextos reais e avaliados de acordo. O [Kit de ferramentas de realidade misturada](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_Main.html) fornece exemplos básicos para registrar e carregar dados de acompanhamento de olho e como visualizá-los.
+A Microsoft dedica-se a facilitar a inovação, garantindo que os usuários tenham uma experiência informada e transparente com a forma como as informações de controle de olho são usadas.  Trabalharemos com nossas equipes de desenvolvedores e UX para fornecer diretrizes para terceiros que garantem que as experiências sejam centralizadas em todo o usuário.  
+
 
 Outros aplicativos nessa área podem incluir: 
--   **Visualização de olhar de olho remoto:** Visualize o que os colaboradores remotos estão vendo para aumentar a compreensão compartilhada.
--   **Estudos de pesquisa do usuário:** O controle de atenção pode ajudar a entender melhor como percebemos e envolvemos o nosso ambiente, o que pode ajudar em melhores modelos de intenção humana para mais instinctual interações de computadores humanos. 
--   **Treinamento:** Melhor treinamento de iniciantes ao entender melhor os padrões de pesquisa visual de especialistas e sua coordenação de olhos para tarefas complexas, como para a análise de dados médicos ou durante a operação de máquinas operacionais.
--   **Avaliações de design e pesquisa de mercado:** O controle de olhos é uma ferramenta comum para pesquisa de mercado ao avaliar designs de sites e produtos. Com o HoloLens 2, podemos estender isso para espaços 3D mesclando variantes de design de produto digital com o ambiente físico. 
+-   **Visualização de olhar de olho remoto:** Olhar visualizações de olho remoto: visualize quais colaboradores remotos estão vendo para poder fornecer comentários imediatos e facilitar o processamento de informações mais precisos.
+-   **Estudos de pesquisa do usuário:** O controle de atenção pode ajudar os pesquisadores a obter mais informações sobre como os usuários percebem e se envolvem com o ambiente natural, sem interferir, para projetar mais interações de computadores humanos instinctuals. O controle de olho pode fornecer informações que não são diretamente articuladas pelos participantes do estudo, que de outra forma podem ser facilmente perdidas pelo pesquisador. 
+-   **Monitoramento de desempenho e treinamento:** Pratique e otimize a execução de tarefas identificando afunilamentos com mais eficiência no fluxo de execução. O controle de olho pode fornecer informações naturais, em tempo real e objetivas para ajudar a melhorar o treinamento, a produtividade e a segurança no local de trabalho. 
+-   **Avaliações de design, marketing e pesquisa de consumidor:** O controle de olho permite que empresas comerciais executem estudos de marketing e de consumidor em ambientes reais ou analisem o que captura a atenção do usuário para melhorar o design de produtos ou espaços. 
 
 ### <a name="additional-use-cases"></a>Casos de uso adicionais
 - **Jogos:** Já quis ter superpotências? Esta é a sua chance! Você pode levitater os hologramas por estrelas. Ressaltar as emissões de laser dos seus olhos-Experimente no [RoboRaid para o HoloLens 2](https://www.microsoft.com/p/roboraid/9nblggh5fv3j).
@@ -116,10 +122,9 @@ Fique atento ao fato de não sobrecarregar o usuário – para saber mais, confi
 ## <a name="using-eye-gaze-for-interaction"></a>Usando olho-olhar para interação
 A criação de uma interação que aproveita o direcionamento de olho rápido pode ser desafiadora.
 Por um lado, os olhos se movem tão rapidamente que você precisa ter cuidado ao usar a entrada olhar, pois os usuários podem achar a experiência difícil ou atrapalhar. Por outro lado, você também pode criar experiências verdadeiramente mágicos que vão para seus usuários! Para ajudá-lo, Confira nossa visão geral das principais vantagens, desafios e recomendações de design para [olhar de interação](eye-gaze-interaction.md). 
-
-<br>
  
 ## <a name="fallback-solutions-when-eye-tracking-is-not-available"></a>Soluções de fallback quando o acompanhamento de olho não está disponível
+
 Em casos raros, os dados de acompanhamento de olho podem não estar disponíveis.
 Isso pode ser devido a diferentes motivos dos quais as mais comuns são listadas abaixo:
 * Falha do sistema ao [calibrar o usuário](calibration.md).
@@ -127,9 +132,9 @@ Isso pode ser devido a diferentes motivos dos quais as mais comuns são listadas
 * O usuário é calibrado, mas decidiu não dar permissão ao seu aplicativo para usar seus dados de controle de olho.    
 * O usuário tem óculos exclusivo ou alguma condição de olho que ainda não dá suporte ao sistema.    
 * Fatores externos que impedem o acompanhamento de olho confiável, como manchas no visor ou óculos do HoloLens, luz de sol direta intensa e occlusions devido ao cabelo na frente dos olhos.   
+
 Portanto, os desenvolvedores devem garantir que haja suporte de fallback apropriado para esses usuários. Na página [controle de olho no DirectX](gaze-in-directx.md#fallback-when-eye-tracking-is-not-available) , explicamos as APIs necessárias para detectar se os dados de acompanhamento de olho estão disponíveis. 
 
-Conforme descrito acima, há várias razões pelas quais os dados de acompanhamento de olho podem não estar disponíveis.   
 Embora alguns usuários possam ter decidido a revogar o acesso aos seus dados de controle de olho e estão ok com a compensação de uma experiência de usuário inferior à privacidade de não fornecer acesso aos seus dados de controle de olho, em alguns casos isso pode não ser intencional.  
 Portanto, se seu aplicativo usar o acompanhamento de olho, e essa for uma parte importante da experiência, recomendamos que você se comunique claramente com o usuário.     
 Informando, de maneira adequada, o usuário por que o acompanhamento de olho é essencial para seu aplicativo (talvez até mesmo listar alguns recursos avançados) para experimentar todo o potencial do seu aplicativo pode ajudar o usuário a entender melhor o que está desistindo.    
@@ -153,10 +158,10 @@ Essa página espero que você tenha uma boa visão geral para começar a entende
 ## <a name="see-also"></a>Consulte também
 * [Calibragem](calibration.md)
 * [Conforto](comfort.md)
-* [Interação com base nos olhos olhar](eye-gaze-interaction.md)
+* [Interação com base no foco com o olhar](eye-gaze-interaction.md)
 * [Olho-olhar no DirectX](gaze-in-directx.md)
 * [Olho-olhar no Unity (Kit de ferramentas de realidade misturada)](https://aka.ms/mrtk-eyes)
-* [Olhar e confirmar](gaze-and-commit.md)
+* [Focar e confirmar](gaze-and-commit.md)
 * [Entrada de voz](voice-design.md)
 
 

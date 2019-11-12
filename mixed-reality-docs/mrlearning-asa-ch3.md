@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realidade misturada, unity, tutorial, hololens
-ms.openlocfilehash: 77d639a88d8b4c71dc5fbe1c78565c4c3f91d36c
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 9f57cb9874aade2d6b19d0c061fd83eb04b9ef11
+ms.sourcegitcommit: b6b76275fad90df6d9645dd2bc074b7b2168c7c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438418"
+ms.lasthandoff: 11/11/2019
+ms.locfileid: "73914377"
 ---
 # <a name="3-displaying-azure-spatial-anchor-feedback"></a>3. exibindo comentários de âncora espacial do Azure
 
@@ -45,28 +45,11 @@ Nesta lição, você aprenderá a fornecer aos usuários comentários sobre a de
 
 ![module2chapter3step4im](images/module2chapter3step4im.PNG)
 
-5. No painel projeto, selecione "ativos" e clique com o botão direito do mouse e selecione "Mostrar no Explorer".
-   
-
-![module2chapter3step4im](images/module2chapter3step5im.PNG)
-
-Clique [aqui](https://onedrive.live.com/?authkey=%21ABXEC8PvyQu8Qd8&id=5B7335C4342BCB0E%21395636&cid=5B7335C4342BCB0E) para baixar os arquivos necessários nas próximas etapas.
-
-6. Quando o Explorer for aberto, selecione a pasta ativos, em seguida, a pasta "ASAmodulesAssets" e copie o script de comentários âncora e os arquivos de script do módulo âncora para a pasta. 
-
-![module2chapter3step5im](images/module2chapter3step6im.PNG)
-
-> Observação: se você receber uma mensagem pop-up perguntando se deseja substituir o antigo ou manter o antigo, selecione substituir.
-
-7. Retorne para a pasta ativos. Em seguida, vá para a pasta "AzureSpatialAnchorsPlugin", seguida pela pasta de exemplos e, por fim, a pasta scripts. Em seguida, copie o wrapper de demonstração de âncoras espaciais do Azure nessa pasta. 
-
-![module2chapter3step8im](images/module2chapter3step7im.PNG)
-
-8. Agora que os arquivos foram carregados, verifique se o texto "feedbackpanel" está selecionado na hierarquia ASA_feedback, clique em "Adicionar componente" e adicione o script de comentários de âncora pesquisando-o e selecionando-o quando ele for exibido. 
+5. Verifique se o texto "feedbackpanel" está selecionado na hierarquia de ASA_feedback, clique em "Adicionar componente" e adicione o script de comentários de âncora pesquisando-o e selecionando-o quando ele for exibido. 
 
 ![module2chapter3step8im](images/module2chapter3step8im.PNG)
 
-9. Arraste o objeto de texto "feedbackPanel" da hierarquia ASA_Feedback para o slot vazio abaixo do script, como mostrado na imagem abaixo. 
+6. Arraste o objeto de texto "feedbackPanel" da hierarquia ASA_Feedback para o slot vazio abaixo do script, como mostrado na imagem abaixo. 
 
 ![module2chapter3step9im](images/module2chapter3step9im.PNG)
 

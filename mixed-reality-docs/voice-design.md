@@ -6,16 +6,16 @@ ms.author: shentan
 ms.date: 04/21/2019
 ms.topic: article
 keywords: Windows Mixed Reality, design, interação, voz
-ms.openlocfilehash: bfcaef787b22f17da9627a53c92c43f5cb1e1d9b
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 350acfbe777869f150b7c90c93124e10e155168d
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437219"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926707"
 ---
 # <a name="voice-commanding"></a>Comando de voz
 
-Ao usar comandos de voz, o olhar normalmente é usado como mecanismo de focalização, seja como um ponteiro ("selecionar") ou para direcionar o comando para um aplicativo ("veja e diga"). Obviamente, alguns comandos de voz não exigem um alvo, como "Ir para o início" ou "Ei, Cortana".
+Ao usar comandos de voz, o olhar normalmente é usado como o mecanismo de direcionamento, seja como um ponteiro ("Select") ou para direcionar o comando para um aplicativo ("vê-lo, digamos"). Obviamente, alguns comandos de voz não exigem um alvo, como "Ir para o início" ou "Ei, Cortana".
 
 
 ## <a name="device-support"></a>Suporte a dispositivos

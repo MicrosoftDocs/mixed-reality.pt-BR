@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 7/29/2019
 ms.topic: article
 keywords: OpenXR, Khronos, BasicXRApp, Mixed Realm OpenXR portal do desenvolvedor, DirectX, nativo, mecanismo personalizado do aplicativo nativo, middleware
-ms.openlocfilehash: d29b59d7dec19e5423c83ea6e61bb5625c8981dd
-ms.sourcegitcommit: 2e54d0aff91dc31aa0020c865dada3ae57ae0ffc
+ms.openlocfilehash: 67d2ab42a40aa04eb9dcd6881a4392a81c0f3b8f
+ms.sourcegitcommit: b6b76275fad90df6d9645dd2bc074b7b2168c7c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73641130"
+ms.lasthandoff: 11/11/2019
+ms.locfileid: "73914389"
 ---
 # <a name="openxr"></a>OpenXR
 
@@ -74,6 +74,100 @@ Para experimentar o tempo de execução do Windows Mixed Reality OpenXR, você p
 O projeto <a href="https://github.com/Microsoft/OpenXR-SDK-VisualStudio/tree/master/samples/BasicXrApp" target="_blank">BasicXrApp</a> demonstra um exemplo de OpenXR simples com dois arquivos de projeto do Visual Studio, um para um aplicativo de área de trabalho Win32 e outro para um aplicativo UWP HoloLens 2.  Como a solução contém um projeto UWP do HoloLens, você precisará do [plataforma universal do Windows carga de trabalho de desenvolvimento](install-the-tools.md#installation-checklist) instalada no Visual Studio para abri-lo totalmente.
 
 Observe que, embora os arquivos de projeto Win32 e UWP sejam separados devido a diferenças no empacotamento e na implantação, o código do aplicativo dentro de cada projeto é de 100% o mesmo!
+
+## <a name="openxr-app-best-practices-for-hololens-2"></a>Práticas recomendadas do aplicativo OpenXR para o HoloLens 2
+
+Você pode ver um exemplo das práticas recomendadas abaixo no arquivo [OpenXRProgram. cpp](https://github.com/microsoft/OpenXR-SDK-VisualStudio/blob/master/samples/BasicXrApp/OpenXrProgram.cpp) do BasicXrApp. A função Run () no início captura um fluxo de código do aplicativo OpenXR típico da inicialização para o loop de evento e de renderização.
+
+### <a name="select-a-pixel-format"></a>Selecionar um formato de pixel
+
+Sempre enumere os formatos de pixel com suporte usando `xrEnumerateSwapchainFormats`e escolha a primeira cor e o formato de pixel de profundidade do tempo de execução ao qual o aplicativo dá suporte, porque é isso que o tempo de execução prefere. Observe que, no HoloLens 2, `DXGI_FORMAT_B8G8R8A8_UNORM_SRGB` e `DXGI_FORMAT_D16_UNORM` normalmente é a primeira opção para obter um melhor desempenho de renderização. Essa preferência pode ser diferente em headsets de VR em execução em um PC desktop.  
+  
+**Aviso de desempenho:** O uso de um formato diferente do formato de cor SwapChain primário resultará em pós-processamento de tempo de execução, o que resulta em uma penalidade de desempenho significativa.
+
+### <a name="gamma-correct-rendering"></a>Gama-renderização correta
+
+Embora isso se aplique a todos os tempos de execução do OpenXR, deve-se tomar cuidado para garantir que o pipeline de renderização seja correto para o gama. Ao renderizar para um SwapChain, o formato de exibição de destino de renderização deve corresponder ao formato SwapChain (por exemplo, DXGI_FORMAT_B8G8R8A8_UNORM_SRGB tanto para o formato SwapChain como para a exibição de destino de renderização).
+A exceção é se o pipeline de renderização do aplicativo faz uma conversão manual do sRGB no código do sombreador; nesse caso, o aplicativo deve solicitar um formato de SwapChain sRGB, mas usar o formato linear para a exibição de destino de renderização (por exemplo, a solicitação DXGI_FORMAT_B8G8R8A8_UNORM_SRGB como o formato SwapChain, mas use DXGI_FORMAT_B8G8R8A8_UNORM como a exibição de destino de renderização) para impedir que o conteúdo seja corrigido de gama duplo.
+
+### <a name="use-a-single-projection-layer"></a>Usar uma única camada de projeção
+
+O HoloLens 2 tem energia limitada de GPU para que os aplicativos processem conteúdo e um compositor de hardware otimizado para uma única camada de projeção.
+Sempre usar uma única camada de projeção pode ajudar a taxa de quadros, a estabilidade do holograma e a qualidade visual do aplicativo.  
+  
+**Aviso de desempenho:** O envio de qualquer coisa, exceto uma única camada de proteção, resultará em um pós-processamento de tempo de execução que apresenta uma penalidade de desempenho significativa.
+
+### <a name="render-with-texture-array-and-vprt"></a>Renderizar com matriz de textura e VPRT
+
+Crie um `xrSwapchain` para os olhos esquerdo e direito usando `arraySize=2` para SwapChain de cor e outro para profundidade.
+Renderize o olho esquerdo na fatia 0 e no olho certo para a fatia 1.
+Use um sombreador com VPRT e chamadas de desenho em instância para a renderização estereoscópico para minimizar a carga de GPU.
+Isso também permite que a otimização do tempo de execução alcance o melhor desempenho no HoloLens 2.
+Alternativas ao uso de uma matriz de textura, como renderização em toda a parte ou uma SwapChain separada por olho, resultarão em um pós-processamento de tempo de execução que vem em uma penalidade de desempenho significativa.
+
+### <a name="render-with-recommended-rendering-parameters-and-frame-timing"></a>Renderizar com os parâmetros de renderização recomendados e o tempo de quadro
+
+Sempre renderizar com a largura/altura da configuração de exibição recomendada (`recommendedImageRectWidth` e `recommendedImageRectHeight` de `XrViewConfigurationView`) e sempre usar a API `xrLocateViews` para consultar a exibição recomendada, FOV e outros parâmetros de renderização antes da renderização.
+Sempre use o `XrFrameEndInfo.predictedDisplayTime` da chamada de `xrWaitFrame` mais recente ao consultar poses e exibições.
+Isso permite que o HoloLens ajuste a renderização e otimize a qualidade visual para a pessoa que está desgastando o HoloLens.
+
+### <a name="submit-depth-buffer-for-projection-layers"></a>Enviar buffer de profundidade para camadas de projeção
+
+Sempre use `XR_KHR_composition_layer_depth` extensão e envie o buffer de profundidade junto com a camada de projeção ao enviar um quadro para `xrEndFrame`.
+Isso melhora a estabilidade do holograma habilitando a Reprojeção de profundidade de hardware no HoloLens 2.
+
+### <a name="choose-a-reasonable-depth-range"></a>Escolher um intervalo de profundidade razoável
+
+Prefira um intervalo de profundidade mais estreito para o escopo do conteúdo virtual para ajudar a estabilidade do holograma no HoloLens.
+Por exemplo, o exemplo OpenXrProgram. cpp está usando 0,1 a 20 metros.
+Use [-Z invertido](https://developer.nvidia.com/content/depth-precision-visualized) para uma resolução de profundidade mais uniforme.
+Observe que, no HoloLens 2, o uso do formato de profundidade de `DXGI_FORMAT_D16_UNORM` preferencial ajudará a obter uma melhor taxa de quadros e desempenho, embora os buffers de profundidade de 16 bits forneçam uma resolução de menos profundidade do que os buffers de profundidade de 24 bits.
+Portanto, seguir essas práticas recomendadas para fazer o melhor uso da resolução de profundidade se torna mais importante.
+
+### <a name="prepare-for-different-environment-blend-modes"></a>Preparar para modos de mesclagem de ambiente diferentes
+
+Se seu aplicativo também for executado em headsets de imersão que bloqueiam completamente o mundo, certifique-se de enumerar modos de mistura de ambiente com suporte usando `xrEnumerateEnvironmentBlendModes` API e prepare o conteúdo de renderização de acordo.
+Por exemplo, para um sistema com `XR_ENVIRONMENT_BLEND_MODE_ADDITIVE` como o HoloLens, o aplicativo deve usar transparente como a cor clara, enquanto para um sistema com `XR_ENVIRONMENT_BLEND_MODE_OPAQUE`, o aplicativo deve renderizar alguma cor opaca ou alguma sala virtual em segundo plano.
+
+### <a name="choose-unbounded-reference-space-as-applications-root-space"></a>Escolher o espaço de referência não associado como espaço raiz do aplicativo
+
+Normalmente, os aplicativos estabelecem algum espaço de coordenadas do mundo raiz para conectar modos de exibição, ações e hologramas juntos.
+Use `XR_REFERENCE_SPACE_TYPE_UNBOUNDED_MSFT` quando houver suporte para a extensão para estabelecer um [sistema de coordenadas de escala mundial](coordinate-systems.md#building-a-world-scale-experience), permitindo que seu aplicativo Evite descompasso de holograma indesejados quando o usuário se move de longe (por exemplo, 5 metros de distância) de onde o aplicativo é iniciado.
+Use `XR_REFERENCE_SPACE_TYPE_LOCAL` como um fallback se a extensão de espaço não associado não existir.
+
+### <a name="associate-hologram-with-spatial-anchor"></a>Associar holograma a âncora espacial
+
+Ao usar um espaço de referência não associado, os hologramas que você coloca diretamente no espaço de referência [podem cair conforme o usuário percorre as salas distantes e, em seguida, retorna](coordinate-systems.md#building-a-world-scale-experience).
+Para usuários com holograma, coloque em um local discreto no mundo, [crie uma âncora espacial](spatial-anchors.md#best-practices) usando a função de extensão `xrCreateSpatialAnchorSpaceMSFT` e posicione o holograma em sua origem.
+Isso manterá esse holograma independentemente estável ao longo do tempo.
+
+### <a name="support-mixed-reality-capture"></a>Suporte à captura de realidade misturada
+
+Embora a exibição primária do HoloLens 2 Use a mistura de ambiente aditivo, quando o usuário inicia a [captura de realidade misturada](mixed-reality-capture-for-developers.md), o conteúdo de renderização do aplicativo será misturado com o fluxo de vídeo do ambiente.
+Para obter a melhor qualidade visual em vídeos de captura de realidade misturada, é melhor definir o `XR_COMPOSITION_LAYER_BLEND_TEXTURE_SOURCE_ALPHA_BIT` no `layerFlags`da camada de projeção.  
+
+**Aviso de desempenho:** A omissão do sinalizador de `XR_COMPOSITION_LAYER_BLEND_TEXTURE_SOURCE_ALPHA_BIT` na camada de projeção única resultará em pós-processamento do tempo de execução, o que resulta em uma penalidade de desempenho significativa.
+
+### <a name="avoid-quad-layers"></a>Evitar camadas quádruplas
+
+Em vez de enviar camadas quádruplas como camadas de composição com `XrCompositionLayerQuad`, processe o conteúdo Quad diretamente no SwapChain de projeção.
+
+**Aviso de desempenho:** Fornecer camadas adicionais além de uma única camada de projeção, como camadas quádruplas, resultará em um pós-processamento de tempo de execução que apresenta uma penalidade de desempenho significativa.
+
+## <a name="openxr-app-performance-on-hololens-2"></a>Desempenho do aplicativo OpenXR no HoloLens 2
+
+No HoloLens 2, há várias maneiras de enviar dados de composição por meio de `xrEndFrame`, o que resultará em pós-processamento que terá uma penalidade de desempenho perceptível.
+Para evitar o desempenho penalities, [envie um único `XrCompositionProjectionLayer`](#use-a-single-projection-layer) com as seguintes características:
+* [Usar uma matriz de textura SwapChain](#render-with-texture-array-and-vprt)
+* [Usar o formato SwapChain de cor primária](#select-a-pixel-format)
+* [Definir o sinalizador de mistura de origem da textura-fonte-alfa](#support-mixed-reality-capture)
+* [Usar as dimensões de exibição recomendadas](#render-with-recommended-rendering-parameters-and-frame-timing)
+* Não definir o sinalizador de `XR_COMPOSITION_LAYER_UNPREMULTIPLIED_ALPHA_BIT`
+* Defina o `XrCompositionLayerDepthInfoKHR` `minDepth` como 0,0 f e `maxDepth` como 1,0 f
+
+Considerações adicionais resultarão em melhor desempenho:
+* [Usar o formato de profundidade de 16 bits](#choose-a-reasonable-depth-range)
+* [Fazer chamadas de desenho em instância](#render-with-texture-array-and-vprt)
 
 ## <a name="roadmap"></a>Mapa
 

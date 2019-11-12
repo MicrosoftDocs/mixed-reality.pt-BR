@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
 keywords: gestos, controladores de movimento, Unity, olhar, entrada
-ms.openlocfilehash: a7ca5a895015ba0458f0f64f1422612e797f5067
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: a85797bfb443f33147c116e90a02c88abda63c67
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73435231"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926569"
 ---
 # <a name="gestures-and-motion-controllers-in-unity"></a>Gestos e controladores de movimento no Unity
 
@@ -145,7 +145,7 @@ No momento, o Unity usa suas APIs de *entrada geral. getbutton/Input. getaxis* p
 
 Para usar as APIs de entrada gerais da Unity, você normalmente começará com a vinculação de botões e eixos a nomes lógicos no [Gerenciador de entrada do Unity](https://docs.unity3d.com/Manual/ConventionalGameInput.html), ligando um botão ou IDs de eixo a cada nome. Em seguida, você pode escrever código que se refere a esse botão lógico/nome do eixo.
 
-Por exemplo, para mapear o botão de gatilho do controlador de movimento à esquerda para a ação enviar, acesse **editar > configurações do projeto > entrada** no Unity e expanda as propriedades da seção enviar em eixos. Altere o **botão de postagem** ou a propriedade do **botão Alt positivo** para ler o **botão 14 do joystick**, desta forma:
+Por exemplo, para mapear o botão de gatilho do controlador de movimento à esquerda para a ação enviar, acesse **editar > configurações do projeto > entrada** no Unity e expanda as propriedades da seção enviar em eixos. Altere o **botão positivo** ou a propriedade do **botão Alt positivo** para ler o **botão 14 do joystick**, desta forma:
 
 ](images/unity-input-manager.png) InputManager do ![Unity<br>
 *InputManager do Unity*
@@ -446,7 +446,7 @@ void Start()
 
 ### <a name="start-capturing-gestures"></a>Começar a capturar gestos
 
-Por padrão, um *GestureRecognizer* não monitora a entrada até que *StartCapturingGestures ()* seja chamado. É possível que um evento de gesto possa ser gerado após *StopCapturingGestures ()* ser chamado se a entrada tiver sido executada antes do quadro em que *StopCapturingGestures ()* foi processado. O *GestureRecognizer* se lembrará se ele estava ligado ou desligado durante o quadro Previou no qual o gesto realmente ocorreu e, portanto, é confiável para iniciar e parar o monitoramento de gestos com base no direcionamento olhar do quadro.
+Por padrão, um *GestureRecognizer* não monitora a entrada até que *StartCapturingGestures ()* seja chamado. É possível que um evento de gesto possa ser gerado após *StopCapturingGestures ()* ser chamado se a entrada tiver sido executada antes do quadro em que *StopCapturingGestures ()* foi processado. O *GestureRecognizer* se lembrará se ele estava ativado ou desativado durante o quadro anterior no qual o gesto realmente ocorreu e, portanto, é confiável para iniciar e parar o monitoramento de gestos com base no direcionamento de olhar deste quadro.
 
 ```cs
 recognizer.StartCapturingGestures();

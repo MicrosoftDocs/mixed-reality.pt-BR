@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: Azure, realidade mista, Academia, Unity, tutorial, API, serviço de inteligência de reconhecimento de linguagem, Luis, hololens, imersão, VR
-ms.openlocfilehash: fb00fe9079e49a7ada507e7407ef45fa7eeb0d7e
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 9b3e4f081dc8a054d783246554f904a38f43f26c
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63555156"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926811"
 ---
 >[!NOTE]
 >Os tutoriais misturados do Academia de realidade foram projetados com o HoloLens (1º gen) e com o fone de cabeça de imersão de realidade misturada.  Como tal, achamos que é importante deixar esses tutoriais em vigor para os desenvolvedores que ainda estão procurando orientação no desenvolvimento para esses dispositivos.  Esses tutoriais **_não_** serão atualizados com os conjuntos de ferramentas e as interações mais recentes usados para o HoloLens 2.  Eles serão mantidos para continuar a trabalhar nos dispositivos com suporte. Haverá uma nova série de tutoriais que serão publicados no futuro, que demonstrarão como desenvolver para o HoloLens 2.  Esse aviso será atualizado com um link para esses tutoriais quando eles forem postados.
@@ -125,7 +125,7 @@ Para usar o serviço de *reconhecimento vocal* no Azure, você precisará config
     ![Acessando chaves LUIS](images/AzureLabs-Lab3-06.png)
 
 9.  Neste tutorial, seu aplicativo precisará fazer chamadas para seu serviço, o que é feito por meio do uso da chave de assinatura do serviço.
-10. Na página *início rápido* , do serviço *API do Luis* , navegue até a primeira etapa, *pegue as chaves*e clique em **chaves** (você também pode fazer isso clicando nas teclas de hiperlink azul, localizadas no menu de navegação serviços, indicado por o ícone de chave). Isso revelará suas *chaves*de serviço.
+10. Na página *início rápido* , do serviço *API do Luis* , navegue até a primeira etapa, *pegue as chaves*e clique em **chaves** (você também pode fazer isso clicando nas teclas de hiperlink azul, localizadas no menu de navegação serviços, indicado pelo ícone de chave). Isso revelará suas *chaves*de serviço.
 11. Faça uma cópia de uma das chaves exibidas, pois você precisará dela posteriormente em seu projeto. 
 12. Na página *serviço* , clique em *reconhecimento vocal portal* para ser redirecionado para a página da Web que você usará para criar seu novo serviço, dentro do aplicativo Luis. 
 
@@ -250,7 +250,7 @@ Para cada expressão que você criou, você deve identificar quais palavras deve
     > - Para um conjunto de duas ou mais palavras, clique no início e, em seguida, no final do conjunto.
 
     > [!NOTE]
-    > Você pode usar o botão de alternância de *exibição* de tokens para alternar entre a **exibição de entidades/tokens**!
+    > Você pode usar o botão de alternância de *exibição de tokens* para alternar entre a **exibição de entidades/tokens**!
 
 19. Os resultados devem ser mostrados nas imagens abaixo, mostrando a **exibição de entidades/tokens**:
 
@@ -301,7 +301,7 @@ Para cada expressão que você criou, você deve identificar quais palavras deve
 26. Na seção *recursos e chaves*:
 
     1.  Selecione a região que você definiu para a instância de serviço no portal do Azure.
-    2.  Você notará um elemento **Starter_Key** abaixo, irá ignorá-lo.
+    2.  Você observará um elemento **Starter_Key** abaixo, ignorará-o.
     3.  Clique em **Adicionar chave** e insira a *chave* que você obteve no portal do Azure quando você criou sua instância de serviço. Se o Azure e o portal do LUIS estiverem conectados ao mesmo usuário, serão fornecidos menus suspensos para *nome do locatário*, nome da *assinatura*e a *chave* que você deseja usar (terá o mesmo nome fornecido anteriormente no portal do Azure.
 
     > [!IMPORTANT] 
@@ -315,7 +315,7 @@ A seguir está uma configuração típica para o desenvolvimento com a realidade
 
     ![Inicie o novo projeto do Unity.](images/AzureLabs-Lab3-24.png)
 
-2.  Agora, você precisará fornecer um nome de projeto de Unity, inserir **MR_LUIS**. Verifique se o tipo de projeto está definido como **3D**. Defina o **local** como algum lugar apropriado para você (Lembre-se de que, mais próximo de diretórios raiz é melhor). Em seguida, clique em **criar projeto**.
+2.  Agora será necessário fornecer um nome de projeto de Unity, inserir **MR_LUIS**. Verifique se o tipo de projeto está definido como **3D**. Defina o **local** como algum lugar apropriado para você (Lembre-se de que, mais próximo de diretórios raiz é melhor). Em seguida, clique em **criar projeto**.
 
     ![Forneça detalhes para o novo projeto do Unity.](images/AzureLabs-Lab3-25.png)
  
@@ -374,7 +374,7 @@ A seguir está uma configuração típica para o desenvolvimento com a realidade
 
             ![Atualizando configurações de publicação.](images/AzureLabs-Lab3-33.png)
 
-    3. Mais adiante no painel, em **configurações de XR** (encontradas abaixo de **configurações de publicação**), **suporte à realidade virtual**em escala, verifique se o SDK do **Windows Mixed Reality** foi adicionado.
+    3. Mais adiante no painel, em **configurações de XR** (encontradas abaixo de **configurações de publicação**), **suporte à realidade virtual**em escala, verifique se o **SDK do Windows Mixed Reality** foi adicionado.
 
         ![Atualize as configurações de X R.](images/AzureLabs-Lab3-34.png)
 
@@ -424,7 +424,7 @@ A seguir está uma configuração típica para o desenvolvimento com a realidade
 
     |       | Transformação- *posição* |       |
     |:-----:|:----------------------:|:-----:|
-    | **X** | **IAR**                  | **Z** |
+    | **W.x.y.** | **Iar**                  | **Z** |
     | 0     | -1                     | 0     |
 
 
@@ -432,28 +432,28 @@ A seguir está uma configuração típica para o desenvolvimento com a realidade
 
     |       | Transformação- *posição* |       |
     |:-----:|:----------------------:|:-----:|
-    | **X** | **IAR**                  | **Z** |
+    | **W.x.y.** | **Iar**                  | **Z** |
     | 2     | 1                      | 2     |
 
 11. Clique com o botão esquerdo do **cilindro** para selecioná-lo. No *painel Inspetor* , defina o componente *transformação* com os seguintes valores:
 
     |       | Transformação- *posição* |       |
     |:-----:|:----------------------:|:-----:|
-    | **X** | **IAR**                  | **Z** |
+    | **W.x.y.** | **Iar**                  | **Z** |
     | -2    | 1                      | 2     |
 
 12. Clique com o botão esquerdo do **cubo** para selecioná-lo. No *painel Inspetor* , defina o componente *transformação* com os seguintes valores:
 
     |        | Transformação- *posição* |       |  \| |       | Transformação- *rotação* |       |
     |:------:|:----------------------:|:-----:|:---:|:-----:|:----------------------:|:-----:|
-    | **X** | **IAR**                   | **Z** |  \| | **X** | **IAR**                  | **Z** |
-    | 0     | 1                       | 4     |  \| | 45    | 45                     | 0     | 
+    | **W.x.y.** | **Iar**                   | **Z** |  \| | **W.x.y.** | **Iar**                  | **Z** |
+    | 0     | 1                       | 추가를 클릭합니다.     |  \| | 45    | 45                     | 0     | 
 
 13. Clique no botão esquerdo do novo objeto de **texto** para selecioná-lo. No *painel Inspetor* , defina o componente *transformação* com os seguintes valores:
 
     |       | Transformação- *posição* |       |  \| |       | Transformar em *escala* |       |
     |:-----:|:----------------------:|:-----:|:---:|:-----:|:-------------------:|:-----:|
-    | **X** | **IAR**                  | **Z** |  \| | **X** | **IAR**               | **Z** |
+    | **W.x.y.** | **Iar**                  | **Z** |  \| | **W.x.y.** | **Iar**               | **Z** |
     | -2    | 6                      | 9     |  \| | 0,1   | 0,1                 | 0,1   | 
 
 14. Altere o **tamanho da fonte** no componente de malha de **texto** para **50**.
@@ -473,9 +473,9 @@ A seguir está uma configuração típica para o desenvolvimento com a realidade
  
 ## <a name="chapter-5--create-the-microphonemanager-class"></a>Capítulo 5 – criar a classe microphonemanager
 
-O primeiro script que você pretende criar é a classe  microphonemanager. Depois disso, você criará o *LuisManager*, a classe de *comportamentos* e, por fim, a classe *olhar* (fique à vontade para criar todos eles agora, embora ele seja coberto à medida que você atingir cada capítulo).
+O primeiro script que você pretende criar é a classe *microphonemanager* . Depois disso, você criará o *LuisManager*, a classe de *comportamentos* e, por fim, a classe *olhar* (fique à vontade para criar todos eles agora, embora ele seja coberto à medida que você atingir cada capítulo).
 
-A  classe microphonemanager é responsável por:
+A classe *microphonemanager* é responsável por:
 
 -   Detectando o dispositivo de gravação conectado ao headset ou ao computador (o que for o padrão).
 -   Capture o áudio (voz) e use o ditado para armazená-lo como uma cadeia de caracteres.
@@ -487,9 +487,9 @@ Para criar esta classe:
 
     ![Criar pasta de scripts.](images/AzureLabs-Lab3-40.png)
  
-2.  Com a pasta **scripts** criada, clique duas vezes nela para abrir. Em seguida, dentro dessa pasta, clique com o botão direito do mouse em **criar > C# script**. Nomeie o script microphonemanager. 
+2.  Com a pasta **scripts** criada, clique duas vezes nela para abrir. Em seguida, dentro dessa pasta, clique com o botão direito do mouse em **criar > C# script**. Nomeie o script *microphonemanager*. 
 
-3.  Clique duas vezes  em microfonemanager para abri-lo com o *Visual Studio*.
+3.  Clique duas vezes em *microfonemanager* para abri-lo com o *Visual Studio*.
 4.  Adicione os seguintes namespaces à parte superior do arquivo:
 
     ```csharp
@@ -497,7 +497,7 @@ Para criar esta classe:
         using UnityEngine.Windows.Speech;
     ```
 
-5.  Em seguida, adicione as seguintes variáveis  dentro da classe microphonemanager:
+5.  Em seguida, adicione as seguintes variáveis dentro da classe *microphonemanager* :
 
     ```csharp
         public static MicrophoneManager instance; //help to access instance of this object
@@ -558,7 +558,7 @@ Para criar esta classe:
         }
     ```
 
-8.  Adicione um *manipulador* de ditado que será invocado quando a voz pausar. Esse método passará o texto do ditado para a classe *LuisManager* .
+8.  Adicione um *manipulador de ditado* que será invocado quando a voz pausar. Esse método passará o texto do ditado para a classe *LuisManager* .
 
     ```csharp
         /// <summary>
@@ -592,7 +592,7 @@ Para criar esta classe:
 
 É hora de criar a classe *LuisManager* , que fará a chamada para o serviço Luis do Azure. 
 
-A finalidade dessa classe é receber o texto do ditado da classe  microphonemanager e enviá-lo para o *API de reconhecimento vocal do Azure* a ser analisado.
+A finalidade dessa classe é receber o texto do ditado da classe *microphonemanager* e enviá-lo para o *API de reconhecimento vocal do Azure* a ser analisado.
 
 Essa classe desserializará a resposta *JSON* e chamará os métodos apropriados da classe de *comportamentos* para disparar uma ação.
 
@@ -665,7 +665,7 @@ Para criar esta classe:
         }
     ```
 
-9.  Agora você precisa dos métodos que esse aplicativo usa para enviar o ditado recebido  da classe microphonemanager para *Luis*e, em seguida, receber e desserializar a resposta. 
+9.  Agora você precisa dos métodos que esse aplicativo usa para enviar o ditado recebido da classe *microphonemanager* para *Luis*e, em seguida, receber e desserializar a resposta. 
 10. Depois que o valor da intenção e as entidades associadas forem determinados, eles serão passados para a instância da classe de *comportamentos* para disparar a ação pretendida.
 
     ```csharp
@@ -721,7 +721,7 @@ Para criar esta classe:
                 entityDic.Add(ed.type, ed.entity);
             }
 
-            // Depending on the topmost recognised intent, read the entities name
+            // Depending on the topmost recognized intent, read the entities name
             switch (aQuery.topScoringIntent.intent)
             {
                 case "ChangeObjectColor":
@@ -871,7 +871,7 @@ Para criar esta classe:
 
     ```csharp
         /// <summary>
-        /// Determines which obejct reference is the target GameObject by providing its name
+        /// Determines which object reference is the target GameObject by providing its name
         /// </summary>
         private GameObject FindTarget(string name)
         {
@@ -978,7 +978,7 @@ Para criar esta classe:
 
     1. *Microfonemanager*:
 
-        - No *painel hierarquia*, arraste o objeto de **texto ditado** para a caixa valor do parâmetro texto do **ditado** .
+        - No *painel hierarquia*, arraste o objeto de **texto ditado** para a caixa valor do parâmetro **texto do ditado** .
 
     2. *Comportamentos*, no *painel hierarquia*:
 
@@ -1037,11 +1037,11 @@ Para compilar:
 
 4.  Você será solicitado a selecionar a pasta na qual deseja criar a solução. 
 
-5.  Crie uma  pasta builds e dentro dessa pasta crie outra pasta com um nome apropriado de sua escolha. 
+5.  Crie uma pasta *Builds* e dentro dessa pasta crie outra pasta com um nome apropriado de sua escolha. 
 6.  Clique em **Selecionar pasta** para iniciar a compilação nesse local.
  
-    ![Criar pasta builds](images/AzureLabs-Lab3-44.png)
-    ![Selecionar pasta builds](images/AzureLabs-Lab3-45.png)
+    ![criar a pasta builds](images/AzureLabs-Lab3-44.png)
+    ![selecionar a pasta builds](images/AzureLabs-Lab3-45.png)
  
 7.  Depois de concluir a compilação do Unity (pode levar algum tempo), ele deve abrir uma janela do **Explorador de arquivos** no local de sua compilação.
 
@@ -1064,7 +1064,7 @@ Para implantar no computador local:
 ## <a name="chapter-12--improving-your-luis-service"></a>Capítulo 12 – melhorando seu serviço LUIS
 
 >[!IMPORTANT] 
-> Este capítulo é incrivelmente importante e talvez precise ser interateddo várias vezes, pois isso ajudará a melhorar a precisão do seu serviço LUIS: Certifique-se de concluir isso.
+> Este capítulo é incrivelmente importante e pode precisar ser iterado várias vezes, pois isso ajudará a melhorar a precisão do seu serviço LUIS: Certifique-se de concluir isso.
 
 Para melhorar o nível de compreensão fornecido pelo LUIS, você precisa capturar novos declarações e usá-los para treinar novamente seu aplicativo LUIS.
 
@@ -1088,8 +1088,8 @@ Ao focalizar cada palavra realçada, você pode examinar cada expressão e deter
 
 No exemplo acima, foi detectado que a palavra "Spear" foi realçada como um destino, portanto, é necessário corrigir o erro, o que é feito ao passar pela palavra com o mouse e clicar em **remover rótulo**.
 
-![Verificar declarações](images/AzureLabs-Lab3-49.png)
-![remover rótulo de imagem](images/AzureLabs-Lab3-50.png)
+![verificar declarações](images/AzureLabs-Lab3-49.png)
+![remover imagem de rótulo](images/AzureLabs-Lab3-50.png)
  
 5.  Se encontrar declarações que estejam completamente errados, você poderá excluí-los usando o botão **excluir** no lado direito da tela.
 

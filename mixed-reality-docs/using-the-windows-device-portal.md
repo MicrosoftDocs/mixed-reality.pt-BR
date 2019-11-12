@@ -6,12 +6,12 @@ ms.author: jlyons
 ms.date: 02/24/2019
 ms.topic: article
 keywords: Portal de dispositivos Windows, HoloLens
-ms.openlocfilehash: cc83a4e987d77be53222b8e9537eeec359446465
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 972fe2e828a0a054925a45b4f6965c668f6da078
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438219"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926752"
 ---
 # <a name="using-the-windows-device-portal"></a>Usando o portal do dispositivo Windows
 
@@ -160,7 +160,7 @@ Use a página Mixed Reality Capture para salvar fluxos de mídia do HoloLens.
 > [!NOTE]
 > Há [limitações para a MRC simultânea](mixed-reality-capture-for-developers.md#simultaneous-mrc-limitations):
 > * Se um aplicativo tentar acessar a câmera de foto/vídeo enquanto o portal de dispositivo do Windows estiver gravando um vídeo, a gravação de vídeo será interrompida.
->   * O HoloLens 2 não interromperá a gravação de vídeo se o aplicativo acesses a câmera de foto/vídeo com o modo SharedReadOnly.
+>   * O HoloLens 2 não interromperá a gravação de vídeo se o aplicativo acessar a câmera de foto/vídeo com o modo SharedReadOnly.
 > * Se um aplicativo estiver usando ativamente a câmera de foto/vídeo, o portal de dispositivo do Windows poderá tirar uma foto ou gravar um vídeo.
 > * Transmissão ao vivo:
 >   * O HoloLens (1º gen) impede que um aplicativo acesse a câmera de foto/vídeo enquanto realiza a transmissão ao vivo do portal de dispositivos do Windows.

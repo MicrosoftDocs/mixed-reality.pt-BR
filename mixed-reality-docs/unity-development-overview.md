@@ -6,12 +6,12 @@ ms.author: kurtie
 ms.date: 10/25/2018
 ms.topic: article
 keywords: Unity, realidade mista, desenvolvimento, introdução, novo projeto, portabilidade, capacidade, câmera, simulação, emulação, documentação
-ms.openlocfilehash: b78afb0cf6557ec9b61a029e2d557debbd0b6b46
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: f9b314bfc7c58e72b11ecfd76fe7293ef2f6c11e
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437379"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926701"
 ---
 # <a name="unity-development-overview"></a>Visão geral do desenvolvimento do Unity
 
@@ -37,7 +37,7 @@ Depois de configurar o MRTK V2 com seu projeto ou configurar seu projeto, confor
 
 A adição de suporte para recursos de realidade mista do Windows, como [estágios espaciais](coordinate-systems.md#spatial-coordinate-systems), [gestos, controladores de movimento](gestures-and-motion-controllers-in-unity.md) ou [entrada de voz](voice-input-in-unity.md) , é obtida usando APIs criadas diretamente no Unity. 
 
-Primeiro, examine as [escalas de experiência](coordinate-systems.md) que seu applicatioin pode atingir:
+Primeiro, examine as [escalas de experiência](coordinate-systems.md) que seu aplicativo pode direcionar:
 * Se você pretende criar uma **experiência de dimensionamento**ou **somente de orientação** , você precisará definir o tipo de espaço de rastreamento do Unity como [estático](coordinate-systems-in-unity.md#building-an-orientation-only-or-seated-scale-experience).
 * Se você pretende criar uma experiência em **escala** ou em **escala de sala**, precisará garantir que o tipo de espaço de rastreamento do Unity seja definido com êxito como [RoomScale](coordinate-systems-in-unity.md#building-an-orientation-only-or-seated-scale-experience).
 * Se você pretende criar uma experiência de **escala mundial** no HoloLens que permita que os usuários se movimentem além de 5 metros, você precisará usar o componente [WorldAnchor](coordinate-systems-in-unity.md#building-a-world-scale-experience) .

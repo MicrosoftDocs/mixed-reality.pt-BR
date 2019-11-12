@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
 keywords: mapeamento espacial, HoloLens, realidade misturada, reconstrução da superfície, malha
-ms.openlocfilehash: 2988056b5caf50a4428d39c725bfe5432867a9c0
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: c4e2f9e49cfe4df9cf875d18b19d62e25c200d76
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437461"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926735"
 ---
 # <a name="spatial-mapping"></a>Mapeamento espacial
 
@@ -64,13 +64,13 @@ Esses volumes podem ser fixos (em um local fixo em relação ao mundo real) ou p
 
 Como o HoloLens reúne novos dados sobre o ambiente e, conforme ocorrem alterações no ambiente, as superfícies espaciais aparecerão, desaparecerão e serão alteradas.
 
-## <a name="spatial-mapping-vs-scene-undesranding-worldmesh"></a>Mapeamento espacial versus Undesranding de cena WorldMesh
+## <a name="spatial-mapping-vs-scene-understanding-worldmesh"></a>Mapeamento espacial versus WorldMesh de compreensão da cena
 Para o HoloLens 2, é possível consultar uma versão estática dos dados de mapeamento espacial usando o [SDK de compreensão da cena](scene-understanding-SDK.md) (configuração EnableWorldMesh). Aqui estão as diferenças entre duas maneiras de acessar os dados de mapeamento espacial:
 * API de mapeamento espacial:
    * Intervalo limitado: os dados de mapeamento espacial disponíveis para aplicativos em um tamanho limitado em cache ' bolha ' em todo o usuário.
    * Fornece atualizações de baixa latência de regiões de malha alteradas por meio de eventos de Superfícieschanged.
    * Nível variável de detalhes controlado por triângulos por parâmetro de medidor cúbico.
-* SDK de compreensão de cena:
+* SDK de compreensão da cena:
    * Intervalo ilimitado – fornece todos os dados de mapeamento espacial verificados dentro do raio de consulta.
    * Fornece um instantâneo estático dos dados de mapeamento espacial. Obter os dados de mapeamento espacial atualizados requer a execução de uma nova consulta para toda a malha.
    * Nível consistente de detalhes controlado pela configuração de RequestedMeshLevelOfDetail.
@@ -366,7 +366,7 @@ Aqui estão alguns exemplos de diferentes tipos de processamento de malha que po
 * É uma boa ideia executar testes com usuários reais (e idealmente desconhecidos), pois eles não podem usar o HoloLens ou seu aplicativo exatamente da mesma maneira que você. Na verdade, ele pode surpreender você como o comportamento das pessoas, o conhecimento e as suposições mais divergentes podem ser!
 
 ## <a name="troubleshooting"></a>Painel de controle da
-* Para que as malhas de superfície sejam orientadosdas corretamente, cada gameobject precisa estar ativo antes de ser enviado para o SurfaceObeserver para que sua malha seja construída. Caso contrário, as malhas serão exibidas no seu espaço, mas giradas em ângulos estranhos.
+* Para que as malhas de superfície sejam orientadosdas corretamente, cada gameobject precisa estar ativo antes de ser enviado para o SurfaceObserver para que sua malha seja construída. Caso contrário, as malhas serão exibidas no seu espaço, mas giradas em ângulos estranhos.
 * O gameobject que executa o script que se comunica com o SurfaceObserver precisa ser definido para a origem. Caso contrário, todos os GameObjects que você criar e enviar para o SurfaceObserver ter suas malhas construídas terão um deslocamento igual ao deslocamento do objeto do jogo pai. Isso pode fazer com que suas malhas mostrem vários medidores de distância, o que torna muito difícil depurar o que está acontecendo.
 
 ## <a name="see-also"></a>Consulte também

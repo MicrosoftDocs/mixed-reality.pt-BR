@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
 keywords: DirectX, renderização Holographic, nativo, aplicativo nativo, WinRT, aplicativo WinRT, APIs de plataforma, mecanismo personalizado, middleware
-ms.openlocfilehash: e77ee5053e69aef502481d18618e604c6bfb5939
-ms.sourcegitcommit: 2e54d0aff91dc31aa0020c865dada3ae57ae0ffc
+ms.openlocfilehash: 0af73314c3c93d230ef87ed468f718f5b3e1813c
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73641087"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926626"
 ---
 # <a name="directx-development-overview"></a>Visão geral de desenvolvimento do DirectX
 
@@ -44,7 +44,7 @@ Os tópicos a seguir abordam os requisitos básicos da adição do suporte do Wi
 
 ## <a name="adding-mixed-reality-capabilities-and-inputs"></a>Adicionando entradas e recursos de realidade misturada
 
-Para habilitar a melhor experiência possível para os usuários de sua appslication de imersão, você desejará dar suporte aos seguintes blocos de construção:
+Para habilitar a melhor experiência possível para os usuários do seu aplicativo de imersão, você desejará dar suporte aos seguintes blocos de construção:
 
 * [Olhar fixo com cabeça e olhos no DirectX](gaze-in-directx.md)
 * [Controladores de mãos e emovimento no DirectX](hands-and-motion-controllers-in-directx.md)

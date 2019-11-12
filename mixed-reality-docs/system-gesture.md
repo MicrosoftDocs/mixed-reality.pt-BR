@@ -6,12 +6,12 @@ ms.author: cmeekhof
 ms.date: 10/22/2019
 ms.topic: article
 keywords: Realidade misturada, gestos, interação, design
-ms.openlocfilehash: b46f642babb18387da2e76d5bdbb7631577c85de
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: ba543ffe0802d0b95cc539fb0e73c0b4e51fc186
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73439817"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926723"
 ---
 # <a name="system-gesture"></a>Gesto do sistema
 

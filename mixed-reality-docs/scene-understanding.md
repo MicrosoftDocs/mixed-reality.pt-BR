@@ -6,12 +6,12 @@ ms.author: szymons
 ms.date: 07/08/2019
 ms.topic: article
 keywords: Compreensão da cena, mapeamento espacial, realidade do Windows Mixed, Unity
-ms.openlocfilehash: 7ee0cf3af8012a053733896a8bf92192306b7f8b
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: fdfe40571ac8893dcb3a3ba8fe3bb12707c800e4
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437473"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926917"
 ---
 # <a name="scene-understanding"></a>Compreensão da cena
 
@@ -95,7 +95,7 @@ A geração de malhas de navegação precisas ainda requer pós-processamento, o
 
 ### <a name="visualization"></a>Visualização
 
-Embora a [visualização de mapeamento espacial](spatial-mapping.md#visualization) possa ser usada para comentários em tempo real do ambiente, há muitos cenários em que a simplicidade dos objetos planar e Watertight fornece mais desempenho ou qualidade visual. A projeção de sombra e técnicas de aterramento que são descritas usando o mapeamento espacial podem ser mais agradáveis se projetadas nas superfícies do planar fornecidas por quads ou pela malha Watertight do planar. Isso é especialmente verdadeiro para ambientes/cenários nos quais a pré-verificação não é ideal devido ao fato de que a cena inferirá, e os ambientes completos e suposições de planar minimizarão artefatos.
+Embora a [visualização de mapeamento espacial](spatial-mapping.md#visualization) possa ser usada para comentários em tempo real do ambiente, há muitos cenários em que a simplicidade dos objetos planar e Watertight fornece mais desempenho ou qualidade visual. A projeção de sombra e técnicas de aterramento que são descritas usando o mapeamento espacial podem ser mais agradáveis se projetadas nas superfícies do planar fornecidas por quads ou pela malha Watertight do planar. Isso é especialmente verdadeiro para ambientes/cenários em que a pré-verificação completa não é ideal devido ao fato de que a cena inferirá, e os ambientes completos e as suposições de planar minimizarão artefatos.
 
 Além disso, o número total de superfícies retornado pelo mapeamento espacial é limitado pelo cache espacial interno, enquanto a versão de compreensão da cena da malha de mapeamento espacial é capaz de acessar dados de mapeamento espacial que não são armazenados em cache. Por isso, a compreensão da cena é mais adequada à captura de representações de malha para espaços maiores (por exemplo, mais de um único espaço) para visualização ou processamento de malha adicional. A malha mundial retornada com EnableWorldMesh terá um nível consistente de detalhes em todo o mundo, o que pode gerar uma visualização mais agradável se for renderizado como wireframe.
 

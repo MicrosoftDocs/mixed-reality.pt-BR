@@ -1,24 +1,24 @@
 ---
 title: Usando o Visual Studio para implantar e depurar
-description: Como compilar, depurar e implantar aplicativos para o HoloLens e o Windows Mixed Reality usando o Visual Studio.
+description: Saiba como criar, depurar e implantar aplicativos para o HoloLens e o Windows Mixed Reality usando o Visual Studio.
 author: pbarnettms
 ms.author: pbarnett
 ms.date: 10/24/2019
 ms.topic: article
 keywords: Visual Studio, HoloLens, realidade misturada, depurar, implantar
-ms.openlocfilehash: 2b84183417a1bd4eaa90eef58bebe2b65966b933
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 07854c800008658835b169607d85d562682cf194
+ms.sourcegitcommit: b6b76275fad90df6d9645dd2bc074b7b2168c7c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437319"
+ms.lasthandoff: 11/11/2019
+ms.locfileid: "73914118"
 ---
 # <a name="using-visual-studio-to-deploy-and-debug"></a>Usando o Visual Studio para implantar e depurar
 
 Se você deseja usar o DirectX ou o Unity para desenvolver seu aplicativo de realidade misturada, você usará o Visual Studio para depuração e implantação. Nesta seção, você aprenderá a:
-* Como implantar aplicativos para seu HoloLens ou o headset de imersão de realidade misturada do Windows por meio do Visual Studio.
-* Como usar o emulador do HoloLens interno para o Visual Studio.
-* Como depurar aplicativos de realidade misturada.
+* Implante aplicativos em seu HoloLens ou no headset de imersão de realidade misturada do Windows por meio do Visual Studio.
+* Use o emulador do HoloLens interno para o Visual Studio.
+* Depurar aplicativos de realidade misturada.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 1. Consulte [instalar as ferramentas](install-the-tools.md) para obter instruções de instalação.
@@ -26,7 +26,7 @@ Se você deseja usar o DirectX ou o Unity para desenvolver seu aplicativo de rea
 
 ## <a name="enabling-developer-mode"></a>Habilitar o modo de desenvolvedor
 
-Comece habilitando o **modo de desenvolvedor** em seu dispositivo para que o Visual Studio possa se conectar a ele.
+Comece habilitando o **modo de desenvolvedor** em seu dispositivo, para que o Visual Studio possa se conectar a ele.
 
 ### <a name="hololens"></a>HoloLens
 1. Ligue seu HoloLens e coloque-o no dispositivo.
@@ -48,7 +48,7 @@ Se você estiver trabalhando com um headset de realidade mista do Windows conect
 ## <a name="deploying-an-app-over-wi-fi---hololens-1st-gen"></a>Implantando um aplicativo por Wi-Fi-HoloLens (1ª gen)
 1. Selecione uma configuração de Build **x86** para seu aplicativo ![configuração de build x86 no Visual Studio](images/x86setting.png)
 2. Selecione **computador remoto** no menu suspenso destino de implantação ![destino de implantação de máquina remota no Visual Studio](images/remotemachinesetting.png)
-3. Para C++ projetos do e do JavaScript, vá para **projeto > Propriedades > propriedades de configuração > depuração**. Para C# projetos, uma caixa de diálogo será automaticamente exibida para configurar sua conexão.
+3. Para C++ projetos do e do JavaScript, vá para **projeto > Propriedades > propriedades de configuração > depuração**. Para C# projetos, uma caixa de diálogo será exibida automaticamente para configurar a conexão.
   a. Insira o endereço IP do seu dispositivo no campo nome do **computador** ou **endereço** . Localize o endereço IP em seu HoloLens em **configurações > rede & Internet > opções avançadas**ou você pode solicitar ao Cortana "Qual é meu endereço IP?"
   b. Defina o modo de autenticação como **Universal (protocolo não criptografado)** ![caixa de diálogo conexão remota no Visual Studio](images/remotedeploy.png)
 4. Selecione **depurar > iniciar a depuração** para implantar seu aplicativo e iniciar a depuração![iniciar sem depuração no Visual Studio](images/deploywithdebugging.png)
@@ -57,7 +57,7 @@ Se você estiver trabalhando com um headset de realidade mista do Windows conect
 ## <a name="deploying-an-app-over-wi-fi---hololens-2"></a>Implantando um aplicativo por Wi-Fi-HoloLens 2
 1. Selecione uma configuração de compilação **ARM** ou **ARM64** para seu aplicativo ![configuração de Build ARM64 no Visual Studio](images/arm64setting.png)
 2. Selecione **computador remoto** no menu suspenso destino de implantação ![destino de implantação de máquina remota no Visual Studio](images/remotemachinesetting_arm64.png)
-3. Para C++ projetos do e do JavaScript, vá para **projeto > Propriedades > propriedades de configuração > depuração**. Para C# projetos, uma caixa de diálogo será automaticamente exibida para configurar sua conexão.
+3. Para C++ projetos do e do JavaScript, vá para **projeto > Propriedades > propriedades de configuração > depuração**. Para C# projetos, uma caixa de diálogo será exibida automaticamente para configurar a conexão.
   a. Insira o endereço IP do seu dispositivo no campo nome do **computador** ou **endereço** . Localize o endereço IP em seu HoloLens em **configurações > rede & Internet > opções avançadas**ou você pode solicitar ao Cortana "Qual é meu endereço IP?"
   b. Defina o modo de autenticação como **Universal (protocolo não criptografado)** ![caixa de diálogo conexão remota no Visual Studio](images/remotedeploy.png)
 4. Selecione **depurar > iniciar a depuração** para implantar seu aplicativo e iniciar a depuração![iniciar sem depuração no Visual Studio](images/deploywithdebugging.png)
