@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 02/24/2019
 ms.topic: article
 keywords: MRC, foto, vídeo, captura, câmera
-ms.openlocfilehash: 740b02dd1714679028541a888d721ae74e8e1f32
-ms.sourcegitcommit: c4c293971bb3205a82121bbfb40d1ac52b5cb38e
+ms.openlocfilehash: 72600f889997c96a629faebc35aba4b4841d4d8b
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/10/2019
-ms.locfileid: "68937073"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926796"
 ---
 # <a name="mixed-reality-capture-for-developers"></a>Captura de realidade misturada para desenvolvedores
 
@@ -97,7 +97,7 @@ Se houver certas cenas que não dão suporte à renderização em uma câmera ad
 #### <a name="2d-app"></a>aplicativo 2D
 
 os aplicativos 2D podem optar por ter seu conteúdo Visual obscuro quando a captura de realidade misturada está em execução por:
-* Presente com o sinalizador [DXGI_PRESENT_RESTRICT_TO_OUTPUT](https://docs.microsoft.com/windows/desktop/direct3ddxgi/dxgi-present)
+* Presente com o sinalizador de [DXGI_PRESENT_RESTRICT_TO_OUTPUT](https://docs.microsoft.com/windows/desktop/direct3ddxgi/dxgi-present)
 * Criar a cadeia de permuta do aplicativo com o sinalizador [DXGI_SWAP_CHAIN_FLAG_HW_PROTECTED](https://docs.microsoft.com/windows/desktop/api/dxgi/ne-dxgi-dxgi_swap_chain_flag)
 * Com a atualização do Windows 10 de maio de 2019, configurando o [IsScreenCaptureEnabled](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationview.isscreencaptureenabled) da ApplicationView
 
@@ -128,7 +128,7 @@ A etapa mais importante é garantir que seu aplicativo esteja apagando para pret
 
 Aqui estão alguns dos artefatos que você poderá ver na MRC se seu aplicativo não estiver sendo desmarcado para preto transparente:
 
-**Exemplo de falhas**: Bordas pretas em volta do conteúdo (falha ao apagar para preto transparente)
+**Falhas de exemplo**: bordas pretas em todo o conteúdo (falha ao apagar para preto transparente)
 
 <table>
 <tr>
@@ -141,11 +141,11 @@ Aqui estão alguns dos artefatos que você poderá ver na MRC se seu aplicativo 
 </tr>
 </table>
 
-**Exemplo de falhas**: Toda a cena em segundo plano do holograma aparece em preto. A definição de um valor alfa de segundo plano de 1 resulta em um plano de fundo preto
+**Falhas de exemplo**: toda a cena em segundo plano do holograma aparece em preto. A definição de um valor alfa de segundo plano de 1 resulta em um plano de fundo preto
 
 ![A definição de um valor alfa de segundo plano de 1 resulta em um plano de fundo preto](images/clearopaqueblack-300px.png)
 
-**Resultado esperado**: Os hologramas aparecem corretamente combinados com o mundo real (resultado esperado se estiver desmarcando para preto transparente)
+**Resultado esperado**: os hologramas aparecem corretamente mesclados com o mundo real (resultado esperado se estiver desmarcando para preto transparente)
 
 ![Resultado esperado se estiver desmarcando para preto transparente](images/cleartransparentblack-300px.png)
 
@@ -190,23 +190,23 @@ Outros aplicativos podem fazer isso usando as [APIs de captura de mídia do Wind
 
 Os aplicativos têm duas opções para adicionar o efeito:
 * A API mais antiga: [Windows. Media. Capture. MediaCapture. AddEffectAsync ()](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.addeffectasync)
-* A nova API recomendada pela Microsoft (retorna um objeto, possibilitando a manipulação de propriedades dinâmicas): [Windows. Media. Capture. MediaCapture. AddVideoEffectAsync ()](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.addvideoeffectasync) / [Windows. Media. Capture. MediaCapture. AddAudioEffectAsync ()](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.addaudioeffectasync) que exige que o aplicativo Crie sua própria implementação de [IVideoEffectDefinition](https://docs.microsoft.com/uwp/api/Windows.Media.Effects.IVideoEffectDefinition) e [ IAudioEffectDefinition](https://docs.microsoft.com/uwp/api/windows.media.effects.iaudioeffectdefinition). Consulte o exemplo de efeito da MRC para uso de exemplo.
+* A nova API recomendada da Microsoft (retorna um objeto, possibilitando a manipulação de propriedades dinâmicas): [Windows. Media. Capture. MediaCapture. AddVideoEffectAsync ()](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.addvideoeffectasync) / [Windows. Media. Capture. MediaCapture. AddAudioEffectAsync ()](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.addaudioeffectasync) que exige que o aplicativo Crie sua própria implementação de [IVideoEffectDefinition](https://docs.microsoft.com/uwp/api/Windows.Media.Effects.IVideoEffectDefinition) e [IAudioEffectDefinition](https://docs.microsoft.com/uwp/api/windows.media.effects.iaudioeffectdefinition). Consulte o exemplo de efeito da MRC para uso de exemplo.
 
 >[!NOTE]
 > O namespace Windows. Media. MixedRealityCapture não será reconhecido pelo Visual Studio, mas as cadeias de caracteres ainda são válidas.
 
 Efeito de vídeo da MRC (**Windows. Media. MixedRealityCapture. MixedRealityCaptureVideoEffect**)
 
-|  Nome da Propriedade  |  type  |  Default Value  |  Descrição | 
+|  Nome da propriedade  |  Digite  |  Valor padrão  |  Descrição | 
 |----------|----------|----------|----------|
 |  Streamtype  |  UINT32 ([MediaStreamType](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.MediaStreamType))  |  1 (VideoRecord)  |  Descreva para qual fluxo de captura esse efeito é usado. O áudio não está disponível. | 
-|  HologramCompositionEnabled  |  boolean  |  TRUE  |  Sinalizador para habilitar ou desabilitar hologramas na captura de vídeo. | 
-|  RecordingIndicatorEnabled  |  boolean  |  TRUE  |  Sinalizador para habilitar ou desabilitar o indicador de gravação na tela durante a captura de holograma. | 
-|  VideoStabilizationEnabled  |  boolean  |  FALSE  |  Sinalizador para habilitar ou desabilitar a estabilização de vídeo da plataforma do controlador de HoloLens. | 
+|  HologramCompositionEnabled  |  booliano  |  TRUE  |  Sinalizador para habilitar ou desabilitar hologramas na captura de vídeo. | 
+|  RecordingIndicatorEnabled  |  booliano  |  TRUE  |  Sinalizador para habilitar ou desabilitar o indicador de gravação na tela durante a captura de holograma. | 
+|  VideoStabilizationEnabled  |  booliano  |  FALSE  |  Sinalizador para habilitar ou desabilitar a estabilização de vídeo da plataforma do controlador de HoloLens. | 
 |  VideoStabilizationBufferLength  |  UINT32  |  0  |  Defina quantos quadros históricos são usados para estabilização de vídeo. 0 é a latência e quase "livre" de uma perspectiva de potência e desempenho. 15 é recomendado para a qualidade mais alta (com o custo de 15 quadros de latência e memória). | 
-|  GlobalOpacityCoefficient  |  float  |  0,9 (HoloLens) 1,0 (Headset de imersão)  |  Defina o coeficiente de opacidade global de holograma no intervalo de 0,0 (totalmente transparente) para 1,0 (totalmente opaco). | 
-|  BlankOnProtectedContent  |  boolean  |  FALSE  |  Sinalizador para habilitar ou desabilitar o retorno de um quadro vazio se houver um aplicativo UWP 2D mostrando o conteúdo protegido. Se esse sinalizador for false e um aplicativo UWP 2D estiver mostrando o conteúdo protegido, o aplicativo UWP 2D será substituído por uma textura de conteúdo protegida no headset e na captura da realidade misturada. |
-|  ShowHiddenMesh  |  boolean  |  FALSE  |  Sinalizador para habilitar ou desabilitar mostrando a malha da área oculta da câmera Holographic e o conteúdo vizinho. |
+|  GlobalOpacityCoefficient  |  flutuante  |  0,9 (HoloLens) 1,0 (Headset de imersão)  |  Defina o coeficiente de opacidade global de holograma no intervalo de 0,0 (totalmente transparente) para 1,0 (totalmente opaco). | 
+|  BlankOnProtectedContent  |  booliano  |  FALSE  |  Sinalizador para habilitar ou desabilitar o retorno de um quadro vazio se houver um aplicativo UWP 2D mostrando o conteúdo protegido. Se esse sinalizador for false e um aplicativo UWP 2D estiver mostrando o conteúdo protegido, o aplicativo UWP 2D será substituído por uma textura de conteúdo protegida no headset e na captura da realidade misturada. |
+|  ShowHiddenMesh  |  booliano  |  FALSE  |  Sinalizador para habilitar ou desabilitar mostrando a malha da área oculta da câmera Holographic e o conteúdo vizinho. |
 | Sobrecolocações | Size | 0, 0 | Defina o tamanho de saída desejado após o corte para estabilização de vídeo. Um tamanho de corte padrão será escolhido se 0 ou um tamanho de saída inválido for especificado. |
 | PreferredHologramPerspective | UINT32 | 1 (PhotoVideoCamera) | Enumeração usada para indicar qual configuração de exibição de câmera Holographic deve ser capturada. Definir 0 (display) significa que o aplicativo não será solicitado a renderizar da câmera de foto/vídeo |
 
@@ -214,9 +214,9 @@ Efeito de áudio da MRC (**Windows. Media. MixedRealityCapture. MixedRealityCapt
 
 <table>
 <tr>
-<th>Nome da Propriedade</th>
-<th>type</th>
-<th>Default Value</th>
+<th>Nome da propriedade</th>
+<th>Digite</th>
+<th>Valor padrão</th>
 <th>Descrição</th>
 </tr>
 <tr>
@@ -225,9 +225,9 @@ Efeito de áudio da MRC (**Windows. Media. MixedRealityCapture. MixedRealityCapt
 <td>2</td>
 <td>
 <ul>
-<li>0 : Somente áudio do MIC</li>
-<li>1 : Somente áudio do sistema</li>
-<li>2 : MIC e áudio do sistema</li>
+<li>0: somente áudio do MIC</li>
+<li>1: somente áudio do sistema</li>
+<li>2: MIC e áudio do sistema</li>
 </ul>
 </td>
 </tr>
@@ -241,7 +241,7 @@ Há certas limitações em relação a vários aplicativos que acessam a MRC ao 
 
 A câmera de foto/vídeo é limitada ao número de processos que podem acessá-lo ao mesmo tempo. Enquanto um processo estiver gravando vídeo ou tirando uma foto, qualquer outro processo falhará ao adquirir a câmera de foto/vídeo. (isso se aplica a captura de realidade mista e captura de foto/vídeo padrão)
 
-Com o HoloLens 2, um aplicativo pode usar a Propriedade [sharingmode](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacaptureinitializationsettings.sharingmode) de MediaCaptureInitializationSettings para indicar que deseja executar SharedReadOnly se eles não precisarem de controle exclusivo sobre a câmera de foto/vídeo. Isso significa que a resolução e a taxa de quadros da captura serão limitadas a quais outros aplicativos configuraram a câmera para fornecer.
+Com o HoloLens 2, um aplicativo pode usar a propriedade ' [sharingmode](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacaptureinitializationsettings.sharingmode) de MediaCaptureInitializationSettings para indicar que deseja executar SharedReadOnly se não precisar de controle exclusivo sobre a câmera de foto/vídeo. Isso significa que a resolução e a taxa de quadros da captura serão limitadas a quais outros aplicativos configuraram a câmera para fornecer.
 
 ##### <a name="built-in-mrc-photovideo-camera-access"></a>Acesso interno à câmera de fotos/vídeo da MRC
 
@@ -253,10 +253,10 @@ No entanto, o suporte foi adicionado a cada subsistema para operar em um modo co
 * Se a MRC interna for iniciada enquanto um aplicativo tiver ExclusiveControl, a MRC interna será executada no modo SharedReadOnly
 
 Essa funcionalidade de modo compartilhado tem determinadas restrições:
-* Foto por meio da Cortana, atalhos de hardware ou menu iniciar: Requer a atualização do Windows 10 de abril de 2018 (ou posterior)
-* Vídeo via Cortana, atalhos de hardware ou menu iniciar: Requer a atualização do Windows 10 de abril de 2018 (ou posterior)
-* Streaming de MRC sobre Miracast: Requer a atualização do Windows 10 de outubro de 2018 (ou posterior)
-* Streaming da MRC no portal de dispositivos do Windows ou por meio do aplicativo de complemento do HoloLens: Requer o HoloLens 2
+* Foto via Cortana, atalhos de hardware ou menu iniciar: requer a atualização do Windows 10 de abril de 2018 (ou posterior)
+* Vídeo via Cortana, atalhos de hardware ou menu iniciar: requer a atualização do Windows 10 de abril de 2018 (ou posterior)
+* Streaming de MRC sobre Miracast: requer a atualização do Windows 10 de outubro de 2018 (ou posterior)
+* Streaming de MRC no portal de dispositivo do Windows ou por meio do aplicativo de complemento do HoloLens: requer o HoloLens 2
 
 >[!NOTE]
 > A resolução e a taxa de quadros da interface do usuário da câmera da MRC interna podem ser reduzidas de seus valores normais quando outro aplicativo estiver usando a câmera de foto/vídeo.

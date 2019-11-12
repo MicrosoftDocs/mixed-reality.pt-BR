@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/11/2018
 ms.topic: article
 keywords: Azure, realidade mista, Academia, borda, IOT Edge, tutorial, API, notificação, funções, tabelas, hololens, imersão, VR, IOT, máquina virtual, Ubuntu, Python
-ms.openlocfilehash: 7f56c7931bb036d14ab3aa9156706b1f6247195c
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: bfb1518869892ed4899019d7b9c504a960e7db3f
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437968"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926842"
 ---
 >[!NOTE]
 >Os tutoriais misturados do Academia de realidade foram projetados com o HoloLens (1º gen) e com o fone de cabeça de imersão de realidade misturada.  Como tal, achamos que é importante deixar esses tutoriais em vigor para os desenvolvedores que ainda estão procurando orientação no desenvolvimento para esses dispositivos.  Esses tutoriais **_não_** serão atualizados com os conjuntos de ferramentas e as interações mais recentes usados para o HoloLens 2.  Eles serão mantidos para continuar a trabalhar nos dispositivos com suporte. Haverá uma nova série de tutoriais que serão publicados no futuro, que demonstrarão como desenvolver para o HoloLens 2.  Esse aviso será atualizado com um link para esses tutoriais quando eles forem postados.
@@ -890,7 +890,7 @@ Navegue de volta para o portal do Azure, no qual você criará um serviço de ta
 
 9. Na página Visão geral, no lado direito, clique em **tabelas**.
     
-    ![Tabelas](images/AzureLabs-Lab313-40.png)
+    ![tabelas](images/AzureLabs-Lab313-40.png)
 
 10. O painel à direita será alterado para mostrar as informações do **serviço tabela** , onde você precisa adicionar uma nova tabela. Para fazer isso, clique no botão **+ tabela** no canto superior esquerdo.
 
@@ -1241,7 +1241,7 @@ Para visualizar os dados de seu dispositivo IOT, você irá configurar **Power b
     ![Power BI](images/AzureLabs-Lab313-86.png)
 
 > [!WARNING]
-> O capítulo a seguir é específico do HoloLens. O Power BI atualmente não é disponíveis como um aplicativo de imersão, no entanto, você pode executar a versão da área de trabalho no portal do Windows Mixed Reality (também conhecido como Cliff House), por meio do aplicativo de desktop.
+> O capítulo a seguir é específico do HoloLens. O Power BI não está disponível atualmente como um aplicativo de imersão, no entanto, você pode executar a versão da área de trabalho no portal de realidade mista do Windows (também conhecido como Cliff House), por meio do aplicativo de desktop.
 
 ## <a name="chapter-16---display-power-bi-data-on-hololens"></a>Capítulo 16-exibir dados de Power BI no HoloLens
 

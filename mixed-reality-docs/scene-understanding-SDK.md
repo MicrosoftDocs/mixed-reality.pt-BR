@@ -6,12 +6,12 @@ ms.author: szymons
 ms.date: 07/08/2019
 ms.topic: article
 keywords: Compreensão da cena, mapeamento espacial, realidade do Windows Mixed, Unity
-ms.openlocfilehash: e31c0b1c954516db2dbb025d849dba3e3203a04b
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: b7d4103697d94f5e59c77237b4948f62e4e4b621
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438293"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926911"
 ---
 # <a name="scene-understanding-sdk-overview"></a>Visão geral do SDK de compreensão da cena
 
@@ -23,7 +23,7 @@ O SDK do SceneUnderstanding é baixável via NuGet.
 
 [SDK do SceneUnderstanding](https://www.nuget.org/packages/Microsoft.MixedReality.SceneUnderstanding/)
 
-**Observação:** a versão mais recente depende do pacakges da versão prévia e você precisará habilitar pacotes de pré-lançamento para vê-lo.
+**Observação:** a versão mais recente depende dos pacotes de visualização e você precisará habilitar os pacotes de pré-lançamento para vê-lo.
 
 A partir da versão 0.5.2022-RC, o entendimento da cena dá suporte C# a C++ projeções de idioma e permite que os aplicativos desenvolvam aplicativos para plataformas Win32 ou UWP. A partir dessa versão, SceneUnderstanding dá suporte ao suporte do Unity no editor para o bloqueio do SceneObserver, que é usado exclusivamente para comunicação com o HoloLens2. 
 
@@ -35,7 +35,7 @@ Se você estiver usando o SDK em um projeto do Unity, use o [NuGet para o Unity]
 
 ### <a name="the-scene"></a>A cena
 
-Seu dispositivo de realidade misturada está constantemente integrando informações sobre o que vê em seu ambiente. A compreensão da cena funil todas essas fontes de dados e produz uma única abstração coesa. A compreensão da cena gera cenas que são uma composição de [SceneObjects](scene-understanding-SDK.md#sceneobjects) que representam uma instância de uma única coisa (por exemplo, uma parede/teto/andar). Os próprios objetos de cena são uma composição de [SceneComponents](scene-understanding-SDK.md#scenecomponents) que representam partes mais granulares que compõem esse sceneobject. Exemplos de componentes são quádruplos e malhas, mas no futuro poderiam representar caixas delimitadoras, mehses de colisão, metadados, etc...
+Seu dispositivo de realidade misturada está constantemente integrando informações sobre o que vê em seu ambiente. A compreensão da cena funil todas essas fontes de dados e produz uma única abstração coesa. A compreensão da cena gera cenas que são uma composição de [SceneObjects](scene-understanding-SDK.md#sceneobjects) que representam uma instância de uma única coisa (por exemplo, uma parede/teto/andar). Os próprios objetos de cena são uma composição de [SceneComponents](scene-understanding-SDK.md#scenecomponents) que representam partes mais granulares que compõem esse sceneobject. Exemplos de componentes são quádruplos e malhas, mas no futuro podem representar caixas delimitadoras, malhas de colisão, metadados, etc...
 
 O processo de converter os dados brutos do sensor em uma cena é uma operação potencialmente cara que pode levar segundos para espaços médios (~ 10x10m) a minutos para espaços muito grandes (~ 50x50m) e, portanto, não é algo que está sendo computado pelo dispositivo sem solicitação de aplicativo. Em vez disso, a geração de cena é disparada por seu aplicativo sob demanda. A classe SceneObserver tem métodos estáticos que podem calcular ou desserializar uma cena, com a qual você pode enumerar/interagir. A ação de "computação" é executada sob demanda e é executada na CPU, mas em um processo separado (o driver de realidade misturada). No entanto, enquanto fazemos a computação em outro processo, os dados de cena resultantes são armazenados e mantidos em seu aplicativo no objeto de cena. 
 
@@ -43,7 +43,7 @@ Veja abaixo um diagrama que ilustra esse fluxo de processo e mostra exemplos de 
 
 ![Diagrama de processo](images/SU-ProcessFlow.png)
 
-No lado esquerdo, há um diagrama do tempo de execução misto da realidade que está sempre ligado e em execução em seu próprio processo. Esse tempo de execução é responsável por executar o rastreamento de dispositivos, o mapeamento espacial e outras operações que a cena entende para entender e o motivo do mundo em torno de você. No lado direito do diagrama, mostramos dois aplicativos teóricos que fazem uso da compreensão da cena. As primeiras interfaces de aplicativo com MRTK que usam o SDK de compreensão da cena internamente, o segundo aplicativo computa e usa duas instâncias de cena sepereate. Todos os 3 bastidores neste diagrama geram instâncias distintas dos bastidores, o driver não está acompanhando o estado global que é compartilhado entre aplicativos e objetos de cena em uma cena não é encontrado em outro. A compreensão da cena fornece um mecanismo para controlar ao longo do tempo, mas isso é feito usando o SDK e o código que executa esse controle é executado no SDK no processo do aplicativo.
+No lado esquerdo, há um diagrama do tempo de execução misto da realidade que está sempre ligado e em execução em seu próprio processo. Esse tempo de execução é responsável por executar o rastreamento de dispositivos, o mapeamento espacial e outras operações que a cena entende para entender e o motivo do mundo em torno de você. No lado direito do diagrama, mostramos dois aplicativos teóricos que fazem uso da compreensão da cena. As primeiras interfaces de aplicativo com MRTK que usam o SDK de compreensão da cena internamente, o segundo aplicativo computa e usa duas instâncias de cena separadas. Todos os 3 bastidores neste diagrama geram instâncias distintas dos bastidores, o driver não está acompanhando o estado global que é compartilhado entre aplicativos e objetos de cena em uma cena não é encontrado em outro. A compreensão da cena fornece um mecanismo para controlar ao longo do tempo, mas isso é feito usando o SDK e o código que executa esse controle é executado no SDK no processo do aplicativo.
 
 Como cada cena armazena os dados no espaço de memória do seu aplicativo, você pode pressupor que toda a função do objeto de cena ou de seus dados internos sempre seja executada no processo do aplicativo.
 
@@ -95,7 +95,7 @@ Abaixo, apresentamos um exemplo de uma estrutura em sua forma fixa e lógica.
 </tr>
 </table>
 
-Esta ilustração realça a diferença entre o layout lógico e físico da cena. À direita, vemos o layout hierárquico dos dados que seu aplicativo vê ao enumerar a cena. À esquerda, vemos que a cena é realmente composta de 12 componentes distintos acessíveis individualmente, se necessário. Ao processar uma nova cena, esperamos que os aplicativos orientem essa hierarquia logicamente, no entanto, ao controlar entre as atualizações de cena, alguns aplicativos só podem estar interessados em direcionar componentes específicos que são compartilhados entre duas cenas.
+Esta ilustração realça a diferença entre o layout lógico e físico da cena. À esquerda, vemos o layout hierárquico dos dados que seu aplicativo vê ao enumerar a cena. À direita, vemos que a cena é, na verdade, composta de 12 componentes distintos acessíveis individualmente, se necessário. Ao processar uma nova cena, esperamos que os aplicativos orientem essa hierarquia logicamente, no entanto, ao controlar entre as atualizações de cena, alguns aplicativos só podem estar interessados em direcionar componentes específicos que são compartilhados entre duas cenas.
 
 ## <a name="api-overview"></a>Visão geral de API
 
@@ -223,7 +223,7 @@ firstFloor = (SceneObject)myNextScene.FindComponent(firstFloor.Id);
 
 if (firstFloor != null)
 {
-    // We found it again, we can now update the transforms of all objects we attatched to this floor transform
+    // We found it again, we can now update the transforms of all objects we attached to this floor transform
 }
 ```
 
@@ -249,7 +249,7 @@ foreach (var mesh in firstFloor.Meshes)
 }
 ```
 
-Observe que é o Sceneobject que tem a transformação relativa à origem da cena. Isso ocorre porque o Sceneobject representa uma instância de "coisa" e é localizável no espaço, as quádruplas e as malhas representam a geometria transformada em relação ao seu pai. É possível que SceneObjects separadas referenciem o mesmo SceneMesh/SceneQuad SceneComponewnts, e também é possível que um Sceneobject tenha mais de um SceneMesh/SceneQuad.
+Observe que é o Sceneobject que tem a transformação relativa à origem da cena. Isso ocorre porque o Sceneobject representa uma instância de "coisa" e é localizável no espaço, as quádruplas e as malhas representam a geometria transformada em relação ao seu pai. É possível que SceneObjects separadas referenciem o mesmo SceneMesh/SceneQuad SceneComponents, e também é possível que um Sceneobject tenha mais de um SceneMesh/SceneQuad.
 
 ### <a name="dealing-with-transforms"></a>Lidando com transformações
 
@@ -285,7 +285,7 @@ public class SceneRootComponent : MonoBehavior
 }
 ```
 
-Cada `SceneObject` tem uma propriedade `Position` e `Orientation` que pode ser usada para posicionar o conteúdo correspondente em relação à origem do `Scene`que o contém. Por exemplo, o exemplo seguir pressupõe que o jogo é filho da raiz da cena e atribui sua posição local e rotação para alinhar a um determinado `SceneObject`:
+Cada `SceneObject` tem uma propriedade `Position` e `Orientation` que pode ser usada para posicionar o conteúdo correspondente em relação à origem do `Scene`que o contém. Por exemplo, o exemplo a seguir pressupõe que o jogo é filho da raiz da cena e atribui sua posição local e rotação para alinhar a um determinado `SceneObject`:
 
 ```cs
 void SetLocalTransformFromSceneObject(GameObject gameObject, SceneObject sceneObject)
@@ -324,14 +324,14 @@ foreach (var sceneObject in myScene.SceneObjects)
                 // Step 1: Create a new game object for the quad itself as a child of the scene root
                 // Step 2: Set the local transform from quads[0].Position and quads[0].Orientation
                 // Step 3: Create your hologram and set it as a child of the quad's game object
-                // Step 4: Set the hologram's local tranform to a translation (location.x, location.y, 0)
+                // Step 4: Set the hologram's local transform to a translation (location.x, location.y, 0)
             }
         }
     }
 }
 ```
 
-As etapas 1-4 são altamente dependentes de sua estrutura/implementação específica, mas os temas devem ser semelhantes. É importante observar que o quad simplesmente representa um plano 2D limitado que é localizado no espaço. Tendo seu mecanismo/estrutura sabendo onde o Quad é e criando a raiz de seus objetos em relação ao Quad, seus hologramas estarão localizados corretamente com repect para o mundo real. Para obter informações mais detalhadas, consulte nossos exemplos em quatro processadores que mostram implementações específicas.
+As etapas 1-4 são altamente dependentes de sua estrutura/implementação específica, mas os temas devem ser semelhantes. É importante observar que o quad simplesmente representa um plano 2D limitado que é localizado no espaço. Tendo seu mecanismo/estrutura sabendo onde o Quad é e criando a raiz de seus objetos em relação ao Quad, seus hologramas estarão localizados corretamente em relação ao mundo real. Para obter informações mais detalhadas, consulte nossos exemplos em quatro processadores que mostram implementações específicas.
 
 ### <a name="mesh"></a>Integrada
 

@@ -6,12 +6,12 @@ ms.author: trferrel
 ms.date: 03/26/2019
 ms.topic: article
 keywords: gráficos, CPU, GPU, renderização, coleta de lixo, hololens
-ms.openlocfilehash: 724ec24408e70360fda07c59a4ca2ffc30b49c1f
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: f3fdda94c417d9f8e8980a90e8928282789e3d0f
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438123"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926864"
 ---
 # <a name="performance-recommendations-for-unity"></a>Recomendações de desempenho para o Unity
 
@@ -273,7 +273,7 @@ As técnicas que operam na tela inteira podem ser bastante caras, já que sua or
 
 ### <a name="optimal-lighting-settings"></a>Configurações de iluminação ideais
 
-[A iluminação global em tempo real](https://docs.unity3d.com/Manual/GIIntro.html) no Unity pode fornecer resultados visuais pendentes, mas envolve cálculos de iluminação bastante caros. É recomendável desabilitar a iluminação global em tempo real para cada arquivo de cena do Unity por meio da **janela** > **renderização** > **configurações de iluminação** > desmarcar **a iluminação global em tempo real**.
+[A iluminação global em tempo real](https://docs.unity3d.com/Manual/GIIntro.html) no Unity pode fornecer resultados visuais excepcionais, mas envolve cálculos de iluminação bastante caros. É recomendável desabilitar a iluminação global em tempo real para cada arquivo de cena do Unity por meio da **janela** > **renderização** > **configurações de iluminação** > desmarcar **a iluminação global em tempo real**.
 
 Além disso, é recomendável desabilitar toda a transmissão de sombra, pois elas também adicionam passagens de GPU caras em uma cena do Unity. As sombras podem ser desabilitadas por luz, mas também podem ser controladas holísticamente por meio de configurações de qualidade.
 
@@ -301,7 +301,7 @@ Uma aproximação fácil para comparar sombreadores no desempenho é identificar
 
     ![Operações do sombreador padrão do Unity](images/unity-standard-shader-compilation.png)
 
-#### <a name="optmize-pixel-shaders"></a>Sombreadores de pixel Optmize
+#### <a name="optimize-pixel-shaders"></a>Otimizar sombreadores de pixel
 
 Observando os resultados da estatística compilada usando o método acima, o [sombreador de fragmento](https://en.wikipedia.org/wiki/Shader#Pixel_shaders) geralmente executará mais operações do que o [sombreador de vértice](https://en.wikipedia.org/wiki/Shader#Vertex_shaders) em média. O sombreador de fragmento, também conhecido como sombreador de pixel, é executado por pixel na saída da tela enquanto o sombreador de vértice só é executado por vértice de todas as malhas que estão sendo desenhadas para a tela. 
 

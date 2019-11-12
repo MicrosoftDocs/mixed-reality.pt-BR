@@ -6,12 +6,12 @@ ms.author: nopohl
 ms.date: 10/21/2019
 ms.topic: article
 keywords: HoloLens, comunicação remota e comunicação remota Holographic
-ms.openlocfilehash: 982a3f42014d8f5eb9ba181247fee9825fb78371
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 1f8a0cbe0f6da88c0c5e5a695737d8694020635c
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73434315"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926662"
 ---
 # <a name="writing-a-custom-holographic-remoting-player-app"></a>Escrevendo um aplicativo de player de comunicação remota do Holographic personalizado
 
@@ -200,7 +200,7 @@ Em caso de sucesso, ```BlitRemoteFrame()``` retorna ```BlitResult::Success_Color
 
 ## Opcional: definir BlitRemoteFrameTimeout<a name="BlitRemoteFrameTimeout"></a>
 >[!IMPORTANT]
-> ```PlayerContext::BlitRemoteFrameTimout``` tem suporte a partir da versão [2.0.9](holographic-remoting-version-history.md#v2.0.9). 
+> ```PlayerContext::BlitRemoteFrameTimeout``` tem suporte a partir da versão [2.0.9](holographic-remoting-version-history.md#v2.0.9). 
 
 A propriedade ```PlayerContext::BlitRemoteFrameTimeout``` especifica a quantidade de tempo que um quadro remoto será reutilizado se nenhum quadro remoto novo for recebido. 
 

@@ -6,12 +6,12 @@ ms.author: daescu
 ms.date: 04/06/2019
 ms.topic: article
 keywords: Realidade, mostrar, calendário, Academia, agenda, it, San Francisco, reator
-ms.openlocfilehash: ebecfa59d1c1b60ba7f3bf546816ed33b4910ad7
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: a7cecd4dcce63afb17c3f6d26596c138490f0181
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438326"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926851"
 ---
 # <a name="the-realities-show"></a>A realidade mostra
 ![Design para realidade misturada](images/therealitiesshow.jpg)
@@ -31,11 +31,11 @@ Este episódio diz respeito à compreensão humana: perto de interações, inter
 
 ___
 ## <a name="world-understanding---coming-soon"></a>**Compreensão mundial** – em breve
-Como os dispositivos de borda inteligentes leveredgem a capacidade de computação da nuvem para entender o mundo. Incluindo o HoloLens 2, a pesquisa Visual computacional, o serviço de ancoragem compartilhado, o rótulo semântico e o Azure Kinect DK.
+Como os dispositivos inteligentes de borda aproveitam a capacidade de computação da nuvem para entender o mundo. Incluindo o HoloLens 2, a pesquisa Visual computacional, o serviço de ancoragem compartilhado, o rótulo semântico e o Azure Kinect DK.
 
 ___
 ## <a name="mixedrealitytoolkit---coming-soon"></a>**MixedRealityToolkit** – em breve
-O MixedRealityToolkit (MRTK) fornece um conjunto de componentes e recursos fundamentais para acelerar o desenvolvimento de aplicativos MR. A versão mais recente do MRTK-Unity (v2) dá suporte ao HoloLens/HoloLens 2, à realidade mista do Windows e às plataformas OpenVR. Vamos aprofundar-se nos endineers e designers por trás dele.
+O MixedRealityToolkit (MRTK) fornece um conjunto de componentes e recursos fundamentais para acelerar o desenvolvimento de aplicativos MR. A versão mais recente do MRTK-Unity (v2) dá suporte ao HoloLens/HoloLens 2, à realidade mista do Windows e às plataformas OpenVR. Vamos aprofundar-se nos engenheiros e designers por trás dele.
 
 ___
 ## <a name="designing-for-hololens-2---coming-soon"></a>**Design para o HoloLens 2** – em breve

@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: Azure, realidade mista, Academia, Unity, tutorial, API, Machine Learning, ml, estúdio de Machine Learning, hololens, imersão, VR
-ms.openlocfilehash: c86c592573dd39d926869d8cce6025fa264cc90f
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: e302e287049cd746a436904c2af2bcc2b0835796
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437927"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926615"
 ---
 >[!NOTE]
 >Os tutoriais misturados do Academia de realidade foram projetados com o HoloLens (1º gen) e com o fone de cabeça de imersão de realidade misturada.  Como tal, achamos que é importante deixar esses tutoriais em vigor para os desenvolvedores que ainda estão procurando orientação no desenvolvimento para esses dispositivos.  Esses tutoriais **_não_** serão atualizados com os conjuntos de ferramentas e as interações mais recentes usados para o HoloLens 2.  Eles serão mantidos para continuar a trabalhar nos dispositivos com suporte. Haverá uma nova série de tutoriais que serão publicados no futuro, que demonstrarão como desenvolver para o HoloLens 2.  Esse aviso será atualizado com um link para esses tutoriais quando eles forem postados.
@@ -731,7 +731,7 @@ Para criar esta classe:
 
             Debug.LogFormat("Score request built");
 
-            // Serialise the request
+            // Serialize the request
             string json = JsonConvert.SerializeObject(ro);
 
             using (UnityWebRequest www = UnityWebRequest.Post(serviceEndpoint, "POST"))
@@ -849,7 +849,7 @@ Para implantar seu aplicativo:
 
 1.  Navegue até sua nova compilação do Unity (a pasta do **aplicativo** ) e abra o arquivo de solução com o **Visual Studio**.
 
-2.  Com o Visual Studio aberto, você precisa restaurar os pacotes NuGet, o que pode ser feito clicando com o botão direito do mouse na solução MachineLearningLab_Build, da Gerenciador de Soluções (localizada à direita do Visual Studio) e, em seguida, clicando em restaurar pacotes NuGet:
+2.  Com o Visual Studio aberto, você precisa restaurar os pacotes NuGet, o que pode ser feito clicando com o botão direito do mouse em sua solução de MachineLearningLab_Build, na Gerenciador de Soluções (localizada à direita do Visual Studio) e clicando em restaurar pacotes NuGet:
 
     ![Adicionar pacotes NuGet](images/AzureLabs-Lab7-57.png)
 

@@ -6,29 +6,29 @@ ms.author: kkennedy
 ms.date: 03/21/2018
 ms.topic: article
 keywords: imagem volumétricos, renderização de volume, desempenho, realidade misturada
-ms.openlocfilehash: dc0e75b916ab7cc96be1eccb4ad32ac71f5b75ff
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 1b3ec59adf4f6449ed3f12d7f98f329c4e963ea5
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63548635"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926674"
 ---
 # <a name="volume-rendering"></a>Renderização de volume
 
 Para MRI médico ou volumes de engenharia, confira [renderização de volume na Wikipédia](https://en.wikipedia.org/wiki/Volume_rendering). Essas "imagens volumétricoss" contêm informações avançadas com opacidade e cor em todo o volume que não podem ser facilmente expressas como superfícies como [malhas poligonal](https://en.wikipedia.org/wiki/Polygon_mesh).
 
 Principais soluções para melhorar o desempenho
-1. SATISFATÓRIO Abordagem ingênua: Mostrar volume inteiro, geralmente é executado muito lentamente
-2. RECOMENDÁ Plano de recorte: Mostrar apenas uma única fatia do volume
-3. RECOMENDÁ Recortando subvolume: Mostrar apenas algumas camadas do volume
-4. RECOMENDÁ Reduza a resolução da renderização de volume (consulte ' renderização de cena de resolução mista ')
+1. MÁ: abordagem ingênua: mostrar volume inteiro, geralmente é executado muito lentamente
+2. BOM: plano de corte: mostra apenas uma única fatia do volume
+3. BOA: recortando o subvolume: mostrar apenas algumas camadas do volume
+4. BOM: Reduza a resolução da renderização de volume (consulte ' renderização de cena de resolução mista ')
 
 Há apenas uma determinada quantidade de informações que podem ser transferidas do aplicativo para a tela em qualquer quadro específico, essa é a largura de banda total da memória. Também qualquer processamento (ou ' sombreamento ') necessário para transformar esses dados para apresentação também requer tempo. As principais considerações ao fazer a renderização de volume são:
 * Largura da tela * tela-altura * tela-contagem * volume-camadas-em-pixel = total-volume-amostras por quadro
 * 1028 * 720 * 2 * 256 = 378961920 (100%) (volume de resolução completa: muitos exemplos)
 * 1028 * 720 * 2 * 1 = 1480320 (0,3% de completo) (fatia fina: 1 amostra por pixel, é executado sem problemas)
-* 1028 * 720 * 2 * 10 = 14803200 (3,9% de completo) (fatia de subvolume: 10 amostras por pixel, executado razoavelmente suavemente, parece 3D)
-* 200 * 200 * 2 * 256 = 20480000 (5% de completo) (volume de resolução inferior: menos pixels, volume completo, parece 3D, mas um pouco Desfoque)
+* 1028 * 720 * 2 * 10 = 14803200 (3,9% de completo) (fatia de subvolume: 10 amostras por pixel, é executada razoavelmente suavemente, parece 3D)
+* 200 * 200 * 2 * 256 = 20480000 (5% de completo) (volume de resolução inferior: menos pixels, volume completo, parece 3D, mas um pouco borrado)
 
 ## <a name="representing-3d-textures"></a>Representando texturas 3D
 

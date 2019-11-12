@@ -6,12 +6,12 @@ ms.author: grbury
 ms.date: 02/10/2019
 ms.topic: article
 keywords: experiência compartilhada, realidade misturada, holograma, âncora espacial, vários usuários, vários
-ms.openlocfilehash: 4e71bdefa32d2f6cf3b85b074c3d9fcbdb6aa909
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: c846bcd8c9c52f1f169d306df3afd4f982656078
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437464"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926925"
 ---
 # <a name="shared-experiences-in-mixed-reality"></a>Experiências compartilhadas em realidade misturada
 
@@ -166,7 +166,7 @@ Aproveite o [MixedReality-WebRTC](https://github.com/microsoft/mixedreality-webr
 
 ## <a name="presenter-spectator-applications-and-demos"></a>Apresentador – demonstrações e aplicativos Spectator
 
-Aproveite o [MixedReality-SpectatorView](https://github.com/microsoft/MixedReality-SpectatorView) para trazer a [funcionalidade do specator View](spectator-view.md) para seu aplicativo.  Habilite outros dispositivos (HL, Android, iOS e câmeras de vídeo) para ver o que o HoloLens vê de uma perspectiva diferente no mesmo local e receber atualizações de interações do usuário de HoloLens host interagindo com os hologramas.  Assista, tire fotos e grave vídeo sobre o que o host faz com os hologramas no aplicativo de sua própria perspectiva espacial com o Spectator Companion do mesmo aplicativo.
+Aproveite o [MixedReality-SpectatorView](https://github.com/microsoft/MixedReality-SpectatorView) para trazer a [funcionalidade do Spectator View](spectator-view.md) para seu aplicativo.  Habilite outros dispositivos (HL, Android, iOS e câmeras de vídeo) para ver o que o HoloLens vê de uma perspectiva diferente no mesmo local e receber atualizações de interações do usuário de HoloLens host interagindo com os hologramas.  Assista, tire fotos e grave vídeo sobre o que o host faz com os hologramas no aplicativo de sua própria perspectiva espacial com o Spectator Companion do mesmo aplicativo.
 
 **Observação:** As imagens são obtidas por meio de captura de tela em dispositivos iOS/Android.
 

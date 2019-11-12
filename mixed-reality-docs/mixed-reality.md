@@ -6,12 +6,12 @@ ms.author: branbray
 ms.date: 03/21/2018
 ms.topic: article
 keywords: realidade misturada, Holographic, ar, VR, Sr, XR, realidade aumentada, realidade virtual, explicação
-ms.openlocfilehash: 83beca8b6abad56fc37800ddfc9faad0d21859bf
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 601e42c03e827f0f531f9dcf937a0dd34b008dc3
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437887"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926781"
 ---
 # <a name="what-is-mixed-reality"></a>O que é realidade misturada?
 
@@ -71,7 +71,7 @@ A maioria dos telefones celulares no mercado atualmente tem pouco ou nenhum recu
 <br>
 
 ![o espectro de realidade misturada](images/MixedRealitySpectrum.jpg)<br>
-*A realidade misturada specturm*
+*O espectro de realidade misturada*
 
 <br>
 
