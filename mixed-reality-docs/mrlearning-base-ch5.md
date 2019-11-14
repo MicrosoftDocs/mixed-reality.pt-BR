@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realidade misturada, unity, tutorial, hololens
-ms.openlocfilehash: 5599fe48f62a35d1dc02ce30fb7858fd74e87685
-ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
+ms.openlocfilehash: b740c463e3d73d5df9b996562e9ff0a1952703f0
+ms.sourcegitcommit: f2b7c6381006fab6d0472fcaa680ff7fb79954d6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926540"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74064314"
 ---
 # <a name="6-exploring-advanced-input-options"></a>6. explorando opções de entrada avançadas
 
@@ -110,7 +110,7 @@ Nesta seção, dois comandos de voz são implementados. Primeiro, a capacidade d
 
 ### <a name="the-pan-gesture"></a>O gesto de panorâmica
 
-Nesta seção, você aprenderá a usar o gesto de panorâmica. Isso é útil para rolar usando o dedo ou a mão para rolar pelo conteúdo. Você também pode usar o gesto de panorâmica para girar objetos, percorrer uma coleção de objetos 3D ou até mesmo para rolar uma interface do usuário 2D. <!--TMP You will also learn how to use the pan gesture to warp a texture, and how to move a collection of 3D objects.-->
+Nesta seção, você aprenderá a usar o gesto de panorâmica. Isso é útil para rolar usando o dedo ou a mão para rolar pelo conteúdo. Você também pode usar o gesto de panorâmica para girar objetos, percorrer uma coleção de objetos 3D ou até mesmo para rolar uma interface do usuário 2D.
 
 1. Crie um quadrante. Na hierarquia do BaseScene, clique com o botão direito do mouse, selecione "objeto 3D" seguido por Quad.
 
@@ -128,10 +128,7 @@ Nesta seção, você aprenderá a usar o gesto de panorâmica. Isso é útil par
 4. No painel projetos, digite "conteúdo panorâmico" na caixa de pesquisa. Arraste esse material para o quad em sua cena.
 
     >[!NOTE]
-    >O material de conteúdo de Pan não está incluído no MRTK, mas um ativo no pacote de ativos deste módulo, como importado nas lições anteriores.
-
-    >[!NOTE]
-    >Quando você adiciona o conteúdo de panorâmica, ele pode ser ampliado. Você pode corrigir isso ajustando os valores de x, y e z do tamanho do quadrante até estar satisfeito com aparência dele.
+    >O material PanContent não faz parte do MRTK, mas está incluído com o ativo BaseModuleAssets importado na lição anterior.
 
     Para usar o gesto de panorâmica, será necessário um colisor em seu objeto. Você pode ver que o quadrante já tem um colisor de malha. No entanto, o colisor de malha não é ideal, porque ele é extremamente fino e difícil de selecionar. Sugerimos que você substitua o colisor de malha por um colisor de caixa.
 
@@ -157,26 +154,45 @@ Nesta seção, você aprenderá a usar o gesto de panorâmica. Isso é útil par
 
     E com isso, você tem um quad habilitado para Pan.
 
-    Como você pode ver, o componente de zoom de Pan de interação à mão tem várias configurações, como um exercício opcional, sinta-se à vontade para brincar com elas.
+    Como você pode ver, o componente de script do Hand interling panorâmica zoom tem várias configurações, como um exercício opcional, sinta-se à vontade para brincar com elas.
 
     ![mrlearning-base-CH5-2-step8b. png](images/mrlearning-base-ch5-2-step8b.png)
 
-<!--TMP
-   Next, we will learn how to pan 3D objects. 
+9. Em seguida, aprenderemos como aplicar panorâmica a objetos 3D.
 
-10. Right-click the quad object, select 3D object and click Cube. Scale the cube so that it’s roughly x = 0.1, y = 0.1 and z = 0.1. Copy that cube three times by right-clicking the cube and pressing duplicate, or by pressing control/command D. Space them out evenly. Your scene should look similar to the image below.
+    Na hierarquia, clique com o botão direito do mouse no objeto Quad, para abrir o menu pop-up contextual e, em seguida, selecione **objeto 3d** > **cubo** para adicionar um cubo à sua cena.
 
-![Lesson5 Chapter2 Step10im](images/Lesson5_chapter2_step10im.PNG)
+    Verifique se a **posição** do cubo está definida como _0, 0, 0,_ portanto, ela está posicionada de forma organizada no Quad. Dimensione o cubo para uma **escala** de _0,1, 0,1, 0,1_.
 
-11. Select the quad again and under the hand interaction pan script, set the pan actions to each of the cubes. Under Pan Event Receivers, we want to specify the number of objects receiving the event. Since there are four cubes, type “4” and press Enter. Four empty fields should appear.
+    ![mrlearning-base-CH5-2-Step9. png](images/mrlearning-base-ch5-2-step9.png)
 
-![Lesson5 Chapter2 Step11im](images/Lesson5_chapter2_step11im.PNG)
+    Duplique o cubo três vezes clicando com o botão direito do mouse no cubo para abrir o menu pop-up contextual e selecionando **duplicar**.
 
-12. Drag each of the cubes into each of the empty element slots.
-     ![Lesson5 Chapter2 Step12im](images/Lesson5_chapter2_step12im.PNG)
-    
-13. Add the Move with Pan script to all of the cubes by pressing and holding control/command and select each object. From the Inspector panel, click Add Component and search for “move with pan.” Click the script and it is added to each cube. Now the 3D objects will move with your pan gesture. If you remove the mesh render on your quad, you should now have an invisible quad where you can pan through a list of 3D objects.
--->
+    Espaçar os cubos uniformemente. Sua cena deve ser semelhante à imagem abaixo.
+
+10. Adicione o script MoveWithPan a todos os cubos mantendo a tecla CTRL pressionada enquanto seleciona cada objeto de **cubo** no painel hierarquia. No painel Inspetor, clique em Adicionar componente e procure e selecione o script **mover com Pan** para adicioná-lo a todos os cubos.
+
+    ![mrlearning-base-CH5-2-step10a. png](images/mrlearning-base-ch5-2-step10a.png)
+
+    >[!NOTE]
+    >O script MoveWithPan não faz parte do MRTK, mas está incluído com o ativo BaseModuleAssets importado na lição anterior.
+
+    Com os cubos ainda selecionados, arraste o objeto **Quad** do painel hierarquia para o campo **fonte de entrada de panorâmica** do componente do script **mover com Pan** .
+
+    ![mrlearning-base-CH5-2-step10b. png](images/mrlearning-base-ch5-2-step10b.png)
+
+    Agora, os cubos serão movidos com o gesto panorâmico.
+
+    >[!TIP]
+    >A instância MoveWithPan em cada cubo escuta o evento PanUpdated enviado da instância HandInteractionPanZoom no objeto Quad, que adicionamos ao campo fonte de entrada Pan em cada um dos cubos e atualiza a posição do respectivo objeto de cubo de acordo.
+
+    Com os cubos ainda selecionados, mova-os para frente ao longo de seu eixo Z para que a malha de cada cubo esteja dentro do **colisor da caixa** **quádrupla**, alterando seus valores de **posição Z** para _0,7_.
+
+    ![mrlearning-base-CH5-2-step10c. png](images/mrlearning-base-ch5-2-step10c.png)
+
+    Agora, se você desabilitar o componente de **processador de malha** **quádruplo**, desmarcando-o no painel Inspetor, você terá um quádruplo invisível onde poderá percorrer uma lista de objetos 3D.
+
+    ![mrlearning-base-CH5-2-step10d. png](images/mrlearning-base-ch5-2-step10d.png)
 
 ### <a name="eye-tracking"></a>Acompanhamento Ocular
 
@@ -197,13 +213,16 @@ Nesta seção, exploraremos como habilitar o acompanhamento de olho em nossa dem
 2. Adicione o componente de Destino de Acompanhamento Ocular aos objetos de destino. Para permitir que um objeto responda aos eventos olhar de olho, precisaremos adicionar o componente EyeTrackingTarget em cada objeto com o qual desejamos interagir usando o olho olhar. Adicione esse componente a cada um dos nove objetos 3D que fazem parte da coleção de grade.
 
     >[!TIP]
-    >Você pode usar as teclas Shift e/ou CTRL para selecionar vários itens na hierarquia de cena e adicionar em massa o componente EyeTrackingTarget.
+    >Você pode usar as teclas Shift e/ou CRTL para selecionar vários itens na hierarquia e, em seguida, adicionar o componente EyeTrackingTarget em massa.
 
     ![Lesson5 Chapter3 etapa 2](images/Lesson5Chapter3Step2.JPG)
 
-3. Em seguida, adicionaremos o script EyeTrackingTutorialDemo para algumas interações empolgantes. O script EyeTrackingTutorialDemo é incluído como parte deste repositório da série de tutoriais. Ele não é incluído por padrão com o kit de ferramentas de realidade misturada. Para cada objeto 3D na coleção de grade, adicione o script EyeTrackingTutorialDemo pesquisando o componente no menu Adicionar componente.
+3. Em seguida, adicionaremos o script EyeTrackingTutorialDemo para algumas interações empolgantes. Para cada objeto 3D na coleção de grade, adicione o script EyeTrackingTutorialDemo pesquisando o componente no menu Adicionar componente.
 
-   ![Lesson5 Chapter3 etapa 3](images/Lesson5Chapter3Step3.JPG)
+    ![Lesson5 Chapter3 etapa 3](images/Lesson5Chapter3Step3.JPG)
+
+    >[!NOTE]
+    >O material do script EyeTrackingTutorialDemo não faz parte do MRTK, mas está incluído com o ativo BaseModuleAssets importado na lição anterior.
 
 4. Gire o objeto enquanto olha para o destino. Queremos configurar nossos objetos 3D para girar enquanto estamos examinando-os. Para fazer isso, insira um novo campo na seção ao examinar o destino () do componente EyeTrackingTarget, conforme mostrado na imagem abaixo.
 

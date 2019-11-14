@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realidade misturada, unity, tutorial, hololens
-ms.openlocfilehash: 32a77d6032335ab3ae769b85c5f947440658743f
-ms.sourcegitcommit: b6b76275fad90df6d9645dd2bc074b7b2168c7c8
+ms.openlocfilehash: ade7a839e03a306332bf18f1db49805f59c71429
+ms.sourcegitcommit: f2b7c6381006fab6d0472fcaa680ff7fb79954d6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/11/2019
-ms.locfileid: "73913558"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74064253"
 ---
 # <a name="4-placing-dynamic-content-and-using-solvers"></a>4. colocando o conteúdo dinâmico e usando os solveres
 
@@ -72,7 +72,7 @@ Nesta seção, configuraremos o objeto de jogo do cubo criado anteriormente para
 
     ![mrlearning-base-CH3-3-step2b. png](images/mrlearning-base-ch3-3-step2b.png)
 
-3. Defina as distâncias máxima e mínima da exibição radial como 0 para que o cubo não tenha nenhuma distância entre ela e o pulso do usuário. Depois de definido, o cubo estará devidamente alinhado ao pulso. Você também pode ajustar o campo direção de referência para ajustar o comportamento de como o cubo é orientado, como se você quiser permitir que o objeto gire com o pulso do usuário definindo a direção de referência para orientar com o objeto rastreado.
+3. Defina as distâncias máxima e mínima da exibição radial como 0 para que o cubo não tenha nenhuma distância entre ela e o pulso do usuário. Depois de definido, o cubo estará devidamente alinhado ao pulso. Você também pode ajustar o campo direção de referência para ajustar o comportamento de como o cubo é orientado, como se você quiser permitir que o objeto gire com o pulso do usuário definindo a direção de referência como orientada a objeto.
 
     ![mrlearning-base-CH3-3-Step3. png](images/mrlearning-base-ch3-3-step3.png)
 

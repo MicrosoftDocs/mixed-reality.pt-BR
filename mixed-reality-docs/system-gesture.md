@@ -6,12 +6,12 @@ ms.author: cmeekhof
 ms.date: 10/22/2019
 ms.topic: article
 keywords: Realidade misturada, gestos, interação, design
-ms.openlocfilehash: ba543ffe0802d0b95cc539fb0e73c0b4e51fc186
-ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
+ms.openlocfilehash: 417811fff9d98e459dc0047d46ea065acfced4ef
+ms.sourcegitcommit: f2b7c6381006fab6d0472fcaa680ff7fb79954d6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926723"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74064235"
 ---
 # <a name="system-gesture"></a>Gesto do sistema
 
@@ -98,7 +98,7 @@ Também projetamos uma solução única para facilitar o acesso no HoloLens 2. E
     :::column-end:::
     :::column:::
         ![botão do pulso de pinçagem](images/wrist-button-pinch.png)<br>
-        **Etapa: olho olhar no botão e, em seguida, aperte**<br>
+        **Etapa 2: olho olhar no botão e, em seguida, aperte**<br>
     :::column-end:::
 :::row-end:::
 
