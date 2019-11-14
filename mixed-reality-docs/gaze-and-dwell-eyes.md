@@ -7,12 +7,12 @@ ms.date: 10/29/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Acompanhamento Ocular, Realidade Misturada, Entrada, Foco com o Olhar, Focalização com os Olhos, HoloLens 2, Seleção Ocular, Esperar
-ms.openlocfilehash: 5130fd3c1ecd551788f61f8abb8d02cdedeb4181
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 0ec5d5e3b7f56038c7be9930a4468d286b388a65
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437802"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926604"
 ---
 # <a name="eye-gaze-and-dwell"></a>Focar com o olhar e esperar
 
@@ -22,19 +22,19 @@ O modelo de interação de _"focar com o olhar e esperar"_ é um caso especial d
 
 ## <a name="advantages-of-the-eye-gaze-and-dwell-interaction-model"></a>Vantagens do modelo de interação “focar com o olhar e esperar” 
 Quando as mãos já estiverem ocupadas com uma tarefa ou segurando ferramentas, usá-las para interagir com hologramas talvez não seja uma opção.
-Uma alternativa de interação sem mãos para selecionar hologramas é “focar com o olhar e esperar” ou, em outras palavras, _"olhar e encarar"_ . A vantagem dessa abordagem é que mesmo os usuários com restrição severa que talvez não consigam mexer completamente suas cabeças ou corpos podem interagir com hologramas (por ex., em um ambiente de trabalho altamente confinado).
+Uma alternativa de interação sem mãos para selecionar hologramas é “focar com o olhar e esperar” ou, em outras palavras, _"olhar e encarar"_ . A vantagem dessa abordagem é que mesmo os usuários com restrição severa, que talvez não consigam mexer completamente a cabeça ou o corpo, podem interagir com hologramas (por exemplo, em um ambiente de trabalho altamente confinado).
 O usuário fica olhando o alvo que gostaria de selecionar e um comentário de espera diferente é exibido para indicar o processo.
 
 
 ## <a name="challenges-of-the-eye-gaze-and-dwell-interaction-model"></a>Desafios do modelo de interação de “focar com o olhar e esperar”
 Em geral, será recomendável usar apenas ativações baseadas em espera como o último fallback se nenhuma entrada de voz nem de mão estiver disponível. O motivo é que a opção de tempo de espera pode ser muito complicada. Usuários iniciantes aceitam tempos de espera mais longos, enquanto usuários experientes desejam navegar de maneira rápida e eficiente por suas experiências. Isso leva ao desafio de como ajustar o tempo de espera para as necessidades específicas de um usuário.
-Se o tempo de espera for curto demais: O usuário poderá se sentir sobrecarregado por fazer os hologramas encontrarem seu foco de olhar o tempo todo. Se o tempo de espera for longo demais: A experiência poderá parecer muito lenta e interruptiva, já que o usuário precisará continuar olhando os alvos por um longo tempo.
+Se o tempo de espera for curto demais: O usuário poderá se sentir sobrecarregado por ter que fazer os hologramas alcançarem o foco visual o tempo todo. Se o tempo de espera for longo demais: A experiência poderá parecer muito lenta e interruptiva, já que o usuário precisará continuar olhando os alvos por um longo tempo.
 
 ## <a name="design-recommendations"></a>Recomendações sobre design
 É recomendável usar uma abordagem de dois estados para comentários de espera:
 1. *Atraso inicial*: quando o usuário começa a olhar um alvo, nada deve acontecer imediatamente, pois isso pode resultar em uma experiência de usuário desagradável e desanimadora. Em vez disso, iniciamos um temporizador para detectar se o usuário está encarando intencionalmente o alvo ou apenas passando os olhos por ele.
 2. *Iniciar comentários de espera:* depois de verificar se o usuário está olhando intencionalmente o alvo, começamos a mostrar os comentários de espera para informar o usuário de que a ativação da espera está sendo iniciada. Recomendamos um tempo inicial de 150 a 250 ms em uma determinada proximidade (o que significa que o usuário está fitando um grande alvo em vez de passando os olhos por ele).  
-3. *Comentários contínuos:* embora o usuário continue olhando o alvo, mostre um indicador de progresso contínuo para que o usuário saiba que ele precisa continuar olhando-o. Especificamente para a entrada com foco de olhar, recomendamos _atrair a atenção visual do usuário_ começando com um círculo ou uma esfera maior que se contrai para uma versão menor. Mostrar um indicador para o estado final (círculo pequeno) ajudará a se comunicar com o usuário quando a espera for concluída. Uma ilustração de exemplo é mostrada abaixo. 
+3. *Comentários contínuos:* embora o usuário continue olhando o alvo, mostre um indicador de progresso contínuo para que ele saiba que precisa continuar olhando. Especificamente para a entrada com foco de olhar, recomendamos _atrair a atenção visual do usuário_ começando com um círculo ou uma esfera maior que se contrai para uma versão menor. Mostrar um indicador para o estado final (círculo pequeno) ajudará a se comunicar com o usuário quando a espera for concluída. Uma ilustração de exemplo é mostrada abaixo. 
 4. *Conclusão:* se o usuário continuou encarando o alvo (durante outros 650 a 850 ms), conclua a ativação da espera e selecione o alvo que você olhou.
 
 ![Estados de espera](images/eyes_dwellstate_recommendation.png)<br>

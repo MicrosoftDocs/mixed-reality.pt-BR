@@ -3,16 +3,16 @@ title: Preparar seu aplicativo existente para HoloLens 2
 description: Criado para desenvolvedores que têm um aplicativo no HoloLens (1ª geração) e/ou no MRTK mais antigo e buscam portá-lo para o MRTK versão 2 e o HoloLens 2.
 author: grbury
 ms.author: grbury
-ms.date: 10/14/19
+ms.date: 10/14/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Windows Mixed Reality, teste, MRTK, MRTK versão 2, HoloLens 2
-ms.openlocfilehash: e1256cfaf9253a31161a836f75a90c64d17cf093
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 41e6f8b3632a53663f237deb54a3144fb8ad79e8
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438360"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926206"
 ---
 # <a name="get-your-existing-app-ready-for-hololens-2"></a>Preparar seu aplicativo existente para HoloLens 2
 
@@ -66,7 +66,7 @@ Depois de lidar com as alterações da falha após a migração para a versão a
 
 O HoloLens (1ª geração) executa aplicativos em um processador x86, enquanto o HoloLens 2 usa um processador ARM. Portanto, é necessário portar os aplicativos HoloLens existentes para que eles deem suporte ao ARM. Conforme indicado anteriormente, o Unity 2018 LTS é compatível com a compilação de aplicativos ARM32, enquanto o Unity 2019.x é compatível com a compilação de aplicativos ARM32 e ARM64. Em geral, o desenvolvimento para aplicativos ARM64 é preferível, pois há uma diferença substancial de desempenho. No entanto, isso exige que todas as [dependências de plug-in](https://docs.unity3d.com/Manual/Plugins.html) também sejam compiladas para o ARM64. 
 
-Examine todas as dependências de DLL em seu aplicativo. É recomendável remover qualquer dependência que não seja mais necessária do seu projeto. Para os plug-ins restantes que são necessários, ingira os respectivos binários do ARM32 ou do ARM64 no projeto do Unity. 
+Examine todas as dependências de DLL em seu aplicativo. É recomendado remover de seu projeto qualquer dependência que não seja mais necessária. Para os plug-ins restantes que são necessários, ingira os respectivos binários do ARM32 ou do ARM64 no projeto do Unity. 
 
 Após a ingestão das DLLs relevantes, compile uma solução do Visual Studio por meio do Unity e, em seguida, compile um appx para ARM no Visual Studio para testar se o aplicativo pode ser compilado para processadores ARM. É recomendável salvar o aplicativo como uma confirmação na solução de controle do código-fonte.
 
@@ -129,7 +129,7 @@ Cada aplicativo e cenário é diferente. Continuaremos refinando e postando dire
 
 - Os aplicativos diretos do Unity são simples porque você pode criar um pacote de aplicativo ARM ou implantá-lo diretamente no dispositivo para que o pacote seja executado. Alguns plug-ins nativos do Unity podem apresentar certos desafios de desenvolvimento. Por isso, você deve atualizar todos os plug-ins nativos do Unity para o Visual Studio 2019 e, em seguida, recompilar para o ARM.
 
-- Um aplicativo usou o plug-in AudioKinetic Wwise para Unity e essa versão do Unity não tinha um plug-in de ARM do UWP, o que causou um esforço considerável para recriar as funcionalidades de som do aplicativo em questão para que executassem no ARM. Verifique se todos os plug-ins necessários para os planos de desenvolvimento estão instalados e disponíveis no Unity.
+- Um aplicativo usou o plug-in AudioKinetic Wwise para Unity e essa versão do Unity não tinha um plug-in do ARM para a UWP. Como resultado, houve um esforço considerável para recriar as funcionalidades de som no aplicativo em questão para execução no ARM. Verifique se todos os plug-ins necessários para os planos de desenvolvimento estão instalados e disponíveis no Unity.
 
 - Em alguns casos, um plug-in do UWP/ARM pode não existir para os plug-ins requeridos pelo aplicativo, o que bloqueia a capacidade de portar o aplicativo e executá-lo no HoloLens 2. Entre em contato com seu provedor de plug-in para resolver o problema e fornecer suporte para o ARM.
 
