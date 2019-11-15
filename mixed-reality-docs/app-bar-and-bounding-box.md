@@ -6,19 +6,16 @@ ms.author: adlinv
 ms.date: 06/07/2019
 ms.topic: article
 keywords: Realidade mista do Windows, barra de aplicativos, caixa delimitadora
-ms.openlocfilehash: f09187bc2a3969a8f844711052e15433f5449d6d
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 97afc0df02fd8460547e955d4fcf3e33a4e9f566
+ms.sourcegitcommit: 781e47db2ca2f2c792c95e76ac309b44b3535555
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437058"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74105763"
 ---
 # <a name="bounding-box-and-app-bar"></a>Caixa delimitadora e barra de aplicativos
-![O limite é a interface padrão para a manipulação de objetos em realidade misturada.](images/640px-boundingbox-hero.jpg)<br>
-
+o limite de ![é a interface padrão para manipulação de objeto em realidade misturada.](images/640px-boundingbox-hero.jpg)<br>
 <br>
-
----
 
 ## <a name="what-is-the-bounding-box"></a>O que é a caixa delimitadora?
 
@@ -95,15 +92,33 @@ A barra de aplicativos é um menu de nível de objeto que contém uma série de 
 <br>
 
 
+## <a name="bounding-box-in-mrtkmixed-reality-toolkit-for-unity"></a>Caixa delimitadora no MRTK (Kit de ferramentas de realidade misturada) para Unity
+**[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** fornece scripts e pré-fabricados para a caixa delimitadora e a barra de aplicativos. Você pode adicionar uma caixa delimitadora simplesmente atribuindo o script BoundingBox.cs em qualquer objeto.
 
-**Para o desenvolvimento de aplicativos do Unity, consulte [a barra de aplicativos no kit de ferramentas da realidade misturada-Unity.](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_AppBar.html)**
+* [MRTK-caixa delimitadora](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_BoundingBox.html)
+
 
 <br>
 
 ---
 
+
 ## <a name="see-also"></a>Consulte também
+
+* [Cursores](cursors.md)
+* [Raio da mão](point-and-commit.md)
+* [Button](button.md)
 * [Objeto interativo](interactable-object.md)
-* [Texto no Unity](text-in-unity.md)
+* [Caixa delimitadora e barra de aplicativos](app-bar-and-bounding-box.md)
+* [Manusei](direct-manipulation.md)
+* [Menu lateral](hand-menu.md)
+* [Menu próximo](near-menu.md)
 * [Coleção de objetos](object-collection.md)
+* [Comando de voz](voice-input.md)
+* [Teclado](keyboard.md)
+* [Dessa](tooltip.md)
+* [Slate](slate.md)
+* [Slider](slider.md)
+* [Mural e tag-along](billboarding-and-tag-along.md)
 * [Exibindo o progresso](progress.md)
+* [Magnetism Surface](surface-magnetism.md)

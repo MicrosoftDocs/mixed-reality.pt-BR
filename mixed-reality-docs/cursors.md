@@ -6,14 +6,16 @@ ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
 keywords: HoloLens (1º gen), HoloLens 2, realidade misturada, cursores, direcionamento, olhar, gestos
-ms.openlocfilehash: ef011d8400de1e23db3d6fb4b0f2a853d787ae86
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 719e7a573e8c8bc682ec0f960d9f3c8f8c8e5a4a
+ms.sourcegitcommit: 781e47db2ca2f2c792c95e76ac309b44b3535555
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73435776"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74105739"
 ---
 # <a name="cursors"></a>Cursores
+
+![Cursores](images/UX/UX_Hero_Cursor.jpg)
 
 Um cursor ou indicador de seu vetor de direcionamento atual, fornece comentários contínuos para que o usuário entenda onde o fone de ouvido acredita que o foco atual está nesse momento. O cursor permite que o usuário entenda seu ponto de direcionamento atual e atue como feedback para indicar qual área, holograma ou ponto responderá à entrada. É a representação digital de onde o dispositivo entende a atenção do usuário (embora isso possa não ser o mesmo que determinar qualquer coisa sobre suas intenções).
 
@@ -154,6 +156,15 @@ A criação sem um cursor é recomendada quando o sentido do imersão é um comp
 
 ---
 
+## <a name="cursor-in-mrtkmixed-reality-toolkit-for-unity"></a>Cursor em MRTK (Mixed Reality Toolkit) para Unity
+Por padrão, **[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** fornece um cursor pré-fabricado ([DefaultCursor. pré-fabricado](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_release/Assets/MixedRealityToolkit.SDK/Features/UX/Prefabs/Cursors)) que tem o mesmo estado visual que o cursor do sistema do Shell. Ele é atribuído no perfil de entrada do MRTK, sob ponteiros. Você pode substituir/personalizar este cursor para sua experiência. Para a experiência com a entrada de acompanhamento de olho, o MRTK também fornece EyeGazeCursor que tem Visual sutil para minimizar a distração.
+
+* [MRTK-perfil de ponteiro](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/MixedRealityConfigurationGuide.html#pointer-configuration)
+* [MRTK – sistema de entrada](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Input/Overview.html)
+* [MRTK-ponteiros](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Input/Pointers.html)
+
+
+---
 
 ## <a name="see-also"></a>Consulte também
 * [Gestos](gaze-and-commit.md#composite-gestures)

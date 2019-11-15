@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realidade misturada, unity, tutorial, hololens
-ms.openlocfilehash: 91935cb5b465e51d3948f68b818f93ba52b215f1
-ms.sourcegitcommit: b6b76275fad90df6d9645dd2bc074b7b2168c7c8
+ms.openlocfilehash: 750161ff4c52a7ab71869b3cb0f97197d4ad09f2
+ms.sourcegitcommit: 781e47db2ca2f2c792c95e76ac309b44b3535555
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/11/2019
-ms.locfileid: "73914415"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74106055"
 ---
 # <a name="2-getting-unity-ready-for-development"></a>2. obtendo o Unity pronto para desenvolvimento 
 
@@ -52,7 +52,7 @@ Neste tutorial, você aprenderá a preparar e configurar o Unity para o desenvol
 
 6. Quando isso for concluído, um novo arquivo de configuração será exibido, dando a você a opção de personalizar o perfil. 
 
-![Module2Chapter1step4im](images/Module2Chapter1step4im.PNG)
+![Module2Chapter1step4ima](images/Module2Chapter1step4ima.PNG)
 
 7. Selecione MRTK (Kit de ferramentas de realidade mista) na hierarquia. No painel Inspetor, procure o script Mixed Reality Toolkit e pressione o botão "copiar & Personalizar", conforme mostrado na figura abaixo.  Um pop aparecerá depois dessa e selecione a opção clonar no menu pop-up.
 
@@ -76,7 +76,14 @@ Neste tutorial, você aprenderá a preparar e configurar o Unity para o desenvol
 
 ![Module3Chapter2step9imb](images/module3chapter2step9imb.PNG)
 
-11. Importe o pacote personalizado chamado SharingAssetCollection, que pode ser baixado [aqui.](https://github.com/microsoft/MixedRealityLearning/releases/tag/development)
+11. Importe os pacotes personalizados listados:
+
+    a. [Unity. HoloLens2. GettingStarted. tutoriais. Asset. 2.1.0.0. unitypackage](https://github.com/microsoft/MixedRealityLearning/releases/download/getting-started-v2.1.0.0/Unity.HoloLens2.GettingStarted.Tutorials.Asset.2.1.0.0.unitypackage)
+
+    b. [Unity. HoloLens2. MultiUserCapabilities. tutoriais. Asset. 2.1.0.0. unitypackage](https://github.com/microsoft/MixedRealityLearning/releases/download/multi-user-capabilities-v2.1.0.0/Unity.HoloLens2.MultiUserCapabilities.Tutorials.Asset.2.1.0.0.unitypackage)
+
+    >[!TIP]
+    >Se você tiver concluído os [tutoriais de introdução](mrlearning-base-ch1.md), talvez ainda tenha o pacote do Unity chamado _Unity. HoloLens2. gettingstarted. tutoriais. Asset. 2.1.0.0. unitypackage_ armazenado em seu computador. Nesse caso, você pode ignorar o download do ativo listado na etapa a acima.
 
 ![Module3Chapter2step12im](images/module3chapter2step11im.PNG)
 

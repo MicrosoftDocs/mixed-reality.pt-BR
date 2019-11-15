@@ -6,16 +6,18 @@ ms.author: hakons
 ms.date: 10/03/2019
 ms.topic: article
 keywords: ggv, voz, Cortana, fala, entrada
-ms.openlocfilehash: 1b0a57ad680b7f779201e99dea24bfe746820c44
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 7264b0b8882928f64860bc5a30b97683306cb19c
+ms.sourcegitcommit: 781e47db2ca2f2c792c95e76ac309b44b3535555
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437158"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74105774"
 ---
 # <a name="voice-input"></a>Entrada de voz
 
-Voz é um dos principais formulários de entrada no HoloLens. Ele permite que você comando diretamente um holograma sem precisar usar [gestos de mão](gaze-and-commit.md#composite-gestures). A entrada de voz pode ser uma maneira natural de comunicar sua intenção. A voz é especialmente boa na passagem de interfaces complexas, pois permite que os usuários recortem os menus aninhados com um único comando.
+![Entrada de voz](images/UX/UX_Hero_VoiceCommand.jpg)
+
+A voz é uma das principais formas de entrada no HoloLens. Ele permite que você comando diretamente um holograma sem precisar usar [gestos de mão](gaze-and-commit.md#composite-gestures). A entrada de voz pode ser uma maneira natural de comunicar sua intenção. A voz é especialmente boa na passagem de interfaces complexas, pois permite que os usuários recortem os menus aninhados com um único comando.
 
 A entrada de voz é alimentada pelo [mesmo mecanismo](https://msdn.microsoft.com/library/windows/apps/mt185615.aspx) que dá suporte à fala em todos os outros _aplicativos universais do Windows_. No HoloLens, o reconhecimento de fala sempre funcionará na linguagem de exibição do Windows configurada em configurações. 
 
@@ -274,9 +276,9 @@ Quando a voz é aplicada corretamente, o usuário sabe **o que pode dizer e obt�
 ## <a name="communication"></a>Comunicação
 
 Para aplicativos que desejam aproveitar as opções de processamento de entrada de áudio personalizadas fornecidas pelo HoloLens, é importante entender as várias [categorias de fluxo de áudio](https://msdn.microsoft.com/library/windows/desktop/hh404178(v=vs.85).aspx) que seu aplicativo pode consumir. O Windows 10 dá suporte a várias categorias de fluxo diferentes e o HoloLens usa três delas para habilitar o processamento personalizado para otimizar a qualidade de áudio do microfone adaptada para fala, comunicação e outras que podem ser usadas para áudio de ambiente de ambientes cenários de captura (ou seja, "camcorder").
-* A categoria de fluxo AudioCategory_Communications é personalizada para cenários de qualidade de chamada e narração e fornece ao cliente um fluxo de áudio 16kHz 24bit mono da voz do usuário
-* A categoria de fluxo AudioCategory_Speech é personalizada para o mecanismo de fala do HoloLens (Windows) e fornece um fluxo 16kHz 24bit mono da voz do usuário. Essa categoria pode ser usada por mecanismos de fala de terceiros, se necessário.
-* A categoria de fluxo AudioCategory_Other é personalizada para a gravação de áudio do ambiente ambiental e fornece ao cliente um fluxo de áudio estéreo de 48kHz de 24 bits.
+* A categoria AudioCategory_Communications Stream é personalizada para cenários de qualidade de chamada e narração e fornece ao cliente um fluxo de áudio 16kHz 24bit mono da voz do usuário
+* A categoria AudioCategory_Speech Stream é personalizada para o mecanismo de fala do HoloLens (Windows) e fornece um fluxo 16kHz 24bit mono da voz do usuário. Essa categoria pode ser usada por mecanismos de fala de terceiros, se necessário.
+* A categoria de AudioCategory_Other Stream é personalizada para a gravação de áudio do ambiente ambiental e fornece ao cliente um fluxo de áudio estéreo de 24 bits 48kHz.
 
 Todo esse processamento de áudio é acelerado por hardware, o que significa que os recursos esgotam muito menos energia do que se o mesmo processamento foi feito na CPU do HoloLens. Evite executar outro processamento de entrada de áudio na CPU para maximizar a vida útil da bateria do sistema e aproveitar o processamento de entrada de áudio descarregado interno.
 
@@ -290,8 +292,20 @@ Se você tiver problemas ao usar "Select" e "Ei Cortana", tente mudar para um es
 
 Para o Windows Mixed Reality Developer Edition versão 2017, a lógica de gerenciamento de ponto de extremidade de áudio funcionará bem (para sempre) depois de fazer logoff e voltar para a área de trabalho do PC após a conexão inicial do HMD. Antes do primeiro evento de saída/entrada depois de passar pelo WMR OOBE, o usuário poderia experimentar vários problemas de funcionalidade de áudio, variando de sem áudio para nenhuma alternância de áudio, dependendo de como o sistema foi configurado antes de conectar o HMD pela primeira vez.
 
+<br>
+
+---
+
+## <a name="voice-input-in-mrtkmixed-reality-toolkit-for-unity"></a>Entrada de voz em MRTK (Kit de ferramentas de realidade misturada) para Unity
+Com o **[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** , você pode atribuir facilmente o comando de voz em qualquer objeto. Use o **perfil de entrada de fala** do MRTK para definir suas palavras-chave. Ao atribuir o script **SpeechInputHandler** , você pode fazer com que qualquer objeto responda às palavras-chave definidas no perfil de entrada de fala. O SpeechInputHandler também fornece um rótulo de confirmação de fala para melhorar a confiança do usuário.
+
+* [MRTK-comando de voz](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Input/Speech.html)
+
+
+---
+
 ## <a name="see-also"></a>Consulte também
-* [Olhar e confirmar](gaze-and-commit.md)
+* [Focar e confirmar](gaze-and-commit.md)
 * [Interações instinctuais](interaction-fundamentals.md)
 * [Entrada MR 212: voz](holograms-212.md)
 * [Entrada de voz no DirectX](voice-input-in-directx.md)

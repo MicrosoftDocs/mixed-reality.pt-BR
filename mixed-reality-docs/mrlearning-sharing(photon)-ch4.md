@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realidade misturada, unity, tutorial, hololens
-ms.openlocfilehash: b4713caf2c4d913fe8f5b01c08b3cd0152e32cd9
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 34b8165888c13b0c94be8951d5a4fdc07fab5308
+ms.sourcegitcommit: 781e47db2ca2f2c792c95e76ac309b44b3535555
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438371"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74106011"
 ---
 # <a name="4-sharing-object-movements-with-multiple-users"></a>4. compartilhando movimentos de objeto com vários usuários
 
@@ -62,11 +62,13 @@ Observação: se você clicar em um dos objetos pré-fabricado e liberar, o Insp
 >Observação: Verifique se as posições principal da câmera e do SharedPlayground estão definidas como 0, 0, 0.
 >
 
-9. Crie um novo objeto Game definido como um objeto filho para o objeto pai SharedPlayground para criar um novo objeto. Clique com o botão direito do mouse no objeto pai e selecione criar vazio. 
+9. Selecione o objeto "SharedPlayground" e clique com o botão direito do mouse para escolher a opção "criar vazio" para criar um objeto de jogo vazio como um filho do objeto de jogo "SharedPlayground".
+
+   ![Module3chapter4step6im](images/module3chapter4step6im.PNG)
 
 10. Com o novo objeto selecionado em sua hierarquia, altere o nome do objeto para TableAnchor no painel de Inspetor. Além disso, clique em Adicionar componente e procure o componente TableAnchor. Selecione-o e adicione-o ao objeto. 
 
-![Module3Chapter4step6im](images/module3chapter4step7im.PNG)
+![Module3Chapter4step7im](images/module3chapter4step7im.PNG)
 
 11. No painel projeto na pasta pré-fabricados, arraste a tabela pré-fabricado para o objeto filho "TableAnchor" que você acabou de criar.
 
@@ -79,9 +81,9 @@ Observação: se você clicar em um dos objetos pré-fabricado e liberar, o Insp
 ## <a name="congratulations"></a>Parabéns
 
 
-Depois que isso for concluído, todos os usuários que ingressarem em seu projeto do Unity poderão mover o iniciador lunar. Todos os movimentos são sincronizados para que cada usuário possa ver as interações das outras pessoas. Esses conceitos servem como os blocos de construção fundamentais para experiências de colaboração compartilhadas com recursos completos. 
+Quando isso for concluído, procure localizar o módulo lunar. Depois disso, todos os usuários que ingressarem em seu projeto do Unity poderão mover o iniciador lunar.  Todos os movimentos são sincronizados para que cada usuário possa ver as interações das outras pessoas. Esses conceitos servem como os blocos de construção fundamentais para experiências de colaboração compartilhadas com recursos completos. 
 
-Embora todos os usuários estejam conectados como parte de uma experiência compartilhada e possam ver os movimentos relativos dos objetos, o aplicativo ainda não consegue alinhar precisamente os avatars e objetos para que os usuários locais vejam uns aos outros e que estejam no mesmo local dentro do físico países. Para ancorar experiências compartilhadas locais, cada dispositivo requer uma compreensão comum do ambiente físico. Neste módulo, faremos isso usando o asa ( [âncoras espaciais) do Azure](<https://azure.microsoft.com//services/spatial-anchors/>) que será implementado na próxima lição.
+Embora todos os usuários estejam conectados como parte de uma experiência compartilhada e possam ver os movimentos relativos dos objetos, o aplicativo ainda não consegue alinhar precisamente os avatars e objetos para que os usuários locais não possam ver uns aos outros e os objetos no mesmo local dentro do mundo físico. Para ancorar experiências compartilhadas locais, cada dispositivo requer uma compreensão comum do ambiente físico. Neste módulo, faremos isso usando o asa ( [âncoras espaciais) do Azure](<https://azure.microsoft.com//services/spatial-anchors/>) que será implementado na próxima lição.
 
 Antes de prosseguir para a próxima lição, precisaremos concluir o módulo de aprendizagem do ASA que aborda as noções básicas do ASA, a criação de contas e recursos do Azure, bem como outros blocos de edifícios fundamentais necessários para que possamos integrá-lo à nossa experiência compartilhada.
 

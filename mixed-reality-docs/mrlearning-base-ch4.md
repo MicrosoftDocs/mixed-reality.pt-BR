@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 05/02/2019
 ms.topic: article
 keywords: realidade misturada, unity, tutorial, hololens
-ms.openlocfilehash: 07bcce2ab9ab3bda035f7f2b39a90753cf45358d
-ms.sourcegitcommit: b6b76275fad90df6d9645dd2bc074b7b2168c7c8
+ms.openlocfilehash: 8c60d8291ede123817c93458fff003891169840c
+ms.sourcegitcommit: 781e47db2ca2f2c792c95e76ac309b44b3535555
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/11/2019
-ms.locfileid: "73913856"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74105977"
 ---
 # <a name="5-interacting-with-3d-objects"></a>5. interagindo com objetos 3D
 
@@ -38,7 +38,7 @@ Neste tutorial, você aprenderá sobre o conteúdo básico de 3D e a experiênci
 
     ![mrlearning-base-CH4-1-Step1. png](images/mrlearning-base-ch4-1-step1.png)
 
-2. Baixe o pacote do Unity [BaseModuleAssets versão 1.2.1](https://github.com/Developer-OI/MixedRealityLearning/releases/download/1.2.1/BaseModuleAssets-1.2.1.unitypackage) e importe-o usando as mesmas instruções para importar pacotes personalizados descritos em [lição 1](mrlearning-base-ch1.md). Este pacote inclui modelos 3D e outros ativos úteis que são usados em todo este tutorial.
+2. Baixe o pacote do Unity [Unity. HoloLens2. gettingstarted. tutoriais. Asset. 2.1.0.0](https://github.com/microsoft/MixedRealityLearning/releases/download/getting-started-v2.1.0.0/Unity.HoloLens2.GettingStarted.Tutorials.Asset.2.1.0.0.unitypackage) e importe-o usando as mesmas instruções para importar pacotes personalizados descritos em [lição 1](mrlearning-base-ch1.md). Este pacote inclui modelos 3D e outros ativos úteis que são usados em todo este tutorial.
 
 3. No painel projeto, navegue até ativos > BaseModuleAssets > módulo base pré-fabricados e pesquise "incompleto", usaremos alguns desses pré-fabricados.
 
