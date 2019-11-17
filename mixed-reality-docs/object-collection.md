@@ -6,12 +6,12 @@ ms.author: dongpark
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Realidade mista do Windows, controles, design
-ms.openlocfilehash: 98fec76558502658511faf3f18d623bfa5a49dc2
-ms.sourcegitcommit: 781e47db2ca2f2c792c95e76ac309b44b3535555
+ms.openlocfilehash: 9a111fcbe4c49972cc5ef22fb647f89544188af5
+ms.sourcegitcommit: 17427d4d8c3723d53540f1b7f5bc061bba08c1d6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74106007"
+ms.lasthandoff: 11/17/2019
+ms.locfileid: "74143148"
 ---
 # <a name="object-collection"></a>Coleção de objetos
 
@@ -74,6 +74,7 @@ Você também pode usar imagens 2D com a coleção de objetos. Os exemplos a seg
 * [Dessa](tooltip.md)
 * [Slate](slate.md)
 * [Slider](slider.md)
+* [Shader](shader.md)
 * [Mural e tag-along](billboarding-and-tag-along.md)
 * [Exibindo o progresso](progress.md)
 * [Magnetism Surface](surface-magnetism.md)

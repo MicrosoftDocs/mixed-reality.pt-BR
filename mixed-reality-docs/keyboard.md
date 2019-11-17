@@ -6,12 +6,12 @@ ms.author: dongpark
 ms.date: 11/01/2019
 ms.topic: article
 keywords: Realidade misturada, controles, interação, interface do usuário, UX
-ms.openlocfilehash: 6be1574e6127b5640dd5e6c12a9efd16009325ba
-ms.sourcegitcommit: 781e47db2ca2f2c792c95e76ac309b44b3535555
+ms.openlocfilehash: 15116a01845ea58b8664ed3f64e668854bb2ecb7
+ms.sourcegitcommit: 17427d4d8c3723d53540f1b7f5bc061bba08c1d6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74106255"
+ms.lasthandoff: 11/17/2019
+ms.locfileid: "74143239"
 ---
 # <a name="keyboard"></a>Teclado
 
@@ -48,6 +48,7 @@ Seu aplicativo de realidade misturada pode invocar o teclado do sistema a qualqu
 * [Dessa](tooltip.md)
 * [Slate](slate.md)
 * [Slider](slider.md)
+* [Shader](shader.md)
 * [Mural e tag-along](billboarding-and-tag-along.md)
 * [Exibindo o progresso](progress.md)
 * [Magnetism Surface](surface-magnetism.md)

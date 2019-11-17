@@ -6,12 +6,12 @@ ms.author: dongpark
 ms.date: 11/01/2019
 ms.topic: article
 keywords: Realidade misturada, controles, interação, interface do usuário, UX
-ms.openlocfilehash: 567ff612968fbe75ea2fdb829d9f915d64959400
-ms.sourcegitcommit: 781e47db2ca2f2c792c95e76ac309b44b3535555
+ms.openlocfilehash: 2e9c8565487677de100ac14902658ab592080ee4
+ms.sourcegitcommit: 17427d4d8c3723d53540f1b7f5bc061bba08c1d6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74106155"
+ms.lasthandoff: 11/17/2019
+ms.locfileid: "74143117"
 ---
 # <a name="slate"></a>Slate
 
@@ -47,6 +47,7 @@ Slate é um controle de estilo de janela fina para exibir conteúdo 2D. Por exem
 * [Dessa](tooltip.md)
 * [Slate](slate.md)
 * [Slider](slider.md)
+* [Shader](shader.md)
 * [Mural e tag-along](billboarding-and-tag-along.md)
 * [Exibindo o progresso](progress.md)
 * [Magnetism Surface](surface-magnetism.md)

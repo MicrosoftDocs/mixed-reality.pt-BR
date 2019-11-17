@@ -6,15 +6,15 @@ ms.author: adlinv
 ms.date: 06/07/2019
 ms.topic: article
 keywords: Realidade mista do Windows, barra de aplicativos, caixa delimitadora
-ms.openlocfilehash: 97afc0df02fd8460547e955d4fcf3e33a4e9f566
-ms.sourcegitcommit: 781e47db2ca2f2c792c95e76ac309b44b3535555
+ms.openlocfilehash: e4f519cba459efac25f6c1370b07fcda4def30a1
+ms.sourcegitcommit: 17427d4d8c3723d53540f1b7f5bc061bba08c1d6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74105763"
+ms.lasthandoff: 11/17/2019
+ms.locfileid: "74143166"
 ---
 # <a name="bounding-box-and-app-bar"></a>Caixa delimitadora e barra de aplicativos
-o limite de ![é a interface padrão para manipulação de objeto em realidade misturada.](images/640px-boundingbox-hero.jpg)<br>
+o limite de ![é a interface padrão para manipulação de objeto em realidade misturada.](images/UX/UX_Hero_BoundingBox.jpg)<br>
 <br>
 
 ## <a name="what-is-the-bounding-box"></a>O que é a caixa delimitadora?
@@ -119,6 +119,7 @@ A barra de aplicativos é um menu de nível de objeto que contém uma série de 
 * [Dessa](tooltip.md)
 * [Slate](slate.md)
 * [Slider](slider.md)
+* [Shader](shader.md)
 * [Mural e tag-along](billboarding-and-tag-along.md)
 * [Exibindo o progresso](progress.md)
 * [Magnetism Surface](surface-magnetism.md)
