@@ -7,14 +7,16 @@ ms.date: 04/05/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Realidade misturada, interação, design, HoloLens, mãos, à distância, apontar e confirmar
-ms.openlocfilehash: e454b7f26b402d5c168323762865d10f7feb8a17
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 77c596f5250240d436529e879434a8f508b06732
+ms.sourcegitcommit: 781e47db2ca2f2c792c95e76ac309b44b3535555
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437663"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74105991"
 ---
 # <a name="point-and-commit-with-hands"></a>Apontar e confirmar com as mãos
+
+![Cursores](images/UX/UX_Hero_HandRay.jpg)
 
 Apontar e confirmar com as mãos é um modelo de entrada que permite aos usuários focalizar, selecionar e manipular objetos 3D e conteúdo 2D que estão fora do alcance. Essa técnica de interação "à distância" é exclusiva da realidade misturada e não é uma forma natural de interação humana com o mundo real. Por exemplo, no filme de super-heróis *X-Men*, o personagem [Magneto](https://en.wikipedia.org/wiki/Magneto_(comics)) é capaz de manipular um objeto à distância com suas mãos. Isso não é algo que os humanos podem fazer na realidade. No HoloLens (RA) e na MR (Realidade Misturada), nós equipamos os usuários com esse poder mágico, quebrando a restrição física do mundo real para não somente permitir uma experiência divertida com o conteúdo holográfico, como também tornar as interações do usuário mais eficazes e eficientes.
 
@@ -196,6 +198,17 @@ O conceito de apontar e confirmar para interações à distância foi inicialmen
 
 <br>
 
+
+---
+
+## <a name="hand-ray-in-mrtkmixed-reality-toolkit-for-unity"></a>Raio de mão em MRTK (Kit de ferramentas de realidade misturada) para o Unity
+Por padrão, o MRTK fornece um raio de mão prefab([DefaultControllerPointer.prefab](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_release/Assets/MixedRealityToolkit.SDK/Features/UX/Prefabs/Pointers)) que tem o mesmo estado visual que o raio de mão do sistema do shell. Ele é atribuído no perfil de Entrada do MRTK, em Ponteiros. No headset imersivo do Windows Mixed Reality, os mesmos raios também são usados para os controladores de movimento.
+
+* [MRTK – Perfil de ponteiro](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/MixedRealityConfigurationGuide.html#pointer-configuration)
+* [MRTK – Sistema de entrada](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Input/Overview.html)
+* [MRTK – Ponteiros](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Input/Pointers.html)
+
+
 ---
 
 ## <a name="see-also"></a>Consulte também
@@ -203,4 +216,4 @@ O conceito de apontar e confirmar para interações à distância foi inicialmen
 * [Focar e confirmar](gaze-and-commit.md)
 * [Mãos – Manipulação direta](direct-manipulation.md)
 * [Mãos – Gestos](gaze-and-commit.md#composite-gestures)
-* [Interações instintivas](interaction-fundamentals.md)
+* [Interações instinctuais](interaction-fundamentals.md)

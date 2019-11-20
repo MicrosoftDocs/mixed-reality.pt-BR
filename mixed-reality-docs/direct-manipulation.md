@@ -7,14 +7,17 @@ ms.date: 04/02/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Realidade Misturada, foco, direcionamento do foco, interação, design, mãos nas proximidades, HoloLens
-ms.openlocfilehash: ed3b25fe9a7dd404d07073b578b8da13e1984cab
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: e0b0e6273917df071f49eb0108039ebe204bbc12
+ms.sourcegitcommit: 781e47db2ca2f2c792c95e76ac309b44b3535555
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73435983"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74105947"
 ---
 # <a name="direct-manipulation-with-hands"></a>Manipulação direta com as mãos
+
+![Botão](images/UX/UX_Hero_Manipulation.jpg)
+
 A manipulação direta é um modelo de entrada que envolve tocar hologramas diretamente com suas mãos. A ideia por trás desse conceito é que os objetos se comportem exatamente como no mundo real. Os botões podem ser ativados simplesmente pressionando-os, os objetos podem ser pegados e o conteúdo 2D se comporta como uma tela de toque virtual. Isso torna a manipulação direta fácil para os usuários aprenderem e se divertirem. Ela é considerada um modelo de entrada "próximo", ou seja, é mais adequado para interagir com o conteúdo que está no alcance dos braços.
 
 A manipulação direta é baseada em funcionalidade, o que significa que é amigável ao usuário. Não há nenhum gesto simbólico para ensinar aos usuários. Todas as interações são criadas em torno de um elemento visual que você pode tocar ou pegar.
@@ -296,12 +299,6 @@ Por exemplo, se nós incentivarmos o usuário a segurar um objeto ou um ponto de
 
 Talvez você tenha observado que há interações paralelas que podemos utilizar entre as mãos em controladores de RA e de movimento na VR. Ambas as entradas podem ser usadas para disparar manipulações diretas em seus respectivos ambientes. No HoloLens 2, os movimentos de segurar e arrastar com mãos em distância próxima funcionam da mesma maneira que o botão para segurar nos controladores de movimentos do WMR. Isso fornece aos usuários familiaridade de interação entre as duas plataformas, que poderão ser úteis se você decidir portar seu aplicativo de uma para a outra.
 
-
-<br>
-
----
-
-
 <br>
 
 ---
@@ -325,8 +322,20 @@ Ao fazer isso, você move acidentalmente sua mão sobre alguns botões holográf
 
     Embora isso geralmente funcione bem, gestos de mão muito rápidos podem resultar em destinos altamente imprecisos. No entanto, o acompanhamento ocular poderia melhorar a precisão do gesto.
 
+<br>
+
+---
+
+## <a name="manipulation-in-mrtkmixed-reality-toolkit-for-unity"></a>Manipulação no MRTK (Kit de ferramentas de realidade misturada) para o Unity
+Com o **[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** , você pode alcançar facilmente o comportamento de manipulação comum usando o script **ManipulationHandler**. Com o ManipulationHandler, você pode pegar e mover objetos diretamente com mãos ou com o raio de mão. Ele também dá suporte à manipulação com as duas mãos para dimensionar e girar um objeto.
+
+* [MRTK – Manipulação](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_ManipulationHandler.html)
+
+
+---
+
 ## <a name="see-also"></a>Consulte também
 
 * [Focar com a cabeça e confirmar](gaze-and-commit.md)
 * [Apontar e confirmar com as mãos](point-and-commit.md)
-* [Interações instintivas](interaction-fundamentals.md)
+* [Interações instinctuais](interaction-fundamentals.md)
