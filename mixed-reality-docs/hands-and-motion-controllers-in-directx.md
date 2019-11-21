@@ -6,12 +6,12 @@ ms.author: cmeekhof
 ms.date: 04/30/2019
 ms.topic: article
 keywords: mãos, controladores de movimento, DirectX, entrada, hologramas
-ms.openlocfilehash: 7b8222e5e539eb95b07cc24d6b49106bd174b490
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 54eaacc3f0dccf728b5438c020a5efd7e0788251
+ms.sourcegitcommit: 4081dc2356fec0ea3625f1d989689cfbbb3fcf5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73435199"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74203335"
 ---
 # <a name="hands-and-motion-controllers-in-directx"></a>Controladores de mãos e de movimento no DirectX
 
@@ -99,10 +99,10 @@ Isso leva às seguintes práticas recomendadas ao renderizar e direcionar com m�
 ## <a name="cross-device-input-properties"></a>Propriedades de entrada de dispositivo cruzado
 A API do SpatialInteractionSource dá suporte a controladores e sistemas de acompanhamento de mão com uma ampla gama de recursos. Vários desses recursos são comuns entre os tipos de dispositivo. Por exemplo, o rastreamento de mão e os controladores de movimento fornecem uma ação ' Select ' e uma posição 3D. Sempre que possível, a API mapeia esses recursos comuns para as mesmas propriedades no SpatialInteractionSource.  Isso permite que os aplicativos ofereçam suporte mais facilmente a uma ampla gama de tipos de entrada. A tabela a seguir descreve as propriedades com suporte e como elas são comparadas entre os tipos de entrada.
 
-| Propriedade | Descrição | Gestos do HoloLens | Controladores de movimento | Mãos articuladas|
+| Propriedade | Descrição | Gestos de HoloLens (1º gen) | Controladores de movimento | Mãos articuladas|
 |--- |--- |--- |--- |--- |
 | [SpatialInteractionSource::**destro/canhoto**](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialinteractionsource.handedness) | À direita ou à esquerda/controlador. | Sem suporte | Com suporte | Com suporte |
-| [SpatialInteractionSourceState::**IsSelectPressed**](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialinteractionsourcestate.isselectpressed) | Estado atual do botão primário. | Toque de ar | Of | Toque de ar relaxado (pinçagem vertical) |
+| [SpatialInteractionSourceState::**IsSelectPressed**](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialinteractionsourcestate.isselectpressed) | Estado atual do botão primário. | Toque de ar | Disparador | Toque de ar relaxado (pinçagem vertical) |
 | [SpatialInteractionSourceState::**Issegured**](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialinteractionsourcestate.isgrasped) | Estado atual do botão de captura. | Sem suporte | Botão de captura | Apertar ou fechar mão |
 | [SpatialInteractionSourceState::**IsMenuPressed**](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialinteractionsourcestate.ismenupressed) | Estado atual do botão de menu.    | Sem suporte | Botão de menu | Sem suporte |
 | [SpatialInteractionSourceLocation::**Position**](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialinteractionsourcelocation.position) | Local XYZ da posição da mão ou de alças no controlador. | Local do Palm | Segurar posição de pose | Local do Palm |
@@ -122,11 +122,11 @@ Você pode acessar a **alça de pose** por meio de [SpatialInteractionSourceStat
 * O **eixo de encaminhamento da orientação de alça**: quando você fecha a sua mão parcialmente (como se você mantiver o controlador), o raio que aponta para "encaminhar" por meio do tubo formado por seus dedos não-thumbs.
 * O **eixo superior da orientação de alça**: o eixo superior implícito pelas definições direita e avançar.
 
-Você pode acessar o **ponteiro de pose** por meio de [SpatialInteractionSourceState::P Propriedades:: TryGetLocation (...):: SourcePointerPose](https://docs.microsoft.com/uwp/api/windows.ui.input.spatial.spatialinteractionsourcelocation#Windows_UI_Input_Spatial_SpatialInteractionSourceLocation_SourcePointerPose) ou [SpatialInteractionSourceState:: TryGetPointerPose (...):: TryGetInteractionSourcePose](https://docs.microsoft.com/uwp/api/windows.ui.input.spatial.spatialpointerpose#Windows_UI_Input_Spatial_SpatialPointerPose_TryGetInteractionSourcePose_Windows_UI_Input_Spatial_SpatialInteractionSource_) .
+Você pode acessar o **ponteiro de pose** por meio de [SpatialInteractionSourceState::P Propriedades:: TryGetLocation (...):: SourcePointerPose](https://docs.microsoft.com/uwp/api/windows.ui.input.spatial.spatialinteractionsourcelocation#Windows_UI_Input_Spatial_SpatialInteractionSourceLocation_SourcePointerPose) ou [SpatialInteractionSourceState:: TryGetPointerPose (...):: TryGetInteractionSourcePose](https://docs.microsoft.com/uwp/api/windows.ui.input.spatial.spatialpointerpose#Windows_UI_Input_Spatial_SpatialPointerPose_TryGetInteractionSourcePose_Windows_UI_Input_Spatial_SpatialInteractionSource_).
 
 ## <a name="controller-specific-input-properties"></a>Propriedades de entrada específicas do controlador
 Para controladores, o SpatialInteractionSource tem uma propriedade de controlador com recursos adicionais.
-* **HasThumbstick:** Se for true, o controlador terá um Thumbstick. Inspecione a propriedade [controllerproperties](https://docs.microsoft.com/uwp/api/windows.ui.input.spatial.spatialinteractioncontrollerproperties) do SpatialInteractionSourceState para adquirir os valores x e y de Thumbstick (ThumbstickX e ThumbstickY), bem como seu estado pressionado (IsThumbstickPressed).
+* **HasThumbstick:** Se for true, o controlador terá um Thumbstick. Inspecione a Propriedade [controllerproperties](https://docs.microsoft.com/uwp/api/windows.ui.input.spatial.spatialinteractioncontrollerproperties) do SpatialInteractionSourceState para adquirir os valores x e y de Thumbstick (ThumbstickX e ThumbstickY), bem como seu estado pressionado (IsThumbstickPressed).
 * **HasTouchpad:** Se for true, o controlador terá um touchpad. Inspecione a propriedade Controllerproperties do SpatialInteractionSourceState para adquirir os valores x e y do Touchpad (TouchpadX e touchpad) e para saber se o usuário está tocando no Pad (IsTouchpadTouched) e se eles estão pressionando o touchpad ( IsTouchpadPressed).
 * **SimpleHapticsController:** A API do SimpleHapticsController para o controlador permite inspecionar os recursos do haptics do controlador e também permite que você controle os comentários do Haptic.
 
@@ -195,7 +195,7 @@ std::thread createObserverThread([this, currentState]()
 });
 createObserverThread.detach();
 ```
-Iniciar um thread desanexado é apenas uma opção para lidar com chamadas assíncronas.  Como alternativa, você pode usar a nova funcionalidade [co_await](https://docs.microsoft.com//windows/uwp/cpp-and-winrt-apis/concurrency) com suporte C++do/WinRT.
+Iniciar um thread desanexado é apenas uma opção para lidar com chamadas assíncronas.  Como alternativa, você pode usar a nova funcionalidade de [co_await](https://docs.microsoft.com//windows/uwp/cpp-and-winrt-apis/concurrency) com C++suporte do/WinRT.
 
 Depois de ter um objeto HandMeshObserver, você deve mantê-lo durante a duração em que seu SpatialInteractionSource correspondente está ativo.  Em seguida, cada quadro pode ser solicitado para o último buffer de vértice que representa a mão chamando [GetVertexStateForPose](https://docs.microsoft.com//uwp/api/windows.perception.people.handmeshobserver.getvertexstateforpose) e passando uma instância [HandPose](https://docs.microsoft.com//uwp/api/windows.perception.people.handpose) que represente a pose para a qual você deseja vértices.  Cada vértice no buffer tem uma posição e um normal.  Aqui está um exemplo de como obter o conjunto atual de vértices para uma malha à mão.  Assim como antes, a variável *CurrentState* representa uma instância de [SpatialInteractionSourceState](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialinteractionsourcestate).
 
