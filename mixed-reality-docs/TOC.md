@@ -84,6 +84,7 @@
 #### [Dica de ferramenta](tooltip.md)
 #### [Slate](slate.md)
 #### [Slider](slider.md)
+#### [Sombreador](shader.md)
 #### [Mural e tag-along](billboarding-and-tag-along.md)
 #### [Exibindo o progresso](progress.md)
 #### [Magnetismo de superfície](surface-magnetism.md)
