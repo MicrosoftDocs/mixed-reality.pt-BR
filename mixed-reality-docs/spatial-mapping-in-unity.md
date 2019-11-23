@@ -382,7 +382,7 @@ public enum PlacementType
             };
 ```
 
-Cada um dos tipos de posicionamento tem um conjunto de parâmetros exclusivos para o tipo. A estrutura "ObjectPlacementDefinition" contém um conjunto de funções auxiliares estáticas para a criação dessas definições. Por exemplo, para encontrar um local para colocar um objeto no chão, você pode usar a função a seguir. Public estática ObjectPlacementDefinition Create_OnFloor (Vector3 halfDims) Além do tipo de posicionamento, você pode fornecer um conjunto de regras e restrições. As regras não podem ser violadas. Os locais de posicionamento possíveis que atendem ao tipo e às regras são então otimizados em relação ao conjunto de restrições para selecionar o local de posicionamento ideal. Cada uma das regras e restrições pode ser criada pelas funções de criação estática fornecidas. Uma regra de exemplo e uma função de construção de restrição são fornecidas abaixo.
+Cada um dos tipos de posicionamento tem um conjunto de parâmetros exclusivos para o tipo. A estrutura "ObjectPlacementDefinition" contém um conjunto de funções auxiliares estáticas para a criação dessas definições. Por exemplo, para encontrar um local para colocar um objeto no chão, você pode usar a função a seguir. ObjectPlacementDefinition Create_OnFloor público estático (Vector3 halfDims) Além do tipo de posicionamento, você pode fornecer um conjunto de regras e restrições. As regras não podem ser violadas. Os locais de posicionamento possíveis que atendem ao tipo e às regras são então otimizados em relação ao conjunto de restrições para selecionar o local de posicionamento ideal. Cada uma das regras e restrições pode ser criada pelas funções de criação estática fornecidas. Uma regra de exemplo e uma função de construção de restrição são fornecidas abaixo.
 
 ```cs
 public static ObjectPlacementRule Create_AwayFromPosition(
@@ -470,7 +470,7 @@ A DLL de compreensão armazena internamente o Playspace como uma grade de cubos 
 ![malha gerada produzida do volume VOXEL](images/su-custommesh.jpg)<br>
 *Malha gerada produzida a partir do volume VOXEL*
 
-## <a name="troubleshooting"></a>Painel de controle da
+## <a name="troubleshooting"></a>Solução de problemas
 * Verifique se você definiu o recurso [SpatialPerception](#setting-the-spatialperception-capability)
 * Quando o rastreamento for perdido, o próximo evento onsurfacechanged removerá todas as malhas.
 

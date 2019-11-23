@@ -47,7 +47,7 @@ Conforme prometido, estamos felizes em compartilhar mais adequação da realidad
 <td>Diretrizes de criação e de desenvolvimento para HoloLens 2</td><td>Outubro de 2019</td><td> <ul><li><a href=https://docs.microsoft.com/windows/mixed-reality/>visão geral de realidade misturada</a><li><a href=https://docs.microsoft.com/windows/mixed-reality/design>Design e criação de protótipos</a><li><a href=https://docs.microsoft.com/windows/mixed-reality/development>Ferramentas e arquitetura de desenvolvedor</a></td>
 </tr>
 <tr>
-  <td>Novas informações em inreal</td><td>Outubro de 2019</td><td> <ul><li><a href=https://docs.microsoft.com/windows/mixed-reality/unreal-development-overview>Visão geral do desenvolvimento inreal</a></td>
+  <td>Novas informações em inreal</td><td>Outubro de 2019</td><td> <ul><li><a href=https://docs.microsoft.com/windows/mixed-reality/unreal-development-overview>Visão geral do desenvolvimento do Unreal</a></td>
 </tr>
 <tr>
   <td>Design Fluent da Microsoft</td><td>Outubro de 2019</td><td> <ul><li><a href=https://www.microsoft.com/design/fluent/>página de design de realidade misturada</a></td>
