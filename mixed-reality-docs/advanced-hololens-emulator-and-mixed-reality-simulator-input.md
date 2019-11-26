@@ -6,16 +6,16 @@ ms.author: pbarnett
 ms.date: 04/26/2019
 ms.topic: article
 keywords: HoloLens, emulador, simulação, realidade misturada do Windows
-ms.openlocfilehash: 6ea493d8c1269ff0bea1d4102b9e224e30d06aef
-ms.sourcegitcommit: f5c1dedb3b9e29f27f627025b9e7613931a7ce18
+ms.openlocfilehash: c5601ae2caf235cb22248ce7c6bf7e29225ade2c
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64580588"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926593"
 ---
 # <a name="advanced-hololens-emulator-and-mixed-reality-simulator-input"></a>Entrada do emulador de HoloLens avançado e do simulador de realidade misturada
 
-A maioria dos usuários do emulador só precisará usar os controles de entrada básicos para o emulador do [HoloLens](using-the-hololens-emulator.md#basic-emulator-input) ou o simulador de [realidade mista do Windows](using-the-windows-mixed-reality-simulator.md#basic-simulator-input). Os detalhes a seguir são para usuários avançados que encontraram uma necessidade de simular tipos de entrada mais complexos.
+A maioria dos usuários do emulador só precisará usar os controles de entrada básicos para o [emulador do HoloLens](using-the-hololens-emulator.md#basic-emulator-input) ou o [simulador de realidade mista do Windows](using-the-windows-mixed-reality-simulator.md#basic-simulator-input). Os detalhes a seguir são para usuários avançados que encontraram uma necessidade de simular tipos de entrada mais complexos.
 
 
 ## <a name="concepts"></a>Conceitos
@@ -23,29 +23,29 @@ A maioria dos usuários do emulador só precisará usar os controles de entrada 
 Para começar a controlar a entrada virtual para o emulador do HoloLens e o simulador de realidade do Windows Mixed, você deve primeiro entender alguns conceitos.
 
 O movimento se refere ao controle e à alteração da posição e da orientação de algo na cena. Para um objeto controlável direcionado, o movimento é controlado com rotação e conversão (movimento) em três eixos.
-* **Guinada**: Virar à esquerda ou à direita.
-* **Pitch**: Ativar ou desativar.
-* **Roll**: Distribuição lado a lado.
-* **X**: Mover para a esquerda ou direita.
-* **Y**: Mover para cima ou para baixo.
-* **Z**: Avançar ou retroceder.
+* **Guinada**: virada para a esquerda ou para a direita.
+* **Pitch**: Ative ou diminua.
+* **Roll**: distribuição lado a lado.
+* **X**: mover para a esquerda ou para a direita.
+* **Y**: mover para cima ou para baixo.
+* **Z**: avançar ou retroceder.
 
-As entradas do controlador de [gesto](gestures.md) e movimento são mapeadas de acordo com o modo como os dispositivos físicos:
-* **Ação**: Isso simula a ação de pressionar o dedo indicador para o polegar ou extrair o botão de ação em um controlador. Por exemplo, a entrada da ação pode ser usada para simular o gesto de toque de ar, para rolar pelo conteúdo e para pressionar e manter pressionado.
-* **[Bloom](gestures.md#bloom)Gesto de/estado ou página inicial**: O gesto de cair/sistema do HoloLens ou o botão página inicial de um controlador é usado para retornar ao shell e executar ações do sistema.
+As entradas do controlador de gesto e movimento são mapeadas de acordo com o modo como os dispositivos físicos:
+* **Ação**: simula a ação de pressionar o dedo indicador para o polegar ou extrair o botão de ação em um controlador. Por exemplo, a entrada da ação pode ser usada para simular o gesto de toque de ar, para rolar pelo conteúdo e para pressionar e manter pressionado.
+* **[](system-gesture.md#bloom)/Estado gesto ou Home**: o gesto de cair/sistema do HoloLens ou o botão página inicial de um controlador é usado para retornar ao shell e executar ações do sistema.
 
-As mãos têm um reprresentation avançado no HoloLens 2.  Além de serem controlados/não rastreados, e utilizáveis para a condução de gestos, as mãos agora têm um modelo de esqueleto articulado que se ajusta a eles e expostos ao desenvolvedor.  Isso apresenta 26 pontos rastreados em cada mão.  
-* **Conjunto**: Uma das vinte posições controladas para uma determinada mão controlada. Isso terá um ponto é o espaço 3D associado a ele.
-* **Pose**: Uma coleção completa de todas as junções de uma mão controlada. Neste momento, esta é uma coleção de 26 junções. 
+As mãos têm uma representação rica no HoloLens 2.  Além de serem controlados/não rastreados, e utilizáveis para a condução de gestos, as mãos agora têm um modelo de esqueleto articulado que se ajusta a eles e expostos ao desenvolvedor.  Isso apresenta 26 pontos rastreados em cada mão.  
+* **Conjunto**: uma das vinte posições controladas para uma determinada mão controlada. Isso terá um ponto é o espaço 3D associado a ele.
+* **Pose**: uma coleção completa de todas as junções em uma mão controlada. Neste momento, esta é uma coleção de 26 junções. 
 
 Neste momento, não expõemos o controle direto de cada posição conjunta individualmente por meio da interface do usuário do emulador, embora você possa defini-las por meio da API de simulação. Em vez disso, temos um conjunto de representações úteis que o emulador permite alternar entre.
 
 Você também pode controlar o estado da entrada simulada do sensor:
-* **Redefinir**: Isso retornará todos os sensores simulados para seus valores padrão.  Começando com o emulador do HoloLens 2, uma redefinição pode ter como escopo uma ou ambas as mãos ao envolver as mãos desejadas usando as chaves (s) modificadores apropriadas (es) ou os botões (Alt e/ou direita, ou o amortecedor esquerdo e/ou direito no gamepad).
-* **Acompanhamento**: Percorre os modos de controle posicional. Isso inclui:
-  * **Padrão**: O sistema operacional escolhe o melhor modo de controle com base nas solicitações feitas do sistema.
-   * **Orientação**: Força o rastreamento somente de orientação, independentemente das solicitações feitas do sistema.
-   * **Posicional**: Força o controle posicional, independentemente das solicitações feitas do sistema.
+* **Redefinir**: isso retornará todos os sensores simulados aos seus valores padrão.  Começando com o emulador do HoloLens 2, uma redefinição pode ter como escopo uma ou ambas as mãos ao envolver as mãos desejadas usando as chaves (s) modificadores apropriadas (es) ou os botões (Alt e/ou direita, ou o amortecedor esquerdo e/ou direito no gamepad).
+* **Acompanhamento**: percorre os modos de controle posicional. Isso inclui:
+  * **Padrão**: o sistema operacional escolhe o melhor modo de controle com base nas solicitações feitas do sistema.
+   * **Orientação**: força o controle somente de orientação, independentemente das solicitações feitas do sistema.
+   * **Posicional**: força o controle posicional, independentemente das solicitações feitas do sistema.
 
 ## <a name="types-of-input"></a>Tipos de entrada
 
@@ -59,7 +59,7 @@ A tabela a seguir mostra como cada tipo de entrada é mapeada para o teclado, o 
 |  X |  A/D |  |  Esquerda Thumbstick esquerda/direita | 
 |  S |  Page up/Page Down |  |  DPad para cima/para baixo | 
 |  Z |  W/S |  |  Esquerda Thumbstick para cima/para baixo | 
-|  Action |  Inserir ou espaço |  Botão direito |  Um botão ou um gatilho | 
+|  Ação |  Inserir ou espaço |  Botão direito |  Um botão ou um gatilho | 
 |  Flor/sistema |  F2 ou tecla do Windows |  |  Botão B | 
 |  Botão de alça do controlador |  G  |  |  | 
 |  Botão de menu do controlador |  M  |  |  | 
@@ -76,17 +76,17 @@ A tabela a seguir mostra como cada tipo de entrada é mapeada para o teclado, o 
 |  Controle alterações |  T ou F3 |  |  Botão X | 
 
 
-Observação: Os botões do controlador podem ser direcionamentodos a um único lado/controlador ou ao outro usando os modificadores de destino da mão.
+Observação: os botões do controlador podem ser direcionados a um único lado/controlador ou ao outro usando os modificadores de destino da mão.
 
 ## <a name="targeting"></a>Direcionamento 
 
-Alguns dos conceitos de entrada acima têm por conta própria.  A ação, a flor/sistema, a redefinição e o acompanhamento são conceitos completos, não são necessários e não são afetados pelo, quaisquer modificadores adicionais para direcionamento.  No entanto, os conceitos restantes podem ser aplicados a um de vários destinos. Apresentamos maneiras de especificar a qual destino pretendido seu comando deve ser aplicado.  Em todos os casos, é possível especificar por meio da interface do usuário ou por meio de pressionamentos de teclado, que objeto targtet.  Em alguns casos, também é possível especificar com o controlador Xbox diretamente. 
+Alguns dos conceitos de entrada acima têm por conta própria.  A ação, a flor/sistema, a redefinição e o acompanhamento são conceitos completos, não são necessários e não são afetados pelo, quaisquer modificadores adicionais para direcionamento.  No entanto, os conceitos restantes podem ser aplicados a um de vários destinos. Apresentamos maneiras de especificar a qual destino pretendido seu comando deve ser aplicado.  Em todos os casos, é possível especificar por meio da interface do usuário ou por meio de pressionamentos de teclado, que objeto deve ser direcionado.  Em alguns casos, também é possível especificar com o controlador Xbox diretamente. 
 
 A tabela a seguir descreve as opções de direcionamento e a maneira de ativar cada uma delas.
 
-| Object | Modificador de teclado | Modificador de controlador | Modificador de IU do emulador |
+| Objeto | Modificador de teclado | Modificador de controlador | Modificador de IU do emulador |
 |----------|----------|----------|----------|
-| Body | (padrão) | (padrão) | (padrão) |
+| Corpo | (padrão) | (padrão) | (padrão) |
 | Principal | Manter H | (Não disponível) | (Não disponível) |
 | À esquerda/controlador | Pressionar o botão Alt esquerdo | Botão manter à esquerda | Anotação à esquerda | 
 | À direita/controlador | Manter botão Alt direito | Botão manter à direita | Anotação à direita |
@@ -123,7 +123,7 @@ O seguinte conjunto de controles é sugerido para uso do dia a dia:
 |  Desvio da mão/controlador |  Alt + arrastar mouse para a esquerda/direita |  Tiracolo + direita Thumbstick esquerda/direita | 
 |  Densidade da mão/controlador |  Alt + arrastar mouse para cima/para baixo |  Tiracolo + direita Thumbstick para cima/para baixo | 
 |  Distribuição à mão/controlador |  ALT + Q/E |  Tiracolo + DPad à esquerda/direita | 
-|  Action |  Botão direito do mouse |  Disparador | 
+|  Ação |  Botão direito do mouse |  Disparador | 
 |  Flor/sistema/página inicial |  F2 ou tecla do Windows |  Botão B | 
 |  Redefinir |  Escape |  botão Iniciar | 
 |  Controle alterações |  T |  Botão X | 
