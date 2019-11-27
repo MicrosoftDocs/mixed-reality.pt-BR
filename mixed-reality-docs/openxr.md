@@ -5,13 +5,13 @@ author: thetuvix
 ms.author: alexturn
 ms.date: 7/29/2019
 ms.topic: article
-keywords: OpenXR, Khronos, BasicXRApp, Mixed Realm OpenXR portal do desenvolvedor, DirectX, nativo, mecanismo personalizado do aplicativo nativo, middleware
-ms.openlocfilehash: 67d2ab42a40aa04eb9dcd6881a4392a81c0f3b8f
-ms.sourcegitcommit: b6b76275fad90df6d9645dd2bc074b7b2168c7c8
+keywords: OpenXR, Khronos, BasicXRApp, Mixed Reality OpenXR Developer portal, DirectX, nativo, aplicativo nativo, mecanismo personalizado, middleware
+ms.openlocfilehash: aa91918e20b4276b7453bae1a05ad18df9d8ab0e
+ms.sourcegitcommit: 4d43a8f40e3132605cee9ece9229e67d985db645
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/11/2019
-ms.locfileid: "73914389"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74491136"
 ---
 # <a name="openxr"></a>OpenXR
 
@@ -74,6 +74,10 @@ Para experimentar o tempo de execução do Windows Mixed Reality OpenXR, você p
 O projeto <a href="https://github.com/Microsoft/OpenXR-SDK-VisualStudio/tree/master/samples/BasicXrApp" target="_blank">BasicXrApp</a> demonstra um exemplo de OpenXR simples com dois arquivos de projeto do Visual Studio, um para um aplicativo de área de trabalho Win32 e outro para um aplicativo UWP HoloLens 2.  Como a solução contém um projeto UWP do HoloLens, você precisará do [plataforma universal do Windows carga de trabalho de desenvolvimento](install-the-tools.md#installation-checklist) instalada no Visual Studio para abri-lo totalmente.
 
 Observe que, embora os arquivos de projeto Win32 e UWP sejam separados devido a diferenças no empacotamento e na implantação, o código do aplicativo dentro de cada projeto é de 100% o mesmo!
+
+Depois de criar uma área de trabalho do Win32 do OpenXR. EXE, você pode usá-lo com um headset de VR em qualquer plataforma de VR de área de trabalho que dê suporte a OpenXR, seja um headset de realidade mista do Windows ou qualquer outro headset.
+
+Depois de criar um pacote de aplicativo OpenXR UWP, você pode [implantar esse pacote](using-visual-studio.md) em um dispositivo do hololens 2 ou no emulador do hololens 2.
 
 ## <a name="openxr-app-best-practices-for-hololens-2"></a>Práticas recomendadas do aplicativo OpenXR para o HoloLens 2
 
@@ -189,7 +193,7 @@ Ao final do ano, o tempo de execução do Windows Mixed Reality OpenXR dará sup
 
 Embora algumas dessas extensões possam ser iniciadas como extensões de MSFT específicas do fornecedor, a Microsoft e outros fornecedores de tempo de execução OpenXR estão trabalhando juntos para projetar extensões de extensão ou KHR de vários fornecedores para muitas dessas áreas de recursos.  Isso permitirá que o código que você escreve para esses recursos seja portável em fornecedores de tempo de execução, assim como na Especificação principal.
 
-## <a name="troubleshooting"></a>Painel de controle da
+## <a name="troubleshooting"></a>Solução de problemas
 
 Aqui estão algumas dicas de solução de problemas para o tempo de execução OpenXR do Windows Mixed Reality.  Se você tiver outras dúvidas sobre a <a href="https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html" target="_blank">especificação do OpenXR 1,0</a>, visite os <a href="https://community.khronos.org/c/openxr" target="_blank">fóruns do Khronos OpenXR</a> ou a <a href="https://khr.io/slack" target="_blank">margem de atraso #openxr canal</a>.
 

@@ -126,7 +126,7 @@ Você pode acessar o **ponteiro de pose** por meio de [SpatialInteractionSourceS
 
 ## <a name="controller-specific-input-properties"></a>Propriedades de entrada específicas do controlador
 Para controladores, o SpatialInteractionSource tem uma propriedade de controlador com recursos adicionais.
-* **HasThumbstick:** Se for true, o controlador terá um Thumbstick. Inspecione a Propriedade [controllerproperties](https://docs.microsoft.com/uwp/api/windows.ui.input.spatial.spatialinteractioncontrollerproperties) do SpatialInteractionSourceState para adquirir os valores x e y de Thumbstick (ThumbstickX e ThumbstickY), bem como seu estado pressionado (IsThumbstickPressed).
+* **HasThumbstick:** Se for true, o controlador terá um Thumbstick. Inspecione a propriedade [controllerproperties](https://docs.microsoft.com/uwp/api/windows.ui.input.spatial.spatialinteractioncontrollerproperties) do SpatialInteractionSourceState para adquirir os valores x e y de Thumbstick (ThumbstickX e ThumbstickY), bem como seu estado pressionado (IsThumbstickPressed).
 * **HasTouchpad:** Se for true, o controlador terá um touchpad. Inspecione a propriedade Controllerproperties do SpatialInteractionSourceState para adquirir os valores x e y do Touchpad (TouchpadX e touchpad) e para saber se o usuário está tocando no Pad (IsTouchpadTouched) e se eles estão pressionando o touchpad ( IsTouchpadPressed).
 * **SimpleHapticsController:** A API do SimpleHapticsController para o controlador permite inspecionar os recursos do haptics do controlador e também permite que você controle os comentários do Haptic.
 
