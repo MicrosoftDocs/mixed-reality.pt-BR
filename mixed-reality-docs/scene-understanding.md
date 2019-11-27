@@ -6,12 +6,12 @@ ms.author: szymons
 ms.date: 07/08/2019
 ms.topic: article
 keywords: Compreensão da cena, mapeamento espacial, realidade do Windows Mixed, Unity
-ms.openlocfilehash: fdfe40571ac8893dcb3a3ba8fe3bb12707c800e4
-ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
+ms.openlocfilehash: bacec5e6a9bfda49d4ad6d3dd849156c9cc09add
+ms.sourcegitcommit: 83698638b93c5ba77b3ffc399f1706482539f27b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926917"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74539699"
 ---
 # <a name="scene-understanding"></a>Compreensão da cena
 
@@ -19,7 +19,29 @@ A compreensão da cena fornece aos desenvolvedores de realidade misturada uma re
 
 ![Malha de mapeamento espacial, superfícies de planar rotuladas, malha Watertight](images/SUScenarios.png)
 
-Este documento destina-se a fornecer uma visão geral do cenário e esclarecer a relação que a cena compreende e o compartilhamento de mapeamento espacial. Para obter detalhes sobre como a compreensão da cena funciona e como desenvolvê-la, consulte a documentação [visão geral do SDK de compreensão da cena](scene-understanding-SDK.md) .
+Este documento destina-se a fornecer uma visão geral do cenário e esclarecer a relação que a cena compreende e o compartilhamento de mapeamento espacial.
+
+## <a name="developing-with-scene-understanding"></a>Desenvolvendo com compreensão da cena
+
+Este artigo só serve para apresentar a cena que entende o tempo de execução e os conceitos. Se você estiver procurando documentação sobre como desenvolver com a compreensão da cena, você pode estar interessado no seguinte:
+
+[Visão geral do SDK de compreensão da cena](scene-understanding-SDK.md)
+
+Você pode baixar o aplicativo de exemplo de compreensão da cena no site do GitHub de exemplo:
+
+[Exemplo de compreensão da cena](https://github.com/sceneunderstanding-microsoft/unitysample)
+
+Se você não tiver um dispositivo e desejar acessar cenas de exemplo para experimentar a compreensão da cena, há cenas na pasta de ativos de exemplo:
+
+[Cenas de exemplo de compreensão de cena](https://github.com/sceneunderstanding-microsoft/unitysample/tree/master/Assets/Resources/SerializedScenesForPCPath)
+
+### <a name="sdk"></a>SDK
+
+Se você estiver procurando detalhes específicos sobre como desenvolver para a cena Understandiing, para obter detalhes sobre como a compreensão da cena funciona e como desenvolvê-la, consulte a documentação [visão geral do SDK de compreensão da cena](scene-understanding-SDK.md) .
+
+
+### <a name="sample"></a>Exemplo
+
 
 ## <a name="device-support"></a>Suporte a dispositivos
 

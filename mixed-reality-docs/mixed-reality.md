@@ -6,14 +6,16 @@ ms.author: branbray
 ms.date: 03/21/2018
 ms.topic: article
 keywords: realidade misturada, Holographic, ar, VR, Sr, XR, realidade aumentada, realidade virtual, explicação
-ms.openlocfilehash: 601e42c03e827f0f531f9dcf937a0dd34b008dc3
-ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
+ms.openlocfilehash: 65588902565ee0c5a1710f823311ccdecc23230e
+ms.sourcegitcommit: 83698638b93c5ba77b3ffc399f1706482539f27b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926781"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74539547"
 ---
 # <a name="what-is-mixed-reality"></a>O que é realidade misturada?
+
+![Apontar e confirmar com mãos no HoloLens 2](images/02_MixedRealitySlashMixedReality.png)
 
 A realidade misturada é o resultado da mistura do mundo físico com o mundo digital. A realidade misturada é a próxima evolução em interação humana, computacional e de ambiente e proporciona possibilidades que antes eram restritas à nossa imaginação. Isso é possível por avanços na pesquisa Visual computacional, na capacidade de processamento gráfico, na tecnologia de vídeo e nos sistemas de entrada. O termo *misto de realidade* foi introduzido originalmente em um papel de 1994 por Paul Milgram e Fumio Kishino, "[uma taxonomia de exibições visuais de realidade misturada](https://etclab.mie.utoronto.ca/people/paul_dir/IEICE94/ieice.html)". Seu documento introduziu o conceito do *continuidade de virtualização*e se concentrou em como a categorização de taxonomia é aplicada a exibições. Desde então, a aplicação da realidade misturada vai além dos monitores. Ele também inclui entrada ambiental, som espacial e local.
 
