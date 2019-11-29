@@ -7,14 +7,17 @@ ms.author: grbury
 ms.date: 10/02/2019
 ms.topic: overview
 keywords: Realidade mista do Windows, design, padrões de aplicativo, controles, estilo, HoloLens, interação, elementos de UX, comportamentos, blocos de construção
-ms.openlocfilehash: 5f5f97d3f4a34e0d88c781df494a4afc2ee0b992
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: d8f904183e51943246613e99a805bee1518523c8
+ms.sourcegitcommit: 83698638b93c5ba77b3ffc399f1706482539f27b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73439427"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74539531"
 ---
 # <a name="core-concepts-overview"></a>Visão geral dos conceitos principais
+
+![Manipulação direta com as mãos](images/05_CoreConcepts.png)
+
 
 Antes de mergulhar no design de sua experiência, é útil entender alguns conceitos básicos. Cada tópico abaixo é um fator subjacente que afeta fundamentalmente e contribui para a qualidade da experiência de realidade misturada que você está criando para o usuário. 
 
