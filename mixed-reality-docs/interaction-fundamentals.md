@@ -7,14 +7,16 @@ ms.date: 04/11/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Realidade Misturada, foco, direcionamento do foco, interação, design, hololens, MMR, multimodal
-ms.openlocfilehash: abd82947be08a2f6aecc4462abc34c4674abfb7a
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 6b54d6e844c1b501a0835fc3a48deb4932ba551d
+ms.sourcegitcommit: 83698638b93c5ba77b3ffc399f1706482539f27b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437979"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74539727"
 ---
 # <a name="introducing-instinctual-interactions"></a>Apresentação de interações instintivas
+
+![Manipulação distante com as mãos](images/04_InteractionFundamentals.png)
 
 A filosofia de interações simples e instintivas está presente em toda a plataforma de MR (realidade misturada). Temos três etapas para os desenvolvedores e designers de aplicativos fornecerem interações fáceis e intuitivas para os clientes deles. 
 
@@ -183,7 +185,7 @@ Caso sua experiência precise de vários modelos de interação, tenha em mente 
 * [Mãos – Manipulação direta](direct-manipulation.md)
 * [Mãos – Gestos](gaze-and-commit.md#composite-gestures)
 * [Mãos – Apontar e confirmar](point-and-commit.md)
-* [Interações instintivas](interaction-fundamentals.md)
+* [Interações instinctuais](interaction-fundamentals.md)
 * [Controladores de movimentos](motion-controllers.md)
 * [Mapeamento espacial](spatial-mapping.md)
 * [Projeto de som espacial](spatial-sound-design.md)

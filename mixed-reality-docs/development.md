@@ -8,17 +8,16 @@ ms.date: 08/27/2019
 ms.topic: overview
 ms.localizationpriority: high
 keywords: Realidade misturada, desenvolver, desenvolvimento, HoloLens, unity, directx
-ms.openlocfilehash: b37a9261f56b19edb3dde11cbeedc40a6e503e35
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 2c3416ffc1f3259c7be8f105a55427e3c29826fb
+ms.sourcegitcommit: 83698638b93c5ba77b3ffc399f1706482539f27b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73435692"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74539583"
 ---
 # <a name="learn-the-tools-and-architecture"></a>Conheça as ferramentas e a arquitetura
 
-
-![Equipes trabalhando com materiais na Academia de Realidade Misturada](images/Development_Hero.png)
+![Esfera abstrata em 3D](images/07_Development.png)
 
 ## <a name="expand-your-design-processcase-study-expanding-the-design-process-for-mixed-realitymd"></a>[Expanda seu processo de design](case-study-expanding-the-design-process-for-mixed-reality.md)
 
