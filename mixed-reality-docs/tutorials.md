@@ -8,14 +8,16 @@ ms.date: 10/22/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit-unity, academy, tutorial
-ms.openlocfilehash: 6041df2bbd5d55d8c72dfd07e40dca34e40fdac9
-ms.sourcegitcommit: 4d43a8f40e3132605cee9ece9229e67d985db645
+ms.openlocfilehash: 66246e33bfd1b63630c07005661a744f8939de47
+ms.sourcegitcommit: 83698638b93c5ba77b3ffc399f1706482539f27b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/26/2019
-ms.locfileid: "74491189"
+ms.locfileid: "74539641"
 ---
 # <a name="tutorials-and-sample-apps"></a>Tutoriais e aplicativos de exemplo
+
+![Usuário do HoloLens 2](images/08_Tutorials.png)
 
 Atualmente, todos os tutoriais e aplicativos de exemplo são baseados no Unity.  À medida que desenvolvermos conteúdo para outros mecanismos e outras plataformas, você os encontrará sob o título relevante no sumário.
 
