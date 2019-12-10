@@ -5,17 +5,19 @@ author: MikeRiches
 ms.author: mriches
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Realidade mista do Windows, hologramas, renderização, gráficos 3D, HolographicFrame, loop de processamento, loop de atualização, passo a passos, código de exemplo
-ms.openlocfilehash: 6edcaf808f2d7d48f480169e5579adb8984678a0
-ms.sourcegitcommit: 45676da11ebe33a2aa3dccec0e8ad7d714420853
+keywords: Realidade mista do Windows, hologramas, renderização, gráficos 3D, HolographicFrame, loop de processamento, loop de atualização, passo a passos, código de exemplo, Direct3D
+ms.openlocfilehash: 6b2e2dca9115d7093e94019d5ed91201f6ee3424
+ms.sourcegitcommit: f4812e1312c4751a22a2de56771c475b22a4ba24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65629032"
+ms.lasthandoff: 12/09/2019
+ms.locfileid: "74940864"
 ---
 # <a name="rendering-in-directx"></a>Renderização no DirectX
 
 A realidade mista do Windows se baseia no DirectX para produzir experiências gráficas 3D ricas para os usuários. A abstração de renderização fica logo acima do DirectX e permite a um motivo do aplicativo sobre a posição e a orientação de um ou mais observadores de uma cena Holographic, conforme previsto pelo sistema. O desenvolvedor pode então localizar seus hologramas em relação a cada câmera, permitindo que o aplicativo processe esses hologramas em vários sistemas de coordenadas espaciais à medida que o usuário se movimenta.
+
+Observação: este passo a passos descreve a renderização Holographic no Direct3D 11. Um modelo de aplicativo de realidade misturada do Windows do Direct3D 12 também é fornecido com a extensão de modelos de aplicativo da realidade misturada.
 
 ## <a name="update-for-the-current-frame"></a>Atualizar para o quadro atual
 
@@ -306,7 +308,7 @@ context->VSSetConstantBuffers(
 
 É uma boa ideia verificar se o **TryGetViewTransform** foi bem-sucedido antes de tentar usar os dados de exibição/projeção, porque se o sistema de coordenadas não for localizável (por exemplo, o controle foi interrompido), seu aplicativo não poderá renderizar com ele para esse quadro. O modelo só chamará **render** no cubo girando se a classe **CameraResources** indicar uma atualização bem-sucedida.
 
-Para manter os hologramas onde um desenvolvedor ou um usuário os coloca no mundo, a realidade mista do Windows inclui recursos para estabilização de [imagem](hologram-stability.md). A estabilização de imagem ajuda a ocultar a latência inerente em um pipeline de renderização para garantir as melhores experiências de Holographic para os usuários; um ponto de foco pode ser especificado para aprimorar ainda mais a estabilização de imagem ou um buffer de profundidade pode ser fornecido para computar a estabilização de imagem otimizada em tempo real.
+Para manter os hologramas onde um desenvolvedor ou um usuário os coloca no mundo, a realidade mista do Windows inclui recursos para [estabilização de imagem](hologram-stability.md). A estabilização de imagem ajuda a ocultar a latência inerente em um pipeline de renderização para garantir as melhores experiências de Holographic para os usuários; um ponto de foco pode ser especificado para aprimorar ainda mais a estabilização de imagem ou um buffer de profundidade pode ser fornecido para computar a estabilização de imagem otimizada em tempo real.
 
 Para obter melhores resultados, seu aplicativo deve fornecer um buffer de profundidade usando a API <a href="https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamerarenderingparameters.commitdirect3d11depthbuffer" target="_blank">CommitDirect3D11DepthBuffer</a> . A realidade mista do Windows pode usar informações de geometria do buffer de profundidade para otimizar a estabilização de imagem em tempo real. O modelo de aplicativo Holographic do Windows confirma o buffer de profundidade do aplicativo por padrão, ajudando a otimizar a estabilidade do holograma.
 
@@ -401,7 +403,7 @@ cbuffer ViewProjectionConstantBuffer : register(b1)
 };
 ```
 
-O índice de matriz de destino de renderização deve ser definido para cada pixel. No trecho a seguir, output. ViewId é mapeado para a semântica **SV_RenderTargetArrayIndex** . Observe que isso requer suporte para um recurso de Direct3D 11,3 opcional, que permite que a semântica de índice de matriz de destino de renderização seja definida em qualquer estágio do sombreador.
+O índice de matriz de destino de renderização deve ser definido para cada pixel. No trecho a seguir, output. ViewId é mapeado para a semântica de **SV_RenderTargetArrayIndex** . Observe que isso requer suporte para um recurso de Direct3D 11,3 opcional, que permite que a semântica de índice de matriz de destino de renderização seja definida em qualquer estágio do sombreador.
 
 De **VPRTVertexShader. HLSL**:
 
@@ -457,7 +459,7 @@ VertexShaderOutput main(VertexShaderInput input)
 }
 ```
 
-Se você quiser usar suas técnicas de desenho com instância existente com esse método de desenho em uma matriz de destino de renderização estéreo, tudo o que você precisa fazer é desenhar duas vezes o número de instâncias que você normalmente tem. No sombreador, divida **Input. Instid** por 2 para obter a ID da instância original, que pode ser indexada em (por exemplo) um buffer de dados por objeto:`int actualIdx = input.instId / 2;`
+Se você quiser usar suas técnicas de desenho com instância existente com esse método de desenho em uma matriz de destino de renderização estéreo, tudo o que você precisa fazer é desenhar duas vezes o número de instâncias que você normalmente tem. No sombreador, divida **Input. Instid** por 2 para obter a ID da instância original, que pode ser indexada em (por exemplo) um buffer de dados por objeto: `int actualIdx = input.instId / 2;`
 
 ### <a name="important-note-about-rendering-stereo-content-on-hololens"></a>Observação importante sobre o processamento de conteúdo estéreo no HoloLens
 
@@ -553,7 +555,7 @@ if (!m_usingVprtShaders)
 }
 ```
 
-**HLSL OBSERVAÇÃO**: Nesse caso, você também deve carregar um sombreador de vértice ligeiramente modificado que passa o índice de destino de renderização para o sombreador de geometria usando uma semântica de sombreador sempre permitido, como TEXCOORD0. O sombreador de geometria não precisa fazer nenhum trabalho; o sombreador de geometria de modelo passa por todos os dados, com exceção do índice de matriz de destino de renderização, que é usado para definir a semântica SV_RenderTargetArrayIndex.
+**HLSL observação**: nesse caso, você também deve carregar um sombreador de vértice ligeiramente modificado que passa o índice de matriz de destino de renderização para o sombreador de geometria usando uma semântica de sombreador sempre permitido, como TEXCOORD0. O sombreador de geometria não precisa fazer nenhum trabalho; o sombreador de geometria de modelo passa por todos os dados, com exceção do índice de matriz de destino de renderização, que é usado para definir a semântica de SV_RenderTargetArrayIndex.
 
 Código de modelo de aplicativo para **GeometryShader. HLSL**:
 
@@ -706,7 +708,7 @@ const HRESULT hr = D3D11CreateDevice(
 
 O uso de Media Foundation em sistemas híbridos pode causar problemas em que o vídeo não será renderizado ou a textura do vídeo está corrompida. Isso pode ocorrer porque Media Foundation está padronizando para um comportamento do sistema, conforme mencionado acima. Em alguns cenários, a criação de um ID3D11Device separado é necessária para dar suporte a vários threads e os sinalizadores de criação corretos são definidos.
 
-Ao inicializar o ID3D11Device, o sinalizador D3D11_CREATE_DEVICE_VIDEO_SUPPORT deve ser definido como parte do D3D11_CREATE_DEVICE_FLAG. Depois que o dispositivo e o contexto forem criados, chame <a href="https://docs.microsoft.com/windows/desktop/api/d3d10/nf-d3d10-id3d10multithread-setmultithreadprotected" target="_blank">SetMultithreadProtected</a> para habilitar multithreading. Para associar o dispositivo ao <a href="https://docs.microsoft.com/windows/desktop/api/mfobjects/nn-mfobjects-imfdxgidevicemanager" target="_blank">IMFDXGIDeviceManager</a>, use a função <a href="https://docs.microsoft.com/windows/desktop/api/mfobjects/nf-mfobjects-imfdxgidevicemanager-resetdevice" target="_blank">IMFDXGIDeviceManager:: ResetDevice</a> .
+Ao inicializar o ID3D11Device, D3D11_CREATE_DEVICE_VIDEO_SUPPORT sinalizador deve ser definido como parte do D3D11_CREATE_DEVICE_FLAG. Depois que o dispositivo e o contexto forem criados, chame <a href="https://docs.microsoft.com/windows/desktop/api/d3d10/nf-d3d10-id3d10multithread-setmultithreadprotected" target="_blank">SetMultithreadProtected</a> para habilitar multithreading. Para associar o dispositivo ao <a href="https://docs.microsoft.com/windows/desktop/api/mfobjects/nn-mfobjects-imfdxgidevicemanager" target="_blank">IMFDXGIDeviceManager</a>, use a função <a href="https://docs.microsoft.com/windows/desktop/api/mfobjects/nf-mfobjects-imfdxgidevicemanager-resetdevice" target="_blank">IMFDXGIDeviceManager:: ResetDevice</a> .
 
 Código para **associar um ID3D11Device com IMFDXGIDeviceManager**:
 
