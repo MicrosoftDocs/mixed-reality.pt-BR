@@ -7,12 +7,12 @@ ms.date: 10/24/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Visual Studio, HoloLens, realidade misturada, depurar, implantar
-ms.openlocfilehash: fecd9db8777b6947c3ea19a02e428459c78c935b
-ms.sourcegitcommit: 4d43a8f40e3132605cee9ece9229e67d985db645
+ms.openlocfilehash: b7e6a8d538670a53de20a2f3a2850639e756da1a
+ms.sourcegitcommit: 05fa75193059a2dac4b580a9eef7b6c4bb64d8d7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74491186"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74830836"
 ---
 # <a name="using-visual-studio-to-deploy-and-debug"></a>Como usar o Visual Studio para implantação e depuração
 
@@ -23,7 +23,7 @@ Se deseja usar o DirectX ou o Unity para desenvolver seu aplicativo de realidade
 
 ## <a name="prerequisites"></a>Pré-requisitos
 1. Confira [Instalar as ferramentas](install-the-tools.md) para obter instruções de instalação.
-2. Crie um projeto de aplicativo universal do Windows no Visual Studio.  Para o HoloLens (1ª geração), use o Visual Studio 2017 ou mais recente.  Para o HoloLens 2, use o Visual Studio 2019 16.2 ou mais recente. Há suporte para C# e C++. (Ou siga as instruções para [criar e compilar um aplicativo no Unity](holograms-100.md).)
+2. Crie um projeto de aplicativo universal do Windows no Visual Studio.  Para o HoloLens (1ª geração), use o Visual Studio 2017 ou mais recente.  Para o HoloLens 2, use o Visual Studio 2019 16.2 ou mais recente. Há suporte para C# e C++. (Ou siga as instruções para [criar um aplicativo no Unity](holograms-100.md).)
 
 ## <a name="enabling-developer-mode"></a>Habilitar o modo de desenvolvedor
 
