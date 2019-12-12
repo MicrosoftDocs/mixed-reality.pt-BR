@@ -6,16 +6,16 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realidade misturada, unity, tutorial, hololens
-ms.openlocfilehash: 9235452d9dce38e9d849821a694a5d4c710d8e87
-ms.sourcegitcommit: b6b76275fad90df6d9645dd2bc074b7b2168c7c8
+ms.openlocfilehash: e712fc2fd66b1add5b16b7dd8e6c37551aefe43a
+ms.sourcegitcommit: 9005b3fdfa87ac8fdc18a594a681e25c00ac5ce1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/11/2019
-ms.locfileid: "73913329"
+ms.lasthandoff: 12/11/2019
+ms.locfileid: "75003205"
 ---
 # <a name="4-setting-up-intent-and-natural-language-understanding"></a>4. Configurando o reconhecimento de intenções e idiomas naturais
 
-Nesta lição, exploraremos o recurso de intenção do serviço de fala do Azure. O recurso de intenção nos permite equipar nosso aplicativo com comandos de voz alimentados por ia, onde os usuários podem dizer comandos de voz não específicos e ainda ter sua intenção compreendida pelo sistema. Durante esta lição, vamos configurar nosso portal de LUIS do Azure, configurar nossa intenção/entidades/declarações, publicar nosso recurso de intenção, conectar nosso aplicativo do Unity ao nosso recurso de intenção e fazer nossa primeira chamada à API de nossa intenção.
+Nesta lição, você vai explorar o recurso de intenção do serviço de fala do Azure. O recurso de intenção permite que você equipate nosso aplicativo com comandos de voz alimentados por ia, onde os usuários podem dizer comandos de voz não específicos e ainda têm sua intenção compreendida pelo sistema. Durante esta lição, vamos configurar nosso portal de LUIS do Azure, configurar nossa intenção/entidades/declarações, publicar nosso recurso de intenção, conectar nosso aplicativo do Unity ao nosso recurso de intenção e fazer nossa primeira chamada à API de nossa intenção.
 
 ## <a name="objectives"></a>Objetivos
 
@@ -25,7 +25,7 @@ Nesta lição, exploraremos o recurso de intenção do serviço de fala do Azure
 
 ## <a name="instructions"></a>Instruções
 
-1. Permitir que seu computador habilite o ditado, vá para configurações do Windows, selecione "privacidade", depois "fala" e, finalmente, "escrita à tinta & digitação" e ative os serviços de fala e as sugestões de digitação.
+1. Permitir que seu computador habilite o ditado. Para fazer isso, vá para configurações do Windows, selecione "privacidade", em seguida, "fala", seguido por "escrita à tinta & digitação" e ative os serviços de fala e as sugestões de digitação.
 
     ![Module4Chapter4step1aim](images/module4chapter4step1aim.PNG)
 
@@ -33,7 +33,7 @@ Nesta lição, exploraremos o recurso de intenção do serviço de fala do Azure
 
     ![Module4Chapter4step1cim](images/module4chapter4step1cim.PNG)
 
-2. Faça logon no [portal do Azure](https://portal.azure.com/). Depois de fazer logon, clique em criar um recurso e pesquise por "Reconhecimento vocal" e clique em Enter.
+2. Faça logon no [portal do Azure](https://portal.azure.com/). Depois de fazer logon, clique em criar um recurso, pesquise por "Reconhecimento vocal" e clique em Enter.
 
     ![mrlearning-Speech-CH4-1-Step2. png](images/mrlearning-speech-ch4-1-step2.png)
 
@@ -41,16 +41,16 @@ Nesta lição, exploraremos o recurso de intenção do serviço de fala do Azure
 
     ![mrlearning-Speech-CH4-1-step3a. png](images/mrlearning-speech-ch4-1-step3a.png)
 
-    Dê um **nome**a seu recurso, por exemplo, *fala-SDK-Learning-Module*. Para **assinatura**, selecione *pagamento conforme o uso* ou *trilha gratuita* se você tiver uma conta de avaliação. Em seguida, crie um novo **grupo de recursos** clicando no link **criar novo** , insira um nome, por exemplo, *HoloLens-2-tutoriais-Resource-Group*e clicando no botão **OK** .
+    Dê um **nome**a seu recurso, por exemplo, *fala-SDK-Learning-Module*. Para **assinatura**, selecione *pagamento conforme o uso* ou *trilha gratuita* se você tiver uma conta de avaliação. Em seguida, crie um novo **grupo de recursos** clicando no link **criar novo** , insira um nome, por exemplo, *HoloLens-2-tutoriais-Resource-Group*e clique no botão **OK** .
 
     ![mrlearning-Speech-CH4-1-step3b. png](images/mrlearning-speech-ch4-1-step3b.png)
 
-4. Selecione o **local de criação** e o **local do tempo de execução**, para fins deste tutorial, use *(US) oeste dos EUA*. Em seguida, escolha *F0 (5 chamadas por segundo, 10K calls por mês)* para o **tipo de preço de criação** e o tipo de preço de tempo de **execução**. Por fim, clique no botão **criar** para criar o recurso, bem como o novo grupo de recursos.
+4. Selecione o **local de criação** e o **local do tempo de execução**. Para fins deste tutorial, use *(EUA) oeste dos EUA*e, em seguida, escolha *F0 (5 chamadas por segundo, 10K chamadas por mês)* para o **tipo de preço de criação** e tipo de preço de tempo de **execução**. Por fim, clique no botão **criar** para criar o recurso, bem como o novo grupo de recursos.
 
     ![mrlearning-Speech-CH4-1-step4. png](images/mrlearning-speech-ch4-1-step4.png)
 
     >[!NOTE]
-    >Depois de clicar no botão criar, você terá que aguardar a criação do serviço, isso pode levar alguns minutos.
+    >Depois de clicar no botão criar, você precisará aguardar até que o serviço seja criado, o que pode levar alguns minutos.
 
 5. Depois que o processo de criação de recursos for concluído, você verá a mensagem **sua implantação está concluída**.
 
@@ -59,9 +59,9 @@ Nesta lição, exploraremos o recurso de intenção do serviço de fala do Azure
 6. Usando a mesma conta de usuário, entre no portal do [Luis (serviço inteligente reconhecimento vocal)](https://www.luis.ai/) , selecione seu país e concorde com os termos de uso.
 
     >[!NOTE]
-    >Ao atingir o portal de Reconhecimento vocal, talvez seja necessário fazer logon, se você ainda não tiver, com as mesmas credenciais que o portal do Azure. Se esta for a primeira vez que você usa o LUIS, você precisará rolar para baixo até a parte inferior da página de boas-vindas, para localizar e clicar no botão "criar LUIS" do aplicativo.
+    >Ao acessar o portal de Reconhecimento vocal, talvez seja necessário fazer logon, se você ainda não tiver, com as mesmas credenciais que o portal do Azure. Se esta for a primeira vez que você usa o LUIS, você precisará rolar para baixo até a parte inferior da página de boas-vindas para localizar e clicar no botão "criar LUIS" do aplicativo.
 
-7. Depois de conectado, clique em meus aplicativos (se você não estiver na seção no momento). Em seguida, você pode clicar em criar novo aplicativo. Nomeie o novo aplicativo "módulo de aprendizagem SDK de fala". Adicione "módulo de aprendizagem do SDK de fala" ao campo de descrição também. Em seguida, clique em "concluído".
+7. Depois de conectado, clique em meus aplicativos (se você ainda não estiver nesta seção). Em seguida, você pode clicar em criar novo aplicativo. Nomeie o novo aplicativo "módulo de aprendizagem SDK de fala". Adicione "módulo de aprendizagem do SDK de fala" ao campo de descrição também. Em seguida, clique em "concluído".
 
     ![Module4Chapter4step8aim](images/module4chapter4step8aim.PNG)
 
@@ -82,11 +82,11 @@ Nesta lição, exploraremos o recurso de intenção do serviço de fala do Azure
     >[!NOTE]
     >Agora você deve ter duas intenções – "PressButton" e "None".
 
-10. Em ativos do aplicativo à esquerda, selecione "entidades" e clique em "criar nova entidade" e nomeie-a como "ação" e mantenha o tipo de entidade como "simples".
+10. Em ativos do aplicativo à esquerda, selecione "entidades", clique em "criar nova entidade", nomeie-a como "ação" e mantenha o tipo de entidade como "simples".
 
     ![Module4Chapter4step11im](images/module4chapter4step11im.PNG)
 
-11. Clique em "criar nova entidade" novamente e nomeie-a como "destino" e mantenha o tipo de entidade como "simples" também.
+11. Clique em "criar nova entidade" novamente e nomeie-a como "destino". Mantenha o tipo de entidade como "simples" também.
 
     ![Module4Chapter4step12im](images/module4chapter4step12im.PNG)
 
@@ -98,7 +98,7 @@ Nesta lição, exploraremos o recurso de intenção do serviço de fala do Azure
 
     ![Module4Chapter4step14aim](images/module4chapter4step14aim.PNG)
 
-    Clique no botão "inserir um exemplo..." texto. Em seguida, insira o seguinte declarações:
+    Clique no botão "inserir um exemplo..." . Em seguida, insira o seguinte declarações:
 
     ![Module4Chapter4step14bim](images/module4chapter4step14bim.PNG)
 
@@ -117,15 +117,15 @@ Nesta lição, exploraremos o recurso de intenção do serviço de fala do Azure
 17. Insira "Selecione o botão Iniciar" na caixa de texto.
 
     >[!NOTE]
-    >Não adicionamos "Select" como uma ação em qualquer um de nossos declarações – mas se você clicar em "inspecionar", o modelo reconheceu "Select" como uma entidade de ação.
+    >Não adicionamos "Select" como uma ação em qualquer um de nossos declarações, mas se você clicar em "inspecionar", o modelo reconheceu "Select" como uma entidade de ação.
     >
     > ![Module4Chapter4noteim](images/module4chapter4noteim.PNG)
 
-18. Agora, clique em "publicar" no canto superior direito. Verifique se o menu suspenso diz "produção" e clique em "publicar" também no pop-up.
+18. Clique em "publicar" no canto superior direito. Verifique se o menu suspenso diz "produção" e clique em "publicar" também no pop-up.
 
     ![Module4Chapter4step19im](images/module4chapter4step19im.PNG)
 
-19. Depois de publicado, uma barra verde deve aparecer na parte superior da página.  Clique na barra verde a ser levada para a página "gerenciar".
+19. Depois de publicado, uma barra verde deve aparecer na parte superior da página. Clique na barra verde para exibir a página "gerenciar".
 
     ![Module4Chapter4step20im](images/module4chapter4step20im.PNG)
 
@@ -138,7 +138,7 @@ Nesta lição, exploraremos o recurso de intenção do serviço de fala do Azure
     ![Module4Chapter4step22im](images/module4chapter4step22im.PNG)
 
     >[!NOTE]
-    >Certifique-se de copiar e salvar a URL do ponto de extremidade associada ao recurso que acabamos de atribuir para que ele seja facilmente acessível para a próxima seção.
+    >Certifique-se de copiar e salvar a URL do ponto de extremidade associada ao recurso que acabamos de atribuir, para que seja facilmente acessível para a próxima seção.
 
     >[!NOTE]
     >Para o nome do locatário, coloque sua corporação ou perfil que você criou para este aplicativo.
@@ -163,4 +163,4 @@ Nesta lição, exploraremos o recurso de intenção do serviço de fala do Azure
 
 ## <a name="congratulations"></a>Parabéns
 
-Nesta lição, aprendemos como adicionar comandos de fala baseados em ia! Agora, seu programa pode reconhecer a intenção dos usuários mesmo que eles não excedam comandos de voz precisos.
+Nesta lição, você aprendeu a adicionar comandos de fala baseados em ia. Agora seu programa pode reconhecer a intenção dos usuários, mesmo que eles não excedam comandos de voz precisos!
