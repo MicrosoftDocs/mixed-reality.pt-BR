@@ -6,12 +6,12 @@ ms.author: jlyons
 ms.date: 02/24/2019
 ms.topic: article
 keywords: Portal de dispositivos Windows, HoloLens
-ms.openlocfilehash: 972fe2e828a0a054925a45b4f6965c668f6da078
-ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
+ms.openlocfilehash: 9bb8116330d88c532b955ef497d29fe98c86fddb
+ms.sourcegitcommit: 8bf7f315ba17726c61fb2fa5a079b1b7fb0dd73f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926752"
+ms.lasthandoff: 12/17/2019
+ms.locfileid: "75182016"
 ---
 # <a name="using-the-windows-device-portal"></a>Usando o portal do dispositivo Windows
 
@@ -30,8 +30,8 @@ Esta documentação é especificamente sobre o portal de dispositivos do Windows
 ## <a name="setting-up-hololens-to-use-windows-device-portal"></a>Configurando o HoloLens para usar o portal de dispositivos do Windows
 
 1. Ligue seu HoloLens e coloque o dispositivo.
-2. Faça o gesto [bloom](system-gesture.md#bloom) para iniciar o menu principal.
-3. Olhar no bloco **configurações** e execute o gesto de [toque de ar](gaze-and-commit.md#composite-gestures) . Execute um segundo toque de ar para posicionar o aplicativo em seu ambiente. O aplicativo Configurações será iniciado depois disso.
+2. Execute o [gesto de início](https://docs.microsoft.com/hololens/hololens2-basic-usage#start-gesture) para HoloLens2 ou [flor](https://docs.microsoft.com/hololens/hololens1-basic-usage#open-the-start-menu-with-bloom) no HoloLens (1ª gen) para iniciar o menu principal. 
+3. Olhar no bloco **configurações** e execute o gesto de [toque aéreo](https://docs.microsoft.com/hololens/hololens1-basic-usage#select-holograms-with-gaze-and-air-tap) no hololens (1º gen) ou selecione-o no hololens 2 [tocando-o ou usando um raio de mão](https://docs.microsoft.com/hololens/hololens2-basic-usage). 
 4. Selecione item de menu **Atualização**.
 5. Selecione o item de menu **Para desenvolvedores**.
 6. Habilite o **Modo de Desenvolvedor**.

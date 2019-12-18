@@ -6,12 +6,12 @@ ms.author: cmeekhof
 ms.date: 10/22/2019
 ms.topic: article
 keywords: Realidade misturada, gestos, interação, design
-ms.openlocfilehash: 417811fff9d98e459dc0047d46ea065acfced4ef
-ms.sourcegitcommit: f2b7c6381006fab6d0472fcaa680ff7fb79954d6
+ms.openlocfilehash: 9cfee1104cb9b8135dae51bea73850062fadd25c
+ms.sourcegitcommit: 8bf7f315ba17726c61fb2fa5a079b1b7fb0dd73f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74064235"
+ms.lasthandoff: 12/17/2019
+ms.locfileid: "75181996"
 ---
 # <a name="system-gesture"></a>Gesto do sistema
 
@@ -33,7 +33,7 @@ O gesto do sistema é um gesto de mão usado para invocar o menu iniciar. É o e
         <td><a href="immersive-headset-hardware-details.md"><strong>Headsets imersivos</strong></a></td>
     </tr>
      <tr>
-        <td>Cair</td>
+        <td>Bloom</td>
         <td>✔️</td>
         <td>❌</td>
         <td>❌</td>
@@ -52,7 +52,7 @@ O gesto do sistema é um gesto de mão usado para invocar o menu iniciar. É o e
     </tr>
 </table>
 
-## <a name="bloom"></a>Cair
+## <a name="bloom"></a>Bloom
 Para abrir o menu iniciar no HoloLens (1º gen), projetamos "flor", que é um gesto simbólico imitando Blossom de flor. É distintivo para a interação Surefooted, fácil de executar e rápida de se recuperar. Para fazer o gesto de cair no HoloLens (1º gen), mantenha sua mão em dia com seu Palm para cima e, em seguida, abra sua mão distribuindo os dedos.
 
 :::row:::
@@ -70,7 +70,7 @@ Para abrir o menu iniciar no HoloLens (1º gen), projetamos "flor", que é um ge
 
 ---
 
-## <a name="wrist-button"></a>Botão do pulso
+## <a name="start-gesture"></a>Iniciar gesto
 No HoloLens 2, substituímos o gesto de cair com um botão de pulso virtual que permite interações mais instinctuals que não exigem ensino adicional. Ao mostrar os usuários o botão no pulso, eles podem acessá-lo intuitivamente e pressioná-lo com a outra mão.
 
 :::row:::
@@ -89,8 +89,15 @@ No HoloLens 2, substituímos o gesto de cair com um botão de pulso virtual que 
 ---
 
 
-## <a name="eye-gaze-and-palm-up-pinch"></a>Olho-olhar e Palm up pinçar
-Também projetamos uma solução única para facilitar o acesso no HoloLens 2. Esse gesto exige que os usuários olho olhar no botão do pulso e, em seguida, usam a mesma mão para realizar uma pinçagem para cima usando seu polegar e um dedo de índice.<br>
+## <a name="one-handed-start-gesture"></a>Gesto de início de uma mão
+
+> [!IMPORTANT]
+> Para que o gesto de início de uma mão funcione:
+>
+> 1. Você deve atualizar para a atualização de novembro de 2019 (Build 18363,1039) ou posterior.
+> 1. Seus olhos devem ser calibrados no dispositivo para que o acompanhamento de olho funcione corretamente. Se você não vir pontos de an-órbita em volta do ícone iniciar quando olhar para ele, seus olhos não serão calibrados no dispositivo.
+
+Você também pode executar o gesto de início com apenas uma mão. Para fazer isso, mantenha sua mão com seu Palm e veja o **ícone iniciar** no pulso interno. **Enquanto mantém seu olho no ícone**, aperte seu polegar e indexe o dedo em conjunto.<br>
 :::row:::
     :::column:::
         ![botão do punho pronto](images/wrist-button-ready.png)<br>
