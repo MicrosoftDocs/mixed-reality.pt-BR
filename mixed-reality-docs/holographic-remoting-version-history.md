@@ -6,17 +6,26 @@ ms.author: nopohl
 ms.date: 10/21/2019
 ms.topic: article
 keywords: HoloLens, comunicação remota e comunicação remota Holographic
-ms.openlocfilehash: 9ff6a5f7594eb67dd4c1c8690812ab724cac9012
-ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
+ms.openlocfilehash: f051dbf24cab550470a312933ffb99e1ba595257
+ms.sourcegitcommit: 8bf7f315ba17726c61fb2fa5a079b1b7fb0dd73f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926645"
+ms.lasthandoff: 12/17/2019
+ms.locfileid: "75181956"
 ---
 # <a name="holographic-remoting-version-history"></a>Histórico de versões de comunicação remota do Holographic
 
 > [!IMPORTANT]
 > Estas diretrizes são específicas para a comunicação remota do Holographic no HoloLens 2.
+
+## Versão 2.0.18.0 (17 de dezembro de 2019)<a name="v2.0.18"></a>
+* Adicionado suporte para HolographicViewConfiguration: https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicviewconfiguration
+* Correção de vários bugs que levam a falhas.
+* Corrigido o bug em que um retorno de chamada HolographicSpace. CameraAdded era necessário para um HolographicCamera ser aceito e exibido como uma câmera adicionada no HoloraphicFrame.
+
+## Versão 2.0.16 (11 de novembro de 2019)<a name="2.0.16"></a>
+* Correção de deadlock no controle de código QR.
+* Correção da exceção unhandeled devido à espera de bloqueio no thread principal.
 
 ## Versão 2.0.14 (26 de outubro de 2019)<a name="v2.0.14"></a>
 * Suporte para novas APIs PerceptionDevice (atualização de novembro de 2019 do Windows 10).
@@ -50,4 +59,4 @@ ms.locfileid: "73926645"
 * [Escrevendo um aplicativo de host de comunicação remota do Holographic](holographic-remoting-create-host.md)
 * [Solução de problemas e limitações de comunicação remota do Holographic](holographic-remoting-troubleshooting.md)
 * [Termos de licença de software de comunicação remota holográfica](https://docs.microsoft.com/legal/mixed-reality/microsoft-holographic-remoting-software-license-terms)
-* [Política de privacidade da Microsoft](https://go.microsoft.com/fwlink/?LinkId=521839)
+* [Política de Privacidade da Microsoft](https://go.microsoft.com/fwlink/?LinkId=521839)
