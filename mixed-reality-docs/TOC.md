@@ -64,10 +64,13 @@
 ## Elementos de UX
 ### [Visão geral](app-patterns-landingpage.md)
 ### Estilo
-#### [Cor, luz e materiais](color,-light-and-materials.md)
+#### [Cor, luz e materiais](color-light-and-materials.md)
 #### [Escala](scale.md)
-#### [Projeto de som espacial](spatial-sound-design.md)
 #### [Tipografia](typography.md)
+### som espacial
+#### [Projeto de som espacial](spatial-sound-design.md)
+#### [Estudo de caso: Holotour ](case-study-spatial-sound-design-for-holotour.md)
+#### [Estudo de caso: Roboraid](case-study-using-spatial-sound-in-roboraid.md)
 
 ### Controles e comportamentos
 #### [Cursores](cursors.md)
@@ -126,6 +129,12 @@
 ###### [3. Conectar vários usuários](mrlearning-sharing(photon)-ch3.md)
 ###### [4. Compartilhar movimentações de objeto com vários usuários](mrlearning-sharing(photon)-ch4.md)
 ###### [5. Integrar âncoras espaciais do Azure a uma experiência compartilhada](mrlearning-sharing(photon)-ch5.md)
+##### Tutoriais de áudio espacial
+###### [1. Adicionar áudio espacial em seu projeto](unity-spatial-audio-ch1.md)
+###### [2. Espacializar sons de interação de botão](unity-spatial-audio-ch2.md)
+###### [3. Espacializar áudio de um vídeo](unity-spatial-audio-ch3.md)
+###### [4. Habilitar e desabilitar o áudio espacial em tempo de execução](unity-spatial-audio-ch4.md)
+###### [5. Usar o reverb para adicionar distância ao áudio espacial](unity-spatial-audio-ch5.md)
 #### HoloLens (1º gen) aplicativos de exemplo de software livre
 ##### [Tabela periódica dos elementos](periodic-table-of-the-elements.md)
 ##### [Módulo lunar](lunar-module.md)
@@ -208,7 +217,7 @@
 #### [Mapeamento espacial](spatial-mapping-in-directx.md)
 #### [Reconhecimento de cena](scene-understanding-sdk.md)
 #### [Âncoras espaciais compartilhadas](shared-spatial-anchors-in-directx.md)
-#### [Entrada do teclado, mouse e controlador](keyboard,-mouse,-and-controller-input-in-directx.md)
+#### [Entrada do teclado, mouse e controlador](keyboard-mouse-and-controller-input-in-directx.md)
 #### [Usar o XAML com aplicativos holográficos](using-xaml-with-holographic-directx-apps.md)
 #### [Acompanhamento de código QR](qr-code-tracking.md)
 ### [Experiências compartilhadas em realidade misturada](shared-experiences-in-mixed-reality.md)
