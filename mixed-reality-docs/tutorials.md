@@ -8,22 +8,22 @@ ms.date: 10/22/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit-unity, academy, tutorial
-ms.openlocfilehash: 66246e33bfd1b63630c07005661a744f8939de47
-ms.sourcegitcommit: 83698638b93c5ba77b3ffc399f1706482539f27b
+ms.openlocfilehash: ebb40c6ae877ac167c7c16a67e08ef2501f6290d
+ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74539641"
+ms.lasthandoff: 12/24/2019
+ms.locfileid: "75334463"
 ---
 # <a name="tutorials-and-sample-apps"></a>Tutoriais e aplicativos de exemplo
 
 ![Usuário do HoloLens 2](images/08_Tutorials.png)
 
-Atualmente, todos os tutoriais e aplicativos de exemplo são baseados no Unity.  À medida que desenvolvermos conteúdo para outros mecanismos e outras plataformas, você os encontrará sob o título relevante no sumário.
+Atualmente, todos os tutoriais e aplicativos de exemplo são baseados no Unity. À medida que desenvolvermos conteúdo para outros mecanismos e outras plataformas, você os encontrará sob o título relevante no sumário.
 
 ## <a name="hololens-2-tutorials"></a>Tutoriais do HoloLens 2
 
-Os tutoriais do HoloLens 2 foram projetados para ajudar os desenvolvedores a aprender técnicas e melhores práticas para o desenvolvimento de aplicativos de realidade misturada.  Os tutoriais se baseiam no [MRTK 2.0 (Kit de Ferramentas de Realidade Misturada 2.0)](https://github.com/microsoft/MixedRealityToolkit-Unity).
+Os tutoriais do HoloLens 2 foram projetados para ajudar os desenvolvedores a aprender técnicas e melhores práticas para o desenvolvimento de aplicativos de realidade misturada. Os tutoriais se baseiam no [MRTK 2.0 (Kit de Ferramentas de Realidade Misturada 2.0)](https://github.com/microsoft/MixedRealityToolkit-Unity).
 
 * Tutoriais de introdução – [1 de 7 Visão geral e objetivos](mrlearning-base.md)
 * Tutoriais sobre as Âncoras Espaciais do Azure – [1 de 3 Introdução às Âncoras Espaciais do Azure](mrlearning-asa-ch1.md)
@@ -48,7 +48,7 @@ O Mixed Reality Academy é um conjunto de tutoriais passo a passo online com arq
 * Um computador Windows 10 com as [ferramentas corretas instaladas](install-the-tools.md) é um pré-requisito comum para concluir cada tutorial.
 
 >[!NOTE]
->Os tutoriais do Mixed Reality Academy foram projetados com o HoloLens (1ª geração) e os headsets imersivos de realidade misturada em mente.  Dessa forma, achamos que é importante continuar disponibilizando esses tutoriais para os desenvolvedores que ainda buscam obter diretrizes para o desenvolvimento visando esses dispositivos.  Esses tutoriais **_não_** serão atualizados com os conjuntos de ferramentas mais recentes nem com as interações usadas para o HoloLens 2.  Eles serão mantidos para continuar funcionando nos dispositivos compatíveis. [Uma nova série de tutoriais](mrlearning-base.md) foi postada para o HoloLens 2.
+>Os tutoriais do Mixed Reality Academy foram projetados com o HoloLens (1ª geração) e os headsets imersivos de realidade misturada em mente. Dessa forma, achamos que é importante continuar disponibilizando esses tutoriais para os desenvolvedores que ainda buscam obter diretrizes para o desenvolvimento visando esses dispositivos. Esses tutoriais **_não_** serão atualizados com os conjuntos de ferramentas mais recentes nem com as interações usadas para o HoloLens 2. Eles serão mantidos para continuar funcionando nos dispositivos compatíveis. [Uma nova série de tutoriais](mrlearning-base.md) foi postada para o HoloLens 2.
 
 <br>
 <ul id="cardtypes-W" class="cardsW panelContent" style="display: flex; margin-top: 0px;">
@@ -265,7 +265,7 @@ O Mixed Reality Academy é um conjunto de tutoriais passo a passo online com arq
 
 ## <a name="mixed-reality-and-azure-services-tutorials"></a>Tutoriais de Realidade Misturada e dos Serviços do Azure
 
-Esses tutoriais autônomos são ótimos para aprender a implementar diferentes serviços do Azure no projeto do Unity.  Eles se baseiam no HoloLens (1ª geração) ou em nossos headsets imersivos, mas as lições sobre como usar os serviços devem ser transferíveis para a maioria dos dispositivos.
+Esses tutoriais autônomos são ótimos para aprender a implementar diferentes serviços do Azure no projeto do Unity. Eles se baseiam no HoloLens (1ª geração) ou em nossos headsets imersivos, mas as lições sobre como usar os serviços devem ser transferíveis para a maioria dos dispositivos.
 
 <ul id="cardtypes-W" class="cardsW panelContent" style="display: flex; margin-top: 0px;">
     <li>
@@ -375,7 +375,7 @@ Esses tutoriais autônomos são ótimos para aprender a implementar diferentes s
                                           </div>
                                           <div class="cardText">
                                               <h3>MR e Azure 305: funções e armazenamento</h3>
-                                              <p>Neste curso, você aprenderá a criar e usar o Azure Functions, bem como armazenar dados no Armazenamento do Azure, em um aplicativo de realidade misturada.</p>
+                                              <p>Neste curso, você aprenderá a criar e usar o Azure Functions, bem como a armazenar dados no Armazenamento do Azure, em um aplicativo de realidade misturada.</p>
                                           </div>
                                       </div>
                                   </div>
@@ -413,7 +413,7 @@ Esses tutoriais autônomos são ótimos para aprender a implementar diferentes s
                                           </div>
                                           <div class="cardText">
                                               <h3>MR e Azure 307: Aprendizado de máquina</h3>
-                                              <p>Aproveite o Azure Machine Learning Studio no aplicativo de realidade misturada para implantar um grande número de algoritmos de ML (aprendizado de máquina).</p>
+                                              <p>Aproveite o Azure Machine Learning Studio (clássico) no aplicativo de realidade misturada para implantar um grande número de algoritmos de ML (aprendizado de máquina).</p>
                                           </div>
                                       </div>
                                   </div>

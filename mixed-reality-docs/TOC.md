@@ -3,14 +3,10 @@
 ## [Prepare seu aplicativo para HL2](mrtk-porting-guide.md)
 ## [Saiba mais sobre os Serviços do Azure](azure-services.md)
 ## Programas e eventos
-### [Mixed Reality Dev Days](mr-dev-days.md)
-#### [Sessões do Mixed Reality Dev Days](mr-dev-days-sessions.md)
-#### [Perguntas frequentes sobre o Mixed Reality Dev Days](mr-dev-days-faq.md)
 ### [Calendário de eventos do San Francisco Reactor Academy](sf-academy-events.md)
-### [Sessão de modo de pesquisa do HoloLens na CVPR 2018](cvpr-2018.md)
-### [HoloLens como uma ferramenta para pesquisa visual computacional na ECCV 2018](eccv-2018.md)
 ### [Workshop de Realidade Misturada na CVPR 2019](cvpr-2019.md)
 ## [Notas sobre a versão de realidade misturada atual](release-notes-may-2019.md)
+## [Recursos da comunidade](community.md)
 ## [Como colaborar com esta documentação](CONTRIBUTING.md)
 # Descobrir
 ## [Introdução à Realidade Misturada](index.md)
@@ -24,7 +20,8 @@
 ### [Como navegar na página inicial do Windows Mixed Reality](navigating-the-windows-mixed-reality-home.md)
 ### [Guia do entusiasta](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide)
 ### [Entretenimento baseado na localização](location-based-experiences.md)
-# Criar
+## [Recursos da comunidade](community.md)
+# Design
 ## [Comece a projetar e a criar protótipos](design.md)
 ## [Sobre a diretriz deste projeto](about-this-design-guidance.md)
 
@@ -75,7 +72,7 @@
 ### Controles e comportamentos
 #### [Cursores](cursors.md)
 #### [Raio de mão](point-and-commit.md)
-#### [Button](button.md)
+#### [Botão](button.md)
 #### [Objeto interativo](interactable-object.md)
 #### [Caixa delimitadora e barra de aplicativos](app-bar-and-bounding-box.md)
 #### [Manipulação](direct-manipulation.md)
@@ -86,7 +83,7 @@
 #### [Teclado](keyboard.md)
 #### [Dica de ferramenta](tooltip.md)
 #### [Slate](slate.md)
-#### [Slider](slider.md)
+#### [Controle deslizante](slider.md)
 #### [Sombreador](shader.md)
 #### [Mural e tag-along](billboarding-and-tag-along.md)
 #### [Exibindo o progresso](progress.md)

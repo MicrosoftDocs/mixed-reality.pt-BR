@@ -8,17 +8,17 @@ ms.date: 08/24/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Realidade Misturada, descobrir, distribuir, indexar, página de aterrissagem desenvolvimento, tutoriais, aplicativos de exemplo, conceitos básicos, estudos de caso, recursos, instruções sobre o HoloLens, projetos de software livre, principais conceitos, interação
-ms.openlocfilehash: 92af4ddba96f659f0af812672599d4a90bf00224
-ms.sourcegitcommit: 83698638b93c5ba77b3ffc399f1706482539f27b
+ms.openlocfilehash: 9ef408e1551e9f6c52a6c5fcf7df3123cc099c8c
+ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74539600"
+ms.lasthandoff: 12/24/2019
+ms.locfileid: "75334109"
 ---
 # <a name="start-designing-and-prototyping"></a>Comece a projetar e a criar protótipos
 
 
-![Arte de malha em 3D](images/03_Design.png)
+![resumo do design de realidade misturada](images/03_Design.png)
 
 ## <a name="expand-your-design-processcase-study-expanding-the-design-process-for-mixed-realitymd"></a>[Expanda seu processo de design](case-study-expanding-the-design-process-for-mixed-reality.md)
 
@@ -111,22 +111,22 @@ Saiba mais sobre os blocos de construção de interações espaciais e interface
 
 :::row:::   
     :::column:::    
-       [![Conheça o Unity](images/unity_logo.png)](https://learn.unity.com/)<br>
+       [![Conheça o Unity](images/Final_unity_logo.png)](https://learn.unity.com/)<br>
         **[Conheça o Unity](https://learn.unity.com/)**<br>
         Saiba como criar experiências interativas com o Unity. Aprenda fazendo, do começo ao fim.
     :::column-end:::    
     :::column:::    
-        [![MRTK (Kit de ferramentas de realidade misturada)](images/MRTK-small_logo.png)](https://github.com/Microsoft/MixedRealityToolkit-Unity)<br>
+        [![MRTK (Kit de ferramentas de realidade misturada)](images/Final_mrtk-small_logo.png)](https://github.com/Microsoft/MixedRealityToolkit-Unity)<br>
         **[MRTK (Kit de ferramentas de realidade misturada)](https://github.com/Microsoft/MixedRealityToolkit-Unity)**<br>  
         Com os blocos de construção de interface do usuário e a interação espacial, você pode iniciar o desenvolvimento e o design de realidade misturada com o Unity.   
     :::column-end:::
     :::column:::    
-        [![Laboratórios de Design de Realidade Misturada](images/MRDL_logo.png)](https://github.com/Microsoft/MRDL_Unity_PeriodicTable)<br>
+        [![Laboratórios de Design de Realidade Misturada](images/Final_mrdl_logo.png)](https://github.com/Microsoft/MRDL_Unity_PeriodicTable)<br>
         **[Laboratórios de Design de Realidade Misturada](https://github.com/Microsoft/MRDL_Unity_PeriodicTable)**<br>  
         Obtenha aplicativos de exemplo que mostram como usar os blocos de construção do MRTK para criar lindas experiências de realidade misturada.
     :::column-end:::        
     :::column:::    
-        [![Maquete da Microsoft](images/Maquette_logo.png)](https://www.maquette.ms/)<br>
+        [![Maquete da Microsoft](images/Final_maquette_logo.png)](https://www.maquette.ms/)<br>
         **[Maquete da Microsoft](https://www.maquette.ms/)**<br>  
         Design para VR. A Maquete da Microsoft torna a criação de protótipos especiais fácil, rápida e imersiva. 
     :::column-end:::    
@@ -142,7 +142,7 @@ Saiba mais sobre os blocos de construção de interações espaciais e interface
 
 :::row:::
     :::column:::
-       [![Noções básicas](images/icon-lightbulb.jpg)](index.md#understand-the-basics)<br>
+       [![Noções básicas](images/icon-lightbulb.png)](index.md#understand-the-basics)<br>
         **[Noções básicas](index.md#understand-the-basics)**<br>
         Entenda melhor o que define a realidade misturada e como ela está sendo usada.
     :::column-end:::
