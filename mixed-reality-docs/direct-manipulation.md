@@ -7,12 +7,12 @@ ms.date: 04/02/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Realidade Misturada, foco, direcionamento do foco, interação, design, mãos nas proximidades, HoloLens
-ms.openlocfilehash: e0b0e6273917df071f49eb0108039ebe204bbc12
-ms.sourcegitcommit: 781e47db2ca2f2c792c95e76ac309b44b3535555
+ms.openlocfilehash: d263c84d306a2ece3783c2e7fb0e3f599dec49eb
+ms.sourcegitcommit: 270ca09ec61e1153a83cf44942d7ba3783ef1805
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74105947"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75694170"
 ---
 # <a name="direct-manipulation-with-hands"></a>Manipulação direta com as mãos
 
@@ -178,14 +178,14 @@ Com uma ponta do dedo colidente, os usuários podem interagir com um componente 
 
 ## <a name="2d-slate-interaction"></a>Interação do slate 2D
 
-Um slate 2D é um contêiner holográfico que hospeda o conteúdo do aplicativo 2D, assim como um navegador da Web. O conceito de design para interagir com um slate 2D por meio da manipulação direta é aproveitar o modelo mental da interação com uma tela de toque física.
+Um [slate](slate.md) 2D é um contêiner holográfico usado para hospedar o conteúdo do aplicativo 2D, assim como um navegador da Web. O conceito de design para interagir com um slate 2D por meio da manipulação direta é aproveitar o modelo mental da interação com uma tela de toque física.
 
 ### <a name="to-interact-with-the-slate-contact"></a>Para interagir com o contato do slate
 
 :::row:::
     :::column:::
-       ![Toque](images/2d-slate-interaction-touch.jpg)<br>
-       **Toque**<br>
+       ![Tocar](images/2d-slate-interaction-touch.jpg)<br>
+       **Tocar**<br>
        Use o dedo indicador para pressionar um botão ou hiperlink.
     :::column-end:::
     :::column:::
@@ -210,8 +210,8 @@ Um slate 2D é um contêiner holográfico que hospeda o conteúdo do aplicativo 
        Movimente suas mãos para os cantos e bordas para revelar as funcionalidades de manipulação mais próximas. Segure a barra holográfica na parte superior do slate 2D, o que permite mover todo o slate.
     :::column-end:::
     :::column:::
-       ![Escala](images/manipulate-2d-slate-scale.jpg)<br>
-        **Escala**<br>
+       ![Dimensionar](images/manipulate-2d-slate-scale.jpg)<br>
+        **Dimensionar**<br>
         Segure as funcionalidades de manipulação e realize um dimensionamento uniforme utilizando as funcionalidades de canto.
     :::column-end:::
     :::column:::
@@ -246,8 +246,8 @@ A manipulação com base em funcionalidade permite manipular o objeto 3D por mei
         Os usuários podem segurar as funcionalidades de borda para girar.
     :::column-end:::
     :::column:::
-       ![Escala](images/3d-object-manipulation-scale.jpg)<br>
-       **Escala**<br>
+       ![Dimensionar](images/3d-object-manipulation-scale.jpg)<br>
+       **Dimensionar**<br>
        Os usuários podem segurar as funcionalidades de borda para dimensionar uniformemente.
     :::column-end:::
 :::row-end:::
@@ -283,7 +283,7 @@ Por exemplo, se nós incentivarmos o usuário a segurar um objeto ou um ponto de
         **Objeto médio**<br>
     :::column-end:::
     :::column:::
-       ![Escala](images/instinctual-gestures-largeobject.jpg)<br>
+       ![Dimensionar](images/instinctual-gestures-largeobject.jpg)<br>
        **Objeto grande**<br>
     :::column-end:::
 :::row-end:::
@@ -334,7 +334,7 @@ Com o **[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** , você
 
 ---
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 * [Focar com a cabeça e confirmar](gaze-and-commit.md)
 * [Apontar e confirmar com as mãos](point-and-commit.md)

@@ -7,12 +7,12 @@ ms.date: 04/05/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Realidade misturada, interação, design, HoloLens, mãos, à distância, apontar e confirmar
-ms.openlocfilehash: 77c596f5250240d436529e879434a8f508b06732
-ms.sourcegitcommit: 781e47db2ca2f2c792c95e76ac309b44b3535555
+ms.openlocfilehash: c7952338c6937e42889a08ee37f6ce8bc1bb9ad3
+ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74105991"
+ms.lasthandoff: 12/24/2019
+ms.locfileid: "75334063"
 ---
 # <a name="point-and-commit-with-hands"></a>Apontar e confirmar com as mãos
 
@@ -76,7 +76,7 @@ Esse comando gestual básico é disparado usando o polegar e o dedo indicador pa
 
 ## <a name="transition-between-near-and-far"></a>Transição entre próximo e distante
 
-Em vez de usar gestos específicos, como apontar com o dedo indicador, para direcionar o raio, projetamos o raio de modo a sair do centro da palma da mão, liberando e reservando os cinco dedos para gestos mais manipulativos, como pinçar e segurar. Com esse design, criamos um só modelo mental – o mesmo conjunto de gestos de mão é usado para uma interação próxima e distante. Você pode usar o mesmo gesto de captura para manipular objetos em distâncias diferentes. A invocação dos raios é automática e baseada na proximidade, conforme demonstrado a seguir:
+Em vez de usar gestos específicos, como "apontar com o dedo indicador", para direcionar o raio, projetamos o raio de modo a sair do centro da palma da mão, liberando e reservando os cinco dedos para gestos mais manipulativos, como pinçar e segurar. Com esse design, criamos um só modelo mental – o mesmo conjunto de gestos de mão é usado para uma interação próxima e distante. Você pode usar o mesmo gesto de captura para manipular objetos em distâncias diferentes. A invocação dos raios é automática e baseada na proximidade, conforme demonstrado a seguir:
 
 :::row:::
     :::column:::
@@ -147,7 +147,7 @@ Os usuários podem usar os raios de mão para apontar e revelar a caixa delimita
     :::column-end:::
     :::column:::
        ![Escala a distância da manipulação de objetos 3D](images/3d-object-manipulation-far-scale.jpg)<br>
-       **Escala**<br>
+       **Dimensionar**<br>
     :::column-end:::
 :::row-end:::
 
@@ -211,7 +211,7 @@ Por padrão, o MRTK fornece um raio de mão prefab([DefaultControllerPointer.pre
 
 ---
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 * [Manipulação direta com as mãos](direct-manipulation.md)
 * [Focar e confirmar](gaze-and-commit.md)
 * [Mãos – Manipulação direta](direct-manipulation.md)

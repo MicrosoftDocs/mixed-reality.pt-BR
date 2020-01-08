@@ -8,12 +8,12 @@ ms.date: 08/27/2019
 ms.topic: overview
 ms.localizationpriority: high
 keywords: Realidade misturada, desenvolver, desenvolvimento, HoloLens, unity, directx
-ms.openlocfilehash: 2c3416ffc1f3259c7be8f105a55427e3c29826fb
-ms.sourcegitcommit: 83698638b93c5ba77b3ffc399f1706482539f27b
+ms.openlocfilehash: 7b1a67f05941fc862ad3f36834efe071b0d1c57b
+ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74539583"
+ms.lasthandoff: 12/24/2019
+ms.locfileid: "75334254"
 ---
 # <a name="learn-the-tools-and-architecture"></a>Conheça as ferramentas e a arquitetura
 
@@ -130,7 +130,7 @@ Todos os conceitos básicos necessários de que você precisa para começar a es
 
 :::row:::
     :::column:::
-       [![Noções básicas](images/icon-lightbulb.jpg)](index.md#understand-the-basics)<br>
+       [![Noções básicas](images/icon-lightbulb.png)](index.md#understand-the-basics)<br>
         **[Noções básicas](index.md#understand-the-basics)**<br>
         Entenda melhor o que define a realidade misturada e como ela está sendo usada.
     :::column-end:::
