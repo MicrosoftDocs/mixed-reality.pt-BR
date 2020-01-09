@@ -6,12 +6,12 @@ ms.author: branbray
 ms.date: 03/21/2018
 ms.topic: article
 keywords: realidade misturada, Holographic, ar, VR, Sr, XR, realidade aumentada, realidade virtual, explicação
-ms.openlocfilehash: 65588902565ee0c5a1710f823311ccdecc23230e
-ms.sourcegitcommit: 83698638b93c5ba77b3ffc399f1706482539f27b
+ms.openlocfilehash: e3205590ce46e0fc9113421e0dbaeb87fe6bc0c2
+ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74539547"
+ms.lasthandoff: 12/24/2019
+ms.locfileid: "75334048"
 ---
 # <a name="what-is-mixed-reality"></a>O que é realidade misturada?
 
@@ -19,8 +19,8 @@ ms.locfileid: "74539547"
 
 A realidade misturada é o resultado da mistura do mundo físico com o mundo digital. A realidade misturada é a próxima evolução em interação humana, computacional e de ambiente e proporciona possibilidades que antes eram restritas à nossa imaginação. Isso é possível por avanços na pesquisa Visual computacional, na capacidade de processamento gráfico, na tecnologia de vídeo e nos sistemas de entrada. O termo *misto de realidade* foi introduzido originalmente em um papel de 1994 por Paul Milgram e Fumio Kishino, "[uma taxonomia de exibições visuais de realidade misturada](https://etclab.mie.utoronto.ca/people/paul_dir/IEICE94/ieice.html)". Seu documento introduziu o conceito do *continuidade de virtualização*e se concentrou em como a categorização de taxonomia é aplicada a exibições. Desde então, a aplicação da realidade misturada vai além dos monitores. Ele também inclui entrada ambiental, som espacial e local.
 
-![o espectro de realidade misturada](images/MixedRealitySpectrum-worlds.jpg)<br>
-*A realidade misturada é o resultado da combinação do mundo físico com o mundo digital.*
+![o espectro de realidade misturada](images/mixedrealityspectrum-worlds.png)<br>
+*Imagem: a realidade mista é o resultado da mesclagem do mundo físico com o mundo digital.*
 
 <br>
 
@@ -30,22 +30,16 @@ A realidade misturada é o resultado da mistura do mundo físico com o mundo dig
 
 Nas últimas décadas, a relação entre a entrada humana e a do computador foi bem explorada. Ele até mesmo tem uma disciplina amplamente estudada conhecida como *interação humana do computador* ou HCI. A entrada humana ocorre por meio de uma variedade de meios, incluindo teclados, mouses, toque, tinta, voz e até mesmo controle estrutural Kinect.
 
-Os avanços nos sensores e no processamento estão proporcionando aumento para uma nova área de entrada do computador de ambientes. A interação entre computadores e ambientes é efetivamente a compreensão ou *percepção*ambiental. Portanto, os nomes de API no Windows que revelam informações ambientais são chamados de [APIs de percepção](https://docs.microsoft.com/uwp/api/Windows.Perception). A entrada ambiental captura coisas como a posição de uma pessoa no mundo (por exemplo, [acompanhamento de cabeçalho](coordinate-systems.md)), superfícies e limites (por exemplo, [mapeamento espacial](spatial-mapping.md) e [compreensão da cena](scene-understanding.md)), iluminação ambiente, som ambiental, reconhecimento de objeto, e o local.
+Os avanços nos sensores e no processamento estão proporcionando aumento para uma nova área de entrada do computador de ambientes. A interação entre computadores e ambientes é efetivamente a compreensão ou *percepção*ambiental. Portanto, os nomes de API no Windows que revelam informações ambientais são chamados de [APIs de percepção](https://docs.microsoft.com/uwp/api/Windows.Perception). A entrada ambiental captura coisas como a posição de uma pessoa no mundo (por exemplo, [acompanhamento de cabeçalho](coordinate-systems.md)), superfícies e limites (por exemplo, [mapeamento espacial](spatial-mapping.md) e [compreensão da cena](scene-understanding.md)), iluminação ambiente, som ambiental, reconhecimento de objeto e local.
 
 <br>
 
+![diagrama de Venn mostrando interações entre computadores, seres humanos e ambientes](images/mixed-reality-venn-diagram-300px.png)<br>*imagem de  
+: as interações entre os computadores, os seres humanos e os ambientes.*
 
+<br>
 
-:::row:::
-    :::column:::
-        Agora, a combinação de todo o processamento de três**computadores, entrada humana e entrada ambiental**– define a oportunidade de criar experiências de realidade misturadas verdadeiras. A movimentação pelo mundo físico pode ser traduzida para o movimento no mundo digital. Os limites no mundo físico podem influenciar experiências de aplicativos, como jogos de jogo, no mundo digital. Sem a entrada ambiental, as experiências não podem misturar entre as realidades físicas e digitais.<br>
-        <br>
-        *Imagem: as interações entre os computadores, os seres humanos e os ambientes.*
-    :::column-end:::
-        :::column:::
-       ![Diagrama de Venn mostrando interações entre computadores, seres humanos e ambientes](images/mixed-reality-venn-diagram-300px.png)<br> 
-    :::column-end:::
-:::row-end:::
+Agora, a combinação de todo o processamento de três**computadores, entrada humana e entrada ambiental**– define a oportunidade de criar experiências de realidade misturadas verdadeiras. A movimentação pelo mundo físico pode ser traduzida para o movimento no mundo digital. Os limites no mundo físico podem influenciar experiências de aplicativos, como jogos de jogo, no mundo digital. Sem a entrada ambiental, as experiências não podem misturar entre as realidades físicas e digitais.<br>
 
 <br>
 
@@ -72,8 +66,8 @@ A maioria dos telefones celulares no mercado atualmente tem pouco ou nenhum recu
 
 <br>
 
-![o espectro de realidade misturada](images/MixedRealitySpectrum.jpg)<br>
-*O espectro de realidade misturada*
+![o espectro de realidade misturada](images/mixedrealityspectrum.png)<br>
+*Imagem: o espectro de realidade misturada*
 
 <br>
 
@@ -91,15 +85,17 @@ Há dois tipos principais de dispositivos que fornecem experiências do Windows 
 
 <table>
 <tr>
-<th width="20%"> Característica</th><th width="40%"> Dispositivos Holographic</th><th width="40%"> Dispositivos de imersão</th>
+<th width="30%"> Característica</th><th width="35%"> Dispositivos Holographic</th><th width="35%"> Dispositivos de imersão</th>
 </tr><tr>
-<td> Dispositivo de exemplo</td><td> Microsoft HoloLens<br /> <img alt="Microsoft HoloLens image" width="300" height="169" src="images/mshololens-hero1-whitbg-rgb-300px.png" /></td><td> Acer Windows Mixed Reality Development Edition<br /> <img alt="Acer Windows Mixed Reality Development Edition image" width="300" height="169" src="images/acer-windows-mixed-reality-development-edition-headset-300px.jpg" /></td>
+<td><strong>Dispositivo de exemplo</strong></td><td> Microsoft HoloLens<br><br> <img alt="Microsoft HoloLens 2 image" width="300" height="169" src="images/HoloLens2.jpg" /></td><td> Samsung HMD Odyssey +<br><br> <img alt="Samsung HMD Odyssey+ image" width="300" height="169" src="images/Samsung-HMD-Odyssey.jpg" /></td>
 </tr><tr>
-<td> Vídeo</td><td> <i>Exibição de visualização.</i> Permite que o usuário veja o ambiente físico ao gastar o headset.</td><td> <i>Exibição opaca.</i> Bloqueia o ambiente físico ao gastar o headset.</td>
+<td><strong>Exibir</strong></td><td> Exibição de visualização. Permite que o usuário veja o ambiente físico ao gastar o headset.</td><td> Exibição opaca. Bloqueia o ambiente físico ao gastar o headset.</td>
 </tr><tr>
-<td> Migração</td><td> Movimentação completa de seis graus de liberdade, rotação e conversão.</td><td> Movimentação completa de seis graus de liberdade, rotação e conversão.</td>
+<td><strong>Migração</strong></td><td> Movimentação completa de seis graus de liberdade, rotação e conversão.</td><td> Movimentação completa de seis graus de liberdade, rotação e conversão.</td>
 </tr>
 </table>
+
+
 
 Observe se um dispositivo está conectado ou de compartilhamento de Internet a um PC separado (via cabo USB ou Wi-Fi) ou autônomo (sem compartilhamento de Internet) não reflete se um dispositivo é Holographic ou envolvente. Certamente, os recursos que melhoram a mobilidade levam a experiências melhores, e os dispositivos Holographic e imersiva podem ser vinculados ou não são de compartilhamento de Internet.
 
@@ -108,8 +104,8 @@ O avanço tecnológico é o que habilitou experiências mistas de realidade. Atu
 
 <br>
 
-![tipos de dispositivo no espectro de realidade misturada](images/MixedRealitySpectrum-devices.jpg)<br>
-*Onde os dispositivos existem no espectro de realidade misturada*
+![tipos de dispositivo no espectro de realidade misturada](images/Final_WhatIsMixedReality07.png)<br>
+*Imagem: onde os dispositivos existem no espectro de realidade misturada*
 
 Geralmente, é melhor considerar o tipo de experiência que um desenvolvedor de aplicativo ou jogo deseja criar. Normalmente, as experiências visam um ponto específico ou parte do espectro. Em seguida, os desenvolvedores devem considerar os recursos dos dispositivos que desejam direcionar. Por exemplo, experiências que dependem do mundo físico serão executadas melhor no HoloLens.
 * **Em direção à esquerda (perto da realidade física).** Os usuários permanecem presentes em seu ambiente físico e nunca são feitos para acreditar que eles saíram desse ambiente.
@@ -117,7 +113,7 @@ Geralmente, é melhor considerar o tipo de experiência que um desenvolvedor de 
 * **Em direção à direita (quase a realidade digital).** Os usuários experimentam um ambiente completamente digital e não sabem o que ocorre no ambiente físico em relação a eles.
 
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 * [O que é um holograma?](hologram.md)
 * [Entenda os conceitos básicos da realidade misturada](index.md#understand-the-basics)

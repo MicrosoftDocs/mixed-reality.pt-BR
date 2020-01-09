@@ -6,19 +6,19 @@ ms.author: wguyman
 ms.date: 03/21/2018
 ms.topic: article
 keywords: foto, vídeo, hololens, câmera, Unity, localizável
-ms.openlocfilehash: f0183400f55b1c6663a9a20ab4992befe5ad0718
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: b4a1a7e11a7606dab76b954c8d58a335d6bae0ab
+ms.sourcegitcommit: d0da0214fdd2bbac5a91a5d895bf0e87413b29b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63515440"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75597609"
 ---
 # <a name="locatable-camera-in-unity"></a>Câmera localizável no Unity
 
 ## <a name="enabling-the-capability-for-photo-video-camera"></a>Habilitando o recurso de câmera de vídeo fotográfico
 
 A capacidade de "WebCam" deve ser declarada para que um aplicativo use a [câmera](locatable-camera.md).
-1. No editor do Unity, vá para as configurações do Player navegando para a página "Editar configurações do projeto > > Player"
+1. No editor do Unity, vá para as configurações do Player navegando até a página "Editar configurações do projeto > > Player"
 2. Clique na guia "Windows Store"
 3. Na seção "configurações de publicação > recursos", verifique os recursos de **webcam** e de **microfone**
 
@@ -26,12 +26,12 @@ Apenas uma única operação pode ocorrer com a câmera de cada vez. Para determ
 
 ## <a name="photo-capture"></a>Captura de fotos
 
-**Namespace:** *UnityEngine. XR. WSA. WebCam*<br>
-**Escreva** *Captura*
+**Namespace:** *UnityEngine. XR. WSA. webcam*<br>
+**Tipo:** o *Capture*
 
 O tipo de *captura* de imagem permite que você faça ainda fotografias com a câmera de vídeo de fotos. O padrão geral para usar o *Capture* para tirar uma foto é o seguinte:
-1. Criar um  objeto do pocapture
-2. Criar um  objeto cameraparameters com as configurações que desejamos
+1. Criar um objeto do *Pocapture*
+2. Crie um objeto *cameraparameters* com as configurações desejadas
 3. Iniciar o modo de foto via *StartPhotoModeAsync*
 4. Tirar a foto desejada
     * adicional Interagir com essa imagem
@@ -39,9 +39,9 @@ O tipo de *captura* de imagem permite que você faça ainda fotografias com a c�
 
 ### <a name="common-set-up-for-photocapture"></a>Configuração comum para o Capture
 
-Para todos os três usos, começamos com as mesmas primeiras 3 etapas acima
+Para todos os três usos, comece com as mesmas primeiras 3 etapas acima
 
-Começamos criando um objeto do *Pocapture*
+Comece criando um objeto do *Pocapture*
 
 ```cs
 PhotoCapture photoCaptureObject = null;
@@ -51,7 +51,7 @@ PhotoCapture photoCaptureObject = null;
    }
 ```
 
-Em seguida, armazenamos nosso objeto, definimos nossos parâmetros e iniciamos o modo de foto
+Em seguida, armazene seu objeto, defina seus parâmetros e inicie o modo de foto
 
 ```cs
 void OnPhotoCaptureCreated(PhotoCapture captureObject)
@@ -70,7 +70,7 @@ void OnPhotoCaptureCreated(PhotoCapture captureObject)
    }
 ```
 
-No final, também usaremos o mesmo código de limpeza apresentado aqui
+No final, você também usará o mesmo código de limpeza apresentado aqui
 
 ```cs
 void OnStoppedPhotoMode(PhotoCapture.PhotoCaptureResult result)
@@ -86,7 +86,7 @@ Após essas etapas, você pode escolher o tipo de foto a ser capturado.
 
 A operação mais simples é capturar uma foto diretamente em um arquivo. A foto pode ser salva como um JPG ou um PNG.
 
-Se o modo de foto for iniciado com êxito, vamos pegar uma foto e armazená-la em disco
+Se você iniciou o modo de foto com êxito, tire uma foto e armazene-a em disco
 
 ```cs
 private void OnPhotoModeStarted(PhotoCapture.PhotoCaptureResult result)
@@ -105,7 +105,7 @@ private void OnPhotoModeStarted(PhotoCapture.PhotoCaptureResult result)
    }
 ```
 
-Depois de capturar a foto para o disco, encerraremos o modo de foto e, em seguida, limparemos os objetos
+Depois de capturar a foto para o disco, saia do modo de foto e limpe os objetos
 
 ```cs
 void OnCapturedPhotoToDisk(PhotoCapture.PhotoCaptureResult result)
@@ -126,9 +126,9 @@ void OnCapturedPhotoToDisk(PhotoCapture.PhotoCaptureResult result)
 
 Ao capturar dados para um Texture2D, o processo é extremamente semelhante à captura para o disco.
 
-Seguiremos o processo de configuração acima.
+Siga o processo de configuração acima.
 
-No *OnPhotoModeStarted*, capturaremos um quadro na memória.
+No *OnPhotoModeStarted*, Capture um quadro na memória.
 
 ```cs
 private void OnPhotoModeStarted(PhotoCapture.PhotoCaptureResult result)
@@ -144,7 +144,7 @@ private void OnPhotoModeStarted(PhotoCapture.PhotoCaptureResult result)
    }
 ```
 
-Em seguida, aplicaremos o resultado a uma textura e usaremos o código de limpeza comum acima.
+Em seguida, você aplicará o resultado a uma textura e usará o código de limpeza comum acima.
 
 ```cs
 void OnCapturedPhotoToMemory(PhotoCapture.PhotoCaptureResult result, PhotoCaptureFrame photoCaptureFrame)
@@ -165,9 +165,9 @@ void OnCapturedPhotoToMemory(PhotoCapture.PhotoCaptureResult result, PhotoCaptur
 
 ### <a name="capture-a-photo-and-interact-with-the-raw-bytes"></a>Capture uma foto e interaja com os bytes brutos
 
-Para interagir com os bytes brutos de um quadro na memória, seguiremos as mesmas etapas de configuração acima e *OnPhotoModeStarted* como na captura de uma foto para um Texture2D. A diferença está em *OnCapturedPhotoToMemory* , onde podemos obter os bytes brutos e interagir com eles.
+Para interagir com os bytes brutos de um quadro na memória, siga as mesmas etapas de configuração descritas acima e *OnPhotoModeStarted* como em capturando uma foto para um Texture2D. A diferença está em *OnCapturedPhotoToMemory* , em que você pode obter os bytes brutos e interagir com eles.
 
-Neste exemplo, criaremos uma *lista<Color>*  que poderia ser processada ou aplicada a uma textura por meio de *setPixels ()*
+Neste exemplo, você criará uma *lista<Color>* que pode ser processada ou aplicada a uma textura por meio de *setPixels ()*
 
 ```cs
 void OnCapturedPhotoToMemory(PhotoCapture.PhotoCaptureResult result, PhotoCaptureFrame photoCaptureFrame)
@@ -202,18 +202,18 @@ void OnCapturedPhotoToMemory(PhotoCapture.PhotoCaptureResult result, PhotoCaptur
 
 ## <a name="video-capture"></a>Captura de vídeo
 
-**Namespace:** *UnityEngine. XR. WSA. WebCam*<br>
-**Escreva** *VideoCapture*
+**Namespace:** *UnityEngine. XR. WSA. webcam*<br>
+**Tipo:** *VideoCapture*
 
 O *VideoCapture* funciona de forma semelhante à do *Capture*. As duas únicas diferenças são que você deve especificar um valor de quadros por segundo (FPS) e só pode salvar diretamente no disco como um arquivo. mp4. As etapas para usar o *VideoCapture* são as seguintes:
 1. Criar um objeto *VideoCapture*
-2. Criar um  objeto cameraparameters com as configurações que desejamos
+2. Crie um objeto *cameraparameters* com as configurações desejadas
 3. Iniciar o modo de vídeo via *StartVideoModeAsync*
 4. Iniciar gravação de vídeo
 5. Parar de gravar vídeo
 6. Parar o modo de vídeo e limpar os recursos
 
-Começamos criando nosso objeto *VideoCapture* *VideoCapture m_VideoCapture = NULL;*
+Comece criando nosso objeto *VideoCapture* *VideoCapture m_VideoCapture = NULL;*
 
 ```cs
 void Start ()
@@ -222,7 +222,7 @@ void Start ()
    }
 ```
 
-Em seguida, vamos configurar os parâmetros que desejaremos para a gravação e o início.
+Em seguida, configure os parâmetros desejados para a gravação e o início.
 
 ```cs
 void OnVideoCaptureCreated (VideoCapture videoCapture)
@@ -252,7 +252,7 @@ void OnVideoCaptureCreated (VideoCapture videoCapture)
    }
 ```
 
-Depois de iniciado, começaremos a gravação
+Depois de iniciado, inicie a gravação
 
 ```cs
 void OnStartedVideoCaptureMode(VideoCapture.VideoCaptureResult result)
@@ -267,7 +267,7 @@ void OnStartedVideoCaptureMode(VideoCapture.VideoCaptureResult result)
    }
 ```
 
-Após o início da gravação, você pode atualizar sua interface do usuário ou comportamentos para habilitar a interrupção. Aqui, acabamos de fazer logon
+Após o início da gravação, você pode atualizar sua interface do usuário ou comportamentos para habilitar a interrupção. Aqui você acabou de fazer logon.
 
 ```cs
 void OnStartedRecordingVideo(VideoCapture.VideoCaptureResult result)
@@ -277,7 +277,7 @@ void OnStartedRecordingVideo(VideoCapture.VideoCaptureResult result)
    }
 ```
 
-Em um ponto posterior, queremos parar a gravação. Isso pode acontecer de uma entrada de temporizador ou de usuário, por exemplo.
+Em um ponto posterior, você desejará parar a gravação. Isso pode acontecer de uma entrada de temporizador ou de usuário, por exemplo.
 
 ```cs
 // The user has indicated to stop recording
@@ -287,7 +287,7 @@ Em um ponto posterior, queremos parar a gravação. Isso pode acontecer de uma e
    }
 ```
 
-Depois que a gravação for interrompida, interromperemos o modo de vídeo e limparemos nossos recursos.
+Depois que a gravação for interrompida, pare o modo de vídeo e limpe os recursos.
 
 ```cs
 void OnStoppedRecordingVideo(VideoCapture.VideoCaptureResult result)
@@ -303,9 +303,9 @@ void OnStoppedRecordingVideo(VideoCapture.VideoCaptureResult result)
    }
 ```
 
-## <a name="troubleshooting"></a>Solução de problemas
+## <a name="troubleshooting"></a>Painel de controle da
 * Não há resoluções disponíveis
     * Verifique se a capacidade de **webcam** está especificada no seu projeto.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 * [Câmera localizável](locatable-camera.md)

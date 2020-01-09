@@ -6,12 +6,12 @@ ms.author: randyw
 ms.date: 10/22/2019
 ms.topic: article
 keywords: nenhuma
-ms.openlocfilehash: b443e48f96b6fb978fdf487c6eea7e6c804c9e70
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 314d07292a679eefb22583d522ff9bd4182a0832
+ms.sourcegitcommit: 270ca09ec61e1153a83cf44942d7ba3783ef1805
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73439547"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75694010"
 ---
 # <a name="title-be-as-specific-as-possible-use-human-terms"></a>Título (seja o mais específico possível, use os termos humanos) 
 
@@ -38,7 +38,7 @@ ms.locfileid: "73439547"
 </tr>
 <tr>
      <td>Assunto ou título do artigo</td>
-     <td>❌ sem suporte</td>
+     <td>❌ Sem suporte</td>
      <td>✔️ Recomendado</td>
      <td>✔️ Recomendado</td>
 </tr>
@@ -192,7 +192,7 @@ Ação de foto de Nabis de área de pintura de campo de cores de fotolisação d
 
 Neo-impressionism de Brücke de ti de ponta de seres geográficos de ti Existentialism superplanada, neo-dada de ideal.
 
-| Alcance | Ângulo de exibição | Size |
+| Distância | Ângulo de exibição | Size |
 |---------|---------|---------|
 | 45cm  | Não é menor que 2 ° | 1,6 x 1,6 cm |
 
@@ -233,11 +233,8 @@ Defina iframe para largura = "940" altura = "530".
 
 ---
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 * [Nome do artigo 1 relacionado](design.md)
 * [Nome do artigo 2 relacionado](design.md)
-* [Nome do artigo 3 relacionado](design.md)
-
-
-
+* [Artigo relacionado 3 nome-link para uma seção específica](design.md#what-are-the-core-concepts-of-an-experience)

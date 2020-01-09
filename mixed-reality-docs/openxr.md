@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 7/29/2019
 ms.topic: article
 keywords: OpenXR, Khronos, BasicXRApp, Mixed Reality OpenXR Developer portal, DirectX, nativo, aplicativo nativo, mecanismo personalizado, middleware
-ms.openlocfilehash: aa91918e20b4276b7453bae1a05ad18df9d8ab0e
-ms.sourcegitcommit: 4d43a8f40e3132605cee9ece9229e67d985db645
+ms.openlocfilehash: 8140b9d3a9e1f4d2d7a25b77a48b39cb765cf6d9
+ms.sourcegitcommit: 270ca09ec61e1153a83cf44942d7ba3783ef1805
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74491136"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75694130"
 ---
 # <a name="openxr"></a>OpenXR
 
@@ -83,7 +83,7 @@ Depois de criar um pacote de aplicativo OpenXR UWP, você pode [implantar esse p
 
 Você pode ver um exemplo das práticas recomendadas abaixo no arquivo [OpenXRProgram. cpp](https://github.com/microsoft/OpenXR-SDK-VisualStudio/blob/master/samples/BasicXrApp/OpenXrProgram.cpp) do BasicXrApp. A função Run () no início captura um fluxo de código do aplicativo OpenXR típico da inicialização para o loop de evento e de renderização.
 
-### <a name="select-a-pixel-format"></a>Selecionar um formato de pixel
+### <a name="select-a-swapchain-format"></a>Selecionar um formato SwapChain
 
 Sempre enumere os formatos de pixel com suporte usando `xrEnumerateSwapchainFormats`e escolha a primeira cor e o formato de pixel de profundidade do tempo de execução ao qual o aplicativo dá suporte, porque é isso que o tempo de execução prefere. Observe que, no HoloLens 2, `DXGI_FORMAT_B8G8R8A8_UNORM_SRGB` e `DXGI_FORMAT_D16_UNORM` normalmente é a primeira opção para obter um melhor desempenho de renderização. Essa preferência pode ser diferente em headsets de VR em execução em um PC desktop.  
   
@@ -148,9 +148,7 @@ Isso manterá esse holograma independentemente estável ao longo do tempo.
 ### <a name="support-mixed-reality-capture"></a>Suporte à captura de realidade misturada
 
 Embora a exibição primária do HoloLens 2 Use a mistura de ambiente aditivo, quando o usuário inicia a [captura de realidade misturada](mixed-reality-capture-for-developers.md), o conteúdo de renderização do aplicativo será misturado com o fluxo de vídeo do ambiente.
-Para obter a melhor qualidade visual em vídeos de captura de realidade misturada, é melhor definir o `XR_COMPOSITION_LAYER_BLEND_TEXTURE_SOURCE_ALPHA_BIT` no `layerFlags`da camada de projeção.  
-
-**Aviso de desempenho:** A omissão do sinalizador de `XR_COMPOSITION_LAYER_BLEND_TEXTURE_SOURCE_ALPHA_BIT` na camada de projeção única resultará em pós-processamento do tempo de execução, o que resulta em uma penalidade de desempenho significativa.
+Para obter a melhor qualidade visual em vídeos de captura de realidade misturada, é melhor definir o `XR_COMPOSITION_LAYER_BLEND_TEXTURE_SOURCE_ALPHA_BIT` no `layerFlags`da camada de projeção.
 
 ### <a name="avoid-quad-layers"></a>Evitar camadas quádruplas
 
@@ -163,8 +161,7 @@ Em vez de enviar camadas quádruplas como camadas de composição com `XrComposi
 No HoloLens 2, há várias maneiras de enviar dados de composição por meio de `xrEndFrame`, o que resultará em pós-processamento que terá uma penalidade de desempenho perceptível.
 Para evitar o desempenho penalities, [envie um único `XrCompositionProjectionLayer`](#use-a-single-projection-layer) com as seguintes características:
 * [Usar uma matriz de textura SwapChain](#render-with-texture-array-and-vprt)
-* [Usar o formato SwapChain de cor primária](#select-a-pixel-format)
-* [Definir o sinalizador de mistura de origem da textura-fonte-alfa](#support-mixed-reality-capture)
+* [Usar o formato SwapChain de cor primária](#select-a-swapchain-format)
 * [Usar as dimensões de exibição recomendadas](#render-with-recommended-rendering-parameters-and-frame-timing)
 * Não definir o sinalizador de `XR_COMPOSITION_LAYER_UNPREMULTIPLIED_ALPHA_BIT`
 * Defina o `XrCompositionLayerDepthInfoKHR` `minDepth` como 0,0 f e `maxDepth` como 1,0 f
@@ -193,7 +190,7 @@ Ao final do ano, o tempo de execução do Windows Mixed Reality OpenXR dará sup
 
 Embora algumas dessas extensões possam ser iniciadas como extensões de MSFT específicas do fornecedor, a Microsoft e outros fornecedores de tempo de execução OpenXR estão trabalhando juntos para projetar extensões de extensão ou KHR de vários fornecedores para muitas dessas áreas de recursos.  Isso permitirá que o código que você escreve para esses recursos seja portável em fornecedores de tempo de execução, assim como na Especificação principal.
 
-## <a name="troubleshooting"></a>Solução de problemas
+## <a name="troubleshooting"></a>Painel de controle da
 
 Aqui estão algumas dicas de solução de problemas para o tempo de execução OpenXR do Windows Mixed Reality.  Se você tiver outras dúvidas sobre a <a href="https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html" target="_blank">especificação do OpenXR 1,0</a>, visite os <a href="https://community.khronos.org/c/openxr" target="_blank">fóruns do Khronos OpenXR</a> ou a <a href="https://khr.io/slack" target="_blank">margem de atraso #openxr canal</a>.
 
@@ -221,7 +218,7 @@ O item de menu "configurar OpenXR" pode não estar disponível se você tiver um
 
 Observe que o item de menu "set up OpenXR" não aparecerá se o tempo de execução do Windows Mixed Reality já estiver instalado e ativo.  Você pode instalar o [portal do desenvolvedor OpenXR da realidade mista](#getting-the-mixed-reality-openxr-developer-portal) para determinar o status atual do tempo de execução do OpenXR em seu sistema.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 * <a href="https://www.khronos.org/openxr/" target="_blank">Mais informações sobre o OpenXR</a>
 * <a href="https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html" target="_blank">Especificação do OpenXR 1,0</a>

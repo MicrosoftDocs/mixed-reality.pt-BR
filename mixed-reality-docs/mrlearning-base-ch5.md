@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realidade misturada, unity, tutorial, hololens
-ms.openlocfilehash: b740c463e3d73d5df9b996562e9ff0a1952703f0
-ms.sourcegitcommit: f2b7c6381006fab6d0472fcaa680ff7fb79954d6
+ms.openlocfilehash: 75a14697953026474d8ca00e6473145d7b12a482
+ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74064314"
+ms.lasthandoff: 12/24/2019
+ms.locfileid: "75334353"
 ---
 # <a name="6-exploring-advanced-input-options"></a>6. explorando opções de entrada avançadas
 
@@ -23,9 +23,7 @@ Neste tutorial, várias opções de entrada avançadas para o HoloLens 2 são ex
 - Usar mãos controladas para deslocar texturas e objetos 3D com mãos controladas
 - Aproveitar os recursos de acompanhamento de olho do HoloLens 2 para selecionar objetos
 
-## <a name="instructions"></a>Instruções
-
-### <a name="enabling-voice-commands"></a>Habilitando comandos de voz
+## <a name="enabling-voice-commands"></a>Habilitando comandos de voz
 
 Nesta seção, dois comandos de voz são implementados. Primeiro, a capacidade de alternar o painel de diagnóstico de taxa de quadros é introduzida dizendo "Toggle Diagnostics". Em segundo lugar, a capacidade de tocar um som com um comando de voz é explorada. Os perfis e as configurações do MRTK responsáveis pela configuração de comandos de voz são examinados primeiro.
 
@@ -108,7 +106,7 @@ Nesta seção, dois comandos de voz são implementados. Primeiro, a capacidade d
 
     ![Lesson5 Chapter1 Step16im](images/Lesson5_chapter1_step16im.PNG)
 
-### <a name="the-pan-gesture"></a>O gesto de panorâmica
+## <a name="the-pan-gesture"></a>O gesto de panorâmica
 
 Nesta seção, você aprenderá a usar o gesto de panorâmica. Isso é útil para rolar usando o dedo ou a mão para rolar pelo conteúdo. Você também pode usar o gesto de panorâmica para girar objetos, percorrer uma coleção de objetos 3D ou até mesmo para rolar uma interface do usuário 2D.
 
@@ -194,7 +192,7 @@ Nesta seção, você aprenderá a usar o gesto de panorâmica. Isso é útil par
 
     ![mrlearning-base-CH5-2-step10d. png](images/mrlearning-base-ch5-2-step10d.png)
 
-### <a name="eye-tracking"></a>Acompanhamento Ocular
+## <a name="eye-tracking"></a>Acompanhamento Ocular
 
 Nesta seção, exploraremos como habilitar o acompanhamento de olho em nossa demonstração. Nós vamos girar lentamente nossos itens de menu 3D quando estiverem sendo gazeddos com o olhar de olho. Também dispararemos um efeito divertido quando o item focado for selecionado.
 

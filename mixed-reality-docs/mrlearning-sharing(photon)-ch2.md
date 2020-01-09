@@ -6,25 +6,22 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realidade misturada, unity, tutorial, hololens
-ms.openlocfilehash: 750161ff4c52a7ab71869b3cb0f97197d4ad09f2
-ms.sourcegitcommit: 781e47db2ca2f2c792c95e76ac309b44b3535555
+ms.openlocfilehash: 6840bcc583fe3e42dcaa6f42e71098f4dbe76f4c
+ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74106055"
+ms.lasthandoff: 12/24/2019
+ms.locfileid: "75334316"
 ---
-# <a name="2-getting-unity-ready-for-development"></a>2. obtendo o Unity pronto para desenvolvimento 
-
+# <a name="2-getting-unity-ready-for-development"></a>2. obtendo o Unity pronto para desenvolvimento
 
 Neste tutorial, você aprenderá a preparar e configurar o Unity para o desenvolvimento de aplicativos, incluindo a importação do kit de ferramentas de realidade mista, a definição de configurações de compilação e a preparação de sua cena.
 
 ## <a name="objectives"></a>Objetivos
 
-- Configurar o Unity para o desenvolvimento de aplicativos
-
-- Importe o Kit de ferramentas de realidade misturada
-
-- Preparar a cena do projeto
+* Configurar o Unity para o desenvolvimento de aplicativos
+* Importe o Kit de ferramentas de realidade misturada
+* Preparar a cena do projeto
 
 ## <a name="instructions"></a>Instruções
 
@@ -32,51 +29,51 @@ Neste tutorial, você aprenderá a preparar e configurar o Unity para o desenvol
 
 2. No Unity, clique no menu ativos e selecione Importar pacote e, em seguida, clique em pacote personalizado.
 
-![Module3Chapter2step2im](images/module3chapter2step2im.PNG)
+    ![Module3Chapter2step2im](images/module3chapter2step2im.PNG)
 
 3. Selecione o pacote do Unity que você acabou de baixar do link fornecido na etapa 1. Depois que a janela pop-up importar aparecer no Unity, clique no botão importar para começar a importar o MRTK. Isso pode levar vários minutos.
 
-![Module3Chapter2step3im](images/module3chapter2step3im.PNG)
+    ![Module3Chapter2step3im](images/module3chapter2step3im.PNG)
 
-> Observação: o pacote baixado está em sua pasta local, em que você salvou o arquivo. A imagem acima não retrata onde você encontrará o pacote.
+    >[!NOTE]
+    >O pacote baixado está em sua pasta local, em que você salvou o arquivo. A imagem acima não retrata onde você encontrará o pacote.
 
 4. Crie uma nova cena. Isso pode ser feito clicando em arquivo e selecionando nova cena ". Salve-o como HLSharedProjectMain.
 
-> Observação: você pode receber um pop-up parecido com a imagem abaixo. Por enquanto, clique em não.
->
-> ![Module3Chapter2note1im](images/module3chapter2note1im.PNG)
+    Você pode receber um pop-up parecido com a imagem abaixo. Por enquanto, clique em não.
+    ![Module3Chapter2note1im](images/module3chapter2note1im.PNG)
 
 5. Em kit de ferramentas de realidade mista, clique em Adicionar à cena e configurar.
 
-![Module3Chapter2step5im](images/module3chapter2step5im.PNG)
+    ![Module3Chapter2step5im](images/module3chapter2step5im.PNG)
 
-6. Quando isso for concluído, um novo arquivo de configuração será exibido, dando a você a opção de personalizar o perfil. 
+6. Quando isso for concluído, um novo arquivo de configuração será exibido, dando a você a opção de personalizar o perfil.
 
-![Module2Chapter1step4ima](images/Module2Chapter1step4ima.PNG)
+    ![Module2Chapter1step4ima](images/Module2Chapter1step4ima.PNG)
 
 7. Selecione MRTK (Kit de ferramentas de realidade mista) na hierarquia. No painel Inspetor, procure o script Mixed Reality Toolkit e pressione o botão "copiar & Personalizar", conforme mostrado na figura abaixo.  Um pop aparecerá depois dessa e selecione a opção clonar no menu pop-up.
 
-![Module3Chapter2step6imc](images/module3chapter2step6imc.PNG)
+    ![Module3Chapter2step6imc](images/module3chapter2step6imc.PNG)
 
-![Module3Chapter2step6imd](images/module3chapter2step6imd.PNG)
+    ![Module3Chapter2step6imd](images/module3chapter2step6imd.PNG)
 
-7. Role para baixo e desmarque Habilitar o sistema de diagnóstico se desejar ocultar a janela de diagnóstico. É recomendável manter a janela de diagnóstico habilitada durante o desenvolvimento do aplicativo para monitorar o desempenho e, em seguida, desabilitá-lo durante as demonstrações de produção ou de aplicativo. 
+8. Role para baixo e desmarque Habilitar o sistema de diagnóstico se desejar ocultar a janela de diagnóstico. É recomendável manter a janela de diagnóstico habilitada durante o desenvolvimento do aplicativo para monitorar o desempenho e, em seguida, desabilitá-lo durante as demonstrações de produção ou de aplicativo. 
 
-![Module3Chapter2step7ima](images/module3chapter2step7ima.PNG)
+    ![Module3Chapter2step7ima](images/module3chapter2step7ima.PNG)
 
-8. Abra as configurações de Build pressionando Control + Shift + B ou indo para arquivo-> configurações de Build. Observe que o programa está definido atualmente na plataforma autônoma de PC, Mac e Linux. Para o desenvolvimento do HoloLens 2, defina a plataforma como Plataforma Universal do Windows. Selecione-o e clique em alternar plataforma.
+9. Abra as configurações de Build pressionando Control + Shift + B ou indo para arquivo-> configurações de Build. Observe que o programa está definido atualmente na plataforma autônoma de PC, Mac e Linux. Para o desenvolvimento do HoloLens 2, defina a plataforma como Plataforma Universal do Windows. Selecione-o e clique em alternar plataforma.
 
-![Module3Chapter2step8im](images/module3chapter2step8im.PNG)
+    ![Module3Chapter2step8im](images/module3chapter2step8im.PNG)
 
-9. Após a conclusão, clique na caixa chamada Add Open bastidores. Agora, acesse o painel Inspetor e verifique se a caixa de seleção à direita da realidade virtual com suporte (conforme mostrado na imagem abaixo) está marcada. Verifique também se a caixa de seleção ao lado de cenas/HLSharedProjectMain também está marcada, conforme mostrado na imagem abaixo.
+10. Após a conclusão, clique na caixa chamada Add Open bastidores. Agora, acesse o painel Inspetor e verifique se a caixa de seleção à direita da realidade virtual com suporte (conforme mostrado na imagem abaixo) está marcada. Verifique também se a caixa de seleção ao lado de cenas/HLSharedProjectMain também está marcada, conforme mostrado na imagem abaixo.
 
-![Module3Chapter2step9im](images/module3chapter2step9im.PNG)
+    ![Module3Chapter2step9im](images/module3chapter2step9im.PNG)
 
-10. Na seção Configurações de publicação no painel Inspetor, role para baixo até recursos e verifique se as seguintes caixas de seleção estão marcadas:
+11. Na seção Configurações de publicação no painel Inspetor, role para baixo até recursos e verifique se as seguintes caixas de seleção estão marcadas:
 
-![Module3Chapter2step9imb](images/module3chapter2step9imb.PNG)
+    ![Module3Chapter2step9imb](images/module3chapter2step9imb.PNG)
 
-11. Importe os pacotes personalizados listados:
+12. Importe os pacotes personalizados listados:
 
     a. [Unity. HoloLens2. GettingStarted. tutoriais. Asset. 2.1.0.0. unitypackage](https://github.com/microsoft/MixedRealityLearning/releases/download/getting-started-v2.1.0.0/Unity.HoloLens2.GettingStarted.Tutorials.Asset.2.1.0.0.unitypackage)
 
@@ -85,20 +82,18 @@ Neste tutorial, você aprenderá a preparar e configurar o Unity para o desenvol
     >[!TIP]
     >Se você tiver concluído os [tutoriais de introdução](mrlearning-base-ch1.md), talvez ainda tenha o pacote do Unity chamado _Unity. HoloLens2. gettingstarted. tutoriais. Asset. 2.1.0.0. unitypackage_ armazenado em seu computador. Nesse caso, você pode ignorar o download do ativo listado na etapa a acima.
 
-![Module3Chapter2step12im](images/module3chapter2step11im.PNG)
+    ![Module3Chapter2step12im](images/module3chapter2step11im.PNG)
 
-12. No painel projeto, vá para a pasta pré-fabricados. Nas etapas a seguir, você implementará algumas pré-fabricados na cena. Na pasta pré-fabricados, clique e arraste a janela pré-fabricado, depurar para a hierarquia. Quando terminar, salve o projeto clicando em arquivo e, em seguida, salve ou pressione Control + S.
+13. No painel projeto, vá para a pasta pré-fabricados. Nas etapas a seguir, você implementará algumas pré-fabricados na cena. Na pasta pré-fabricados, clique e arraste a janela pré-fabricado, depurar para a hierarquia. Quando terminar, salve o projeto clicando em arquivo e, em seguida, salve ou pressione Control + S.
 
-![Module3Chapter2step12im](images/module3chapter2step12im.PNG)
+    ![Module3Chapter2step12im](images/module3chapter2step12im.PNG)
 
-   > Observação: você pode notar que um pop-up aparece ao clicar no pré-fabricado, solicitando-lhe informações sobre o TMP Essentials. Clique em importar o TMP Essentials conforme necessário. Se essa janela pop-up for exibida, talvez seja necessário excluir o pré-fabricado de sua hierarquia e arrastá-lo novamente para a hierarquia para evitar possíveis erros relacionados a texto.
-   >
->![Module3Chapter2note2im](images/module3chapter2note2im.PNG)
+    Você pode observar que um pop-up aparece ao clicar no pré-fabricado, solicitando-lhe informações sobre o TMP Essentials. Clique em importar o TMP Essentials conforme necessário. Se essa janela pop-up for exibida, talvez seja necessário excluir o pré-fabricado de sua hierarquia e arrastá-lo novamente para a hierarquia para evitar possíveis erros relacionados a texto.
 
+    ![Module3Chapter2note2im](images/module3chapter2note2im.PNG)
 
 ## <a name="congratulations"></a>Parabéns
 
 Seu projeto de Unity agora está pronto para Photon. Nos próximos tutoriais, vamos criar essa cena e nosso projeto de Unity em direção a uma experiência compartilhada completa.
 
 [Próximo tutorial: 3. conectando vários usuários](mrlearning-sharing(photon)-ch3.md)
-

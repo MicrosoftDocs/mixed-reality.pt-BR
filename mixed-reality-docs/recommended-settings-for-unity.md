@@ -6,12 +6,12 @@ ms.author: trferrel
 ms.date: 03/26/2019
 ms.topic: article
 keywords: Unity, configurações, realidade misturada
-ms.openlocfilehash: 2f2f823fe7192bd92e038d58901cb7098d2f4d64
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 2ab7eb0f9a7e06506ef8c57103518d8ef0a775df
+ms.sourcegitcommit: d0da0214fdd2bbac5a91a5d895bf0e87413b29b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438107"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75597629"
 ---
 # <a name="recommended-settings-for-unity"></a>Configurações recomendadas para o Unity
 
@@ -68,31 +68,31 @@ Para habilitar esse recurso em seu projeto do Unity
 
 Além disso, é recomendável selecionar **profundidade de 16 bits** na configuração de **formato de profundidade** neste painel, especialmente para o desenvolvimento de HoloLens. A seleção de 16 bits em comparação a 24 bits reduzirá significativamente os requisitos de largura de banda, pois menos dados precisarão ser movidos/processados.
 
-Para que a plataforma Windows Mixed Reality Otimize a estabilidade do holograma, ela depende do buffer de profundidade para ser preciso e corresponder a qualquer holograma renderizado na tela. Portanto, com o compartilhamento de buffer de profundidade ativado, é importante ao renderizar a cor, além de renderizar a profundidade. No Unity, a maioria dos materiais opacos ou TransparentCutouts renderizará profundidade por padrão, mas os objetos de texto e transparente geralmente não renderizarão a profundidade, embora isso seja dependente de sombreador, etc.
+Para que a plataforma Windows Mixed Reality Otimize a estabilidade do holograma, ela depende do buffer de profundidade para ser preciso e corresponder a qualquer holograma renderizado na tela. Portanto, com o compartilhamento de buffer de profundidade ativado, é importante ao renderizar a cor, para também renderizar a profundidade. No Unity, a maioria dos materiais opacos ou TransparentCutouts renderizará profundidade por padrão, mas os objetos de texto e transparente geralmente não renderizarão a profundidade, embora isso seja dependente de sombreador, etc.
 
 Se estiver usando o [sombreador standard do kit de ferramentas do reality](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_release/Documentation/README_MRTKStandardShader.md), para renderizar a profundidade para objetos transparentes:
 
 1) Selecione o material transparente que está usando o sombreador padrão MRTK e abra a janela do editor de Inspetor
-2) Selecione o botão **corrigir agora** dentro do aviso de compartilhamento de buffer de profundidade. Isso também pode ser executado manualmente definindo o **modo de renderização** como **personalizado** e, em seguida, definir **modo** como **transparente** e, por fim, definir a **gravação de profundidade** como **on**
+2) Selecione o botão **corrigir agora** dentro do aviso de compartilhamento de buffer de profundidade. Isso também pode ser executado manualmente definindo o **modo de renderização** como **personalizado**; em seguida, defina **modo** como **transparente** e, por fim, defina a **gravação de profundidade** como **on**
 
 > [!IMPORTANT]
 > Os desenvolvedores devem ter cuidado com o combate ao Z ao alterar esses valores juntamente com as configurações de plano próximo/longe da câmera. O combate ao Z ocorre quando dois Gameobjects tentam renderizar para o mesmo pixel e devido a limitações na fidelidade do buffer de profundidade (ou seja, z Depth), Unity não pode distinguir qual objeto está na frente do outro. Os desenvolvedores notarão uma cintilação entre dois objetos de jogo à medida que eles *lutarem* pelo mesmo valor de profundidade z. Isso pode ser resolvido alternando para o formato de profundidade de 24 bits, pois haverá um intervalo maior de valores para cada objeto a ser calculado para a profundidade z da câmera.
 >
-> No entanto, é recomendável, especialmente para o desenvolvimento do HoloLens, modificar os planos próximos e distantes da câmera para um intervalo menor, em vez disso, mantendo o formato de profundidade de 16 bits. A profundidade z é mapeada de forma não linear para o intervalo de valores nos planos de câmera próximos e distantes. Isso pode ser modificado selecionando a *câmera principal* em sua cena e, em **Inspetor**, alterar os valores de **plano de recorte próximo & longe** para reduzir seu intervalo (ou seja, de 1000m para 100 ms ou outro valor x, etc.)
+> No entanto, é recomendável, especialmente para o desenvolvimento de HoloLens, modificar os planos próximos e distantes da câmera para um intervalo menor, em vez disso, manter o formato de profundidade de 16 bits. A profundidade z é mapeada de forma não linear para o intervalo de valores nos planos de câmera próximos e distantes. Isso pode ser modificado selecionando a *câmera principal* em sua cena e, em **Inspetor**, alterar os valores de **plano de recorte próximo & longe** para reduzir seu intervalo (ou seja, de 1000m para 100 ms ou outro valor x, etc.)
 
 >[!IMPORTANT]
 > [O Unity não cria um buffer de estêncil](https://docs.unity3d.com/ScriptReference/RenderTexture-depth.html) ao usar o formato de profundidade de 16 bits. Assim, alguns efeitos de interface do usuário do Unity e outros efeitos requeridos pelo estêncil não funcionarão a menos que o formato de profundidade de 24 bits esteja selecionado, o que criará um [buffer de estêncil de 8 bits](https://docs.unity3d.com/Manual/SL-Stencil.html).
 
 ### <a name="building-for-il2cpp"></a>Compilando para IL2CPP
 
-O Unity preteriu o suporte para o back-end de script do .NET e, portanto, recomenda que os desenvolvedores utilizem o **IL2CPP** para suas compilações UWP do Visual Studio. Embora isso traga várias vantagens, a criação de sua solução do Visual Studio a partir do Unity para **Il2CPP** pode ser significativamente mais lenta do que o antigo método .net. Portanto, é altamente recomendável seguir as práticas recomendadas para a criação de **IL2CPP** para economizar em tempo de iteração de desenvolvimento.
+O Unity preteriu o suporte para o back-end de script do .NET e, portanto, recomenda que os desenvolvedores utilizem o **IL2CPP** para suas compilações do Visual Studio UWP. Embora isso traga várias vantagens, a criação de sua solução do Visual Studio a partir do Unity para **Il2CPP** pode ser significativamente mais lenta do que o antigo método .net. Portanto, é altamente recomendável seguir as práticas recomendadas para a criação de **IL2CPP** para economizar em tempo de iteração de desenvolvimento.
 
 1) Aproveite a criação incremental criando seu projeto no mesmo diretório a cada vez, reutilizando os arquivos predefinidos ali
 2) Desabilitar verificações de software antimalware para seu projeto & criar pastas
    - Abra o **vírus & proteção contra ameaças** em seu aplicativo de configurações do Windows 10
    - Selecione **gerenciar configurações** em **vírus & ameaças proteção configurações**
    - Selecione **Adicionar ou remover exclusões** na seção **exclusões**
-   - Clique em **Adicionar uma exclusão** e selecione a pasta que contém o código do projeto do Unity e as saídas da compilação
+   - Clique em **Adicionar uma exclusão** e selecione a pasta que contém o código do projeto de Unity e as saídas de compilação
 3) Utilizar um SSD para compilação
 
 Leia [otimizando os tempos de compilação para IL2CPP](https://docs.unity3d.com/Manual/IL2CPP-OptimizingBuildTimes.html) para obter mais informações.
@@ -116,9 +116,9 @@ Para alternar a tela inicial do Holographic:
 
 |  Mostrar tela inicial do Unity  |  Imagem de abertura do Holographic  |  Comportamento |
 |----------|----------|----------|
-|  Em  |  Nenhuma  |  Mostre a tela inicial do Unity padrão por 5 segundos ou até que o aplicativo seja carregado, o que for maior. |
+|  Em  |  Não  |  Mostre a tela inicial do Unity padrão por 5 segundos ou até que o aplicativo seja carregado, o que for maior. |
 |  Em  |  Personalizado  |  Mostre a tela inicial personalizada por 5 segundos ou até que o aplicativo seja carregado, o que for maior. |
-|  Desligada  |  Nenhuma  |  Mostrar preto transparente (Nothing) até que o aplicativo seja carregado. |
+|  Desligada  |  Não  |  Mostrar preto transparente (Nothing) até que o aplicativo seja carregado. |
 |  Desligada  |  Personalizado  |  Mostre a tela inicial personalizada por 5 segundos ou até que o aplicativo seja carregado, o que for maior. |
 
 Leia a [documentação da tela inicial do Unity](https://docs.unity3d.com/Manual/class-PlayerSettingsSplashScreen.html) para obter mais informações.
@@ -141,7 +141,7 @@ Alguns aplicativos podem não exigir acompanhamento (por exemplo, [aplicativos s
 
 Para recusar o comportamento de pausa automática:
 
-1) Vá para **Editar** **configurações do projeto** > página > **Player**
+1) Vá para a página Editar **configurações do projeto** >  > **Player**
 2) Clique na guia **Windows Store** e abra a seção **imagem de abertura**
 3) Modifique a caixa de seleção **> do Windows Holographic na pausa de controle de perda e mostrar imagem** .
 
@@ -149,14 +149,14 @@ Para recusar o comportamento de pausa automática:
 
 Para definir o comportamento personalizado quando o rastreamento é perdido, manipule os [eventos de perda de controle](tracking-loss-in-unity.md)global.
 
-### <a name="capabilities"></a>Recursos
+### <a name="capabilities"></a>Capacidades
 
 Para que um aplicativo aproveite determinadas funcionalidades, ele deve declarar os recursos apropriados em seu manifesto. As declarações de manifesto podem ser feitas no Unity para que elas sejam incluídas em todas as exportações de projeto subsequentes.
 
 Os recursos podem ser habilitados para um aplicativo de realidade misturada:
 
 1) Vá para **Editar** **configurações do projeto** > página > **Player**
-2) Clique na guia **Windows Store** e abra a seção **configurações de publicação** e procure a lista de **recursos**
+2) Clique na guia **Windows Store** , abra a seção **configurações de publicação** e procure a lista de **recursos**
 
 Os recursos aplicáveis para habilitar as APIs comumente usadas para aplicativos Holographic são:
 <br>
@@ -169,7 +169,7 @@ Os recursos aplicáveis para habilitar as APIs comumente usadas para aplicativos
 |  Microfone  |  VideoCapture (ao capturar áudio), DictationRecognizer, GrammarRecognizer e KeywordRecognizer |
 |  InternetClient  |  DictationRecognizer (e para usar o criador de perfil do Unity) |
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 * [Visão geral do desenvolvimento do Unity](unity-development-overview.md)
 * [Noções básicas sobre o desempenho da Realidade Misturada](understanding-performance-for-mixed-reality.md)

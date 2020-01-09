@@ -1,29 +1,29 @@
 ---
 title: Dica de ferramenta
-description: ''
+description: Dica de ferramenta é uma breve descrição vinculada a outro controle ou objeto.
 author: cre8ivepark
 ms.author: dongpark
 ms.date: 11/01/2019
 ms.topic: article
 keywords: Realidade misturada, controles, interação, interface do usuário, UX
-ms.openlocfilehash: de9788a9b3d5fcaf1f06938100fb55a5ec60914b
-ms.sourcegitcommit: 17427d4d8c3723d53540f1b7f5bc061bba08c1d6
+ms.openlocfilehash: 3d5bbcf7edf5e876d76ffc7806e4dc07c6dfab84
+ms.sourcegitcommit: 270ca09ec61e1153a83cf44942d7ba3783ef1805
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2019
-ms.locfileid: "74143122"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75694110"
 ---
 # <a name="tooltip"></a>Dica de ferramenta
 
 ![Dica de ferramenta](images/UX/UX_Hero_Tooltip.jpg)
 
-As dicas de ferramenta geralmente são usadas para transmitir uma dica ou informações extras sobre a inspeção mais detalhada de um objeto. Dicas de ferramenta podem ser usadas para anotar objetos no ambiente físico.
+Dica de ferramenta é uma breve descrição vinculada a outro controle ou objeto. Eles são usados para transmitir uma dica ou informações extras após a inspeção mais detalhada. As dicas de ferramenta ajudam os usuários a entender objetos desconhecidos no ambiente físico que não são descritos diretamente. 
 
 <br>
 
 ---
 
-## <a name="tooltip-in-mrtkmixed-reality-toolkit-for-unity"></a>Dica de ferramenta em MRTK (Mixed Reality Toolkit) para Unity
+## <a name="tooltip-in-mrtk-mixed-reality-toolkit-for-unity"></a>Dica de ferramenta em MRTK (Mixed Reality Toolkit) para Unity
 
 * [MRTK-dica de ferramenta](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Tooltip.html)
 
@@ -31,23 +31,23 @@ As dicas de ferramenta geralmente são usadas para transmitir uma dica ou inform
 
 ---
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 * [Cursores](cursors.md)
-* [Raio da mão](point-and-commit.md)
-* [Button](button.md)
+* [Raio de mão](point-and-commit.md)
+* [Botão](button.md)
 * [Objeto interativo](interactable-object.md)
 * [Caixa delimitadora e barra de aplicativos](app-bar-and-bounding-box.md)
-* [Manusei](direct-manipulation.md)
+* [Manipulação](direct-manipulation.md)
 * [Menu lateral](hand-menu.md)
 * [Menu próximo](near-menu.md)
 * [Coleção de objetos](object-collection.md)
 * [Comando de voz](voice-input.md)
 * [Teclado](keyboard.md)
-* [Dessa](tooltip.md)
+* [Dica de ferramenta](tooltip.md)
 * [Slate](slate.md)
-* [Slider](slider.md)
-* [Shader](shader.md)
+* [Controle deslizante](slider.md)
+* [Sombreador](shader.md)
 * [Mural e tag-along](billboarding-and-tag-along.md)
 * [Exibindo o progresso](progress.md)
-* [Magnetism Surface](surface-magnetism.md)
+* [Magnetismo de superfície](surface-magnetism.md)

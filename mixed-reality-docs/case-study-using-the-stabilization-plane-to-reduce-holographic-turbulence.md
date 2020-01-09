@@ -6,12 +6,12 @@ ms.author: bestruku
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Realidade mista do Windows, hologramas, estabilização, estudo de caso
-ms.openlocfilehash: d31f3128ba10d6fc7bd57f3068db3dd16b23f901
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 039b8f671f02a27393c30c7954cf0e2925635ad0
+ms.sourcegitcommit: d0da0214fdd2bbac5a91a5d895bf0e87413b29b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73436437"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75597649"
 ---
 # <a name="case-study---using-the-stabilization-plane-to-reduce-holographic-turbulence"></a>Estudo de caso-usando o plano de estabilização para reduzir Holographic turbulência
 
@@ -65,7 +65,7 @@ Fragmentos e jovens de Conker também criam um design para você se afastar muit
 
 ## <a name="do-it-yourself"></a>Faça você mesmo
 
-Se você tiver um HoloLens e quiser brincar com os conceitos discutidos, poderá baixar uma cena de teste e experimentar os exercícios abaixo. Ele usa a API Gizmo interna do Unity e ele deve ajudá-lo a visualizar onde seu plano está sendo definido. Esse código também foi usado para capturar as capturas de tela nesse estudo de caso.
+Se você tiver um HoloLens e quiser brincar com os conceitos neste artigo, poderá baixar uma cena de teste e experimentar os exercícios abaixo. Ele usa a API Gizmo interna do Unity e deve ajudá-lo a visualizar onde seu plano está sendo definido. Esse código também foi usado para capturar as capturas de tela nesse estudo de caso.
 1. Sincronize a versão mais recente do [MixedRealityToolkit-Unity](https://github.com/Microsoft/MixedRealityToolkit-Unity).
 2. Abra a cena [HoloToolkit-examples/Utilities/cenas/StabilizationPlaneSetting. Unity](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit-Examples/Utilities/Scenes/StabilizationPlaneSetting.unity) .
 3. Crie e configure o projeto gerado.
@@ -73,17 +73,17 @@ Se você tiver um HoloLens e quiser brincar com os conceitos discutidos, poderá
 
 ### <a name="exercise-1"></a>Exercício 1
 
-Você verá vários pontos brancos em orientações diferentes. Na frente de você, você verá três pontos em diferentes profundidades. Toque de ar para alterar a qual ponto o plano está definido. Para este exercício e para os outros dois, mova-se pelo seu espaço enquanto nuvens nos pontos. Transforme seu cabeçalho à esquerda, à direita, acima e abaixo. Aproxime-se e pai dos pontos. Veja como eles reagem quando o plano de estabilização é definido como destinos diferentes.
+Você verá vários pontos brancos em orientações diferentes. Na frente de você, você verá três pontos em diferentes profundidades. Toque de ar para alterar a qual ponto o plano está definido. Para este exercício e para os outros dois, mova-se pelo seu espaço enquanto nuvens nos pontos. Transforme seu cabeçalho à esquerda, à direita, acima e abaixo. Mova-se mais para cima e para longe dos pontos. Veja como eles reagem quando o plano de estabilização é definido como destinos diferentes.
 
 ### <a name="exercise-2"></a>Exercício 2
 
-Agora, mude para a direita até ver dois pontos de movimentação, um oscillating em um caminho horizontal e outro em um caminho vertical. Mais uma vez, toque em ar para alterar a qual ponto o plano está definido. Observe como a separação de cores é reduzida aparece no ponto que está conectado ao plano. Toque novamente para usar a velocidade do ponto na função de configuração do plano. Esse parâmetro fornece uma dica para o HoloLens sobre o movimento pretendido do objeto. É importante saber quando usar isso, como você observará quando a velocidade é usada em um ponto, o outro ponto de movimentação mostrará uma separação de cores maior. Tenha isso em mente ao projetar seus aplicativos – ter um fluxo coeso para o movimento de seus objetos pode ajudar a evitar que os artefatos sejam exibidos.
+Agora, mude para a direita até ver dois pontos de movimentação, um oscillating em um caminho horizontal e outro em um caminho vertical. Mais uma vez, toque em ar para alterar a qual ponto o plano está definido. Observe como a separação de cores é reduzida e aparece no ponto que está conectado ao plano. Toque novamente para usar a velocidade do ponto na função de configuração do plano. Esse parâmetro fornece uma dica para o HoloLens sobre o movimento pretendido do objeto. É importante saber quando usar isso, como você observará quando a velocidade é usada em um ponto, o outro ponto de movimentação mostrará uma separação de cores maior. Tenha isso em mente ao projetar seus aplicativos – ter um fluxo coeso para o movimento de seus objetos pode ajudar a evitar que os artefatos sejam exibidos.
 
 ### <a name="exercise-3"></a>Exercício 3
 
 Vá para o seu direito mais uma vez até ver uma nova configuração de pontos. Nesse caso, há pontos na distância e um ponto em espiral e escapados na frente deles. Toque de ar para alterar a qual ponto o plano está definido, alternando entre os pontos na parte de trás e o ponto em movimento. Observe como definir a posição do plano e a velocidade para aquela do ponto de espiral faz com que os artefatos apareçam em qualquer lugar.
 
-**Sobre**
+**Dicas**
 * Mantenha a lógica de configuração do plano simples. Como vimos, você não precisa de algoritmos de configuração de plano complexos para fazer uma experiência de imersão. O plano de estabilização é apenas uma peça do quebra-cabeça.
 * Quando possível, sempre mova o plano entre destinos sem problemas. A troca instantânea de destinos distantes pode interromper visualmente a cena.
 * Considere ter uma opção em sua lógica de configuração de plano para bloquear em um destino muito específico. Dessa forma, você pode ter o plano bloqueado em um objeto, como uma tela de logotipo ou de título, se necessário.
@@ -97,7 +97,7 @@ Vá para o seu direito mais uma vez até ver uma nova configuração de pontos. 
 </tr>
 </table>
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 * [Sr noções básicas 100: introdução ao Unity](holograms-100.md)
 * [Ponto de foco no Unity](focus-point-in-unity.md)
 * [Estabilidade do holograma](hologram-stability.md)

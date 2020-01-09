@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realidade misturada, unity, tutorial, hololens
-ms.openlocfilehash: 19456a9cc33dc86b1e31323547aa2685949d8044
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: a311fbe377e4a2654c8905276417cf1104fc4754
+ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438392"
+ms.lasthandoff: 12/24/2019
+ms.locfileid: "75334344"
 ---
 # <a name="1-overview-and-objectives"></a>1. visão geral e objetivos
 
@@ -46,5 +46,8 @@ ms.locfileid: "73438392"
 * SDK do Windows 10 10.0.18362.0 ou posterior
 * Alguma capacidade C# básica de programação
 * Um dispositivo HoloLens 2 [configurado para desenvolvimento](using-visual-studio.md#enabling-developer-mode)
+
+>[!IMPORTANT]
+>Esta série de tutoriais requer o <a href="https://unity3d.com/get-unity/download/archive" target="_blank">unity 2019,1</a> e a versão recomendada é o Unity 2019.1.14. Isso substitui quaisquer requisitos de versão do Unity ou recomendações indicadas nos pré-requisitos vinculados acima.
 
 [Próxima lição: 2. inicializando o projeto e o primeiro aplicativo](mrlearning-base-ch1.md)

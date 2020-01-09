@@ -1,19 +1,19 @@
 ---
-title: Controladores de movimento
+title: controladores de movimentos
 description: Detalhes sobre os controladores de movimento de realidade misturada.
 author: wguyman
 ms.author: wguyman
 ms.date: 03/21/2018
 ms.topic: article
 keywords: controladores de 6DOF, controladores de movimento
-ms.openlocfilehash: 84ebc6c0d7c63e58346b6ee9e565811bc40571b5
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: e4b3946401bcc9abfcefeb3e33bb79f01526ba20
+ms.sourcegitcommit: d0da0214fdd2bbac5a91a5d895bf0e87413b29b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437843"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75597669"
 ---
-# <a name="motion-controllers"></a>Controladores de movimento
+# <a name="motion-controllers"></a>controladores de movimentos
 
 :::row:::
     :::column:::
@@ -46,7 +46,7 @@ ms.locfileid: "73437843"
      <td><a href="immersive-headset-hardware-details.md"><strong>Headsets imersivos</strong></a></td>
 </tr>
 <tr>
-     <td>Controladores de movimento</td>
+     <td>controladores de movimentos</td>
      <td>❌</td>
      <td>❌</td>
      <td>✔️</td>
@@ -62,7 +62,7 @@ Os controladores de movimento de realidade mista do Windows oferecem acompanhame
 ![conhecer seu controlador](images/controllerimage-750px.png)<br>
 *Conheça seu controlador*
 
-**Features**
+**Recursos:**
 * Rastreamento óptico
 * Disparador
 * Botão de captura
@@ -73,7 +73,7 @@ Os controladores de movimento de realidade mista do Windows oferecem acompanhame
 
 ### <a name="before-you-begin"></a>Antes de começar
 
-**Será necessário:**
+**Você precisará de:**
 * Um conjunto de dois controladores de movimento.
 * Quatro baterias AA.
 * Um PC capaz de Bluetooth 4,0.
@@ -87,7 +87,7 @@ Os controladores de movimento de realidade mista do Windows oferecem acompanhame
 Os controladores de movimento podem ser acoplados ao computador host usando as configurações do Windows como qualquer outro dispositivo Bluetooth.
 
 1. Insira 2 baterias AA na parte traseira do controlador. Deixe a tampa da bateria desativada por enquanto.
-2. Se você estiver usando um adaptador Bluetooth USB externo em vez de um rádio Bluetooth interno, examine as [práticas recomendadas do Bluetooth](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/troubleshooting-windows-mixed-reality#bluetooth-best-practices) antes de continuar. Para configuração de desktop com rádio interno, verifique se a antena está conectada.
+2. Se você estiver usando um adaptador USB Bluetooth externo em vez de um rádio Bluetooth interno, examine as [práticas recomendadas do Bluetooth](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/troubleshooting-windows-mixed-reality#bluetooth-best-practices) antes de continuar. Para configuração de desktop com rádio interno, verifique se a antena está conectada.
 3. Abra **as configurações do Windows** -> **dispositivos** -> **adicionar Bluetooth ou outro dispositivo** -> **Bluetooth** e remova as instâncias anteriores de "controlador de movimento – direita" e "controlador de movimento – à esquerda". Verifique também a categoria outros dispositivos na parte inferior da lista.
 4. Selecione **Adicionar Bluetooth ou outro dispositivo** e veja se ele está começando a descobrir dispositivos Bluetooth.
 5. Pressione e segure o botão do Windows do controlador para ligar o controlador e solte-o quando ele for repercussão.
@@ -112,7 +112,7 @@ Os controladores de movimento podem ser acoplados ao computador host usando as c
 
 :::row:::
     :::column:::
-        Depois de emparelhar os dois controladores com êxito, suas configurações devem ter a seguinte aparência na **categoria "mouse, teclado, & caneta"** <br>
+        Depois de emparelhar os dois controladores com êxito, suas configurações devem ser semelhantes às seguintes, na **categoria "mouse, teclado, & caneta"** <br>
         <br>
         *Imagem: controladores de movimento conectados*
     :::column-end:::
@@ -121,7 +121,7 @@ Os controladores de movimento podem ser acoplados ao computador host usando as c
     :::column-end:::
 :::row-end:::
 
-Se os controladores estiverem desativados após o emparelhamento, seu status será exibido como emparelhado. Se os controladores permanecerem permanentemente sob "outros dispositivos", o emparelhamento de categoria pode ter sido apenas parcialmente concluído e precisa ser executado novamente para que o controlador fique funcional.
+Se os controladores estiverem desativados após o emparelhamento, seu status será exibido como emparelhado. Se os controladores permanecerem permanentemente sob a categoria "outros dispositivos", o emparelhamento pode ter sido apenas parcialmente concluído e precisa ser executado novamente para que o controlador fique funcional.
 
 ### <a name="updating-controller-firmware"></a>Atualizando firmware do controlador
 
@@ -146,11 +146,11 @@ Se os controladores estiverem desativados após o emparelhamento, seu status ser
 
 ## <a name="gazing-and-pointing"></a>Nuvens e apontando
 
-O Windows Mixed Reality dá suporte a dois modelos principais para interação, **olhar e confirmação** e **ponto e confirmação**:
+O Windows Mixed Reality dá suporte a dois modelos principais para interação; **olhar e commit** e Begin e **Commit**:
 * Com **olhar e commit**, os usuários direcionam um objeto com seus [olhar](gaze-and-commit.md) e, em seguida, selecionam objetos com toques de ar à mão, um gamepad, um selecionador ou sua voz.
 * Com o **ponto e a confirmação**, um usuário pode direcionar um controlador de movimento com capacidade para apontar no objeto de destino e, em seguida, selecionar objetos com o gatilho do controlador.
 
-Os aplicativos que dão suporte aos controladores de movimento também devem habilitar as interações controladas por olhar sempre que possível, para dar aos usuários a opção de quais dispositivos de entrada eles usam.
+Os aplicativos que dão suporte ao uso de controladores de movimento também devem habilitar as interações controladas por olhar sempre que possível, para dar aos usuários uma opção de quais dispositivos de entrada eles usam.
 
 ### <a name="managing-recoil-when-pointing"></a>Gerenciando a rebobinação ao apontar
 
@@ -162,7 +162,7 @@ Para gerenciar tal rebobinação que pode ocorrer quando os usuários puxam o ga
 
 O Windows Mixed Reality dá suporte a controladores de movimento em uma variedade de fatores forma, sendo que o design de cada controlador difere em sua relação entre a posição da mão do usuário e a direção natural "encaminhar" que os aplicativos devem usar para apontar ao renderizar o controle.
 
-Para representar melhor esses controladores, há dois tipos de poses que você pode investigar para cada origem de interação, a **pose de alça** e a pose do **ponteiro**.
+Para representar melhor esses controladores, há dois tipos de poses que você pode investigar para cada fonte de interação; a pose de **alça** e a **pose do ponteiro**.
 
 ### <a name="grip-pose"></a>Segurar pose
 
@@ -203,9 +203,9 @@ Os aplicativos que desejam tratar as posições de forma diferente com base no e
 <tr>
 <th> Estado de acompanhamento </th><th> SourceLossRisk </th><th> PositionAccuracy </th><th> TryGetPosition</th>
 </tr><tr>
-<td> <b>Alta precisão</b> </td><td style="background-color: green; color: white"> &lt; 1,0 </td><td style="background-color: green; color: white"> Alto </td><td style="background-color: green; color: white"> verdadeiro</td>
+<td> <b>Alta precisão</b> </td><td style="background-color: green; color: white"> &lt; 1,0 </td><td style="background-color: green; color: white"> Alta </td><td style="background-color: green; color: white"> verdadeiro</td>
 </tr><tr>
-<td> <b>Alta precisão (com risco de perda)</b> </td><td style="background-color: orange"> = = 1,0 </td><td style="background-color: green; color: white"> Alto </td><td style="background-color: green; color: white"> verdadeiro</td>
+<td> <b>Alta precisão (com risco de perda)</b> </td><td style="background-color: orange"> = = 1,0 </td><td style="background-color: green; color: white"> Alta </td><td style="background-color: green; color: white"> verdadeiro</td>
 </tr><tr>
 <td> <b>Precisão aproximada</b> </td><td style="background-color: orange"> = = 1,0 </td><td style="background-color: orange"> Aproximado </td><td style="background-color: green; color: white"> verdadeiro</td>
 </tr><tr>
@@ -224,12 +224,12 @@ Esses Estados de acompanhamento do controlador de movimento são definidos da se
 ## <a name="interactions-low-level-spatial-input"></a>Interações: entrada espacial de nível baixo
 
 As interações principais entre os controladores de mãos e de movimento são **Select**, **menu**, **Segure**, **Touchpad**, **Thumbstick**e **Home**.
-* **Select** é a principal interação para ativar um holograma, que consiste em uma prensa seguida por uma versão. Para os controladores de movimento, você executa uma operação SELECT usando o gatilho do controlador. Outras maneiras de executar uma seleção são falando sobre o [comando de voz](voice-input.md) "Select". A mesma interação SELECT pode ser usada em qualquer aplicativo. Imagine Select como o equivalente a um clique do mouse, uma ação universal que você aprende uma vez e, em seguida, aplica-se em todos os seus aplicativos.
+* **Select** é a principal interação para ativar um holograma, que consiste em uma prensa seguida por uma versão. Para os controladores de movimento, você executa uma operação SELECT usando o gatilho do controlador. Outras maneiras de executar uma seleção são falando sobre o [comando de voz](voice-input.md) "Select". A mesma interação SELECT pode ser usada em qualquer aplicativo. Considere Select como o equivalente a um clique do mouse; uma ação universal que você aprende uma vez e, em seguida, se aplica em todos os seus aplicativos.
 * O **menu** é a interação secundária para atuar em um objeto, usado para efetuar pull de um menu de contexto ou executar alguma outra ação secundária. Com os controladores de movimento, você pode executar uma ação de menu usando o botão de *menu* do controlador. (ou seja, o botão com o ícone de "menu" de "p")
 * **Segure** é como os usuários podem agir diretamente em objetos à sua disposição para manipulá-los. Com os controladores de movimento, você pode fazer uma ação compreender apertando seu punho. Um controlador de movimento pode detectar um entendimento com um botão de captura, um gatilho de Palm ou outro sensor.
 * O **Touchpad** permite que o usuário ajuste uma ação em duas dimensões ao longo da superfície do Touchpad de um controlador de movimento, confirmando a ação clicando no Touchpad. Os touchpads fornecem um estado pressionado, coordenadas de estado tocado e normalizadas. Intervalo X e Y de-1 a 1 no intervalo do Touchpad circular, com um centro em (0, 0). Para X,-1 está à esquerda e 1 está à direita. Para Y,-1 está na parte inferior e 1 está na parte superior.
 * O **Thumbstick** permite que o usuário ajuste uma ação em duas dimensões movendo o Thumbstick de um controlador de movimento dentro de seu intervalo circular, confirmando a ação clicando em baixo no Thumbstick. Thumbsticks também fornece um estado pressionado e coordenadas XY normalizadas. Intervalo X e Y de-1 a 1 no intervalo do Touchpad circular, com um centro em (0, 0). Para X,-1 está à esquerda e 1 está à direita. Para Y,-1 está na parte inferior e 1 está na parte superior.
-* **Home** é uma ação especial do sistema que é usada para voltar ao menu iniciar. É semelhante a pressionar a tecla Windows em um teclado ou o botão Xbox em um controlador Xbox. Você pode ir para casa pressionando o botão Windows em um controlador de movimento. Observe que você também pode retornar para começar dizendo "Ei Cortana, Go Home". Os aplicativos não podem reagir especificamente às ações iniciais, pois elas são manipuladas pelo sistema.
+* **Home** é uma ação especial do sistema que é usada para voltar ao menu iniciar. É semelhante a pressionar a tecla Windows em um teclado ou o botão Xbox em um controlador Xbox. Você pode ir para casa pressionando o botão Windows em um controlador de movimento. Observe que você sempre pode retornar para começar dizendo "Ei Cortana, Go Home". Os aplicativos não podem reagir especificamente às ações iniciais, pois elas são manipuladas pelo sistema.
 
 ## <a name="composite-gestures-high-level-spatial-input"></a>Gestos compostos: entrada espacial de alto nível
 
@@ -251,7 +251,7 @@ Para obter mais informações sobre como carregar modelos de controlador dinamic
  
 [Controladores de movimento de resolução completa de linha artística em ' ' ' preto ' ' '](images/motioncontrollers-black.png)
 
-## <a name="faq"></a>Perguntas Frequentes
+## <a name="faq"></a>Perguntas frequentes
 
 ### <a name="can-i-pair-motion-controllers-to-multiple-pcs"></a>Posso emparelhar os controladores de movimento com vários PCs?
 
@@ -259,7 +259,7 @@ Os controladores de movimento dão suporte ao emparelhamento com um único PC. S
 
 ### <a name="how-do-i-update-motion-controller-firmware"></a>Como fazer atualizar o firmware do controlador de movimento?
 
-O firmware do controlador de movimento faz parte do driver do headset e será atualizado automaticamente na conexão, se necessário. As atualizações de firmware geralmente levam 1-2 minutos, dependendo da qualidade do link e da rádio do Bluetooth. Em casos raros, as atualizações de firmware do controlador podem levar até 10 minutos, o que pode indicar pouca conectividade Bluetooth ou interferência de rádio. Consulte as [práticas recomendadas do Bluetooth no guia de entusiasta](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/troubleshooting-windows-mixed-reality#bluetooth-best-practices) para solucionar problemas de conectividade. Após uma atualização de firmware, os controladores serão reinicializados e reconectarão-se ao PC host (você pode notar que os LEDs são mais brilhantes para acompanhamento). Se uma atualização de firmware for interrompida (por exemplo, os controladores perderão energia), ela será tentada novamente na próxima vez em que os controladores estiverem ligados.
+O firmware do controlador de movimento faz parte do driver do headset e será atualizado automaticamente na conexão, se necessário. As atualizações de firmware geralmente levam 1-2 minutos, dependendo da qualidade do link e da rádio do Bluetooth. Em casos raros, as atualizações de firmware do controlador podem levar até 10 minutos, o que pode indicar pouca conectividade Bluetooth ou interferência de rádio. Consulte [práticas recomendadas de Bluetooth no guia de entusiasta](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/troubleshooting-windows-mixed-reality#bluetooth-best-practices) para solucionar problemas de conectividade. Depois de uma atualização de firmware, os controladores serão reinicializados e reconectados ao PC host (você pode notar que os LEDs são mais brilhantes para acompanhamento). Se uma atualização de firmware for interrompida (por exemplo, os controladores perderão energia), ela será tentada novamente na próxima vez em que os controladores estiverem ligados.
 
 ### <a name="how-i-can-check-battery-level"></a>Como posso verificar o nível da bateria?
 
@@ -269,7 +269,7 @@ Na [página inicial do Windows Mixed Reality](navigating-the-windows-mixed-reali
 
 Não para aplicativos universais do Windows.
 
-## <a name="troubleshooting"></a>Solução de problemas
+## <a name="troubleshooting"></a>Painel de controle da
 
 Consulte [solução de problemas do controlador de movimento](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/troubleshooting-windows-mixed-reality#motion-controllers) no guia de entusiasta.
 
@@ -277,7 +277,7 @@ Consulte [solução de problemas do controlador de movimento](https://docs.micro
 
 [Envie-nos comentários](give-us-feedback.md) no Hub de comentários usando a categoria "realidade misturada-> entrada".
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 * [Gestos e controladores de movimento no Unity](gestures-and-motion-controllers-in-unity.md)
 * [Controladores de mãos e emovimento no DirectX](hands-and-motion-controllers-in-directx.md)
 * [Gestos](gaze-and-commit.md#composite-gestures)

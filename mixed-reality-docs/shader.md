@@ -1,23 +1,23 @@
 ---
 title: Shader
-description: ''
+description: O sombreador MRTK Standard fornece vários tipos de efeitos visuais que podem ser usados com hologramas.
 author: cre8ivepark
 ms.author: dongpark
 ms.date: 11/01/2019
 ms.topic: article
 keywords: Realidade misturada, controles, interação, interface do usuário, UX
-ms.openlocfilehash: 23371ae5d70e5e792415fd25c0d58def0a7cefbb
-ms.sourcegitcommit: 17427d4d8c3723d53540f1b7f5bc061bba08c1d6
+ms.openlocfilehash: 4d95e335b3f7020766beae916423d0588ee66572
+ms.sourcegitcommit: 270ca09ec61e1153a83cf44942d7ba3783ef1805
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2019
-ms.locfileid: "74143266"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75694160"
 ---
 # <a name="shader"></a>Shader
 
 ![Shader](images/UX/UX_Hero_StandardShader.jpg)
 
-Como os objetos Holographic são misturados com os físicos no ambiente, fornecer a indicação visual é importante na realidade misturada. O sombreador standard do MRTK fornece vários tipos de efeitos visuais que podem ser usados com hologramas. O sistema de sombreamento padrão MRTK utiliza um único sombreador flexível que pode obter visuais semelhantes ao sombreador padrão do Unity, implementar princípios de sistema de design fluente e manter o desempenho em dispositivos de realidade misturada.
+Como os objetos Holographic são misturados com os físicos no ambiente, é importante fornecer indicações visuais em realidade misturada. O sombreador MRTK Standard fornece vários tipos de efeitos visuais que podem ser usados com hologramas. O sistema de sombreamento padrão do MRTK utiliza um único sombreador flexível que pode obter visuais semelhantes ao sombreador padrão do Unity, implementa os [princípios do sistema de design fluente](https://www.microsoft.com/design/fluent/#/)e manter o desempenho em dispositivos de realidade misturada.
 <br>
 
 ## <a name="examples-of-visual-effects-using-mrtk-standard-shader"></a>Exemplos de efeitos visuais usando o sombreador padrão do MRTK 
@@ -32,9 +32,11 @@ Como os objetos Holographic são misturados com os físicos no ambiente, fornece
     :::column-end:::
 :::row-end:::
 
+<br>
+
 ---
 
-## <a name="mrtk-standard-shader-in-mrtkmixed-reality-toolkit-for-unity"></a>Sombreador Standard MRTK no MRTK (Kit de ferramentas de realidade mista) para Unity
+## <a name="mrtk-standard-shader-in-mrtk-mixed-reality-toolkit-for-unity"></a>Sombreador Standard MRTK no MRTK (Kit de ferramentas de realidade mista) para Unity
 
 * [MRTK-sombreador padrão](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_MRTKStandardShader.html)
 
@@ -43,22 +45,22 @@ Como os objetos Holographic são misturados com os físicos no ambiente, fornece
 
 ---
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 * [Cursores](cursors.md)
-* [Raio da mão](point-and-commit.md)
-* [Button](button.md)
+* [Raio de mão](point-and-commit.md)
+* [Botão](button.md)
 * [Objeto interativo](interactable-object.md)
 * [Caixa delimitadora e barra de aplicativos](app-bar-and-bounding-box.md)
-* [Manusei](direct-manipulation.md)
+* [Manipulação](direct-manipulation.md)
 * [Menu lateral](hand-menu.md)
 * [Menu próximo](near-menu.md)
 * [Coleção de objetos](object-collection.md)
 * [Comando de voz](voice-input.md)
 * [Teclado](keyboard.md)
-* [Dessa](tooltip.md)
+* [Dica de ferramenta](tooltip.md)
 * [Slate](slate.md)
-* [Slider](slider.md)
+* [Controle deslizante](slider.md)
 * [Mural e tag-along](billboarding-and-tag-along.md)
 * [Exibindo o progresso](progress.md)
-* [Magnetism Surface](surface-magnetism.md)
+* [Magnetismo de superfície](surface-magnetism.md)
