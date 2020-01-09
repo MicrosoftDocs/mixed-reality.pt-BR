@@ -6,16 +6,16 @@ ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
 keywords: implantar, Unity, Visual Studio, HoloLens, HoloLens 2, headset de imersão
-ms.openlocfilehash: 88eaa69f1349e3303a93d9d634479d8265eb417c
-ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
+ms.openlocfilehash: 4d145568190ea43cf2ec43442a1c3d5ca4d92251
+ms.sourcegitcommit: 7e8b9de561cbc8483e84511f3e9cbd779f3a999f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926546"
+ms.lasthandoff: 12/27/2019
+ms.locfileid: "75502627"
 ---
 # <a name="best-practices-for-working-with-unity-and-visual-studio"></a>Práticas recomendadas para trabalhar com o Unity e o Visual Studio
 
-Um desenvolvedor que cria um aplicativo de realidade misturada com o Unity precisará alternar entre o Unity e o Visual Studio para criar o pacote de aplicativos que é implantado no HoloLens e/ou um headset de imersão. Por padrão, duas instâncias do Visual Studio são necessárias (uma para modificar scripts do Unity e outra para implantar no dispositivo e depurar). O procedimento a seguir permite o desenvolvimento usando uma única instância do Visual Studio, reduz a frequência de exportação de projetos do Unity e melhora a experiência de depuração.
+Um desenvolvedor que cria um aplicativo de realidade misturada com o Unity precisará alternar entre o Unity e o Visual Studio para criar o pacote de aplicativos que é implantado no HoloLens e/ou um headset de imersão. Por padrão, são necessárias duas instâncias do Visual Studio (uma para modificar scripts do Unity e outra para implantar no dispositivo e depurar). O procedimento a seguir permite o desenvolvimento usando uma única instância do Visual Studio, reduz a frequência de exportação de projetos do Unity e melhora a experiência de depuração.
 
 ## <a name="improving-iteration-time"></a>Melhorando o tempo de iteração
 
@@ -26,10 +26,10 @@ O suporte para o back-end de script do .NET no Unity está sendo substituído no
    - Abra o **vírus & proteção contra ameaças** em seu aplicativo de configurações do Windows 10
    - Selecione **gerenciar configurações** em **vírus & ameaças proteção configurações**
    - Selecione **Adicionar ou remover exclusões** na seção **exclusões**
-   - Clique em **Adicionar uma exclusão** e selecione a pasta que contém o código do projeto do Unity e as saídas da compilação
+   - Clique em **Adicionar uma exclusão** e selecione a pasta que contém o código do projeto de Unity e as saídas de compilação
 3) Utilizar um SSD para compilação
 
-Leia [otimizando os tempos de compilação para IL2CPP](https://docs.unity3d.com/Manual/IL2CPP-OptimizingBuildTimes.html) para obter mais informações. Além disso, leia [depuração em back-end de script IL2CPP](https://docs.unity3d.com/Manual/windowsstore-debugging-il2cpp.html).
+Examine [otimizar os tempos de compilação para IL2CPP](https://docs.unity3d.com/Manual/IL2CPP-OptimizingBuildTimes.html) para obter mais informações. Além disso, examine [depuração em IL2CPP scripting back-end](https://docs.unity3d.com/Manual/windowsstore-debugging-il2cpp.html).
 
 Além disso, considere instalar a [extensão do Visual Studio *UnityScriptAnalyzer* ](https://github.com/Microsoft/MixedRealityCompanionKit/tree/master/UnityScriptAnalyzer). Essa ferramenta analisa seus scripts de C# Unity para o código que pode ser capaz de ser escrito de maneira mais otimizada.
 
@@ -45,7 +45,7 @@ Baixar [Ferramentas do Visual Studio para Unity](https://docs.microsoft.com/visu
 
 ## <a name="expose-c-class-variables-for-easy-tuning"></a>Expor C# variáveis de classe para um ajuste fácil
 
-Há duas maneiras de expor variáveis de classe. A maneira recomendada de fazer isso é adicionar o atributo [Serializefield] às suas variáveis privadas. Isso permite que eles sejam acessados do editor, mas não expostos programaticamente.  A outra opção é tornar C# as variáveis de classe públicas para expô-las na interface do usuário do editor. 
+Há duas maneiras de expor variáveis de classe. A maneira recomendada é adicionar o atributo [Serializefield] às suas variáveis privadas. Isso permite que eles sejam acessados do editor, mas não expostos programaticamente.  A outra opção é tornar C# as variáveis de classe públicas para expô-las na interface do usuário do editor. 
 
 Ambas as abordagens possibilitam o ajuste fácil de variáveis durante a execução no editor. Isso é especialmente útil para ajustar propriedades mecânicas de interação.
 
@@ -57,7 +57,7 @@ As soluções UWP do Visual Studio com check-in no controle do código-fonte pod
 
 O armazenamento de ativos em formato de texto facilita a revisão de diferenciações de alteração de conteúdo no Visual Studio. Você pode habilitar isso em "Editar configurações de projeto > editor de >" alterando o modo de **serialização de ativos** para **forçar o texto**. No entanto, mesclar alterações de arquivo de ativo de texto é propenso a erros e não recomendado, portanto, considere habilitar check-outs binários exclusivos no sistema de controle do código-fonte.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [Ferramentas do Visual Studio para Unity](https://visualstudiogallery.msdn.microsoft.com/8d26236e-4a64-4d64-8486-7df95156aba9)
 - [Otimizando os tempos de compilação para IL2CPP](https://docs.unity3d.com/Manual/IL2CPP-OptimizingBuildTimes.html)
 - [*UnityScriptAnalyzer* Extensão do Visual Studio](https://github.com/Microsoft/MixedRealityCompanionKit/tree/master/UnityScriptAnalyzer)

@@ -3,15 +3,15 @@ title: Usando o Vuforia com o Unity
 description: Aproveite o Vuforia para criar aplicativos de realidade mista do Windows no Unity.
 author: thetuvix
 ms.author: alexturn
-ms.date: 01/28/2019
+ms.date: 12/20/2019
 ms.topic: article
 keywords: Vuforia, marcadores, coordenadas, quadro de referência, acompanhamento
-ms.openlocfilehash: bae5d0eb04ab9434dd3e72674686743779a8f70c
-ms.sourcegitcommit: 9005b3fdfa87ac8fdc18a594a681e25c00ac5ce1
+ms.openlocfilehash: 2d7cc27cd9a5fe9bb6502edaa6df0b7a80755049
+ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2019
-ms.locfileid: "75003185"
+ms.lasthandoff: 12/24/2019
+ms.locfileid: "75334470"
 ---
 # <a name="using-vuforia-engine-with-unity"></a>Usando o mecanismo do Vuforia com o Unity
 
@@ -80,7 +80,7 @@ O mecanismo de Vuforia combina automaticamente as poses do rastreamento espacial
 Como o processo é manipulado automaticamente, ele não requer nenhuma programação pelo desenvolvedor.
 
 
-**Aqui está o que ocorre...**
+**Veja a seguir uma descrição de alto nível do processo:**
 1. O controlador de destino do Vuforia reconhece o destino
 2. O rastreamento de destino é inicializado
 3. A posição e a rotação do destino são analisadas para fornecer uma estimativa de pose robusta para o HoloLens
@@ -104,7 +104,7 @@ Para alterar o modo de desempenho no Unity, navegue até configuração do Vufor
 *   Selecione o menu suspenso para o modo de dispositivo de câmera e selecione uma das três opções.
 
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 * [Instalar as ferramentas](install-the-tools.md)
 * [Sistemas de coordenadas](coordinate-systems.md)
 * [Mapeamento espacial](spatial-mapping.md)

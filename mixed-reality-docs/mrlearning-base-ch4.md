@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 05/02/2019
 ms.topic: article
 keywords: realidade misturada, unity, tutorial, hololens
-ms.openlocfilehash: 8c60d8291ede123817c93458fff003891169840c
-ms.sourcegitcommit: 781e47db2ca2f2c792c95e76ac309b44b3535555
+ms.openlocfilehash: fe068d0cfcea369f10e6fa636eb73fecb3002fa7
+ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74105977"
+ms.lasthandoff: 12/24/2019
+ms.locfileid: "75334379"
 ---
 # <a name="5-interacting-with-3d-objects"></a>5. interagindo com objetos 3D
 
@@ -30,9 +30,7 @@ Neste tutorial, você aprenderá sobre o conteúdo básico de 3D e a experiênci
 * Explorar a interação próxima e distante
 * Saiba mais sobre gestos de acompanhamento de mão, como pegar e tocar
 
-## <a name="instructions"></a>Instruções
-
-### <a name="organizing-3d-objects-in-a-collection"></a>Como organizar objetos 3D em uma coleção
+## <a name="organizing-3d-objects-in-a-collection"></a>Como organizar objetos 3D em uma coleção
 
 1. Clique com o botão direito do mouse na sua hierarquia e selecione criar vazio para criar um objeto de jogo vazio, renomeie-o como 3DObjectCollection e verifique se ele está posicionado em x = 0, y = 0 e z = 0.
 
@@ -70,7 +68,7 @@ Neste tutorial, você aprenderá sobre o conteúdo básico de 3D e a experiênci
     >[!NOTE]
     >Você pode observar que alguns dos objetos estão fora do centro, como os objetos na imagem acima. Isso ocorre porque os pré-fabricados ou os objetos podem ter objetos filho que não estão alinhados. Fique à vontade para fazer os ajustes necessários nas posições de objetos ou de objetos filho para obter uma grade bem alinhada.
 
-### <a name="manipulating-3d-objects"></a>Como manipular objetos 3D
+## <a name="manipulating-3d-objects"></a>Como manipular objetos 3D
 
 1. Adicione a capacidade de manipular um cubo. Para adicionar a capacidade de manipular objetos 3D, faça o seguinte:
     * Selecione o objeto 3D que você deseja manipular em sua hierarquia (ou seja, um de seus cubos).
@@ -132,7 +130,7 @@ Neste tutorial, você aprenderá sobre o conteúdo básico de 3D e a experiênci
     >[!NOTE]
     >Essa configuração é útil para cenários, como a criação de uma bola que você pode lançar. Mantendo a velocidade apropriada e a velocidade angular para garantir que, depois que a bola for liberada, ela continuará a ser movida na velocidade em que foi lançada; semelhante a como uma bola física se comportaria.
 
-### <a name="adding-bounding-boxes"></a>Como adicionar caixas delimitadoras
+## <a name="adding-bounding-boxes"></a>Como adicionar caixas delimitadoras
 
 As caixas delimitadoras tornam mais fácil e mais intuitivo manipular objetos com uma mão para a manipulação direta (próxima interação) e a manipulação baseada em Ray (interação extrema). As caixas delimitadoras fornecem identificadores que podem ser capturados para dimensionar e girar objetos ao longo de um eixo específico.
 
@@ -180,7 +178,7 @@ As caixas delimitadoras tornam mais fácil e mais intuitivo manipular objetos co
     >[!NOTE]
     >As visualizações da caixa delimitadora aparecem somente no modo de reprodução.
 
-### <a name="adding-touch-effects"></a>Adicionando efeitos de toque
+## <a name="adding-touch-effects"></a>Adicionando efeitos de toque
 
 Neste exemplo, reproduziremos um efeito sonoro quando você tocar um objeto com a mão.
 

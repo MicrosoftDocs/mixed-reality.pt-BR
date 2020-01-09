@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
 keywords: renderização, holograma
-ms.openlocfilehash: 8984a16d92ed2f2b72d99e103eaae81b8eba742b
-ms.sourcegitcommit: 8bf7f315ba17726c61fb2fa5a079b1b7fb0dd73f
+ms.openlocfilehash: 544e43ced57309cfe2628cbea65d07e94563eb41
+ms.sourcegitcommit: 317653cd8500563c514464f0337c1f230a6f3653
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/17/2019
-ms.locfileid: "75182026"
+ms.lasthandoff: 12/28/2019
+ms.locfileid: "75503814"
 ---
 # <a name="rendering"></a>Renderização
 
@@ -42,9 +42,9 @@ A renderização de Holographic permite que seu aplicativo desenhe um holograma 
 
 ## <a name="holographic-rendering"></a>Renderização de Holographic
 
-A chave para a renderização de Holographic é saber se você está renderizando para uma exibição visível, como o HoloLens, que permite que o usuário veja o mundo físico e seus hologramas juntos, ou uma exibição opaca como um headset de imersão de realidade do Windows misto que bloqueia o mundo.
+A chave para a renderização de Holographic é saber se você está renderizando para uma exibição visível, como o HoloLens, que permite que o usuário veja o mundo físico e seus hologramas juntos ou uma exibição opaca como um headset de imersão de realidade mista do Windows que bloqueia o países.
 
-Dispositivos com **telas de exibição**, tais [HoloLens](hololens-hardware-details.md), adicionam luz ao mundo. Os pixels pretos são totalmente transparentes, enquanto os pixels mais brilhantes são cada vez mais opacos. Como a luz das telas é adicionada à luz do mundo real, os pixels brancos são, de certa forma, translúcidas.
+Dispositivos com **telas de exibição**, como o [HoloLens](hololens-hardware-details.md), adicionam luz ao mundo. Os pixels pretos são totalmente transparentes, enquanto os pixels mais brilhantes são cada vez mais opacos. Como a luz das telas é adicionada à luz do mundo real, os pixels brancos são, de certa forma, translúcidas.
 
 Embora a renderização de estereoscópico forneça uma indicação de profundidade para os hologramas, adicionar [efeitos de aterramento](interaction-fundamentals.md) pode ajudar os usuários a ver mais facilmente qual superfície um holograma está próximo. Uma técnica de aterramento é adicionar um brilho em um holograma na superfície adjacente e renderizar uma sombra em relação a esse brilho. Dessa forma, sua sombra parece subtrair a luz do ambiente. O [som espacial](spatial-sound.md) é outra indicação de profundidade extremamente importante, permitindo aos usuários o motivo da distância e do local relativo de um holograma.
 
@@ -74,7 +74,7 @@ Consulte o artigo [renderizando no DirectX](rendering-in-directx.md) para obter 
 
 ## <a name="holographic-cameras"></a>Câmeras holographics
 
-A realidade mista do Windows apresenta o conceito de uma **câmera Holographic**. As câmeras Holographic são semelhantes à câmera tradicional encontrada em textos de gráficos 3D: elas definem a extrínsecos (posição e a orientação) e as propriedades intrínsecas da câmera. (Por exemplo:, campo de exibição é usado para exibir uma cena 3D virtual.) Ao contrário das câmeras 3D tradicionais, o aplicativo não está no controle da posição, da orientação e das propriedades intrínsecas da câmera. Em vez disso, a posição e a orientação da câmera Holographic são implicitamente controladas pelo movimento do usuário. O movimento do usuário é retransmitido para o aplicativo em uma base quadro a quadro por meio de uma transformação de exibição. Da mesma forma, as propriedades intrínsecas da câmera são definidas pela ótica calibrada do dispositivo e retransmitidas quadro a quadro por meio da transformação projeção.
+A realidade mista do Windows apresenta o conceito de uma **câmera Holographic**. As câmeras Holographic são semelhantes à câmera tradicional encontrada em textos de gráficos 3D; Elas definem a extrínsecos (posição e orientação) e as propriedades intrínsecas da câmera. (Por exemplo:, campo de exibição é usado para exibir uma cena 3D virtual.) Ao contrário das câmeras 3D tradicionais, o aplicativo não está no controle da posição, da orientação e das propriedades intrínsecas da câmera. Em vez disso, a posição e a orientação da câmera Holographic são implicitamente controladas pelo movimento do usuário. O movimento do usuário é retransmitido para o aplicativo em uma base quadro a quadro por meio de uma transformação de exibição. Da mesma forma, as propriedades intrínsecas da câmera são definidas pela ótica calibrada do dispositivo e retransmitidas quadro a quadro por meio da transformação projeção.
 
 Em geral, seu aplicativo será renderizado para uma única câmera estéreo. No entanto, um loop de renderização robusto dará suporte a várias câmeras e dará suporte a câmeras mono e estéreo. Por exemplo, o sistema pode solicitar que seu aplicativo seja renderizado de uma perspectiva alternativa quando o usuário ativar um recurso como a MRC ( [captura de realidade misturada](mixed-reality-capture.md) ), dependendo da forma do headset em questão. Os aplicativos que podem dar suporte a várias câmeras [os obtêm](https://docs.microsoft.com/uwp/api/Windows.Graphics.Holographic.HolographicViewConfiguration#Windows_Graphics_Holographic_HolographicViewConfiguration) conferendo ao [tipo](https://docs.microsoft.com/uwp/api/Windows.Graphics.Holographic.HolographicViewConfigurationKind#Windows_Graphics_Holographic_HolographicViewConfigurationKind) de câmeras às quais eles podem dar suporte.
 
@@ -92,7 +92,7 @@ Ao renderizar MRIs médicos ou volumes de engenharia em 3D, as técnicas de [ren
 ## <a name="supported-resolutions-on-hololens-2"></a>Resoluções com suporte no HoloLens 2
 
 * Os tamanhos de destino de renderização atual e máximo com suporte são propriedades da [configuração de exibição](https://docs.microsoft.com/uwp/api/Windows.Graphics.Holographic.HolographicViewConfiguration#Windows_Graphics_Holographic_HolographicViewConfiguration). O HoloLens 2 é definido como o tamanho máximo de destino de renderização, que é 1440x936, por padrão.
-* Os aplicativos podem alterar o tamanho dos buffers de destino de renderização chamando o método RequestRenderTargetSize para solicitar um novo tamanho de destino de renderização. Um novo tamanho de destino de renderização será escolhido para atender ou exceder o tamanho de destino de renderização solicitado. Essa API altera o tamanho do buffer de destino de renderização, que requer realocação de memória na GPU. As implicações disso incluem: o tamanho do destino de renderização pode ser reduzido para reduzir a pressão de memória na GPU, e esse método não deve ser chamado com alta frequência.
+* Os aplicativos podem alterar o tamanho dos buffers de destino de renderização chamando o método RequestRenderTargetSize para solicitar um novo tamanho de destino de renderização. Um novo tamanho de destino de renderização será escolhido, o que atenderá ou excederá o tamanho de destino de renderização solicitado. Essa API altera o tamanho do buffer de destino de renderização, que requer realocação de memória na GPU. As implicações disso incluem: o tamanho do destino de renderização pode ser reduzido para reduzir a pressão de memória na GPU, e esse método não deve ser chamado com alta frequência.
 * Os aplicativos ainda podem alterar o tamanho do visor da mesma maneira que faziam para o HoloLens 1. Isso não causa a realocação de memória na GPU, portanto, ela pode ser alterada com alta frequência, mas não pode ser usada para reduzir a pressão de memória na GPU.
 * O menor tamanho de visor com suporte no HoloLens 2 é 634x412. Esse é um ViewportScaleFactor de aproximadamente 0,44 quando o tamanho de destino de renderização padrão está em uso.
 * Se for fornecido um tamanho de destino de renderização que seja menor do que o menor tamanho de visor com suporte, o fator de escala do visor será ignorado.
@@ -100,6 +100,6 @@ Ao renderizar MRIs médicos ou volumes de engenharia em 3D, as técnicas de [ren
 
 
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 * [Estabilidade do holograma](hologram-stability.md)
 * [Como renderizar no DirectX](rendering-in-directx.md)

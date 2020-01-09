@@ -6,12 +6,12 @@ ms.author: shentan
 ms.date: 04/21/2019
 ms.topic: article
 keywords: Windows Mixed Reality, design, interação, voz
-ms.openlocfilehash: 350acfbe777869f150b7c90c93124e10e155168d
-ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
+ms.openlocfilehash: 66afa24699ed22fb17ab36818ba67a526f4c5618
+ms.sourcegitcommit: 7e8b9de561cbc8483e84511f3e9cbd779f3a999f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926707"
+ms.lasthandoff: 12/27/2019
+ms.locfileid: "75502637"
 ---
 # <a name="voice-commanding"></a>Comando de voz
 
@@ -65,7 +65,7 @@ A seguir, algumas práticas que auxiliarão em um reconhecimento de fala perfeit
 
 Dizer "selecionar" a qualquer momento ativará tudo o que o cursor estiver apontando. 
 
->Observação: no HoloLens 2, o cursor olhar precisa primeiro ser invocado dizendo a palavra "Select". Diga, "selecionar" novamente para ativar. Para ocultar o cursor de foco, basta usar as mãos – feche e abra os dedos indicador e polegar, ou toque em um objeto. 
+>Observação: no HoloLens 2, o cursor olhar precisa primeiro ser invocado dizendo a palavra "Select". Diga "selecionar" novamente para ativar. Para ocultar o cursor olhar, simplesmente use suas mãos para airtap ou toque em um objeto. 
 
 ### <a name="see-it-say-it"></a>Veja e diga
 
@@ -79,7 +79,7 @@ O Windows Mixed Reality utiliza um modelo de voz "veja e diga", no qual os **ró
 
 ### <a name="voices-strengths"></a>Vantagens da voz
 
-A entrada de voz é uma maneira natural de comunicarmos nossas intenções. A voz é especialmente útil ao **percorrer** interfaces porque pode ajudar os usuários a pular etapas (um usuário pode dizer "Voltar" olhando para uma página da Web, em vez de ir até o topo e pressionar o botão Voltar no aplicativo). Essa pequena economia de tempo tem um **efeito emocional** poderoso na percepção do usuário sobre a experiência e fornece uma pequena quantidade de superpoderes. O uso da voz também é um método de entrada conveniente quando nossos braços estão ocupados ou quando estamos **executando várias tarefas ao mesmo tempo**. Em dispositivos em que é difícil digitar em um teclado, o **ditado de voz** pode ser uma maneira alternativa e eficiente de entrada. Por fim, em alguns casos, quando o **intervalo de precisão** da ação de focar e gesticular é limitado, a voz pode ser o único método de entrada confiável para o usuário.
+A entrada de voz é uma maneira natural de comunicarmos nossas intenções. A voz é especialmente boa em **atravessamentos** de interface porque pode ajudar os usuários a percorrer várias etapas de uma interface (um usuário pode dizer "voltar" ao olhar para uma página da Web, em vez de ter que ir e clicar no botão voltar no aplicativo). Essa pequena economia de tempo tem um **efeito emocional** poderoso sobre a percepção de um usuário da experiência e oferece uma pequena quantidade de superpotência. O uso da voz também é um método de entrada conveniente quando nossos braços estão ocupados ou quando estamos **executando várias tarefas ao mesmo tempo**. Em dispositivos em que é difícil digitar um teclado, o **ditado de voz** pode ser uma maneira eficiente e alternativa de entrada. Por fim, em alguns casos, quando o **intervalo de precisão** para olhar e gesto é limitado, a voz pode ser um método de entrada confiável de um usuário.
 
 **Como o uso da voz pode beneficiar o usuário?**
 * Reduz o tempo - deve tornar o objetivo final mais eficiente.
@@ -90,7 +90,7 @@ A entrada de voz é uma maneira natural de comunicarmos nossas intenções. A vo
 
 ### <a name="voices-weaknesses"></a>Desvantagens da voz
 
-A voz também tem algumas desvantagens. O controle refinado é uma delas. (por exemplo, um usuário pode dizer "mais alto", mas não pode dizer quanto. "Um pouco" é difícil de quantificar. Também é difícil mover ou dimensionar objetos usando a voz (ela não oferece granularidade de controle). A voz também pode ser imperfeita. Às vezes, um sistema de voz ouve incorretamente ou não consegue ouvir um comando. Contornar esses erros é um desafio em qualquer interface. Por fim, a voz pode não ser socialmente aceitável em locais públicos. Há algumas coisas que os usuários não podem ou não devem dizer. Essas limitações permitem usar a fala para sua melhor função.
+A voz também tem algumas desvantagens. O controle refinado é uma delas. (por exemplo, um usuário pode dizer "mais alto", mas não pode dizer o quanto. "Um pouco" é difícil de quantificar. Também é difícil mover ou dimensionar objetos usando a voz (ela não oferece granularidade de controle). A voz também pode ser imperfeita. Às vezes, um sistema de voz ouve incorretamente ou não consegue ouvir um comando. Contornar esses erros é um desafio em qualquer interface. Por fim, a voz pode não ser socialmente aceitável em locais públicos. Há algumas coisas que os usuários não podem ou não devem dizer. Essas limitações permitem usar a fala para sua melhor função.
 
 ### <a name="voice-feedback-states"></a>Estados de retorno de voz
 
@@ -102,7 +102,7 @@ Quando a voz é aplicada corretamente, o usuário sabe **o que pode dizer e obt�
 ## <a name="top-things-users-should-know-about-speech-in-mixed-reality"></a>As principais coisas que os usuários devem saber sobre "fala" na realidade misturada
 * Diga **"Selecionar"** ao focalizar um botão (você pode usar esse comando em qualquer lugar para clicar em um botão).
 * Você pode dizer o **nome do rótulo de um botão da barra de aplicativos** em alguns aplicativos para realizar uma ação. Por exemplo, olhando para um aplicativo, um usuário pode dizer o comando "Remover" para remover o aplicativo do mundo (isso economiza tempo, pois você não precisa clicar nele com a mão).
-* Você pode iniciar a escuta da Cortana dizendo **"Ei, Cortana".** Você pode fazer perguntas ("Ei, Cortana! Qual é a altura da Torre Eiffel?"), pedir para ela abrir um aplicativo ("Ei, Cortana! Abra o Netflix") ou pedir para ela abrir o Menu Iniciar ("Ei, Cortana! Abra o menu Iniciar") e muito mais.
+* Você pode iniciar a escuta da Cortana dizendo **"Ei, Cortana".** Você pode fazer suas perguntas ("Ei Cortana, quão alta é a torre de Eiffel?"), pedir a ela para abrir um aplicativo ("Ei Cortana, abrir Netflix") ou dizer a ela para exibir o menu iniciar ("Ei Cortana, entrar em casa") e muito mais.
 
 ## <a name="common-questions-and-concerns-users-have-about-voice"></a>Perguntas e preocupações comuns dos usuários em relação à voz
 * O que posso falar?
@@ -113,6 +113,6 @@ Quando a voz é aplicada corretamente, o usuário sabe **o que pode dizer e obt�
 * Como direcionar minha voz a um aplicativo específico ou a um comando de aplicativo?
 * Posso usar a voz para comandar as coisas no quadro holográfico do HoloLens?
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 * [Gestos](gaze-and-commit.md#composite-gestures)
 * [Focar com a cabeça e esperar](gaze-and-dwell.md)

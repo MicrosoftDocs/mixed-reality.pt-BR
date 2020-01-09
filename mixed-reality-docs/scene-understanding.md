@@ -6,16 +6,16 @@ ms.author: szymons
 ms.date: 07/08/2019
 ms.topic: article
 keywords: Compreensão da cena, mapeamento espacial, realidade do Windows Mixed, Unity
-ms.openlocfilehash: bacec5e6a9bfda49d4ad6d3dd849156c9cc09add
-ms.sourcegitcommit: 83698638b93c5ba77b3ffc399f1706482539f27b
+ms.openlocfilehash: 4b959b7b7ec58fc30ed0fe93b568d123cbe70bb1
+ms.sourcegitcommit: 7e8b9de561cbc8483e84511f3e9cbd779f3a999f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74539699"
+ms.lasthandoff: 12/27/2019
+ms.locfileid: "75502667"
 ---
 # <a name="scene-understanding"></a>Compreensão da cena
 
-A compreensão da cena fornece aos desenvolvedores de realidade misturada uma representação de ambiente estruturada e de alto nível, projetada para tornar o desenvolvimento de aplicativos com reconhecimento de ambiente intuitivo. O entendimento da cena faz isso combinando o poder dos tempos de execução de realidade misturada existentes, como o [mapeamento espacial](spatial-mapping.md) menos estruturado e altamente preciso, e novos tempos de execução orientados a ia. Ao combinar essas tecnologias, a compreensão da cena gera representações de ambientes 3D semelhantes aos que você pode ter usado em estruturas como Unity ou ARKit/ARCore. O ponto de entrada de compreensão da cena começa com um observador de cena, que é chamado pelo seu aplicativo para computar uma nova cena. Hoje, a tecnologia é capaz de gerar 3 categorias de objetos diferentes, mas relacionadas: malhas de ambiente Watertight simplificadas que inferem na estrutura de sala planar sem confusão, regiões de plano para posicionamento que chamamos de quatro e um instantâneo do [ malha de mapeamento espacial](spatial-mapping.md) que se alinha com os dados quádruplos/Watertight que fazemos.
+A compreensão da cena fornece aos desenvolvedores de realidade misturada uma representação de ambiente estruturada e de alto nível, projetada para tornar o desenvolvimento de aplicativos com reconhecimento de ambiente intuitivo. O entendimento da cena faz isso combinando o poder dos tempos de execução de realidade misturados existentes, como o [mapeamento espacial](spatial-mapping.md) menos estruturado e altamente preciso e novos tempos de execução orientados a ia. Ao combinar essas tecnologias, a compreensão da cena gera representações de ambientes 3D semelhantes aos que você pode ter usado em estruturas como Unity ou ARKit/ARCore. O ponto de entrada de compreensão da cena começa com um observador de cena, que é chamado pelo seu aplicativo para computar uma nova cena. Hoje, a tecnologia é capaz de gerar 3 categorias de objeto diferentes, mas relacionadas: malhas de ambiente Watertight simplificadas que inferem na estrutura de sala planar sem aglomeração, regiões de plano para posicionamento que chamamos de quatro processadores e um instantâneo da malha de [mapeamento espacial](spatial-mapping.md) que se alinha com os dados de quatro Watertight que fazemos.
 
 ![Malha de mapeamento espacial, superfícies de planar rotuladas, malha Watertight](images/SUScenarios.png)
 
@@ -37,7 +37,7 @@ Se você não tiver um dispositivo e desejar acessar cenas de exemplo para exper
 
 ### <a name="sdk"></a>SDK
 
-Se você estiver procurando detalhes específicos sobre como desenvolver para a cena Understandiing, para obter detalhes sobre como a compreensão da cena funciona e como desenvolvê-la, consulte a documentação [visão geral do SDK de compreensão da cena](scene-understanding-SDK.md) .
+Se você estiver procurando detalhes específicos sobre como desenvolver para compreensão da cena ou detalhes sobre como o entendimento da cena funciona e como desenvolvê-lo, consulte a documentação [visão geral do SDK de compreensão da cena](scene-understanding-SDK.md) .
 
 
 ### <a name="sample"></a>Exemplo
@@ -73,9 +73,9 @@ Se você estiver procurando detalhes específicos sobre como desenvolver para a 
 
 <br>
 
-Muitos dos principais cenários de aplicativos com reconhecimento de ambiente (posicionamento, oclusão, física, etc.) são endereçáveis pelo mapeamento espacial e pela compreensão da cena, esta seção destaca essas diferenças. Uma diferença importante entre a compreensão da cena e o mapeamento espacial é uma compensação da precisão e da latência máximas até a estrutura e a simplicidade. Se seu aplicativo requer a menor latência possível e requer triângulos de malha somente você desejará acessar o mapeamento espacial diretamente, no entanto, se você estiver executando processamento de nível superior, poderá considerar mudar para o modelo de compreensão da cena como ele deve fornecer um superconjunto de funcionalidades. Observe também que, como a compreensão da cena fornece a malha de mapeamento espacial como parte de sua representação, você sempre terá acesso aos dados de mapeamento espacial mais completos e precisos possíveis.
+Muitos dos principais cenários de aplicativos com reconhecimento de ambiente (posicionamento, oclusão, física, etc.) são endereçáveis pelo mapeamento espacial e pela compreensão da cena, e esta seção destaca essas diferenças. Uma diferença importante entre a compreensão da cena e o mapeamento espacial é uma compensação da precisão e da latência máximas até a estrutura e a simplicidade. Se seu aplicativo exigir a menor latência possível e os triângulos de malha que só você desejará acessar o mapeamento espacial diretamente, mas estiver executando um processamento de nível superior, poderá considerar mudar para o modelo de compreensão da cena como ele deve fornecer um superconjunto de funcionalidades. Observe também que, como a compreensão da cena fornece a malha de mapeamento espacial como parte de sua representação, você sempre terá acesso aos dados de mapeamento espacial mais completos e precisos possíveis.
 
- As seções a seguir revisitam os cenários principais de mapeamento espacial no contexto do SDK de compreensão da nova cena.
+As seções a seguir revisitam os cenários principais de mapeamento espacial no contexto do SDK de compreensão da nova cena.
 
 ### <a name="placement"></a>Colocação
 
@@ -103,11 +103,11 @@ Se seu aplicativo pretende colocar hologramas 2D ou 3D em estruturas rígidas de
 
 O [mapeamento espacial oclusão](spatial-mapping.md#occlusion) permanece o modo menos latente de capturar o estado em tempo real do ambiente. Embora isso possa ser útil para fornecer oclusão em cenas altamente dinâmicas, talvez você queira considerar a compreensão da cena para o oclusão por vários motivos. Se você usar a malha de mapeamento espacial gerada pela compreensão da cena, poderá solicitar dados do mapeamento espacial que não seriam armazenados no cache local e, portanto, não disponíveis para você por meio das APIs de percepção. Usar o mapeamento espacial para oclusão juntamente com malhas Watertight fornecerá valor adicional, especificamente a conclusão da estrutura de sala não verificada.
 
-Se seus requisitos puderem tolerar a maior latência de compreensão da cena, os desenvolvedores de aplicativos devem considerar o uso da malha de compreensão Watertight da cena e, supostamente, a malha de mapeamento espacial em harmonia com representações planares. Isso forneceria um "melhor dos dois mundos", em que simplificava a Watertight oclusão é casado com uma geometria mais realista, fornecendo os mapas oclusão mais realistas possíveis.
+Se seus requisitos puderem tolerar a maior latência de compreensão da cena, os desenvolvedores de aplicativos devem considerar o uso da malha de compreensão Watertight da cena e, supostamente, a malha de mapeamento espacial em harmonia com representações planares. Isso forneceria um cenário "o melhor de ambos os mundos", em que simplificava a Watertight oclusão é casado com uma geometria mais realista que fornece os mapas oclusão mais realistas possíveis.
 
-### <a name="physics"></a>Professor
+### <a name="physics"></a>Física
 
-O entendimento da cena gera malhas Watertight que decompõem o espaço com a semântica especificamente para resolver muitas limitações na física que as malhas de mapeamento espacial impõem. As estruturas Watertight garantem que as conversões de raio de física sejam sempre pressionadas, e a decomposição semântica permite uma geração mais simples de malhas de NAV para navegação em interno. Conforme descrito na seção em [oclusão](#occlusion) , a criação de uma cena com EnableSceneObjectMeshes e EnableWorldMesh produzirá a malha de conclusão mais física possível. A propriedade Watertight da malha do ambiente impedirá que testes de colisão falhem em superfícies e os dados de malha assegurarão que a física esteja interagindo com todos os objetos da cena e não apenas com a estrutura de sala.
+O entendimento da cena gera malhas Watertight que decompõem o espaço com a semântica, especificamente para resolver muitas limitações na física que as malhas de mapeamento espacial impõem. As estruturas Watertight garantem que as conversões de raio de física sejam sempre pressionadas, e a decomposição semântica permite uma geração mais simples de malhas de NAV para navegação em interno. Conforme descrito na seção sobre [oclusão](#occlusion), a criação de uma cena com EnableSceneObjectMeshes e EnableWorldMesh produzirá a malha de conclusão mais física possível. A propriedade Watertight da malha do ambiente impedirá que testes de colisão falhem em superfícies e os dados de malha assegurarão que a física esteja interagindo com todos os objetos da cena e não apenas com a estrutura de sala.
 
 ### <a name="navigation"></a>Navegação
 
@@ -121,7 +121,7 @@ Embora a [visualização de mapeamento espacial](spatial-mapping.md#visualizatio
 
 Além disso, o número total de superfícies retornado pelo mapeamento espacial é limitado pelo cache espacial interno, enquanto a versão de compreensão da cena da malha de mapeamento espacial é capaz de acessar dados de mapeamento espacial que não são armazenados em cache. Por isso, a compreensão da cena é mais adequada à captura de representações de malha para espaços maiores (por exemplo, mais de um único espaço) para visualização ou processamento de malha adicional. A malha mundial retornada com EnableWorldMesh terá um nível consistente de detalhes em todo o mundo, o que pode gerar uma visualização mais agradável se for renderizado como wireframe.
 
-### <a name="see-also"></a>Consulte também
+### <a name="see-also"></a>Veja também
 
 * [SDK de compreensão da cena](scene-understanding-SDK.md)
 * [Mapeamento espacial](spatial-mapping.md)

@@ -6,12 +6,12 @@ ms.author: jlyons
 ms.date: 02/24/2019
 ms.topic: article
 keywords: Portal de dispositivos Windows, HoloLens
-ms.openlocfilehash: 9bb8116330d88c532b955ef497d29fe98c86fddb
-ms.sourcegitcommit: 8bf7f315ba17726c61fb2fa5a079b1b7fb0dd73f
+ms.openlocfilehash: 17ed27653c8e3ec19c8c42b625fbd12cde2c5d84
+ms.sourcegitcommit: 5054f5c23965ce56599cb29ac9d9c6e48812dabd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/17/2019
-ms.locfileid: "75182016"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75623316"
 ---
 # <a name="using-the-windows-device-portal"></a>Usando o portal do dispositivo Windows
 
@@ -84,7 +84,7 @@ Cada HoloLens gera um certificado autoassinado exclusivo para sua conexão SSL. 
 3. Instale o certificado no repositório "autoridades de certificação raiz confiáveis" no seu computador.
    * No menu do Windows, digite: gerenciar certificados de computador e iniciar o applet.
    * Expanda a pasta **autoridade de certificação raiz confiável** .
-   * Clique na pasta **certificados** .
+   * Clique na pasta **Certificados**.
    * No menu Ações, selecione: Todas as tarefas > Importar...
    * Conclua o Assistente para Importação de Certificados, usando o arquivo de certificado baixado do Device Portal.
 4. Reinicie o navegador.
@@ -136,7 +136,7 @@ Use a página Modo de exibição 3D para ver como o HoloLens interpreta seus arr
   * **Mostrar âncoras espaciais**: exibe âncoras espaciais para o aplicativo ativo. Você deve clicar no botão atualizar para obter e atualizar as âncoras.
   * **Mostrar detalhes**: exibe as posições das mãos, os quatérnios de rotação da cabeça e o vetor de origem do dispositivo conforme eles mudam em tempo real.
   * **Botão tela inteira**: mostra o Modo de exibição 3D em modo de tela inteira. Pressione ESC para sair do modo de exibição de tela inteira.
-* **Reconstrução da superfície**: clique ou toque em **Atualizar** para exibir a malha de mapeamento espacial mais recente do dispositivo. Uma passagem completa pode levar um tempo para ser concluída, cerca de alguns segundos. A malha não é atualizada automaticamente no modo de exibição 3D e você deve clicar em **Atualizar** manualmente para obter a malha mais recente do dispositivo. Clique em **salvar** para salvar a malha de mapeamento espacial atual como um arquivo obj em seu computador.
+* **Reconstrução da superfície**: clique ou toque em **Atualizar** para exibir a malha de mapeamento espacial mais recente do dispositivo. Uma passagem completa pode levar algum tempo para ser concluída (até alguns segundos). A malha não é atualizada automaticamente no modo de exibição 3D e você deve clicar em **Atualizar** manualmente para obter a malha mais recente do dispositivo. Clique em **salvar** para salvar a malha de mapeamento espacial atual como um arquivo obj em seu computador.
 * **Âncoras espaciais**: clique em atualizar para exibir ou atualizar as âncoras espaciais do aplicativo ativo.
 
 ### <a name="mixed-reality-capture"></a>Mixed Reality Capture
@@ -177,7 +177,7 @@ Capture os rastreamentos do [gravador de desempenho do Windows](https://msdn.mic
 * **Perfis disponíveis**: selecione o perfil WPR na lista suspensa e clique ou toque em **Iniciar** para iniciar o rastreamento.
 * **Perfis personalizados**: clique ou toque em **Procurar** para escolher um perfil WPR do seu computador. Clique ou toque em **Carregar e iniciar** para iniciar o rastreamento.
 
-Para parar o rastreamento, clique no link para parar. Permaneça nesta página até que o arquivo de rastreamento tenha concluído o download.
+Para interromper o rastreamento, clique no link parar. Permaneça nesta página até que o arquivo de rastreamento tenha concluído o download.
 
 Os arquivos ETL capturados podem ser abertos para análise no [Windows Performance Analyzer](https://msdn.microsoft.com/library/windows/hardware/hh448170.aspx).
 
@@ -236,7 +236,7 @@ Use o explorador de arquivos para procurar, carregar e baixar arquivos. Você po
 >[!NOTE]
 >O modo de quiosque só está disponível com o [pacote comercial Microsoft HoloLens](commercial-features.md).
 
-Consulte o artigo [Configurar o HoloLens no modo de quiosque](https://docs.microsoft.com/hololens/hololens-kiosk#set-up-kiosk-mode-using-the-windows-device-portal-windows-10-version-1607-and-version-1803) no Windows it pro Center para obter instruções atualizadas sobre como habilitar o modo de quiosque por meio do portal de dispositivos Windows.
+Verifique o artigo [Configurar o HoloLens no modo de quiosque](https://docs.microsoft.com/hololens/hololens-kiosk#set-up-kiosk-mode-using-the-windows-device-portal-windows-10-version-1607-and-version-1803) no Windows it pro Center para obter instruções atualizadas sobre como habilitar o modo de quiosque por meio do portal de dispositivos Windows.
 
 ### <a name="logging"></a>Registro em log
 
@@ -256,10 +256,10 @@ Clique ou toque em **Habilitar** para iniciar o rastreamento. O provedor é adic
 * **Provedores personalizados**: selecione um provedor ETW personalizado e o nível de rastreamento. Identifique o provedor pelo GUID. Não inclua colchetes no GUID.
 * **Provedores habilitados**: lista os provedores habilitados. Selecione um provedor da lista suspensa e clique ou toque em **Desabilitar** para parar o rastreamento. Clique ou toque em **Parar todos** para suspender todo o rastreamento.
 * **Histórico de provedores**: mostra os provedores ETW que foram habilitados durante a sessão atual. Clique ou toque em **Habilitar** para ativar um provedor que foi desabilitado. Clique ou toque em **Limpar** para limpar o histórico.
-* **Eventos**: lista os eventos ETW dos provedores selecionados no formato de tabela. Essa tabela é atualizada em tempo real. Abaixo da tabela, clique no botão **limpar** para excluir todos os eventos ETW da tabela. Isso não desabilita os provedores. Você pode clicar em **Salvar no arquivo** para exportar os atuais eventos ETW coletados para um arquivo CSV localmente.
+* **Eventos**: lista os eventos ETW dos provedores selecionados no formato de tabela. Essa tabela é atualizada em tempo real. Abaixo da tabela, clique no botão **Limpar** para excluir todos os eventos ETW da tabela. Isso não desabilita os provedores. Você pode clicar em **Salvar no arquivo** para exportar os atuais eventos ETW coletados para um arquivo CSV localmente.
 * **Filtros**: permite filtrar os eventos de ETW coletados por ID, palavra-chave, nível, nome do provedor, nome da tarefa ou texto. Você pode combinar vários critérios juntos:
-   1. Para critérios aplicados à mesma propriedade, os eventos podem atender a qualquer um desses critérios são mostrados.
-   2. Para critérios aplicados a diferentes eventos de propriedade devem atender a todos os critérios
+   1. Para critérios aplicados à mesma propriedade, os eventos que podem atender a qualquer um desses critérios são mostrados.
+   2. Para critérios aplicados a uma propriedade diferente, os eventos devem atender a todos os critérios
 
 Por exemplo, você pode especificar os critérios *(o nome da tarefa contém ' foo ' ou ' barra ') e (o texto contém ' erro ' ou ' aviso ')*
 

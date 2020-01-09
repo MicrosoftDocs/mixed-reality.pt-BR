@@ -6,18 +6,18 @@ ms.author: alexturn
 ms.date: 04/15/2018
 ms.topic: article
 keywords: Unity, realidade mista, desenvolvimento, introdução, novo projeto
-ms.openlocfilehash: af30cf91eda1b654bea6048c34f63c61238626c7
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 99c72f2d9d900c8a05fb7d8b9b8de10d657fdd13
+ms.sourcegitcommit: 7e8b9de561cbc8483e84511f3e9cbd779f3a999f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437116"
+ms.lasthandoff: 12/27/2019
+ms.locfileid: "75502647"
 ---
 # <a name="configure-a-new-unity-project-for-windows-mixed-reality"></a>Configurar um novo projeto do Unity para a realidade mista do Windows 
 
 (pule se você já importou o MRTK v2 para seu projeto do Unity)
 
-Se você quiser criar um novo projeto de Unity sem importar o kit de ferramentas de realidade misturada, há um pequeno conjunto de configurações de Unity que você precisará alterar manualmente para a realidade mista do Windows, dividida em duas categorias: por projeto e por cena.
+Se você quiser criar um novo projeto do Unity sem importar o kit de ferramentas de realidade misturada, há um pequeno conjunto de configurações de Unity que você precisará alterar manualmente para a realidade mista do Windows, dividida em duas categorias: por projeto e por cena.
 
 ## <a name="per-project-settings"></a>Configurações por projeto
 
@@ -29,7 +29,7 @@ Para direcionar a realidade mista do Windows, primeiro você precisa definir seu
 5. Definir **tipo de compilação** como **D3D**
 6. Definir o **SDK do UWP** para o **mais recente instalado**
 
-Em seguida, precisamos deixar a Unity saber que o aplicativo que estamos tentando exportar deve criar uma [exibição imersiva](app-views.md) em vez de uma exibição 2D. Fazemos isso habilitando a "realidade virtual com suporte":
+Em seguida, você precisa deixar que o Unity saiba que o aplicativo que você está tentando exportar deve criar uma [exibição de imersão](app-views.md) em vez de uma exibição 2D. Você faz isso habilitando a "realidade virtual com suporte":
 1. Na janela **configurações de compilação...** , abra **as configurações do Player...**
 2. Selecione a guia **configurações para plataforma universal do Windows**
 3. Expandir o grupo de **configurações XR**
@@ -39,7 +39,7 @@ Em seguida, precisamos deixar a Unity saber que o aplicativo que estamos tentand
 ![configurações de qualidade do Unity](images/getting-started-unity-quality-settings.jpg)<br>
 *Configurações de Unity XR*
 
-Seu aplicativo agora pode fazer a renderização Holographic básica e a entrada espacial. Para ir além e aproveitar determinadas funcionalidades, seu aplicativo deve declarar os recursos apropriados em seu manifesto. As declarações de manifesto podem ser feitas no Unity para que elas sejam incluídas em todas as exportações de projeto subsequentes. A configuração é encontrada nas configurações do **Player > configurações para Plataforma Universal do Windows > configurações de publicação > recursos**. Os recursos aplicáveis para habilitar as APIs do Unity comumente usadas para realidade misturada são:
+Seu aplicativo agora pode fazer a renderização Holographic básica e a entrada espacial. Para ir além e aproveitar determinadas funcionalidades, seu aplicativo deve declarar os recursos apropriados em seu manifesto. As declarações de manifesto podem ser feitas no Unity para que elas sejam incluídas em todas as exportações de projeto subsequentes. As configurações são encontradas nas configurações **do Player > configurações para Plataforma Universal do Windows > configurações de publicação > recursos**. Os recursos aplicáveis para habilitar as APIs do Unity comumente usadas para realidade misturada são:
 
 |  Capacidade  |  APIs que exigem capacidade | 
 |----------|----------|
@@ -69,7 +69,7 @@ Depois de habilitar a caixa de seleção "realidade virtual com suporte", o comp
 
 Se seu aplicativo estiver direcionando para o HoloLens especificamente, há algumas configurações que precisam ser alteradas para otimizar para as exibições transparentes do dispositivo, para que seu aplicativo seja exibido ao mundo físico:
 1. Na **hierarquia**, selecione a **câmera principal**
-2. No painel **Inspetor** , defina a **posição** de transformação como **0, 0,** para que o local do cabeçalho usuários comece na origem do Unity World.
+2. No painel de **inspetores** , defina a **posição** de transformação como **0, 0,** portanto, o local da cabeça do usuário começa na origem do Unity World.
 3. Alterar **sinalizadores claros** para **cor sólida**.
 4. Altere a cor do **plano de fundo** para **RGBA 0, 0, 0, 0**. O preto é renderizado como transparente no HoloLens.
 5. Alterar os **planos de recorte-próximo** ao [HoloLens recomendado](camera-in-unity.md#clip-planes) 0,85 (metros).
@@ -77,6 +77,6 @@ Se seu aplicativo estiver direcionando para o HoloLens especificamente, há algu
 Se você excluir e criar uma nova câmera, verifique se a câmera está **marcada** como **MainCamera**.
 
 
-## <a name="see-also"></a>Consulte também
-* [Kit de ferramentas de realidade misturada v2](mrtk-getting-started.md)
+## <a name="see-also"></a>Veja também
+* [Kit de Ferramentas de Realidade Misturada v2](mrtk-getting-started.md)
 * [Visão geral do desenvolvimento do Unity](unity-development-overview.md)

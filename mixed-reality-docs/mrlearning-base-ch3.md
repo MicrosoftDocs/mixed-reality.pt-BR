@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realidade misturada, unity, tutorial, hololens
-ms.openlocfilehash: ade7a839e03a306332bf18f1db49805f59c71429
-ms.sourcegitcommit: f2b7c6381006fab6d0472fcaa680ff7fb79954d6
+ms.openlocfilehash: e08de0bc769ceda493eafe40158b6aeed87751c7
+ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74064253"
+ms.lasthandoff: 12/24/2019
+ms.locfileid: "75334368"
 ---
 # <a name="4-placing-dynamic-content-and-using-solvers"></a>4. colocando o conteúdo dinâmico e usando os solveres
 
@@ -23,9 +23,7 @@ Os hologramas ganham vida no HoloLens 2 quando acompanham intuitivamente o usuá
 * Usar os solucionadores para fazer um conjunto de botões seguir o usuário
 * Usar os solucionadores para fazer um objeto do jogo seguir as mãos do usuário
 
-## <a name="instructions"></a>Instruções
-
-### <a name="location-of-solvers-in-the-mrtk"></a>Localização dos solucionadores no MRTK
+## <a name="location-of-solvers-in-the-mrtk"></a>Localização dos solucionadores no MRTK
 
  Para localizar os resolvedores disponíveis em seu projeto, procure na pasta MRTK SDK (pasta MixedRealityToolkit. SDK). Na pasta Utilitários, você verá a pasta solveres, conforme mostrado na imagem abaixo.
 
@@ -34,7 +32,7 @@ Os hologramas ganham vida no HoloLens 2 quando acompanham intuitivamente o usuá
 >[!NOTE]
 >Nesta lição, examinaremos apenas a implementação do resolvedor orbital e do resolvedor RadialView. Para saber mais sobre a gama completa de resolvedores disponíveis no MRTK, visite: [https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Solver.html](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Solver.html)
 
-### <a name="use-a-solver-to-follow-the-user"></a>Usar um solucionador para seguir o usuário
+## <a name="use-a-solver-to-follow-the-user"></a>Usar um solucionador para seguir o usuário
 
 O objetivo deste capítulo é aprimorar a coleção de botões criada anteriormente para que ele siga a direção do olhar do usuário. Na versão anterior do MRTK e do HoloToolkit, isso era conhecido como uma funcionalidade que.
 
@@ -50,13 +48,14 @@ O objetivo deste capítulo é aprimorar a coleção de botões criada anteriorme
     >Ao adicionar o componente orbital, você observará que o sistema também adiciona o componente SolverHandler, que é um componente necessário.
 
 3. Para configurar a coleção de botões para seguir o usuário, precisamos implementar os seguintes ajustes (consulte a imagem abaixo):
+
     * No script orbital, defina a lista suspensa tipo de orientação como somente guinada. Isso permite que apenas um eixo do objeto gire conforme ele segue o usuário.
     * Defina o deslocamento local como 0 em todos os eixos. Defina o deslocamento do mundo como x = 0, y =-0,1 e z = 0,6. Isso bloqueia a movimentação do objeto para que, quando o usuário alterar a altura, o objeto permaneça em uma altura fixa no ambiente físico e, ao mesmo tempo, permita que ele acompanhe o usuário quando o usuário se mover sobre o ambiente. Esses valores podem ser ajustados para obter uma ampla variedade de comportamentos.
     * Para um comportamento de acompanhamento em que os botões seguem apenas o modo de exibição do usuário depois que o usuário virar seu cabeçalho de forma suficiente, você pode marcar a caixa de seleção usar a depuração de ângulo para o deslocamento do mundo (Observação: esse título pode ser truncado em algumas telas, como está na imagem abaixo). Por exemplo, para que o objeto siga o usuário apenas a cada 90 graus, defina o número de etapas iguais a 4 (marcado por uma seta verde no exemplo abaixo).
 
     ![Lição3 Capítulo2 Etapa3im](images/Lesson3_chapter2_step3im.PNG)
 
-### <a name="enabling-objects-to-follow-tracked-hands"></a>Habilitando objetos para seguir as mãos controladas
+## <a name="enabling-objects-to-follow-tracked-hands"></a>Habilitando objetos para seguir as mãos controladas
 
 Nesta seção, configuraremos o objeto de jogo do cubo criado anteriormente para seguir as mãos rastreadas do usuário usando o resolvedor RadialView.
 

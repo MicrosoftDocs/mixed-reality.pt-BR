@@ -6,12 +6,12 @@ ms.author: dongpark
 ms.date: 08/27/2019
 ms.topic: article
 keywords: HoloLens, MRTK, kit de ferramentas de realidade misturada, realidade misturada do Windows, design, aplicativo de exemplo, controles
-ms.openlocfilehash: 95c81442cc390da8ac7c9a8de218341cb5e7c948
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: ad9d2755522c2610ae051fa61f96605e49404d2d
+ms.sourcegitcommit: 5054f5c23965ce56599cb29ac9d9c6e48812dabd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73439647"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75623504"
 ---
 # <a name="mrtk-101-how-to-use-mixed-reality-toolkit-unity-for-basic-interactions-hololens-2-hololens-windows-mixed-reality-openvr"></a>MRTK 101: como usar a Unity do kit de ferramentas da realidade misturada para interações básicas (HoloLens 2, HoloLens, realidade do Windows Mixed, Open VR)
 
@@ -55,7 +55,7 @@ O ManipulationHandler.cs dá suporte à escala/rotação de duas mãos. Isso fun
 <img alt="NearInteractionGrabbable and ManipulationHandler.cs assigned to an object" width="800" src="images/MRTK101/MRTK_ManipulationHandler.gif">
 
 ## <a name="how-to-move-or-rotate-an-object-with-precision"></a>Como mover ou girar um objeto com precisão?
-Atribua BoundingBox.cs a um objeto para usar a caixa delimitadora, que é a interface para dimensionar e girar um objeto. Por padrão, ele mostra os cabos e identificadores azuis do estilo do HoloLens 1. Para usar os identificadores animados com base em proximidades no estilo do HoloLens 2, você precisa atribuir pré-fabricados e materiais. Veja a documentação da caixa delimitadora e a cena BoundingBoxExamples. Unity para obter os detalhes de configuração.
+Atribua BoundingBox.cs a um objeto para usar a caixa delimitadora, que é a interface para dimensionar e girar um objeto. Por padrão, ele mostra os cabos e identificadores azuis do estilo do HoloLens 1. Para usar os identificadores animados com base em proximidades no estilo do HoloLens 2, você precisa atribuir pré-fabricados e materiais. Veja a [documentação da caixa delimitadora](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_BoundingBox.html) e a cena BoundingBoxExamples. Unity para obter os detalhes de configuração.
 
 <img alt="BoundingBox.cs assigned to an object" width="800" src="images/MRTK101/MRTK_BoundingBox.png">
 
@@ -141,7 +141,7 @@ Pronto para criar experiências incríveis para realidade misturada? Visite as p
 </tr>
 </table>
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 * [Mixed Reality Toolkit-Unity (MRTK) GitHub](https://github.com/Microsoft/MixedRealityToolkit-Unity)
 * [Portal de documentação do MRTK](https://microsoft.github.io/MixedRealityToolkit-Unity/README.html)

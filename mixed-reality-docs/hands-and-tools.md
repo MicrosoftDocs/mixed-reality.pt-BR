@@ -6,12 +6,12 @@ ms.author: shentan
 ms.date: 04/26/2019
 ms.topic: article
 keywords: Realidade mista, mãos, controladores de movimento, interação, design
-ms.openlocfilehash: 395862fe987244e2af70bb6794caa91e243cd076
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 27d13316bbc4b3b40a1e617d73dd5487c05cb347
+ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73435166"
+ms.lasthandoff: 12/24/2019
+ms.locfileid: "75334448"
 ---
 # <a name="hands-and-motion-controllers"></a>Controladores de mãos e de movimento
 ## <a name="scenarios"></a>Cenários
@@ -22,7 +22,7 @@ Alguns cenários específicos podem ser:
 * Fornecendo tutoriais e guias de primeira linha aos funcionários para linhas de assembly de fábrica
 * Desenvolvendo ferramentas profissionais para auxiliar e conscientizar profissionais médicos  
 * Usando objetos virtuais 3D para decorar o mundo real ou para criar um segundo mundo 
-* Criando serviços e jogos baseados na localização usando o mundo real como um plano de fundo
+* Criando serviços e jogos baseados em local usando o mundo real como um plano de fundo
 
 <br>
 
@@ -39,7 +39,7 @@ Alguns cenários específicos podem ser:
     :::column:::
        [Ponto de ![e confirmação com mãos](images/hands-and-controllers-point-and-commit.jpg)](point-and-commit.md)<br>
         ### <a name="point-and-commit-with-handspoint-and-commitmdbr"></a>[Apontar e confirmar com as mãos](point-and-commit.md)<br>
-        Essa modalidade permite que os usuários interajam com os hologramas em uma distância. Ele permite que os usuários façam o melhor uso de arredores. Os usuários podem posicionar os hologramas em qualquer lugar e ainda podem acessá-los de qualquer distância. Os modelos mentales e gestos para controlar e manipular os hologramas 2D e 3D são altamente sincronizados com aqueles de manipulação direta.
+        Essa modalidade permite que os usuários interajam com os hologramas em uma distância. Ele permite que os usuários façam o melhor uso de arredores. Os usuários podem posicionar os hologramas em qualquer lugar e ainda acessá-los de qualquer distância. Os modelos mentales e gestos para controlar e manipular os hologramas 2D e 3D são altamente sincronizados com aqueles de manipulação direta.
     :::column-end:::
     :::column:::
        [![controladores de movimento](images/hands-and-controllers-motion-controllers.jpg)](motion-controllers.md)<br>
@@ -52,7 +52,7 @@ Alguns cenários específicos podem ser:
 
 ---
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 * [Focar com a cabeça e confirmar](gaze-and-commit.md)
 * [Focar com a cabeça e esperar](gaze-and-dwell.md)
 * [Manipulação direta com as mãos](direct-manipulation.md)

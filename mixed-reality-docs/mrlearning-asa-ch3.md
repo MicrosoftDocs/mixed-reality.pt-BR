@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realidade misturada, unity, tutorial, hololens
-ms.openlocfilehash: 9f57cb9874aade2d6b19d0c061fd83eb04b9ef11
-ms.sourcegitcommit: b6b76275fad90df6d9645dd2bc074b7b2168c7c8
+ms.openlocfilehash: 19529cbfebd74938395545c329097d42b5af9ff9
+ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/11/2019
-ms.locfileid: "73914377"
+ms.lasthandoff: 12/24/2019
+ms.locfileid: "75334406"
 ---
 # <a name="3-displaying-azure-spatial-anchor-feedback"></a>3. exibindo comentários de âncora espacial do Azure
 
@@ -23,38 +23,32 @@ Nesta lição, você aprenderá a fornecer aos usuários comentários sobre a de
 
 * Entender e explorar os elementos de comentários que o SDK do ASA disponibiliza para os usuários
 
-## <a name="instructions"></a>Instruções
-
-### <a name="set-up-asa-feedback-ui-panel"></a>Configurar o painel de IU de comentários do ASA
+## <a name="set-up-asa-feedback-ui-panel"></a>Configurar o painel de IU de comentários do ASA
 
 1. Nesta lição, não estamos usando os botões "SaveAnchorToDisk" e "ShareAnchor", portanto, selecione ambos os botões e desmarque a caixa de seleção no painel Inspetor (conforme mostrado abaixo) para ocultar esses botões.
-   
 
-![module2chapter3step1im](images/module2chapter3step1im.PNG)
+    ![module2chapter3step1im](images/module2chapter3step1im.PNG)
 
 2. Crie o painel de instruções. Comece clicando com o botão direito do mouse em "instruções", focalize o "objeto 3D" e selecione "textmeshpro-Text".
 
-![module2chapter3step2im](images/module2chapter3step2im.PNG)
+    ![module2chapter3step2im](images/module2chapter3step2im.PNG)
 
 3. Ajuste a escala e o posicionamento do texto para que ele corresponda às instruções em sua cena. Além disso, verifique se o alinhamento de todo o texto está centralizado. Em seguida, exclua o texto de exemplo do editor de texto, conforme mostrado na imagem abaixo.
 
-![module2chapter3step3im](images/module2chapter3step3im.PNG)
+    ![module2chapter3step3im](images/module2chapter3step3im.PNG)
 
 4. Altere o nome do objeto TextMeshPro para "FeedbackPanel".
-   
 
-![module2chapter3step4im](images/module2chapter3step4im.PNG)
+    ![module2chapter3step4im](images/module2chapter3step4im.PNG)
 
-5. Verifique se o texto "feedbackpanel" está selecionado na hierarquia de ASA_feedback, clique em "Adicionar componente" e adicione o script de comentários de âncora pesquisando-o e selecionando-o quando ele for exibido. 
+5. Verifique se o texto "feedbackpanel" está selecionado na hierarquia de ASA_feedback, clique em "Adicionar componente" e adicione o script de comentários de âncora pesquisando-o e selecionando-o quando ele for exibido.
 
-![module2chapter3step8im](images/module2chapter3step8im.PNG)
+    ![module2chapter3step8im](images/module2chapter3step8im.PNG)
 
-6. Arraste o objeto de texto "feedbackPanel" da hierarquia ASA_Feedback para o slot vazio abaixo do script, como mostrado na imagem abaixo. 
+6. Arraste o objeto de texto "feedbackPanel" da hierarquia ASA_Feedback para o slot vazio abaixo do script, como mostrado na imagem abaixo.
 
-![module2chapter3step9im](images/module2chapter3step9im.PNG)
+    ![module2chapter3step9im](images/module2chapter3step9im.PNG)
 
 ## <a name="congratulations"></a>Parabéns
 
 Nesta lição, aprendemos como criar um painel de interface do usuário para exibir o status atual da experiência de ancoragem espacial do Azure para fornecer aos usuários comentários em tempo real.
-
-

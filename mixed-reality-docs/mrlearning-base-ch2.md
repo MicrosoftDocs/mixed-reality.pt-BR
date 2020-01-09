@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realidade misturada, unity, tutorial, hololens
-ms.openlocfilehash: f0a54bb591479dbe8ffa719cb5e6a9d846f67f9e
-ms.sourcegitcommit: 83698638b93c5ba77b3ffc399f1706482539f27b
+ms.openlocfilehash: e961238b8fc7f2ef15bea5f25eba8a8e9eb2ef3e
+ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74539741"
+ms.lasthandoff: 12/24/2019
+ms.locfileid: "75334392"
 ---
 # <a name="3-creating-user-interface-and-configure-mixed-reality-toolkit"></a>3. criando a interface do usuário e Configurando o kit de ferramentas de realidade mista
 
@@ -23,9 +23,7 @@ Na lição anterior, você aprendeu sobre alguns dos recursos que o MRTK (Kit de
 * Interagir com hologramas usando elementos e botões de interface do usuário
 * Interações e entrada de acompanhamento de mão básicas
 
-## <a name="instructions"></a>Instruções
-
-### <a name="how-to-configure-the-mixed-reality-toolkit-profiles-change-spatial-awareness-display-option"></a>Como configurar os perfis do kit de ferramentas de realidade misturada (alterar a opção de exibição de conscientização espacial)
+## <a name="how-to-configure-the-mixed-reality-toolkit-profiles-change-spatial-awareness-display-option"></a>Como configurar os perfis do kit de ferramentas de realidade misturada (alterar a opção de exibição de conscientização espacial)
 
 Nesta seção, você aprenderá a personalizar e configurar os perfis de MRTK padrão ajustando a opção de exibição da malha de conscientização espacial. Você pode seguir esses mesmos princípios para ajuste quaisquer configurações ou valores nos perfis do MRTK.
 
@@ -73,7 +71,7 @@ Nesta seção, você aprenderá a personalizar e configurar os perfis de MRTK pa
 
 Parabéns! Você acabou de aprender como modificar uma configuração do perfil do MRTK. Como é possível ver, para modificar as configurações do MRTK, você precisa criar cópias dos perfis padrão para poder editá-los. Você sempre terá os perfis padrão, que não são editáveis, para voltar a se desejar criar um perfil com novas configurações ou se você puder consultar os perfis padrão. Há várias configurações que você pode ajustar. Para obter uma referência completa às configurações de perfil do MRTK, consulte a documentação do MRTK aqui: [https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/GettingStartedWithTheMRTK.html](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/GettingStartedWithTheMRTK.html)
 
-### <a name="hand-tracking-gestures-and-interactable-buttons"></a>Botões interativos e gestos de acompanhamento de mão
+## <a name="hand-tracking-gestures-and-interactable-buttons"></a>Botões interativos e gestos de acompanhamento de mão
 
 Nesta seção, você aprenderá a usar o acompanhamento à mão para pressionar um botão que poderá ser pressionado.
 
@@ -94,7 +92,7 @@ Nesta seção, você aprenderá a usar o acompanhamento à mão para pressionar 
 
     ![MR213_BuildSettings](images/mrlearning-base-ch2-2-step6a.png)
 
-    Agora, um cubo deve estar na exibição. Ele aparecerá muito grande. Você pode ajustar as coordenadas (enquanto o cubo ainda está selecionado na área hierarquia) para diminuir o tamanho. Defina os valores de escala como x = 0, 2, y = 0, 2 e z = 0, 2. Certifique-se de posicionar o cubo em sua cena próximo ao botão, mas não se sobrepondo a ele. Na imagem abaixo, a posição do cubo é x = 0, y = 0,4 e z = 0,2.
+    Agora, um cubo deve estar na exibição. Ele aparecerá muito grande. Você pode ajustar as coordenadas (enquanto o cubo ainda está selecionado na área hierarquia) para diminuir o tamanho. Defina os valores de escala como x = 0, 2, y = 0, 2 e z = 0, 2. Certifique-se de posicionar o cubo em sua cena próximo ao botão, mas não se sobrepondo a ele. Na imagem abaixo, a posição do cubo é x = 0, y = 0, 4 e z = 0,2.
 
     ![MR213_BuildSettings](images/mrlearning-base-ch2-2-step6b.png)
 
@@ -129,7 +127,7 @@ Nesta seção, você aprenderá a usar o acompanhamento à mão para pressionar 
 
     Agora, quando o botão for pressionado, ele será alterado para uma nova cor; cores. Quando o botão for liberado, ele será alterado de volta para a cor padrão especificada (por exemplo, cinza claro). Pressione o botão reproduzir na parte superior da tela para testá-lo no editor ou implantar em seu HoloLens 2, para testar. Para saber mais sobre a simulação no editor, incluindo a simulação manual, leia a [página de documentação da simulação do MRTK](<https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/InputSimulation/InputSimulationService.html>).
 
-### <a name="creating-a-panel-of-buttons-using-mrtks-grid-object-collection"></a>Criando um painel de botões usando a coleção de objetos de grade do MRTK
+## <a name="creating-a-panel-of-buttons-using-mrtks-grid-object-collection"></a>Criando um painel de botões usando a coleção de objetos de grade do MRTK
 
 Nesta seção, você aprenderá a alinhar automaticamente vários botões em uma interface do usuário clara usando a ferramenta GridObjectCollection do MRTK.
 
@@ -162,7 +160,7 @@ Nesta seção, você aprenderá a alinhar automaticamente vários botões em uma
     >[!NOTE]
     >Dependendo da orientação dos objetos pai ou objetos filho, provavelmente você precisará ajustar a orientação de configuração de forma diferente em projetos futuros. Os campos Largura da Célula e Altura da Célula também podem precisar ser definidos de forma diferente, dependendo do tamanho dos objetos na sua coleção.
 
-### <a name="adding-text-into-your-scene"></a>Adicionando texto na sua cena
+## <a name="adding-text-into-your-scene"></a>Adicionando texto na sua cena
 
 Nesta seção, você aprenderá como adicionar e editar o texto às suas experiências de realidade misturada. Se ainda não tiver feito isso, verifique se você tem o TextMeshPro habilitado no Unity seguindo as instruções [aqui](https://docs.unity3d.com/Packages/com.unity.textmeshpro@2.0/manual/index.html#installation).
 

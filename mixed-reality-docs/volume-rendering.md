@@ -6,12 +6,12 @@ ms.author: kkennedy
 ms.date: 03/21/2018
 ms.topic: article
 keywords: imagem volumétricos, renderização de volume, desempenho, realidade misturada
-ms.openlocfilehash: 1b3ec59adf4f6449ed3f12d7f98f329c4e963ea5
-ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
+ms.openlocfilehash: 04931df5e4225225e4c11c3f6d72801e2d58f646
+ms.sourcegitcommit: 317653cd8500563c514464f0337c1f230a6f3653
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926674"
+ms.lasthandoff: 12/28/2019
+ms.locfileid: "75503824"
 ---
 # <a name="volume-rendering"></a>Renderização de volume
 
@@ -23,7 +23,7 @@ Principais soluções para melhorar o desempenho
 3. BOA: recortando o subvolume: mostrar apenas algumas camadas do volume
 4. BOM: Reduza a resolução da renderização de volume (consulte ' renderização de cena de resolução mista ')
 
-Há apenas uma determinada quantidade de informações que podem ser transferidas do aplicativo para a tela em qualquer quadro específico, essa é a largura de banda total da memória. Também qualquer processamento (ou ' sombreamento ') necessário para transformar esses dados para apresentação também requer tempo. As principais considerações ao fazer a renderização de volume são:
+Há apenas uma determinada quantidade de informações que podem ser transferidas do aplicativo para a tela em qualquer quadro específico, que é a largura de banda de memória total. Além disso, qualquer processamento (ou ' sombreamento ') necessário para transformar os dados para apresentação requer tempo. As principais considerações ao fazer a renderização de volume são:
 * Largura da tela * tela-altura * tela-contagem * volume-camadas-em-pixel = total-volume-amostras por quadro
 * 1028 * 720 * 2 * 256 = 378961920 (100%) (volume de resolução completa: muitos exemplos)
 * 1028 * 720 * 2 * 1 = 1480320 (0,3% de completo) (fatia fina: 1 amostra por pixel, é executado sem problemas)
@@ -98,7 +98,7 @@ float4 ShadeVol( float intensity ) {
    color.rgba = tex2d( ColorRampTexture, float2( unitIntensity, 0 ) );
 ```
 
-Em muitos nossos aplicativos, armazenamos em nosso volume um valor de intensidade bruta e um "índice de segmentação" (para segmentar partes diferentes, como Skin e Bone, esses segmentos são geralmente criados por especialistas em ferramentas dedicadas). Isso pode ser combinado com a abordagem acima para colocar uma cor diferente ou até mesmo uma rampa de cores diferente para cada índice de segmento:
+Em muitos de nossos aplicativos, armazenamos em nosso volume um valor de intensidade bruta e um "índice de segmentação" (para segmentar partes diferentes, como Skin e Bone; geralmente, esses segmentos são criados por especialistas em ferramentas dedicadas). Isso pode ser combinado com a abordagem acima para colocar uma cor diferente ou até mesmo uma rampa de cores diferente para cada índice de segmento:
 
 ```
 // Change color to match segment index (fade each segment towards black):
@@ -122,7 +122,7 @@ Uma ótima primeira etapa é criar um "plano de divisão" que possa passar pelo 
 
 ## <a name="volume-tracing-in-shaders"></a>Rastreamento de volume em sombreadores
 
-Como usar a GPU para fazer o rastreamento de subvolume (percorre algumas voxels em camadas, em seguida, sobre os dados de volta para frente):
+Como usar a GPU para fazer o rastreamento de subvolume (percorre algumas voxels de fundo e camadas nos dados de volta para frente):
 
 ```
 float4 AlphaBlend(float4 dst, float4 src) {
@@ -181,11 +181,11 @@ float4 volTraceSubVolume(float3 objPosStart, float3 cameraPosVolSpace) {
 
 Como renderizar uma parte da cena com uma baixa resolução e colocá-la de volta em vigor:
 1. Configurar duas câmeras fora da tela, uma para seguir cada olho que atualiza cada quadro
-2. Configurar dois destinos de renderização de baixa resolução (digamos 200 x 200 cada), que as câmeras renderizam em
+2. Configurar dois destinos de renderização de baixa resolução (ou seja, 200 x 200 cada) que as câmeras renderizam
 3. Configurar um quad que se move para a frente do usuário
 
 Cada quadro:
 1. Desenhe os destinos de renderização para cada olho em baixa resolução (dados de volume, sombreadores caros, etc.)
 2. Desenhe a cena normalmente como resolução completa (malhas, interface do usuário, etc.)
-3. Desenhe um quad na frente do usuário, por meio da cena, e projeto os renderizamentos de baixa resolução sobre isso.
-4. Resultado: combinação visual de elementos de resolução completa com dados de volume de baixa resolução, mas de alta densidade.
+3. Desenhe um quad na frente do usuário, por meio da cena, e projeto os renderizadores de baixa res para isso
+4. Resultado: combinação visual de elementos de resolução completa com dados de volume de baixa resolução, mas de alta densidade
