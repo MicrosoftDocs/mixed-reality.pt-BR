@@ -6,12 +6,12 @@ ms.author: dongpark
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Realidade mista do Windows, design, controles, interface do usuário, UX
-ms.openlocfilehash: 4befaa6f55bff6a820c976db969fdad7b64a2214
-ms.sourcegitcommit: 17427d4d8c3723d53540f1b7f5bc061bba08c1d6
+ms.openlocfilehash: d028b8717dae0e04a9a1104a8a4b7803023334ef
+ms.sourcegitcommit: 6844930427b658ae31f642c395cd8a3b3cdbf857
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2019
-ms.locfileid: "74143251"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75723205"
 ---
 # <a name="progress-indicator"></a>Indicador de progresso
 
@@ -37,7 +37,7 @@ Um controle de progresso oferece feedback ao usuário que uma operação de exec
         *Imagem: exemplo de barra de progresso no HoloLens*
     :::column-end:::
         :::column:::
-        ![de espaço](images/spacer-20x582.png)<br>
+        ![space](images/spacer-20x582.png)<br>
        ![exemplo de barra de progresso no HoloLens](images/640px-progressbar.jpg)<br>
     :::column-end:::
 :::row-end:::
@@ -54,7 +54,7 @@ Um controle de progresso oferece feedback ao usuário que uma operação de exec
         *Imagem: exemplo de anel de andamento no HoloLens*
     :::column-end:::
         :::column:::
-        ![de espaço](images/spacer-20x582.png)<br>
+        ![space](images/spacer-20x582.png)<br>
        ![exemplo de anel de progresso no HoloLens](images/640px-progressring.jpg)<br>
     :::column-end:::
 :::row-end:::
@@ -71,7 +71,7 @@ Um controle de progresso oferece feedback ao usuário que uma operação de exec
         *Imagem: progresso com o exemplo de malha personalizada no HoloLens*
     :::column-end:::
         :::column:::
-        ![de espaço](images/spacer-20x582.png)<br>
+        ![space](images/spacer-20x582.png)<br>
        ![andamento com o exemplo de malha personalizada no HoloLens](images/640px-progresscustom.jpg)<br>
     :::column-end:::
 :::row-end:::
@@ -88,7 +88,7 @@ Um controle de progresso oferece feedback ao usuário que uma operação de exec
 
 ---
 
-## <a name="progress-indicator-in-mrtkmixed-reality-toolkit-for-unity"></a>Indicador de progresso em MRTK (Kit de ferramentas de realidade misturada) para Unity
+## <a name="progress-indicator-in-mrtk-mixed-reality-toolkit-for-unity"></a>Indicador de progresso em MRTK (Kit de ferramentas de realidade misturada) para Unity
 
 * [MRTK pré-fabricados indicador de progresso](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_release/Assets/MixedRealityToolkit.SDK/Features/UX/Prefabs/ProgressIndicators)
 * [Serviço de transição MRTK-Scene](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Extensions/SceneTransitionService/SceneTransitionServiceOverview.html)
@@ -98,23 +98,23 @@ Um controle de progresso oferece feedback ao usuário que uma operação de exec
 
 ---
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 * [Cursores](cursors.md)
-* [Raio da mão](point-and-commit.md)
-* [Button](button.md)
+* [Raio de mão](point-and-commit.md)
+* [Botão](button.md)
 * [Objeto interativo](interactable-object.md)
 * [Caixa delimitadora e barra de aplicativos](app-bar-and-bounding-box.md)
-* [Manusei](direct-manipulation.md)
+* [Manipulação](direct-manipulation.md)
 * [Menu lateral](hand-menu.md)
 * [Menu próximo](near-menu.md)
 * [Coleção de objetos](object-collection.md)
 * [Comando de voz](voice-input.md)
 * [Teclado](keyboard.md)
-* [Dessa](tooltip.md)
+* [Dica de ferramenta](tooltip.md)
 * [Slate](slate.md)
-* [Slider](slider.md)
-* [Shader](shader.md)
+* [Controle deslizante](slider.md)
+* [Sombreador](shader.md)
 * [Mural e tag-along](billboarding-and-tag-along.md)
 * [Exibindo o progresso](progress.md)
-* [Magnetism Surface](surface-magnetism.md)
+* [Magnetismo de superfície](surface-magnetism.md)

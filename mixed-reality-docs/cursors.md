@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
 keywords: HoloLens (1º gen), HoloLens 2, realidade misturada, cursores, direcionamento, olhar, gestos
-ms.openlocfilehash: 719e7a573e8c8bc682ec0f960d9f3c8f8c8e5a4a
-ms.sourcegitcommit: 781e47db2ca2f2c792c95e76ac309b44b3535555
+ms.openlocfilehash: 969906cb09e100dbdd289d78baba722a4bd32537
+ms.sourcegitcommit: 6844930427b658ae31f642c395cd8a3b3cdbf857
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74105739"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75723235"
 ---
 # <a name="cursors"></a>Cursores
 
@@ -114,7 +114,7 @@ Se você quiser personalizar os comportamentos e as aparências dos comentários
 * Embora não haja uma forma de cursor à direita, recomendamos que você use uma forma sem direção como uma Torus. Um cursor que aponta em alguma direção (por exemplo, um cursor de seta tradicional) pode confundir o usuário para sempre verificar dessa forma.
 * Uma exceção a isso é quando se usa o cursor para comunicar a instrução de interação ao usuário. Por exemplo, ao dimensionar hologramas no sistema operacional de realidade misturada, o cursor inclui temporariamente setas que instruem o usuário sobre como mover sua mão para dimensionar o holograma.
 
-### <a name="look-and-feel"></a>Aparência
+### <a name="look-and-feel"></a>Aparência e funcionamento
 * Um cursor com formato de rosca ou Torus funciona para muitos aplicativos.
 * Escolha uma cor e forma que melhor represente a experiência que você está criando.
 * Os cursores estão especialmente sujeitos à [separação de cores](hologram-stability.md#color-separation).
@@ -156,16 +156,16 @@ A criação sem um cursor é recomendada quando o sentido do imersão é um comp
 
 ---
 
-## <a name="cursor-in-mrtkmixed-reality-toolkit-for-unity"></a>Cursor em MRTK (Mixed Reality Toolkit) para Unity
-Por padrão, **[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** fornece um cursor pré-fabricado ([DefaultCursor. pré-fabricado](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_release/Assets/MixedRealityToolkit.SDK/Features/UX/Prefabs/Cursors)) que tem o mesmo estado visual que o cursor do sistema do Shell. Ele é atribuído no perfil de entrada do MRTK, sob ponteiros. Você pode substituir/personalizar este cursor para sua experiência. Para a experiência com a entrada de acompanhamento de olho, o MRTK também fornece EyeGazeCursor que tem Visual sutil para minimizar a distração.
+## <a name="cursor-in-mrtk-mixed-reality-toolkit-for-unity"></a>Cursor em MRTK (Mixed Reality Toolkit) para Unity
+Por padrão, [MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity) fornece um cursor pré-fabricado ([DefaultCursor. pré-fabricado](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_release/Assets/MixedRealityToolkit.SDK/Features/UX/Prefabs/Cursors)) que tem o mesmo estado visual que o cursor do sistema do Shell. Ele é atribuído no perfil de Entrada do MRTK, em Ponteiros. Você pode substituir/personalizar este cursor para sua experiência. Para a experiência com a entrada de acompanhamento de olho, o MRTK também fornece EyeGazeCursor que tem Visual sutil para minimizar a distração.
 
-* [MRTK-perfil de ponteiro](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/MixedRealityConfigurationGuide.html#pointer-configuration)
-* [MRTK – sistema de entrada](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Input/Overview.html)
-* [MRTK-ponteiros](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Input/Pointers.html)
+* [MRTK – Perfil de ponteiro](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/MixedRealityConfigurationGuide.html#pointer-configuration)
+* [MRTK – Sistema de entrada](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Input/Overview.html)
+* [MRTK – Ponteiros](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Input/Pointers.html)
 
 
 ---
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 * [Gestos](gaze-and-commit.md#composite-gestures)
 * [Focar com a cabeça e confirmar](gaze-and-commit.md)

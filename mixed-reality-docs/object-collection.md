@@ -6,12 +6,12 @@ ms.author: dongpark
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Realidade mista do Windows, controles, design
-ms.openlocfilehash: 9a111fcbe4c49972cc5ef22fb647f89544188af5
-ms.sourcegitcommit: 17427d4d8c3723d53540f1b7f5bc061bba08c1d6
+ms.openlocfilehash: ec41cfad77617a90d02e7b23a2334249aa430190
+ms.sourcegitcommit: 6844930427b658ae31f642c395cd8a3b3cdbf857
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2019
-ms.locfileid: "74143148"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75723215"
 ---
 # <a name="object-collection"></a>Coleção de objetos
 
@@ -48,7 +48,7 @@ Você também pode usar imagens 2D com a coleção de objetos. Os exemplos a seg
 
 ---
 
-## <a name="object-collection-in-mrtkmixed-reality-toolkit-for-unity"></a>Coleção de objetos no MRTK (Kit de ferramentas de realidade misturada) para Unity
+## <a name="object-collection-in-mrtk-mixed-reality-toolkit-for-unity"></a>Coleção de objetos no MRTK (Kit de ferramentas de realidade misturada) para Unity
 
 * [MRTK-coleção de objetos](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_ObjectCollection.html)
 
@@ -58,23 +58,23 @@ Você também pode usar imagens 2D com a coleção de objetos. Os exemplos a seg
 ---
 
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 * [Cursores](cursors.md)
-* [Raio da mão](point-and-commit.md)
-* [Button](button.md)
+* [Raio de mão](point-and-commit.md)
+* [Botão](button.md)
 * [Objeto interativo](interactable-object.md)
 * [Caixa delimitadora e barra de aplicativos](app-bar-and-bounding-box.md)
-* [Manusei](direct-manipulation.md)
+* [Manipulação](direct-manipulation.md)
 * [Menu lateral](hand-menu.md)
 * [Menu próximo](near-menu.md)
 * [Coleção de objetos](object-collection.md)
 * [Comando de voz](voice-input.md)
 * [Teclado](keyboard.md)
-* [Dessa](tooltip.md)
+* [Dica de ferramenta](tooltip.md)
 * [Slate](slate.md)
-* [Slider](slider.md)
-* [Shader](shader.md)
+* [Controle deslizante](slider.md)
+* [Sombreador](shader.md)
 * [Mural e tag-along](billboarding-and-tag-along.md)
 * [Exibindo o progresso](progress.md)
-* [Magnetism Surface](surface-magnetism.md)
+* [Magnetismo de superfície](surface-magnetism.md)

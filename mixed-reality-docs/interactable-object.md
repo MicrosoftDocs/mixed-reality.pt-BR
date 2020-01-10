@@ -6,12 +6,12 @@ ms.author: jennyk
 ms.date: 06/06/2019
 ms.topic: article
 keywords: Realidade misturada, controles, interação, interface do usuário, UX
-ms.openlocfilehash: 73c8a3ce9e01f580ecbae23f2178871642c4540e
-ms.sourcegitcommit: 17427d4d8c3723d53540f1b7f5bc061bba08c1d6
+ms.openlocfilehash: 87979d2d7b7de4a384b42b5059239e9b830a92e8
+ms.sourcegitcommit: 6844930427b658ae31f642c395cd8a3b3cdbf857
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2019
-ms.locfileid: "74143262"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75723225"
 ---
 # <a name="interactable-object"></a>Objeto que interage
 
@@ -140,8 +140,8 @@ Um [botão no HoloLens 2](https://microsoft.github.io/MixedRealityToolkit-Unity/
 
 :::row:::
     :::column:::
-        ![](images/640px-interactibleobject-pressablebutton-default.jpg) padrão<br>
-        **Os**<br>
+        ![Padrão](images/640px-interactibleobject-pressablebutton-default.jpg)<br>
+        **Padrão**<br>
     :::column-end:::
     :::column:::
         ![](images/640px-interactibleobject-pressablebutton-hover.jpg) em foco<br>
@@ -152,13 +152,13 @@ Um [botão no HoloLens 2](https://microsoft.github.io/MixedRealityToolkit-Unity/
 
 :::row:::
     :::column:::
-        ![Toque](images/640px-interactibleobject-pressablebutton-touch.jpg)<br>
-        **Toque**<br>
+        ![Tocar](images/640px-interactibleobject-pressablebutton-touch.jpg)<br>
+        **Tocar**<br>
         Mostrar efeito de ondulação.
     :::column-end:::
     :::column:::
-        ![pressione](images/640px-interactibleobject-pressablebutton-press.jpg)<br>
-        **Impressão**<br>
+        ![Pressione](images/640px-interactibleobject-pressablebutton-press.jpg)<br>
+        **Pressione**<br>
         Mova a placa frontal.
     :::column-end:::
 :::row-end:::
@@ -175,7 +175,7 @@ Um [botão no HoloLens 2](https://microsoft.github.io/MixedRealityToolkit-Unity/
         *Loop de vídeo: exemplo de comentários visuais com base na proximidade a uma caixa delimitadora*
     :::column-end:::
         :::column:::
-        ![de espaço](images/spacer-20x582.png)<br>
+        ![space](images/spacer-20x582.png)<br>
        ![os comentários visuais sobre a proximidade](images/HoloLens2_Proximity.gif)<br>
     :::column-end:::
 :::row-end:::
@@ -225,7 +225,7 @@ Abaixo estão as recomendações para tamanhos mínimos de conteúdo de interaç
 
 ### <a name="target-size-for-direct-hand-interaction"></a>Tamanho de destino para interação direta
 
-| Alcance | Ângulo de exibição | Size |
+| Distância | Ângulo de exibição | Size |
 |---------|---------|---------|
 | 45cm  | Não é menor que 2 ° | 1,6 x 1,6 cm |
 
@@ -238,7 +238,7 @@ Abaixo estão as recomendações para tamanhos mínimos de conteúdo de interaç
 
 Ao criar botões para interação direta, recomendamos um tamanho mínimo maior de 3,2 x 3,2 cm para garantir que haja espaço suficiente para conter um ícone e potencialmente algum texto.
 
-| Alcance | Tamanho mínimo |
+| Distância | Tamanho mínimo |
 |---------|---------|
 | 45cm  | 3,2 x 3,2 cm |
 
@@ -248,7 +248,7 @@ Ao criar botões para interação direta, recomendamos um tamanho mínimo maior 
 <br>
 
 ### <a name="target-size-for-hand-ray-or-gaze-interaction"></a>Tamanho de destino para interação de olhar
-| Alcance | Ângulo de exibição | Size |
+| Distância | Ângulo de exibição | Size |
 |---------|---------|---------|
 | m  | Não é menor que 1 ° | 3,5 x 3,5 cm |
 
@@ -261,12 +261,12 @@ Ao criar botões para interação direta, recomendamos um tamanho mínimo maior 
 ---
 
 
-## <a name="interactable-object-in-mrtkmixed-reality-toolkit-for-unit"></a>Objeto de interação em MRTK (Kit de ferramentas de realidade misturada) para unidade
+## <a name="interactable-object-in-mrtk-mixed-reality-toolkit-for-unity"></a>Objeto de interação no MRTK (Kit de ferramentas de realidade misturada) para Unity
 
 No **[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** , você pode usar o script de forma a [**interagir**](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_release/Assets/MixedRealityToolkit.SDK/Features/UX/Interactable/Scripts) para fazer com que os objetos respondam a vários tipos de Estados de interação de entrada. Ele dá suporte a vários tipos de temas que permitem definir estados visuais controlando Propriedades de objeto, como cor, tamanho, material e sombreador.
 
 * [Interagir](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Interactable.html)
-* [Button](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Button.html)
+* [Botão](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Button.html)
 * [Exemplos de interação de mão cena](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_release/Documentation/README_HandInteractionExamples.md)
 
 O sombreador padrão de MixedRealityToolkit fornece várias opções, como a **luz de proximidade** que ajuda você a criar indicações visuais e de áudio.
@@ -278,23 +278,23 @@ O sombreador padrão de MixedRealityToolkit fornece várias opções, como a **l
 ---
 
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 * [Cursores](cursors.md)
-* [Raio da mão](point-and-commit.md)
-* [Button](button.md)
+* [Raio de mão](point-and-commit.md)
+* [Botão](button.md)
 * [Objeto interativo](interactable-object.md)
 * [Caixa delimitadora e barra de aplicativos](app-bar-and-bounding-box.md)
-* [Manusei](direct-manipulation.md)
+* [Manipulação](direct-manipulation.md)
 * [Menu lateral](hand-menu.md)
 * [Menu próximo](near-menu.md)
 * [Coleção de objetos](object-collection.md)
 * [Comando de voz](voice-input.md)
 * [Teclado](keyboard.md)
-* [Dessa](tooltip.md)
+* [Dica de ferramenta](tooltip.md)
 * [Slate](slate.md)
-* [Slider](slider.md)
-* [Shader](shader.md)
+* [Controle deslizante](slider.md)
+* [Sombreador](shader.md)
 * [Mural e tag-along](billboarding-and-tag-along.md)
 * [Exibindo o progresso](progress.md)
-* [Magnetism Surface](surface-magnetism.md)
+* [Magnetismo de superfície](surface-magnetism.md)

@@ -6,12 +6,12 @@ ms.author: hakons
 ms.date: 10/03/2019
 ms.topic: article
 keywords: ggv, voz, Cortana, fala, entrada
-ms.openlocfilehash: 7264b0b8882928f64860bc5a30b97683306cb19c
-ms.sourcegitcommit: 781e47db2ca2f2c792c95e76ac309b44b3535555
+ms.openlocfilehash: f2ae18d4063c7c4a63346a1202cacaa7fbbdf959
+ms.sourcegitcommit: 6844930427b658ae31f642c395cd8a3b3cdbf857
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74105774"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75723185"
 ---
 # <a name="voice-input"></a>Entrada de voz
 
@@ -121,7 +121,7 @@ Você também pode dizer "Ei Cortana" para abrir a Cortana a qualquer momento. V
         *Imagem: um usuário pode dizer o comando "ajustar" que vê na barra de aplicativos para ajustar a posição do aplicativo*
     :::column-end:::
         :::column:::
-        ![de espaço](images/spacer-20x582.png)<br>
+        ![space](images/spacer-20x582.png)<br>
         ![ao examinar uma janela de aplicativo ou um holograma, um usuário pode dizer o comando "ajustar" que vê na barra de aplicativos para ajustar a posição do aplicativo no mundo](images/microphone-600px.png)<br>
     :::column-end:::
 :::row-end:::
@@ -296,7 +296,7 @@ Para o Windows Mixed Reality Developer Edition versão 2017, a lógica de gerenc
 
 ---
 
-## <a name="voice-input-in-mrtkmixed-reality-toolkit-for-unity"></a>Entrada de voz em MRTK (Kit de ferramentas de realidade misturada) para Unity
+## <a name="voice-input-in-mrtk-mixed-reality-toolkit-for-unity"></a>Entrada de voz em MRTK (Kit de ferramentas de realidade misturada) para Unity
 Com o **[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** , você pode atribuir facilmente o comando de voz em qualquer objeto. Use o **perfil de entrada de fala** do MRTK para definir suas palavras-chave. Ao atribuir o script **SpeechInputHandler** , você pode fazer com que qualquer objeto responda às palavras-chave definidas no perfil de entrada de fala. O SpeechInputHandler também fornece um rótulo de confirmação de fala para melhorar a confiança do usuário.
 
 * [MRTK-comando de voz](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Input/Speech.html)
@@ -304,7 +304,7 @@ Com o **[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** , você
 
 ---
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 * [Focar e confirmar](gaze-and-commit.md)
 * [Interações instinctuais](interaction-fundamentals.md)
 * [Entrada MR 212: voz](holograms-212.md)

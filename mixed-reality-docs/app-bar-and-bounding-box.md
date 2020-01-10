@@ -6,12 +6,12 @@ ms.author: adlinv
 ms.date: 06/07/2019
 ms.topic: article
 keywords: Realidade mista do Windows, barra de aplicativos, caixa delimitadora
-ms.openlocfilehash: e4f519cba459efac25f6c1370b07fcda4def30a1
-ms.sourcegitcommit: 17427d4d8c3723d53540f1b7f5bc061bba08c1d6
+ms.openlocfilehash: dab41207c2558fe8bb3fe07fca666cb2668f4e45
+ms.sourcegitcommit: 6844930427b658ae31f642c395cd8a3b3cdbf857
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2019
-ms.locfileid: "74143166"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75723195"
 ---
 # <a name="bounding-box-and-app-bar"></a>Caixa delimitadora e barra de aplicativos
 o limite de ![é a interface padrão para manipulação de objeto em realidade misturada.](images/UX/UX_Hero_BoundingBox.jpg)<br>
@@ -29,7 +29,7 @@ O limite é a interface padrão para a manipulação de objetos em realidade mis
         *Loop de vídeo: dimensionando um objeto por meio da caixa delimitadora*
     :::column-end:::
         :::column:::
-        ![de espaço](images/spacer-20x582.png)<br>
+        ![space](images/spacer-20x582.png)<br>
        ![ponto de vista do HoloLens para dimensionar um objeto por meio da caixa delimitadora](images/HoloLens2_BoundingBox.gif)<br>
     :::column-end:::
 :::row-end:::
@@ -44,7 +44,7 @@ O limite é a interface padrão para a manipulação de objetos em realidade mis
         *Loop de vídeo: girando um objeto por meio da caixa delimitadora*
     :::column-end:::
         :::column:::
-        ![de espaço](images/spacer-20x582.png)<br>
+        ![space](images/spacer-20x582.png)<br>
        ![ponto de vista do HoloLens de girar um objeto por meio da caixa delimitadora](images/HoloLens2_BoundingBox_Rotate.gif)<br>
     :::column-end:::
 :::row-end:::
@@ -59,7 +59,7 @@ O limite é a interface padrão para a manipulação de objetos em realidade mis
         *Loop de vídeo: exemplo de comentários visuais com base na proximidade a uma caixa delimitadora*
     :::column-end:::
         :::column:::
-        ![de espaço](images/spacer-20x582.png)<br>
+        ![space](images/spacer-20x582.png)<br>
        ![os comentários visuais sobre a proximidade](images/HoloLens2_Proximity.gif)<br>
     :::column-end:::
 :::row-end:::
@@ -84,7 +84,7 @@ A barra de aplicativos é um menu de nível de objeto que contém uma série de 
         *Loop de vídeo: percorrendo um holograma, a barra de aplicativos segue*
     :::column-end:::
         :::column:::
-        ![de espaço](images/spacer-20x582.png)<br>
+        ![space](images/spacer-20x582.png)<br>
        ![percorrendo um holograma. A barra de aplicativos é a seguinte.](images/HoloLens2_AppBarFollowing.gif)<br>
     :::column-end:::
 :::row-end:::
@@ -92,7 +92,7 @@ A barra de aplicativos é um menu de nível de objeto que contém uma série de 
 <br>
 
 
-## <a name="bounding-box-in-mrtkmixed-reality-toolkit-for-unity"></a>Caixa delimitadora no MRTK (Kit de ferramentas de realidade misturada) para Unity
+## <a name="bounding-box-in-mrtk-mixed-reality-toolkit-for-unity"></a>Caixa delimitadora no MRTK (Kit de ferramentas de realidade misturada) para Unity
 **[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** fornece scripts e pré-fabricados para a caixa delimitadora e a barra de aplicativos. Você pode adicionar uma caixa delimitadora simplesmente atribuindo o script BoundingBox.cs em qualquer objeto.
 
 * [MRTK-caixa delimitadora](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_BoundingBox.html)
@@ -103,23 +103,23 @@ A barra de aplicativos é um menu de nível de objeto que contém uma série de 
 ---
 
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 * [Cursores](cursors.md)
-* [Raio da mão](point-and-commit.md)
-* [Button](button.md)
+* [Raio de mão](point-and-commit.md)
+* [Botão](button.md)
 * [Objeto interativo](interactable-object.md)
 * [Caixa delimitadora e barra de aplicativos](app-bar-and-bounding-box.md)
-* [Manusei](direct-manipulation.md)
+* [Manipulação](direct-manipulation.md)
 * [Menu lateral](hand-menu.md)
 * [Menu próximo](near-menu.md)
 * [Coleção de objetos](object-collection.md)
 * [Comando de voz](voice-input.md)
 * [Teclado](keyboard.md)
-* [Dessa](tooltip.md)
+* [Dica de ferramenta](tooltip.md)
 * [Slate](slate.md)
-* [Slider](slider.md)
-* [Shader](shader.md)
+* [Controle deslizante](slider.md)
+* [Sombreador](shader.md)
 * [Mural e tag-along](billboarding-and-tag-along.md)
 * [Exibindo o progresso](progress.md)
-* [Magnetism Surface](surface-magnetism.md)
+* [Magnetismo de superfície](surface-magnetism.md)

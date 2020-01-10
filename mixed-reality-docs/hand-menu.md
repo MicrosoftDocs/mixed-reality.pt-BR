@@ -6,12 +6,12 @@ ms.author: nobarr
 ms.date: 08/27/2019
 ms.topic: article
 keywords: mão, menu, botão, acesso rápido, layout
-ms.openlocfilehash: c53fdc4ea6f3243cf906ee1916a9c234d0fce6ca
-ms.sourcegitcommit: 17427d4d8c3723d53540f1b7f5bc061bba08c1d6
+ms.openlocfilehash: c0e1800be69a15706e17f40b1601fc79d05e5d75
+ms.sourcegitcommit: 6844930427b658ae31f642c395cd8a3b3cdbf857
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2019
-ms.locfileid: "74143181"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75723255"
 ---
 # <a name="hand-menu"></a>Menu do lado
 
@@ -26,11 +26,11 @@ Veja abaixo as práticas recomendadas que encontramos para os menus à mão. Voc
 ---
 
 ## <a name="behavior-best-practices"></a>Práticas recomendadas de comportamento
-**A. Mantenha o número de botões pequenos:** devido à distância de proximidade entre um menu protegido por mão e os olhos, e também a tendência do usuário de se concentrar em uma área Visual relativamente pequena a qualquer momento (o cone de atenção da visão é de aproximadamente 10 graus), recomendamos mantendo o número de botões pequenos. Com base em nossa exploração, uma coluna com três botões funciona bem, mantendo todo o conteúdo dentro do campo de exibição (FOV), mesmo quando os usuários movem suas mãos para o centro do FOV. 
+**A. Mantenha o número de botões pequenos:** devido à distância de proximidade entre um menu protegido por mão e os olhos, e também a tendência do usuário de se concentrar em uma área Visual relativamente pequena a qualquer momento (o cone de atenção da visão é de aproximadamente 10 graus), recomendamos manter o número de botões pequenos. Com base em nossa exploração, uma coluna com três botões funciona bem, mantendo todo o conteúdo dentro do campo de exibição (FOV), mesmo quando os usuários movem suas mãos para o centro do FOV. 
 
 **B. Utilize o menu à mão para ação rápida:** gerar um ARM e manter a posição pode facilmente causar fadiga ARM. Use um método protegido por mão para o menu que requer uma pequena interação. Se o seu menu for complexo e exigir tempos de interação estendidos, considere usar o World-Locked ou o corpo bloqueado em vez disso. 
 
-**C. botão/ângulo do painel:** os menus devem ser contratados em direção ao ressalto oposto e ao meio do cabeçalho: isso permite que uma mudança natural interaja com o menu com o lado oposto e evite qualquer posição de mão estranha ou desconfortável ao tocar botões. 
+**C. botão/ângulo do painel:** os menus devem ser contratados em direção ao lado oposto e ao meio do cabeçalho: isso permite que uma mudança natural interaja com o menu com o lado oposto e evite qualquer posição de mão estranha ou desconfortável ao tocar nos botões. 
 
 **D. considere o suporte a uma operação única ou viva-mão:** não presuma que as mãos do usuário estejam sempre disponíveis. Considere uma ampla gama de contextos quando um ou ambos os Hands não estiverem disponíveis e certifique-se de que suas contas de design para essas situações. Para dar suporte a um menu de mão única, você pode tentar fazer a transição do posicionamento do menu de bloqueio manual para mundo bloqueado quando a mão é invertida (vai para o Palm). Para cenários sem intervenção, considere usar um comando de voz para invocar os botões de menu do lado.
 
@@ -127,7 +127,7 @@ Fizemos a pesquisa de usuários com diferentes layouts e locais de menus, os loc
 
 ---
 
-## <a name="hand-menu-in-mrtkmixed-reality-toolkit-for-unity"></a>Menu de mão no MRTK (Kit de ferramentas de realidade misturada) para Unity
+## <a name="hand-menu-in-mrtk-mixed-reality-toolkit-for-unity"></a>Menu de mão no MRTK (Kit de ferramentas de realidade misturada) para Unity
 O **[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** fornece scripts e exemplos de cenas para o menu da mão. O script do Solver HandConstraintPalmUp permite que você anexe facilmente qualquer objeto às mãos com várias opções configuráveis.
 
 * [Menu do MRTK com HandConstraint e HandConstraintPalmUp](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_release/Documentation/README_Solver.md#hand-menu-with-handconstraint-and-handconstraintpalmup)
@@ -138,23 +138,23 @@ O **[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** fornece scr
 ---
 
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 * [Cursores](cursors.md)
-* [Raio da mão](point-and-commit.md)
-* [Button](button.md)
+* [Raio de mão](point-and-commit.md)
+* [Botão](button.md)
 * [Objeto interativo](interactable-object.md)
 * [Caixa delimitadora e barra de aplicativos](app-bar-and-bounding-box.md)
-* [Manusei](direct-manipulation.md)
+* [Manipulação](direct-manipulation.md)
 * [Menu lateral](hand-menu.md)
 * [Menu próximo](near-menu.md)
 * [Coleção de objetos](object-collection.md)
 * [Comando de voz](voice-input.md)
 * [Teclado](keyboard.md)
-* [Dessa](tooltip.md)
+* [Dica de ferramenta](tooltip.md)
 * [Slate](slate.md)
-* [Slider](slider.md)
-* [Shader](shader.md)
+* [Controle deslizante](slider.md)
+* [Sombreador](shader.md)
 * [Mural e tag-along](billboarding-and-tag-along.md)
 * [Exibindo o progresso](progress.md)
-* [Magnetism Surface](surface-magnetism.md)
+* [Magnetismo de superfície](surface-magnetism.md)
