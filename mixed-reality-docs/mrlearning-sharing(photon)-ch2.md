@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realidade misturada, unity, tutorial, hololens
-ms.openlocfilehash: 6840bcc583fe3e42dcaa6f42e71098f4dbe76f4c
-ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
+ms.openlocfilehash: 6abf4fa8fc87afc7007d6f7c76becfbd88ed7a12
+ms.sourcegitcommit: 2bfe9b1af4ee2cc0d668caeccb8ebc3137cbc20b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/24/2019
-ms.locfileid: "75334316"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901513"
 ---
 # <a name="2-getting-unity-ready-for-development"></a>2. obtendo o Unity pronto para desenvolvimento
 
@@ -75,12 +75,16 @@ Neste tutorial, você aprenderá a preparar e configurar o Unity para o desenvol
 
 12. Importe os pacotes personalizados listados:
 
-    a. [Unity. HoloLens2. GettingStarted. tutoriais. Asset. 2.1.0.0. unitypackage](https://github.com/microsoft/MixedRealityLearning/releases/download/getting-started-v2.1.0.0/Unity.HoloLens2.GettingStarted.Tutorials.Asset.2.1.0.0.unitypackage)
+    a. [AzureSpatialAnchors. unitypackage](https://github.com/Azure/azure-spatial-anchors-samples/releases/download/v2.0.0/AzureSpatialAnchors.unitypackage) (versão 2.0.0)
 
-    b. [Unity. HoloLens2. MultiUserCapabilities. tutoriais. Asset. 2.1.0.0. unitypackage](https://github.com/microsoft/MixedRealityLearning/releases/download/multi-user-capabilities-v2.1.0.0/Unity.HoloLens2.MultiUserCapabilities.Tutorials.Asset.2.1.0.0.unitypackage)
+    b. [MRTK. HoloLens2. Unity. tutoriais. assets. GettingStarted. 2.1.0.1. unitypackage](https://github.com/microsoft/MixedRealityLearning/releases/download/getting-started-v2.1.0.1/MRTK.HoloLens2.Unity.Tutorials.Assets.GettingStarted.2.1.0.1.unitypackage)
+
+    c. [MRTK. HoloLens2. Unity. tutoriais. assets. AzureSpatialAnchors. 2.1.0.1. unitypackage](https://github.com/microsoft/MixedRealityLearning/releases/download/azure-spatial-anchors-v2.1.0.1/MRTK.HoloLens2.Unity.Tutorials.Assets.AzureSpatialAnchors.2.1.0.1.unitypackage)
+
+    d. [MRTK. HoloLens2. Unity. tutoriais. assets. MultiUserCapabilities. 2.1.0.1. unitypackage](https://github.com/microsoft/MixedRealityLearning/releases/download/multi-user-capabilities-v2.1.0.1/MRTK.HoloLens2.Unity.Tutorials.Assets.MultiUserCapabilities.2.1.0.1.unitypackage)
 
     >[!TIP]
-    >Se você tiver concluído os [tutoriais de introdução](mrlearning-base-ch1.md), talvez ainda tenha o pacote do Unity chamado _Unity. HoloLens2. gettingstarted. tutoriais. Asset. 2.1.0.0. unitypackage_ armazenado em seu computador. Nesse caso, você pode ignorar o download do ativo listado na etapa a acima.
+    >Para um lembrete sobre como configurar um projeto do Unity para âncoras espaciais do Azure, você pode consultar o tutorial [introdução ao Azure Spatial ancoras](https://docs.microsoft.com/windows/mixed-reality/mrlearning-asa-ch1) que faz parte da série de tutoriais de [âncoras espaciais do Azure](https://docs.microsoft.com/windows/mixed-reality/mrlearning-asa-ch1) .
 
     ![Module3Chapter2step12im](images/module3chapter2step11im.PNG)
 

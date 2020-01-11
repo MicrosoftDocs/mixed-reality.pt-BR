@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realidade misturada, unity, tutorial, hololens
-ms.openlocfilehash: 57a23e34404e4bff653d74b7f6afc65adff8b19c
-ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
+ms.openlocfilehash: efa03c49a9a083d2b8e591e03bccbeb776bb57b2
+ms.sourcegitcommit: 2bfe9b1af4ee2cc0d668caeccb8ebc3137cbc20b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/24/2019
-ms.locfileid: "75334337"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901478"
 ---
 # <a name="1-setting-up-photon-unity-networking"></a>1. Configurando a rede do Photon Unity
 
@@ -28,7 +28,7 @@ Neste tutorial, você aprenderá a se preparar para criar uma experiência compa
 ## <a name="prerequisites"></a>Pré-requisitos
 
 >[!TIP]
->Se você ainda não concluiu a série de [tutoriais de introdução](mrlearning-base.md) , é recomendável que você conclua esses tutoriais primeiro.
+>Se você ainda não tiver concluído os tutoriais de [introdução](mrlearning-base.md) e os tutoriais de [âncoras espaciais iniciados do Azure](mrlearning-asa-ch1.md) , é recomendável que você conclua esses tutoriais primeiro.
 
 * Um PC com Windows 10 configurado com as [ferramentas corretas instaladas](install-the-tools.md)
 * SDK do Windows 10 10.0.18362.0 ou posterior

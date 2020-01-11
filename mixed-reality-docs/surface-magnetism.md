@@ -1,23 +1,23 @@
 ---
 title: Magnetism Surface
-description: Usando a técnica Magnetism da superfície, você pode posicionar os objetos Holographic em uma superfície física do mundo real.
+description: Usando a técnica Magnetism da superfície, você pode posicionar um objeto Holographic em uma superfície física do mundo real.
 author: cre8ivepark
 ms.author: dongpark
 ms.date: 11/01/2019
 ms.topic: article
 keywords: Realidade misturada, controles, interação, interface do usuário, UX
-ms.openlocfilehash: 17015fef7a73930109844a48d6017230a4efecd5
-ms.sourcegitcommit: 270ca09ec61e1153a83cf44942d7ba3783ef1805
+ms.openlocfilehash: bc9c8a36f110010270ca7dadbd8655f29af25f32
+ms.sourcegitcommit: 2bfe9b1af4ee2cc0d668caeccb8ebc3137cbc20b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75694140"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901432"
 ---
 # <a name="surface-magnetism"></a>Magnetism Surface
 
 ![Magnetism Surface](images/UX/MRTK_SurfaceMagnetism.gif)
 
-Usando a técnica Magnetism da superfície, você pode posicionar os objetos Holographic em uma superfície física do mundo real. Ao alinhar a orientação do objeto com a superfície do mundo real, você pode criar uma experiência mais imersiva e natural.
+Usando a técnica Magnetism da superfície, você pode posicionar um objeto Holographic em uma superfície física do mundo real. Ao alinhar a orientação do objeto com a superfície do mundo real, você pode criar uma experiência mais imersiva e natural.
 
 <br>
 
