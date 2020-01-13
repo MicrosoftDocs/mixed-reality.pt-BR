@@ -7,12 +7,12 @@ ms.author: grbury
 ms.date: 11/15/2019
 ms.topic: overview
 keywords: Realidade mista do Windows, design, padrões de aplicativo, controles, estilo, HoloLens, interação, elementos de UX, comportamentos, blocos de construção
-ms.openlocfilehash: 8dd90a555faea62f69750847ddd6e6df4d9d0314
-ms.sourcegitcommit: 83698638b93c5ba77b3ffc399f1706482539f27b
+ms.openlocfilehash: 16a6c08230dbe16ebb04c39751cce306bbc57c2d
+ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74539658"
+ms.lasthandoff: 12/24/2019
+ms.locfileid: "75334173"
 ---
 # <a name="ux-elements-overview"></a>Visão geral dos elementos de UX
 
@@ -22,23 +22,19 @@ ms.locfileid: "74539658"
 
 :::row:::
     :::column:::
-       cor [![, luz e](images/640px-fragments.jpg)](color,-light-and-materials.md) materiais  **[, luz e materiais](color,-light-and-materials.md)**
+       cor [![, luz e](images/640px-fragments.png)](color,-light-and-materials.md) materiais  **[, luz e materiais](color,-light-and-materials.md)**
     :::column-end:::
     :::column:::
-       escala de [escala de![](images/volvo-cars-microsoft-hololens-experience01-640px.jpg)](scale.md)  **[](scale.md)**
-    :::column-end:::
-    :::column:::
-       som espacial de [som espacial![](images/SpatialAudio.gif)](spatial-sound.md)  **[](spatial-sound.md)**
+       escala de [escala de![](images/volvo-cars-microsoft-hololens-experience01-640px.png)](scale.md)  **[](scale.md)**
     :::column-end:::
 :::row-end:::
 
 :::row:::
     :::column:::
-       tipografia de [tipografia![](images/text_in_unity_viewingangle.jpg)](typography.md)  **[](typography.md)**
+       tipografia de [tipografia![](images/text_in_unity_viewingangle.png)](typography.md)  **[](typography.md)**
     :::column-end:::
     :::column:::
-    :::column-end:::
-    :::column:::
+       som de [som![](images/spatialaudio.png)](spatial-sound.md)  **[](spatial-sound.md)**
     :::column-end:::
 :::row-end:::
 
