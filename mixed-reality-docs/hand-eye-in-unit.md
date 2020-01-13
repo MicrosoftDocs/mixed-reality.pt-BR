@@ -6,16 +6,16 @@ ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
 keywords: gestos, controladores de movimento, Unity, olhar, entrada
-ms.openlocfilehash: b83c4904031338fd6f3e8457238bb76f1c7e7eff
-ms.sourcegitcommit: 8bf7f315ba17726c61fb2fa5a079b1b7fb0dd73f
+ms.openlocfilehash: fc56436cbe71f958b91fec56c5f0f7d93926b2ac
+ms.sourcegitcommit: 317653cd8500563c514464f0337c1f230a6f3653
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/17/2019
-ms.locfileid: "75181946"
+ms.lasthandoff: 12/28/2019
+ms.locfileid: "75503884"
 ---
 # <a name="articulated-hand-and-eye-tracking-in-unity"></a>Controle de mão e de olho articulado no Unity
 
-O HoloLens 2 apresentou alguns novos recursos empolgantes: mãos articuladas e acompanhamento de olho.
+O HoloLens 2 introduziu alguns recursos novos e empolgantes, como controle de mão e de olho articulado.
 
 A maneira mais fácil de aproveitar a nova funcionalidade no Unity é por meio do MRTK v2. Também há alguns exemplos de cenas para ajudá-lo a começar.
 
@@ -26,15 +26,15 @@ A maneira mais fácil de aproveitar a nova funcionalidade no Unity é por meio d
 
 O MRTK v2 fornece um conjunto de controles de interface do usuário e blocos de construção para ajudá-lo a acelerar seu desenvolvimento.
 
-|  [de botão de ](images/MRTK_Button_Main.png)](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Button.html) [botão](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Button.html) ![ | ![[caixa](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_BoundingBox.html) delimitadora de [caixa delimitadora](images/MRTK_BoundingBox_Main.png)](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_BoundingBox.html) | [manipulador de manipulação](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_ManipulationHandler.html) do [manipulador de manipulação![](images/MRTK_Manipulation_Main.png)](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_ManipulationHandler.html) |
+|  [](images/MRTK_Button_Main.png)](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Button.html) [botão](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Button.html) de botão de![ | ![[caixa](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_BoundingBox.html) delimitadora de [caixa delimitadora](images/MRTK_BoundingBox_Main.png)](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_BoundingBox.html) | [manipulador de manipulação](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_ManipulationHandler.html) do [manipulador de manipulação![](images/MRTK_Manipulation_Main.png)](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_ManipulationHandler.html) |
 |:--- | :--- | :--- |
 | Um controle de botão que dá suporte a vários métodos de entrada, incluindo a mão HoloLens2's articulada | Interface do usuário padrão para manipular objetos no espaço 3D | Script para manipular objetos com uma ou duas mãos |
-|  [ ](images/MRTK_Slate_Main.png)](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Slate.html) [Tablet](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Slate.html)![ | [teclado do sistema](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_SystemKeyboard.html) de [teclado do sistema![](images/MRTK_SystemKeyboard_Main.png)](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_SystemKeyboard.html) | [![Interagir](images/InteractableExamples.png)](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Interactable.html) [interagindo](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Interactable.html) |
+|  [](images/MRTK_Slate_Main.png)](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Slate.html) [Tablet](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Slate.html)![ | [teclado do sistema](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_SystemKeyboard.html) de [teclado do sistema![](images/MRTK_SystemKeyboard_Main.png)](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_SystemKeyboard.html) | [![Interagir](images/InteractableExamples.png)](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Interactable.html) [interagindo](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Interactable.html) |
 | plano de estilo 2D que dá suporte à rolagem com entrada de mão articulada | Exemplo de script de uso do teclado do sistema no Unity  | Um script para tornar os objetos interagirem com os Estados visuais e o suporte a temas |
 |  [solucionador](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Solver.html) de [![resolvedor](images/MRTK_Solver_Main.png)](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Solver.html) | [coleção de objetos](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_ManipulationHandler.html) da [coleção de objetos![](images/MRTK_ObjectCollection_Main.png)](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_ManipulationHandler.html) | [dica](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Tooltip.html) de ferramenta de [dica de ferramenta![](images/MRTK_Tooltip_Main.png)](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Tooltip.html) |
-| Vários comportamentos de posicionamento de objeto, como marca, bloqueio de corpo, tamanho de exibição constante e Magnetism de superfície | Script para dispor uma matriz de objetos em uma forma tridimensional | A interface do usuário de anotações com um sistema de âncora/dinâmico flexível que pode ser usada para rotular os controladores de movimento e o objeto. |
-|  [barra de aplicativos](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_AppBar.html) da [barra de aplicativos![](images/MRTK_AppBar_Main.png)](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_AppBar.html) | [![Ponteiros](images/MRTK_Pointer_Main.png)](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Input/Pointers.html) de [ponteiros](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Input/Pointers.html) | [de visualização de mãos](images/MRTK_FingertipVisualization_Main.png)](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_FingertipVisualization.html) [Visualização](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_FingertipVisualization.html) de![ |
-| Interface do usuário para ativação manual da caixa delimitadora | Saiba mais sobre os vários tipos de ponteiros | A condireção Visual está no alcance que melhora a confiança da interação direta |
+| Vários comportamentos de posicionamento de objeto, como marca, bloqueio de corpo, tamanho de exibição constante e Magnetism de superfície | Script para dispor uma matriz de objetos em uma forma tridimensional | A interface do usuário de anotações com sistema flexível âncora/dinâmico, que pode ser usada para rotular os controladores de movimento e o objeto. |
+|  [barra de aplicativos](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_AppBar.html) da [barra de aplicativos![](images/MRTK_AppBar_Main.png)](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_AppBar.html) | [![Ponteiros](images/MRTK_Pointer_Main.png)](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Input/Pointers.html) de [ponteiros](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Input/Pointers.html) | [](images/MRTK_FingertipVisualization_Main.png)](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_FingertipVisualization.html) [Visualização](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_FingertipVisualization.html) de![de visualização de mãos |
+| Interface do usuário para ativação manual da caixa delimitadora | Saiba mais sobre os vários tipos de ponteiros | A unificação Visual está na ponta, o que melhora a confiança para a interação direta |
 |  [acompanhamento de olho de![:](images/mrtk_et_targetselect.png)](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_TargetSelection.html) acompanhamento de olho de seleção de destino [: seleção de destino](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_TargetSelection.html) | [acompanhamento de olho![:](images/mrtk_et_navigation.png)](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_Navigation.html) [acompanhamento de olho de navegação: navegação](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_Navigation.html) | [acompanhamento de olho![:](images/mrtk_et_heatmaps.png)](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_Visualization.html) acompanhamento de olho do mapa de calor [: mapa de calor](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_Visualization.html) |
 | Combine a entrada de olhos, voz e mão para selecionar com rapidez e facilidade os hologramas em sua cena | Saiba como rolar automaticamente o texto ou ampliar de forma fluente o conteúdo focado com base no que você está vendo| Exemplos de registro em log, carregamento e visualização do que os usuários estão olhando em seu aplicativo |
 
@@ -46,7 +46,7 @@ Você pode encontrar outros exemplos de cenas no [GitHub do kit de ferramentas d
 
 [![exemplo de cena](images/MRTK_Examples.png)](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_HandInteractionExamples.html)
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 * [Interação ocular] (eye-gaze-interaction.md)
 * [Acompanhamento ocular no HoloLens 2] (eye-tracking.md)
