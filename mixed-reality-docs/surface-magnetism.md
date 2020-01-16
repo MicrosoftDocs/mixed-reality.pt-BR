@@ -6,18 +6,18 @@ ms.author: dongpark
 ms.date: 11/01/2019
 ms.topic: article
 keywords: Realidade misturada, controles, interação, interface do usuário, UX
-ms.openlocfilehash: bc9c8a36f110010270ca7dadbd8655f29af25f32
-ms.sourcegitcommit: 2bfe9b1af4ee2cc0d668caeccb8ebc3137cbc20b
+ms.openlocfilehash: 9de4cc1a7a015f85be54b4b9ff6188a7e9d02e85
+ms.sourcegitcommit: 542a481b00b36d92633c64a6189ea989551bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75901432"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "76036373"
 ---
 # <a name="surface-magnetism"></a>Magnetism Surface
 
 ![Magnetism Surface](images/UX/MRTK_SurfaceMagnetism.gif)
 
-Usando a técnica Magnetism da superfície, você pode posicionar um objeto Holographic em uma superfície física do mundo real. Ao alinhar a orientação do objeto com a superfície do mundo real, você pode criar uma experiência mais imersiva e natural.
+Usando a técnica Magnetism da superfície, você pode posicionar um objeto Holographic em uma superfície física do mundo real. Alinhando a orientação do objeto com a superfície do mundo real, você pode criar uma experiência mais imersiva e natural para o usuário.
 
 <br>
 

@@ -1,25 +1,30 @@
 ---
 title: Realidade mista do Windows e o novo Microsoft Edge
-description: Como contribuir para a documentação do Windows Mixed Reality.
+description: Prepare-se para o novo Microsoft Edge no Windows Mixed Reality. Inclui alterações esperadas, atualizações a serem verificadas e problemas conhecidos.
 author: mattzmsft
 ms.author: mazeller
-ms.date: 01/07/2020
+ms.date: 01/15/2020
 ms.topic: article
 keywords: Edge, novo, imersão Web, Microsoft Edge, navegador, VR
-ms.openlocfilehash: cb0f96069ffaa8f7d40b64bae55ab2749f5f02c6
-ms.sourcegitcommit: 6844930427b658ae31f642c395cd8a3b3cdbf857
+ms.openlocfilehash: e38cd83cef274281f0d36ae8714ea82aac5f0c65
+ms.sourcegitcommit: e9e4e722f4b607888ce69185f8bda9549ad526ad
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75727043"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76041003"
 ---
 # <a name="windows-mixed-reality-and-the-new-microsoft-edge"></a>Realidade mista do Windows e o novo Microsoft Edge
 
-Como você já deve ter ouvido, o [novo Microsoft Edge estará disponível em breve](https://blogs.windows.com/windowsexperience/2019/11/04/introducing-the-new-microsoft-edge-and-bing/)! Com a disponibilidade geral direcionada para 15 de janeiro de 2020, queríamos deixar o Windows Mixed Reality VR fone de ouvido os clientes sabem o que esperar do novo Microsoft Edge e informam sobre algumas atualizações pendentes que melhorarão sua experiência de navegação na Web no Windows misto Realidade.
+O [novo Microsoft Edge agora está disponível para download](https://blogs.windows.com/windowsexperience/?p=173496), mas os clientes também podem [esperar que ele seja instalado em uma atualização futura do Windows 10](https://blogs.windows.com/msedgedev/2020/01/15/upgrading-new-microsoft-edge-79-chromium/), seguindo uma abordagem medida de distribuição nos próximos meses. 
+
+Com essa notícia, **queríamos deixar que os clientes do Windows Mixed Reality VR do headset saibam o que esperar do novo Microsoft Edge e informam sobre algumas atualizações pendentes que melhorarão sua experiência de navegação na Web no Windows Mixed Reality**.
 
 ## <a name="introducing-the-new-microsoft-edge"></a>Apresentando o novo Microsoft Edge
 
 O novo Microsoft Edge [adota o projeto](https://blogs.windows.com/windowsexperience/2018/12/06/microsoft-edge-making-the-web-better-through-more-open-source-collaboration/) de software livre Chromium na área de trabalho para criar melhor compatibilidade com a Web para clientes e menos fragmentação da Web para todos os desenvolvedores da Web. Ele também dará suporte a WebXR na inicialização, o novo padrão para a criação de experiências da Web de imersão para headsets de VR, no lugar de WebVR.
+
+>[!IMPORTANT]
+>Quando você instalar o Microsoft Edge em um dispositivo Windows 10 atualizado, ele substituirá a versão anterior (herdada) em seu computador.
 
 ## <a name="getting-ready-for-the-new-microsoft-edge"></a>Preparando-se para o novo Microsoft Edge
 
@@ -45,7 +50,7 @@ Para obter a melhor experiência do Microsoft Edge possível no início da reali
 
 -   Os sites abertos no Windows Mixed Realm serão perdidos quando o portal da realidade misturada for fechado, embora as janelas do Microsoft Edge permaneçam onde foram colocadas na casa misturada da realidade.
 -   O áudio do Microsoft Edge Windows não está espacial.
--   Abrir um vídeo 360 do YouTube no Windows Mixed Reality pode resultar na distorção do vídeo no headset. Atualizar a página do vídeo do YouTube e reiniciar o vídeo 360 deve corrigir o problema.
+-   Abrir um vídeo 360 do YouTube no Windows Mixed Reality pode resultar na distorção do vídeo no headset. Atualizar a página do vídeo do YouTube e reiniciar o vídeo 360 *pode* corrigir o problema, mas ouvimos comentários de que o problema pode persistir.
 -   Durante as sessões de realidade mista do Windows, os monitores virtuais serão exibidos como monitores físicos genéricos em Configurações > sistema > exibição.
 
 
