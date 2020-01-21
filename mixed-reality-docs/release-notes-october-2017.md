@@ -86,8 +86,8 @@ Trabalhamos duro para fornecer uma ótima experiência de realidade mista do Win
 * Se você tiver colocado um grande número de hologramas em sua casa do Windows Mixed Reality, alguns poderão desaparecer e reaparecerem à medida que você examinar. Para evitar isso, remova alguns dos hologramas nessa área da página inicial do Windows Mixed Reality.
 
 ### <a name="motion-controllers"></a>Controladores de movimento
-* Ocasionalmente, se você clicar em uma página da Web no Edge, o conteúdo será ampliado em vez de clicar.
-* Às vezes, quando você clica em um link no Edge, a seleção não funciona.
+* Ocasionalmente, se você clicar em uma página da Web no Microsoft Edge, o conteúdo será ampliado em vez de clicar.
+* Às vezes, quando você clica em um link no Microsoft Edge, a seleção não funciona.
 
 ## <a name="prior-release-notes"></a>Notas de versão anteriores
 * [Notas sobre a versão – agosto de 2016](release-notes-august-2016.md)
