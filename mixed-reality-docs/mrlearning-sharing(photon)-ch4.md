@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realidade misturada, unity, tutorial, hololens
-ms.openlocfilehash: f1bcbbd368635c25207127142f21ff50f26a7b58
-ms.sourcegitcommit: 2bfe9b1af4ee2cc0d668caeccb8ebc3137cbc20b
+ms.openlocfilehash: 56f7c767323285453cbeea9034f97a7c14e92359
+ms.sourcegitcommit: d73d9012941fa1b13eb7d2f45ccc481d6365827a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75901487"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76885631"
 ---
 # <a name="4-sharing-object-movements-with-multiple-users"></a>4. compartilhando movimentos de objeto com vários usuários
 
@@ -74,6 +74,12 @@ Neste tutorial, você aprenderá a compartilhar os movimentos de objetos para qu
 11. No painel projeto na pasta pré-fabricados, arraste a tabela pré-fabricado para o objeto filho "TableAnchor" que você acabou de criar.
 
     ![Module3Chapter4step8im](images/module3chapter4step8im.PNG)
+   
+12. Abra o pré-fabricado "Rocket Launcher_Complete Variant" de ativos – > recursos-> pré-fabricados.
+
+13. Selecione o gameobject "LunarModule" e adicione os dois componentes a seguir: "Photon Transform View" e "Photon View".
+
+14. Com o "LunarModule" gameobject ainda selecionado, arraste o componente "Photon Transform View" para o slot "componentes observados" no componente "Photon View".
 
 ## <a name="congratulations"></a>Parabéns
 

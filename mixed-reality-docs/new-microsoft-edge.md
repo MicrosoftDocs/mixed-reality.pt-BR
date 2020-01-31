@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 01/15/2020
 ms.topic: article
 keywords: Edge, novo, imersão Web, Microsoft Edge, navegador, VR
-ms.openlocfilehash: e38cd83cef274281f0d36ae8714ea82aac5f0c65
-ms.sourcegitcommit: e9e4e722f4b607888ce69185f8bda9549ad526ad
+ms.openlocfilehash: 2576762786c9234377308f226036c830e01d9133
+ms.sourcegitcommit: d73d9012941fa1b13eb7d2f45ccc481d6365827a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76041003"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76885624"
 ---
 # <a name="windows-mixed-reality-and-the-new-microsoft-edge"></a>Realidade mista do Windows e o novo Microsoft Edge
 
@@ -50,7 +50,7 @@ Para obter a melhor experiência do Microsoft Edge possível no início da reali
 
 -   Os sites abertos no Windows Mixed Realm serão perdidos quando o portal da realidade misturada for fechado, embora as janelas do Microsoft Edge permaneçam onde foram colocadas na casa misturada da realidade.
 -   O áudio do Microsoft Edge Windows não está espacial.
--   Abrir um vídeo 360 do YouTube no Windows Mixed Reality pode resultar na distorção do vídeo no headset. Atualizar a página do vídeo do YouTube e reiniciar o vídeo 360 *pode* corrigir o problema, mas ouvimos comentários de que o problema pode persistir.
+-   **Corrigido na extensão do visualizador 360 versão 2.3.8**: abrir um vídeo 360 do YouTube no Windows Mixed Reality pode resultar na distorção do vídeo no headset. Reiniciar a borda deve atualizar invisivelmente a extensão do visualizador 360 para resolver esse problema. Você pode confirmar qual versão da extensão você tem inserindo `edge://system/` na barra de endereços e selecionando o botão **expandir** ao lado de "extensões".
 -   Durante as sessões de realidade mista do Windows, os monitores virtuais serão exibidos como monitores físicos genéricos em Configurações > sistema > exibição.
 
 
