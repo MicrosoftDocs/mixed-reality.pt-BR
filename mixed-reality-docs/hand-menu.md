@@ -6,12 +6,12 @@ ms.author: nobarr
 ms.date: 08/27/2019
 ms.topic: article
 keywords: mão, menu, botão, acesso rápido, layout
-ms.openlocfilehash: c0e1800be69a15706e17f40b1601fc79d05e5d75
-ms.sourcegitcommit: 6844930427b658ae31f642c395cd8a3b3cdbf857
+ms.openlocfilehash: 41a936d6041438c1cf1d8e4d4cc8cc30a5167491
+ms.sourcegitcommit: 40b37104b0aec4554502dcc7dc430e340a6fa46a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75723255"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77092050"
 ---
 # <a name="hand-menu"></a>Menu do lado
 
@@ -26,7 +26,7 @@ Veja abaixo as práticas recomendadas que encontramos para os menus à mão. Voc
 ---
 
 ## <a name="behavior-best-practices"></a>Práticas recomendadas de comportamento
-**A. Mantenha o número de botões pequenos:** devido à distância de proximidade entre um menu protegido por mão e os olhos, e também a tendência do usuário de se concentrar em uma área Visual relativamente pequena a qualquer momento (o cone de atenção da visão é de aproximadamente 10 graus), recomendamos manter o número de botões pequenos. Com base em nossa exploração, uma coluna com três botões funciona bem, mantendo todo o conteúdo dentro do campo de exibição (FOV), mesmo quando os usuários movem suas mãos para o centro do FOV. 
+**A. Mantenha o número de botões pequenos:** devido à distância de proximidade entre um menu protegido por mão e os olhos, e também a tendência do usuário de se concentrar em uma área Visual relativamente pequena a qualquer momento (o cone de atenção da visão é de aproximadamente 10 graus), recomendamos manter o número de botões pequenos. Com base em nossa exploração, uma coluna com três botões funciona bem mantendo todo o conteúdo dentro do campo de exibição (FOV) mesmo quando um usuário move suas mãos para o centro do FOV. 
 
 **B. Utilize o menu à mão para ação rápida:** gerar um ARM e manter a posição pode facilmente causar fadiga ARM. Use um método protegido por mão para o menu que requer uma pequena interação. Se o seu menu for complexo e exigir tempos de interação estendidos, considere usar o World-Locked ou o corpo bloqueado em vez disso. 
 
@@ -88,8 +88,8 @@ Fizemos a pesquisa de usuários com diferentes layouts e locais de menus, os loc
     :::column:::
         ![de dedos acima](images/AboveFingers.gif)<br>
         **Acima dos dedos**<br>
-        fadiga de 1 mão devido à suspensão por muito tempo<br>
-        problemas de acompanhamento de duas mãos no índice e no meio do dedo
+        fadiga de 1 mão devido à falta de mão por muito tempo<br>
+        problemas de acompanhamento de duas mãos no índice e nos dedos centrais
     :::column-end:::
 :::row-end:::
 
@@ -105,7 +105,7 @@ Fizemos a pesquisa de usuários com diferentes layouts e locais de menus, os loc
     :::column:::
         ![superior](images/TopFingerTip.gif) **ponta**<br>
         problemas de acompanhamento de uma mão<br>
-        fadiga de duas mãos mantendo a postura normal<br>
+        fadiga de duas mãos da manutenção da postura normal<br>
         3-problemas ao pressionar os botões com outros dedos por acidente devido ao espaço limitado entre os dedos
     :::column-end:::
 :::row-end:::
@@ -117,7 +117,7 @@ Fizemos a pesquisa de usuários com diferentes layouts e locais de menus, os loc
         ![de trás do ARM](images/BackOfTheArm.gif)<br>
         **Trás do ARM**<br>
         1-pode disparar o botão página inicial por acidente<br>
-        2-não é uma posição natural ou confortável para os usuários
+        2-não é uma posição natural ou confortável
     :::column-end:::
     :::column:::
     :::column-end:::
@@ -138,11 +138,11 @@ O **[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** fornece scr
 ---
 
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 * [Cursores](cursors.md)
 * [Raio de mão](point-and-commit.md)
-* [Botão](button.md)
+* [Button](button.md)
 * [Objeto interativo](interactable-object.md)
 * [Caixa delimitadora e barra de aplicativos](app-bar-and-bounding-box.md)
 * [Manipulação](direct-manipulation.md)
@@ -153,7 +153,7 @@ O **[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** fornece scr
 * [Teclado](keyboard.md)
 * [Dica de ferramenta](tooltip.md)
 * [Slate](slate.md)
-* [Controle deslizante](slider.md)
+* [Slider](slider.md)
 * [Sombreador](shader.md)
 * [Mural e tag-along](billboarding-and-tag-along.md)
 * [Exibindo o progresso](progress.md)

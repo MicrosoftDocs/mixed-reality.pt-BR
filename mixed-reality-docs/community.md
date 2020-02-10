@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 12/27/2019
 ms.topic: article
 keywords: Realidade misturada, Comunidade, MVP, Meetup
-ms.openlocfilehash: 7cdbebc63cc04d2e3c2913662ed29e65880da727
-ms.sourcegitcommit: 48e12b342a50b9777330392db74d462ead5a8012
+ms.openlocfilehash: 486a099cb38a99975171cb7ec4a6754b1c0b682f
+ms.sourcegitcommit: 40b37104b0aec4554502dcc7dc430e340a6fa46a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/04/2020
-ms.locfileid: "75662426"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77092061"
 ---
 # <a name="mixed-reality-community"></a>Comunidade de realidade misturada
 
@@ -19,7 +19,7 @@ Na Microsoft, acreditamos que ter acesso a comunidades fortes é essencial para 
 
 ## <a name="online-communities"></a>Comunidades online
 
-|Nome da Comunidade  |Vincular  |Descrição  |
+|Nome da Comunidade  |Link  |Descrição  |
 |---------|---------|---------|
 |**Margem de atraso HoloDevelopers**|[Junte-se aqui](https://aka.ms/holodevelopers)|A margem de atraso HoloDevelopers foi criada inicialmente como um local para os desenvolvedores que exploram o HoloLens para conhecer um ao outro, formar friendships, criar confiança e obter ajuda entre si.  Ele cresceu para uma comunidade de sucesso que ainda se concentra nessas, mas as conversas que acontecem abrangem o espectro de realidade misturada em várias plataformas, dispositivos e empresas.|
 |**Stack Overflow**|[Perguntas sobre o MR](https://stackoverflow.com/questions/tagged/windows-mixed-reality)||
@@ -31,9 +31,9 @@ Na Microsoft, acreditamos que ter acesso a comunidades fortes é essencial para 
 ## <a name="local-communities"></a>Comunidades locais
 Se você executar uma comunidade que deseja incluir nesta página, envie um [email aqui](mailto:jemccull@microsoft.com) com os detalhes
 
-|Nome da Comunidade|Country|Cidade|Vincular|
+|Nome da Comunidade|País|Cidade|Link|
 |---------|---------|---------|---------|
-|**Nite AWE de Chicago**|USA|Chicago|[Link](https://www.meetup.com/AWENiteChicago/)|
+|**Nite AWE de Chicago**|EUA|Chicago|[Criar](https://www.meetup.com/AWENiteChicago/)|
 <!-- 
 |Row2     |         |         |         |
 |Row3     |         |         |         |
@@ -48,7 +48,7 @@ Se você executar uma comunidade que deseja incluir nesta página, envie um [ema
 
 |||||
 |---------|---------|---------|---------|
-|<!-- ![Daniel Escudero](images/BiographyImages/) --></br>**Daniel Escudero**</br>*Designer de leads da MR Academy*| |São Francisco, CA|[Email](mailto:daescu@microsoft.com)|
+|<![Daniel Escudero](images/BiographyImages/DanielEscudero_270x270.jpg)</br>**Daniel Escudero**</br>*Designer de leads da MR Academy*|Designer interativo, protótipo e codificador, especializado em realidade misturada, com mais de 15 anos de experiência de design de interação. Atualmente projetando e criando protótipos de novas formas de interação para realidade misturada, bem como criar workshops e hackathons com parceiros de área de compartimento de San Francisco e a Comunidade do Sr/VR/AR. Mentor e palestrante para design de realidade misturada em vários eventos e palestras do Sr/VR/AR.|São Francisco, CA|[Email](mailto:daescu@microsoft.com)|
 |<!-- ![Daniel Gonzalez](images/BiographyImages/) --></br>**Daniel Gonzalez**</br>*Gerente de programas II*| |Redmond, WA|[Email](mailto:dgonza@microsoft.com)|
 |<!-- ![Jane Fang](images/BiographyImages/) --></br>**Jane Fang**</br>*Líder do gerente de programas principal*| |São Francisco, CA|[Email](mailto:jafang@microsoft.com)|
 |![Jesse McCulloch](images/BiographyImages/JesseMcCulloch270x270.png)</br>**Jesse McCulloch**</br>*Gerente de programas II*|Jesse é gerente de programa da equipe de ecossistema de desenvolvedores da realidade misturada na Microsoft. Em geral, ele é encontrado fora dos grupos de margem de atraso do desenvolvedor, no Twitter, tentando acompanhar tudo acontecendo nesse espaço rapidamente em rápido crescimento, ou em um grande tubo de metal que passa pelo ar em seu caminho para se envolver com os desenvolvedores do mundo real.|Redmond, WA|[Email](mailto:jemccull@microsoft.com)|
