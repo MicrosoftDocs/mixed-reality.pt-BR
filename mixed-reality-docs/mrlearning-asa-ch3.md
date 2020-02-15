@@ -6,49 +6,53 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realidade misturada, unity, tutorial, hololens
-ms.openlocfilehash: 19529cbfebd74938395545c329097d42b5af9ff9
-ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
+ms.openlocfilehash: f4f609a71b05a52e8761e282763a540b42e9f7f5
+ms.sourcegitcommit: a580166a19294f835b8e09c780f663f228dd5de0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/24/2019
-ms.locfileid: "75334406"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77250671"
 ---
 # <a name="3-displaying-azure-spatial-anchor-feedback"></a>3. exibindo comentários de âncora espacial do Azure
 
-Nesta lição, você aprenderá a fornecer aos usuários comentários sobre a descoberta de âncora, eventos e status ao usar âncoras espaciais do Azure.
+Neste tutorial, você aprenderá a fornecer aos usuários comentários sobre a descoberta de âncora, eventos e status ao usar o ASA (âncoras espaciais) do Azure.
 
 ## <a name="objectives"></a>Objetivos
 
 * Saiba como configurar um painel de interface do usuário que exibe informações importantes sobre a sessão atual do ASA
-
 * Entender e explorar os elementos de comentários que o SDK do ASA disponibiliza para os usuários
 
 ## <a name="set-up-asa-feedback-ui-panel"></a>Configurar o painel de IU de comentários do ASA
 
-1. Nesta lição, não estamos usando os botões "SaveAnchorToDisk" e "ShareAnchor", portanto, selecione ambos os botões e desmarque a caixa de seleção no painel Inspetor (conforme mostrado abaixo) para ocultar esses botões.
+Na janela hierarquia, clique com o botão direito do mouse nas **instruções** > objeto **textcontent** e selecione **objeto 3D** > **Text-TextMeshPro** para criar um objeto de texto TextMeshPro como um filho das instruções > objeto textcontent e dê a ele um nome adequado, por exemplo, **comentários**:
 
-    ![module2chapter3step1im](images/module2chapter3step1im.PNG)
+![mrlearning-base](images/mrlearning-asa/tutorial3-section1-step1-1.png)
 
-2. Crie o painel de instruções. Comece clicando com o botão direito do mouse em "instruções", focalize o "objeto 3D" e selecione "textmeshpro-Text".
+> [!TIP]
+> Para facilitar o trabalho com sua cena, defina a visibilidade da <a href="https://docs.unity3d.com/Manual/SceneVisibility.html" target="_blank">cena</a> para o objeto ParentAnchor como off clicando no ícone de olho à esquerda do objeto. Isso oculta o objeto na janela cena sem alterar sua visibilidade no jogo.
 
-    ![module2chapter3step2im](images/module2chapter3step2im.PNG)
+Com o objeto de **comentários** ainda selecionado, na janela Inspetor, altere sua posição e tamanho para que ele seja posicionado de forma organizada, abaixo do texto de instrução, por exemplo:
 
-3. Ajuste a escala e o posicionamento do texto para que ele corresponda às instruções em sua cena. Além disso, verifique se o alinhamento de todo o texto está centralizado. Em seguida, exclua o texto de exemplo do editor de texto, conforme mostrado na imagem abaixo.
+* Alterar a transformação Rect **pos Y** para-0,24
+* Altere a **largura** do Rect Transform para 0,555
+* Altere a **altura** do Rect Transform para 0,1
 
-    ![module2chapter3step3im](images/module2chapter3step3im.PNG)
+Em seguida, escolha Propriedades da fonte para que o texto caiba bem na área de texto, por exemplo:
 
-4. Altere o nome do objeto TextMeshPro para "FeedbackPanel".
+* Altere o **estilo de fonte** pro (script) de malha de texto para negrito
+* Altere o **tamanho da fonte** do pro (script de malha de texto) para 0,17
+* Alterar o **alinhamento** pro (script) da malha de texto para o centro e o meio
 
-    ![module2chapter3step4im](images/module2chapter3step4im.PNG)
+![mrlearning-base](images/mrlearning-asa/tutorial3-section1-step1-2.png)
 
-5. Verifique se o texto "feedbackpanel" está selecionado na hierarquia de ASA_feedback, clique em "Adicionar componente" e adicione o script de comentários de âncora pesquisando-o e selecionando-o quando ele for exibido.
+Com o objeto de **comentários** ainda selecionado, na janela Inspetor, use o botão **Adicionar componente** para adicionar o componente **script de âncora de comentário (script)** ao objeto de comentários:
 
-    ![module2chapter3step8im](images/module2chapter3step8im.PNG)
+![mrlearning-base](images/mrlearning-asa/tutorial3-section1-step1-3.png)
 
-6. Arraste o objeto de texto "feedbackPanel" da hierarquia ASA_Feedback para o slot vazio abaixo do script, como mostrado na imagem abaixo.
+Atribua o objeto de **comentários** ao campo de **texto de comentário** do componente script de **âncora (script)** :
 
-    ![module2chapter3step9im](images/module2chapter3step9im.PNG)
+![mrlearning-base](images/mrlearning-asa/tutorial3-section1-step1-4.png)
 
 ## <a name="congratulations"></a>Parabéns
 
-Nesta lição, aprendemos como criar um painel de interface do usuário para exibir o status atual da experiência de ancoragem espacial do Azure para fornecer aos usuários comentários em tempo real.
+Neste tutorial, você aprendeu a criar um painel de interface do usuário para exibir o status atual da experiência de ancoragem espacial do Azure para fornecer aos usuários comentários em tempo real.
