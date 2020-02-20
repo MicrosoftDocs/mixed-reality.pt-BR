@@ -14,7 +14,7 @@ ms.lasthandoff: 11/12/2019
 ms.locfileid: "73926811"
 ---
 >[!NOTE]
->Os tutoriais misturados do Academia de realidade foram projetados com o HoloLens (1º gen) e com o fone de cabeça de imersão de realidade misturada.  Como tal, achamos que é importante deixar esses tutoriais em vigor para os desenvolvedores que ainda estão procurando orientação no desenvolvimento para esses dispositivos.  Esses tutoriais **_não_** serão atualizados com os conjuntos de ferramentas e as interações mais recentes usados para o HoloLens 2.  Eles serão mantidos para continuar a trabalhar nos dispositivos com suporte. Haverá uma nova série de tutoriais que serão publicados no futuro, que demonstrarão como desenvolver para o HoloLens 2.  Esse aviso será atualizado com um link para esses tutoriais quando eles forem postados.
+>Os tutoriais do Mixed Reality Academy foram projetados com o HoloLens (1ª geração) e os headsets imersivos de realidade misturada em mente.  Dessa forma, achamos que é importante continuar disponibilizando esses tutoriais para os desenvolvedores que ainda buscam obter diretrizes para o desenvolvimento visando esses dispositivos.  Esses tutoriais **_não_** serão atualizados com os conjuntos de ferramentas mais recentes nem com as interações usadas para o HoloLens 2.  Eles serão mantidos para continuar funcionando nos dispositivos compatíveis. Haverá uma nova série de tutoriais que serão publicados no futuro, que demonstrarão como desenvolver para o HoloLens 2.  Esse aviso será atualizado com um link para esses tutoriais quando eles forem postados.
 
 <br>
 
@@ -22,7 +22,7 @@ ms.locfileid: "73926811"
 
 Neste curso, você aprenderá a integrar o Reconhecimento vocal a um aplicativo de realidade misturada usando os serviços cognitivas do Azure, com o API de Reconhecimento Vocal.
 
-![resultado do laboratório](images/AzureLabs-Lab3-000.png)
+![Resultado do laboratório](images/AzureLabs-Lab3-000.png)
 
 O *reconhecimento vocal (Luis)* é um serviço Microsoft Azure, que fornece aos aplicativos a capacidade de fazer o significado da entrada do usuário, como por meio da extração do que uma pessoa pode querer, em suas próprias palavras. Isso é obtido por meio do aprendizado de máquina, que compreende e aprende as informações de entrada e, em seguida, pode responder com informações detalhadas e relevantes. Para obter mais informações, visite a [página reconhecimento vocal do Azure (Luis)](https://azure.microsoft.com/services/cognitive-services/language-understanding-intelligent-service/).
 
@@ -42,7 +42,7 @@ Esteja preparado para treinar o LUIS várias vezes, que é abordado no [capítul
 
 <table>
 <tr>
-<th>Course</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Headsets imersivos</a></th>
+<th>Curso</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Headsets imersivos</a></th>
 </tr><tr>
 <td>Sr e Azure 303: LUIS (reconhecimento de linguagem natural)</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
 </tr>
@@ -51,7 +51,7 @@ Esteja preparado para treinar o LUIS várias vezes, que é abordado no [capítul
 > [!NOTE]
 > Embora este curso se concentre principalmente em fones de ouvido (VR) de realidade mista do Windows, você também pode aplicar o que aprende neste curso ao Microsoft HoloLens. Ao acompanhar o curso, você verá observações sobre as alterações que talvez precise empregar para dar suporte ao HoloLens. Ao usar o HoloLens, você pode notar um eco durante a captura de voz.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
 
 > [!NOTE]
 > Este tutorial foi desenvolvido para desenvolvedores que têm experiência básica com o Unity C#e o. Além disso, lembre-se de que os pré-requisitos e as instruções escritas neste documento representam o que foi testado e verificado no momento da gravação (maio de 2018). Você está livre para usar o software mais recente, conforme listado no artigo [instalar as ferramentas](install-the-tools.md) , embora não seja recomendável que as informações neste curso irão se adequar perfeitamente ao que você encontrará em softwares mais recentes do que as listadas abaixo.
@@ -296,7 +296,7 @@ Para cada expressão que você criou, você deve identificar quais palavras deve
     3. Marque a caixa **incluir todas as pontuações de intenção prevista**.
     4. Clique em **publicar no slot de produção**.
 
-        ![Configurações de publicação](images/AzureLabs-Lab3-22.png)
+        ![Publicar configurações](images/AzureLabs-Lab3-22.png)
 
 26. Na seção *recursos e chaves*:
 
@@ -447,7 +447,7 @@ A seguir está uma configuração típica para o desenvolvimento com a realidade
     |        | Transformação- *posição* |       |  \| |       | Transformação- *rotação* |       |
     |:------:|:----------------------:|:-----:|:---:|:-----:|:----------------------:|:-----:|
     | **W.x.y.** | **Iar**                   | **Z** |  \| | **W.x.y.** | **Iar**                  | **Z** |
-    | 0     | 1                       | 추가를 클릭합니다.     |  \| | 45    | 45                     | 0     | 
+    | 0     | 1                       | 4     |  \| | 45    | 45                     | 0     | 
 
 13. Clique no botão esquerdo do novo objeto de **texto** para selecioná-lo. No *painel Inspetor* , defina o componente *transformação* com os seguintes valores:
 
@@ -1108,7 +1108,7 @@ No exemplo acima, foi detectado que a palavra "Spear" foi realçada como um dest
 
 Parabéns, você criou um aplicativo de realidade misturada que aproveita o serviço do Azure Reconhecimento vocal Intelligence, para entender o que um usuário diz e agir sobre essas informações.
 
-![resultado do laboratório](images/AzureLabs-Lab3-000.png)
+![Resultado do laboratório](images/AzureLabs-Lab3-000.png)
 
 ## <a name="bonus-exercises"></a>Exercícios de bônus
 

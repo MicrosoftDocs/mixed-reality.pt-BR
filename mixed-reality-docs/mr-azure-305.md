@@ -14,7 +14,7 @@ ms.lasthandoff: 11/01/2019
 ms.locfileid: "73437982"
 ---
 >[!NOTE]
->Os tutoriais misturados do Academia de realidade foram projetados com o HoloLens (1º gen) e com o fone de cabeça de imersão de realidade misturada.  Como tal, achamos que é importante deixar esses tutoriais em vigor para os desenvolvedores que ainda estão procurando orientação no desenvolvimento para esses dispositivos.  Esses tutoriais **_não_** serão atualizados com os conjuntos de ferramentas e as interações mais recentes usados para o HoloLens 2.  Eles serão mantidos para continuar a trabalhar nos dispositivos com suporte. Haverá uma nova série de tutoriais que serão publicados no futuro, que demonstrarão como desenvolver para o HoloLens 2.  Esse aviso será atualizado com um link para esses tutoriais quando eles forem postados.
+>Os tutoriais do Mixed Reality Academy foram projetados com o HoloLens (1ª geração) e os headsets imersivos de realidade misturada em mente.  Dessa forma, achamos que é importante continuar disponibilizando esses tutoriais para os desenvolvedores que ainda buscam obter diretrizes para o desenvolvimento visando esses dispositivos.  Esses tutoriais **_não_** serão atualizados com os conjuntos de ferramentas mais recentes nem com as interações usadas para o HoloLens 2.  Eles serão mantidos para continuar funcionando nos dispositivos compatíveis. Haverá uma nova série de tutoriais que serão publicados no futuro, que demonstrarão como desenvolver para o HoloLens 2.  Esse aviso será atualizado com um link para esses tutoriais quando eles forem postados.
 
 <br> 
 
@@ -42,7 +42,7 @@ Em seu aplicativo, cabe a você como você integrará os resultados com seu desi
 
 <table>
 <tr>
-<th>Course</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Headsets imersivos</a></th>
+<th>Curso</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Headsets imersivos</a></th>
 </tr><tr>
 <td>Sr e Azure 305: funções e armazenamento</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
 </tr>
@@ -51,7 +51,7 @@ Em seu aplicativo, cabe a você como você integrará os resultados com seu desi
 > [!NOTE]
 > Embora este curso se concentre principalmente em fones de ouvido (VR) de realidade mista do Windows, você também pode aplicar o que aprende neste curso ao Microsoft HoloLens. Ao acompanhar o curso, você verá observações sobre as alterações que talvez precise empregar para dar suporte ao HoloLens.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
 
 > [!NOTE]
 > Este tutorial foi desenvolvido para desenvolvedores que têm experiência básica com o Unity C#e o. Além disso, lembre-se de que os pré-requisitos e as instruções escritas neste documento representam o que foi testado e verificado no momento da gravação (maio de 2018). Você está livre para usar o software mais recente, conforme listado no artigo [instalar as ferramentas](install-the-tools.md) , embora não seja recomendável que as informações neste curso irão se adequar perfeitamente ao que você encontrará em softwares mais recentes do que as listadas abaixo.
@@ -147,7 +147,7 @@ Para criar uma função do Azure:
 
 1.  No *portal do Azure*, clique em **novo** no canto superior esquerdo e procure *aplicativo de funções*e clique em **Enter**.
 
-    ![Criar aplicativo de funções](images/AzureLabs-Lab5-08.png)
+    ![criar aplicativo de funções](images/AzureLabs-Lab5-08.png)
 
     > [!NOTE]
     > A palavra **novo** pode ter sido substituída por **criar um recurso**, em portais mais recentes.
@@ -246,7 +246,7 @@ Configure e teste seu headset de imersão de realidade misturada.
 
     ![criar novo projeto de Unity](images/AzureLabs-Lab5-17.png)
 
-2.  Agora, você precisará fornecer um nome de projeto de Unity. Insira **MR_Azure_Functions**. Verifique se o tipo de projeto está definido como **3D**. Defina o *local* como algum lugar apropriado para você (Lembre-se de que, mais próximo de diretórios raiz é melhor). Em seguida, clique em **criar projeto**.
+2.  Agora, você precisará fornecer um nome de projeto de Unity. Inserir **MR_Azure_Functions**. Verifique se o tipo de projeto está definido como **3D**. Defina o *local* como algum lugar apropriado para você (Lembre-se de que, mais próximo de diretórios raiz é melhor). Em seguida, clique em **criar projeto**.
 
     ![Dê um nome ao novo projeto do Unity](images/AzureLabs-Lab5-18.png)
 
@@ -363,7 +363,7 @@ Configure e teste seu headset de imersão de realidade misturada.
     |       | TRANSFORMAÇÃO-POSIÇÃO |       |
     | :---: | :------------------: | :---: |
     | **W.x.y.** | **Iar**                | **Z** |
-    | 0     | 0                    | 추가를 클릭합니다.     |
+    | 0     | 0                    | 4     |
 
     |       | TRANSFORMAR EM ESCALA |       |
     | :---: | :---------------: | :---: |
@@ -477,11 +477,11 @@ Para importar o SDK para seu próprio projeto, verifique se você baixou o ['. u
 
 4.  Vá para a pasta de *armazenamento* em *plug-ins*, na exibição do projeto e selecione *apenas*os seguintes plugins:
 
-    -   Microsoft. Data. Edm
-    -   Microsoft. Data. OData
+    -   Microsoft.Data.Edm
+    -   Microsoft.Data.OData
     -   Microsoft. WindowsAzure. Storage
-    -   Newtonsoft. JSON
-    -   System. espacial
+    -   Newtonsoft.Json
+    -   System.Spatial
 
         ![desmarcar qualquer plataforma](images/AzureLabs-Lab5-46.png)
 
@@ -645,7 +645,7 @@ Para criar esta classe:
 
 11. Clique e arraste a classe *azureservices* da pasta scripts para o objeto de câmera principal no *painel hierarquia*.
 
-12. Selecione a câmera principal e, em seguida, pegue o objeto filho **AzureStatusText** sob o objeto **GazeButton** e coloque-o dentro do campo destino de referência do **AzureStatusText** , no *Inspetor*, para fornecer a referência ao  *Script do azureservices* .
+12. Selecione a câmera principal e, em seguida, pegue o objeto filho **AzureStatusText** sob o objeto **GazeButton** e coloque-o dentro do campo destino de referência do **AzureStatusText** , no *Inspetor*, para fornecer a referência ao script *do azureservices* .
 
     ![atribuir destino de referência de texto de status do Azure](images/AzureLabs-Lab5-52.png)
 
