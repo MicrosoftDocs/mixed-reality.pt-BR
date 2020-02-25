@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realidade misturada, unity, tutorial, hololens
-ms.openlocfilehash: 21883e95e92f8808bcf270e6d8091f31933ab6fa
-ms.sourcegitcommit: a580166a19294f835b8e09c780f663f228dd5de0
+ms.openlocfilehash: 0163b61bfbf8bd583532092581d94f63e1c2a624
+ms.sourcegitcommit: bd536f4f99c71418b55c121b7ba19ecbaf6336bb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77250771"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77554594"
 ---
 # <a name="1-getting-started-with-azure-spatial-anchors"></a>1. Introdução às âncoras espaciais do Azure
 
@@ -37,18 +37,20 @@ No terceiro tutorial, [exibindo comentários de âncora espacial do Azure](mrlea
 
 * Um PC com Windows 10 configurado com as [ferramentas corretas instaladas](install-the-tools.md)
 * SDK do Windows 10 10.0.18362.0 ou posterior
-* Alguma capacidade C# básica de programação
+* Alguma habilidade básica de programação em C#
 * Um dispositivo HoloLens 2 [configurado para desenvolvimento](using-visual-studio.md#enabling-developer-mode)
-* <a href="https://docs.unity3d.com/Manual/GettingStartedInstallingHub.html" target="_blank">Hub do Unity</a> com o Unity 2019.2. X instalado e o módulo de suporte do Build plataforma universal do Windows adicionado
+* <a href="https://docs.unity3d.com/Manual/GettingStartedInstallingHub.html" target="_blank">Hub do Unity</a> com o Unity 2019.2.X instalado e o módulo de suporte de Build da Plataforma Universal do Windows adicionado
 * Conclua a seção [criar um recurso de âncoras espaciais](https://docs.microsoft.com/azure/spatial-anchors/quickstarts/get-started-unity-hololens#create-a-spatial-anchors-resource) do tutorial [início rápido: criar um aplicativo de HoloLens do Unity que usa âncoras espaciais do Azure](https://docs.microsoft.com/azure/spatial-anchors/quickstarts/get-started-unity-hololens) .
 
 > [!IMPORTANT]
-> A versão recomendada do Unity para esta série de tutoriais é o Unity 2019.2. X. Isso substitui quaisquer requisitos de versão do Unity ou recomendações indicadas nos pré-requisitos vinculados acima.
+> A versão recomendada do Unity para esta série de tutoriais é o Unity 2019.2.X. Ela substitui todos os requisitos de versão do Unity ou as recomendações indicadas nos pré-requisitos vinculados acima.
 
 ## <a name="creating-the-unity-project"></a>Criando o projeto do Unity
 <!-- TODO: Consider renaming to 'Creating and preparing the Unity scene and project'-->
 
-Nesta seção, você criará um novo projeto do Unity e o tornará pronto para o desenvolvimento do MRTK. Para isso, siga a [inicialização do projeto e do primeiro aplicativo](mrlearning-base-ch1.md), excluindo as instruções [criar seu aplicativo para o dispositivo](mrlearning-base-ch1.md#build-your-application-to-your-device) , que inclui as seguintes etapas:
+Nesta seção, você criará um novo projeto do Unity e o tornará pronto para o desenvolvimento do MRTK.
+
+Para isso, primeiro siga a [inicialização do projeto e do primeiro aplicativo](mrlearning-base-ch1.md), excluindo as instruções [criar seu aplicativo para o dispositivo](mrlearning-base-ch1.md#build-your-application-to-your-device) , que inclui as seguintes etapas:
 
 1. [Crie um novo projeto do Unity](mrlearning-base-ch1.md#create-new-unity-project) e dê a ele um nome adequado, por exemplo, *tutoriais do MRTK*.
 
@@ -62,8 +64,10 @@ Nesta seção, você criará um novo projeto do Unity e o tornará pronto para o
 
 6. [Adicione o kit de ferramentas da realidade misturada à cena do Unity](mrlearning-base-ch1.md#configure-the-mixed-reality-toolkit) e dê um nome adequado à cena, por exemplo, *AzureSpatialAnchors*
 
+Em seguida, siga as instruções sobre [como configurar os perfis do kit de ferramentas de realidade misturada (opção alterar exibição de conscientização espacial)](mrlearning-base-ch2.md#how-to-configure-the-mixed-reality-toolkit-profiles-change-spatial-awareness-display-option) para alterar o perfil de configuração do MRTK para sua cena para o **DefaultHoloLens2ConfigurationProfile** e alterar as opções de exibição para a malha de conscientização espacial para **oclusão**.
+
 > [!CAUTION]
-> Conforme mencionado no [projeto configurar o Unity para as instruções do kit de ferramentas da realidade misturada](mrlearning-base-ch1.md#configure-the-unity-project-for-the-mixed-reality-toolkit) vinculadas acima, o MSBuild para Unity pode não dar suporte a todos os SDKs que você usará e pode ser desafiador para desabilitar depois que ele tiver sido habilitado. Consequentemente, é altamente recomendável não habilitar o MSBuild para Unity.
+> Conforme mencionado no [projeto configurar o Unity para as instruções do kit de ferramentas da realidade misturada](mrlearning-base-ch1.md#configure-the-unity-project-for-the-mixed-reality-toolkit) vinculadas acima, é altamente recomendável não habilitar o MSBuild para o Unity.
 
 ## <a name="adding-inbuilt-unity-packages"></a>Adicionando pacotes de Unity embutidos
 <!-- TODO: Consider renaming to 'Installing AR Foundation' -->
@@ -86,8 +90,8 @@ Na janela Gerenciador de pacotes, selecione **ar Foundation** e instale o pacote
 Baixe e **importe** os seguintes pacotes personalizados do Unity **na ordem em que estão listados**:
 
 * [AzureSpatialAnchors. unitypackage](https://github.com/Azure/azure-spatial-anchors-samples/releases/download/v2.1.1/AzureSpatialAnchors.unitypackage) (versão 2.1.1)
-* [MRTK. HoloLens2. Unity. tutoriais. assets. GettingStarted. 2.2.0.1. unitypackage](https://github.com/microsoft/MixedRealityLearning/releases/download/getting-started-v2.2.0.1/MRTK.HoloLens2.Unity.Tutorials.Assets.GettingStarted.2.2.0.1.unitypackage)
-* [MRTK. HoloLens2. Unity. tutoriais. assets. AzureSpatialAnchors. 2.2.0.0. unitypackage](https://github.com/microsoft/MixedRealityLearning/releases/download/azure-spatial-anchors-v2.2.0.0/MRTK.HoloLens2.Unity.Tutorials.Assets.AzureSpatialAnchors.2.2.0.0.unitypackage)
+* [MRTK. HoloLens2. Unity. tutoriais. assets. GettingStarted. 2.3.0.2. unitypackage](https://github.com/microsoft/MixedRealityLearning/releases/download/getting-started-v2.3.0.2/MRTK.HoloLens2.Unity.Tutorials.Assets.GettingStarted.2.3.0.2.unitypackage)
+* [MRTK. HoloLens2. Unity. tutoriais. assets. AzureSpatialAnchors. 2.3.0.0. unitypackage](https://github.com/microsoft/MixedRealityLearning/releases/download/azure-spatial-anchors-v2.3.0.0/MRTK.HoloLens2.Unity.Tutorials.Assets.AzureSpatialAnchors.2.3.0.0.unitypackage)
 
 > [!TIP]
 > Para obter um lembrete sobre como importar um pacote personalizado do Unity, você pode consultar as instruções de [importação do kit de ferramentas da realidade misturada](mrlearning-base-ch1.md#import-the-mixed-reality-toolkit) .
@@ -178,7 +182,7 @@ Na janela Configurações do Player, selecione **Player** e, em seguida, **confi
 
 ![mrlearning-asa](images/mrlearning-asa/tutorial1-section6-step1-2.png)
 
-Nas **configurações de publicação**, role para baixo até a seção **recursos** e verifique se os recursos de **internetclient**, **microfone**e **SpatialPerception** , que você habilitou quando criou o projeto no início do tutorial, estão habilitados. Em seguida, habilitou os recursos **InternetClientServer**, **PrivateNetworkClientServer**, **RemovableStorage**e **webcam** :
+Nas **configurações de publicação**, role para baixo até a seção **recursos** e verifique se os recursos de **internetclient**, **microfone**e **SpatialPerception** , que você habilitou quando criou o projeto no início do tutorial, estão habilitados. Em seguida, habilite os recursos **InternetClientServer**, **PrivateNetworkClientServer**, **RemovableStorage**e **webcam** :
 
 ![mrlearning-asa](images/mrlearning-asa/tutorial1-section6-step1-3.png)
 
@@ -216,7 +220,7 @@ Com o RocketLauncher_Complete pré-fabricado ainda selecionado, arraste-o sobre 
 
 Posicione, gire e dimensione o objeto **RocketLauncher_Complete** para uma escala e orientação adequadas, enquanto também garante que o objeto **ParentAnchor** ainda seja exposto, por exemplo:
 
-* **Posição** de transformação X = 1, Y = 0, Z = 3,75
+* **Posição** de transformação X = 0, Y = 0, Z = 3,75
 * **Rotação** de transformação X = 0, Y = 90, Z = 0
 * **Escala** de transformação X = 10, Y = 10, Z = 10
 

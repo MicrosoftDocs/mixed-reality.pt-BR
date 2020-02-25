@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realidade misturada, unity, tutorial, hololens
-ms.openlocfilehash: 067832a130f130ffbaa8d455007b8e77e1b13671
-ms.sourcegitcommit: cc61f7ac08f9ac2f2f04e8525c3260ea073e04a7
+ms.openlocfilehash: f1d042150d1c81940e672b174c6c02ac71e05883
+ms.sourcegitcommit: bd536f4f99c71418b55c121b7ba19ecbaf6336bb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77130437"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77554794"
 ---
 # <a name="3-creating-user-interface-and-configure-mixed-reality-toolkit"></a>3. criando a interface do usuário e Configurando o kit de ferramentas de realidade mista
 <!-- TODO: Consider renaming to 'Configuring Mixed Reality Toolkit profiles and creating user interfaces' -->
@@ -47,17 +47,21 @@ As principais etapas que você seguirá para ocultar a malha de conscientizaçã
 > [!NOTE]
 > O perfil de configuração é o perfil de nível superior. Consequentemente, para poder editar outros perfis, primeiro você precisa clonar o perfil de configuração.
 
-Com o objeto **MixedRealityToolkit** selecionado na janela hierarquia, na janela Inspetor, clique no botão **copiar & Personalizar** para abrir a janela clonar perfil:
+Com o objeto **MixedRealityToolkit** selecionado na janela hierarquia, na janela Inspetor, altere o **perfil de configuração** do kit de ferramentas da realidade misturada para **DefaultHoloLens2ConfigurationProfile**:
 
 ![mrlearning-base](images/mrlearning-base/tutorial2-section1-step1-1.png)
 
-Na janela clonar perfil, clique no botão **clonar** para criar uma cópia editável do **DefaultHololens2ConfigurationProfile**:
+Com o objeto **MixedRealityToolkit** ainda selecionado, na janela Inspetor, clique no botão **copiar & Personalizar** para abrir a janela clonar perfil:
 
 ![mrlearning-base](images/mrlearning-base/tutorial2-section1-step1-2.png)
 
-Agora, o perfil de configuração recém-criado é atribuído como o perfil de configuração para sua cena:
+Na janela clonar perfil, clique no botão **clonar** para criar uma cópia editável do **DefaultHololens2ConfigurationProfile**:
 
 ![mrlearning-base](images/mrlearning-base/tutorial2-section1-step1-3.png)
+
+Agora, o perfil de configuração recém-criado é atribuído como o perfil de configuração para sua cena:
+
+![mrlearning-base](images/mrlearning-base/tutorial2-section1-step1-4.png)
 
 No menu do Unity, selecione **arquivo** > **salvar** para salvar sua cena.
 
@@ -142,7 +146,7 @@ No resultado da **pesquisa** , selecione **PressableButtonHoloLens2** pré-fabri
 > [!TIP]
 > Para exibir sua cena, conforme mostrado na imagem abaixo, clique duas vezes no objeto PressableButtonHoloLens2 na janela hierarquia para colocá-lo em foco e, em seguida, use a <a href="https://docs.unity3d.com/Manual/SceneViewNavigation.html" target="_blank">cena Gizmo</a>, localizada no canto superior direito da janela cena, para ajustar o ângulo de exibição ao longo do eixo Z de avanço.
 
-Com o objeto PressableButtonHoloLens2 ainda selecionado, na janela **Inspetor** :
+Com o objeto **PressableButtonHoloLens2** ainda selecionado, na janela **Inspetor** :
 
 * Altere sua **posição** de transformação para que ela esteja posicionada na frente da câmera, que está posicionada na origem, por exemplo, x = 0, y = 0 e z = 0,5
 
@@ -157,7 +161,7 @@ Clique com o botão direito do mouse em um ponto vazio dentro da janela hierarqu
 
 ![mrlearning-base](images/mrlearning-base/tutorial2-section2-step2-1.png)
 
-Com o objeto de cubo ainda selecionado, na janela **Inspetor** :
+Com o objeto de **cubo** ainda selecionado, na janela **Inspetor** :
 
 * Altere sua **posição** de transformação para que fique perto do botão pressionável, mas não se sobreponha a ela, por exemplo, x = 0, y = 0, 4 e z = 0,5
 * Altere sua **escala** de transformação para um tamanho adequado, por exemplo, x = 0, 2, y = 0, 2 e z = 0, 2
@@ -166,7 +170,7 @@ Com o objeto de cubo ainda selecionado, na janela **Inspetor** :
 
 ### <a name="3-configure-the-interactableonpressreceiver-event-type"></a>3. configurar o tipo de evento InteractableOnPressReceiver
 
-Com o objeto PressableButtonHoloLens2 selecionado na janela hierarquia, na janela **Inspetor** **menu**de opções, selecione **recolher todos os componentes** para obter uma visão geral de todos os componentes neste objeto:
+Na janela hierarquia, selecione o objeto **PressableButtonHoloLens2** e, em seguida, na janela **Inspetor** **menu**de etc, selecione **recolher todos os componentes** para obter uma visão geral de todos os componentes neste objeto:
 
 ![mrlearning-base](images/mrlearning-base/tutorial2-section2-step3-1.png)
 
@@ -174,12 +178,16 @@ Expanda o componente **interagir (script)** e localize e expanda a seção **eve
 
 ![mrlearning-base](images/mrlearning-base/tutorial2-section2-step3-2.png)
 
-Para o tipo de receptor de evento **InteractableOnPressReceiver**, altere o **filtro de interação** para **perto e longe**:
+Clique no botão **Adicionar evento** para criar um novo receptor de evento do tipo de receptor de evento **InteractableOnPressReceiver**:
 
 ![mrlearning-base](images/mrlearning-base/tutorial2-section2-step3-3.png)
 
 > [!NOTE]
 > O tipo de receptor de evento chamado InteractableOnPressReceiver permite que o botão responda a um evento pressionado quando uma mão controlada pressiona o botão.
+
+Para o receptor de eventos recém-criado, altere o **filtro de interação** para **quase e longe**:
+
+![mrlearning-base](images/mrlearning-base/tutorial2-section2-step3-4.png)
 
 ### <a name="4-configure-the-cube-to-receive-the-on-press-event"></a>4. configurar o cubo para receber o evento on Press
 
@@ -203,7 +211,7 @@ Na janela Selecionar material, **pesquise** **MRTK_Standard** e selecione um mat
 
 ### <a name="6-configure-the-cube-to-receive-the-on-release-event"></a>6. configurar o cubo para receber o evento on Release
 
-**Repetir** Etapa 4 do evento on Release para atribuir o cubo como um destinatário do evento on Release ().
+**Repetir** Etapa 4 do evento on Release para atribuir o **cubo** como um destinatário do evento **on Release ()** .
 
 ### <a name="7-define-the-action-to-be-triggered-by-the-on-release-event"></a>7. definir a ação a ser disparada pelo evento na versão
 

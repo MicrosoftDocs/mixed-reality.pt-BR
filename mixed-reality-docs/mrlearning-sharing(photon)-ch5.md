@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realidade misturada, unity, tutorial, hololens
-ms.openlocfilehash: a3b136023b0beea7cf6eecd52a9a21447576d482
-ms.sourcegitcommit: 2bfe9b1af4ee2cc0d668caeccb8ebc3137cbc20b
+ms.openlocfilehash: c1b64b9d32409d61284f21ca216417ece4767d1b
+ms.sourcegitcommit: bd536f4f99c71418b55c121b7ba19ecbaf6336bb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75901463"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77553804"
 ---
 # <a name="5-integrating-azure-spatial-anchors-into-a-shared-experience"></a>5. integrando âncoras espaciais do Azure em uma experiência compartilhada
 
@@ -22,7 +22,7 @@ Nesta lição, você aprenderá a integrar o ASA (âncoras espaciais) do Azure �
 * Integre o ASA em uma experiência compartilhada para o alinhamento de vários dispositivos.
 * Conheça os conceitos básicos de como o ASA funciona no contexto de uma experiência compartilhada local.
 
-## <a name="instructions"></a>Instruções
+## <a name="instructions"></a>Instructions
 
 1. Selecione TableAnchor pré-fabricado abaixo do objeto pai MixedRealityPlayspace e exclua-o.
 
@@ -42,11 +42,17 @@ Nesta lição, você aprenderá a integrar o ASA (âncoras espaciais) do Azure �
 
     ![Module3hapter5step7im](images/module3chapter5step7im.PNG)
 
-6. Para testar o módulo de compartilhamento, clique no botão "iniciar sessão do ASA do Azure", que iniciará a sessão de âncoras espaciais do Azure e, em seguida, criará a âncora do Azure clicando no botão "criar âncora do Azure". Aguarde até que a âncora do Azure seja criada. Depois que a âncora do Azure for criada, clique no botão "compartilhar âncora do Azure" para compartilhar a âncora do Azure criada do HoloLens.
+6. Repita a etapa 4 para conectar a função StartAzureSession () ao StartAzureSessionButton.
 
-7. Para receber a âncora do Azure compartilhada em outro HoloLens, clique em "iniciar a sessão do ASA do Azure" para iniciar e entrar na sessão do ASA atual
+7. Repita a etapa 4 para conectar a função CreateAzureAnchor () ao CreateAzureAnchorButton e verificar se o objeto TableAnchor está atribuído ao campo ' Game Object ' do parâmetro da função.
 
-8. Clique no botão "obter âncora do Azure" para obter a âncora do Azure compartilhada do outro HoloLens.
+8. Siga as instruções [Connect The Scene to the Azure Resource](mrlearning-asa-ch1.md#4-connect-the-scene-to-the-azure-resource) para adicionar suas credenciais de serviço de âncoras espaciais do Azure.
+
+9. Para testar o módulo de compartilhamento, clique no botão "iniciar sessão do ASA do Azure", que iniciará a sessão de âncoras espaciais do Azure e, em seguida, criará a âncora do Azure clicando no botão "criar âncora do Azure". Aguarde até que a âncora do Azure seja criada. Depois que a âncora do Azure for criada, clique no botão "compartilhar âncora do Azure" para compartilhar a âncora do Azure criada do HoloLens.
+
+10. Para receber a âncora do Azure compartilhada em outro HoloLens, clique em "iniciar a sessão do ASA do Azure" para iniciar e entrar na sessão do ASA atual
+
+11. Clique no botão "obter âncora do Azure" para obter a âncora do Azure compartilhada do outro HoloLens.
 
 ## <a name="congratulations"></a>Parabéns
 

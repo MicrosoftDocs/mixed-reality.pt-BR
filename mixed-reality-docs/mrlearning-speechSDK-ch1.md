@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realidade misturada, unity, tutorial, hololens
-ms.openlocfilehash: 05728cf090b2e998e92980816943a2c3bef18dfb
-ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
+ms.openlocfilehash: 25e5aa05839845620a23c3dba6698ac7b5854d6d
+ms.sourcegitcommit: bd536f4f99c71418b55c121b7ba19ecbaf6336bb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/24/2019
-ms.locfileid: "75334291"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77553964"
 ---
 # <a name="1-integrating-and-using-speech-recognition-and-transcription"></a>1. integrando e usando o reconhecimento de fala e a transcrição
 
@@ -25,18 +25,18 @@ Este tutorial cria um aplicativo de realidade misturada que explora o uso do SDK
 * Saiba como usar comandos de voz
 * Saiba como usar os recursos de fala para texto
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
 
 >[!TIP]
 >Se você ainda não concluiu a série de [tutoriais de introdução](mrlearning-base.md) , é recomendável que você conclua esses tutoriais primeiro.
 
 * Um PC com Windows 10 configurado com as [ferramentas corretas instaladas](install-the-tools.md)
 * SDK do Windows 10 10.0.18362.0 ou posterior
-* Alguma capacidade C# básica de programação
+* Alguma habilidade básica de programação em C#
 * Um dispositivo HoloLens 2 [configurado para desenvolvimento](using-visual-studio.md#enabling-developer-mode)
 
 >[!IMPORTANT]
->Esta série de tutoriais requer o <a href="https://unity3d.com/get-unity/download/archive" target="_blank">unity 2019,1</a> e a versão recomendada é o Unity 2019.1.14. Isso substitui quaisquer requisitos de versão do Unity ou recomendações indicadas nos pré-requisitos vinculados acima.
+> A versão recomendada do Unity para esta série de tutoriais é o Unity 2019.2.X. Ela substitui todos os requisitos de versão do Unity ou as recomendações indicadas nos pré-requisitos vinculados acima.
 
 ## <a name="getting-started"></a>Introdução
 
@@ -47,7 +47,7 @@ Este tutorial cria um aplicativo de realidade misturada que explora o uso do SDK
     >[!NOTE]
     >Verifique se o modelo está definido como 3D, conforme mostrado na imagem acima.
 
-2. Baixe o [pacote de fundamentos versão 2.1.0](https://github.com/microsoft/MixedRealityToolkit-Unity/releases/download/v2.1.0/Microsoft.MixedReality.Toolkit.Unity.Foundation.2.1.0.unitypackage) do [Kit de Ferramentas de Realidade Misturada](https://github.com/microsoft/MixedRealityToolkit-Unity/releases) para Unity e salve-o em uma pasta no computador. Importe o pacote para o projeto do Unity. Para obter instruções detalhadas sobre como fazer isso, consulte os [tutoriais de introdução – lição 2. Inicializando o projeto e o primeiro aplicativo](mrlearning-base-ch1.md).
+2. Baixe a [versão 2.3.0 do pacote](https://github.com/microsoft/MixedRealityToolkit-Unity/releases/download/v2.3.0/Microsoft.MixedReality.Toolkit.Unity.Foundation.2.3.0.unitypackage) do [Kit de ferramentas da realidade mista](https://github.com/microsoft/MixedRealityToolkit-Unity/releases) do Unity Foundation e salve-a em uma pasta em seu computador. Importe o pacote para o projeto do Unity. Para obter instruções detalhadas sobre como fazer isso, consulte os [tutoriais de introdução – lição 2. Inicializando o projeto e o primeiro aplicativo](mrlearning-base-ch1.md).
 
 3. Baixe e importe o [SDK de fala](https://aka.ms/csspeech/unitypackage) do Azure para o pacote de ativos do Unity. Importe o pacote do SDK de fala clicando em ativos, selecionando importar pacote e, em seguida, selecionando pacote personalizado. Localize o pacote do SDK de fala baixado anteriormente e abra-o para iniciar o processo de importação.
 
@@ -59,9 +59,13 @@ Este tutorial cria um aplicativo de realidade misturada que explora o uso do SDK
 
     ![mrlearning-Speech-CH1-1-step4. png](images/mrlearning-speech-ch1-1-step4.png)
 
-5. Baixe o pacote de ativos do módulo SDK de fala, também conhecido como Lunarcom, clicando nesse [link](https://github.com/microsoft/MixedRealityLearning/releases/tag/Speech_2). O pacote de ativos do Lunarcom é uma coleção de ativos e scripts desenvolvidos para esta série de lições para demonstrar um uso prático do SDK de fala do Azure. É um terminal de comando de voz que, por fim, fará a interface com a experiência de montagem do módulo lunar desenvolvida nos [tutoriais de introdução – lição 7. Criando um aplicativo de exemplo de módulo lunar](mrlearning-base-ch6.md).
+5. Baixe os ativos do tutorial:
+    * [MRTK. HoloLens2. Unity. tutoriais. assets. GettingStarted. 2.3.0.2. unitypackage](https://github.com/microsoft/MixedRealityLearning/releases/download/getting-started-v2.3.0.2/MRTK.HoloLens2.Unity.Tutorials.Assets.GettingStarted.2.3.0.2.unitypackage)
+    * [SpeechSDKAssets. unitypackage](https://github.com/microsoft/MixedRealityLearning/releases/download/Speech_2/SpeechSDKAssets.unitypackage) (versão 1,2)
 
-6. Importe o pacote de ativos do Lunarcom para seu projeto do Unity seguindo as etapas semelhantes que você levou para importar o kit de ferramentas e o SDK de fala misturados da realidade.
+    O pacote de ativos do SpeechSDKAssets é uma coleção de ativos e scripts desenvolvidos para esta série de tutoriais para demonstrar o uso prático do SDK de fala do Azure. É um terminal de comando de voz que, em última instância, fará interface com a experiência de montagem do Rocket Launcher desenvolvida nos [tutoriais de introdução – lição 7. Criando um aplicativo de exemplo de módulo lunar](mrlearning-base-ch6.md).
+
+6. Importe os dois pacotes de ativos de tutorial para seu projeto do Unity seguindo as etapas semelhantes que você levou para importar o kit de ferramentas e o SDK de fala misturados da realidade.
 
 7. Configure o MRTK (Kit de ferramentas de realidade mista).
 
@@ -69,7 +73,7 @@ Este tutorial cria um aplicativo de realidade misturada que explora o uso do SDK
 
     ![mrlearning-Speech-CH1-1-step7a. png](images/mrlearning-speech-ch1-1-step7a.png)
 
-    No pop-up que aparece, selecione DefaultHoloLens2ConfigurationProfile para torná-lo o perfil ativo do kit de ferramentas de realidade misturada.
+    Com o objeto MixedRealityToolkit selecionado em sua hierarquia de cena, na janela Inspetor, selecione DefaultHoloLens2ConfigurationProfile para torná-lo o perfil ativo do kit de ferramentas de realidade misturada.
 
     ![mrlearning-Speech-CH1-1-step7b. png](images/mrlearning-speech-ch1-1-step7b.png)
 
@@ -189,6 +193,6 @@ Este tutorial cria um aplicativo de realidade misturada que explora o uso do SDK
 
 ## <a name="congratulations"></a>Parabéns
 
-Você configurou o reconhecimento de voz em seu aplicativo, da plataforma Azure. Execute o aplicativo para garantir que todas as funções e recursos estejam funcionando corretamente. Comece dizendo a palavra de ativação que você digitou na etapa 22, ativar terminal. Selecione o botão de microfone para iniciar o reconhecimento de voz. Comece a falar. Você verá suas palavras transcritas no terminal enquanto fala. Pressione o botão de microfone uma segunda vez para parar o reconhecimento de voz. Diga ignorar terminal para ocultar o terminal Lunarcom. Na próxima lição, você aprenderá a alternar dinamicamente para usar o reconhecimento de voz alimentada por dispositivo em situações em que o SDK de fala do Azure não está disponível devido ao HoloLens 2 estar offline.
+Você configurou o reconhecimento de voz em seu aplicativo, da plataforma Azure. Execute o aplicativo para garantir que todas as funções e recursos estejam funcionando corretamente. Comece dizendo a palavra de ativação que você digitou na etapa 25, ativar terminal. Selecione o botão de microfone para iniciar o reconhecimento de voz. Comece a falar. Você verá suas palavras transcritas no terminal enquanto fala. Pressione o botão de microfone uma segunda vez para parar o reconhecimento de voz. Diga ignorar terminal para ocultar o terminal Lunarcom. Na próxima lição, você aprenderá a alternar dinamicamente para usar o reconhecimento de voz alimentada por dispositivo em situações em que o SDK de fala do Azure não está disponível devido ao HoloLens 2 estar offline.
 
 [Próximo tutorial: 2. adicionando um modo offline para conversão de fala em texto local](mrlearning-speechSDK-ch2.md)

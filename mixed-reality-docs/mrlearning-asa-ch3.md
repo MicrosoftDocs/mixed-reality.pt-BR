@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realidade misturada, unity, tutorial, hololens
-ms.openlocfilehash: f4f609a71b05a52e8761e282763a540b42e9f7f5
-ms.sourcegitcommit: a580166a19294f835b8e09c780f663f228dd5de0
+ms.openlocfilehash: 3d762950ea8e211fd5a8e4cf8af717674d3fe7e1
+ms.sourcegitcommit: bd536f4f99c71418b55c121b7ba19ecbaf6336bb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77250671"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77553914"
 ---
 # <a name="3-displaying-azure-spatial-anchor-feedback"></a>3. exibindo comentários de âncora espacial do Azure
 
@@ -49,7 +49,7 @@ Com o objeto de **comentários** ainda selecionado, na janela Inspetor, use o bo
 
 ![mrlearning-base](images/mrlearning-asa/tutorial3-section1-step1-3.png)
 
-Atribua o objeto de **comentários** ao campo de **texto de comentário** do componente script de **âncora (script)** :
+Atribua o próprio objeto de **comentários** ao campo de **texto de comentários** do componente script de **âncora (script)** :
 
 ![mrlearning-base](images/mrlearning-asa/tutorial3-section1-step1-4.png)
 

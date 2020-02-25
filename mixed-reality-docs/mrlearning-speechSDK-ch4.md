@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realidade misturada, unity, tutorial, hololens
-ms.openlocfilehash: e712fc2fd66b1add5b16b7dd8e6c37551aefe43a
-ms.sourcegitcommit: 9005b3fdfa87ac8fdc18a594a681e25c00ac5ce1
+ms.openlocfilehash: 8805fa6410e882bce2f0fe8da780dfd5f794cc74
+ms.sourcegitcommit: bd536f4f99c71418b55c121b7ba19ecbaf6336bb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2019
-ms.locfileid: "75003205"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77553984"
 ---
 # <a name="4-setting-up-intent-and-natural-language-understanding"></a>4. Configurando o reconhecimento de intenções e idiomas naturais
 
@@ -23,7 +23,7 @@ Nesta lição, você vai explorar o recurso de intenção do serviço de fala do
 - Saiba como configurar o portal LUIS do Azure
 - Saiba como configurar intenção, entidades e declarações no Azure
 
-## <a name="instructions"></a>Instruções
+## <a name="instructions"></a>Instructions
 
 1. Permitir que seu computador habilite o ditado. Para fazer isso, vá para configurações do Windows, selecione "privacidade", em seguida, "fala", seguido por "escrita à tinta & digitação" e ative os serviços de fala e as sugestões de digitação.
 
@@ -147,14 +147,22 @@ Nesta lição, você vai explorar o recurso de intenção do serviço de fala do
 
     ![Module4Chapter4step23im](images/module4chapter4step23im.PNG)
 
-23. No campo ponto de extremidade Luis do "LunarcomIntentRecognizer" no painel Inspetor, insira a URL do ponto de extremidade que você salvou na etapa 22.
+23. No campo ponto de extremidade Luis do "LunarcomIntentRecognizer" no painel Inspetor, insira a URL do ponto de extremidade que você salvou na etapa 21.
 
     ![Module4Chapter4step24im](images/module4chapter4step24im.PNG)
 
     >[!NOTE]
     >No componente "LunarcomOfflineRecognizer" no painel Inspetor, certifique-se de que "Desabilitar" esteja selecionado para "SimulateOfflineMode" caso contrário, o teste do programa não funcionará.
 
-24. Pressione o botão reproduzir no editor do Unity e clique no botão Rocket para iniciar o reconhecimento de intenção. Com a frase "Selecione o botão iniciar Rocket".
+24. Na janela do projeto, navegue até os ativos > MRTK. Tutoriais. GettingStarted > pré-fabricados > pasta RocketLauncher, arraste o RocketLauncher_Complete pré-fabricado para a janela hierarquia e posicione-o na frente do objeto Lunarcom_Base.
+
+    ![Module4Chapter4step24im](images/module4chapter4step24im-missing01.png)
+
+25. Na janela hierarquia, selecione o objeto Lunarcom_Base e localize o componente reconhecedor de intenção Lunarcom (script) e, em seguida, expanda o RocketLauncher_Complete objeto botão > e atribua cada um dos objetos de botão aos botões de iniciador lunar correspondentes campo.
+
+    ![Module4Chapter4step24im](images/module4chapter4step24im-missing02.png)
+
+26. Pressione o botão reproduzir no editor do Unity e clique no botão Rocket para iniciar o reconhecimento de intenção. Com a frase "Selecione o botão iniciar Rocket".
 
     >[!NOTE]
     >O aplicativo reconheceu a função desejada e ativou o botão Rocket.

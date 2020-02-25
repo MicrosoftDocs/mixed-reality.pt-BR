@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realidade misturada, unity, tutorial, hololens
-ms.openlocfilehash: 18bcbc95746a2e66b88d83f279603aa7f171bbcb
-ms.sourcegitcommit: cc61f7ac08f9ac2f2f04e8525c3260ea073e04a7
+ms.openlocfilehash: aaa02ce118fd051d94311e837b143affc96ff72b
+ms.sourcegitcommit: bd536f4f99c71418b55c121b7ba19ecbaf6336bb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77129567"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77554041"
 ---
 # <a name="6-exploring-advanced-input-options"></a>6. explorando opções de entrada avançadas
 
@@ -68,16 +68,20 @@ Na janela hierarquia, selecione o objeto **Octa** e adicione o componente **mani
 
 ### <a name="5-implement-the-response-event-for-the-speech-command"></a>5. implementar o evento de resposta para o comando de fala
 
-No componente manipulador de entrada de fala (script), clique no pequeno **+** botão para adicionar uma palavra-chave e, em seguida, na lista suspensa de **palavras-chave** , escolha a palavra-chave **reproduzir música** criada anteriormente:
+No componente do manipulador de entrada de fala (script), clique no botão de **+** pequeno para adicionar um elemento de palavra-chave à lista de palavras-chaves:
 
 ![mrlearning-base](images/mrlearning-base/tutorial5-section1-step5-1.png)
+
+Clique no elemento recém-criado **0** para expandi-lo e, em seguida, na lista suspensa de **palavras-chave** , escolha a palavra-chave **reproduzir música** criada anteriormente:
+
+![mrlearning-base](images/mrlearning-base/tutorial5-section1-step5-2.png)
 
 > [!NOTE]
 > As palavras-chave no menu suspenso de palavras-chaves são preenchidas com base nas palavras-chaves definidas na lista de comandos de fala no perfil de comandos de fala.
 
 Crie um novo evento **Response ()** , configure o objeto **Octa** para receber o evento, defina **audioname. PlayOneShot** como a ação a ser disparada e atribua um clipe de áudio adequado ao campo de **clipe de áudio** , por exemplo, o clipe de áudio MRTK_Gem:
 
-![mrlearning-base](images/mrlearning-base/tutorial5-section1-step5-2.png)
+![mrlearning-base](images/mrlearning-base/tutorial5-section1-step5-3.png)
 
 > [!TIP]
 > Para obter um lembrete sobre como implementar eventos e atribuir um clipe de áudio, você pode consultar as instruções [implementar o evento on Touch Started](mrlearning-base-ch4.md#4-implement-the-on-touch-started-event) .
@@ -145,11 +149,11 @@ Se agora você entrar no modo de jogo, poderá testar a rolagem do conteúdo 2D 
 
 ### <a name="5-add-3d-content-to-be-scrolled"></a>5. adicionar conteúdo 3D a ser rolado
 
-Na janela hierarquia, **Crie quatro cubos** como objetos filho do **PanContent** e defina a **escala** de transformação como X = 0,15, Y = 0,15, Z = 0,15:
+Na janela hierarquia, **Crie quatro cubos** como objetos filho do objeto **PanGesture** e defina a **escala** de transformação como X = 0,15, Y = 0,15, Z = 0,15:
 
 ![mrlearning-base](images/mrlearning-base/tutorial5-section2-step5-1.png)
 
-Para espaçar os cubos uniformemente e economizar algum tempo, adicione o componente de coleção de objetos de grade (script) ao objeto pai dos cubos, ou seja, o objeto PanGesture e configure a coleção de objetos de grade (script) da seguinte maneira:
+Para espaçar os cubos uniformemente e economizar algum tempo, adicione o componente de **coleção de objetos de grade (script)** ao objeto pai dos cubos, ou seja, o objeto **PanGesture** e configure a coleção de objetos de grade (script) da seguinte maneira:
 
 * Alterar o **número de linhas** para 1 para que todos os cubos sejam alinhados em uma única linha
 * Alterar a **largura da célula** para 0,25 para espaçar os cubos dentro da linha
@@ -230,7 +234,7 @@ Na janela hierarquia, selecione o objeto **queijo** e crie um novo **ao examinar
 
 ### <a name="4-implement-the-on-selected-event"></a>4. implementar o no evento selecionado
 
-Na janela hierarquia, selecione o objeto **queijo** e crie um novo no evento **selecionado ()** , configure o objeto **queijo** para receber o evento e defina **EyeTrackingTutorialDemo. RotateTarget** como a ação a ser disparada:
+Na janela hierarquia, selecione o objeto **queijo** e crie um novo no evento **selecionado ()** , configure o objeto **queijo** para receber o evento e defina **EyeTrackingTutorialDemo. BlipTarget** como a ação a ser disparada:
 
 ![mrlearning-base](images/mrlearning-base/tutorial5-section3-step4-1.png)
 

@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realidade misturada, unity, tutorial, hololens
-ms.openlocfilehash: 8275d5a97d7827d34ed3926cabe4032cc7f4cfac
-ms.sourcegitcommit: cc61f7ac08f9ac2f2f04e8525c3260ea073e04a7
+ms.openlocfilehash: 5463f363291790fd5e5d76ffa322a61ca7bf8e31
+ms.sourcegitcommit: bd536f4f99c71418b55c121b7ba19ecbaf6336bb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77129297"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77553854"
 ---
 # <a name="4-placing-dynamic-content-and-using-solvers"></a>4. colocando o conteúdo dinâmico e usando os Solveres
 <!-- Consider renaming to 'Placing dynamic content using Solvers' -->
@@ -58,7 +58,7 @@ Configure o componente **manipulador (script) do Solver** :
 
 Configure o componente **orbital (script)** :
 
-* Alterar o **tipo de orientação** para **seguir objeto acompanhado**
+* Verifique se o **tipo de orientação** está definido como **seguir objeto acompanhado**
 * Redefinir **deslocamento local** para X = 0, Y = 0, Z = 0
 * Alterar o **deslocamento do mundo** para X = 0, Y =-0,4, Z = 0,3
 

@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realidade misturada, unity, tutorial, hololens
-ms.openlocfilehash: efa03c49a9a083d2b8e591e03bccbeb776bb57b2
-ms.sourcegitcommit: 2bfe9b1af4ee2cc0d668caeccb8ebc3137cbc20b
+ms.openlocfilehash: d879144c7097d8b3873618f986b9f169e8553fa8
+ms.sourcegitcommit: bd536f4f99c71418b55c121b7ba19ecbaf6336bb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75901478"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77553814"
 ---
 # <a name="1-setting-up-photon-unity-networking"></a>1. Configurando a rede do Photon Unity
 
@@ -25,18 +25,18 @@ Neste tutorial, você aprenderá a se preparar para criar uma experiência compa
 * Saiba como localizar e importar a rede Photon Unity
 * Configurar um servidor Photon local
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
 
 >[!TIP]
 >Se você ainda não tiver concluído os tutoriais de [introdução](mrlearning-base.md) e os tutoriais de [âncoras espaciais iniciados do Azure](mrlearning-asa-ch1.md) , é recomendável que você conclua esses tutoriais primeiro.
 
 * Um PC com Windows 10 configurado com as [ferramentas corretas instaladas](install-the-tools.md)
 * SDK do Windows 10 10.0.18362.0 ou posterior
-* Alguma capacidade C# básica de programação
+* Alguma habilidade básica de programação em C#
 * Um dispositivo HoloLens 2 [configurado para desenvolvimento](using-visual-studio.md#enabling-developer-mode)
 
 >[!IMPORTANT]
->Esta série de tutoriais requer o <a href="https://unity3d.com/get-unity/download/archive" target="_blank">unity 2019,1</a> e a versão recomendada é o Unity 2019.1.14. Isso substitui quaisquer requisitos de versão do Unity ou recomendações indicadas nos pré-requisitos vinculados acima.
+> A versão recomendada do Unity para esta série de tutoriais é o Unity 2019.2.X. Ela substitui todos os requisitos de versão do Unity ou as recomendações indicadas nos pré-requisitos vinculados acima.
 
 ## <a name="setting-up-photon"></a>Configurando o Photon
 

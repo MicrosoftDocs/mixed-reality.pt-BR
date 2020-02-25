@@ -6,12 +6,12 @@ ms.author: kegodin
 ms.date: 11/07/2019
 ms.topic: article
 keywords: Unity, som espacial, HRTF, tamanho da sala
-ms.openlocfilehash: 3e7d0ea231545d5112d182dffbc02f217ca4a4a7
-ms.sourcegitcommit: 8bf7f315ba17726c61fb2fa5a079b1b7fb0dd73f
+ms.openlocfilehash: 6720eac30c69ebfcd0f003cf131f60295818d676
+ms.sourcegitcommit: bd536f4f99c71418b55c121b7ba19ecbaf6336bb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/17/2019
-ms.locfileid: "75181986"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77553694"
 ---
 # <a name="spatial-sound-in-unity"></a>Som espacial no Unity
 
@@ -34,6 +34,7 @@ Use o [NuGet para o Unity](https://github.com/GlitchEnzo/NuGetForUnity/releases/
 * Anexar uma **fonte de áudio** a um objeto na hierarquia
 * Marque a caixa de seleção **habilitar a espacial**
 * Mover o controle deslizante de **mistura espacial** para ' 1 '
+* Verifique se o áudio espacial está habilitado na estação de trabalho do desenvolvedor. Habilite-o clicando com o botão direito do mouse no ícone de volume na barra de tarefas e verificando se o som espacial está definido como algo diferente de "desativado". Para obter a melhor representação do que você ouvirá no HoloLens 2, escolha **Windows Sonic para fones de ouvido**.
 
 Para obter mais detalhes, consulte:
 * [Repositório GitHub do Microsoft spatializer](https://github.com/microsoft/spatialaudio-unity)
@@ -41,7 +42,7 @@ Para obter mais detalhes, consulte:
 * [Documentação da fonte de áudio do Unity](https://docs.unity3d.com/2019.3/Documentation/Manual/class-AudioSource.html)
 * [Documentação do spatializer do Unity](https://docs.unity3d.com/Manual/VRAudioSpatializer.html)
 
-## <a name="distance-based-attenuation"></a>Atenuação de distância
+## <a name="distance-based-attenuation"></a>Atenuação baseada em distância
 O decaimento baseado em distância padrão da Unity tem uma distância mínima de 1 medidor e uma distância máxima de 500 metros, com um rolloff logarítmica. Essas configurações podem funcionar para seu cenário, ou você pode achar que as fontes são atenuadas muito rapidamente ou lentas. Para obter mais detalhes, consulte:
 * [Design de som em realidade misturada](spatial-sound-design.md) para as configurações recomendadas.
 * [Documentação de fonte de áudio do Unity](https://docs.unity3d.com/2019.3/Documentation/Manual/class-AudioSource.html) para obter instruções sobre como definir essas curvas.
@@ -58,7 +59,7 @@ Para obter exemplos de som espacial no Unity, consulte:
 * [Demonstrações do MRTK](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_release/Assets/MixedRealityToolkit.Examples/Demos/Audio)
 * O [projeto de exemplo Microsoft Spatializer](https://github.com/microsoft/spatialaudio-unity/tree/master/Samples/MicrosoftSpatializerSample)
 
-## <a name="next-steps"></a>Próximas etapas
+## <a name="next-steps"></a>{1&gt;{2&gt;Próximas etapas&lt;2}&lt;1}
 * [Design de som em realidade misturada](spatial-sound-design.md)
 * [Tutorial do spatializer da Microsoft](unity-spatial-audio-ch1.md)
 
