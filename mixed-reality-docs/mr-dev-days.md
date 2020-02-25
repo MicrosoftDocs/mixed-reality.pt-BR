@@ -4,35 +4,24 @@ title: Dias de desenvolvimento de realidade misturada
 description: Aprenda a criar experiências de realidade misturada para o HoloLens e headsets imersivos.
 author: jessemcculloch
 ms.author: jemccull
-ms.date: 02/25/2019
+ms.date: 02/21/2020
 ms.topic: article
 keywords: Realidade misturada, conferência, Summit, desenvolvedor, HoloLens, HoloLens 2, Kinect
-ms.openlocfilehash: baf6e7a6f046190e15e1b228eb4a3814255404b9
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: be3b09e177b04cd7d163994d1a3ed1448b4179ee
+ms.sourcegitcommit: bd536f4f99c71418b55c121b7ba19ecbaf6336bb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63525085"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77555184"
 ---
-# <a name="mixed-reality-dev-days"></a>Dias de desenvolvimento de realidade misturada
+# <a name="mixed-reality-dev-days--tour-2020"></a>A realidade misturada dias de desenvolvimento & Tour 2020
 
-Os aplicativos estão fechados no momento. Obrigado por seu interesse!
+O planejamento de dias de desenvolvimento do MR 2020 está abaixo do caminho, mas não temos detalhes para compartilhar além da data e do local do evento Redmond.
 
-Com os [anúncios](https://blogs.microsoft.com/blog/2019/02/24/microsoft-at-mwc-barcelona-introducing-microsoft-hololens-2/) que a Microsoft fez recentemente na realidade misturada e no espaço em nuvem, estamos encantado coms a abrir aplicativos para os **dias de desenvolvimento de realidade misturada**, uma chance de criar as habilidades, a rede e as ideias de que você precisa para realizar seus aplicativos de realidade misturada para o próximo nível. Os dias de desenvolvimento de realidade misturada oferecerá aos participantes a oportunidade de codificar junto com nossas equipes de engenharia, aprender e testar a versão mais recente em nosso portfólio e conectar-se a uma comunidade de desenvolvedores como você que estão liderando uma nova era de aplicativos de realidade misturada.  </br>
+Neste ano, MR dev dias em Redmond está sendo mantido no centro de conferências da Microsoft em maio de 2020 a 17 de 16 de &.
 
-Também vamos manter as [sessões](mr-dev-days-sessions.md) conduzidas pelas nossas equipes para se aprofundar nas novidades e compartilhar dicas de introdução. </br>
+Mais detalhes serão fornecidos em breve, incluindo informações de registro.  Para obter as atualizações mais recentes, verifique se você está inscrito em nosso programa de desenvolvedor em [https://aka.ms/IWantMR](https://aka.ms/IWantMR).
 
-Nossa lista provisória de sessões pode ser encontrada [aqui](mr-dev-days-sessions.md).
-
-Os participantes também terão a oportunidade de entrar em prática com nossa tecnologia em nossos laboratórios práticos e em nossas estações de demonstração.
-</br>
-
-## <a name="details"></a>Detalhes
-
-*   **Data: 2-3 de maio de 2019**
-* **Local:** Microsoft Building 92 5010 NE 36th St Redmond, WA 98052
-* **Recepção de rede da noite:** Quinta-feira à noite, 6-18:00
-* **Custo Esse evento é gratuito para participar. Você é responsável pelas despesas de viagem.**
 
 
 </br>
