@@ -6,12 +6,12 @@ ms.author: jlyons
 ms.date: 02/24/2019
 ms.topic: article
 keywords: Portal de dispositivos Windows, HoloLens
-ms.openlocfilehash: b22c70305076e3b2c18f880878b48c3142efdbfe
-ms.sourcegitcommit: cf3b662cfcf3fb05a554c302e595eb018f01abf2
+ms.openlocfilehash: 43ecfead7d2882d3624809bc05184f74131b8594
+ms.sourcegitcommit: 1ec628a9107194c0a9d4073b5ca09ee816030e85
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76521687"
+ms.lasthandoff: 03/01/2020
+ms.locfileid: "78202716"
 ---
 # <a name="using-the-windows-device-portal"></a>Usando o portal do dispositivo Windows
 
@@ -81,6 +81,8 @@ Cada HoloLens gera um certificado autoassinado exclusivo para sua conexão SSL. 
 1. **Verifique se você está em uma rede segura (USB ou uma rede Wi-Fi confiável).**
 2. Baixe o certificado desse dispositivo na página "segurança" no portal do dispositivo.
    * Navegue até: https://< YOUR_HOLOLENS_IP_ADDRESS >/devicepair.htm
+   * Abra o nó para as preferências de > do sistema. 
+   * Role para baixo até segurança do dispositivo, clique no botão "baixar o certificado deste dispositivo".
 3. Instale o certificado no repositório "autoridades de certificação raiz confiáveis" no seu computador.
    * No menu do Windows, digite: gerenciar certificados de computador e iniciar o applet.
    * Expanda a pasta **autoridade de certificação raiz confiável** .
@@ -89,9 +91,13 @@ Cada HoloLens gera um certificado autoassinado exclusivo para sua conexão SSL. 
    * Conclua o Assistente para Importação de Certificados, usando o arquivo de certificado baixado do Device Portal.
 4. Reinicie o navegador.
 
+>[!NOTE]
+> Esse certificado só será confiável para o dispositivo e o usuário precisará passar pelo processo novamente se o dispositivo for atualizado.
+
+
 ## <a name="device-portal-pages"></a>Páginas do Device Portal
 
-### <a name="home"></a>Página Inicial
+### <a name="home"></a>Inicial
 
 ![home page do portal de dispositivos do Windows no Microsoft HoloLens](images/windows-device-portal-home-page-1000px.png)<br>
 *home page do portal do dispositivo Windows no Microsoft HoloLens*
@@ -151,7 +157,7 @@ Use a página Mixed Reality Capture para salvar fluxos de mídia do HoloLens.
   * **Mic Audio**: captura o áudio do grupo de microfones.
   * **App Audio**: captura o áudio do aplicativo em execução no momento.
   * **Renderizar da câmera**: alinha a captura para ser da perspectiva da câmera de foto/vídeo, se [houver suporte do aplicativo em execução](mixed-reality-capture-for-developers.md#render-from-the-pv-camera-opt-in) (somente HoloLens 2).
-  * **Qualidade de visualização dinâmica**: selecione a resolução de tela, a taxa de quadros e a taxa de streaming para a visualização dinâmica.
+  * **Live preview quality**: selecione a resolução de tela, a taxa de quadros e a taxa de streaming para a visualização dinâmica.
 * Clique ou toque no botão **Visualização dinâmica** para mostrar o fluxo de captura. **Parar a visualização dinâmica** interrompe o fluxo de captura.
 * Clique ou toque em **gravar** para iniciar a gravação do fluxo de realidade misturada, usando as configurações especificadas. **Parar gravação** encerra a gravação e salva-a.
 * Clique ou toque em **tirar foto** para tirar uma imagem ainda do fluxo de captura.
@@ -196,7 +202,7 @@ Mostra detalhes sobre processos em execução no momento. Isso inclui aplicativo
 Mostra gráficos em tempo real de informações de diagnóstico do sistema, como o uso de energia, a taxa de quadros e a carga da CPU.
 
 Estas são as métricas disponíveis:
-* **Energia SoC**: utilização instantânea de energia do sistema-em-um-chip, com base na média de um minuto
+* **SoC power**: utilização instantânea de energia do sistema-em-um-chip, com base na média de um minuto
 * **Energia do sistema**: utilização instantânea de energia do sistema, com base na média de um minuto
 * **Taxa de quadros**: quadros por segundo, VBlanks perdidos por segundo e VBlanks perdidos consecutivos
 * **GPU**: utilização do mecanismo GPU, porcentagem do total disponível
@@ -238,7 +244,7 @@ Use o explorador de arquivos para procurar, carregar e baixar arquivos. Você po
 
 Verifique o artigo [Configurar o HoloLens no modo de quiosque](https://docs.microsoft.com/hololens/hololens-kiosk#set-up-kiosk-mode-using-the-windows-device-portal-windows-10-version-1607-and-version-1803) no Windows it pro Center para obter instruções atualizadas sobre como habilitar o modo de quiosque por meio do portal de dispositivos Windows.
 
-### <a name="logging"></a>Registro em log
+### <a name="logging"></a>Log
 
 ![página de log no portal de dispositivos do Windows no Microsoft HoloLens](images/windows-device-portal-logging-page-1000px.png)<br>
 *Página de registro em log no portal de dispositivo do Windows no Microsoft HoloLens*
@@ -249,7 +255,7 @@ Marque **ocultar provedores** para mostrar somente a lista de **eventos** .
 * **Provedores registrados**: seleciona o provedor ETW e o nível de rastreamento. O nível de rastreamento é um destes valores:
    1. Saída anormal ou encerramento
    2. Erros graves
-   3. Avisos
+   3. Warnings
    4. Avisos que não são de erro
 
 Clique ou toque em **Habilitar** para iniciar o rastreamento. O provedor é adicionado à lista suspensa **Provedores Habilitados**.
@@ -269,12 +275,12 @@ página de simulação de ![no portal de dispositivo do Windows no Microsoft Hol
 *Página simulação no portal do dispositivo Windows no Microsoft HoloLens*
 
 Permite que você grave e reproduza dados de entrada para testes.
-* **Capturar sala**: usado para baixar um arquivo de sala simulada que contém a malha de mapeamento espacial para os arredores do usuário. Nomeie a sala e clique em **capturar** para salvar os dados como um arquivo. XeF em seu computador. Esse arquivo de sala pode ser carregado no emulador do HoloLens.
+* **Capture room**: usado para baixar um arquivo de sala simulada que contém a malha de mapeamento espacial para os arredores do usuário. Nomeie a sala e clique em **capturar** para salvar os dados como um arquivo. XeF em seu computador. Esse arquivo de sala pode ser carregado no emulador do HoloLens.
 * **Gravação**: Verifique os fluxos a serem gravados, nomeie a gravação e clique ou toque em **gravar** para iniciar a recodificação. Execute ações com seu HoloLens e clique em **parar** para salvar os dados como um arquivo. XeF em seu PC. Esse arquivo pode ser carregado no emulador ou dispositivo HoloLens.
 * **Reprodução**: clique ou toque em **carregar gravação** para selecionar um arquivo XeF do seu PC e enviar os dados para o HoloLens.
 * **Modo de controle**: selecione **padrão** ou **simulação** na lista suspensa e clique ou toque no botão **definir** para selecionar o modo no HoloLens. Escolher "Simulação" desabilita os sensores reais em seu HoloLens e usa dados simulados carregados em vez disso. Se você alternar para "Simulação", o HoloLens não responderá ao usuário real até que você volte para "Padrão".
 
-### <a name="networking"></a>Rede do
+### <a name="networking"></a>Rede
 
 página de rede ![no portal de dispositivo do Windows no Microsoft HoloLens](images/windows-device-portal-networking-page-1000px.png)<br>
 *Página rede no portal do dispositivo Windows no Microsoft HoloLens*

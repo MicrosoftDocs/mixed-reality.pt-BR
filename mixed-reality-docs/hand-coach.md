@@ -1,19 +1,19 @@
 ---
-title: Diretrizes de design do MRTK Hand
+title: Mão-executiva
 description: as mãos 3D disparadas quando o sistema não detecta as mãos do usuário para ajudar a auxiliá-las.
 author: grayclee
 ms.author: glee
 ms.date: 09/25/2019
 ms.topic: article
 keywords: Realidade mista do Windows, design, direito à mão, headset de imersão, MRTK, mãos, mãos de ajuda
-ms.openlocfilehash: dc04f8f77548b226a822576befd60be107f4d3fb
-ms.sourcegitcommit: 87aca9c2b73b0e83cb70a46443dcdb08c3621005
+ms.openlocfilehash: c5f0a0c241ff71dc93f370a5a8caa627128bfb1a
+ms.sourcegitcommit: 1ec628a9107194c0a9d4073b5ca09ee816030e85
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77373517"
+ms.lasthandoff: 03/01/2020
+ms.locfileid: "78202727"
 ---
-# <a name="hand-coach-design-guidance"></a>Orientação de design do Orientador à mão
+# <a name="hand-coach"></a>Mão-executiva
 
 A mão do direito são as mãos modeladas em 3D que são disparadas quando o sistema não detecta as mãos do usuário. Isso é implementado como um componente "ensinando" que ajuda a orientar o usuário quando o gesto não foi ensinado. Se os usuários não tiverem feito o gesto especificado por um período, as mãos entrarão em loop com um atraso. A mão da direita poderia ser usada para representar o pressionamento de um botão ou a seleção de um holograma.  
 
