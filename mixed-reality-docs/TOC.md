@@ -86,6 +86,7 @@
 #### [Slate](slate.md)
 #### [Controle deslizante](slider.md)
 #### [Sombreador](shader.md)
+#### [Orientador de mão](hand-coach.md)
 #### [Mural e tag-along](billboarding-and-tag-along.md)
 #### [Exibindo o progresso](progress.md)
 #### [Magnetismo de superfície](surface-magnetism.md)
