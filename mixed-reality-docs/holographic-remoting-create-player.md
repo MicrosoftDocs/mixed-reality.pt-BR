@@ -1,28 +1,28 @@
 ---
 title: Escrevendo um player de comunicação remota do Holographic personalizado
 description: Ao criar um aplicativo de player de comunicação remota Holographic personalizado, você pode criar um aplicativo personalizado capaz de exibir o conteúdo renderizado em um computador remoto para o seu HoloLens 2. Este artigo descreve como isso pode ser feito.
-author: NPohl-MSFT
-ms.author: nopohl
-ms.date: 10/21/2019
+author: FlorianBagarMicrosoft
+ms.author: flbagar
+ms.date: 03/11/2020
 ms.topic: article
 keywords: HoloLens, comunicação remota e comunicação remota Holographic
-ms.openlocfilehash: 1f8a0cbe0f6da88c0c5e5a695737d8694020635c
-ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
+ms.openlocfilehash: eaa6549eb34d3a37c21b3decb348bf43594a110f
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926662"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79092419"
 ---
 # <a name="writing-a-custom-holographic-remoting-player-app"></a>Escrevendo um aplicativo de player de comunicação remota do Holographic personalizado
 
 >[!IMPORTANT]
->Este documento descreve a criação de um aplicativo de player personalizado para o HoloLens 2. Os players personalizados escritos para o HoloLens 2 não são compatíveis com os aplicativos host escritos para o HoloLens 1. Isso implica que ambos os aplicativos devem usar o pacote NuGet versão **2. x**. x.
+>Este documento descreve a criação de um aplicativo de player personalizado para o HoloLens 2. Os players personalizados escritos para o HoloLens 2 não são compatíveis com os aplicativos remotos escritos para o HoloLens 1. Isso implica que ambos os aplicativos devem usar o pacote NuGet versão **2. x**. x.
 
 Ao criar um aplicativo de player de comunicação remota do Holographic personalizado, você pode criar um aplicativo personalizado capaz de exibir [exibições de imersão](app-views.md) em um computador remoto no seu HoloLens 2. Este artigo descreve como isso pode ser feito. Todo o código nesta página e projetos de trabalho podem ser encontrados no [repositório GitHub de exemplos de comunicação remota do Holographic](https://github.com/microsoft/MixedReality-HolographicRemoting-Samples).
 
-Um player de comunicação remota do Holographic permite que seu aplicativo exiba o conteúdo do Holographic [processado](rendering.md) em um computador desktop ou em um dispositivo UWP, como o Xbox One, permitindo o acesso a mais recursos do sistema. Um aplicativo de player de comunicação remota Holographic transmite dados de entrada para um aplicativo de host de comunicação remota Holographic e retorna uma exibição de imersão como fluxo de áudio e vídeo. A conexão é feita usando Wi-Fi padrão. Para criar um aplicativo de Player, você usará um pacote NuGet para adicionar a comunicação remota do Holographic ao seu aplicativo UWP e escreverá código para lidar com a conexão e para exibir uma exibição de imersão. 
+Um player de comunicação remota do Holographic permite que seu aplicativo exiba o conteúdo do Holographic [processado](rendering.md) em um computador desktop ou em um dispositivo UWP, como o Xbox One, permitindo o acesso a mais recursos do sistema. Um aplicativo de player de comunicação remota Holographic transmite dados de entrada para um aplicativo remoto de comunicação remota Holographic e recebe um modo de exibição de imersão como fluxo de áudio e vídeo. A conexão é feita usando Wi-Fi padrão. Para criar um aplicativo de Player, você usará um pacote NuGet para adicionar a comunicação remota do Holographic ao seu aplicativo UWP e escreverá código para lidar com a conexão e para exibir uma exibição de imersão. 
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
 
 Um bom ponto de partida é um aplicativo UWP de trabalho baseado em DirectX que já tem como alvo a API de realidade mista do Windows. Para obter detalhes, consulte [visão geral do desenvolvimento do DirectX](directx-development-overview.md). Se você não tiver um aplicativo existente e quiser começar do zero, o [ C++ modelo de projeto Holographic](creating-a-holographic-directx-project.md) será um bom ponto de partida.
 
@@ -32,7 +32,7 @@ Um bom ponto de partida é um aplicativo UWP de trabalho baseado em DirectX que 
 ## <a name="get-the-holographic-remoting-nuget-package"></a>Obter o pacote NuGet de comunicação remota do Holographic
 
 As etapas a seguir são necessárias para adicionar o pacote NuGet a um projeto no Visual Studio.
-1. Abra o projeto no Visual Studio.
+1. {1&gt;Abra o projeto no Visual Studio.&lt;1}
 2. Clique com o botão direito do mouse no nó do projeto e selecione **gerenciar pacotes NuGet...**
 3. No painel que aparece, clique em **procurar** e procure "comunicação remota do Holographic".
 4. Selecione **Microsoft. Holographic. Remoting**, certifique-se de selecionar a versão **2. x. x** mais recente e clique em **instalar**.
@@ -77,7 +77,7 @@ Como primeira etapa, o aplicativo deve criar um contexto de Player.
 ...
 
 private:
-// PlayerContext used to connect with a Holographic Remoting host and display remotely rendered frames
+// PlayerContext used to connect with a Holographic Remoting remote app and display remotely rendered frames
 winrt::Microsoft::Holographic::AppRemoting::PlayerContext m_playerContext = nullptr;
 ```
 
@@ -92,7 +92,7 @@ m_playerContext = winrt::Microsoft::Holographic::AppRemoting::PlayerContext::Cre
 ```
 
 >[!WARNING]
->O Holographic Remoting funciona substituindo o tempo de execução do Windows Mixed Reality que faz parte do Windows com um tempo de execução específico de comunicação remota. Isso é feito durante a criação do contexto do Player. Por esse motivo, qualquer chamada em qualquer API de realidade mista do Windows antes de criar o contexto do player pode resultar em um comportamento inesperado. A abordagem recomendada é criar o contexto do Player o mais cedo possível antes da interação com qualquer API de realidade misturada. Nunca misture objetos criados ou recuperados por meio de qualquer API de realidade mista do Windows antes da chamada para ```PlayerContext::Create()``` com objetos criados ou recuperados posteriormente.
+>O Holographic Remoting funciona substituindo o tempo de execução do Windows Mixed Reality que faz parte do Windows com um tempo de execução específico de comunicação remota. Isso é feito durante a criação do contexto do Player. Por esse motivo, qualquer chamada em qualquer API de realidade mista do Windows antes de criar o contexto do player pode resultar em um comportamento inesperado. A abordagem recomendada é criar o contexto do Player o mais cedo possível antes da interação com qualquer API de realidade misturada. Nunca misture objetos criados ou recuperados por meio de qualquer API de realidade mista do Windows antes da chamada para ```PlayerContext::Create``` com objetos criados ou recuperados posteriormente.
 
 Em seguida, o HolographicSpace pode ser criado chamando [HolographicSpace. CreateForCoreWindow](https://docs.microsoft.com//uwp/api/windows.graphics.holographic.holographicspace.createforcorewindow).
 
@@ -100,15 +100,15 @@ Em seguida, o HolographicSpace pode ser criado chamando [HolographicSpace. Creat
 m_holographicSpace = winrt::Windows::Graphics::Holographic::HolographicSpace::CreateForCoreWindow(window);
 ```
 
-## <a name="connect-to-the-host"></a>Conectar-se ao host
+## <a name="connect-to-the-remote-app"></a>Conectar-se ao aplicativo remoto
 
-Depois que o aplicativo de Player estiver pronto para o processamento de conteúdo, pode ser estabelecida uma conexão com o host.
+Depois que o aplicativo de Player estiver pronto para o processamento de conteúdo, pode ser estabelecida uma conexão com o aplicativo remoto.
 
 A conexão pode ser estabelecida de uma das seguintes maneiras:
-1) O aplicativo de Player em execução no HoloLens 2 se conecta ao aplicativo host.
-2) O aplicativo host se conecta ao aplicativo de Player em execução no HoloLens 2.
+1) O aplicativo de Player em execução no HoloLens 2 se conecta ao aplicativo remoto.
+2) O aplicativo remoto se conecta ao aplicativo de Player em execução no HoloLens 2.
 
-Para se conectar do aplicativo Player ao host, chame o método ```Connect``` no contexto do Player especificando o nome do host e a porta. A porta padrão é **8265**.
+Para se conectar do aplicativo Player ao aplicativo remoto, chame o método ```Connect``` no contexto do Player especificando o nome do host e a porta. A porta padrão é **8265**.
 
 ```cpp
 try
@@ -141,7 +141,7 @@ catch(winrt::hresult_error& e)
 ## <a name="handling-connection-related-events"></a>Manipulando eventos relacionados à conexão
 
 O ```PlayerContext``` expõe três eventos para monitorar o estado da conexão
-1) Onconnected: disparado quando uma conexão com o host tiver sido estabelecida com êxito.
+1) Onconnected: disparado quando uma conexão com o aplicativo remoto foi estabelecida com êxito.
 ```cpp
 m_onConnectedEventToken = m_playerContext.OnConnected([]() 
 {
@@ -177,11 +177,11 @@ winrt::Microsoft::Holographic::AppRemoting::ConnectionState state = m_playerCont
 
 ## <a name="display-the-remotely-rendered-frame"></a>Exibir o quadro processado remotamente
 
-Para exibir o conteúdo processado remotamente, chame ```PlayerContext::BlitRemoteFrame()``` ao renderizar um [HolographicFrame](https://docs.microsoft.com//uwp/api/windows.graphics.holographic.holographicframe). 
+Para exibir o conteúdo processado remotamente, chame ```PlayerContext::BlitRemoteFrame``` ao renderizar um [HolographicFrame](https://docs.microsoft.com//uwp/api/windows.graphics.holographic.holographicframe). 
 
-```BlitRemoteFrame()``` requer que o buffer de fundo para o HolographicFrame atual seja associado como destino de renderização. O buffer de fundo pode ser recebido do [HolographicCameraRenderingParameters](https://docs.microsoft.com//uwp/api/windows.graphics.holographic.holographicframe.getrenderingparameters) por meio da propriedade [Direct3D11BackBuffer](https://docs.microsoft.com//uwp/api/windows.graphics.holographic.holographiccamerarenderingparameters.direct3d11backbuffer) .
+```BlitRemoteFrame``` requer que o buffer de fundo para o HolographicFrame atual seja associado como destino de renderização. O buffer de fundo pode ser recebido do [HolographicCameraRenderingParameters](https://docs.microsoft.com//uwp/api/windows.graphics.holographic.holographicframe.getrenderingparameters) por meio da propriedade [Direct3D11BackBuffer](https://docs.microsoft.com//uwp/api/windows.graphics.holographic.holographiccamerarenderingparameters.direct3d11backbuffer) .
 
-Quando chamado, ```BlitRemoteFrame()``` copia o último quadro recebido do aplicativo host para o BackBuffer do HolographicFrame. Além disso, o conjunto de pontos de foco é definido, se o aplicativo remoto tiver especificado um ponto de foco durante a renderização do quadro remoto.
+Quando chamado, ```BlitRemoteFrame``` copia o último quadro recebido do aplicativo remoto para o BackBuffer do HolographicFrame. Além disso, o conjunto de pontos de foco é definido, se o aplicativo remoto tiver especificado um ponto de foco durante a renderização do quadro remoto.
 
 ```cpp
 // Blit the remote frame into the backbuffer for the HolographicFrame.
@@ -189,14 +189,34 @@ winrt::Microsoft::Holographic::AppRemoting::BlitResult result = m_playerContext.
 ```
 
 >[!NOTE]
->```PlayerContext::BlitRemoteFrame()``` potencialmente substitui o ponto de foco do quadro atual. 
->- Para especificar um ponto de foco de fallback, chame [HolographicCameraRenderingParameters:: SetFocusPoint](https://docs.microsoft.com//uwp/api/windows.graphics.holographic.holographiccamerarenderingparameters.setfocuspoint) antes de ```PlayerContext::BlitRemoteFrame()```. 
->- Para substituir o ponto de foco remoto, chame [HolographicCameraRenderingParameters:: SetFocusPoint](https://docs.microsoft.com//uwp/api/windows.graphics.holographic.holographiccamerarenderingparameters.setfocuspoint) após ```PlayerContext::BlitRemoteFrame()```.
+>```PlayerContext::BlitRemoteFrame``` potencialmente substitui o ponto de foco do quadro atual. 
+>- Para especificar um ponto de foco de fallback, chame [HolographicCameraRenderingParameters:: SetFocusPoint](https://docs.microsoft.com//uwp/api/windows.graphics.holographic.holographiccamerarenderingparameters.setfocuspoint) antes de ```PlayerContext::BlitRemoteFrame```. 
+>- Para substituir o ponto de foco remoto, chame [HolographicCameraRenderingParameters:: SetFocusPoint](https://docs.microsoft.com//uwp/api/windows.graphics.holographic.holographiccamerarenderingparameters.setfocuspoint) após ```PlayerContext::BlitRemoteFrame```.
 
-Em caso de sucesso, ```BlitRemoteFrame()``` retorna ```BlitResult::Success_Color```. Caso contrário, ele retornará o motivo da falha:
+Em caso de sucesso, ```BlitRemoteFrame``` retorna ```BlitResult::Success_Color```. Caso contrário, ele retornará o motivo da falha:
 - ```BlitResult::Failed_NoRemoteFrameAvailable```: falhou porque nenhum quadro remoto está disponível.
 - ```BlitResult::Failed_NoCamera```: falhou porque nenhuma câmera presente.
 - ```BlitResult::Failed_RemoteFrameTooOld```: falhou porque o quadro remoto é muito antigo (consulte a propriedade PlayerContext:: BlitRemoteFrameTimeout).
+
+>[!IMPORTANT]
+> A partir da versão [2.1.0](holographic-remoting-version-history.md#v2.1.0) , é possível que um jogador personalizado use a Reprojeção de profundidade por meio da comunicação remota do Holographic.
+
+```BlitResult``` também pode retornar ```BlitResult::Success_Color_Depth``` sob as seguintes condições:
+
+- O aplicativo remoto confirmou um buffer de profundidade por meio de [HolographicCameraRenderingParameters. CommitDirect3D11DepthBuffer](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamerarenderingparameters.commitdirect3d11depthbuffer#Windows_Graphics_Holographic_HolographicCameraRenderingParameters_CommitDirect3D11DepthBuffer_Windows_Graphics_DirectX_Direct3D11_IDirect3DSurface_).
+- O aplicativo de player personalizado um buffer de profundidade válido antes de chamar ```BlitRemoteFrame```.
+
+Se essas condições forem atendidas ```BlitRemoteFrame``` irá blit a profundidade remota no buffer de profundidade local atualmente associado. Em seguida, você pode renderizar conteúdo local adicional que terá a interseção de profundidade com o conteúdo renderizado remotamente. Além disso, você pode confirmar o buffer de profundidade local por meio de [HolographicCameraRenderingParameters. CommitDirect3D11DepthBuffer](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamerarenderingparameters.commitdirect3d11depthbuffer#Windows_Graphics_Holographic_HolographicCameraRenderingParameters_CommitDirect3D11DepthBuffer_Windows_Graphics_DirectX_Direct3D11_IDirect3DSurface_) em seu player personalizado para ter uma Reprojeção de profundidade para conteúdo renderizado remoto e local. Consulte [Reprojeção de profundidade](hologram-stability.md#reprojection) para obter detalhes.
+
+### <a name="projection-transform-mode"></a>Modo de transformação de projeção
+
+Um problema que se superfícies ao usar a Reprojeção de profundidade por meio da comunicação remota do Holographic é que o conteúdo remoto pode ser renderizado com uma transformação de projeção diferente do conteúdo local processado diretamente pelo seu aplicativo de player personalizado. Um caso de uso comum é especificar valores diferentes para o plano próximo e longe (via [HolographicCamera:: SetNearPlaneDistance](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamera.setnearplanedistance) e [HolographicCamera:: SetFarPlaneDistance](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamera.setfarplanedistance)) no lado do Player e no lado remoto. Nesse caso, não fica claro se a transformação de projeção no lado do jogador deve refletir as distâncias do plano Near/distante remotas ou os locais.
+
+A partir da versão [2.1.0](holographic-remoting-version-history.md#v2.1.0) , você pode controlar o modo de transformação de projeção via ```PlayerContext::ProjectionTransformConfig```. Os valores com suporte são:
+
+- ```Local``` - [HolographicCameraPose::P rojectiontransform](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamerapose.projectiontransform) retorna uma transformação de projeção que reflete as distâncias do plano próximo/longe definidas pelo seu aplicativo de player personalizado no HolographicCamera.
+- ```Remote```-a transformação de projeção reflete as distâncias do plano próximo/longe especificadas pelo aplicativo remoto.
+- ```Merged```-distâncias do plano próximo/longe do seu aplicativo remoto e seu aplicativo de player personalizado são mesclados. Por padrão, isso é feito por meio do mínimo de distâncias do plano próximo e do máximo de distâncias do plano distante. Caso o lado remoto ou local sejam invertidos, digamos que < perto, as distâncias remotas do plano próximo/longe são invertidas.
 
 ## Opcional: definir BlitRemoteFrameTimeout<a name="BlitRemoteFrameTimeout"></a>
 >[!IMPORTANT]
@@ -231,7 +251,7 @@ Para obter mais detalhes, consulte a documentação ```PlayerFrameStatistics``` 
 Os canais de dados personalizados podem ser usados para enviar dados do usuário pela conexão remota já estabelecida. Consulte [canais de dados personalizados](holographic-remoting-custom-data-channels.md) para obter mais informações.
 
 ## <a name="see-also"></a>Consulte também
-* [Escrevendo um aplicativo de host de comunicação remota do Holographic](holographic-remoting-create-host.md)
+* [Escrevendo um aplicativo remoto de comunicação remota do Holographic](holographic-remoting-create-host.md)
 * [Canais de dados personalizados de comunicação remota holográfica](holographic-remoting-custom-data-channels.md)
 * [Estabelecendo uma conexão segura com o Holographic Remoting](holographic-remoting-secure-connection.md)
 * [Solução de problemas e limitações de comunicação remota do Holographic](holographic-remoting-troubleshooting.md)

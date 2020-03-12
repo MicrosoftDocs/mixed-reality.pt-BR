@@ -1,17 +1,17 @@
 ---
 title: Estabelecendo uma conexão segura com o Holographic Remoting
 description: Esta página explica como estabelecer uma conexão segura criptografada ao usar a comunicação remota do Holographic.
-author: bethau
-ms.author: bethau
-ms.date: 10/21/2019
+author: FlorianBagarMicrosoft
+ms.author: flbagar
+ms.date: 03/11/2020
 ms.topic: article
 keywords: HoloLens, comunicação remota e comunicação remota Holographic
-ms.openlocfilehash: 1142ba3bd8b0d05202ccd04885de5d70165872d1
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: ac1170cb3e6d681fc164c3f4cee14da6ab6eb90b
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73434199"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79092480"
 ---
 # <a name="establishing-a-secure-connection-with-holographic-remoting"></a>Estabelecendo uma conexão segura com o Holographic Remoting
 
@@ -25,7 +25,7 @@ Ao transmitir conteúdo para o HoloLens 2 em uma rede insegura, como uma Wi-Fi a
 >[!IMPORTANT]
 >Mesmo ao usar um WiFi local confiável usando uma conexão criptografada deve ser considerado.
 
-Para poder usar uma conexão criptografada, você precisará implementar um [player personalizado](holographic-remoting-create-player.md) e um [aplicativo host personalizado](holographic-remoting-create-host.md).
+Para poder usar uma conexão criptografada, você precisará implementar um [player personalizado](holographic-remoting-create-player.md) e um [aplicativo remoto personalizado](holographic-remoting-create-host.md).
 
 A criptografia é obtida usando a implementação de TLS de plataformas subjacentes.
 
@@ -61,7 +61,7 @@ Além disso, para permitir a troca de um token seguro, os objetos a seguir preci
 Depois que esses objetos são implementados ```ListenSecure``` precisa ser chamado em vez de ```Listen``` e ```ConnectSecure``` em vez de ```Connect``` no contexto remoto e no contexto do Player, respectivamente. ```ListenSecure``` requer um provedor de certificado adicional e receptor de autenticação sobre ```Listen```. ```ConnectSecure``` requer um provedor de autenticação adicional e um validador de certificado sobre ```Connect```.
 
 ## <a name="see-also"></a>Consulte também
-* [Escrevendo um aplicativo de host de comunicação remota do Holographic](holographic-remoting-create-host.md)
+* [Escrevendo um aplicativo remoto de comunicação remota do Holographic](holographic-remoting-create-host.md)
 * [Escrevendo um aplicativo de player de comunicação remota do Holographic personalizado](holographic-remoting-create-player.md)
 * [Solução de problemas e limitações de comunicação remota do Holographic](holographic-remoting-troubleshooting.md)
 * [Termos de licença de software de comunicação remota holográfica](https://docs.microsoft.com//legal/mixed-reality/microsoft-holographic-remoting-software-license-terms)

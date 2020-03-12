@@ -1,17 +1,17 @@
 ---
 title: Canais de dados de comunicação remota Holographic personalizados
 description: Os canais de dados personalizados podem ser usados para enviar dados do usuário pela conexão remota Holographic já estabelecida.
-author: NPohl-MSFT
-ms.author: nopohl
-ms.date: 10/21/2019
+author: FlorianBagarMicrosoft
+ms.author: flbagar
+ms.date: 03/11/2020
 ms.topic: article
 keywords: HoloLens, comunicação remota e comunicação remota Holographic
-ms.openlocfilehash: 2861c780c5d7e516d5b7ddc757bbcba6da7e6559
-ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
+ms.openlocfilehash: 8bfa19b7af0f3429130aabf70d9d11083bc56a52
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926665"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79092299"
 ---
 # <a name="custom-holographic-remoting-data-channels"></a>Canais de dados de comunicação remota Holographic personalizados
 
@@ -21,10 +21,10 @@ ms.locfileid: "73926665"
 Use canais de dados personalizados para enviar dados personalizados por meio de uma conexão remota estabelecida.
 
 >[!IMPORTANT]
->Os canais de dados personalizados exigem um aplicativo host personalizado e um aplicativo de player personalizado, pois ele permite a comunicação entre os dois aplicativos personalizados.
+>Os canais de dados personalizados exigem um aplicativo remoto personalizado e um aplicativo de player personalizado, pois ele permite a comunicação entre os dois aplicativos personalizados.
 
 >[!TIP]
->Um exemplo simples de pingue-pongue pode ser encontrado nos exemplos de host e de Player dentro do [repositório GitHub de exemplos de comunicação remota do Holographic](https://github.com/microsoft/MixedReality-HolographicRemoting-Samples). Remova os comentários ```#define ENABLE_CUSTOM_DATA_CHANNEL_SAMPLE``` nos arquivos SampleHostMain. h/SamplePlayerMain. h para habilitar o código de exemplo.
+>Um exemplo simples de pingue-pongue pode ser encontrado nos exemplos remoto e de Player dentro do [repositório GitHub de exemplos de comunicação remota do Holographic](https://github.com/microsoft/MixedReality-HolographicRemoting-Samples). Remova os comentários ```#define ENABLE_CUSTOM_DATA_CHANNEL_SAMPLE``` nos arquivos SampleRemoteMain. h/SamplePlayerMain. h para habilitar o código de exemplo.
 
 
 ## <a name="create-a-custom-data-channel"></a>Criar um canal de dados personalizado
@@ -38,11 +38,11 @@ winrt::Microsoft::Holographic::AppRemoting::IDataChannel::OnDataReceived_revoker
 winrt::Microsoft::Holographic::AppRemoting::IDataChannel::OnClosed_revoker m_customChannelClosedEventRevoker;
 ```
 
-Depois que uma conexão foi estabelecida com êxito, a criação de novos canais de dados pode ser iniciada por meio do lado do host e/ou do lado do jogador. O RemoteContext e o PlayerContext fornecem um método ```CreateDataChannel()``` para fazer isso. O primeiro parâmetro é a ID do canal que é usada para identificar o canal de dados em operações subsequentes. O segundo parâmetro é a prioridade que especifica a prioridade com a qual os dados desse canal são transferidos para o outro lado. O intervalo válido para as IDs de canal é de 0 até e incluindo 63 para o lado do host e 64 até e incluindo 127 para o lado do jogador. As prioridades válidas são ```Low```, ```Medium``` ou ```High``` (em ambos os lados).
+Depois que uma conexão foi estabelecida com êxito, a criação de novos canais de dados pode ser iniciada tanto do lado remoto quanto do lado do jogador. O RemoteContext e o PlayerContext fornecem um método ```CreateDataChannel()``` para fazer isso. O primeiro parâmetro é a ID do canal que é usada para identificar o canal de dados em operações subsequentes. O segundo parâmetro é a prioridade que especifica a prioridade com a qual os dados desse canal são transferidos para o outro lado. O intervalo válido para as IDs de canal é de 0 até e incluindo 63 para o lado remoto e 64 até e incluindo 127 para o lado do jogador. As prioridades válidas são ```Low```, ```Medium``` ou ```High``` (em ambos os lados).
 
-Para iniciar a criação de um canal de dados no lado do **host** :
+Para iniciar a criação de um canal de dados no lado **remoto** :
 ```cpp
-// Valid channel ids for channels created on the host side are 0 up to and including 63
+// Valid channel ids for channels created on the remote side are 0 up to and including 63
 m_remoteContext.CreateDataChannel(0, DataChannelPriority::Low);
 ```
 
@@ -53,11 +53,11 @@ m_playerContext.CreateDataChannel(64, DataChannelPriority::Low);
 ```
 
 >[!NOTE]
->Para criar um novo canal de dados personalizado, apenas um lado (host ou Player) precisa chamar o método ```CreateDataChannel```.
+>Para criar um novo canal de dados personalizado, apenas um lado (remoto ou Player) precisa chamar o método ```CreateDataChannel```.
 
 ## <a name="handling-custom-data-channel-events"></a>Manipulando eventos de canal de dados personalizados
 
-Para estabelecer um canal de dados personalizado, o evento ```OnDataChannelCreated``` precisa ser tratado (tanto no Player quanto no lado do host). Ele é disparado quando um canal de dados do usuário é criado por um dos lados e fornece um objeto ```IDataChannel```, que pode ser usado para enviar e receber dados por esse canal.
+Para estabelecer um canal de dados personalizado, o evento ```OnDataChannelCreated``` precisa ser tratado (tanto no Player quanto no lado remoto). Ele é disparado quando um canal de dados do usuário é criado por um dos lados e fornece um objeto ```IDataChannel```, que pode ser usado para enviar e receber dados por esse canal.
 
 Para registrar um ouvinte no evento ```OnDataChannelCreated```:
 ```cpp
@@ -114,7 +114,7 @@ m_customDataChannel.Close();
 ```
 
 ## <a name="see-also"></a>Consulte também
-* [Escrevendo um aplicativo de host de comunicação remota do Holographic](holographic-remoting-create-host.md)
+* [Escrevendo um aplicativo remoto de comunicação remota do Holographic](holographic-remoting-create-host.md)
 * [Escrevendo um aplicativo de player de comunicação remota do Holographic personalizado](holographic-remoting-create-player.md)
 * [Solução de problemas e limitações de comunicação remota do Holographic](holographic-remoting-troubleshooting.md)
 * [Termos de licença de software de comunicação remota holográfica](https://docs.microsoft.com//legal/mixed-reality/microsoft-holographic-remoting-software-license-terms)
