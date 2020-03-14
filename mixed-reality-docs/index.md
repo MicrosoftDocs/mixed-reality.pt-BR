@@ -9,11 +9,11 @@ ms.topic: overview
 ms.localizationpriority: high
 keywords: Mixed Reality, discover, distribute, index, landing page, design, development, tutorials, sample apps, fundamentals, case studies, resources, HoloLens how-to, Open source projects
 ms.openlocfilehash: f6f72df63628bba590ac7af098d0b405e6721cc2
-ms.sourcegitcommit: 83698638b93c5ba77b3ffc399f1706482539f27b
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74539627"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375563"
 ---
 # <a name="get-started-with-mixed-reality"></a>Introdução à Realidade Misturada
 
@@ -60,13 +60,13 @@ Se não estiver familiarizado com a realidade misturada, você aprenderá o que 
 ## <a name="what-is-mixed-reality"></a>O que é realidade misturada?
 
 
-### <a name="mixed-reality-is-a-spectrummixed-realitymd"></a>[A realidade misturada é um espectro](mixed-reality.md)
+### <a name="mixed-reality-is-a-spectrum"></a>[A realidade misturada é um espectro](mixed-reality.md)
 A realidade misturada é o resultado da mistura do mundo físico com o mundo digital. É a próxima evolução em interação humana, computacional e de ambiente e libera possibilidades que até agora estavam restritas apenas às nossas imaginações.
 
 <br>
 
 
-### <a name="what-is-a-hologramhologrammd"></a>[O que é um holograma?](hologram.md)
+### <a name="what-is-a-hologram"></a>[O que é um holograma?](hologram.md)
 O HoloLens permite criar hologramas, que são objetos compostos de luz e som que aparecem no mundo ao seu redor, como se fossem objetos reais. Os hologramas respondem ao seu olhar, gestos e comandos de voz e podem interagir com superfícies do mundo real ao seu redor. Com os hologramas, você pode criar objetos digitais que fazem parte do seu mundo.
 
 <br>
@@ -80,12 +80,12 @@ O HoloLens permite criar hologramas, que são objetos compostos de luz e som que
 
 ## <a name="what-can-you-do-with-mixed-reality"></a>O que você pode fazer com a realidade misturada?
 
-### <a name="a-new-vision-for-workhttpsdynamicsmicrosoftcommixed-realityoverview"></a>[Uma nova visão para o trabalho](https://dynamics.microsoft.com//mixed-reality/overview/)
+### <a name="a-new-vision-for-work"></a>[Uma nova visão para o trabalho](https://dynamics.microsoft.com//mixed-reality/overview/)
 Internamente na Microsoft, estamos criando aplicativos de realidade misturada para capacitar os funcionários e otimizar as operações. A equipe do Dynamics 365 trabalhou em uma variedade de projetos que demonstram as possibilidades: Assistência remota, layout e guias.
 
 <br>
 
-### <a name="the-pursuit-of-more-personal-computingcase-study-the-pursuit-of-more-personal-computingmd"></a>[A busca de uma computação mais pessoal](case-study-the-pursuit-of-more-personal-computing.md)
+### <a name="the-pursuit-of-more-personal-computing"></a>[A busca de uma computação mais pessoal](case-study-the-pursuit-of-more-personal-computing.md)
 As oportunidades de amanhã são descobertas ao criar produtos hoje. As soluções que esses produtos fornecem revelam o que é necessário para avançar no futuro. Com a realidade misturada, isso é especialmente verdadeiro: Uma percepção significativa vem da prática com o trabalho real – dispositivos reais, clientes reais, problemas reais.
 
 
@@ -101,7 +101,7 @@ As oportunidades de amanhã são descobertas ao criar produtos hoje. As soluçõ
        [![Bentley](images/Bentley-Synchro1.jpg)](https://binged.it/31AR3kP)
     :::column-end:::
     :::column span="2":::
-        ### <a name="view-complex-construction-projects-with-bentleys-digital-construction-softwarehttpsbingedit31ar3kp"></a>[Exibir projetos de construção complexa com o software de construção digital da Bentley](https://binged.it/31AR3kP)
+        ### <a name="view-complex-construction-projects-with-bentleys-digital-construction-software"></a>[Exibir projetos de construção complexa com o software de construção digital da Bentley](https://binged.it/31AR3kP)
         O Synchro é um software de construção digital que permite a exibição de projetos de construção complexos na realidade misturada. Sua plataforma de construção digital 4D combina o agendamento CPM do gráfico de Gantt tradicional com funcionalidades de visualização 4D integradas em tempo real.
     :::column-end:::
 :::row-end:::
@@ -113,7 +113,7 @@ As oportunidades de amanhã são descobertas ao criar produtos hoje. As soluçõ
        [![Vuforia Studio da PTC](images/PTC-Vuforia-Studio1.jpg)](https://binged.it/31ARrjh)
     :::column-end:::
     :::column span="2":::
-        ### <a name="ptcs-vuforia-studio-authoring-solution-promotes-workforce-productivity-and-safetyhttpsbingedit31arrjh"></a>[A solução de criação Vuforia Studio da PTC promove a produtividade e a segurança da força de trabalho](https://binged.it/31ARrjh)
+        ### <a name="ptcs-vuforia-studio-authoring-solution-promotes-workforce-productivity-and-safety"></a>[A solução de criação Vuforia Studio da PTC promove a produtividade e a segurança da força de trabalho](https://binged.it/31ARrjh)
         A solução de criação eficiente de realidade misturada do Vuforia Studio promove a produtividade e a segurança da força de trabalho, fornecendo informações quando e onde os trabalhadores precisam mais delas: no contexto real de seu ambiente de trabalho diário.
     :::column-end:::
 :::row-end:::
@@ -125,7 +125,7 @@ As oportunidades de amanhã são descobertas ao criar produtos hoje. As soluçõ
        [![Philips-Azurion](images/Philips-Azurion1.jpg)](https://binged.it/31B1RiR)
     :::column-end:::
     :::column span="2":::
-        ### <a name="philips-is-piloting-hololens-in-the-domain-of-image-guided-minimally-invasive-procedureshttpsbingedit31b1rir"></a>[A Philips está usando o HoloLens na área de procedimentos minimamente invasivos orientados por imagens](https://binged.it/31B1RiR)
+        ### <a name="philips-is-piloting-hololens-in-the-domain-of-image-guided-minimally-invasive-procedures"></a>[A Philips está usando o HoloLens na área de procedimentos minimamente invasivos orientados por imagens](https://binged.it/31B1RiR)
         A Philips está usando o HoloLens na área de procedimentos minimamente invasivos orientados por imagens, durante os quais os médicos dependem de radiografia, ultrassom e de outras fontes de informações ao vivo para "ver" dentro do paciente e orientar suas ações.
     :::column-end:::
 :::row-end:::
@@ -142,7 +142,7 @@ As oportunidades de amanhã são descobertas ao criar produtos hoje. As soluçõ
 
 ## <a name="what-are-the-capabilities-of-hololens"></a>Quais são as funcionalidades do HoloLens?
 
-### <a name="immersive-ergonomic-instinctual-and-untetheredhttpswwwmicrosoftcomhololenshardware"></a>[Imersivo, ergonômico, instintivo e livre](https://www.microsoft.com//hololens/hardware)
+### <a name="immersive-ergonomic-instinctual-and-untethered"></a>[Imersivo, ergonômico, instintivo e livre](https://www.microsoft.com//hololens/hardware)
 
 O HoloLens 2 oferece a experiência mais confortável e imersiva de realidade misturada disponível, com soluções líderes no setor que entregam valor em minutos, tudo isso aprimorado com a confiabilidade, a segurança e a escalabilidade de serviços de nuvem e de IA da Microsoft.
 
@@ -156,22 +156,22 @@ O HoloLens 2 oferece a experiência mais confortável e imersiva de realidade mi
 
 ## <a name="what-are-the-core-concepts-of-an-experience"></a>Quais são os principais conceitos de uma experiência?
 
-### <a name="keep-the-user-comfortable---comfortcomfortmd"></a>[Manter o usuário confortável – (conforto)](comfort.md)
+### <a name="keep-the-user-comfortable---comfort"></a>[Manter o usuário confortável – (conforto)](comfort.md)
 Para garantir o máximo de conforto em capacetes de realidade virtual, é importante que os designers e os desenvolvedores criem e apresentem conteúdo de forma a imitar como essas indicações funcionam no mundo natural.
 
 <br>
 
-### <a name="how-the-user-sees-the-world---holographic-frameholographic-framemd"></a>[Como o usuário vê o mundo – (quadro holográfico)](holographic-frame.md)
+### <a name="how-the-user-sees-the-world---holographic-frame"></a>[Como o usuário vê o mundo – (quadro holográfico)](holographic-frame.md)
 Os usuários veem o mundo da realidade misturada por meio de um visor retangular equipado com o headset. No HoloLens, essa área retangular é chamada de quadro holográfico e permite que os usuários vejam o conteúdo digital sobreposto ao mundo real em relação a eles.
 
 <br>
 
-### <a name="making-holographic-objects-feel-real---spatial-mappingspatial-mappingmd"></a>[Fazer com que os objetos holográficos pareçam reais – (mapeamento espacial)](spatial-mapping.md)
+### <a name="making-holographic-objects-feel-real---spatial-mapping"></a>[Fazer com que os objetos holográficos pareçam reais – (mapeamento espacial)](spatial-mapping.md)
 O mapeamento espacial torna possível posicionar objetos em superfícies reais. Isso ajuda a ancorar objetos no mundo do usuário e aproveita as indicações de profundidade do mundo real.
 
 <br>
 
-### <a name="suggesting-the-scale-of-an-object---scalescalemd"></a>[Sugerir a escala de um objeto – (escala)](scale.md)
+### <a name="suggesting-the-scale-of-an-object---scale"></a>[Sugerir a escala de um objeto – (escala)](scale.md)
 Para exibir conteúdo com aparência realista no formulário holográfico é fundamental imitar, do modo mais próximo possível, as estatísticas visuais do mundo real. Isso significa incorporar o máximo de dicas visuais que podem nos ajudar (no mundo real) a entender onde estão os objetos, quão grandes são e do que eles são feitos.
 
 
