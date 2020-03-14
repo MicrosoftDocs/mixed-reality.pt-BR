@@ -7,15 +7,15 @@ ms.date: 02/24/2019
 ms.topic: article
 keywords: sistema de coordenadas, sistema de coordenadas espaciais, somente orientação, escala em posição, escala de posto, escala de sala, escala mundial, 360 graus, encaixado, posicionado, sala, mundo, escala, posição, orientação, fixo, anexado, estágio, âncora, âncora espacial, World-Locked, bloqueio mundial, corpo-bloqueado, bloqueio de corpo, limites, persistência, compartilhamento, perda de rastreamento, âncora espacial da nuvem
 ms.openlocfilehash: 228f46f1962c39012571234da47ccec07aa67118
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73436147"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375633"
 ---
 # <a name="coordinate-systems"></a>Sistemas de coordenadas
 
-Em seu núcleo, os aplicativos de realidade misturada colocam os [hologramas](hologram.md) em seu mundo que parecem e são semelhantes a objetos reais. Isso envolve o posicionamento preciso e a orientação desses hologramas em lugares do mundo que são significativos para o usuário, seja o mundo de sua sala física ou um realm que você criou. Ao se deparar com a posição e a orientação de seus hologramas, ou qualquer outra geometria como as posições [olhar](gaze-and-commit.md) Ray ou [Hand](hands-and-tools.md), o Windows fornece vários sistemas de coordenadas do mundo real em que a geometria pode ser expressa, conhecida como  **sistemas de coordenadas espaciais**.
+Em seu núcleo, os aplicativos de realidade misturada colocam os [hologramas](hologram.md) em seu mundo que parecem e são semelhantes a objetos reais. Isso envolve o posicionamento preciso e a orientação desses hologramas em lugares do mundo que são significativos para o usuário, seja o mundo de sua sala física ou um realm que você criou. Ao se deparar com a posição e a orientação de seus hologramas, ou qualquer outra geometria como as [posições](hands-and-tools.md) [olhar](gaze-and-commit.md) Ray ou Hand, o Windows fornece vários sistemas de coordenadas do mundo real em que a geometria pode ser expressa, conhecida como **sistemas de coordenadas espaciais**.
 
 <br>
 
@@ -79,7 +79,7 @@ Em seu núcleo, os aplicativos de realidade misturada colocam os [hologramas](ho
 Os aplicativos de realidade misturada podem projetar para uma ampla gama de experiências de usuário, desde visualizadores de vídeo de 360 graus que precisam apenas da orientação do headset, até aplicativos e jogos completos de escala mundial, que precisam de mapeamento espacial e âncoras espaciais:
 <br>
 
-| Escala de experiência | Requisitos | Experiência de exemplo | 
+| Escala de experiência | {1&gt;{2&gt;Requisitos&lt;2}&lt;1} | Experiência de exemplo | 
 |----------|----------|----------|
 |  **Somente orientação** |  **Orientação do headset** (alinhada a gravidade) |  Visualizador de vídeo 360 ° | 
 |  **Escala colocada** |  Acima, além da **posição do headset** em relação à posição zero |  Jogo de corrida ou simulador de espaço | 

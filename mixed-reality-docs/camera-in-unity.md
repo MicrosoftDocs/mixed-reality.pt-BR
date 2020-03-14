@@ -7,15 +7,15 @@ ms.date: 10/22/2019
 ms.topic: article
 keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit-Unity, Holographic renderização, Holographic, imersão, ponto de foco, buffer de profundidade, somente orientação, posicional, opaco, transparente, clipe
 ms.openlocfilehash: 1a2e66d5c028109a58ea8682668521f50158add9
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73436954"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375583"
 ---
 # <a name="camera-in-unity"></a>Câmera no Unity
 
-Quando você gasta um headset de realidade misturada, ele se torna o centro do seu Holographic World. O componente da [câmera](https://docs.unity3d.com/Manual/class-Camera.html) do Unity manipulará automaticamente a renderização de estereoscópico e seguirá o movimento e a rotação da cabeça quando o seu projeto tiver "realidade virtual com suporte" selecionada com "realidade mista do Windows" como o dispositivo (em outras configurações da seção Configurações do Windows Store Player). Isso pode estar listado como "Windows Holographic" em versões mais antigas do Unity.
+Quando você gasta um headset de realidade misturada, ele se torna o centro do seu Holographic World. O componente da [câmera](https://docs.unity3d.com/Manual/class-Camera.html) do Unity manipulará automaticamente a renderização de estereoscópico e seguirá o movimento e a rotação da cabeça quando o seu projeto tiver "realidade virtual com suporte" selecionada com "realidade mista do Windows" como o dispositivo (na seção outras configurações das configurações do Windows Store Player). Isso pode estar listado como "Windows Holographic" em versões mais antigas do Unity.
 
 No entanto, para otimizar totalmente a qualidade visual e a [estabilidade do holograma](hologram-stability.md), você deve definir as configurações de câmera descritas abaixo.
 
@@ -76,7 +76,7 @@ Por padrão:
 * Os **headsets de imersão** executarão a Reprojeção posicional, ajustando os hologramas para uma previsão incorreta na posição e na orientação, se o aplicativo fornecer um buffer de profundidade para um determinado quadro.  Se um buffer de profundidade não for fornecido, o sistema só corrigirá as informações incorretas na orientação.
 * **Holographic headsets** como HoloLens executarão a Reprojeção posicional se o aplicativo fornece seu buffer de profundidade ou não.  A Reprojeção posicional é possível sem buffers de profundidade no HoloLens, pois a renderização costuma ser esparsa com um plano de fundo estável fornecido pelo mundo real.
 
-Se você souber que está criando uma [experiência somente de orientação](coordinate-systems-in-unity.md#building-an-orientation-only-or-seated-scale-experience) com conteúdo com bloqueio de corpo rígido (por exemplo, conteúdo de vídeo de 360 graus), você pode definir explicitamente o modo de Reprojeção para ser somente orientação por meio da configuração [ HolographicSettings. reprojemode](https://docs.unity3d.com/ScriptReference/XR.WSA.HolographicSettings.ReprojectionMode.html) para [HolographicReprojectionMode. OrientationOnly](https://docs.unity3d.com/ScriptReference/XR.WSA.HolographicSettings.HolographicReprojectionMode.html).
+Se você souber que está criando uma [experiência somente de orientação](coordinate-systems-in-unity.md#building-an-orientation-only-or-seated-scale-experience) com conteúdo com bloqueio de corpo rígido (por exemplo, conteúdo de vídeo de 360 graus), poderá definir explicitamente o modo de Reprojeção como somente orientação definindo [HolographicSettings. reprojemode](https://docs.unity3d.com/ScriptReference/XR.WSA.HolographicSettings.ReprojectionMode.html) como [HolographicReprojectionMode. OrientationOnly](https://docs.unity3d.com/ScriptReference/XR.WSA.HolographicSettings.HolographicReprojectionMode.html).
 
 ## <a name="sharing-your-depth-buffers-with-windows"></a>Compartilhando buffers de profundidade com o Windows
 

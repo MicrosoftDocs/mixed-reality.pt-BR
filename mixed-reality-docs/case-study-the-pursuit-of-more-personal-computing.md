@@ -1,25 +1,25 @@
 ---
 title: Estudo de caso – a busca de mais computação pessoal
-description: As oportunidades do amanhã são descobertas pela criação de produtos hoje. As soluções que esses produtos fornecem revelam o que é necessário para avançar no futuro.
+description: As oportunidades de amanhã são descobertas ao criar produtos hoje. As soluções que esses produtos fornecem revelam o que é necessário para avançar no futuro.
 author: danielescudero
 ms.author: daescu
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Realidade mista do Windows, HoloLens, estudo de caso, visão, cenários
 ms.openlocfilehash: 9e142d72866079e34e6f4a8df78b79d6f846275e
-ms.sourcegitcommit: c4d0132ea755c861c504dad46957e791b9c705d5
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69896520"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375603"
 ---
 # <a name="case-study---the-pursuit-of-more-personal-computing"></a>Estudo de caso – a busca de mais computação pessoal
 
-As oportunidades do amanhã são descobertas pela criação de produtos hoje. As soluções que esses produtos fornecem revelam o que é necessário para avançar no futuro. Com a realidade misturada, isso é especialmente verdadeiro: Uma percepção significativa vem da introdução ao trabalho real — dispositivos reais, clientes reais, problemas reais.
+As oportunidades de amanhã são descobertas ao criar produtos hoje. As soluções que esses produtos fornecem revelam o que é necessário para avançar no futuro. Com a realidade misturada, isso é especialmente verdadeiro: o insight significativo vem da introdução ao trabalho real — dispositivos reais, clientes reais, problemas reais.
 
 Na Microsoft, eu sou parte da equipe de design que ajuda os parceiros empresariais a criarem experiências para seus negócios usando a realidade mista do Windows. No ano passado, nossa equipe se concentrou no HoloLens e na compreensão de como o principal dispositivo Holographic da Microsoft pode fornecer valor aos clientes hoje. Trabalhando em conjunto com designers e desenvolvedores dessas empresas, nossa equipe se concentra em descobrir soluções que seriam tecnicamente inviáveis, financeiramente impraticável ou impossíveis sem o HoloLens.
 
-![Universidade de reserva oeste do caso](images/case-western-reserve-university.jpg)<br>
+![](images/case-western-reserve-university.jpg) da Universidade de reservas ocidental<br>
 *HoloAnatomy da Universidade de reserva oeste do caso*
 
 A criação dessas soluções ajuda as equipes internas da Microsoft a se preparar para a próxima geração de computação. Aprender como indivíduos e empresas interagem com tecnologias básicas, como realidade misturada, voz e ia, ajuda a Microsoft a criar dispositivos, plataformas e ferramentas melhores para desenvolvedores. Se você for um designer ou um desenvolvedor explorando esse espaço, entender o que nossas equipes estão aprendendo com parceiros hoje é essencial para se preparar para as oportunidades de realidade misturada do amanhã.
@@ -39,7 +39,7 @@ E se pudéssemos combinar as vantagens dos mundos físicos e digitais? Essa é a
 
 O espectro de realidade misturada foi destacado à medida que os desenvolvedores começaram a explorar as oportunidades de imersão e presença. Trazer os usuários para o mundo digital com experiências de imersão (realidade virtual) e criação de objetos digitais no mundo físico com experiências de Holographic (realidade aumentada). Mas quais são os benefícios de mapear o mundo físico para o mundo digital? O que acontece quando damos os olhos dos computadores para veremos?
 
-A tecnologia fundamental da visão da câmera por trás dos hologramas atua como um par de olhos para que o computador Veja o ambiente em seu lugar: Os objetos do mundo, as pessoas em seu lugar, mudam conforme eles acontecem. Uma compreensão digital do seu contexto no mundo físico. Isso leva a uma enorme quantidade de informações, as implicações das quais estamos começando a entender.
+A tecnologia fundamental da visão da câmera por trás dos hologramas atua como um par de olhos para que o computador Veja o ambiente em relação a você: objetos do mundo, pessoas em seu lugar, mudam conforme eles acontecem. Uma compreensão digital do seu contexto no mundo físico. Isso leva a uma enorme quantidade de informações, as implicações das quais estamos começando a entender.
 
 ### <a name="culminating-core-technologies"></a>Principais tecnologias de culminação
 
@@ -53,11 +53,11 @@ A realidade mista fornece um meio para combinar essas tecnologias em uma única 
 
 ### <a name="less-interface-in-your-face"></a>Menos interface em seu rosto
 
-Um dispositivo de culminação que conecta o mundo físico ao mundo digital nos permite projetar experiências que se enquadram mais naturalmente, sem abstrações complicadas. Considere as experiências que você criou: Quando as barreiras de abstração forem removidas, quanto da sua interface será deixada? Quais partes do seu fluxo de aplicativo são alteradas quando você conhece o usuário e seu contexto? Quantos menus e botões permanecem?
+Um dispositivo de culminação que conecta o mundo físico ao mundo digital nos permite projetar experiências que se enquadram mais naturalmente, sem abstrações complicadas. Considere as experiências que você criou: quando as barreiras de abstração são removidas, quanto da sua interface é deixada? Quais partes do seu fluxo de aplicativo são alteradas quando você conhece o usuário e seu contexto? Quantos menus e botões permanecem?
 
 Por exemplo, pense em experiências compartilhadas em realidade misturada como o propulsão do Jet de NASA da ferramenta onsight criado para cientistas. Em vez de criar um sistema para examinar os dados do Martian (abstraindo os dados em telas ou vídeos), eles trouxe cientistas dentro dos dados, colocando-os efetivamente na superfície do Mars à medida que colaboraram.
 
-![A NASA onsight](images/nasa-onsight.jpg)<br>
+![NASA onsight](images/nasa-onsight.jpg)<br>
 *NASA/JPL onsight*
 
 Em vez de encontrar o botão para chamar a atenção para algumas Martian geologia, os cientistas podem apontar diretamente para ele. Nenhum menu, sem canetas, sem nenhuma curva de aprendizado para usar a ferramenta com eficiência. Aproveitando nossas habilidades conhecidas do mundo físico, mais interações naturais em realidade misturada podem burlar disseminado técnicas aprofundadas até mesmo nas ferramentas mais avançadas do setor.
@@ -76,7 +76,7 @@ A realidade mista do Windows é um esforço para criar uma plataforma para um ec
 
 ## <a name="designing-for-tomorrows-experiences-today"></a>Criando hoje mesmo as experiências do amanhã
 
-![Criando hoje mesmo as experiências do amanhã](images/designing-for-tomorrows-experiences-today-450px.jpg) 
+![design para experiências de amanhã hoje](images/designing-for-tomorrows-experiences-today-450px.jpg) 
 <br>
 Cada uma das principais tecnologias por trás dessa nova classe de experiências é permitir que designers e desenvolvedores criem experiências atraentes e bem sucedidas hoje. Ao reduzir a abstração, podemos interagir mais diretamente com o mundo digital, permitindo que possamos projetar de maneiras que aumentem e aumentem as capacidades humanas. A tecnologia de voz (por meio de bots e assistentes digitais como Cortana) é permitir que os usuários realizem conversações e cenários cada vez mais complexos, enquanto a tecnologia ia (por meio de ferramentas como serviços cognitivas da Microsoft) está fazendo com que as empresas reconsiderem como os interagirá com tudo, desde mídia social até gerenciamento de cadeia de fornecedores.
 
@@ -86,7 +86,7 @@ Esses tipos de interações dependerão de uma nova classe de ferramentas de des
 
 O ano passado de parcerias de desenvolvedores tem áreas de oportunidade descobertos que repercussãom com os clientes e criam soluções empresariais bem-sucedidas. De cientistas e técnicos a designers e clientes, cinco áreas de oportunidade surgiram onde os parceiros da Microsoft têm valor agregado com realidade misturada. Essas áreas já estão fornecendo uma visão maciça das necessidades futuras de plataformas, como a realidade mista do Windows, e podem ajudá-lo a entender como essas novas experiências afetarão as maneiras como aprendemos, colaboram, comunicam e criam.
 
-### <a name="1-creation-and-design"></a>1. Criação e design
+### <a name="1-creation-and-design"></a>1. criação e design
 
 Uma das principais oportunidades de realidade misturada é a capacidade de ver e manipular designs 3D em tempo real, em uma configuração real, em tamanho e escala reais. Ferramentas de design e criação de protótipos escapam os limites das telas, retornando a um realm de design geralmente reservado para materiais físicos e tangíveis como madeira e Clay.
 
@@ -98,7 +98,7 @@ O [Autodesk](https://www.youtube.com/watch?v=Hx6biWE2VsM) criou uma experiência
 
 Experiências como essa destacam a necessidade de experiências de colaboração principal, a capacidade dos usuários de ver e se comunicar com objetos compartilhados. O objetivo do Autodesk é expandir o produto do design Professional e engenheiros para artistas digitais, estudantes e entusiastas. À medida que o nível de experiência em 3D de usuários diminui, a capacidade de interagir com objetos naturalmente se torna crucial.
 
-### <a name="2-assembly-and-manufacturing"></a>2. Assembly e fabricação
+### <a name="2-assembly-and-manufacturing"></a>2. assembly e manufatura
 
 Da maior quantidade de especialização em andares de fábrica até os avanços rápidos do gerenciamento da cadeia de fornecedores, o acesso contínuo a informações relevantes é fundamental. A realidade mista oferece a capacidade de resumir conjuntos de dados extensivos e fornecer exibições visuais que auxiliam em áreas como navegação e operações. Geralmente, são campos altamente técnicos e de nicho em que a integração com conjuntos de valores e serviços personalizados são cruciais para reduzir a complexidade e fornecer uma experiência bem-sucedida.
 
@@ -110,7 +110,7 @@ O fabricante do elevador [ThyssenKrupp](https://www.youtube.com/watch?v=8OWhGiyR
 
 O ThyssenKrupp realça um conceito poderoso aqui que informações críticas e contextualmente relevantes podem ser entregues rapidamente aos usuários. À medida que olhamos para uma nova classe de experiências, a divisão de grandes quantidades de informações possíveis para o conteúdo que é relevante para o usuário será fundamental.
 
-### <a name="3-training-and-development"></a>3. Treinamento e desenvolvimento
+### <a name="3-training-and-development"></a>3. treinamento e desenvolvimento
 
 A representação de objetos e informações em três dimensões oferece novas maneiras de explicar cenários visualmente e com compreensão espacial. O treinamento torna-se uma área-chave de oportunidade, aproveitando a capacidade de representar digitalmente objetos enormes e complexos (como mecanismos Jet) para criar simulações de treinamento para uma fração do custo de uma solução física.
 
@@ -122,7 +122,7 @@ As [companhias aéreas do Japão](https://www.youtube.com/watch?v=GjZgI2oDcwM&t=
 
 O treinamento com componentes virtuais (e a redução da necessidade de simuladores de treinamento físicos e dispendiosos) é uma maneira importante de agregar valor em cenários empresariais hoje. Como esse cenário se expande (como vimos em áreas como a medicina), a visão computacional é especialmente importante para reconhecer objetos exclusivos no ambiente, entender o contexto do usuário e fornecer instruções relevantes.
 
-### <a name="4-communication-and-understanding"></a>4. Comunicação e compreensão
+### <a name="4-communication-and-understanding"></a>4. comunicação e compreensão
 
 As interações entre duas pessoas (se ambos os participantes estão em dispositivos de realidade misturada ou um em um PC ou telefone tradicional) podem fornecer uma noção de imersão em um novo ambiente ou uma noção de presença ao se comunicarem virtualmente com outras pessoas. Em cenários empresariais, essa sensação de presença é uma benefício para as equipes móveis, ajudando a aumentar a compreensão dos projetos e a diminuir a necessidade de viagem.
 
@@ -134,7 +134,7 @@ O fabricante de tecnologia comercial [Trimble](https://www.youtube.com/watch?v=k
 
 As experiências compartilhadas são uma grande área de investimento para a Microsoft, com aplicativos como o Skype explorando novas maneiras de representar seres humanos no espaço digital. As equipes estão explorando gravações de vídeo volumétricos, avatars e recriações do espaço físico de um participante.
 
-### <a name="5-entertainment-and-engagement"></a>5. Entretenimento e envolvimento
+### <a name="5-entertainment-and-engagement"></a>5. entretenimento e envolvimento
 
 A natureza do imersão em realidade misturada pode ter um grande impacto na forma como os clientes se envolvem com entretenimento e marketing. Artistas e estúdios de entretenimento exploraram a realidade misturada como um meio atraente para narração, enquanto as empresas estão explorando as implicações do marketing da marca. Desde demonstrações de produtos em salas de deficiências privadas até as partes fornecidas pelo comércio, o conteúdo pode ser fornecido de maneiras mais envolventes e personalizadas.
 
@@ -155,7 +155,7 @@ O entretenimento é de muitas maneiras ao enviar os limites de realidade mistura
 <table style="border-collapse:collapse">
 <tr>
 <td style="border-style: none" width="60" padding-left="0px"><img alt="Picture of Mark Vitazko" width="60" height="60" src="images/mark-vitazko.jpg"></td>
-<td style="border-style: none"><b>Marcar Vitazko</b><br>Designer de UX@Microsoft</td>
+<td style="border-style: none"><b>Marcar Vitazko</b><br>@Microsoft do designer de UX</td>
 </tr>
 </table>
  

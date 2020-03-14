@@ -7,11 +7,11 @@ ms.date: 03/21/2018
 ms.topic: article
 keywords: realidade misturada, Holographic, ar, VR, Sr, XR, realidade aumentada, realidade virtual, explicação
 ms.openlocfilehash: e3205590ce46e0fc9113421e0dbaeb87fe6bc0c2
-ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/24/2019
-ms.locfileid: "75334048"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79376033"
 ---
 # <a name="what-is-mixed-reality"></a>O que é realidade misturada?
 
@@ -89,7 +89,7 @@ Há dois tipos principais de dispositivos que fornecem experiências do Windows 
 </tr><tr>
 <td><strong>Dispositivo de exemplo</strong></td><td> Microsoft HoloLens<br><br> <img alt="Microsoft HoloLens 2 image" width="300" height="169" src="images/HoloLens2.jpg" /></td><td> Samsung HMD Odyssey +<br><br> <img alt="Samsung HMD Odyssey+ image" width="300" height="169" src="images/Samsung-HMD-Odyssey.jpg" /></td>
 </tr><tr>
-<td><strong>Exibir</strong></td><td> Exibição de visualização. Permite que o usuário veja o ambiente físico ao gastar o headset.</td><td> Exibição opaca. Bloqueia o ambiente físico ao gastar o headset.</td>
+<td><strong>Display</strong></td><td> Exibição de visualização. Permite que o usuário veja o ambiente físico ao gastar o headset.</td><td> Exibição opaca. Bloqueia o ambiente físico ao gastar o headset.</td>
 </tr><tr>
 <td><strong>Migração</strong></td><td> Movimentação completa de seis graus de liberdade, rotação e conversão.</td><td> Movimentação completa de seis graus de liberdade, rotação e conversão.</td>
 </tr>
@@ -113,7 +113,7 @@ Geralmente, é melhor considerar o tipo de experiência que um desenvolvedor de 
 * **Em direção à direita (quase a realidade digital).** Os usuários experimentam um ambiente completamente digital e não sabem o que ocorre no ambiente físico em relação a eles.
 
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 * [O que é um holograma?](hologram.md)
 * [Entenda os conceitos básicos da realidade misturada](index.md#understand-the-basics)

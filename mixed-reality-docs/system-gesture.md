@@ -7,11 +7,11 @@ ms.date: 10/22/2019
 ms.topic: article
 keywords: Realidade misturada, gestos, interação, design
 ms.openlocfilehash: 9cfee1104cb9b8135dae51bea73850062fadd25c
-ms.sourcegitcommit: 8bf7f315ba17726c61fb2fa5a079b1b7fb0dd73f
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/17/2019
-ms.locfileid: "75181996"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375903"
 ---
 # <a name="system-gesture"></a>Gesto do sistema
 
@@ -33,7 +33,7 @@ O gesto do sistema é um gesto de mão usado para invocar o menu iniciar. É o e
         <td><a href="immersive-headset-hardware-details.md"><strong>Headsets imersivos</strong></a></td>
     </tr>
      <tr>
-        <td>Bloom</td>
+        <td>Cair</td>
         <td>✔️</td>
         <td>❌</td>
         <td>❌</td>
@@ -52,7 +52,7 @@ O gesto do sistema é um gesto de mão usado para invocar o menu iniciar. É o e
     </tr>
 </table>
 
-## <a name="bloom"></a>Bloom
+## <a name="bloom"></a>Cair
 Para abrir o menu iniciar no HoloLens (1º gen), projetamos "flor", que é um gesto simbólico imitando Blossom de flor. É distintivo para a interação Surefooted, fácil de executar e rápida de se recuperar. Para fazer o gesto de cair no HoloLens (1º gen), mantenha sua mão em dia com seu Palm para cima e, em seguida, abra sua mão distribuindo os dedos.
 
 :::row:::

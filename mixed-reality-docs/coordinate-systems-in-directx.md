@@ -7,11 +7,11 @@ ms.date: 02/24/2019
 ms.topic: article
 keywords: Realidade misturada, localizador espacial, quadro de referência espacial, sistema de coordenadas espaciais, estágio espacial, código de exemplo, estabilização de imagem, âncora espacial, repositório de âncora espacial, perda de controle, passo a passos
 ms.openlocfilehash: a0bce897c1982715af24f0bf7c398cdee10f017f
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73436229"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375613"
 ---
 # <a name="coordinate-systems-in-directx"></a>Coordenar sistemas no DirectX
 
@@ -574,7 +574,7 @@ Para a renderização, muitas vezes você pode obter resultados melhores agrupan
 
 ## <a name="create-holograms-using-a-device-attached-frame-of-reference"></a>Criar hologramas usando um quadro de referência anexado ao dispositivo
 
-Há ocasiões em que você deseja renderizar um holograma que [permanece anexado](coordinate-systems.md#attached-frame-of-reference) ao local do dispositivo, por exemplo, um painel com informações de depuração ou uma mensagem informativa quando o dispositivo só consegue determinar sua orientação e não sua posição em disco. Para fazer isso, usamos um quadro de referência anexado.
+Há ocasiões em que você deseja renderizar um holograma que [permanece anexado](coordinate-systems.md#attached-frame-of-reference) ao local do dispositivo, por exemplo, um painel com informações de depuração ou uma mensagem informativa quando o dispositivo só consegue determinar sua orientação e não sua posição no espaço. Para fazer isso, usamos um quadro de referência anexado.
 
 A classe SpatialLocatorAttachedFrameOfReference define os sistemas de coordenadas que são relativos ao dispositivo em vez do mundo real. Esse quadro tem um título fixo em relação ao ambiente do usuário que aponta na direção em que o usuário estava voltado quando o quadro de referência foi criado. A partir desse momento, todas as orientações nesse quadro de referência são relativas a esse cabeçalho fixo, mesmo quando o usuário gira o dispositivo.
 
@@ -790,7 +790,7 @@ De **AppMain. cpp:**
    }
 ```
 
-## <a name="spatial-mapping"></a>Mapeamento espacial
+## <a name="spatial-mapping"></a>mapeamento espacial
 
 As APIs de [mapeamento espacial](spatial-mapping-in-directx.md) fazem uso de sistemas de coordenadas para obter transformações de modelo para malhas de superfície.
 

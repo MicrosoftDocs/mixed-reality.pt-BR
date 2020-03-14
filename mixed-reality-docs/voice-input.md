@@ -7,11 +7,11 @@ ms.date: 10/03/2019
 ms.topic: article
 keywords: ggv, voz, Cortana, fala, entrada
 ms.openlocfilehash: f2ae18d4063c7c4a63346a1202cacaa7fbbdf959
-ms.sourcegitcommit: 6844930427b658ae31f642c395cd8a3b3cdbf857
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75723185"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375983"
 ---
 # <a name="voice-input"></a>Entrada de voz
 
@@ -121,7 +121,7 @@ Você também pode dizer "Ei Cortana" para abrir a Cortana a qualquer momento. V
         *Imagem: um usuário pode dizer o comando "ajustar" que vê na barra de aplicativos para ajustar a posição do aplicativo*
     :::column-end:::
         :::column:::
-        ![space](images/spacer-20x582.png)<br>
+        ![de espaço](images/spacer-20x582.png)<br>
         ![ao examinar uma janela de aplicativo ou um holograma, um usuário pode dizer o comando "ajustar" que vê na barra de aplicativos para ajustar a posição do aplicativo no mundo](images/microphone-600px.png)<br>
     :::column-end:::
 :::row-end:::
@@ -282,11 +282,11 @@ Para aplicativos que desejam aproveitar as opções de processamento de entrada 
 
 Todo esse processamento de áudio é acelerado por hardware, o que significa que os recursos esgotam muito menos energia do que se o mesmo processamento foi feito na CPU do HoloLens. Evite executar outro processamento de entrada de áudio na CPU para maximizar a vida útil da bateria do sistema e aproveitar o processamento de entrada de áudio descarregado interno.
 
-## <a name="languages"></a>Idiomas
+## <a name="languages"></a>Linguagens
 
 O HoloLens 2 também dá suporte a idiomas adicionais. Tenha em mente que os comandos de fala sempre serão executados no idioma de exibição do sistema, mesmo se vários teclados estiverem instalados ou se os aplicativos tentarem criar um reconhecedor de fala em um idioma diferente.
 
-## <a name="troubleshooting"></a>Painel de controle da
+## <a name="troubleshooting"></a>Solução de problemas
 
 Se você tiver problemas ao usar "Select" e "Ei Cortana", tente mudar para um espaço mais silencioso, desativando a fonte de ruído ou falando mais alto. Neste momento, todo o reconhecimento de fala no HoloLens é ajustado e otimizado especificamente para os palestrantes nativos do Estados Unidos Inglês.
 
@@ -304,7 +304,7 @@ Com o **[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** , você
 
 ---
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 * [Focar e confirmar](gaze-and-commit.md)
 * [Interações instinctuais](interaction-fundamentals.md)
 * [Entrada MR 212: voz](holograms-212.md)

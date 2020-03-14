@@ -7,11 +7,11 @@ ms.date: 03/21/2018
 ms.topic: article
 keywords: 3D, modelagem, diretrizes de modelagem, requisitos de ativos, diretrizes de criação, iniciador, iniciador 3D, textura, materiais, complexidade, triângulos, malha, polígonos, semicontagem, limites
 ms.openlocfilehash: 536fd9bc2002d679ee3bf73d5c906b84c51e5d46
-ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926574"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375623"
 ---
 # <a name="create-3d-models-for-use-in-the-home"></a>Crie modelos 3D para uso na página inicial
 
@@ -232,13 +232,13 @@ A semântica de gatilhos de animação a seguir tem suporte na página inicial d
 ### <a name="saving-and-exporting"></a>Salvando e exportando
 Depois de fazer as alterações no modelo glTF, você poderá salvá-las diretamente como glTF ou clicar com o botão direito do mouse no nome do arquivo no editor e selecionar "glTF: exportar para GLB (arquivo binário)" para exportar um. glb. 
 
-### <a name="restrictions"></a>Restrições
+### <a name="restrictions"></a>{1&gt;Restrições&lt;1}
 As animações não podem ter mais de 20 minutos e não podem conter mais de 36.000 quadros-chave (20 minutos a 30 FPS). Além disso, ao usar animações baseadas em destino Morph não exceda 8192 vértices de destino de Morph ou menos. Exceder essas contagens fará com que o ativo animado não seja suportado na página inicial do Windows Mixed Reality. 
 
 |Recurso|Máximo|
 |-----|-----|
-|Duração|20 minutos|
-|Quadros-chave|36.000| 
+|Duration|20 minutos|
+|Quadros chave|36.000| 
 |Vértices de destino de Morph|8192|
 
 ## <a name="gltf-implementation-notes"></a>notas de implementação do glTF

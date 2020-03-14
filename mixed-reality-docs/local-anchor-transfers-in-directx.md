@@ -7,11 +7,11 @@ ms.date: 03/21/2018
 ms.topic: article
 keywords: HoloLens, sincronizar, âncora espacial, transferência, vários participantes, exibição, cenário, passo a passos, código de exemplo, transferência, transferência de âncora local, exportação de âncora, importação de âncora
 ms.openlocfilehash: f961862c3c49872484683e264fb9c62b5d0b60ee
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437959"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79376023"
 ---
 # <a name="local-anchor-transfers-in-directx"></a>Transferências de âncora local no DirectX
 
@@ -284,7 +284,7 @@ O BLOB contém uma representação do ambiente na vizinhança do SpatialAnchor p
 
 ### <a name="export-of-multiple-spatialanchors"></a>Exportação de vários SpatialAnchors
 
-Como a exportação de um único SpatialAnchor, o BLOB contém uma representação do ambiente na vizinhança de todos os SpatialAnchors especificados. Além disso, o BLOB contém informações sobre as conexões entre o SpatialAnchors incluído, se eles estiverem localizados no mesmo espaço físico. Isso significa que, se dois SpatialAnchors próximos forem importados, um holograma anexado ao *segundo* SpatialAnchor seria localizável, mesmo que o dispositivo reconheça apenas o ambiente em relação à *primeira* SpatialAnchor, porque dados suficientes para a transformação de computação entre os dois SpatialAnchors foi incluída no BLOB. Se as duas SpatialAnchors foram exportadas individualmente (duas chamadas separadas para TryExportSpatialAnchors), talvez não haja dados suficientes incluídos no blob para hologramas anexados ao segundo SpatialAnchor a serem localizáveis quando o primeiro estiver localizado.
+Como a exportação de um único SpatialAnchor, o BLOB contém uma representação do ambiente na vizinhança de todos os SpatialAnchors especificados. Além disso, o BLOB contém informações sobre as conexões entre o SpatialAnchors incluído, se eles estiverem localizados no mesmo espaço físico. Isso significa que, se dois SpatialAnchors próximos forem importados, um holograma anexado ao *segundo* SpatialAnchor seria localizável, mesmo que o dispositivo reconheça apenas o ambiente em relação à *primeira* SpatialAnchor, porque dados suficientes para computar a transformação entre os dois SpatialAnchors foram incluídos no BLOB. Se as duas SpatialAnchors foram exportadas individualmente (duas chamadas separadas para TryExportSpatialAnchors), talvez não haja dados suficientes incluídos no blob para hologramas anexados ao segundo SpatialAnchor a serem localizáveis quando o primeiro estiver localizado.
 
 ![Várias âncoras exportadas usando uma única chamada TryExportAnchorsAsync](images/multipleanchors.png) ![Várias âncoras exportadas usando uma chamada TryExportAnchorsAsync separada para cada âncora](images/separateanchors.png)
 

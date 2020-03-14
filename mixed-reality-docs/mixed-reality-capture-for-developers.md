@@ -7,11 +7,11 @@ ms.date: 02/24/2019
 ms.topic: article
 keywords: MRC, foto, vídeo, captura, câmera
 ms.openlocfilehash: 72600f889997c96a629faebc35aba4b4841d4d8b
-ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926796"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375963"
 ---
 # <a name="mixed-reality-capture-for-developers"></a>Captura de realidade misturada para desenvolvedores
 
@@ -197,14 +197,14 @@ Os aplicativos têm duas opções para adicionar o efeito:
 
 Efeito de vídeo da MRC (**Windows. Media. MixedRealityCapture. MixedRealityCaptureVideoEffect**)
 
-|  Nome da propriedade  |  Digite  |  Valor padrão  |  Descrição | 
+|  Nome da Propriedade  |  Tipo  |  Valor padrão  |  Descrição | 
 |----------|----------|----------|----------|
 |  Streamtype  |  UINT32 ([MediaStreamType](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.MediaStreamType))  |  1 (VideoRecord)  |  Descreva para qual fluxo de captura esse efeito é usado. O áudio não está disponível. | 
 |  HologramCompositionEnabled  |  booliano  |  TRUE  |  Sinalizador para habilitar ou desabilitar hologramas na captura de vídeo. | 
 |  RecordingIndicatorEnabled  |  booliano  |  TRUE  |  Sinalizador para habilitar ou desabilitar o indicador de gravação na tela durante a captura de holograma. | 
 |  VideoStabilizationEnabled  |  booliano  |  FALSE  |  Sinalizador para habilitar ou desabilitar a estabilização de vídeo da plataforma do controlador de HoloLens. | 
 |  VideoStabilizationBufferLength  |  UINT32  |  0  |  Defina quantos quadros históricos são usados para estabilização de vídeo. 0 é a latência e quase "livre" de uma perspectiva de potência e desempenho. 15 é recomendado para a qualidade mais alta (com o custo de 15 quadros de latência e memória). | 
-|  GlobalOpacityCoefficient  |  flutuante  |  0,9 (HoloLens) 1,0 (Headset de imersão)  |  Defina o coeficiente de opacidade global de holograma no intervalo de 0,0 (totalmente transparente) para 1,0 (totalmente opaco). | 
+|  GlobalOpacityCoefficient  |  float  |  0,9 (HoloLens) 1,0 (Headset de imersão)  |  Defina o coeficiente de opacidade global de holograma no intervalo de 0,0 (totalmente transparente) para 1,0 (totalmente opaco). | 
 |  BlankOnProtectedContent  |  booliano  |  FALSE  |  Sinalizador para habilitar ou desabilitar o retorno de um quadro vazio se houver um aplicativo UWP 2D mostrando o conteúdo protegido. Se esse sinalizador for false e um aplicativo UWP 2D estiver mostrando o conteúdo protegido, o aplicativo UWP 2D será substituído por uma textura de conteúdo protegida no headset e na captura da realidade misturada. |
 |  ShowHiddenMesh  |  booliano  |  FALSE  |  Sinalizador para habilitar ou desabilitar mostrando a malha da área oculta da câmera Holographic e o conteúdo vizinho. |
 | Sobrecolocações | Size | 0, 0 | Defina o tamanho de saída desejado após o corte para estabilização de vídeo. Um tamanho de corte padrão será escolhido se 0 ou um tamanho de saída inválido for especificado. |
@@ -214,8 +214,8 @@ Efeito de áudio da MRC (**Windows. Media. MixedRealityCapture. MixedRealityCapt
 
 <table>
 <tr>
-<th>Nome da propriedade</th>
-<th>Digite</th>
+<th>Nome da Propriedade</th>
+<th>Tipo</th>
 <th>Valor padrão</th>
 <th>Descrição</th>
 </tr>

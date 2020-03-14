@@ -1,5 +1,5 @@
 ---
-title: Mapeamento espacial
+title: mapeamento espacial
 description: O mapeamento espacial fornece uma representação detalhada das superfícies do mundo real no ambiente em volta do HoloLens.
 author: mattzmsft
 ms.author: mazeller
@@ -7,13 +7,13 @@ ms.date: 03/21/2018
 ms.topic: article
 keywords: mapeamento espacial, HoloLens, realidade misturada, reconstrução da superfície, malha
 ms.openlocfilehash: c4e2f9e49cfe4df9cf875d18b19d62e25c200d76
-ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926735"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375823"
 ---
-# <a name="spatial-mapping"></a>Mapeamento espacial
+# <a name="spatial-mapping"></a>mapeamento espacial
 
 O mapeamento espacial fornece uma representação detalhada das superfícies do mundo real no ambiente em todo o HoloLens, permitindo que os desenvolvedores criem uma experiência de realidade misturada convincente. Ao mesclar o mundo real com o mundo virtual, um aplicativo pode fazer com que os hologramas pareçam reais. Os aplicativos também podem se alinhar naturalmente com as expectativas do usuário, fornecendo comportamentos e interações do mundo real.
 
@@ -37,7 +37,7 @@ O mapeamento espacial fornece uma representação detalhada das superfícies do 
         <td><a href="immersive-headset-hardware-details.md"><strong>Headsets imersivos</strong></a></td>
     </tr>
      <tr>
-        <td>Mapeamento espacial</td>
+        <td>mapeamento espacial</td>
         <td>✔️</td>
         <td>✔️</td>
         <td>❌</td>
@@ -200,7 +200,7 @@ Aqui está um exemplo de estratégia de cache de malha, usando histerese espacia
 * Como uma superfície espacial também pode desaparecer temporariamente devido à perda de rastreamento, o aplicativo também adia a descartação de superfícies espaciais removidas durante a perda de rastreamento.
 * Em geral, um aplicativo deve avaliar a compensação entre o processamento de atualização reduzido e o maior uso de memória para determinar sua estratégia de cache ideal.
 
-## <a name="rendering"></a>Renderização
+## <a name="rendering"></a>{1&gt;Renderização&lt;1}
 
 Há três maneiras principais pelas quais as malhas de mapeamento espacial tendem a ser usadas para renderização:
 * Para visualização de superfície
@@ -245,7 +245,7 @@ Para que uma API física (como [Havok](https://www.havok.com/)) forneça um apli
 
 Ao executar raycasts em superfícies espaciais, tenha em mente que essas superfícies são muitas vezes complexas, formas desorganizadas com detalhes de pouco confusos, assim como sua mesa! Isso significa que uma única Raycast geralmente é insuficiente para fornecer a você informações suficientes sobre a forma da superfície e a forma do espaço vazio perto dela. Geralmente, é uma boa ideia executar muitas raycasts em uma área pequena e usar os resultados agregados para obter uma compreensão mais confiável da superfície. Por exemplo, usar a média de 10 raycasts para orientar o posicionamento do holograma em uma superfície produzirá um resultado muito mais suave e menos "tremulação" que usa apenas um único Raycast.
 
-No entanto, tenha em mente que cada Raycast pode ter um alto custo computacional. Portanto, dependendo do seu cenário de uso, você deve compensar o custo computacional de raycasts adicionais (executado todos os quadros) em relação ao custo computacional do [processamento de malha](spatial-mapping.md#mesh-processing) para suavizar e remover buracos em superfícies espaciais (realizadas quando espaciais as malhas são atualizadas).
+No entanto, tenha em mente que cada Raycast pode ter um alto custo computacional. Portanto, dependendo do seu cenário de uso, você deve compensar o custo computacional de raycasts adicionais (executado todos os quadros) em relação ao custo computacional do [processamento de malha](spatial-mapping.md#mesh-processing) para suavizar e remover buracos em superfícies espaciais (executadas quando as malhas espaciais são atualizadas).
 
 ## <a name="the-environment-scanning-experience"></a>A experiência de verificação do ambiente
 
@@ -365,7 +365,7 @@ Aqui estão alguns exemplos de diferentes tipos de processamento de malha que po
 * Da mesma forma, embora os dados sintéticos ou registrados possam ser úteis para depuração, não se tornem muito dependentes dos mesmos casos de teste. Isso pode atrasar a localização de problemas importantes que os testes mais variados teriam detectados anteriormente.
 * É uma boa ideia executar testes com usuários reais (e idealmente desconhecidos), pois eles não podem usar o HoloLens ou seu aplicativo exatamente da mesma maneira que você. Na verdade, ele pode surpreender você como o comportamento das pessoas, o conhecimento e as suposições mais divergentes podem ser!
 
-## <a name="troubleshooting"></a>Painel de controle da
+## <a name="troubleshooting"></a>Solução de problemas
 * Para que as malhas de superfície sejam orientadosdas corretamente, cada gameobject precisa estar ativo antes de ser enviado para o SurfaceObserver para que sua malha seja construída. Caso contrário, as malhas serão exibidas no seu espaço, mas giradas em ângulos estranhos.
 * O gameobject que executa o script que se comunica com o SurfaceObserver precisa ser definido para a origem. Caso contrário, todos os GameObjects que você criar e enviar para o SurfaceObserver ter suas malhas construídas terão um deslocamento igual ao deslocamento do objeto do jogo pai. Isso pode fazer com que suas malhas mostrem vários medidores de distância, o que torna muito difícil depurar o que está acontecendo.
 

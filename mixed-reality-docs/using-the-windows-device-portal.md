@@ -7,11 +7,11 @@ ms.date: 02/24/2019
 ms.topic: article
 keywords: Portal de dispositivos Windows, HoloLens
 ms.openlocfilehash: 43ecfead7d2882d3624809bc05184f74131b8594
-ms.sourcegitcommit: 1ec628a9107194c0a9d4073b5ca09ee816030e85
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2020
-ms.locfileid: "78202716"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375783"
 ---
 # <a name="using-the-windows-device-portal"></a>Usando o portal do dispositivo Windows
 
@@ -19,7 +19,7 @@ ms.locfileid: "78202716"
 <tr>
 <th>Recurso</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens (1ª geração)</a></th><th style="width:150px">HoloLens 2</th><th style="width:150px"><a href="immersive-headset-hardware-details.md">Headsets imersivos</a></th>
 </tr><tr>
-<td> Portal de Dispositivos do Windows</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"></td>
+<td> Windows Device Portal</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"></td>
 </tr>
 </table>
 
@@ -97,7 +97,7 @@ Cada HoloLens gera um certificado autoassinado exclusivo para sua conexão SSL. 
 
 ## <a name="device-portal-pages"></a>Páginas do Device Portal
 
-### <a name="home"></a>Inicial
+### <a name="home"></a>Início
 
 ![home page do portal de dispositivos do Windows no Microsoft HoloLens](images/windows-device-portal-home-page-1000px.png)<br>
 *home page do portal do dispositivo Windows no Microsoft HoloLens*

@@ -7,11 +7,11 @@ ms.date: 03/21/2018
 ms.topic: article
 keywords: Shell, so, plataforma, Cliff House, casa, casa, ambiente, iniciar, menu Iniciar, menu início, Pins, aplicativo, iniciar aplicativos, colocar aplicativos, teleport, mover, navegar
 ms.openlocfilehash: 9de4cb44505d6cf4d0d3e4bd0fd9c5ee681063a5
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438155"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375893"
 ---
 # <a name="navigating-the-windows-mixed-reality-home"></a>Navegando na página inicial do Windows Mixed Reality
 
@@ -85,7 +85,7 @@ Com **headsets de imersão**, você pode, de maneira semelhante, se familiarizar
 
 Os [headsets de imersão de realidade mista do Windows](immersive-headset-hardware-details.md) dão suporte a vários tipos de entrada para navegar na página inicial do Windows Mixed Reality. O HoloLens não oferece suporte a entradas de acessório para navegação, pois você acompanha fisicamente e vê seu ambiente. No entanto, o HoloLens [oferece suporte a entradas](hardware-accessories.md) para interagir com aplicativos.
 
-### <a name="motion-controllers"></a>Controladores de movimento
+### <a name="motion-controllers"></a>controladores de movimentos
 
 A melhor experiência de realidade mista do Windows será com os [controladores de movimento](motion-controllers.md) do Windows Mixed Reality que dão suporte ao acompanhamento de 6 graus de liberdade usando apenas os sensores em seu headset-nenhuma câmera ou marcador externo é necessário!
 

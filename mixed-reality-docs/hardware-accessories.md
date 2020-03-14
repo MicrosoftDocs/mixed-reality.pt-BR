@@ -7,11 +7,11 @@ ms.date: 03/21/2018
 ms.topic: article
 keywords: instruções, acessórios, Bluetooth, BT, controlador, gamepad, clico, Xbox
 ms.openlocfilehash: 566d4217fb674057e1dc3d9791b247185bf61d32
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73435151"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375693"
 ---
 # <a name="hardware-accessories"></a>Acessórios de hardware
 
@@ -31,7 +31,7 @@ Emparelhar um periférico Bluetooth com o Microsoft HoloLens é semelhante a emp
 5. Aguarde até que o nome do dispositivo apareça na lista de dispositivos Bluetooth. Quando tiver, selecione o dispositivo e, em seguida, selecione o botão **emparelhar** . Se você tiver muitos dispositivos Bluetooth próximos, talvez seja necessário rolar para a parte inferior da lista de dispositivos Bluetooth para ver o dispositivo que você está tentando emparelhar.
 6. Ao emparelhar periféricos Bluetooth com capacidade de entrada (por exemplo: teclados Bluetooth), um PIN de seis dígitos ou 8 dígitos pode ser exibido. Certifique-se de digitar esse PIN no periférico e pressione ENTER para concluir o emparelhamento com o Microsoft HoloLens.
 
-## <a name="motion-controllers"></a>Controladores de movimento
+## <a name="motion-controllers"></a>controladores de movimentos
 
 Os controladores de [movimento](motion-controllers.md) de realidade mista do Windows têm suporte por headsets de imersão, mas não com o HoloLens. Esses controladores oferecem acompanhamento preciso e responsivo de movimento em seu campo de exibição usando os sensores no headset de imersão, o que significa que não há necessidade de instalar o hardware nas paredes no seu espaço. Cada controlador apresenta vários métodos de entrada.
 

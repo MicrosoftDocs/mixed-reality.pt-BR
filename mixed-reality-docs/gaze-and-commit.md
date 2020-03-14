@@ -7,11 +7,11 @@ ms.date: 10/31/2019
 ms.topic: article
 keywords: Realidade misturada, olhar, direcionamento de olhar, interação, design, acompanhamento de cabeça, acompanhamento de cabeçalho
 ms.openlocfilehash: df152f6a3a6e4ae2d6c32a0c56fbb615bcfa7aa8
-ms.sourcegitcommit: a5dc182da237f63f0487d40a2e11894027208b6c
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73441128"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375843"
 ---
 # <a name="gaze-and-commit"></a>Olhar e confirmar
 
@@ -291,12 +291,12 @@ Há três coisas que você deve considerar:
 
 
 ## <a name="see-also"></a>Consulte também
-* [Interação com base nos olhos](eye-gaze-interaction.md)
-* [Acompanhamento de olho no HoloLens 2](eye-tracking.md)
+* [Interação ocular](eye-gaze-interaction.md)
+* [Acompanhamento ocular no HoloLens 2](eye-tracking.md)
 * [Focar e esperar](gaze-and-dwell.md)
-* [Manipulação de mãos direta](direct-manipulation.md)
-* [Gestos práticos](gaze-and-commit.md#composite-gestures)
-* [Ponto de mãos e confirmação](point-and-commit.md)
+* [Mãos – Manipulação direta](direct-manipulation.md)
+* [Mãos – Gestos](gaze-and-commit.md#composite-gestures)
+* [Mãos – Apontar e confirmar](point-and-commit.md)
 * [Interações instinctuais](interaction-fundamentals.md)
 * [Entrada de voz](voice-input.md)
 
