@@ -8,11 +8,11 @@ ms.topic: article
 ms.localizationpriority: high
 keywords: Visual Studio, HoloLens, realidade misturada, depurar, implantar
 ms.openlocfilehash: b7e6a8d538670a53de20a2f3a2850639e756da1a
-ms.sourcegitcommit: 05fa75193059a2dac4b580a9eef7b6c4bb64d8d7
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74830836"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79376103"
 ---
 # <a name="using-visual-studio-to-deploy-and-debug"></a>Como usar o Visual Studio para implantação e depuração
 
@@ -136,7 +136,7 @@ Use o Visual Studio para depurar um aplicativo universal do Windows que é insta
 6. Escolha o tipo de código para depuração (Gerenciado, Nativo, Misto)
 7. Clique em **Anexar** ou **Iniciar**
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 * [Instalar as ferramentas](install-the-tools.md)
 * [Usando o emulador do HoloLens](using-the-hololens-emulator.md)
 * [Como implantar e depurar aplicativos UWP (Plataforma Universal do Windows)](https://msdn.microsoft.com/library/windows/apps/xaml/mt613243.aspx)
