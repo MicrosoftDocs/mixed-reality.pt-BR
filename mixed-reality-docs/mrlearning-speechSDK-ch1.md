@@ -1,198 +1,167 @@
 ---
-title: TUTORIAIS dos serviços de fala do Azure-1. Integrando e usando o reconhecimento de fala e a transcrição
-description: Conclua este curso para aprender a implementar o SDK de fala do Azure em um aplicativo de realidade misturada.
+title: Tutoriais de Serviços de Fala do Azure – 1. Integrar e usar a transcrição e o reconhecimento de fala
+description: Conclua este curso para saber como implementar o SDK de Fala do Azure em um aplicativo de realidade misturada.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realidade misturada, unity, tutorial, hololens
-ms.openlocfilehash: 25e5aa05839845620a23c3dba6698ac7b5854d6d
-ms.sourcegitcommit: bd536f4f99c71418b55c121b7ba19ecbaf6336bb
-ms.translationtype: MT
+ms.localizationpriority: high
+ms.openlocfilehash: a72eb808adbc14df65c55e694ea985d97f9ec24c
+ms.sourcegitcommit: 5b2ba01aa2e4a80a3333bfdc850ab213a1b523b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77553964"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79032539"
 ---
-# <a name="1-integrating-and-using-speech-recognition-and-transcription"></a>1. integrando e usando o reconhecimento de fala e a transcrição
+# <a name="1-integrating-and-using-speech-recognition-and-transcription"></a>1. Integrar e usar a transcrição e o reconhecimento de fala
 
 ## <a name="overview"></a>Visão geral
 
-Este tutorial cria um aplicativo de realidade misturada que explora o uso do SDK de fala dos serviços cognitivas do Azure com o HoloLens 2. Ao concluir esta série de tutoriais, você poderá usar o microfone do dispositivo para transcrever a fala em texto em tempo real, traduzir sua fala em outras linguagens e aproveitar o recurso de intenção do SDK de fala para entender os comandos de voz usando artificial relacionada.
+
+Nesta série de tutoriais, você criará um aplicativo de realidade misturada que explora o uso dos Serviços de Fala do Azure com o HoloLens 2. Ao concluir esta série de tutoriais, você poderá usar o microfone do dispositivo para transcrever a conversão de fala em texto em tempo real, traduzir sua fala em outras linguagens e aproveitar o recurso de reconhecimento de Intenção para entender os comandos de voz usando inteligência artificial.
 
 ## <a name="objectives"></a>Objetivos
 
-* Saiba como integrar o SDK de fala do Azure em um aplicativo do HoloLens 2
-* Saiba como usar comandos de voz
-* Saiba como usar os recursos de fala para texto
+* Saiba como integrar os Serviços de Fala do Azure com um aplicativo do HoloLens 2
+* Saiba como usar o reconhecimento de fala para transcrever texto
 
-## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
+## <a name="prerequisites"></a>Pré-requisitos
 
 >[!TIP]
->Se você ainda não concluiu a série de [tutoriais de introdução](mrlearning-base.md) , é recomendável que você conclua esses tutoriais primeiro.
+>Se você ainda não concluiu a série de [Tutoriais de introdução](mrlearning-base.md), recomendamos que você a conclua primeiro.
 
 * Um PC com Windows 10 configurado com as [ferramentas corretas instaladas](install-the-tools.md)
 * SDK do Windows 10 10.0.18362.0 ou posterior
 * Alguma habilidade básica de programação em C#
 * Um dispositivo HoloLens 2 [configurado para desenvolvimento](using-visual-studio.md#enabling-developer-mode)
+* <a href="https://docs.unity3d.com/Manual/GettingStartedInstallingHub.html" target="_blank">Hub do Unity</a> com o Unity 2019.2.X instalado e o módulo de suporte de Build da Plataforma Universal do Windows adicionado
 
->[!IMPORTANT]
+> [!IMPORTANT]
 > A versão recomendada do Unity para esta série de tutoriais é o Unity 2019.2.X. Ela substitui todos os requisitos de versão do Unity ou as recomendações indicadas nos pré-requisitos vinculados acima.
 
-## <a name="getting-started"></a>Introdução
+## <a name="creating-and-preparing-the-unity-project"></a>Como criar e preparar o projeto do Unity
 
-1. Inicie o Unity e crie um novo projeto. Insira o nome do projeto módulo de aprendizagem do SDK de fala. Escolha um local para onde salvar o projeto. Clique em criar projeto.
+Nesta seção, você criará um projeto do Unity e o deixará pronto para o desenvolvimento do MRTK.
 
-    ![Module2Chapter3step1im](images/module4chapter1step1im.PNG)
+Para isso, primeiro siga [Inicializar seu projeto e o primeiro aplicativo](mrlearning-base-ch1.md), excluindo as instruções [Criar seu aplicativo para o dispositivo](mrlearning-base-ch1.md#build-your-application-to-your-device), que incluem as seguintes etapas:
 
-    >[!NOTE]
-    >Verifique se o modelo está definido como 3D, conforme mostrado na imagem acima.
+1. [Criar um projeto do Unity](mrlearning-base-ch1.md#create-new-unity-project) e dar a ele um nome adequado, por exemplo, *Tutoriais do MRTK*
 
-2. Baixe a [versão 2.3.0 do pacote](https://github.com/microsoft/MixedRealityToolkit-Unity/releases/download/v2.3.0/Microsoft.MixedReality.Toolkit.Unity.Foundation.2.3.0.unitypackage) do [Kit de ferramentas da realidade mista](https://github.com/microsoft/MixedRealityToolkit-Unity/releases) do Unity Foundation e salve-a em uma pasta em seu computador. Importe o pacote para o projeto do Unity. Para obter instruções detalhadas sobre como fazer isso, consulte os [tutoriais de introdução – lição 2. Inicializando o projeto e o primeiro aplicativo](mrlearning-base-ch1.md).
+2. [Configurar o projeto do Unity para o Windows Mixed Reality](mrlearning-base-ch1.md#configure-the-unity-project-for-windows-mixed-reality)
 
-3. Baixe e importe o [SDK de fala](https://aka.ms/csspeech/unitypackage) do Azure para o pacote de ativos do Unity. Importe o pacote do SDK de fala clicando em ativos, selecionando importar pacote e, em seguida, selecionando pacote personalizado. Localize o pacote do SDK de fala baixado anteriormente e abra-o para iniciar o processo de importação.
+3. [Importar recursos do TextMesh Pro Essential](mrlearning-base-ch1.md#import-textmesh-pro-essential-resources)
 
-    ![mrlearning-Speech-CH1-1-step3a. png](images/mrlearning-speech-ch1-1-step3a.png)
+4. [Importar o Mixed Reality Toolkit](mrlearning-base-ch1.md#import-the-mixed-reality-toolkit)
 
-    ![mrlearning-Speech-CH1-1-step3b. png](images/mrlearning-speech-ch1-1-step3b.png)
+5. [Configurar o projeto do Unity para o Mixed Reality Toolkit](mrlearning-base-ch1.md#configure-the-unity-project-for-the-mixed-reality-toolkit)
 
-4. Na próxima janela pop-up, clique em importar para começar a importar o pacote do SDK de fala. Verifique se todos os itens estão marcados, conforme mostrado na imagem abaixo.
+6. [Adicionar o Mixed Reality Toolkit à cena do Unity](mrlearning-base-ch1.md#configure-the-mixed-reality-toolkit) e dar um nome adequado à cena, por exemplo, *AzureSpeechServices*
 
-    ![mrlearning-Speech-CH1-1-step4. png](images/mrlearning-speech-ch1-1-step4.png)
+Então siga as instruções de [Como configurar os perfis do Mixed Reality Toolkit (Opção de Alterar Exibição de Reconhecimento Espacial)](mrlearning-base-ch2.md#how-to-configure-the-mixed-reality-toolkit-profiles-change-spatial-awareness-display-option) para alterar o perfil de configuração do MRTK para sua cena para o **DefaultHoloLens2ConfigurationProfile** e alterar as opções de exibição para a malha de reconhecimento espacial para **Oclusão**.
 
-5. Baixe os ativos do tutorial:
-    * [MRTK. HoloLens2. Unity. tutoriais. assets. GettingStarted. 2.3.0.2. unitypackage](https://github.com/microsoft/MixedRealityLearning/releases/download/getting-started-v2.3.0.2/MRTK.HoloLens2.Unity.Tutorials.Assets.GettingStarted.2.3.0.2.unitypackage)
-    * [SpeechSDKAssets. unitypackage](https://github.com/microsoft/MixedRealityLearning/releases/download/Speech_2/SpeechSDKAssets.unitypackage) (versão 1,2)
+> [!CAUTION]
+> Conforme mencionado nas instruções de [Como configurar o projeto do Unity para o Mixed Reality Toolkit](mrlearning-base-ch1.md#configure-the-unity-project-for-the-mixed-reality-toolkit) vinculadas acima, é altamente recomendável não habilitar o MSBuild para o Unity.
 
-    O pacote de ativos do SpeechSDKAssets é uma coleção de ativos e scripts desenvolvidos para esta série de tutoriais para demonstrar o uso prático do SDK de fala do Azure. É um terminal de comando de voz que, em última instância, fará interface com a experiência de montagem do Rocket Launcher desenvolvida nos [tutoriais de introdução – lição 7. Criando um aplicativo de exemplo de módulo lunar](mrlearning-base-ch6.md).
+## <a name="configuring-the-speech-commands-start-behavior"></a>Como configurar o comportamento de início dos comandos de fala
 
-6. Importe os dois pacotes de ativos de tutorial para seu projeto do Unity seguindo as etapas semelhantes que você levou para importar o kit de ferramentas e o SDK de fala misturados da realidade.
+Como você usará o SDK de Fala para reconhecimento de fala e transcrição, será necessário configurar os comandos de fala MRTK para que eles não interfiram na funcionalidade do SDK de Fala. Para conseguir isso, você pode alterar o comportamento de início dos comandos de fala de Início Automático para Início Manual.
 
-7. Configure o MRTK (Kit de ferramentas de realidade mista).
+Com o objeto **MixedRealityToolkit** selecionado na janela Hierarquia, na janela Inspetor, selecione a guia **Entrada**, clone o **DefaultHoloLens2InputSystemProfile** e o **DefaultMixedRealitySpeechCommandsProfile** e, em seguida, altere o **Comportamento de Início** dos comandos de fala para **Início Manual**:
 
-    Para fazer isso, clique no painel do kit de ferramentas da realidade misturada na parte superior da janela e, em seguida, selecione Adicionar à cena e configurar.
+![mrlearning-speech](images/mrlearning-speech/tutorial1-section2-step1-1.png)
 
-    ![mrlearning-Speech-CH1-1-step7a. png](images/mrlearning-speech-ch1-1-step7a.png)
+> [!TIP]
+> Para obter um lembrete sobre como clonar e configurar perfis de MRTK, você pode consultar as instruções [Como configurar os Perfis do Mixed Reality Toolkit (Opção de Alterar Exibição do Reconhecimento Espacial)](mrlearning-base-ch2.md#how-to-configure-the-mixed-reality-toolkit-profiles-change-spatial-awareness-display-option).
 
-    Com o objeto MixedRealityToolkit selecionado em sua hierarquia de cena, na janela Inspetor, selecione DefaultHoloLens2ConfigurationProfile para torná-lo o perfil ativo do kit de ferramentas de realidade misturada.
+## <a name="configuring-the-capabilities"></a>Como configurar as funcionalidades
 
-    ![mrlearning-Speech-CH1-1-step7b. png](images/mrlearning-speech-ch1-1-step7b.png)
+No menu do Unity, selecione **Editar** > **Configurações de projeto...** para abrir a janela Configurações do Player, então localize a seção **Player** >  **Configurações de Publicação**:
 
-8. Sua cena agora tem vários novos itens da MRTK. Salve sua cena com um nome diferente clicando em "arquivo" e, em seguida, em "salvar como" e nomeie sua cena como SpeechScene.
+![mrlearning-speech](images/mrlearning-speech/tutorial1-section3-step1-1.png)
 
-    >[!NOTE]
-    >Se você pressionar reproduzir em sua cena depois de adicionar o MRTK ao seu projeto e ele não entrar no modo de reprodução, talvez seja necessário reiniciar o Unity.
+Em **Configurações de Publicação**, role para baixo até a seção **Funcionalidades** e verifique se as funcionalidades **InternetClient**, **Microphone** e **SpatialPerception**, que você habilitou ao criar o projeto no início do tutorial, estão habilitadas. Em seguida, habilite as funcionalidades **InternetClientServer** e **PrivateNetworkClientServer**:
 
-9. Com o objeto MixedRealityToolkit selecionado em sua hierarquia de cena, clique em copiar & Personalizar no painel inspetor para abrir o pop-up perfil de clonagem. No pop-up perfil de clonagem, insira um nome adequado para seu perfil personalizado, por exemplo, HoloLens2ConfigurationProfile personalizado. Clique em clonar para criar seu perfil de configuração personalizado e defini-lo como o perfil ativo.
+![mrlearning-speech](images/mrlearning-speech/tutorial1-section3-step1-2.png)
 
-    ![mrlearning-Speech-CH1-1-Step9. png](images/mrlearning-speech-ch1-1-step9.png)
+## <a name="importing-the-tutorial-assets"></a>Como importar os ativos do tutorial
 
-10. Também no painel Inspetor (com o objeto MixedRealityToolkit selecionado em sua hierarquia), desabilite o sistema de diagnóstico desmarcando a caixa à direita de habilitar o sistema de diagnóstico.
+Baixe e **importe** os seguintes pacotes personalizados do Unity **na ordem em que estão listados**:
 
-    ![mrlearning-Speech-CH1-1-step10. png](images/mrlearning-speech-ch1-1-step10.png)
+* [Microsoft.CognitiveServices.Speech.N.N.N.unitypackage](https://aka.ms/csspeech/unitypackage) (versão mais recente)
+* [MRTK.HoloLens2.Unity.Tutorials.Assets.GettingStarted.2.3.0.2.unitypackage](https://github.com/microsoft/MixedRealityLearning/releases/download/getting-started-v2.3.0.2/MRTK.HoloLens2.Unity.Tutorials.Assets.GettingStarted.2.3.0.2.unitypackage)
+* [MRTK.HoloLens2.Unity.Tutorials.Assets.AzureSpeechServices.2.3.0.0.unitypackage](https://github.com/microsoft/MixedRealityLearning/releases/download/azure-speech-services-v2.3.0.0/MRTK.HoloLens2.Unity.Tutorials.Assets.AzureSpeechServices.2.3.0.0.unitypackage)
 
-11. Neste tutorial, estamos usando os comandos de fala de entrada para reconhecimento e transcrição de fala. Vamos clonar o perfil de entrada para fazer alterações nas configurações de fala.
+> [!TIP]
+> Para obter um lembrete sobre como importar um pacote personalizado do Unity, você pode consultar as instruções [Importar o Mixed Reality Toolkit](mrlearning-base-ch1.md#import-the-mixed-reality-toolkit).
 
-    Com o objeto MixedRealityToolkit ainda selecionado na sua hierarquia de cena, clique no botão clonar pequeno no painel inspetor para abrir o pop-up perfil de clonagem. No pop-up perfil de clonagem, insira um nome adequado para seu perfil personalizado, por exemplo, HoloLens2InputSystemProfile personalizado, e clique em clonar para criar seu perfil de sistema de entrada personalizado e defini-lo como o perfil ativo.
+Depois de importar os ativos do tutorial, a janela do projeto deverá ser semelhante a esta:
 
-    ![mrlearning-Speech-CH1-1-step11. png](images/mrlearning-speech-ch1-1-step11.png)
+![mrlearning-speech](images/mrlearning-speech/tutorial1-section4-step1-1.png)
 
-12. Depois que o perfil de entrada for clonado, expanda a seção fala e siga o mesmo processo da etapa anterior para clonar o perfil de comandos de fala.
+## <a name="preparing-the-scene"></a>Preparando a cena
 
-    ![mrlearning-Speech-CH1-1-step12. png](images/mrlearning-speech-ch1-1-step12.png)
+Nesta seção, você vai preparar a cena adicionando o tutorial pré-fabricado e configurar o componente do Controlador Lunarcom (Script) para controlar sua cena.
 
-13. Na seção fala, vá para configurações gerais e altere comportamento de início para início manual.
+Na janela Projeto, navegue até a pasta **Ativos** > **MRTK.Tutoriais.AzureSpeechServices** > **Pré-fabricados** e arraste o pré-fabricado **Lunarcom** para a janela Hierarquia para adicioná-lo à sua cena:
 
-    ![mrlearning-Speech-CH1-1-step13. png](images/mrlearning-speech-ch1-1-step13.png)
+![mrlearning-speech](images/mrlearning-speech/tutorial1-section5-step1-1.png)
 
-14. No painel projeto, expanda a pasta Lunarcom e arraste o Lunarcom_Base pré-fabricado para sua hierarquia de cena.
+Com o objeto **Lunarcom** ainda selecionado na janela Hierarquia, na janela Inspetor, use o botão **Adicionar Componente** para adicionar o componente **Controlador do Lunarcom (Script)** ao objeto Lunarcom:
 
-    ![mrlearning-Speech-CH1-1-step14. png](images/mrlearning-speech-ch1-1-step14.png)
+![mrlearning-speech](images/mrlearning-speech/tutorial1-section5-step1-2.png)
 
-15. Selecione o objeto Lunarcom_Base em sua hierarquia e verifique se a posição está definida como x = 0, y = 0 e z = 0, bem como a rotação definida como x = 0, y = 0 e z = 0. Defina a escala como leitura x = 0.008, y = 0.008 e z = 0,01.
+> [!NOTE]
+> O componente Controlador do Lunarcom (Script) não faz parte do MRTK. Ele foi fornecido com os ativos deste tutorial.
 
-    ![Module4Chapter1step12im](images/module4chapter1step12im.PNG)
+Com o objeto **Lunarcom** ainda selecionado, expanda-o para revelar seus objetos filho e, em seguida, arraste o objeto **Terminal** para o campo **Terminal** do componente Controlador do Lunarcom (Script):
 
-16. Clique em Adicionar componente e procure e selecione controlador Lunarcom. Esse script está incluído no pacote de ativos do Lunarcom que você importou na etapa 6.
+![mrlearning-speech](images/mrlearning-speech/tutorial1-section5-step1-3.png)
 
-    ![Module4Chapter1step13im](images/module4chapter1step13im.PNG)
+Com o objeto **Lunarcom** ainda selecionado, expanda o objeto Terminal para revelar seus objetos filho e, em seguida, arraste o objeto **ConnectionLight** para o campo **Luz de Conexão** do componente Controlador do Lunarcom (Script) e o objeto **OutputText** para o campo **Texto de Saída**:
 
-17. Para conectar nosso aplicativo aos serviços cognitivas do Azure, você deve inserir uma chave de assinatura (também conhecida como chave de API) para o serviço de fala. Siga as instruções [aqui](https://docs.microsoft.com/azure/cognitive-services/speech-service/get-started) para obter uma chave de assinatura gratuita. Depois de obter a chave de assinatura, insira-a no campo chave de API do serviço de fala do componente LunarcomController no painel Inspetor, conforme mostrado na imagem abaixo.
+![mrlearning-speech](images/mrlearning-speech/tutorial1-section5-step1-4.png)
 
-18. Insira a região que você escolheu ao se inscrever na chave de assinatura no campo região do serviço de fala do componente LunarcomController no painel inspetor. Por exemplo, para a região oeste dos EUA, digite "westus".
+Com o objeto **Lunarcom** ainda selecionado, expanda o objeto Botões para revelar seus objetos filho e, em seguida, na janela Inspetor, expanda a lista **Botões**, defina seu **Tamanho** como 3 e arraste os objetos **MicButton**, **SatelliteButton** e **RocketButton** para os campos 0, 1 e 2 do **Elemento**, respectivamente:
 
-    ![Module4Chapter1step15im](images/module4chapter1step15im.PNG)
+![mrlearning-speech](images/mrlearning-speech/tutorial1-section5-step1-5.png)
 
-19. Em sua hierarquia, expanda o objeto Lunarcom_Base clicando na seta à esquerda dele. Em seguida, faça o mesmo para seu objeto filho "terminal", conforme mostrado na imagem abaixo.
+## <a name="connecting-the-unity-project-to-the-azure-resource"></a>Como conectar o projeto do Unity ao recurso do Azure
 
-20. Enquanto Lunarcom_Base estiver selecionado, clique e arraste Lunarcom texto da hierarquia para o slot de texto de saída no componente LunarcomController no painel Inspetor, conforme mostrado na imagem abaixo.
+Para usar os Serviços de Fala do Azure, você precisa criar um recurso do Azure e obter uma chave de API para o Serviço de Fala. Siga as instruções de [Experimentar o serviço de Fala gratuitamente](https://docs.microsoft.com/azure/cognitive-services/speech-service/get-started) e tome nota da sua região de serviço (também conhecida como Localização) e a chave de API (também conhecida como Key1 ou Key2).
 
-21. Faça a mesma coisa com o objeto de terminal no slot de terminal e no objeto de luz de conexão para o slot do controlador de luz de conexão.
+Na janela Hierarquia, selecione o objeto **Lunarcom**, então, na janela Inspetor, localize a seção **Credenciais do SDK de Fala** do componente **Controlador do Lunarcom (Script)** e configure-a da seguinte maneira:
 
-    ![Module4Chapter1step18im](images/module4chapter1step18im.PNG)
+* No campo **Chave de API do Serviço de Fala**, insira sua chave de API (Key1 ou Key2)
+* No campo **Região do Serviço de Fala**, insira sua região de serviço (Localização) usando letras minúsculas e espaços removidos
 
-22. Clique na seta ao lado da seção de botões Lunarcom do script LunarcomController no painel Inspetor e altere o tamanho para 3. Pressione Enter ou Return. Isso faz com que três novos campos de elemento sejam exibidos.
+![mrlearning-speech](images/mrlearning-speech/tutorial1-section6-step1-1.png)
 
-    ![Module4Chapter1step19im](images/module4chapter1step19im.PNG)
+## <a name="using-speech-recognition-to-transcribe-speech"></a>Como usar o reconhecimento de fala para transcrever a fala
 
-23. Expanda os botões Lunarcom clicando na seta ao lado dele em sua hierarquia e usando o mesmo processo acima, arraste o MIC, o satélite e o Rocket Gameobjects para o elemento 0, 1 e 2 referências, respectivamente, no componente LunarcomController no Painel de Inspetor.
+Na janela Hierarquia, selecione o objeto **Lunarcom** e, na janela Inspetor, use o botão **Adicionar Componente** para adicionar o componente **Reconhecedor de Fala do Lunarcom (Script)** ao objeto Lunarcom:
 
-    ![Module4Chapter1step18im](images/module4chapter1step20im.PNG)
+![mrlearning-speech](images/mrlearning-speech/tutorial1-section7-step1-1.png)
 
-24. Selecione o objeto Lunarcom_Base "em sua hierarquia. Clique em Adicionar componente no painel Inspetor e procure e selecione reconhecedor de fala Lunarcom. Repita as mesmas etapas para adicionar o Lunarcom Wake Word Recognizer.
+> [!NOTE]
+> O componente Reconhecedor de Fala do Lunarcom (Script) não faz parte do MRTK. Ele foi fornecido com os ativos deste tutorial.
 
-    ![Module4Chapter1step18im](images/module4chapter1step21im.PNG)
+Se agora você entrar no modo de Jogo, poderá testar o reconhecimento de fala pressionando primeiro o botão de microfone:
 
-25. No slot de palavra de ativação, digite ativar terminal. No slot de palavras ignorar, digite fechar terminal.
+![mrlearning-speech](images/mrlearning-speech/tutorial1-section7-step1-2.png)
 
-    ![Module4Chapter1step18im](images/module4chapter1step22im.PNG)
+Em seguida, supondo que o computador tenha um microfone, quando você disser algo, sua fala será transcrita no painel do terminal:
 
-## <a name="build-your-application-to-your-device"></a>Crie o aplicativo para seu dispositivo
+![mrlearning-speech](images/mrlearning-speech/tutorial1-section7-step1-3.png)
 
-1. Abra a janela configurações de compilação novamente indo para arquivo > configurações de Build.
 
-    ![images/mrlearning-Speech-CH1-2-etapa 1](images/mrlearning-speach-ch1-2-step1.jpg)
-
-2. Verifique se a cena que você deseja experimentar está na lista de "Cenas em Compilação", clicando no botão "Adicionar Cenas Abertas".
-
-3. Pressione o botão Configurações do Player e vá para publicando configurações. Em recursos, habilite: Internet, servidor de cliente de Internet, servidor cliente de rede privada, microfone e percepção espacial.
-
-4. Nas mesmas configurações do Player, vá para configurações de XR e selecione a realidade virtual com suporte para ativado.
-
-5. Pressione o botão Compilar para iniciar o processo de compilação.
-
-    ![mrlearning-Speech-CH1-2-Step5](images/mrlearning-speach-ch1-2-step5.jpg)
-
-6. Crie e dê um nome para uma nova pasta para o seu aplicativo. Na imagem abaixo, uma pasta com o nome "Aplicativo" foi criada para armazenar o aplicativo. Clique em "Selecionar Pasta" para começar a compilar na pasta recém-criada. Após a compilação, você pode fechar a janela "Configurações de Compilação" no Unity.
-
-    ![mrlearning-Speech-CH1-2-etapa 6](images/mrlearning-speach-ch1-2-step6.jpg)
-
-    >[!NOTE]
-    >se a compilação falhar, tente compilar novamente ou reiniciar o Unity e compilar novamente. Se você vir um erro como "erro: CS0246 = o tipo ou nome do namespace" XX "não pôde ser encontrado (está faltando uma diretiva using ou uma referência de assembly?)", talvez seja necessário instalar o [SDK do Windows 10 (10.0.18362.0)](<https://developer.microsoft.com//windows/downloads/windows-10-sdk>)
-
-7. Depois que a compilação for concluída, abra a pasta recém-criada que contém os arquivos do novo aplicativo. Clique duas vezes no arquivo de solução ". sln" para abrir o arquivo de solução no Visual Studio.
-
-    >[!NOTE]
-    >Certifique-se de abrir a pasta recém-criada (ou seja, a pasta "aplicativo", se seguir as convenções de nomenclatura das etapas anteriores), pois haverá um arquivo. sln nomeado de forma semelhante fora dessa pasta que seja diferente do arquivo. sln dentro da pasta de compilação. 
-
-    ![mrlearning-Speech-CH1-2-Step7](images/mrlearning-speach-ch1-2-step7.jpg)
-
-    >[!NOTE]
-    >Se o Visual Studio solicitar que você instale novos componentes, verifique se todos os componentes de pré-requisito estão instalados conforme especificado na [página "instalar as ferramentas"](install-the-tools.md)
-
-8. Conecte o HoloLens 2 ao computador usando o cabo USB. Embora essas instruções pressuponham que você esteja implantando um teste com um dispositivo HoloLens 2, também é possível optar por implantar o [emulador do HoloLens 2](using-the-hololens-emulator.md) ou criar um [pacote do aplicativo para sideload](<https://docs.microsoft.com//windows/uwp/packaging/packaging-uwp-apps>).
-
-9. Antes de compilar para seu dispositivo, verifique se ele está no Modo de Desenvolvedor. Se for a primeira vez que você implanta o HoloLens 2, o Visual Studio pode solicitar o emparelhamento do seu HoloLens 2 com um pin. Siga [estas instruções](https://docs.microsoft.com//windows/mixed-reality/using-visual-studio) se você precisar ativar o modo de desenvolvedor ou emparelhar com o Visual Studio.
-
-10. Configure o Visual Studio para compilar seu HoloLens 2, selecionando a configuração "Versão" e a arquitetura "ARM".
-
-    ![mrlearning-Speech-CH1-2-step10](images/mrlearning-speach-ch1-2-step10.jpg)
-
-11. A etapa final é compilar para seu dispositivo, selecionando Depurar > Iniciar sem Depuração. Selecionar "Iniciar sem Depuração" fará com que o aplicativo inicie imediatamente em seu dispositivo após uma compilação bem-sucedida, mas sem exibir informações de Depuração no Visual Studio. Isso também significa que você pode desconectar o cabo USB enquanto o aplicativo estiver em execução no HoloLens 2 sem interromper o aplicativo. Você também pode selecionar Compilação > Implantar Solução para implantar seu dispositivo sem iniciar o aplicativo automaticamente.
-
-    ![mrlearning-Speech-CH1-2-step11. JPG](images/mrlearning-speach-ch1-2-step11.jpg)
+> [!CAUTION]
+> O aplicativo precisa se conectar ao Azure, portanto, verifique se o computador/dispositivo está conectado à Internet.
 
 ## <a name="congratulations"></a>Parabéns
 
-Você configurou o reconhecimento de voz em seu aplicativo, da plataforma Azure. Execute o aplicativo para garantir que todas as funções e recursos estejam funcionando corretamente. Comece dizendo a palavra de ativação que você digitou na etapa 25, ativar terminal. Selecione o botão de microfone para iniciar o reconhecimento de voz. Comece a falar. Você verá suas palavras transcritas no terminal enquanto fala. Pressione o botão de microfone uma segunda vez para parar o reconhecimento de voz. Diga ignorar terminal para ocultar o terminal Lunarcom. Na próxima lição, você aprenderá a alternar dinamicamente para usar o reconhecimento de voz alimentada por dispositivo em situações em que o SDK de fala do Azure não está disponível devido ao HoloLens 2 estar offline.
+Você implementou o reconhecimento de fala da plataforma Azure. Execute o aplicativo em seu dispositivo para garantir que o recurso esteja funcionando corretamente.
 
-[Próximo tutorial: 2. adicionando um modo offline para conversão de fala em texto local](mrlearning-speechSDK-ch2.md)
+No próximo tutorial, você aprenderá a executar comandos usando o reconhecimento de fala do Azure.
+
+[Próximo tutorial: 2. Como usar o reconhecimento de fala para executar comandos](mrlearning-speechSDK-ch2.md)

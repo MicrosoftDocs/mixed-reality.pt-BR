@@ -1,45 +1,57 @@
 ---
-title: TUTORIAIS dos serviços de fala do Azure-2. Adicionando um modo offline para tradução de fala em texto local
-description: Conclua este curso para aprender a implementar o SDK de fala do Azure em um aplicativo de realidade misturada.
+title: Tutoriais de Serviços de Fala do Azure – 2. Adicionar um modo offline para tradução de fala em texto local
+description: Conclua este curso para saber como implementar o SDK de Fala do Azure em um aplicativo de realidade misturada.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 06/27/2019
 ms.topic: article
 keywords: realidade misturada, unity, tutorial, hololens
-ms.openlocfilehash: 962d7d4750cf59fe56de4af9088c90e8ecd0aa16
-ms.sourcegitcommit: b6b76275fad90df6d9645dd2bc074b7b2168c7c8
-ms.translationtype: MT
+ms.localizationpriority: high
+ms.openlocfilehash: 75ddce9063bb9d33f5fe2343fe30178222a5f8ac
+ms.sourcegitcommit: 5b2ba01aa2e4a80a3333bfdc850ab213a1b523b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/11/2019
-ms.locfileid: "73913213"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79031619"
 ---
-# <a name="2-adding-an-offline-mode-for-local-speech-to-text-translation"></a>2. adicionando um modo offline para conversão de fala em texto local
+# <a name="2-using-speech-recognition-to-execute-commands"></a>2. Como usar o reconhecimento de fala para executar comandos
 
-Neste tutorial, adicionaremos um modo offline que permite executar a tradução de fala para texto local quando não for possível se conectar ao serviço do Azure. Também *simularemos* um estado desconectado.
+Neste tutorial, você adicionará a capacidade de executar comandos usando o reconhecimento de fala do Azure, que permitirá que você faça algo com base na palavra ou na frase que você definir.
+
+## <a name="objectives"></a>Objetivos
+
+* Saiba como o reconhecimento de fala do Azure pode ser usado para executar comandos
 
 ## <a name="instructions"></a>Instruções
 
-1. Selecione o objeto Lunarcom_Base na hierarquia.
+Na janela Hierarquia, selecione o objeto **Lunarcom** e, na janela Inspetor, use o botão **Adicionar Componente** para adicionar o componente **Reconhecedor de Palavra de Despertar do Lunarcom (Script)** ao objeto Lunarcom e configure-o da seguinte maneira:
 
-2. Clique em Adicionar componente no painel inspetor. Procure e selecione o reconhecimento offline do Lunarcom.
+* No campo **Palavra de Despertar**, insira uma frase adequada, por exemplo, _Ativar o terminal_.
+* No campo **Palavra de Ignorar**, insira uma frase adequada, por exemplo, _Ignorar o terminal_.
 
-    ![Module4Chapter2step1im](images/module4chapter2step1im.PNG)
+![mrlearning-speech](images/mrlearning-speech/tutorial2-section1-step1-1.png)
 
-3. Clique na lista suspensa no LunarcomOfflineRecognizer e selecione habilitado. Este programa o projeto para agir como o usuário não tem uma conexão.
+> [!NOTE]
+> O componente Reconhecedor de Palavra de Despertar do Lunarcom (Script) não faz parte do MRTK. Ele foi fornecido com os ativos deste tutorial.
 
-    ![Module4Chapter2step1im](images/module4chapter2step2im.PNG)
+Se agora você inserir o modo de jogo, como no tutorial anterior, o painel do terminal será habilitado por padrão, mas você poderá desabilitá-lo dizendo a Palavra de Ignorar, **Ignorar terminal**:
 
-4. Pressione reproduzir no editor do Unity e teste-o. Pressione o microfone no canto inferior esquerdo da cena e comece a falar.
+![mrlearning-speech](images/mrlearning-speech/tutorial2-section1-step1-2.png)
 
-    >[!NOTE]
-    >Como estamos offline, a funcionalidade wake Word foi desabilitada. Você precisará clicar fisicamente no microfone toda vez que desejar que sua fala seja reconhecida quando estiver offline.
+E habilitá-la novamente dizendo a Palavra de Despertar, **Ativar terminal**:
 
-    Veja abaixo um exemplo de como seria a sua cena.
+![mrlearning-speech](images/mrlearning-speech/tutorial2-section1-step1-3.png)
 
-    ![Module4Chapter2exampleim](images/module4chapter2exampleim.PNG)
+> [!CAUTION]
+> O aplicativo precisa se conectar ao Azure, portanto, verifique se o computador/dispositivo está conectado à Internet.
+
+> [!TIP]
+> Se você prever que frequentemente não poderá se conectar ao Azure, também poderá implementar comandos de fala usando o MRTK de acordo com as instruções [Habilitar Comandos de Voz](mrlearning-base-ch5.md#enabling-voice-commands).
 
 ## <a name="congratulations"></a>Parabéns
 
-O modo offline foi habilitado. Agora, quando você estiver offline, ainda poderá trabalhar em seu projeto com o Speech-SDK!
+Você implementou comandos de fala da plataforma Azure. Execute o aplicativo em seu dispositivo para garantir que o recurso esteja funcionando corretamente.
 
-[Próximo tutorial: 3. adicionando o componente de tradução de fala dos serviços cognitivas do Azure](mrlearning-speechSDK-ch3.md)
+No próximo tutorial, você aprenderá a traduzir a fala usando a Tradução de Fala do Azure.
+
+[Próximo tutorial: 3. Adicionar o componente de tradução de fala dos Serviços Cognitivos do Azure](mrlearning-speechSDK-ch3.md)

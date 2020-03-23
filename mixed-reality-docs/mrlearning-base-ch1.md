@@ -7,12 +7,12 @@ ms.date: 11/01/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: realidade misturada, unity, tutorial, hololens
-ms.openlocfilehash: 9c219313ad6e73cde78efd8e5e718a466ebd6137
-ms.sourcegitcommit: bd536f4f99c71418b55c121b7ba19ecbaf6336bb
+ms.openlocfilehash: 56adb4bfc66768684c8269c0f0cafd70c486ea8a
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77554314"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79376203"
 ---
 # <a name="2-initializing-your-project-and-first-application"></a>2. Inicializar o projeto e seu primeiro aplicativo
 
@@ -236,6 +236,9 @@ Configure o Visual Studio para o HoloLens 2 selecionando a configuração **Mest
 
 ![mrlearning-base](images/mrlearning-base/tutorial1-section7-step2-2.png)
 
+> [!NOTE]
+> Se você não vir o dispositivo como uma opção, talvez seja necessário alterar o projeto de inicialização padrão do projeto IC2Lpp para seu Projeto UWP. No **Gerenciador de Soluções**, clique com o botão direito do mouse em **nomedoseuprojeto (Windows Universal)** e selecione **Definir como Projeto de Inicialização**. 
+
 Conecte o HoloLens 2 ao seu computador.
 
 > [!IMPORTANT]
@@ -257,6 +260,6 @@ Para implantar em seu dispositivo sem iniciar o aplicativo automaticamente, sele
 Você acabou de implantar seu primeiro aplicativo do HoloLens 2. Enquanto caminha, você deverá ver uma malha de mapeamento espacial cobrindo todas as superfícies que foram percebidas pelo HoloLens 2. Além disso, você deverá ver indicadores em suas mãos e seus dedos para o acompanhamento da mão e um contador da taxa de quadros para monitorar o desempenho do aplicativo. Essas são apenas algumas das partes fundamentais predefinidas no Kit de ferramentas de realidade misturada. Nos próximos tutoriais, você começará a adicionar mais conteúdo e interatividade à cena, de modo a explorar totalmente as funcionalidades do HoloLens 2 e do Kit de Ferramentas de Realidade Misturada.
 
 > [!NOTE]
-> No aplicativo, note o criador de perfil de Diagnóstico; você pode ocultá-lo ou exibi-lo usando o comando de fala **Ativar/Desativar Diagnóstico**. No entanto, geralmente é recomendável manter o criador de perfil visível o tempo todo durante o desenvolvimento para entender quando as alterações no aplicativo podem impactar o desempenho, por exemplo, o aplicativo HoloLens 2 deve [ser executado continuamente a 60 FPS](understanding-performance-for-mixed-reality.md).
+> No aplicativo, note o criador de perfil de Diagnóstico; você pode alternar sua visibilidade usando o comando de fala **Alternar Diagnóstico**. No entanto, geralmente é recomendável manter o criador de perfil visível o tempo todo durante o desenvolvimento para entender quando as alterações no aplicativo podem impactar o desempenho, por exemplo, o aplicativo HoloLens 2 deve [ser executado continuamente a 60 FPS](understanding-performance-for-mixed-reality.md).
 
 [Próximo tutorial: 3. Criar a interface do usuário e configurar o Kit de Ferramentas de Realidade Misturada](mrlearning-base-ch2.md)
