@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 2/28/2020
 ms.topic: article
 keywords: OpenXR, Khronos, BasicXRApp, Windows Mixed Reality OpenXR Developer portal, DirectX, nativo, aplicativo nativo, mecanismo personalizado, middleware, introdução, 101, extensões de visualização
-ms.openlocfilehash: 7a210ce25d1e7c22710f1029aca2ca7f55a8b71c
-ms.sourcegitcommit: 9de2cb11321e6517db69e8c93459a205900a2174
+ms.openlocfilehash: db45308834f920413420f080a35b378f6a55fa49
+ms.sourcegitcommit: 536fd45b48a70bbeca1454cef517ae007225e533
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80163330"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80362026"
 ---
 # <a name="getting-started-with-openxr"></a>Introdução ao OpenXR
 
@@ -50,7 +50,7 @@ Se estiver usando o emulador, a maneira mais fácil de instalar o portal do dese
 
 Certifique-se de [instalar as ferramentas](install-the-tools.md) necessárias para o desenvolvimento do OpenXR, caso ainda não tenha feito isso.
 
-O projeto <a href="https://github.com/Microsoft/OpenXR-SDK-VisualStudio/tree/master/samples/BasicXrApp" target="_blank">BasicXrApp</a> demonstra um exemplo de OpenXR simples com dois arquivos de projeto do Visual Studio, um para um aplicativo de área de trabalho Win32 e outro para um aplicativo UWP HoloLens 2.  Como a solução contém um projeto UWP do HoloLens, você precisará do [plataforma universal do Windows carga de trabalho de desenvolvimento](install-the-tools.md#installation-checklist) instalada no Visual Studio para abri-lo totalmente.
+O projeto <a href="https://github.com/microsoft/OpenXR-MixedReality/tree/master/samples/BasicXrApp" target="_blank">BasicXrApp</a> demonstra um exemplo de OpenXR simples com dois arquivos de projeto do Visual Studio, um para um aplicativo de área de trabalho Win32 e outro para um aplicativo UWP HoloLens 2.  Como a solução contém um projeto UWP do HoloLens, você precisará do [plataforma universal do Windows carga de trabalho de desenvolvimento](install-the-tools.md#installation-checklist) instalada no Visual Studio para abri-lo totalmente.
 
 Observe que, embora os arquivos de projeto Win32 e UWP sejam separados devido a diferenças no empacotamento e na implantação, o código do aplicativo dentro de cada projeto é de 100% o mesmo!
 
@@ -77,7 +77,7 @@ Para adicionar uma referência de pacote NuGet OpenXR. Loader à sua solução C
 1. Clique em OK para aceitar as alterações em seu projeto.
 1. Adicione `#include <openxr/openxr.h>` a um arquivo de origem para começar a usar a API OpenXR.
 
-Para ver um exemplo da API OpenXR em ação, confira o aplicativo de exemplo <a href="https://github.com/Microsoft/OpenXR-SDK-VisualStudio/tree/master/samples/BasicXrApp" target="_blank">BasicXrApp</a> .
+Para ver um exemplo da API OpenXR em ação, confira o aplicativo de exemplo <a href="https://github.com/microsoft/OpenXR-MixedReality/tree/master/samples/BasicXrApp" target="_blank">BasicXrApp</a> .
 
 ### <a name="include-official-openxr-loader-source"></a>Incluir origem do carregador de OpenXR oficial
 
@@ -99,7 +99,7 @@ Para ativar as extensões de visualização no seu PC de destino 2 ou computador
      * Se o seu dispositivo de destino for um PC desktop com um fone de ouvido de imersão anexado, <a href="https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-desktop#set-up-device-portal-on-windows-desktop" target="_blank">siga estas instruções</a> no computador desktop de destino.
   1. Navegue até a guia **OpenXR** no painel esquerdo e habilite **usar o tempo de execução do OpenXR de visualização mais recente**.  Isso habilita o tempo de execução de visualização em seu dispositivo, que tem extensões de visualização ativadas.
 
-Consulte o <a href="https://github.com/Microsoft/OpenXR-MixedReality#openxr-preview-extensions" target="_blank">repositório OpenXR de realidade misturada</a> para obter a documentação dessas extensões de visualização e exemplos de como usá-las.
+Consulte o <a href="https://github.com/microsoft/OpenXR-MixedReality#openxr-preview-extensions" target="_blank">repositório OpenXR de realidade misturada</a> para obter a documentação dessas extensões de visualização e exemplos de como usá-las.
 
 ## <a name="troubleshooting"></a>Solução de problemas
 
