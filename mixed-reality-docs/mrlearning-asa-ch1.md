@@ -7,12 +7,12 @@ ms.date: 02/26/2019
 ms.topic: article
 keywords: realidade misturada, unity, tutorial, hololens
 ms.localizationpriority: high
-ms.openlocfilehash: fa0ebc409fa38f664bdd0966906c6fd77f7a6081
-ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
+ms.openlocfilehash: 47063fbf9a1b9f3a43497a0742deba2c16b53d99
+ms.sourcegitcommit: 536fd45b48a70bbeca1454cef517ae007225e533
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79376143"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80362059"
 ---
 # <a name="1-getting-started-with-azure-spatial-anchors"></a>1. Introdução às Âncoras Espaciais do Azure
 
@@ -47,13 +47,13 @@ No terceiro tutorial, [Exibir feedback de Âncora Espacial do Azure](mrlearning-
 > A versão recomendada do Unity para esta série de tutoriais é o Unity 2019.2.X. Ela substitui todos os requisitos de versão do Unity ou as recomendações indicadas nos pré-requisitos vinculados acima.
 
 ## <a name="creating-the-unity-project"></a>Como criar o projeto do Unity
-<!-- TODO: Consider renaming to 'Creating and preparing the Unity scene and project'-->
+<!-- TODO: Consider renaming to 'Creating and preparing the Unity project'-->
 
 Nesta seção, você criará um projeto do Unity e o deixará pronto para o desenvolvimento do MRTK.
 
 Para isso, primeiro siga [Inicializar seu projeto e o primeiro aplicativo](mrlearning-base-ch1.md), excluindo as instruções [Criar seu aplicativo para o dispositivo](mrlearning-base-ch1.md#build-your-application-to-your-device), que incluem as seguintes etapas:
 
-1. [Criar um projeto do Unity](mrlearning-base-ch1.md#create-new-unity-project) e dar a ele um nome adequado, por exemplo, *Tutoriais do MRTK*.
+1. [Criar um projeto do Unity](mrlearning-base-ch1.md#create-new-unity-project) e dar a ele um nome adequado, por exemplo, *Tutoriais do MRTK*
 
 2. [Configurar o projeto do Unity para o Windows Mixed Reality](mrlearning-base-ch1.md#configure-the-unity-project-for-windows-mixed-reality)
 
