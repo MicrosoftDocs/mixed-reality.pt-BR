@@ -7,18 +7,20 @@ ms.date: 03/26/2019
 ms.topic: article
 keywords: gráficos, cpu, gpu, renderização, coleta de lixo, hololens
 ms.localizationpriority: high
-ms.openlocfilehash: f889d899ba55f4b3040080f6632cd27db86d6fc3
-ms.sourcegitcommit: ee8c7e821cb337cbccd8af64b13ee5f50109a776
+ms.openlocfilehash: 18691ab7993b2802268d3c4ce05532dfa5bd1723
+ms.sourcegitcommit: 9de2cb11321e6517db69e8c93459a205900a2174
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80082073"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80160012"
 ---
 # <a name="performance-recommendations-for-unity"></a>Recomendações de desempenho para o Unity
 
 Este artigo se baseia na discussão descrita em [Recomendações de desempenho para realidade misturada](understanding-performance-for-mixed-reality.md), mas se concentra em aprendizados específicos do ambiente do mecanismo do Unity.
 
-Também é altamente aconselhável que os desenvolvedores examinem o [artigo de configurações de ambiente recomendadas para o Unity](Recommended-settings-for-unity.md). Este artigo traz um conteúdo com algumas das configurações de cena mais importantes para a criação de aplicativos de realidade misturada de alto desempenho. Algumas dessas configurações recomendadas também são realçadas abaixo.
+## <a name="use-recommended-unity-project-settings"></a>Usar configurações de projeto recomendadas do Unity
+
+A primeira etapa mais importante ao otimizar o desempenho de aplicativos de realidade misturada no Unity é verificar se você está usando as [configurações de ambiente recomendadas para o Unity](recommended-settings-for-unity.md). Esse artigo traz um conteúdo com algumas das configurações de cena mais importantes para a criação de aplicativos do Mixed Reality de alto desempenho. Algumas dessas configurações recomendadas também são realçadas abaixo.
 
 ## <a name="how-to-profile-with-unity"></a>Como criar um perfil com o Unity
 
