@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 2/28/2020
 ms.topic: article
 keywords: OpenXR, Khronos, BasicXRApp, DirectX, nativo, aplicativo nativo, mecanismo personalizado, middleware, práticas recomendadas, desempenho, qualidade, estabilidade
-ms.openlocfilehash: c0ddbd0604760ccae34d347e93b918be4aead269
-ms.sourcegitcommit: 536fd45b48a70bbeca1454cef517ae007225e533
+ms.openlocfilehash: 0a0bbd37521be52ec328b4f32e53969c0ec7fef4
+ms.sourcegitcommit: 46bd1a56d272a5880f410751fa8429d65d816431
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80362022"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80549367"
 ---
 # <a name="openxr-app-best-practices"></a>Práticas recomendadas do aplicativo OpenXR
 
@@ -25,8 +25,8 @@ Para obter mais recomendações de desempenho específicas para o HoloLens 2, co
 
 ### <a name="gamma-correct-rendering"></a>Gama-renderização correta
 
-Deve-se ter cuidado para garantir que seu pipeline de renderização seja de gama correto. Ao renderizar para um SwapChain, o formato de exibição de destino de renderização deve corresponder ao formato SwapChain (por exemplo, DXGI_FORMAT_B8G8R8A8_UNORM_SRGB tanto para o formato SwapChain como para a exibição de destino de renderização).
-A exceção é se o pipeline de renderização do aplicativo faz uma conversão manual do sRGB no código do sombreador; nesse caso, o aplicativo deve solicitar um formato de SwapChain sRGB, mas usar o formato linear para a exibição de destino de renderização (por exemplo, a solicitação DXGI_FORMAT_B8G8R8A8_UNORM_SRGB como o formato SwapChain, mas use DXGI_FORMAT_B8G8R8A8_UNORM como a exibição de destino de renderização) para impedir que o conteúdo seja corrigido de gama duplo.
+Deve-se ter cuidado para garantir que seu pipeline de renderização seja de gama correto. Ao renderizar para um SwapChain, o formato de exibição de destino de renderização deve corresponder ao formato SwapChain (por exemplo, `DXGI_FORMAT_B8G8R8A8_UNORM_SRGB` tanto para o formato SwapChain como para a exibição de destino de renderização).
+A exceção é se o pipeline de renderização do aplicativo faz uma conversão manual do sRGB no código do sombreador; nesse caso, o aplicativo deve solicitar um formato de SwapChain sRGB, mas usar o formato linear para a exibição de destino de renderização (por exemplo, solicitar `DXGI_FORMAT_B8G8R8A8_UNORM_SRGB` como o formato SwapChain, mas usar `DXGI_FORMAT_B8G8R8A8_UNORM` como a exibição de destino de renderização) para impedir que o conteúdo seja corrigido duas vezes.
 
 ### <a name="submit-depth-buffer-for-projection-layers"></a>Enviar buffer de profundidade para camadas de projeção
 

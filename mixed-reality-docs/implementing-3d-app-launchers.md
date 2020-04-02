@@ -6,12 +6,12 @@ ms.author: thmignon
 ms.date: 07/12/2018
 ms.topic: article
 keywords: 3D, logotipo, ícone, modelagem, iniciador, iniciador 3D, bloco, cubo ao vivo, link profundo, secondarytile, bloco secundário, UWP
-ms.openlocfilehash: 5d18f699792760c39df4f814bde470fb9f889db7
-ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
+ms.openlocfilehash: 0a2e2177ffa7e381c461a58f373c818c9c5e72c4
+ms.sourcegitcommit: 46bd1a56d272a5880f410751fa8429d65d816431
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926765"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80549387"
 ---
 # <a name="implement-3d-app-launchers-uwp-apps"></a>Implementar iniciadores de aplicativos 3D (aplicativos UWP)
 
@@ -35,19 +35,19 @@ os ativos 3D a serem usados como iniciadores para seu aplicativo devem ser criad
 
 Quando você cria um novo projeto no Visual Studio, ele cria um bloco padrão simples que exibe o nome e o logotipo do seu aplicativo. Para substituir essa representação 2D por um modelo 3D personalizado, edite o manifesto de aplicativo do seu aplicativo para incluir o elemento "MixedRealityModel" como parte de sua definição de bloco padrão. Para reverter para o inicializador 2D, basta remover a definição de MixedRealityModel do manifesto.
 
-### <a name="xml"></a>XML
+### <a name="xml"></a>{1&gt;XML&lt;1}
 
 Primeiro, localize o manifesto do pacote do aplicativo em seu projeto atual. Por padrão, o manifesto será nomeado Package. appxmanifest. Se você estiver usando o Visual Studio, clique com o botão direito do mouse no manifesto no seu visualizador de solução e selecione **Exibir origem** para abrir o XML para edição. 
 
 Na parte superior do manifesto, adicione o esquema uap5 e inclua-o como um namespace ignorável:
 
 ```xml
-<Package xmlns:mp="https://schemas.microsoft.com/appx/2014/phone/manifest" 
-         xmlns:uap="https://schemas.microsoft.com/appx/manifest/uap/windows10" 
-         xmlns:uap2="https://schemas.microsoft.com/appx/manifest/uap/windows10/2" 
-         xmlns:uap5="https://schemas.microsoft.com/appx/manifest/uap/windows10/5"
+<Package xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" 
+         xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" 
+         xmlns:uap2="http://schemas.microsoft.com/appx/manifest/uap/windows10/2" 
+         xmlns:uap5="http://schemas.microsoft.com/appx/manifest/uap/windows10/5"
          IgnorableNamespaces="uap uap2 uap5 mp"
-         xmlns="https://schemas.microsoft.com/appx/manifest/foundation/windows10">
+         xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10">
 ```
 
 Em seguida, especifique o "MixedRealityModel" no bloco padrão para seu aplicativo:
@@ -85,13 +85,13 @@ Uma caixa delimitadora pode ser usada para adicionar opcionalmente uma região d
 O suporte para o atributo da caixa delimitadora será fornecido com a atualização RS4 do Windows como uma propriedade no elemento MixedRealityModel. Para definir uma caixa delimitadora primeiro na parte superior do manifesto do aplicativo, adicione o esquema uap6 e inclua-o como namespaces ignoráveis:
 
 ```xml
-<Package xmlns:mp="https://schemas.microsoft.com/appx/2014/phone/manifest" 
-         xmlns:uap="https://schemas.microsoft.com/appx/manifest/uap/windows10" 
-         xmlns:uap2="https://schemas.microsoft.com/appx/manifest/uap/windows10/2" 
-         xmlns:uap5="https://schemas.microsoft.com/appx/manifest/uap/windows10/5"
-         xmlns:uap6="https://schemas.microsoft.com/appx/manifest/uap/windows10/6"
+<Package xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" 
+         xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" 
+         xmlns:uap2="http://schemas.microsoft.com/appx/manifest/uap/windows10/2" 
+         xmlns:uap5="http://schemas.microsoft.com/appx/manifest/uap/windows10/5"
+         xmlns:uap6="http://schemas.microsoft.com/appx/manifest/uap/windows10/6"
          IgnorableNamespaces="uap uap2 uap5 uap6 mp"
-         xmlns="https://schemas.microsoft.com/appx/manifest/foundation/windows10">
+         xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10">
 ```
 Em seguida, no MixedRealityModel, defina a propriedade SpatialBoundingBox para definir a caixa delimitadora: 
 
@@ -118,7 +118,7 @@ Ao trabalhar com o Unity, o projeto deve ser compilado e aberto no Visual Studio
 >[!IMPORTANT]
 >os secondaryTiles (3D Deep links) funcionam apenas com aplicativos UWP 2D. No entanto, você pode criar um [iniciador de aplicativo 3D](implementing-3d-app-launchers.md) para iniciar um aplicativo exclusivo na página inicial do Windows Mixed Reality.
 
-Seus aplicativos 2D podem ser aprimorados para a realidade mista do Windows, adicionando a capacidade de posicionar modelos 3D de seu aplicativo na [casa do Windows Mixed Realm](navigating-the-windows-mixed-reality-home.md) como links profundos para conteúdo em seu aplicativo 2D, assim como [blocos 2D secundários](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-secondary-tiles) na inicialização do Windows AdicionarMenu. Por exemplo, você pode criar fotografias de 360 ° que se vinculam diretamente a um aplicativo de visualizador de fotos 360 ° ou permitem que os usuários coloquem o conteúdo 3D de uma coleção de ativos que abre uma página de detalhes sobre o autor. Essas são apenas duas maneiras de expandir a funcionalidade do seu aplicativo 2D com conteúdo 3D.
+Seus aplicativos 2D podem ser aprimorados para a realidade mista do Windows, adicionando a capacidade de posicionar modelos 3D de seu aplicativo na [casa do Windows Mixed Realm](navigating-the-windows-mixed-reality-home.md) como links profundos para conteúdo em seu aplicativo 2D, assim como [blocos 2D secundários](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-secondary-tiles) no menu Iniciar do Windows. Por exemplo, você pode criar fotografias de 360 ° que se vinculam diretamente a um aplicativo de visualizador de fotos 360 ° ou permitem que os usuários coloquem o conteúdo 3D de uma coleção de ativos que abre uma página de detalhes sobre o autor. Essas são apenas duas maneiras de expandir a funcionalidade do seu aplicativo 2D com conteúdo 3D.
 
 ### <a name="creating-a-3d-secondarytile"></a>Criando um "secondaryTile" 3D
 
