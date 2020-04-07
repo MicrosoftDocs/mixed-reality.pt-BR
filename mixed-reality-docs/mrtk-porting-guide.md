@@ -7,12 +7,12 @@ ms.date: 10/14/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Windows Mixed Reality, teste, MRTK, MRTK versão 2, HoloLens 2
-ms.openlocfilehash: 8e0c66a1c3d8ebd5422d19a02f313147ecf76653
-ms.sourcegitcommit: 40b37104b0aec4554502dcc7dc430e340a6fa46a
+ms.openlocfilehash: ced33a082152822779ae23a854800072bc8dfb5f
+ms.sourcegitcommit: d451b2055593ba8d0e4e05132ce889d60c71ee81
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77092030"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80613989"
 ---
 # <a name="get-your-existing-app-ready-for-hololens-2"></a>Preparar seu aplicativo existente para HoloLens 2
 
@@ -68,16 +68,16 @@ O HoloLens (1ª geração) executa aplicativos em um processador x86, enquanto o
 
 Examine todas as dependências de DLL em seu aplicativo. É recomendado remover de seu projeto qualquer dependência que não seja mais necessária. Para os plug-ins restantes que são necessários, ingira os respectivos binários do ARM32 ou do ARM64 no projeto do Unity. 
 
-Após a ingestão das DLLs relevantes, crie uma solução do Visual Studio por meio do Unity e, em seguida, compile um appx para ARM no Visual Studio para testar se o aplicativo pode ser compilado para processadores ARM. É recomendável salvar o aplicativo como uma confirmação na solução de controle do código-fonte.
+Após a ingestão das DLLs relevantes, compile uma solução do Visual Studio por meio do Unity e, em seguida, compile um appx para ARM no Visual Studio para testar se o aplicativo pode ser compilado para processadores ARM. É recomendável salvar o aplicativo como uma confirmação na solução de controle do código-fonte.
 
 ## <a name="update-to-mrtk-version-2"></a>Atualizar para o MRTK versão 2
 
-[A versão 2 do MRTK](https://github.com/microsoft/MixedRealityToolkit-Unity) é o novo kit de ferramentas baseado no Unity compatível com o HoloLens (1ª geração) e ao HoloLens 2. É nela também em que todas as funcionalidades do HoloLens 2 foram adicionadas, como interações com as mãos e acompanhamento ocular.
+[A versão 2 do MRTK](https://github.com/microsoft/MixedRealityToolkit-Unity) é o novo kit de ferramentas baseado no Unity que dá suporte ao HoloLens (1ª geração) e ao HoloLens 2. É nela também em que todas as funcionalidades do HoloLens 2 foram adicionadas, como interações com as mãos e acompanhamento ocular.
 
 Leia o seguinte para obter mais informações sobre como usar o MRTK versão 2:
 - [Página de aterrissagem do MRTK](https://microsoft.github.io/MixedRealityToolkit-Unity/README.html)
 - [Introdução ao MRTK](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/GettingStartedWithTheMRTK.html)
-- [Mãos do MRTK](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/InputSystem/HandTracking.html)
+- [Mãos do MRTK](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Input/HandTracking.html)
 - [Acompanhamento ocular do MRTK](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_Main.html)
 
 ### <a name="prepare-for-the-migration"></a>Preparar a migração
