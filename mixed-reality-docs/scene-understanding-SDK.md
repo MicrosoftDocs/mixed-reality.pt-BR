@@ -6,16 +6,16 @@ ms.author: szymons
 ms.date: 07/08/2019
 ms.topic: article
 keywords: Compreensão da cena, mapeamento espacial, realidade do Windows Mixed, Unity
-ms.openlocfilehash: f365b0444576e03acd8dba194d7f8f24175e7bee
-ms.sourcegitcommit: 83698638b93c5ba77b3ffc399f1706482539f27b
+ms.openlocfilehash: f293e779b041cdf4aa636cf317b7eaca70e16410
+ms.sourcegitcommit: 37816514b8fe20669c487774b86e80ec08edcadf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74539519"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "81003322"
 ---
 # <a name="scene-understanding-sdk-overview"></a>Visão geral do SDK de compreensão da cena
 
-A meta da compreensão da cena é transformar os dados do sensor de ambiente não estruturado que o dispositivo da realidade misturada captura e convertê-lo em uma representação avançada, mas abstrata, intuitiva e fácil de desenvolver para o. O SDK atua como a camada de comunicação entre seu aplicativo e o tempo de execução de compreensão da cena. Ele é destinado a imitar construções padrão existentes, como grafos de cena 3D para representações 3D e retângulos/painéis 2D para aplicativos 2D. Embora as construções que compreendem as imitações da cena sejam mapeadas para as estruturas concretas que você pode usar, em geral SceneUnderstanding é a estrutura independente, permitindo a interoperabilidade entre estruturas variadas que interagem com ela. Conforme a compreensão da cena desenvolve a função do SDK, para garantir que novas representações e funcionalidades continuem a ser expostas em uma estrutura unificada. Neste documento, primeiro apresentaremos conceitos de alto nível que ajudarão você a se familiarizar com o uso/ambiente de desenvolvimento e, em seguida, fornecer uma documentação mais detalhada para classes e construções específicas.
+A meta da compreensão da cena é transformar os dados do sensor de ambiente não estruturado que o dispositivo da realidade misturada captura e convertê-lo em uma representação avançada, mas abstrata, intuitiva e fácil de desenvolver para o. O SDK atua como a camada de comunicação entre seu aplicativo e o tempo de execução de compreensão da cena. Ele é destinado a imitar construções padrão existentes, como grafos de cena 3D para representações 3D e retângulos 2D e painéis para aplicativos 2D. Embora as construções que compreendem as imitações da cena sejam mapeadas para as estruturas concretas que você pode usar, em geral SceneUnderstanding é a estrutura independente, permitindo a interoperabilidade entre estruturas variadas que interagem com ela. Conforme a compreensão da cena desenvolve a função do SDK, para garantir que novas representações e funcionalidades continuem a ser expostas em uma estrutura unificada. Neste documento, primeiro apresentaremos conceitos de alto nível que ajudarão você a se familiarizar com o uso/ambiente de desenvolvimento e, em seguida, fornecer uma documentação mais detalhada para classes e construções específicas.
 
 ## <a name="where-do-i-get-the-sdk"></a>Onde obtenho o SDK?
 
@@ -47,14 +47,14 @@ No lado esquerdo, há um diagrama do tempo de execução misto da realidade que 
 
 Como cada cena armazena os dados no espaço de memória do seu aplicativo, você pode pressupor que toda a função do objeto de cena ou de seus dados internos sempre seja executada no processo do aplicativo.
 
-### <a name="layout"></a>Layout
+### <a name="layout"></a>{1&gt;Layout&lt;1}
 
 Para trabalhar com a compreensão da cena, pode ser importante saber e entender como o tempo de execução representa os componentes logicamente e fisicamente. A cena representa dados com um layout específico que foi escolhido para ser simples enquanto mantém uma estrutura subjacente que é pliable para atender aos requisitos futuros sem precisar de revisões principais. A cena faz isso armazenando todos os componentes (blocos de construção para todos os objetos de cena) em uma lista simples e definindo a hierarquia e a composição por meio de referências em que componentes específicos fazem referência a outros.
 
 Abaixo, apresentamos um exemplo de uma estrutura em sua forma fixa e lógica.
 
 <table>
-<tr><th>Layout lógico</th><th>Layout físico</th></tr>
+<tr><th>Layout lógico</th><th>Layout Físico</th></tr>
 <tr>
 <td>
 <ul>
@@ -119,11 +119,11 @@ SceneObjects pode ter qualquer um dos seguintes:
 <tr>
 <th>SceneObjectKind</th> <th>Descrição</th>
 </tr>
-<tr><td>Histórico</td><td>O Sceneobject é conhecido como <b>não</b> um dos outros tipos reconhecidos de objeto de cena. Essa classe não deve ser confundida quando o plano de fundo não for conhecido como parede/piso/teto, etc... Embora desconhecido ainda não esteja categorizado.</b></td></tr>
+<tr><td>Tela de fundo</td><td>O Sceneobject é conhecido como <b>não</b> um dos outros tipos reconhecidos de objeto de cena. Essa classe não deve ser confundida quando o plano de fundo não for conhecido como parede/piso/teto, etc... Embora desconhecido ainda não esteja categorizado.</b></td></tr>
 <tr><td>Meu</td><td>Uma parede física. As paredes são presumidas como estruturas ambientais immovíveis.</td></tr>
 <tr><td>Floor</td><td>Os andares são quaisquer superfícies nas quais um pode ser movimentado. Observação: escadas não são andares. Observe também que os andares assumem qualquer superfície que seja orientada e, portanto, não há nenhuma suposição explícita de um piso singular. Estruturas de vários níveis, rampas, etc... todos devem ser classificados como piso.</td></tr>
-<tr><td>Limite</td><td>A superfície superior de uma sala.</td></tr>
-<tr><td>Plataforma</td><td>Uma grande superfície plana na qual você pode posicionar os hologramas. Elas tendem a representar tabelas, Intertops e outras superfícies horizontais grandes.</td></tr>
+<tr><td>Teto</td><td>A superfície superior de uma sala.</td></tr>
+<tr><td>Platform</td><td>Uma grande superfície plana na qual você pode posicionar os hologramas. Elas tendem a representar tabelas, Intertops e outras superfícies horizontais grandes.</td></tr>
 <tr><td>World</td><td>Um rótulo reservado para dados geométricos que são independentes de rotulagem. A malha gerada pela configuração do sinalizador de atualização EnableWorldMesh seria classificada como mundo.</td></tr>
 <tr><td>Desconhecido</td><td>Este objeto de cena ainda deve ser classificado e atribuído a um tipo. Isso não deve ser confundido com o plano de fundo, pois esse objeto pode ser qualquer coisa, o sistema simplesmente não surgiu com uma classificação suficientemente forte para ele.</td></tr>
 </tr>
@@ -263,9 +263,9 @@ Observe que é o Sceneobject que tem a transformação relativa à origem da cen
 
 ### <a name="dealing-with-transforms"></a>Lidando com transformações
 
-A compreensão da cena fez uma tentativa deliberada de se alinhar com as representações tradicionais de cena 3D ao lidar com transformações. Portanto, cada cena é confinada a um único sistema de coordenadas, assim como as representações de ambiente 3D mais comuns. SceneObjects cada um fornece seu local como uma posição e orientação dentro desse sistema de coordenadas. Se seu aplicativo estiver lidando com cenas que ampliam o limite do que uma única origem fornece, ela pode ancorar SceneObjects para SpatialAnchors ou gerar várias cenas e mesclá-las, mas para simplificar, vamos supor que as cenas de Watertight existam por conta própria origem localizada por um NodeId definido por Scene. OriginSpatialGraphNodeId.
+A compreensão da cena fez uma tentativa deliberada de se alinhar com as representações tradicionais de cena 3D ao lidar com transformações. Portanto, cada cena é confinada a um único sistema de coordenadas, assim como as representações de ambiente 3D mais comuns. SceneObjects cada um fornece seu local como uma posição e orientação dentro desse sistema de coordenadas. Se seu aplicativo estiver lidando com cenas que ampliam o limite do que uma única origem fornece, ela pode ancorar SceneObjects para SpatialAnchors ou gerar várias cenas e mesclá-las, mas para simplificar, vamos supor que as cenas de Watertight existam em sua própria origem localizada por um NodeId definido por Scene. OriginSpatialGraphNodeId.
 
-O seguinte código de Unity, por exemplo, mostra como usar a percepção do Windows e as APIs do Unity para alinhar os sistemas de coordenadas. Consulte [SpatialCoordinateSystem](https://docs.microsoft.com//uwp/api/windows.perception.spatial.spatialcoordinatesystem) e [SpatialGraphInteropPreview](https://docs.microsoft.com//uwp/api/windows.perception.spatial.preview.spatialgraphinteroppreview) para obter detalhes sobre as APIs de percepção do Windows e [objetos nativos da realidade misturada no Unity](https://docs.microsoft.com//windows/mixed-reality/unity-xrdevice-advanced) para obter detalhes sobre como obter um SpatialCoordinateSystem que corresponde ao origem mundial, bem como o método de extensão de `.ToUnity()` para conversão entre `System.Numerics.Matrix4x4` e `UnityEngine.Matrix4x4`.
+O seguinte código de Unity, por exemplo, mostra como usar a percepção do Windows e as APIs do Unity para alinhar os sistemas de coordenadas. Consulte [SpatialCoordinateSystem](https://docs.microsoft.com//uwp/api/windows.perception.spatial.spatialcoordinatesystem) e [SpatialGraphInteropPreview](https://docs.microsoft.com//uwp/api/windows.perception.spatial.preview.spatialgraphinteroppreview) para obter detalhes sobre as APIs de percepção do Windows e [objetos nativos da realidade misturada no Unity](https://docs.microsoft.com//windows/mixed-reality/unity-xrdevice-advanced) para obter detalhes sobre como obter um SpatialCoordinateSystem que corresponde à origem mundial da Unity, bem como o método de extensão de `.ToUnity()` para conversão entre `System.Numerics.Matrix4x4` e `UnityEngine.Matrix4x4`.
 
 ```cs
 public class SceneRootComponent : MonoBehavior

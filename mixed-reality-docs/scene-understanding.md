@@ -6,12 +6,12 @@ ms.author: szymons
 ms.date: 07/08/2019
 ms.topic: article
 keywords: Compreensão da cena, mapeamento espacial, realidade do Windows Mixed, Unity
-ms.openlocfilehash: 4b959b7b7ec58fc30ed0fe93b568d123cbe70bb1
-ms.sourcegitcommit: 7e8b9de561cbc8483e84511f3e9cbd779f3a999f
+ms.openlocfilehash: 3d56f375c38b1dee6ab9eb97219a5e37fe698c63
+ms.sourcegitcommit: 37816514b8fe20669c487774b86e80ec08edcadf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/27/2019
-ms.locfileid: "75502667"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "81003332"
 ---
 # <a name="scene-understanding"></a>Compreensão da cena
 
@@ -73,7 +73,7 @@ Se você estiver procurando detalhes específicos sobre como desenvolver para co
 
 <br>
 
-Muitos dos principais cenários de aplicativos com reconhecimento de ambiente (posicionamento, oclusão, física, etc.) são endereçáveis pelo mapeamento espacial e pela compreensão da cena, e esta seção destaca essas diferenças. Uma diferença importante entre a compreensão da cena e o mapeamento espacial é uma compensação da precisão e da latência máximas até a estrutura e a simplicidade. Se seu aplicativo exigir a menor latência possível e os triângulos de malha que só você desejará acessar o mapeamento espacial diretamente, mas estiver executando um processamento de nível superior, poderá considerar mudar para o modelo de compreensão da cena como ele deve fornecer um superconjunto de funcionalidades. Observe também que, como a compreensão da cena fornece a malha de mapeamento espacial como parte de sua representação, você sempre terá acesso aos dados de mapeamento espacial mais completos e precisos possíveis.
+Muitos dos principais cenários de aplicativos com reconhecimento de ambiente (posicionamento, oclusão, física, etc.) são endereçáveis pelo mapeamento espacial e pela compreensão da cena, e esta seção destaca essas diferenças. Uma diferença importante entre a compreensão da cena e o mapeamento espacial é uma compensação da precisão e da latência máximas até a estrutura e a simplicidade. Se seu aplicativo exigir a menor latência possível e os triângulos de malha que só você deseja acessar, use o mapeamento espacial diretamente. Se você estiver executando um processamento de nível mais alto, considere a possibilidade de alternar para o modelo de compreensão da cena, pois ele deve fornecer um superconjunto de funcionalidades. Observe também que, como a compreensão da cena fornece um instantâneo da malha de mapeamento espacial como parte de sua representação, você sempre terá acesso aos dados de mapeamento espacial mais completos e precisos possíveis.
 
 As seções a seguir revisitam os cenários principais de mapeamento espacial no contexto do SDK de compreensão da nova cena.
 
@@ -105,7 +105,7 @@ O [mapeamento espacial oclusão](spatial-mapping.md#occlusion) permanece o modo 
 
 Se seus requisitos puderem tolerar a maior latência de compreensão da cena, os desenvolvedores de aplicativos devem considerar o uso da malha de compreensão Watertight da cena e, supostamente, a malha de mapeamento espacial em harmonia com representações planares. Isso forneceria um cenário "o melhor de ambos os mundos", em que simplificava a Watertight oclusão é casado com uma geometria mais realista que fornece os mapas oclusão mais realistas possíveis.
 
-### <a name="physics"></a>Física
+### <a name="physics"></a>Professor
 
 O entendimento da cena gera malhas Watertight que decompõem o espaço com a semântica, especificamente para resolver muitas limitações na física que as malhas de mapeamento espacial impõem. As estruturas Watertight garantem que as conversões de raio de física sejam sempre pressionadas, e a decomposição semântica permite uma geração mais simples de malhas de NAV para navegação em interno. Conforme descrito na seção sobre [oclusão](#occlusion), a criação de uma cena com EnableSceneObjectMeshes e EnableWorldMesh produzirá a malha de conclusão mais física possível. A propriedade Watertight da malha do ambiente impedirá que testes de colisão falhem em superfícies e os dados de malha assegurarão que a física esteja interagindo com todos os objetos da cena e não apenas com a estrutura de sala.
 
@@ -121,7 +121,7 @@ Embora a [visualização de mapeamento espacial](spatial-mapping.md#visualizatio
 
 Além disso, o número total de superfícies retornado pelo mapeamento espacial é limitado pelo cache espacial interno, enquanto a versão de compreensão da cena da malha de mapeamento espacial é capaz de acessar dados de mapeamento espacial que não são armazenados em cache. Por isso, a compreensão da cena é mais adequada à captura de representações de malha para espaços maiores (por exemplo, mais de um único espaço) para visualização ou processamento de malha adicional. A malha mundial retornada com EnableWorldMesh terá um nível consistente de detalhes em todo o mundo, o que pode gerar uma visualização mais agradável se for renderizado como wireframe.
 
-### <a name="see-also"></a>Veja também
+### <a name="see-also"></a>Consulte também
 
 * [SDK de compreensão da cena](scene-understanding-SDK.md)
 * [Mapeamento espacial](spatial-mapping.md)

@@ -6,12 +6,12 @@ ms.author: pbarnett
 ms.date: 04/25/2019
 ms.topic: article
 keywords: Realidade mista do Windows, simulador, teste
-ms.openlocfilehash: a7cbd5b5ca1c0ed0e4f81715d337d5eec68117f0
-ms.sourcegitcommit: f5c1dedb3b9e29f27f627025b9e7613931a7ce18
+ms.openlocfilehash: 686cac4e9ab4b3354767e22cd87d37ffbb508dea
+ms.sourcegitcommit: 37816514b8fe20669c487774b86e80ec08edcadf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64580699"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "81003292"
 ---
 # <a name="using-the-windows-mixed-reality-simulator"></a>Usando o simulador de realidade mista do Windows
 
@@ -32,13 +32,15 @@ O simulador de realidade mista do Windows permite que você teste aplicativos de
 
 Agora você deve estar executando com a simulação!
 
+Se você quiser desabilitar o modo de desenvolvedor em configurações, primeiro você deve ativar a opção de alternância de simulação para **desativado** na seção **para desenvolvedores** do portal da realidade misturada.
+
 ## <a name="deploying-apps-to-the-mixed-reality-simulator"></a>Implantando aplicativos no simulador de realidade misturada
 
 Como o simulador é executado em seu PC local sem uma máquina virtual, você pode simplesmente implantar seus aplicativos universais do Windows no **computador local** durante a depuração.
 
 ## <a name="basic-simulator-input"></a>Entrada do simulador básico
 
-Controlar o simulador é muito semelhante a muitos jogos de vídeo 3D comuns e ao emulador do [HoloLens](using-the-hololens-emulator.md). Há opções de entrada disponíveis usando o teclado, o mouse ou o controle Xbox.
+Controlar o simulador é muito semelhante a muitos jogos de vídeo 3D comuns e ao [emulador do HoloLens](using-the-hololens-emulator.md). Há opções de entrada disponíveis usando o teclado, o mouse ou o controle Xbox.
 
 Você controla o simulador direcionando as ações de um usuário simulado utilizando um headset de imersão. Suas ações movem o usuário simulado e causam interações com aplicativos que respondem como em um headset de imersão.
 * **Andar para a frente, para trás, para a esquerda e para a direita** – use as teclas W, A, S e D no teclado ou o joystick esquerdo em um controle Xbox.
@@ -51,7 +53,7 @@ Você controla o simulador direcionando as ações de um usuário simulado utili
 
 O simulador de realidade misturada pode simular até dois controladores de movimento acompanhados por mão. Habilite-os usando as opções de alternância no portal de realidade misturada. Cada controlador simulado tem:
 * Posição e orientação no espaço
-* Botão Início
+* Botão Página Inicial
 * Botão Menu
 * Botão de fixação
 * Touchpad
