@@ -1,18 +1,18 @@
 ---
 title: Usando o Emulador do HoloLens
 description: Usar o Emulador do HoloLens para testar aplicativos de realidade misturada em seu computador sem um HoloLens físico.
-author: hamalawi
-ms.author: moelhama
-ms.date: 3/10/2020
+author: pbarnettms
+ms.author: pbarnett
+ms.date: 4/13/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: HoloLens, emulador
-ms.openlocfilehash: 57a20b476ba0b1cc02a7e9bf41b33367b64d539c
-ms.sourcegitcommit: 5b2ba01aa2e4a80a3333bfdc850ab213a1b523b9
+ms.openlocfilehash: bbdf389a1b7bf42e3dfb1fffb09cf6d3b1a65b6a
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "79028260"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278014"
 ---
 # <a name="using-the-hololens-emulator"></a>Usando o Emulador do HoloLens
 
@@ -20,12 +20,15 @@ O Emulador do HoloLens permite testar aplicativos holográficos em seu computado
 
 Se você pretende desenvolver aplicativos de headset imersivo do Windows Mixed Reality (VR) ou jogos para computadores desktop, confira o [Simulador do Windows Mixed Reality](using-the-windows-mixed-reality-simulator.md), que permite que você simule headsets para desktop.
 
+## <a name="hololens-2-emulator-overview"></a>Visão Geral do Emulador do HoloLens 2
+
+>[!VIDEO https://channel9.msdn.com/Shows/Docs-Mixed-Reality/HoloLens-2-Emulator-Overview/player?format=ny]
 
 ## <a name="installing-the-hololens-emulator"></a>Instalando o Emulador do HoloLens
 Baixar o Emulador do HoloLens.
 
 Versões: 
-* [Emulador do HoloLens 2 (atualização de março de 2020)](https://go.microsoft.com/fwlink/?linkid=2121323).
+* [Emulador do HoloLens 2 (atualização de abril de 2020)](https://go.microsoft.com/fwlink/?linkid=2126826).
 * [Emulador do HoloLens (1ª geração) e modelos de projeto holográfico](https://go.microsoft.com/fwlink/?linkid=2065980).
 
 É possível encontrar notas de versão e builds mais antigos do Emulador do HoloLens na página [Arquivo do Emulador do HoloLens](hololens-emulator-archive.md).
