@@ -1,17 +1,17 @@
 ---
 title: Configurações recomendadas para o Unity
 description: O Unity oferece alguns comportamentos específicos para a realidade misturada que pode ser alternada por meio de configurações do projeto.
-author: Troy-Ferrell
+author: troy-ferrell
 ms.author: trferrel
 ms.date: 03/26/2019
 ms.topic: article
 keywords: Unity, configurações, realidade misturada
-ms.openlocfilehash: 2ab7eb0f9a7e06506ef8c57103518d8ef0a775df
-ms.sourcegitcommit: d0da0214fdd2bbac5a91a5d895bf0e87413b29b2
+ms.openlocfilehash: 9b4e04e10e95f6c4f12a25a6f34236d9d2bf99a2
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75597629"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278004"
 ---
 # <a name="recommended-settings-for-unity"></a>Configurações recomendadas para o Unity
 
@@ -42,28 +42,28 @@ Leia a [iluminação global do Unity](https://docs.unity3d.com/Manual/GIIntro.ht
 
 Em aplicativos de realidade misturada, a cena é renderizada duas vezes, uma vez para cada olho para o usuário. Em comparação com o desenvolvimento 3D tradicional, isso efetivamente dobra a quantidade de trabalho que precisa ser computada. Portanto, é importante selecionar o caminho de renderização mais eficiente no Unity para economizar tanto na CPU quanto no tempo da GPU. A renderização de passagem única em instância otimiza o pipeline de renderização do Unity para aplicativos de realidade misturada e, portanto, é recomendável habilitar essa configuração por padrão para cada projeto.
 
-Para habilitar esse recurso em seu projeto do Unity
+Como habilitar esse recurso no seu projeto do Unity
 
-1)  Abra **as configurações do Player XR** (vá para **Editar** > **configurações do projeto** > **Player** > **configurações de XR**)
-2) Selecione **passagem única instância** no menu suspenso **método de renderização estéreo** (a caixa de seleção**com suporte da realidade virtual** deve estar marcada)
+1)  Abra **Configurações de XR do Player** (acesse **Editar** > **Configurações do Projeto** > **Player** > **Configurações de XR**)
+2) Selecione **Instância de Passagem Única** no menu suspenso **Método de Renderização de Estéreo** (a caixa de seleção **Realidade Virtual Compatível** precisa estar marcada)
 
 Leia os artigos a seguir do Unity para obter mais detalhes com essa abordagem de renderização.
 
-- [Como maximizar o desempenho de AR e VR com renderização avançada de estéreo](https://blogs.unity3d.com/2017/11/21/how-to-maximize-ar-and-vr-performance-with-advanced-stereo-rendering/)
+- [Como maximizar o desempenho de RA e VR com a renderização avançada de estéreo](https://blogs.unity3d.com/2017/11/21/how-to-maximize-ar-and-vr-performance-with-advanced-stereo-rendering/)
 - [Instância de passagem única](https://docs.unity3d.com/Manual/SinglePassInstancing.html)
 
 >[!NOTE]
-> Um problema comum com a renderização de passagem única ocorrerá se os desenvolvedores já tiverem sombreadores personalizados existentes não escritos para instanciação. Depois de habilitar esse recurso, os desenvolvedores podem perceber que alguns GameObjects são renderizados apenas de um olho. Isso ocorre porque os sombreadores personalizados associados não têm as propriedades apropriadas para instanciação.
+> Um problema comum na renderização com uma instância de passagem única ocorre se os desenvolvedores já têm sombreadores personalizados existentes não escritos para a criação de instância. Depois de habilitar esse recurso, os desenvolvedores poderão perceber que alguns GameObjects são renderizados apenas em um olho. Isso ocorre porque os sombreadores personalizados associados não têm as propriedades apropriadas para a criação de instância.
 >
-> Consulte [renderização de estéreo de passagem única para o HoloLens](https://docs.unity3d.com/Manual/SinglePassStereoRenderingHoloLens.html) do Unity para saber como resolver esse problema
+> Confira [Renderização de estéreo de passagem única para o HoloLens](https://docs.unity3d.com/Manual/SinglePassStereoRenderingHoloLens.html) do Unity para saber como resolver esse problema
 
 ### <a name="enable-depth-buffer-sharing"></a>Habilitar compartilhamento de buffer de profundidade
 
 Para obter uma melhor estabilidade de holograma da percepção do usuário, é recomendável habilitar a propriedade de **compartilhamento de buffer de profundidade** no Unity. Ao ativar essa ação, o Unity compartilhará o mapa de profundidade produzido por seu aplicativo com a plataforma Windows Mixed Reality. A plataforma então será capaz de otimizar melhor a estabilidade do holograma especificamente para sua cena para qualquer determinado quadro que esteja sendo renderizado pelo seu aplicativo.
 
-Para habilitar esse recurso em seu projeto do Unity
+Como habilitar esse recurso no seu projeto do Unity
 
-1) Abra **as configurações do Player XR** (vá para **Editar** > **configurações do projeto** > **Player** > **configurações de XR**)
+1) Abra **Configurações de XR do Player** (acesse **Editar** > **Configurações do Projeto** > **Player** > **Configurações de XR**)
 2) Marque a caixa de seleção **Habilitar compartilhamento de buffer de profundidade** em SDKs de **realidade virtual** > expansão de **realidade mista do Windows** (a caixa de seleção**com suporte da realidade virtual** deve estar marcada)
 
 Além disso, é recomendável selecionar **profundidade de 16 bits** na configuração de **formato de profundidade** neste painel, especialmente para o desenvolvimento de HoloLens. A seleção de 16 bits em comparação a 24 bits reduzirá significativamente os requisitos de largura de banda, pois menos dados precisarão ser movidos/processados.
@@ -116,10 +116,10 @@ Para alternar a tela inicial do Holographic:
 
 |  Mostrar tela inicial do Unity  |  Imagem de abertura do Holographic  |  Comportamento |
 |----------|----------|----------|
-|  Em  |  Não  |  Mostre a tela inicial do Unity padrão por 5 segundos ou até que o aplicativo seja carregado, o que for maior. |
-|  Em  |  Personalizado  |  Mostre a tela inicial personalizada por 5 segundos ou até que o aplicativo seja carregado, o que for maior. |
-|  Desligada  |  Não  |  Mostrar preto transparente (Nothing) até que o aplicativo seja carregado. |
-|  Desligada  |  Personalizado  |  Mostre a tela inicial personalizada por 5 segundos ou até que o aplicativo seja carregado, o que for maior. |
+|  Ativado  |  Nenhum  |  Mostre a tela inicial do Unity padrão por 5 segundos ou até que o aplicativo seja carregado, o que for maior. |
+|  Ativado  |  Personalizado  |  Mostre a tela inicial personalizada por 5 segundos ou até que o aplicativo seja carregado, o que for maior. |
+|  Desativar  |  Nenhum  |  Mostrar preto transparente (Nothing) até que o aplicativo seja carregado. |
+|  Desativar  |  Personalizado  |  Mostre a tela inicial personalizada por 5 segundos ou até que o aplicativo seja carregado, o que for maior. |
 
 Leia a [documentação da tela inicial do Unity](https://docs.unity3d.com/Manual/class-PlayerSettingsSplashScreen.html) para obter mais informações.
 
@@ -141,7 +141,7 @@ Alguns aplicativos podem não exigir acompanhamento (por exemplo, [aplicativos s
 
 Para recusar o comportamento de pausa automática:
 
-1) Vá para a página Editar **configurações do projeto** >  > **Player**
+1) Vá para a **Edit** página Editar **configurações do projeto** >  > **Player**
 2) Clique na guia **Windows Store** e abra a seção **imagem de abertura**
 3) Modifique a caixa de seleção **> do Windows Holographic na pausa de controle de perda e mostrar imagem** .
 
@@ -149,7 +149,7 @@ Para recusar o comportamento de pausa automática:
 
 Para definir o comportamento personalizado quando o rastreamento é perdido, manipule os [eventos de perda de controle](tracking-loss-in-unity.md)global.
 
-### <a name="capabilities"></a>Capacidades
+### <a name="capabilities"></a>{1&gt;Capabilities&lt;1}
 
 Para que um aplicativo aproveite determinadas funcionalidades, ele deve declarar os recursos apropriados em seu manifesto. As declarações de manifesto podem ser feitas no Unity para que elas sejam incluídas em todas as exportações de projeto subsequentes.
 
@@ -161,7 +161,7 @@ Os recursos podem ser habilitados para um aplicativo de realidade misturada:
 Os recursos aplicáveis para habilitar as APIs comumente usadas para aplicativos Holographic são:
 <br>
 
-|  Capacidade  |  APIs que exigem capacidade |
+|  Capability  |  APIs que exigem capacidade |
 |----------|----------|
 |  SpatialPerception  |  SurfaceObserver |
 |  Integrada  |  VideoCapture e fotocaptura |
@@ -169,7 +169,7 @@ Os recursos aplicáveis para habilitar as APIs comumente usadas para aplicativos
 |  Microfone  |  VideoCapture (ao capturar áudio), DictationRecognizer, GrammarRecognizer e KeywordRecognizer |
 |  InternetClient  |  DictationRecognizer (e para usar o criador de perfil do Unity) |
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 * [Visão geral do desenvolvimento do Unity](unity-development-overview.md)
 * [Noções básicas sobre o desempenho da Realidade Misturada](understanding-performance-for-mixed-reality.md)

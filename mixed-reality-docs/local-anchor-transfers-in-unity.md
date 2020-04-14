@@ -1,17 +1,17 @@
 ---
 title: Transferências de âncora local no Unity
 description: Transfira âncoras entre vários dispositivos HoloLens em um aplicativo Unity.
-author: fieldsJacksonG
+author: fieldsjacksong
 ms.author: jacksonf
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Compartilhamento, ancoragem, WorldAnchor, Sr Sharing 250, WorldAnchorTransferBatch, SpatialPerception, transferência, transferência de âncora local, exportação de ancoragem, importação de âncora
-ms.openlocfilehash: 82bcd07417fd5aa1b265ebc3c8edc939101dd783
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: fd071f736add094fd65ae4d889f8008eefd8515d
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63516131"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278054"
 ---
 # <a name="local-anchor-transfers-in-unity"></a>Transferências de âncora local no Unity
 
@@ -39,10 +39,10 @@ Como habilitar o recurso *SpatialPerception* :
 
 Para transferir um [WorldAnchor](coordinate-systems-in-unity.md), um deve estabelecer a âncora a ser transferida. O usuário de um HoloLens examina seu ambiente e, manual ou programaticamente, escolhe um ponto no espaço para ser a âncora para a experiência compartilhada. Os dados que representam esse ponto podem ser serializados e transmitidos para os outros dispositivos que estão compartilhando na experiência. Em seguida, cada dispositivo desserializa os dados de âncora e tenta localizar esse ponto no espaço. Para que a transferência de âncora funcione, cada dispositivo deve ser examinado em suficiente no ambiente, de modo que o ponto representado pela âncora possa ser identificado.
 
-### <a name="setup"></a>Configuração
+### <a name="setup"></a>Instalação
 
 O código de exemplo nesta página tem alguns campos que deverão ser inicializados:
-1. *Gameobject rootGameObject* é um *gameobject* no Unity que tem um componente *WorldAnchor* . Um usuário na experiência compartilhada coloca esse gameobject  e exporta os dados para os outros usuários.
+1. *Gameobject rootGameObject* é um *gameobject* no Unity que tem um componente *WorldAnchor* . Um usuário na experiência compartilhada coloca esse *gameobject* e exporta os dados para os outros usuários.
 2. *WorldAnchor gameRootAnchor* é *UnityEngine. XR. WSA. WorldAnchor* que está em *rootGameObject*.
 3. *byte [] importedData* é uma matriz de bytes para a âncora serializada que cada cliente está recebendo pela rede.
 
@@ -137,5 +137,5 @@ private void OnImportComplete(SerializationCompletionReason completionReason, Wo
 }
 ```
 
-Depois que  um gameobject é bloqueado por meio da chamada *lockobject* , ele terá um *WorldAnchor* que o manterá na mesma posição física do mundo, mas pode estar em um local diferente no espaço de coordenadas do Unity do que outros usuários.
+Depois que um *gameobject* é bloqueado por meio da chamada *lockobject* , ele terá um *WorldAnchor* que o manterá na mesma posição física do mundo, mas pode estar em um local diferente no espaço de coordenadas do Unity do que outros usuários.
 

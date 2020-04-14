@@ -1,17 +1,17 @@
 ---
 title: Estudo de caso-lições da cozinha do Lowe
 description: A equipe do HoloLens deseja compartilhar algumas das práticas recomendadas que foram derivadas do projeto HoloLens do Lowe.
-author: BrandonBray
+author: brandonbray
 ms.author: kevincol
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Realidade do Windows Mixed, Lowe, HoloLens, cozinha, estudo de caso
-ms.openlocfilehash: 24759f90b8b84ec19e644fb8dff44f64c3ab81d2
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: a6bd7a09f77fb71dc23dc640525ff250abac8f12
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63522347"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278124"
 ---
 # <a name="case-study---lessons-from-the-lowes-kitchen"></a>Estudo de caso-lições da cozinha do Lowe
 
@@ -42,7 +42,7 @@ Algumas das coisas mais importantes a serem examinadas ao desenvolver no HoloLen
 
 **Alinhamento de precisão** Para o cenário do Lowe, era fundamental para a experiência ter o alinhamento da precisão dos hologramas com a cozinha física. Discutimos técnicas ajuda a garantir uma experiência que convença os usuários de que seu ambiente físico mudou.
 
-**Experiências de Holographic** compartilhadas Os atestados são a principal maneira pela qual a experiência do Lowe é consumida. Uma pessoa pode alterar o balcão e a outra pessoa verá as alterações. Chamamos isso de "experiências compartilhadas".
+**Experiências de Holographic compartilhadas** Os atestados são a principal maneira pela qual a experiência do Lowe é consumida. Uma pessoa pode alterar o balcão e a outra pessoa verá as alterações. Chamamos isso de "experiências compartilhadas".
 
 **Interagindo com clientes** Os designers de Lowe não estão usando um HoloLens, mas precisam ver o que os clientes estão vendo. Mostramos como capturar o que o cliente está vendo em um aplicativo UWP.
 <br>

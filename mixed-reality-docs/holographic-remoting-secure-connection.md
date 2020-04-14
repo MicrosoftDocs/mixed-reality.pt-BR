@@ -1,17 +1,17 @@
 ---
 title: Estabelecendo uma conexão segura com o Holographic Remoting
 description: Esta página explica como estabelecer uma conexão segura criptografada ao usar a comunicação remota do Holographic.
-author: FlorianBagarMicrosoft
+author: florianbagarmicrosoft
 ms.author: flbagar
 ms.date: 03/11/2020
 ms.topic: article
 keywords: HoloLens, comunicação remota e comunicação remota Holographic
-ms.openlocfilehash: ac1170cb3e6d681fc164c3f4cee14da6ab6eb90b
-ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
+ms.openlocfilehash: 4006a317ed2ecfd7a1e67336a80a4e536d45e554
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/11/2020
-ms.locfileid: "79092480"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278224"
 ---
 # <a name="establishing-a-secure-connection-with-holographic-remoting"></a>Estabelecendo uma conexão segura com o Holographic Remoting
 
@@ -60,7 +60,7 @@ Além disso, para permitir a troca de um token seguro, os objetos a seguir preci
 
 Depois que esses objetos são implementados ```ListenSecure``` precisa ser chamado em vez de ```Listen``` e ```ConnectSecure``` em vez de ```Connect``` no contexto remoto e no contexto do Player, respectivamente. ```ListenSecure``` requer um provedor de certificado adicional e receptor de autenticação sobre ```Listen```. ```ConnectSecure``` requer um provedor de autenticação adicional e um validador de certificado sobre ```Connect```.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 * [Escrevendo um aplicativo remoto de comunicação remota do Holographic](holographic-remoting-create-host.md)
 * [Escrevendo um aplicativo de player de comunicação remota do Holographic personalizado](holographic-remoting-create-player.md)
 * [Solução de problemas e limitações de comunicação remota do Holographic](holographic-remoting-troubleshooting.md)

@@ -1,17 +1,17 @@
 ---
 title: Player de comunicação remota do Holographic
 description: O Holographic Remoting Player é um aplicativo complementar que se conecta a aplicativos de PC e jogos que dão suporte à comunicação remota do Holographic. O Holographicing Remoting transmite o conteúdo do Holographic de um PC para o Microsoft HoloLens em tempo real, usando uma conexão Wi-Fi.
-author: FlorianBagarMicrosoft
+author: florianbagarmicrosoft
 ms.author: flbagar
 ms.date: 03/11/2020
 ms.topic: article
 keywords: HoloLens, comunicação remota e comunicação remota Holographic
-ms.openlocfilehash: 88a9aa0bb058776a32016e51fc22bcb73f08ab85
-ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
+ms.openlocfilehash: e5255fb5537201058c491f5e4c682bb1c22d0edb
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/11/2020
-ms.locfileid: "79092376"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278204"
 ---
 # <a name="holographic-remoting-player"></a>Player de comunicação remota do Holographic
 
@@ -75,7 +75,7 @@ Na tela principal, você pode dizer **"desabilitar o diagnóstico"** para desati
 * Recomendamos uma placa gráfica GeForce GTX 970 ou AMD Radeon R9 290 ou superior.
 * Recomendamos que você conecte seu PC à sua rede por meio de Ethernet para reduzir o número de saltos sem fio.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 * [HoloLens (1º gen): Adicionar comunicação remota do Holographic](add-holographic-remoting.md)
 * [HoloLens 2: escrevendo um aplicativo remoto de comunicação remota do Holographic](holographic-remoting-create-host.md)
 * [Termos de licença de software de comunicação remota holográfica](https://docs.microsoft.com//legal/mixed-reality/microsoft-holographic-remoting-software-license-terms)

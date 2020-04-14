@@ -1,17 +1,17 @@
 ---
 title: Sobre estas diretrizes de design
 description: Essa orientação foi criada pelos designers, desenvolvedores, gerentes de programa e pesquisadores da Microsoft, cujo trabalho abrange dispositivos holográficos (como o HoloLens) e dispositivos imersivos (como os headsets Windows Mixed Reality da Acer e da HP).
-author: MRWied
+author: mrwied
 ms.author: jonwie
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Realidade mista do Windows, design, introdução, orientação
-ms.openlocfilehash: fd2b8d704c9053d9eeb63ab2cceca1e4257d86ed
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 114a3808d57b2bd78044ce743d568bd5effe25bb
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437100"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81277514"
 ---
 # <a name="about-this-design-guidance"></a>Sobre estas diretrizes de design
 
@@ -25,7 +25,7 @@ Com você, estamos inserindo uma nova era imensamente empolgante de computação
 
 Sempre que possível, ofereceremos diretrizes de design acionáveis com o código relacionado no GitHub. Dito isso, como estamos aprendendo bem junto com você, nem sempre será capaz de oferecer orientações específicas e acionáveis aqui. Parte do que compartilharemos será o espírito de "lições que aprendemos" e "evitará reduzir esse caminho".
 
-E sabemos, muitas inovações serão geradas pela comunidade de design maior. Então, esperamos ouvir você, aprender com você e trabalhar junto com você. Para nossa parte, faremos o nosso melhor para compartilhar nossas ideias, mesmo que elas sejam exploratórios e no início da intenção de capacitar desenvolvedores e designers com raciocínio de design, práticas recomendadas e controles de software livre relacionados, padrões e aplicativos de exemplo que você pode usar diretamente em seu próprio trabalho.
+E sabemos, muitas inovações serão geradas pela comunidade de design maior. Então, esperamos ouvir você, aprender com você e trabalhar junto com você. Para nossa parte, faremos o melhor para compartilhar nossas ideias, mesmo que elas sejam exploratórios e com antecedência com a intenção de capacitar desenvolvedores e designers com raciocínio de design, práticas recomendadas e os controles de software livre, padrões e aplicativos de exemplo relacionados que você pode usar diretamente em seu próprio trabalho.
 
 ## <a name="overview"></a>Visão geral
 
@@ -58,7 +58,7 @@ Embora seja importante concentrar-se em problemas específicos do cliente, tamb�
 
 ![Conheça os criadores onde eles estão](images/500px-creators.jpg) <br>
 
-Esperamos que muitos públicos descubram essas diretrizes para serem úteis. Você tem conjuntos de habilidades diferentes (começando, intermediários, avançados), usam ferramentas diferentes (Unity, DirectX C++, C#,, outros), estão familiarizados com várias plataformas (Windows, Ios, Android), provenientes de diferentes planos de fundo (dispositivos móveis, empresariais e jogos ) e estão trabalhando em equipes de tamanho diferente (solo, pequena, média, grande). Portanto, essas diretrizes podem ser exibidas com perspectivas e necessidades diferentes. Sempre que possível, tentaremos manter essa diversidade em mente e tornar nossas diretrizes o mais relevantes possível para o máximo possível de pessoas. Além disso, sabemos que muitos de vocês já estão no GitHub. Portanto, Vincularemos diretamente a repositórios e fóruns do GitHub para que você se encontre onde você já está. 
+Esperamos que muitos públicos descubram essas diretrizes para serem úteis. Você tem conjuntos de habilidades diferentes (começando, intermediários, avançados), usam ferramentas diferentes (Unity, DirectX C++, C#,, outros), estão familiarizados com várias plataformas (Windows, Ios, Android), provenientes de diferentes planos de fundo (móveis, empresariais, jogos) e estão trabalhando em equipes de tamanho diferente (solo, pequena, média, grande). Portanto, essas diretrizes podem ser exibidas com perspectivas e necessidades diferentes. Sempre que possível, tentaremos manter essa diversidade em mente e tornar nossas diretrizes o mais relevantes possível para o máximo possível de pessoas. Além disso, sabemos que muitos de vocês já estão no GitHub. Portanto, Vincularemos diretamente a repositórios e fóruns do GitHub para que você se encontre onde você já está. 
 
 ### <a name="share-as-much-as-possible-from-experimental-to-explicit"></a>Compartilhe o máximo possível, de experimental a explícito
 

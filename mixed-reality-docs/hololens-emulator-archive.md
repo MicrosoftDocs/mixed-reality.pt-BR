@@ -1,17 +1,17 @@
 ---
 title: Arquivo de emulador do HoloLens
 description: Lista de compilações liberadas do emulador Microsoft HoloLens.
-author: hamalawi
-ms.author: moelhama
-ms.date: 3/10/2020
+author: pbarnettms
+ms.author: pbarnett
+ms.date: 4/13/2020
 ms.topic: article
 keywords: HoloLens, emulador, compilações, versões
-ms.openlocfilehash: 7aed01ecc155e4ea93bbbf9c347f117b319d2bc7
-ms.sourcegitcommit: 5b2ba01aa2e4a80a3333bfdc850ab213a1b523b9
+ms.openlocfilehash: a50be8c83607882996e5981c4be502a0a617a797
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "79031770"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278154"
 ---
 # <a name="hololens-2-emulator-archive"></a>Arquivo de emulador do HoloLens 2
 
@@ -19,6 +19,7 @@ O emulador do HoloLens (1º gen) e o do HoloLens 2 compilam a instalação lado 
 
 |  {1&gt;Compilação&lt;1} |  Data de lançamento |  {1&gt;Observações&lt;1} | 
 |----------|----------|----------|
+|  [10.0.18362.1059 de Build do emulador do HoloLens 2](https://go.microsoft.com/fwlink/?linkid=2126826) | 13 de abril de 2020 | Compilação 2 de abril de 2020 do HoloLens.  Para ver as notas de versão gerais do HoloLens 2, consulte https://docs.microsoft.com/hololens/hololens-release-notes |
 |  [10.0.18362.1056 de Build do emulador do HoloLens 2](https://go.microsoft.com/fwlink/?linkid=2121323) | 10 de março de 2020 | Compilação 2 de março de 2020 do HoloLens.  Para ver as notas de versão gerais do HoloLens 2, consulte https://docs.microsoft.com/hololens/hololens-release-notes |
 |  [10.0.18362.1053 de Build do emulador do HoloLens 2](https://go.microsoft.com/fwlink/?linkid=2118321) | 11 de fevereiro de 2020 | Compilação de fevereiro de 2020 HoloLens 2.  Para ver as notas de versão gerais do HoloLens 2, consulte https://docs.microsoft.com/hololens/hololens-release-notes |
 |  [10.0.18362.1044 de Build do emulador do HoloLens 2](https://go.microsoft.com/fwlink/?linkid=2114824) | 13 de janeiro de 2020 | Compilação 2 de janeiro de 2020 do HoloLens.  Para ver as notas de versão gerais do HoloLens 2, consulte https://docs.microsoft.com/hololens/hololens-release-notes |
@@ -43,5 +44,5 @@ O emulador do HoloLens (1º gen) e o do HoloLens 2 compilam a instalação lado 
 
 ## <a name="see-also"></a>Consulte também
 * [Instalar as ferramentas](install-the-tools.md)
-* [Usando o emulador do HoloLens](using-the-hololens-emulator.md)
+* [Como usar o emulador do HoloLens](using-the-hololens-emulator.md)
 * [Entrada do emulador de HoloLens avançado e do simulador de realidade misturada](advanced-hololens-emulator-and-mixed-reality-simulator-input.md)

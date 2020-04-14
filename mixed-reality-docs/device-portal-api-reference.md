@@ -1,17 +1,17 @@
 ---
 title: Referência da API do portal do dispositivo
 description: Referência de API para o portal de dispositivo do Windows no HoloLens
-author: JonMLyons
-ms.author: JLyons
+author: jonmlyons
+ms.author: jlyons
 ms.date: 03/21/2018
 ms.topic: article
 keywords: HoloLens, portal de dispositivos Windows, API
-ms.openlocfilehash: 4b5b48c13b1b7ec8bfdf447f42097a8448b6a0e6
-ms.sourcegitcommit: 06ac2200d10b50fb5bcc413ce2a839e0ab6d6ed1
+ms.openlocfilehash: 236de35c2c736fc5a0289b7be1f1548f0a08fa26
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67694422"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278234"
 ---
 # <a name="device-portal-api-reference"></a>Referência da API do portal do dispositivo
 
@@ -24,14 +24,14 @@ Tudo no [portal de dispositivos do Windows](using-the-windows-device-portal.md) 
 Desinstala um aplicativo
 
 Parâmetros
-* agrupa Nome do arquivo do pacote a ser desinstalado.
+* Package: nome de arquivo do pacote a ser desinstalado.
 
 **/API/app/PackageManager/Package (POST)**
 
 Instala um aplicativo
 
 Parâmetros
-* agrupa Nome do arquivo do pacote a ser instalado.
+* Package: nome do arquivo do pacote a ser instalado.
 
 Carga
 * corpo http de conformidade de várias partes
@@ -40,7 +40,7 @@ Carga
 
 Recupera a lista de aplicativos instalados no sistema, com detalhes
 
-Dados de retorno
+Retornar dados
 * Lista de pacotes instalados com detalhes
 
 **/API/app/PackageManager/State (GET)**
@@ -86,14 +86,14 @@ Parâmetros
 * packageFullname: nome do pacote
 * fileName: nome do arquivo de despejo
 
-Dados de retorno
+Retornar dados
 * Arquivo de despejo. Inspecione com o WinDbg ou o Visual Studio
 
 **/API/Debug/dump/UserMode/dumps (GET)**
 
 Retorna a lista de todos os despejos de memória para aplicativos Sideload
 
-Dados de retorno
+Retornar dados
 * Lista de despejos de memória por aplicativo carregado por lado
 
 ## <a name="etw"></a>ETW
@@ -102,14 +102,14 @@ Dados de retorno
 
 Enumera provedores registrados
 
-Dados de retorno
+Retornar dados
 * Lista de provedores, nome amigável e GUID
 
 **/API/ETW/Session/Realtime (obter/WebSocket)**
 
 Cria uma sessão de ETW em tempo real; gerenciado em um WebSocket.
 
-Dados de retorno
+Retornar dados
 * Eventos ETW dos provedores habilitados
 
 ## <a name="holographic-os"></a>Sistema operacional holográfico
@@ -131,7 +131,7 @@ Obtém o IPD armazenado (distância interpupillary) em milímetros
 Define o IPD
 
 Parâmetros
-* IPD Novo valor de IPD a ser definido em milímetros
+* IPD: novo valor de IPD a ser definido em milímetros
 
 **/API/Holographic/os/webmanagement/Settings/HTTPS (GET)**
 
@@ -191,7 +191,7 @@ Crie um fluxo de controle (prioridade necessária) ou poste dados em um fluxo cr
 Excluir uma gravação.
 
 Parâmetros
-* registra Nome da gravação a ser excluída.
+* gravação: o nome da gravação a ser excluída.
 
 **/API/Holographic/Simulation/playback/File (POST)**
 
@@ -206,21 +206,21 @@ Obter todas as gravações.
 Obter o estado de reprodução atual de uma gravação.
 
 Parâmetros
-* registra Nome da gravação.
+* gravação: nome da gravação.
 
 **/API/Holographic/Simulation/playback/Session/File (excluir)**
 
 Descarregar uma gravação.
 
 Parâmetros
-* registra Nome da gravação a ser descarregada.
+* gravação: nome da gravação a ser descarregada.
 
 **/API/Holographic/Simulation/playback/Session/File (POST)**
 
 Carregar uma gravação.
 
 Parâmetros
-* registra Nome da gravação a ser carregada.
+* gravação: o nome da gravação a ser carregada.
 
 **/API/Holographic/Simulation/playback/Session/Files (GET)**
 
@@ -231,28 +231,28 @@ Obter todas as gravações carregadas.
 Pausar uma gravação.
 
 Parâmetros
-* registra Nome da gravação.
+* gravação: nome da gravação.
 
 **/API/Holographic/Simulation/playback/Session/Play (POST)**
 
 Reproduzir uma gravação.
 
 Parâmetros
-* registra Nome da gravação.
+* gravação: nome da gravação.
 
 **/API/Holographic/Simulation/playback/Session/Stop (POST)**
 
 Parar uma gravação.
 
 Parâmetros
-* registra Nome da gravação.
+* gravação: nome da gravação.
 
 **/API/Holographic/Simulation/playback/Session/Types (GET)**
 
 Obter os tipos de dados em uma gravação carregada.
 
 Parâmetros
-* registra Nome da gravação.
+* gravação: nome da gravação.
 
 ## <a name="perception-simulation-recording"></a>Gravação da simulação de percepção
 
@@ -261,12 +261,12 @@ Parâmetros
 Inicie uma gravação. Apenas uma única gravação pode estar ativa de uma vez. É necessário definir um dos cabeçalhos, as mãos, spatialMapping ou ambiente.
 
 Parâmetros
-* principal Defina como 1 para registrar dados de cabeçalho.
-* participação Defina como 1 para gravar dados de mão.
-* spatialMapping : Defina como 1 para registrar o mapeamento espacial.
-* ambiente Defina como 1 para registrar os dados do ambiente.
-* nomes Nome da gravação.
-* singleSpatialMappingFrame : Defina como 1 para gravar apenas um único quadro de mapeamento espacial.
+* Cabeçalho: Defina como 1 para registrar dados de cabeçalho.
+* Hands: Defina como 1 para gravar dados de mão.
+* spatialMapping: Defina como 1 para registrar o mapeamento espacial.
+* ambiente: Defina como 1 para gravar dados do ambiente.
+* Nome: o nome da gravação.
+* singleSpatialMappingFrame: Defina como 1 para gravar apenas um único quadro de mapeamento espacial.
 
 **/API/Holographic/Simulation/Recording/status (GET)**
 
@@ -283,7 +283,7 @@ Parar a gravação atual. A gravação será retornada como um arquivo.
 Baixa um arquivo de realidade misturada do dispositivo. Use op = Stream Query parâmetro para streaming.
 
 Parâmetros
-* nome do arquivo: Nome, hex64 codificado, do arquivo de vídeo a ser obtido
+* filename: nome, hex64 codificado, do arquivo de vídeo a ser obtido
 * op: fluxo
 
 **/API/Holographic/MRC/File (excluir)**
@@ -291,7 +291,7 @@ Parâmetros
 Exclui uma gravação de realidade misturada do dispositivo.
 
 Parâmetros
-* nome do arquivo: Nome, hex64 codificado, do arquivo a ser excluído
+* filename: nome, hex64 codificado, do arquivo a ser excluído
 
 **/API/Holographic/MRC/Files (GET)**
 
@@ -304,7 +304,7 @@ Usa uma foto de realidade misturada e cria um arquivo no dispositivo
 Parâmetros
 * holo: capturar hologramas: true ou false (o padrão é false)
 * PV: capturar câmera PV: true ou false (o padrão é false)
-* RenderFromCamera : (Somente HoloLens 2) render da perspectiva da câmera de foto/vídeo: true ou false (o padrão é true)
+* RenderFromCamera: (somente HoloLens 2) render da perspectiva da câmera de foto/vídeo: true ou false (o padrão é true)
 
 **/API/Holographic/MRC/Settings (GET)**
 
@@ -323,7 +323,7 @@ Obtém o status da realidade misturada registrada (em execução, parada)
 Obtém a imagem em miniatura do arquivo especificado.
 
 Parâmetros
-* nome do arquivo: Nome, hex64 codificado, do arquivo para o qual a miniatura está sendo solicitada
+* filename: nome, hex64 codificado, do arquivo para o qual a miniatura está sendo solicitada
 
 **/API/Holographic/MRC/Video/Control/Start (POST)**
 
@@ -334,9 +334,9 @@ Parâmetros
 * PV: capturar câmera PV: true ou false (o padrão é false)
 * MIC: capturar microfone: true ou false (o padrão é false)
 * loopback: capturar o áudio do aplicativo: true ou false (o padrão é false)
-* RenderFromCamera : (Somente HoloLens 2) render da perspectiva da câmera de foto/vídeo: true ou false (o padrão é true)
-* vstab : (Somente HoloLens 2) habilitar estabilização de vídeo: true ou false (o padrão é true)
-* vstabbuffer: (Somente HoloLens 2) latência de buffer de estabilização de vídeo: 0 a 30 quadros (o padrão é 15 quadros)
+* RenderFromCamera: (somente HoloLens 2) render da perspectiva da câmera de foto/vídeo: true ou false (o padrão é true)
+* Vstab: (somente HoloLens 2) habilitar estabilização de vídeo: true ou false (o padrão é true)
+* vstabbuffer: (somente HoloLens 2) latência de buffer de estabilização de vídeo: 0 a 30 quadros (o padrão é 15 quadros)
 
 **/API/Holographic/MRC/Video/Control/Stop (POST)**
 
@@ -364,15 +364,15 @@ Parâmetros opcionais (somente HoloLens 2)
 
 1280x720p 30fps 5Mbit Stream.
 
-**/API/Holographic/Stream/live_high.MP4 (GET)**
+**/API/Holographic/Stream/live_high. MP4 (GET)**
 
 1280x720p 30fps 5Mbit Stream.
 
-**/API/Holographic/Stream/live_med.MP4 (GET)**
+**/API/Holographic/Stream/live_med. MP4 (GET)**
 
 Um fluxo 854x480p 30fps 2.5 Mbit.
 
-**/API/Holographic/Stream/live_low.MP4 (GET)**
+**/API/Holographic/Stream/live_low. MP4 (GET)**
 
 Um fluxo 428x240p 15fps 0,6 Mbit.
 
@@ -397,7 +397,7 @@ Obtém o nome do computador
 Define o nome do computador
 
 Parâmetros
-* nomes Novo nome do computador, hex64 codificado, para definir como
+* Nome: novo nome do computador, hex64 codificado, para definir como
 
 ## <a name="performance-data"></a>Dados de desempenho
 
@@ -405,17 +405,17 @@ Parâmetros
 
 Retorna a lista de processos em execução com detalhes
 
-Dados de retorno
+Retornar dados
 * JSON com lista de processos e detalhes para cada processo
 
 **/API/ResourceManager/systemperf (GET)**
 
 Retorna estatísticas de desempenho do sistema (leitura/gravação de e/s, estatísticas de memória etc.)
 
-Dados de retorno
+Retornar dados
 * JSON com informações do sistema: CPU, GPU, memória, rede, e/s
 
-## <a name="power"></a>Potência
+## <a name="power"></a>Energia
 
 **/API/Power/Battery (GET)**
 
@@ -442,16 +442,16 @@ Desliga o dispositivo de destino
 Para um aplicativo moderno
 
 Parâmetros
-* agrupa Nome completo do pacote do aplicativo, codificado hex64
-* forcestop : Forçar a interrupção de todos os processos (= Sim)
+* pacote: nome completo do pacote do aplicativo, codificado hex64
+* forcestop: forçar a interrupção de todos os processos (= Sim)
 
 **/API/taskmanager/app (POST)**
 
 Inicia um aplicativo moderno
 
 Parâmetros
-* AppID PRAID do aplicativo para iniciar, hex64 codificado
-* agrupa Nome completo do pacote do aplicativo, codificado hex64
+* AppID: PRAID do aplicativo a ser iniciado, hex64 codificado
+* pacote: nome completo do pacote do aplicativo, codificado hex64
 
 ## <a name="wifi-management"></a>Gerenciamento de WiFi
 
@@ -459,7 +459,7 @@ Parâmetros
 
 Enumera interfaces de rede sem fio
 
-Dados de retorno
+Retornar dados
 * Lista de interfaces sem fio com detalhes (GUID, descrição, etc.)
 
 **/API/WiFi/Network (excluir)**
@@ -477,7 +477,7 @@ Enumera redes sem fio na interface de rede especificada
 Parâmetros
 * interface: GUID de interface de rede
 
-Dados de retorno
+Retornar dados
 * Lista de redes sem fio encontradas na interface de rede com detalhes
 
 **/API/WiFi/Network (POST)**
@@ -500,21 +500,21 @@ Carrega um perfil WPR e inicia o rastreamento usando o perfil carregado.
 Carga
 * corpo http de conformidade de várias partes
 
-Dados de retorno
+Retornar dados
 * Retorna o status da sessão WPR.
 
 **/API/WPR/status (GET)**
 
 Recupera o status da sessão WPR
 
-Dados de retorno
+Retornar dados
 * Status da sessão WPR.
 
 **/API/WPR/Trace (GET)**
 
 Interrompe uma sessão de rastreamento de WPR (desempenho)
 
-Dados de retorno
+Retornar dados
 * Retorna o arquivo ETL de rastreamento
 
 **/API/WPR/Trace (POST)**
@@ -522,9 +522,9 @@ Dados de retorno
 Inicia uma sessão de rastreamento WPR (desempenho)
 
 Parâmetros
-* criar Nome do perfil. Os perfis disponíveis são armazenados em perfprofiles/Profiles. JSON
+* Perfil: nome do perfil. Os perfis disponíveis são armazenados em perfprofiles/Profiles. JSON
 
-Dados de retorno
+Retornar dados
 * Em Iniciar, retorna o status da sessão WPR.
 
 ## <a name="see-also"></a>Consulte também

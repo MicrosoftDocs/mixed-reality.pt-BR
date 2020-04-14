@@ -1,17 +1,17 @@
 ---
 title: Criando um projeto do DirectX Holographic
 description: Explica como criar um novo aplicativo Holographic com base no modelo de aplicativo do Windows Mixed Reality.
-author: MikeRiches
+author: mikeriches
 ms.author: mriches
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, aplicativo Holographic, novo aplicativo, aplicativo UWP, aplicativo de modelo, hologramas, novo projeto, passo a passos, download, código de exemplo
-ms.openlocfilehash: d99478a0d98d0593b7b82f25080d20913789cb6c
-ms.sourcegitcommit: f4812e1312c4751a22a2de56771c475b22a4ba24
+ms.openlocfilehash: 30f2c630b2919fbc304dc96d13cab74e22ed4adc
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/09/2019
-ms.locfileid: "74940834"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81277914"
 ---
 # <a name="creating-a-holographic-directx-project"></a>Criando um projeto do DirectX Holographic
 
@@ -25,7 +25,7 @@ O aplicativo de realidade misturada, no entanto, tem alguns recursos adicionais 
 * Manipule a entrada do [olhar](gaze-and-commit.md) e reconheça um [gesto](gaze-and-commit.md#composite-gestures)simples.
 * Vá para o modo de renderização estéreo de tela inteira.
 
-## <a name="how-do-i-get-started"></a>Como posso começar?
+## <a name="how-do-i-get-started"></a>Como começo?
 
 Primeiro, [Instale as ferramentas](install-the-tools.md), seguindo as instruções sobre como baixar o Visual Studio 2019 e os modelos de aplicativos do Windows Mixed Reality. Os modelos de aplicativo de realidade misturada estão disponíveis no Visual Studio Marketplace como um [download da Web](https://marketplace.visualstudio.com/items?itemName=WindowsMixedRealityteam.WindowsMixedRealityAppTemplatesVSIX)ou instalando-os como uma extensão por meio da interface do usuário do Visual Studio.
 
@@ -54,7 +54,7 @@ Para criar um novo projeto no Visual Studio 2019:
 
 Para criar um novo projeto no Visual Studio 2017:
 1. Inicie o **Visual Studio**.
-2. No menu **arquivo** , aponte para **novo** e selecione **projeto** no menu de contexto. A caixa de diálogo **novo projeto** é aberta.
+2. No menu **arquivo** , aponte para **novo** e selecione **projeto** no menu de contexto. A caixa de diálogo **Novo projeto** é aberta.
 3. Expanda **instalado** à esquerda e expanda o nó de linguagem **Visual C++**  .
 4. Navegue até o nó **Windows Universal > Holographic** e selecione **aplicativo Holographic DirectX 11 (Universal Windows) (C++/WinRT)** .
    ![captura de tela do modelo de C++projeto de aplicativo Holographic DirectX 11/WinRT UWP no Visual Studio 2017](images/holographic-directx-app-cpp-new-project.png)<br>
@@ -174,7 +174,7 @@ O aplicativo de realidade misturada é atualizado em um loop de jogo, que por pa
 
 O método **render** em `AppMain.cpp` pega o <a href="https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicframe" target="_blank">HolographicFrame</a> e renderiza o quadro atual para cada câmera Holographic, de acordo com o estado de posicionamento espacial e do aplicativo atual.
 
-## <a name="notes"></a>Observações
+## <a name="notes"></a>{1&gt;Observações&lt;1}
 
 O modelo de aplicativo de realidade mista do Windows agora dá suporte à compilação com o sinalizador de mitigação Spectre habilitado (/Qspectre). Certifique-se de instalar a versão Spectre das bibliotecas de tempo de execução C++ do Microsoft Visual (MSVC) antes de compilar uma configuração com a mitigação Spectre habilitada. Para instalar as C++ bibliotecas com mitigação de Spectre, inicie o instalador do Visual Studio e selecione **Modificar**. Navegue até **componentes individuais** e pesquise por "Spectre". Selecione as caixas correspondentes às plataformas de destino e à versão MSVC para a qual você precisa compilar o código Spectre mitigado e clique em **Modificar** para iniciar a instalação.
 
@@ -183,5 +183,5 @@ O modelo de aplicativo de realidade mista do Windows agora dá suporte à compil
 * <a href="https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicspaceh" target="_blank">HolographicSpace</a>
 * [Como renderizar no DirectX](rendering-in-directx.md)
 * [Como usar o Visual Studio para implantar e depurar](using-visual-studio.md)
-* [Usando o emulador do HoloLens](using-the-hololens-emulator.md)
+* [Como usar o emulador do HoloLens](using-the-hololens-emulator.md)
 * [Como usar o XAML com aplicativos DirectX holográficos](using-xaml-with-holographic-directx-apps.md)

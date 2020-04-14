@@ -1,17 +1,17 @@
 ---
 title: Adicionar comunicação remota do Holographic
 description: Explica como usar a comunicação remota do Holographic para renderizar hologramas em um HoloLens pela rede.
-author: MikeRiches
+author: mikeriches
 ms.author: mriches
 ms.date: 05/24/2019
 ms.topic: article
 keywords: Realidade mista do Windows, hologramas, comunicação remota Holographic, renderização remota, renderização de rede, HoloLens, hologramas remotos
-ms.openlocfilehash: 523486c26c03bd4b3d5ed8e8cafd994f12678e3b
-ms.sourcegitcommit: ff330a7e36e5ff7ae0e9a08c0e99eb7f3f81361f
+ms.openlocfilehash: 2f6ade5552c993f66281d0be8a7e62c8f076deac
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70122044"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81277704"
 ---
 # <a name="add-holographic-remoting-hololens-1st-gen"></a>Adicionar comunicação remota Holographic (HoloLens (1ª gen))
 
@@ -30,7 +30,7 @@ Os desenvolvedores de HoloLens que usam a comunicação remota do Holographic pr
 
 Esta página descreve como adicionar o Holographic Remoting a um aplicativo desktop ou UWP.
 
-A comunicação remota do Holographic permite que seu aplicativo direcione um HoloLens com conteúdo Holographic hospedado em um computador desktop ou em um dispositivo UWP, como o Xbox One, permitindo o acesso a mais recursos do sistema e possibilitando a integração de exibições de [imersão](app-views.md) remotas ao software de PC desktop existente. Um aplicativo host de comunicação remota recebe um fluxo de dados de entrada de um HoloLens, renderiza o conteúdo em uma exibição de imersão virtual e transmite quadros de conteúdo de volta para o HoloLens. A conexão é feita usando Wi-Fi padrão. Para usar a comunicação remota, você usará um pacote NuGet para adicionar o Holographic Remoting ao seu aplicativo de área de trabalho ou UWP e escreverá código para lidar com a conexão e para renderizar em uma exibição de imersão. As bibliotecas auxiliares são incluídas no exemplo de código que simplificam a tarefa de lidar com a conexão do dispositivo.
+A comunicação remota do Holographic permite que seu aplicativo direcione um HoloLens com conteúdo Holographic hospedado em um PC desktop ou em um dispositivo UWP, como o Xbox One, permitindo o acesso a mais recursos do sistema e possibilitando a integração de [exibições de imersão](app-views.md) remotas ao software de PC desktop existente. Um aplicativo host de comunicação remota recebe um fluxo de dados de entrada de um HoloLens, renderiza o conteúdo em uma exibição de imersão virtual e transmite quadros de conteúdo de volta para o HoloLens. A conexão é feita usando Wi-Fi padrão. Para usar a comunicação remota, você usará um pacote NuGet para adicionar o Holographic Remoting ao seu aplicativo de área de trabalho ou UWP e escreverá código para lidar com a conexão e para renderizar em uma exibição de imersão. As bibliotecas auxiliares são incluídas no exemplo de código que simplificam a tarefa de lidar com a conexão do dispositivo.
 
 Uma conexão de comunicação remota típica terá um mínimo de 50 ms de latência. O aplicativo de player pode relatar a latência em tempo real.
 

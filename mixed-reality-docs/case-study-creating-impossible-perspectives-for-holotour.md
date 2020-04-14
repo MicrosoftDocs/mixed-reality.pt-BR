@@ -1,17 +1,17 @@
 ---
 title: Estudo de caso – criando perspectivas impossíveis para HoloTour
 description: Queríamos que suas experiências no HoloTour para o Microsoft HoloLens sejam esquecidas. Além das interrupções de Tourist tradicionais, planejamos algumas "perspectivas impossíveis".
-author: DannyAskew
+author: dannyaskew
 ms.author: daaske
 ms.date: 03/21/2018
 ms.topic: article
 keywords: HoloTour, HoloLens, realidade misturada do Windows
-ms.openlocfilehash: be00df73543aa295e1e0dbe1462a888d6bb24954
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: f3ca07dfab1e4477039481c268e418aac9034bc5
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63523578"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278164"
 ---
 # <a name="case-study---creating-impossible-perspectives-for-holotour"></a>Estudo de caso – criando perspectivas impossíveis para HoloTour
 
@@ -34,7 +34,7 @@ Primeiro, é importante explicar que todos os locais que você visita no HoloTou
 Para criar as exibições aéreas para a Ride de balão, trabalhamos com outras equipes da Microsoft para obter acesso a imagens panorâmicas aéreas de Roma. A qualidade dessas imagens era excelente e a exibição foi impressionante, mas quando as usamos nos bastidores sem modificação, elas sentiram que não se interessam com as outras partes do Tour e a falta de movimento estava me distraindo. 
 
 
-![A cesta de balões de ar quente, flutuante sobre Roma.](images/hotairballoon1-300px.png)<br>
+![a cesta de balões de ar quente, flutuante sobre Roma.](images/hotairballoon1-300px.png)<br>
 *A cesta de balões de ar quente, flutuante sobre Roma*
 
 Para garantir que os locais de vista atendam à mesma barra de qualidade que outros destinos, decidimos transformar as fotografias estáticas em vida, movendo cenas. A primeira etapa foi editar a imagem e o movimento de composição nela. Contratamos um artista de efeitos visuais para nos ajudar com isso. A edição foi feita para mostrar nuvens com descompasso lenta, pássaros voando e um plano ocasional ou Helicopter atravessando o skyline. No início, foi feita uma série de carros para impulsionar as ruas. Se você esteve no Tour de Roma no HoloTour, é improvável que você tenha consciência explicitamente de qualquer uma dessas movimentações. Isso é realmente ótimo! O movimento sutil não se destina a perceber seus olhos, mas sem esses pequenos toques, as pessoas perceberam imediatamente que era uma imagem estática na cena.
@@ -49,7 +49,7 @@ Os vestígios de monumentos e prédios em Roma são impressionantes até 2000 an
 
 Naturalmente, não há nenhuma seqüência de vídeo ou imagem estática) do Colosseum como ele apareceu quando foi criado, portanto, precisávamos criar o nosso próprio. Tivemos que fazer muita pesquisa para aprender tanto sobre a estrutura como poderíamos; Entendendo os materiais de que foi feito, revisando os diagramas de arquitetura e lendo descrições históricas para obter informações suficientes para poder fazer uma recreação virtual. 
 
-![O dia moderno ruins do Colosseum com uma sobreposição que mostra o andar da arena como seria visto em um Roma antigo.](images/rome-colosseum-overlay-500px.png)<br>
+![o dia moderno ruins do Colosseum com uma sobreposição mostrando o chão da arena, como seria visto em um Roma antigo.](images/rome-colosseum-overlay-500px.png)<br>
 *O dia moderno ruins do Colosseum com uma sobreposição mostrando o chão da arena como seria visto em Roma antigo*
 
 A primeira coisa que queríamos fazer foi aprimorar os Tours tradicionais com sobreposições educacionais. No HoloTour, quando você visita o ruins do Colosseum como está hoje, o andar da Arena é transformado para mostrar a você como ele seria visto durante o uso, incluindo as áreas de preparo do elaborado Underground. Em um tour normal, você pode ter essas informações descritas para você e pode tentar imaginar isso, mas em HoloTour você pode realmente vê-la.
@@ -62,17 +62,17 @@ Embora as sobreposições sejam uma maneira envolvente de ensinar as pessoas sob
 
 Esse empreendimento era muito grande para nossa equipe fazer sozinhos, de modo que nossa equipe de arte trabalhou com Whiskytree, uma empresa de efeitos externos que normalmente trabalha em efeitos visuais para filmes Hollywood. A Whiskytree nos ajudou a recriar o Colosseum em seu Heyday, permitindo-nos ensinar você sobre a estrutura enquanto estava na base da arena e criar uma exibição de um Gladiator luta na caixa do Imperador. Os acenandos e as faixas mais insuficientes adicionam o movimento sutil necessário para fazer com que isso pareça que esses são locais reais e não apenas imagens.
 
-![O Colosseum recriado como visto no chão da arena. Quando exibido em HoloTour, as faixas Flutter na Breeze, dando uma sensação de movimento.](images/recreated-colosseum-holotour-500px.png)<br>
+![o Colosseum recriado como visto no chão da arena. Quando exibido em HoloTour, as faixas Flutter na Breeze, dando uma sensação de movimento.](images/recreated-colosseum-holotour-500px.png)<br>
 *O Colosseum recriado como visto no chão da arena. Quando exibido em HoloTour, as faixas Flutter na Breeze, dando uma sensação de movimento.*
 
 O tour pelo Roma culmina com o Gladiator luta. A Whiskytree nos forneceu a arena e as simulações de torcida 3D renderizadas como vídeo, mas precisávamos adicionar o Gladiators no chão da arena. Essa parte do processo parecia mais como uma produção de vídeo Hollywood do que um projeto de um Game Studio do incubação. Os membros de nossa equipe mapearam uma seqüência aproximada da luta e a refinaram com um choreographer. Contratamos atores para preparar nossa batalha de simulação e comprar a proteção para que ela pareça ser a parte. Por fim, vamos filme em toda a cena em uma tela verde.
 
-![Nosso Gladiators, obtendo instruções entre elas.](images/green-screen-gladiators-holotour-500px.jpg)<br>
+![nosso Gladiators, obter instruções entre o leva.](images/green-screen-gladiators-holotour-500px.jpg)<br>
 *Nosso gladiatiors, obter instruções entre o leva*
 
 Essa cena coloca você na caixa do imperador, o que significa que toda a seqüência de cenas precisava ser dessa perspectiva. Se nos resumirmos onde os Gladiators estavam combatendo no chão da arena, não teríamos conseguido compor corretamente a seqüência de combate mais tarde, então colocamos nosso operador Camera em uma recortabilidade muito alta, olhando para baixo na seqüência de combate para filming.
 
-![Obtendo a perspectiva certa: filming de uma tesoura.](images/scissor-lift-holotour-500px.jpg)<br>
+![obter a perspectiva certa: filming de uma tesoura.](images/scissor-lift-holotour-500px.jpg)<br>
 *Obtendo a perspectiva certa: filming de uma tesoura*
 
 Em produção, as Gladiators foram compostas no chão da arena e a perspectiva estava correta, mas um problema permaneceva: as sombras do Gladiators na tela verde foram removidas como parte do processo de composição. Sem sombras, parece que o Gladiators estava flutuando no ar. Felizmente, o Whiskytree é ótimo para resolver apenas esse tipo de problema e eles usaram um pouco de wizardry técnico para adicionar sombras de volta à nossa cena. O resultado é o que você vê no Tour hoje.

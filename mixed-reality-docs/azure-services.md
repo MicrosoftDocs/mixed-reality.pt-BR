@@ -7,12 +7,12 @@ ms.author: grbury
 ms.date: 08/21/2019
 ms.topic: overview
 keywords: Realidade misturada, desenvolva, desenvolvimento, HoloLens, serviços do Azure, âncoras espaciais, fala, visão, renderização remota
-ms.openlocfilehash: 692c99bfa21fab8e01d38bebb34f656114d9fee3
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: a79495fd9bc82622d0ded14b7b4048584aed1da3
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73439497"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81277744"
 ---
 # <a name="azure-mixed-reality-services"></a>Serviços de realidade misturada do Azure
 Desbloqueie o que cada humano é especialista em — o mundo físico tridimensional em nosso lugar – com os serviços de realidade misturada do Azure. Ajude as pessoas a criar, aprender e colaborar com mais eficiência capturando e identificandondo informações digitais dentro do contexto de seu trabalho e mundo. Traga 3D para dispositivos móveis, headsets e outros dispositivos que não são de compartilhamento de Internet. Usando o Azure, ajude a garantir que suas informações mais confidenciais sejam protegidas.
@@ -46,7 +46,7 @@ Traga modelos 3D interativos e de alta qualidade para dispositivos sem compartil
        [![Fala](images/speech.jpg)](https://docs.microsoft.com/azure/cognitive-services/speech-service/)
     :::column-end:::
     :::column span="2":::
-        ### <a name="speechhttpsdocsmicrosoftcomazurecognitive-servicesspeech-service"></a>[Controle por voz](https://docs.microsoft.com/azure/cognitive-services/speech-service/)
+        ### <a name="speech"></a>[Controle por voz](https://docs.microsoft.com/azure/cognitive-services/speech-service/)
         Descubra como a fala permite a integração de recursos de processamento de fala em qualquer aplicativo ou serviço. Converta o idioma falado em texto ou produza uma fala de som natural a partir de texto usando fontes de voz padrão (ou personalizáveis). Experimente qualquer serviço gratuitamente — e crie rapidamente aplicativos e serviços habilitados para fala com os seguintes recursos.
     :::column-end:::
 :::row-end:::
@@ -58,12 +58,10 @@ Traga modelos 3D interativos e de alta qualidade para dispositivos sem compartil
        [Visão ![](images/vision.jpg)](https://docs.microsoft.com/azure/cognitive-services/computer-vision/)
     :::column-end:::
     :::column span="2":::
-        ### <a name="visionhttpsdocsmicrosoftcomazurecognitive-servicescomputer-vision"></a>[Fornecimento](https://docs.microsoft.com/azure/cognitive-services/computer-vision/)
+        ### <a name="vision"></a>[Fornecimento](https://docs.microsoft.com/azure/cognitive-services/computer-vision/)
         Reconheça, identifique, legenda, indexe e moderação de imagens, vídeos e conteúdo de tinta digital. Saiba como a visão possibilita que aplicativos e serviços identifiquem e analisem com precisão o conteúdo em imagens, vídeos e tinta digital.
     :::column-end:::
 :::row-end:::
-
-
 
 
 ## <a name="see-also"></a>Consulte também

@@ -1,17 +1,17 @@
 ---
 title: Testando seu aplicativo no HoloLens
 description: Diretrizes e sugestões para testar seu aplicativo de HoloLens
-author: JonMLyons
+author: jonmlyons
 ms.author: jlyons
 ms.date: 02/24/2019
 ms.topic: article
 keywords: HoloLens, teste
-ms.openlocfilehash: 9a189bf139c97fc13034d94f05aa8f5974cc19b9
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 3ab5eeec4046b81dc41db51ae138eb9d1069d1ff
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437389"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81277584"
 ---
 # <a name="testing-your-app-on-hololens"></a>Testando seu aplicativo no HoloLens
 

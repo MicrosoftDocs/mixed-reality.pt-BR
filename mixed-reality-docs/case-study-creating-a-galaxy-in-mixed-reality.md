@@ -1,17 +1,17 @@
 ---
 title: Estudo de caso-criando um Galaxy em realidade misturada
 description: Antes de o Microsoft HoloLens ser enviado, pedimos à nossa comunidade de desenvolvedores que tipo de aplicativo gostaria de ver um Build de equipe interno experiente para o novo dispositivo. Mais de 5000 ideias foram compartilhadas e, após uma sondagem do Twitter de 24 horas, o vencedor foi uma ideia chamada "Galaxy Explorer".
-author: KarimLUCCIN
+author: karimluccin
 ms.author: kaluccin
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Galaxy Explorer, HoloLens, realidade mista do Windows, compartilhe sua ideia, estudo de caso
-ms.openlocfilehash: 696662eb92371708389f8a128dcee6a61acf1816
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: f13395250c8a73718408c051ab95d2ec4bf62014
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73436876"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278174"
 ---
 # <a name="case-study---creating-a-galaxy-in-mixed-reality"></a>Estudo de caso-criando um Galaxy em realidade misturada
 
@@ -23,7 +23,7 @@ Andy Zibits, líder de arte do projeto e Karim Luccin, engenheiro de gráficos d
 
 [Nossa equipe](galaxy-explorer.md#meet-the-team) , composta por dois designers, três desenvolvedores, quatro artistas, um produtor e um testador, tinha seis semanas para criar um aplicativo totalmente funcional que permitiria que as pessoas aprendessem e explorassem a grande vantagem e a beleza de nossa maneira de leite.
 
-Queríamos aproveitar ao máximo a capacidade do HoloLens de processar objetos 3D diretamente em seu espaço de vida, então decidimos que queríamos criar um Galaxy de aparência realista, em que as pessoas poderiam ampliar e ver as estrelas individuais, cada uma em suas próprias trajetórias .
+Queríamos aproveitar ao máximo a capacidade do HoloLens de processar objetos 3D diretamente em seu espaço de vida, então decidimos que queríamos criar um Galaxy de aparência realista, em que as pessoas poderiam ampliar e ver as estrelas individuais, cada uma em suas próprias trajetórias.
 
 Na primeira semana do desenvolvimento, nós reunimos algumas metas para nossa representação da nossa forma de leite: a ti precisava ter profundidade, movimento e sensação de volumétricos – cheia de estrelas que ajudam a criar a forma do Galaxy.
 
@@ -41,7 +41,7 @@ Começamos testes de estresse com milhares de partículas de ponto em vários pa
 
 ### <a name="creating-the-position-of-the-stars"></a>Criando a posição das estrelas
 
-Um dos nossos membros da equipe já escreveu o C# código que geraria estrelas em sua posição inicial. As estrelas estão em uma elipse e sua posição pode ser descrita por (**curveOffset**, **ellipseSize**, **elevação**), em que **curveOffset** é o ângulo da estrela ao longo da elipse, **ellipseSize** é a dimensão da elipse ao longo de X e Z, e elevação da elevação adequada da estrela no Galaxy. Assim, podemos criar um buffer ([ComputeBuffer do Unity](https://docs.unity3d.com/ScriptReference/ComputeBuffer.html)) que seria inicializado com cada atributo Star e enviá-lo na GPU onde ele residiria para o restante da experiência. Para desenhar esse buffer, usamos o [DrawProcedural do Unity](https://docs.unity3d.com/ScriptReference/Graphics.DrawProcedural.html) , que permite executar um sombreador (código em uma GPU) em um conjunto arbitrário de pontos sem ter uma malha real que represente o Galaxy:
+Um dos nossos membros da equipe já escreveu o C# código que geraria estrelas em sua posição inicial. As estrelas estão em uma elipse e sua posição pode ser descrita por (**curveOffset**, **ellipseSize**, **elevação**), em que **curveOffset** é o ângulo da estrela ao longo da elipse, **EllipseSize** é a dimensão da elipse ao longo de X e Z e elevação da elevação adequada da estrela no Galaxy. Assim, podemos criar um buffer ([ComputeBuffer do Unity](https://docs.unity3d.com/ScriptReference/ComputeBuffer.html)) que seria inicializado com cada atributo Star e enviá-lo na GPU onde ele residiria para o restante da experiência. Para desenhar esse buffer, usamos o [DrawProcedural do Unity](https://docs.unity3d.com/ScriptReference/Graphics.DrawProcedural.html) , que permite executar um sombreador (código em uma GPU) em um conjunto arbitrário de pontos sem ter uma malha real que represente o Galaxy:
 
 **CPUs**
 
@@ -74,7 +74,7 @@ Começamos com padrões circulares brutos com milhares de partículas. Isso nos 
 
 Tentamos vários padrões e sistemas de partículas que giramos, como esses.
 
-Nossa equipe fez alguma pesquisa sobre a maneira como a função Galaxies e criamos um sistema de partículas personalizado especificamente para o Galaxy para que possamos mover as partículas em elipses com base na "[teoria de onda de densidade](https://en.wikipedia.org/wiki/Density_wave_theory)", que theorizes que os braços de um Galaxy são áreas de maior densidade, mas em fluxo constante, como uma obstrução de tráfego. Ele parece estável e sólido, mas as estrelas estão, na verdade, passando para dentro e para fora dos braços à medida que eles se movem ao longo de suas respectivas elipses. Em nosso sistema, as partículas nunca existem na CPU — geramos os cartões e os orientamos todos na GPU, de modo que o sistema inteiro é simplesmente estado inicial + tempo. Ele progrediu da seguinte maneira:
+Nossa equipe fez alguma pesquisa sobre a maneira como Galaxies a função e criamos um sistema de partículas personalizado especificamente para o Galaxy, para que possamos mover as partículas em elipses com base na "[teoria de ondas de densidade](https://en.wikipedia.org/wiki/Density_wave_theory)", que theorizes que os braços de um Galaxy são áreas de maior densidade, mas em fluxo constante, como uma obstrução de tráfego. Ele parece estável e sólido, mas as estrelas estão, na verdade, passando para dentro e para fora dos braços à medida que eles se movem ao longo de suas respectivas elipses. Em nosso sistema, as partículas nunca existem na CPU — geramos os cartões e os orientamos todos na GPU, de modo que o sistema inteiro é simplesmente estado inicial + tempo. Ele progrediu da seguinte maneira:
 
 ![Progressão do sistema de partículas com renderização de GPU](images/spiral-galaxy-arms-500px.jpg)
 

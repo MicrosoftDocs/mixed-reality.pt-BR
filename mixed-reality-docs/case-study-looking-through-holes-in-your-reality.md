@@ -1,17 +1,17 @@
 ---
 title: Estudo de caso-examinando os buracos em sua realidade
 description: Este estudo de caso explica como implementar o efeito de "janela mágica" no HoloLens, permitindo que o usuário veja por trás das paredes, sob o andar e em aberturas virtuais dentro de seu ambiente real.
-author: EricRehmeyer
+author: ericrehmeyer
 ms.author: bestruku
 ms.date: 10/18/2019
 ms.topic: article
 keywords: Realidade mista do Windows, HoloLens, janela mágica, da Parallax
-ms.openlocfilehash: a1b9f0b2e576379846a867f3d3bffef7d8ec277e
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: c829656c98b7c87f8b969dbbd16115f6a0bbaf27
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73436671"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278144"
 ---
 # <a name="case-study---looking-through-holes-in-your-reality"></a>Estudo de caso-examinando os buracos em sua realidade
 

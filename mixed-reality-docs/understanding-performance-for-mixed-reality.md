@@ -1,17 +1,17 @@
 ---
 title: Entendendo o desempenho da realidade misturada
 description: Tópicos avançados e detalhes sobre como otimizar o desempenho para aplicativos do Windows Mixed Reality
-author: Troy-Ferrell
+author: troy-ferrell
 ms.author: trferrel
 ms.date: 3/26/2019
 ms.topic: article
 keywords: Realidade mista do Windows, realidade misturada, realidade virtual, VR, Sr, desempenho, otimização, CPU, GPU
-ms.openlocfilehash: 287b95363acff00ab7a0407475e0a419fc076611
-ms.sourcegitcommit: 184227dc591ca2791f523d520555730ba1e95b5c
+ms.openlocfilehash: 54e1eec5445fe655a0b498be5c18f08efe2270f0
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79479569"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81277474"
 ---
 # <a name="understanding-performance-for-mixed-reality"></a>Entendendo o desempenho da realidade misturada
 
@@ -70,12 +70,12 @@ Depois de diminuir a resolução de renderização, se:
 
 Em geral, a maior parte do trabalho em um aplicativo de realidade misturada na CPU envolve a execução da "simulação" da cena e o processamento da lógica do aplicativo. As seguintes áreas geralmente são destinadas à otimização:
 
-- Animations
+- Animações
 - Professor
 - Alocações de memória
 - Algoritmos complexos (ou seja, cinemática inversa, localização de caminho)
 
-### <a name="gpu-performance-recommendations"></a>Recomendações de desempenho de GPU
+### <a name="gpu-performance-recommendations"></a>Recomendações de desempenho da GPU
 
 #### <a name="understanding-bandwidth-vs-fill-rate"></a>Compreendendo a largura de banda versus a taxa de preenchimento
 Ao renderizar um quadro na GPU, um aplicativo é geralmente ligado pela largura de banda da memória ou pela taxa de preenchimento.
@@ -101,7 +101,7 @@ A taxa de preenchimento concentra-se na redução do número de operações que 
 
 Contagens de polígono mais altas resultam em mais operações para a GPU; [reduzir o número de polígonos](https://docs.microsoft.com/dynamics365/mixed-reality/import-tool/optimize-models#performance-targets) em sua cena reduzirá o tempo de renderização. Há outros fatores envolvidos no sombreamento da geometria que pode ser cara, mas a contagem de polígonos é a métrica mais simples para determinar o quão caro será a renderização de uma cena.
 
-#### <a name="limit-overdraw"></a>Limite de extração
+#### <a name="limit-overdraw"></a>Limitar a sobreposição
 
 O alto sobreempate ocorre quando vários objetos são renderizados, mas não são mostrados na tela, pois ficam ocultos por um objeto occluding. Imagine examinar uma parede que contém objetos por trás dela. Toda a geometria seria processada para renderização, mas apenas a parede opaca precisa ser renderizada. Isso resulta em operações desnecessárias.
 
@@ -131,9 +131,9 @@ Os efeitos de pós-processamento podem ser muito caros e aumentar a taxa de pree
 
 As operações de alocação e desalocação de memória excessivas podem resultar em desempenho inconsistente, quadros congelados e outros comportamentos prejudiciais. É especialmente importante entender as considerações de memória ao desenvolver no Unity, pois o gerenciamento de memória é controlado pelo coletor de lixo.
 
-#### <a name="object-pooling"></a>Pooling de objetos
+#### <a name="object-pooling"></a>Pool de objetos
 
-O pool de objetos é uma técnica popular para reduzir o custo de alocações e desalocações contínuas de objetos. Isso é feito alocando um grande pool de objetos idênticos e reutilizando instâncias disponíveis inativas desse pool em vez de constantemente gerar e destruir objetos ao longo do tempo. Os pools de objetos são ótimos para componentes reutilizados que têm tempo de vida variável durante um aplicativo.
+O pool de objetos é uma técnica popular para reduzir o custo de alocações e desalocações contínuas de objetos. Isso é feito pela alocação de um grande pool de objetos idênticos e pela reutilização das instâncias disponíveis inativas desse pool em vez da criação e da destruição constantes de objetos ao longo do tempo. Os pools de objetos são ótimos para componentes reutilizados que têm um tempo de vida variável durante um aplicativo.
 
 ## <a name="see-also"></a>Consulte também
 - [Recomendações de desempenho para Unity](performance-recommendations-for-unity.md)

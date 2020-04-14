@@ -1,17 +1,17 @@
 ---
 title: Obtendo um HolographicSpace
 description: Explica a API do HolographicSpace, um conceito básico para a renderização Holographic e a entrada espacial.
-author: MikeRiches
+author: mikeriches
 ms.author: mriches
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, HolographicSpace, CoreWindow, entrada espacial, renderização, Cadeia de permuta, quadro Holographic, loop de atualização, loop de jogo, quadro de referência, locatability, código de exemplo, passo a passos
-ms.openlocfilehash: 828352203b20ec38275796b3f172e7ecc5df3f00
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 76211c8a5394e2e296748253df4eac063841746c
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63525440"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81277824"
 ---
 # <a name="getting-a-holographicspace"></a>Obtendo um HolographicSpace
 
@@ -21,13 +21,13 @@ A classe <a href="https://docs.microsoft.com/uwp/api/windows.graphics.holographi
 
 Criar o objeto Holographic Space é a primeira etapa para tornar seu aplicativo Windows Mixed Reality. Os aplicativos tradicionais do Windows são renderizados para uma cadeia de permuta do Direct3D criada para a janela principal de sua exibição de aplicativo. Essa cadeia de permuta é exibida para um Slate na interface do usuário do amholographic. Para fazer com que seu aplicativo exiba Holographic em vez de um Tablet 2D, crie um espaço Holographic para sua janela principal em vez de uma cadeia de permuta. Apresentar quadros Holographic criados por esse espaço de Holographic coloca seu aplicativo no modo de renderização de tela inteira.
 
-Para um **aplicativo UWP** [a partir do *modelo de aplicativo Holographic DirectX 11 (universal do Windows)* ](creating-a-holographic-directx-project.md), procure esse código no  método SetWindow em AppView. cpp:
+Para um **aplicativo UWP** [a partir do *modelo de aplicativo Holographic DirectX 11 (universal do Windows)* ](creating-a-holographic-directx-project.md), procure esse código no método **SetWindow** em AppView. cpp:
 
 ```cpp
 m_holographicSpace = HolographicSpace::CreateForCoreWindow(window);
 ```
 
-Para um **aplicativo Win32** a [partir do exemplo do Win32 *BasicHologram* ](creating-a-holographic-directx-project.md#creating-a-win32-project), examine o **aplicativo:: CreateWindowAndHolographicSpace** para obter um exemplo de como criar um HWND e, em seguida, convertê-lo em um HWND de imersão criando um associado <a href="https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicspace" target="_blank"> HolographicSpace</a>:
+Para um **aplicativo Win32** a [partir do exemplo do Win32 *BasicHologram* ](creating-a-holographic-directx-project.md#creating-a-win32-project), examine o **aplicativo:: CreateWindowAndHolographicSpace** para obter um exemplo de como criar um HWND e, em seguida, convertê-lo em um HWND de imersão criando um <a href="https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicspace" target="_blank">HolographicSpace</a>associado:
 ```cpp
 void App::CreateWindowAndHolographicSpace(HINSTANCE hInstance, int nCmdShow)
 {
@@ -118,7 +118,7 @@ m_cameraRemovedToken = m_holographicSpace.CameraRemoved(
     std::bind(&AppMain::OnCameraRemoved, this, _1, _2));
 ```
 
-Os manipuladores de eventos devem concluir algum trabalho para manter a renderização de Holographic fluindo sem problemas, e para que seu aplicativo seja capaz de renderizar. Leia o código e os comentários para obter os detalhes: você pode procurar **OnCameraAdded** e **OnCameraRemoved** em sua classe principal para entender como o mapa do **M_cameraResources** é manipulado pelo **DeviceResources**.
+Os manipuladores de eventos devem concluir algum trabalho para manter a renderização de Holographic fluindo sem problemas, e para que seu aplicativo seja capaz de renderizar. Leia o código e os comentários para obter os detalhes: você pode procurar **OnCameraAdded** e **OnCameraRemoved** em sua classe principal para entender como o mapa de **m_cameraResources** é tratado pelo **DeviceResources**.
 
 No momento, estamos concentrados no AppMain e na configuração que ele faz para permitir que seu aplicativo saiba sobre câmeras Holographic. Com isso em mente, é importante anotar os dois requisitos a seguir:
 

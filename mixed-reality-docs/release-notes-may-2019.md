@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 07/11/2019
 ms.topic: article
 keywords: notas de versão, versão, Windows 10, Build, 19h1, so, maio de 2019
-ms.openlocfilehash: f5163e128c3f1e1b68d827b09078b565a58c5a4d
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 97bf4c3b5c24fc6f0c763b8dd9f146bbaa01187a
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438312"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81277624"
 ---
 # <a name="release-notes---may-2019"></a>Notas de versão – maio de 2019
 
@@ -43,6 +43,10 @@ Estamos continuamente procurando melhorar a compatibilidade.  Se você achar que
 ## <a name="hololens-1st-gen-long-term-servicing"></a>Serviço de longo prazo do HoloLens (1ª gen)
 
 O HoloLens (1º gen) está inserindo o estado de manutenção em longo prazo (LTS). As atualizações futuras se concentrarão em correções de problemas e de segurança, mantendo, ao mesmo tempo, a paridade de recursos com a [versão de outubro de 2018 do Windows](release-notes-october-2018.md) para o HoloLens (também conhecido como RS5). 
+
+## <a name="known-issues"></a>Problemas conhecidos
+
+Estamos acompanhando um problema que requer que um monitor esteja conectado ao PC para que o headset de imersão funcione corretamente. Os usuários do PC mochila podem querer usar um adaptador de vídeo ativo (ou o emulador EDID) para garantir que o headset de imersão continue a ser renderizado quando nenhum monitor de PC estiver em uso. 
 
 ## <a name="provide-feedback-and-report-issues"></a>Fornecer comentários e relatar problemas
 

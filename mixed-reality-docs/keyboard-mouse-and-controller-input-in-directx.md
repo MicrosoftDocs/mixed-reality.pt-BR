@@ -1,17 +1,17 @@
 ---
 title: Entrada de teclado, mouse e controlador no DirectX
 description: Explica como criar um aplicativo para a realidade mista do Windows que usa controladores de teclado, mouse e jogo.
-author: MikeRiches
+author: mikeriches
 ms.author: mriches
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, teclado, mouse, Game Controller, Xbox Controller, HoloLens, desktop, passo a passos, código de exemplo
-ms.openlocfilehash: 1e61cb50a561492fdc6849b5b231e97fab1bb6cf
-ms.sourcegitcommit: 05fa75193059a2dac4b580a9eef7b6c4bb64d8d7
+ms.openlocfilehash: 27f1bf72435ce6889ba3f7b83664367a4440b162
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74835092"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278084"
 ---
 # <a name="keyboard-mouse-and-controller-input-in-directx"></a>Entrada de teclado, mouse e controlador no DirectX
 

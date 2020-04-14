@@ -1,17 +1,17 @@
 ---
 title: Usando XAML com aplicativos Holographic DirectX
 description: Explica o impacto de alternar entre exibições do XAML 2D e exibições de imersão em seu aplicativo DirectX e como fazer uso eficiente de uma exibição XAML e de imersão.
-author: MikeRiches
+author: mikeriches
 ms.author: mriches
 ms.date: 03/21/2018
 ms.topic: article
 keywords: realidade mista do Windows, UWP, gerenciamento de exibição de aplicativo, XAML, teclado, passo a passos, DirectX
-ms.openlocfilehash: 32b2feea0cb6b8aba972c1772451ca7b5b9946d5
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 4136e674cfc1737dba9dcc1f70bd68edd4e95a41
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63548706"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81277954"
 ---
 # <a name="using-xaml-with-holographic-directx-apps"></a>Usando XAML com aplicativos Holographic DirectX
 
