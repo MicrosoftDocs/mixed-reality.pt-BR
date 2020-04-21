@@ -235,7 +235,7 @@
 #### [Como funciona – Estúdios de Captura de Realidade Misturada](how-it-works-mixed-reality-capture-studios.md)
 ### Comunicação remota holográfica
 #### [Player de Comunicação Remota Holográfica](holographic-remoting-player.md)
-#### [Como criar um aplicativo de host de comunicação remota holográfica](holographic-remoting-create-host.md)
+#### [Como criar um aplicativo remoto de comunicação remota holográfica](holographic-remoting-create-host.md)
 #### [Como criar um player personalizado de comunicação remota holográfica](holographic-remoting-create-player.md)
 #### [Canais de dados personalizados de comunicação remota holográfica](holographic-remoting-custom-data-channels.md)
 #### [Conexão segura com a comunicação remota holográfica](holographic-remoting-secure-connection.md)
