@@ -1,5 +1,4 @@
 ---
-layout: LandingPage
 title: Introdução à Realidade Misturada
 description: Para ajudar alguém novo na realidade misturada a saber o que ela é e entender suas funcionalidades.
 author: grbury
@@ -8,12 +7,12 @@ ms.date: 08/24/2019
 ms.topic: overview
 ms.localizationpriority: high
 keywords: Mixed Reality, discover, distribute, index, landing page, design, development, tutorials, sample apps, fundamentals, case studies, resources, HoloLens how-to, Open source projects
-ms.openlocfilehash: f6f72df63628bba590ac7af098d0b405e6721cc2
-ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
+ms.openlocfilehash: 71777327d9eca488ceffdaa1ee4d7a78efe56713
+ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79375563"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82137881"
 ---
 # <a name="get-started-with-mixed-reality"></a>Introdução à Realidade Misturada
 

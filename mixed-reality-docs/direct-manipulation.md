@@ -8,10 +8,10 @@ ms.topic: article
 ms.localizationpriority: high
 keywords: Realidade Misturada, foco, direcionamento do foco, interação, design, mãos nas proximidades, HoloLens
 ms.openlocfilehash: 6811fe0b09ecff1ddc76d9df9ddc440f9c934ce3
-ms.sourcegitcommit: 6844930427b658ae31f642c395cd8a3b3cdbf857
+ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "75723245"
 ---
 # <a name="direct-manipulation-with-hands"></a>Manipulação direta com as mãos

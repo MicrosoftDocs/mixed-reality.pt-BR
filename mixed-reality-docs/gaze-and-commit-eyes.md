@@ -8,10 +8,10 @@ ms.topic: article
 ms.localizationpriority: high
 keywords: Acompanhamento ocular, realidade misturada, entrada, focar com o olhar, focalização com os olhos, HoloLens 2, seleção ocular
 ms.openlocfilehash: 89f5031635f2b67ba4c9afdf605559c2b9da4ac2
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "73437822"
 ---
 # <a name="eye-gaze-and-commit"></a>Focar com o olhar e confirmar
@@ -39,7 +39,7 @@ O esmaecimento não precisa ser tão lento quanto o movimento de entrada. Ele s�
 
 **Esteja atento à sincronização dos sinais de foco e confirmação**: A sincronização dos sinais de entrada pode ser mais acessível para simples comandos de fechar e abrir dedos indicador e polegar e pressionamentos de botão. É algo que exige atenção caso você deseje usar ações de confirmação mais complexas que possam envolver comandos de voz longos ou gestos de mão complicados. Imagine que você olhe para um alvo e emita um comando de voz longo. Considerando o tempo necessário para dizer e para o sistema detectar o que você disse, o foco do seu olhar provavelmente já vai ter mudado para um novo alvo na cena. Portanto, informe aos usuários de que eles precisam manter o olhar fixo no alvo até que o comando seja reconhecido, ou lide com a entrada de maneira a determinar o início do comando e o que o usuário estava olhando naquele momento.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 * [Interação ocular] (eye-gaze-interaction.md)
 * [Acompanhamento ocular no HoloLens 2] (eye-tracking.md)
 * [Focar e confirmar](gaze-and-commit.md)
@@ -47,5 +47,5 @@ O esmaecimento não precisa ser tão lento quanto o movimento de entrada. Ele s�
 * [Mãos – Manipulação direta](direct-manipulation.md)
 * [Mãos – Gestos](gaze-and-commit.md#composite-gestures)
 * [Mãos – Apontar e confirmar](point-and-commit.md)
-* [Interações instintivas](interaction-fundamentals.md)
+* [Interações instinctuais](interaction-fundamentals.md)
 * [Entrada de voz](voice-input.md)

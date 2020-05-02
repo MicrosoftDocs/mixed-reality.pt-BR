@@ -8,10 +8,10 @@ ms.topic: article
 keywords: realidade misturada, unity, tutorial, hololens
 ms.localizationpriority: high
 ms.openlocfilehash: d8e73e24f0522ff71b95ea1886d59893216b0597
-ms.sourcegitcommit: 5b2ba01aa2e4a80a3333bfdc850ab213a1b523b9
+ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "79028335"
 ---
 # <a name="3-adding-the-azure-cognitive-services-speech-translation-component"></a>3. Adicionar o componente de tradução de fala dos Serviços Cognitivos do Azure

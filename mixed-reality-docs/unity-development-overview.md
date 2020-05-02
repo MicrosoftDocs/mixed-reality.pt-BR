@@ -7,18 +7,20 @@ ms.date: 10/25/2018
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unity, realidade misturada, desenvolvimento, introdução, novo projeto, portabilidade, funcionalidade, câmera, simulação, emulação, documentação
-ms.openlocfilehash: 23b3d9a3fe419911e774722a7d2db6809c2955cf
-ms.sourcegitcommit: 4d43a8f40e3132605cee9ece9229e67d985db645
+ms.openlocfilehash: e0fe775f5fe891416145d91e52a5a801e049c568
+ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74491105"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "81433412"
 ---
 # <a name="unity-development-overview"></a>Visão geral do desenvolvimento com o Unity
 
 O caminho mais rápido para a criação de um [aplicativo de realidade misturada](app-views.md) é com o [Unity](https://unity.com). Recomendamos que você reserve um tempo para explorar os [tutoriais do Unity](https://unity3d.com/learn/tutorials). Caso você precise de ativos, o Unity dispõe de uma [Asset Store](https://www.assetstore.unity3d.com/) abrangente. Depois de obter um entendimento básico do Unity, visite os [tutoriais](tutorials.md) para saber mais sobre os detalhes específicos do desenvolvimento de realidade misturada com o Unity. Não deixe de visitar os [fóruns sobre realidade misturada do Unity](https://forum.unity3d.com/forums/hololens.102/) para se envolver com o restante da comunidade que cria aplicativos de realidade misturada no Unity e encontrar soluções para os problemas que possam ocorrer.
 
 Para começar a criar aplicativos de realidade misturada com o Unity, primeiro [instale as ferramentas](install-the-tools.md). 
+
+>[!VIDEO https://channel9.msdn.com/Shows/Docs-Mixed-Reality/Setting-up-your-HoloLens-2-development-environment/player?format=ny]
 
 ## <a name="new-unity-project-with-mixed-reality-toolkit"></a>Novo projeto do Unity com o Kit de Ferramentas de Realidade Misturada 
 
@@ -79,7 +81,7 @@ Além desta documentação disponível em docs.microsoft.com, o Unity instala a 
     * Este manual foi projetado para ajudar você a aprender a usar o Unity, de técnicas básicas a avançadas.
     * Acessível por meio do Editor do Unity em **Ajuda > Manual**
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 * [Kit de Ferramentas de Realidade Misturada v2](mrtk-getting-started.md)
 * [Noções básicas do MR 100: introdução ao Unity](holograms-100.md)
 * [Configurações recomendadas do Unity](recommended-settings-for-unity.md)
