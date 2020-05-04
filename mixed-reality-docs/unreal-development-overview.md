@@ -8,10 +8,10 @@ ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, beta, streaming, comunicação remota, realidade misturada, desenvolvimento, introdução, novo projeto, emulador, documentação
 ms.openlocfilehash: 96b0259e4ac567389f999d3a453fb68bb848b266
-ms.sourcegitcommit: 4d43a8f40e3132605cee9ece9229e67d985db645
+ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/26/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "74491176"
 ---
 # <a name="unreal-development-overview"></a>Visão geral do desenvolvimento com o Unreal
@@ -38,5 +38,5 @@ Transmitir seu aplicativo da área de trabalho para o aplicativo Holographic Rem
 
 Para começar a usar o streaming, confira o <a href="https://docs.unrealengine.com//Platforms/AR/HoloLens2/QuickStartStreaming/index.html" target="_blank">Início Rápido de streaming do HoloLens 2</a>[]().
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 * <a href="https://docs.unrealengine.com//Platforms/Mobile/Performance/index.html" target="_blank">Diretrizes de desempenho do Unreal para dispositivos móveis</a>
