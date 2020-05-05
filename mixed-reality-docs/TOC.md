@@ -123,10 +123,9 @@
 ###### [4. Configurar a intenção e o reconhecimento vocal natural](mrlearning-speechSDK-ch4.md)
 ##### Tutoriais de recursos multiusuário
 ###### [1. Configurar uma rede Unity Photon](mrlearning-sharing(photon)-ch1.md)
-###### [2. Preparar o Unity para o desenvolvimento](mrlearning-sharing(photon)-ch2.md)
-###### [3. Conectar vários usuários](mrlearning-sharing(photon)-ch3.md)
-###### [4. Compartilhar movimentações de objeto com vários usuários](mrlearning-sharing(photon)-ch4.md)
-###### [5. Integrar âncoras espaciais do Azure a uma experiência compartilhada](mrlearning-sharing(photon)-ch5.md)
+###### [2. Conectar vários usuários](mrlearning-sharing(photon)-ch2.md)
+###### [3. Compartilhar movimentações de objeto com vários usuários](mrlearning-sharing(photon)-ch3.md)
+###### [4. Integrar âncoras espaciais do Azure a uma experiência compartilhada](mrlearning-sharing(photon)-ch4.md)
 ##### Tutoriais de áudio espacial
 ###### [1. Adicionar áudio espacial em seu projeto](unity-spatial-audio-ch1.md)
 ###### [2. Espacializar sons de interação de botão](unity-spatial-audio-ch2.md)
