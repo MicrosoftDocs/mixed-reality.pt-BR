@@ -1,5 +1,5 @@
 ---
-title: Tutoriais de recursos multiusuário – 2. Preparar o Unity para o desenvolvimento
+title: Tutoriais de recursos multiusuário – 3. Como conectar vários usuários
 description: Conclua este curso para aprender a implementar experiências compartilhadas de vários usuários em um aplicativo do HoloLens 2.
 author: jessemcculloch
 ms.author: jemccull
@@ -7,100 +7,110 @@ ms.date: 02/26/2019
 ms.topic: article
 keywords: realidade misturada, unity, tutorial, hololens
 ms.localizationpriority: high
-ms.openlocfilehash: f7ae77d6978b5da860d890bcfe5b6f7c3d4640c8
-ms.sourcegitcommit: 5b2ba01aa2e4a80a3333bfdc850ab213a1b523b9
+ms.openlocfilehash: a597aadbddb49fefc824d8c5b5193585fa9476a5
+ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "79031235"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "81610972"
 ---
-# <a name="2-getting-unity-ready-for-development"></a>2. Preparar o Unity para o desenvolvimento
+# <a name="2-connecting-multiple-users"></a>2. Como conectar vários usuários
 
-Neste tutorial, você aprenderá a preparar e configurar o Unity para o desenvolvimento de aplicativos, incluindo importar o Mixed Reality Toolkit, definir as configurações de build e preparar sua cena.
+Neste tutorial, você aprenderá a conectar vários usuários como parte de uma experiência compartilhada ao vivo. Ao final do tutorial, você estará apto a executar o aplicativo em vários dispositivos e fazer com que cada usuário veja o avatar dos outros usuários se mover em tempo real.
 
 ## <a name="objectives"></a>Objetivos
 
-* Configurar o Unity para o desenvolvimento de aplicativos
-* Importe o Kit de ferramentas de realidade misturada
-* Preparar a cena do projeto
+* Saiba como conectar vários usuários em uma experiência compartilhada
 
-## <a name="instructions"></a>Instruções
+## <a name="preparing-the-scene"></a>Preparando a cena
 
-1. Baixe e salve o pacote do Unity de Fundação do Mixed Reality Toolkit clicando [aqui.](https://github.com/microsoft/MixedRealityToolkit-Unity/releases/download/v2.3.0/Microsoft.MixedReality.Toolkit.Unity.Foundation.2.3.0.unitypackage)
+Nesta seção, você vai preparar a cena adicionando alguns pré-fabricados do tutorial.
 
-2. No Unity, clique no menu Ativos e selecione Importar Pacote, então clique em Pacote Personalizado.
+Na janela Projeto, navegue até a pasta **Ativos** > **MRTK.Tutorials.MultiUserCapabilities** > **Pré-fabricados**. Enquanto segura o botão CTRL, clique em **DebugWindow**, **NetworkLobby** e **SharedPlayground** para selecionar os três pré-fabricados:
 
-    ![Module3Chapter2step2im](images/module3chapter2step2im.PNG)
+![mrlearning-sharing](images/mrlearning-sharing/tutorial2-section1-step1-1.png)
 
-3. Selecione o pacote do Unity que você acabou de baixar do link fornecido na etapa 1. Depois que a janela pop-up importar aparecer no Unity, clique no botão Importar para começar a importar o MRTK. Isso pode levar vários minutos.
+Com os três pré-fabricados ainda selecionados, arraste-os para a janela Hierarquia para adicioná-los à cena:
 
-    ![Module3Chapter2step3im](images/module3chapter2step3im.PNG)
+![mrlearning-sharing](images/mrlearning-sharing/tutorial2-section1-step1-2.png)
 
-    >[!NOTE]
-    >O pacote baixado está em pasta local em que você salvou o arquivo. A imagem acima não retrata o local em que você encontrará o pacote.
+## <a name="creating-the-user-prefab"></a>Como criar o pré-fabricado do usuário
 
-    Depois que o pacote tiver sido importado, a janela Configurador de Projeto do MRTK deverá aparecer. Se ele não aparecer, abra-o selecionando Mixed Reality Toolkit > Utilitários > Configurar Projeto do Unity no menu Unity.
+Nesta seção, você criará um pré-fabricado que será usado para representar os usuários na experiência compartilhada.
 
-    Na janela Configurador de Projeto do MRTK, expanda a seção Modificar Configurações, desmarque a caixa de seleção Habilitar MSBuild para Unity, verifique se todas as outras opções estão marcadas e clique no botão Aplicar para aplicar as configurações.
+### <a name="1-create-and-configure-the-user"></a>1. Criar e configurar o usuário
 
-    ![Module3Chapter2note1im](images/module3chapter2note1im-missing01.png)
+Na janela Hierarquia, clique com o botão direito do mouse em uma área vazia e selecione **Criar Vazio** para adicionar um objeto vazio à cena, nomeie o objeto **PhotonUser** e configure-o da seguinte maneira:
 
-    > [!CAUTION]
-    > O MSBuild para Unity pode não ser compatível com todos os SDKs que você usará e pode ser complicado desabilitá-lo depois que ele tiver sido habilitado. Consequentemente, é altamente recomendável não habilitar o MSBuild para o Unity.
-    
-4. Crie uma cena. Isso pode ser feito clicando em Arquivo e selecionando Nova Cena. Salve-o como HLSharedProjectMain.
+* Verifique se a **Posição** da transformação está definida como X = 0, Y = 0 e Z = 0:
 
-5. Em Mixed Reality Toolkit, clique em Adicionar à Cena e Configurar.
+![mrlearning-sharing](images/mrlearning-sharing/tutorial2-section2-step1-1.png)
 
-    ![Module3Chapter2step5im](images/module3chapter2step5im.PNG)
+Com o objeto **PhotonUser** ainda selecionado, na janela Inspetor, use o botão **Adicionar Componente** para adicionar o componente **Usuário do Photon (Script)** ao objeto PhotonUser:
 
-6. Quando isso for concluído, selecione MRTK (Mixed Reality Toolkit) na hierarquia. No painel Inspetor, altere o perfil de configuração MRTK para DefaultHoloLens2ConfigurationProfile.
+![mrlearning-sharing](images/mrlearning-sharing/tutorial2-section2-step1-2.png)
 
-    ![Module2Chapter1step4ima](images/Module2Chapter1step4ima-missing01.png)
+Na janela Inspetor, use o botão **Adicionar Componente** para adicionar o componente **Sincronização de Rede Genérica (Script)** ao objeto PhotonUser e configure-o da seguinte maneira:
 
-7. Selecione o MRTK (Mixed Reality Toolkit) da hierarquia. No painel do inspetor, procure o Script do Mixed Reality Toolkit e pressione o botão "Copiar e Personalizar", como mostra a figura abaixo.  Um pop aparecerá depois disso. Selecione a opção Clonar no menu pop-up.
+* Marque a caixa de seleção **É um Usuário**
 
-    ![Module3Chapter2step6imc](images/module3chapter2step6imc.PNG)
+![mrlearning-sharing](images/mrlearning-sharing/tutorial2-section2-step1-3.png)
 
-    ![Module3Chapter2step6imd](images/module3chapter2step6imd.PNG)
+Na janela Inspetor, use o botão **Adicionar Componente** para adicionar o componente **Exibição do Photon (Script)** ao objeto PhotonUser e configure-o da seguinte maneira:
 
-8. Role para baixo e desmarque Habilitar Sistema de Diagnóstico se você quiser ocultar a janela de diagnóstico. É recomendável manter a janela de diagnóstico habilitada durante o desenvolvimento do aplicativo para monitorar o desempenho e, em seguida, desabilitá-la durante as demonstrações de produção ou de aplicativo. 
+* Ao campo **Componentes Observados**, atribua o componente Sincronização de Rede Genérica (Script)
 
-    ![Module3Chapter2step7ima](images/module3chapter2step7ima.PNG)
+![mrlearning-sharing](images/mrlearning-sharing/tutorial2-section2-step1-4.png)
 
-9. Abra as configurações de build pressionando Control+Shift+B ou acessando Arquivo->Configurações de Build. Observe que o programa está definido atualmente na plataforma autônoma de PC, Mac e Linux. Para o desenvolvimento do HoloLens 2, defina a plataforma como Plataforma Universal do Windows. Selecione-a e clique em alternar plataforma.
+### <a name="2-create-the-avatar"></a>2. Criar o avatar
 
-    ![Module3Chapter2step8im](images/module3chapter2step8im.PNG)
+Na janela Hierarquia, clique com o botão direito do mouse no objeto **PhotonUser** e selecione **Objeto 3D** > **Esfera** para criar um objeto de esfera como um filho do objeto PhotonUser e configure-o da seguinte maneira:
 
-10. Após a conclusão, clique na caixa chamada Adicionar Cenas Abertas. Agora, acesse o painel Inspetor e verifique se a caixa de seleção à direita de Realidade Virtual Compatível (conforme mostra a imagem abaixo) está marcada. Verifique também se a caixa de seleção ao lado de cenas/HLSharedProjectMain também está marcada, conforme mostrado na imagem abaixo.
+* Verifique se a **Posição** da transformação está definida como X = 0, Y = 0 e Z = 0
+* Altere a **Escala** da transformação para um tamanho adequado, por exemplo, X = 0,15, Y = 0,15 e Z = 0,15
 
-    ![Module3Chapter2step9im](images/module3chapter2step9im.PNG)
+![mrlearning-sharing](images/mrlearning-sharing/tutorial2-section2-step2-1.png)
 
-11. Na seção Configurações de Publicação no painel Inspetor, role para baixo até Funcionalidades e verifique se as seguintes caixas de seleção estão marcadas:
+### <a name="3-create-the-prefab"></a>3. Criar o pré-fabricado
 
-    ![Module3Chapter2step9imb](images/module3chapter2step9imb.PNG)
+Na janela Projeto, navegue até a pasta **Ativos** > **MRTK.Tutorials.MultiUserCapabilities** > **Recursos**:
 
-12. Importe os pacotes personalizados listados:
+![mrlearning-sharing](images/mrlearning-sharing/tutorial2-section2-step3-1.png)
 
-    * [AzureSpatialAnchors.unitypackage](https://github.com/Azure/azure-spatial-anchors-samples/releases/download/v2.1.1/AzureSpatialAnchors.unitypackage) (versão 2.1.1)
-    * [MRTK.HoloLens2.Unity.Tutorials.Assets.GettingStarted.2.3.0.2.unitypackage](https://github.com/microsoft/MixedRealityLearning/releases/download/getting-started-v2.3.0.2/MRTK.HoloLens2.Unity.Tutorials.Assets.GettingStarted.2.3.0.2.unitypackage)
-    * [MRTK.HoloLens2.Unity.Tutorials.Assets.AzureSpatialAnchors.2.3.0.0.unitypackage](https://github.com/microsoft/MixedRealityLearning/releases/download/azure-spatial-anchors-v2.3.0.0/MRTK.HoloLens2.Unity.Tutorials.Assets.AzureSpatialAnchors.2.3.0.0.unitypackage)
-    * [MRTK.HoloLens2.Unity.Tutorials.Assets.MultiUserCapabilities.2.1.0.1.unitypackage](https://github.com/microsoft/MixedRealityLearning/releases/download/multi-user-capabilities-v2.1.0.1/MRTK.HoloLens2.Unity.Tutorials.Assets.MultiUserCapabilities.2.1.0.1.unitypackage)
+Com a pasta Recursos ainda selecionada, **clique e arraste** o objeto **PhotonUser** da janela Hierarquia para a pasta **Recursos** a fim de tornar o objeto PhotonUser um pré-fabricado:
 
-    >[!TIP]
-    >Para um lembrete sobre como configurar um projeto do Unity para Âncoras Espaciais do Azure, veja o tutorial [Introdução às Âncoras Espaciais do Azure](https://docs.microsoft.com/windows/mixed-reality/mrlearning-asa-ch1) que faz parte da série de tutoriais [Âncoras Espaciais do Azure](https://docs.microsoft.com/windows/mixed-reality/mrlearning-asa-ch1).
+![mrlearning-sharing](images/mrlearning-sharing/tutorial2-section2-step3-2.png)
 
+Na janela Hierarquia, clique com o botão direito do mouse no objeto **PhotonUser** e selecione **Excluir** para removê-lo da cena:
 
-13. No painel Projeto, vá para a pasta Pré-Fabricados. Nas etapas a seguir, você implementará alguns Pré-Fabricados na cena. Na pasta Pré-Fabricados, clique e arraste a Janela de Depuração do pré-fabricado para a hierarquia. Quando terminar, salve o projeto clicando em Arquivo e, em seguida, escolha Salvar ou pressione Control+S.
+![mrlearning-sharing](images/mrlearning-sharing/tutorial2-section2-step3-3.png)
 
-    ![Module3Chapter2step12im](images/module3chapter2step12im.PNG)
+## <a name="configuring-pun-to-instantiate-the-user-prefab"></a>Como configurar o PUN para criar uma instância do pré-fabricado do usuário
 
-    Você pode observar que um pop-up aparece ao clicar no pré-fabricado solicitando informações sobre o TMP Essentials. Clique em Importar TMP Essentials conforme necessário. Se essa janela pop-up for exibida, talvez seja necessário excluir o pré-fabricado da hierarquia e arrastá-lo novamente para a hierarquia para evitar possíveis erros relacionados a texto.
+Nesta seção, você vai configurar o projeto para usar o pré-fabricado do PhotonUser criado na seção anterior.
 
-    ![Module3Chapter2note2im](images/module3chapter2note2im.PNG)
+Na janela Projeto, navegue até a pasta **Ativos** > **MRTK.Tutorials.MultiUserCapabilities** > **Recursos**.
+
+Na janela Hierarquia, expanda o objeto **NetworkLobby** e selecione o objeto filho **NetworkRoom**. Em seguida, na janela Inspetor, localize o componente **Sala do Photon (Script)** e configure-o da seguinte maneira:
+
+* Ao campo **Pré-fabricado do Usuário do Photon**, atribua o pré-fabricado **PhotonUser** da pasta Recursos
+
+![mrlearning-sharing](images/mrlearning-sharing/tutorial2-section3-step1-1.png)
+
+## <a name="trying-the-experience-with-multiple-users"></a>Como testar a experiência com vários usuários
+
+Se você criar e implantar agora o projeto do Unity no HoloLens e, no Unity, selecionar o botão Reproduzir para entrar no Modo de jogo enquanto o aplicativo estiver em execução no HoloLens, verá a movimentação do avatar do usuário do HoloLens quando mover a cabeça (HoloLens):
+
+![mrlearning-sharing](images/mrlearning-sharing/tutorial2-section4-step1-1.gif)
+
+> [!TIP]
+> Para obter um lembrete sobre como criar e implantar seu projeto do Unity no HoloLens 2, confira as instruções para [Criar o aplicativo para seu dispositivo](mrlearning-base-ch1.md#build-your-application-to-your-device).
+
+> [!CAUTION]
+> O aplicativo precisa se conectar ao Photon; portanto, verifique se o computador/o dispositivo está conectado à Internet.
 
 ## <a name="congratulations"></a>Parabéns
 
-Seu Projeto do Unity agora está pronto para Photon. Nos próximos tutoriais, vamos criar essa cena e nosso projeto do Unity para uma experiência compartilhada completa.
+Você configurou com êxito seu projeto para permitir que vários usuários se conectem à mesma experiência e vejam os movimentos uns dos outros. No próximo tutorial, você implementará uma funcionalidade para que os movimentos dos objetos também sejam compartilhados entre vários dispositivos.
 
-[Próximo tutorial: 3. Conectar vários usuários](mrlearning-sharing(photon)-ch3.md)
+[Próximo tutorial: 2. Compartilhar movimentações de objeto com vários usuários](mrlearning-sharing(photon)-ch3.md)

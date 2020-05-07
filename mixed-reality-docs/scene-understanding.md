@@ -1,19 +1,19 @@
 ---
-title: Compreensão da cena
+title: Reconhecimento de cena
 description: Introdução aos recursos de compreensão da cena para o HoloLens
 author: szymons
 ms.author: szymons
 ms.date: 07/08/2019
 ms.topic: article
 keywords: Compreensão da cena, mapeamento espacial, realidade do Windows Mixed, Unity
-ms.openlocfilehash: 3d56f375c38b1dee6ab9eb97219a5e37fe698c63
-ms.sourcegitcommit: 37816514b8fe20669c487774b86e80ec08edcadf
+ms.openlocfilehash: 615da20df95f4a435216457e8b9f16bb7d7d069b
+ms.sourcegitcommit: 92ff5478a5c55b4e2c5cc2f44f1588702f4ec5d1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "81003332"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82604957"
 ---
-# <a name="scene-understanding"></a>Compreensão da cena
+# <a name="scene-understanding"></a>Reconhecimento de cena
 
 A compreensão da cena fornece aos desenvolvedores de realidade misturada uma representação de ambiente estruturada e de alto nível, projetada para tornar o desenvolvimento de aplicativos com reconhecimento de ambiente intuitivo. O entendimento da cena faz isso combinando o poder dos tempos de execução de realidade misturados existentes, como o [mapeamento espacial](spatial-mapping.md) menos estruturado e altamente preciso e novos tempos de execução orientados a ia. Ao combinar essas tecnologias, a compreensão da cena gera representações de ambientes 3D semelhantes aos que você pode ter usado em estruturas como Unity ou ARKit/ARCore. O ponto de entrada de compreensão da cena começa com um observador de cena, que é chamado pelo seu aplicativo para computar uma nova cena. Hoje, a tecnologia é capaz de gerar 3 categorias de objeto diferentes, mas relacionadas: malhas de ambiente Watertight simplificadas que inferem na estrutura de sala planar sem aglomeração, regiões de plano para posicionamento que chamamos de quatro processadores e um instantâneo da malha de [mapeamento espacial](spatial-mapping.md) que se alinha com os dados de quatro Watertight que fazemos.
 
@@ -29,18 +29,18 @@ Este artigo só serve para apresentar a cena que entende o tempo de execução e
 
 Você pode baixar o aplicativo de exemplo de compreensão da cena no site do GitHub de exemplo:
 
-[Exemplo de compreensão da cena](https://github.com/sceneunderstanding-microsoft/unitysample)
+[Exemplo de compreensão da cena](https://github.com/microsoft/MixedReality-SceneUnderstanding-Samples)
 
 Se você não tiver um dispositivo e desejar acessar cenas de exemplo para experimentar a compreensão da cena, há cenas na pasta de ativos de exemplo:
 
 [Cenas de exemplo de compreensão de cena](https://github.com/sceneunderstanding-microsoft/unitysample/tree/master/Assets/Resources/SerializedScenesForPCPath)
 
-### <a name="sdk"></a>SDK
+### <a name="sdk"></a>.
 
 Se você estiver procurando detalhes específicos sobre como desenvolver para compreensão da cena ou detalhes sobre como o entendimento da cena funciona e como desenvolvê-lo, consulte a documentação [visão geral do SDK de compreensão da cena](scene-understanding-SDK.md) .
 
 
-### <a name="sample"></a>Exemplo
+### <a name="sample"></a>Amostra
 
 
 ## <a name="device-support"></a>Suporte a dispositivos
@@ -54,12 +54,12 @@ Se você estiver procurando detalhes específicos sobre como desenvolver para co
     </colgroup>
     <tr>
         <td><strong>Recurso</strong></td>
-        <td><a href="hololens-hardware-details.md"><strong>HoloLens (1ª geração)</strong></a></td>
+        <td><a href="hololens-hardware-details.md"><strong>HoloLens (1º gen)</strong></a></td>
         <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></td>
         <td><a href="immersive-headset-hardware-details.md"><strong>Headsets imersivos</strong></a></td>
     </tr>
      <tr>
-        <td>Compreensão da cena</td>
+        <td>Reconhecimento de cena</td>
         <td>❌</td>
         <td>✔️</td>
         <td>❌</td>
@@ -68,7 +68,7 @@ Se você estiver procurando detalhes específicos sobre como desenvolver para co
 
 ## <a name="common-usage-scenarios"></a>Cenários de uso comuns
 
-![ilustrações de cenários de uso de mapeamento espacial comum: posicionamento, oclusão, física e navegação](images/sm-concepts-1000px.png)<br>
+![Ilustrações de cenários de uso de mapeamento espacial comum: posicionamento, oclusão, física e navegação](images/sm-concepts-1000px.png)<br>
 *Cenários de uso de mapeamento espacial comum: posicionamento, oclusão, física e navegação.*
 
 <br>
@@ -77,7 +77,7 @@ Muitos dos principais cenários de aplicativos com reconhecimento de ambiente (p
 
 As seções a seguir revisitam os cenários principais de mapeamento espacial no contexto do SDK de compreensão da nova cena.
 
-### <a name="placement"></a>Colocação
+### <a name="placement"></a>Posicionamento
 
 A compreensão da cena fornece novas construções projetadas especificamente para simplificar os cenários de posicionamento. Uma cena pode computar primitivos chamados SceneQuads, que descrevem superfícies planas nas quais os hologramas podem ser colocados. A SceneQuads foi projetada especificamente para posicionamento e descreve uma superfície 2D e fornece uma API para posicionamento nessa superfície. Anteriormente, ao usar a malha de triângulo para realizar o posicionamento, era necessário verificar todas as áreas do Quad e executar o preenchimento/pós-processamento de orifício para identificar bons locais para o posicionamento do objeto. Isso nem sempre é necessário com o quads, pois o tempo de execução da cena é capaz de inferir quais áreas do Quad que não foram verificadas e invalidar áreas do Quad que não fazem parte da superfície.
 
@@ -87,7 +87,7 @@ A compreensão da cena fornece novas construções projetadas especificamente pa
        **Imagem #1** -SceneQuads com inferência desabilitada, capturando áreas de posicionamento para regiões digitalizadas.
     :::column-end:::
         :::column:::
-       ![quádruplos com inferência habilitada, o posicionamento não é mais limitado a áreas digitalizadas.](images/SUWatertight.png)<br>
+       ![Quatro processadores com inferência habilitada, o posicionamento não é mais limitado a áreas digitalizadas.](images/SUWatertight.png)<br>
         **#2 de imagem** -quads com inferência habilitada, o posicionamento não está mais limitado a áreas digitalizadas.
     :::column-end:::
 :::row-end:::
@@ -121,7 +121,7 @@ Embora a [visualização de mapeamento espacial](spatial-mapping.md#visualizatio
 
 Além disso, o número total de superfícies retornado pelo mapeamento espacial é limitado pelo cache espacial interno, enquanto a versão de compreensão da cena da malha de mapeamento espacial é capaz de acessar dados de mapeamento espacial que não são armazenados em cache. Por isso, a compreensão da cena é mais adequada à captura de representações de malha para espaços maiores (por exemplo, mais de um único espaço) para visualização ou processamento de malha adicional. A malha mundial retornada com EnableWorldMesh terá um nível consistente de detalhes em todo o mundo, o que pode gerar uma visualização mais agradável se for renderizado como wireframe.
 
-### <a name="see-also"></a>Consulte também
+### <a name="see-also"></a>Consulte Também
 
 * [SDK de compreensão da cena](scene-understanding-SDK.md)
 * [Mapeamento espacial](spatial-mapping.md)

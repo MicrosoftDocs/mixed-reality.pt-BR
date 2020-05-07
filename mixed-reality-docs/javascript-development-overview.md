@@ -6,18 +6,18 @@ ms.author: ayyonet
 ms.date: 04/10/2020
 ms.topic: article
 keywords: WebXR, WinMR, WebAR, WebVR, WindowsMixedReality, HoloLens, Windows Mixed Reality, Web VR, Web XR, Web Mr, Web ar, 360, 360 vídeo, 360 vídeos, 360 Photo, 360 fotos, 360 Content, imersão Web, imersão-Web, IW, immersiveweb
-ms.openlocfilehash: 5756af9f48f4bb25477e75fb1f7c09e7239bdab9
-ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
+ms.openlocfilehash: a1288e8f477f42b0937e797623fb83fe8f63685c
+ms.sourcegitcommit: ba4c8c2a19bd6a9a181b2cec3cb8e0402f8cac62
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81278477"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82835605"
 ---
 # <a name="mixed-reality-development-with-javascript-overview"></a>Desenvolvimento de realidade mista com visão geral do JavaScript
 
 ## <a name="mixed-reality-applications-on-the-web"></a>Aplicativos de realidade misturada na Web
 
-Os recursos de realidade misturada estão disponíveis na Web pelo uso de [APIs de dispositivo WebXR](https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API) e [APIs preteridas do WebVR] ([visão geral do WebXR](webxr-overview.md). Para navegadores que não dão suporte a recursos completos do WebXR, você pode adicionar os [suportes retroativos do WebXR](https://github.com/immersive-web/webxr-polyfill) ao seu site.
+Os recursos de realidade misturada estão disponíveis na Web pelo uso de [APIs de dispositivo WebXR](https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API) e [APIs de WebVR preteridas](webxr-overview.md). Para navegadores que não dão suporte a recursos completos do WebXR, você pode adicionar os [suportes retroativos do WebXR](https://github.com/immersive-web/webxr-polyfill) ao seu site.
 
 ## <a name="what-is-webxr-polyfill"></a>O que é o WebXR retroativo
 
@@ -55,7 +55,7 @@ A plataforma [nativa Babylon](https://www.babylonjs.com/native/) permite que qua
 
 [Reagir nativo](https://reactnative.dev/) é outra biblioteca de software livre que permite aos desenvolvedores criar usando JavaScript e implantar em várias plataformas. Você pode baixar o [reajam nativo no GitHub](https://github.com/facebook/react-native) e saber mais sobre ele em [reagir em blog nativo](https://reactnative.dev/blog/).
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte Também
 
 * [Visão geral do WebXR](webxr-overview.md)
 * [Especificação de API do dispositivo WebXR](https://immersive-web.github.io/webxr/)

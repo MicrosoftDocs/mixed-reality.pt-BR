@@ -7,12 +7,12 @@ ms.date: 04/13/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Visual Studio, HoloLens, realidade misturada, depurar, implantar
-ms.openlocfilehash: 718635922196b9c044c6904ebab994e9e2a2ff1a
-ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
+ms.openlocfilehash: 8708ca39460fbd381bd41f5887e1276291f48b07
+ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81277994"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "81484316"
 ---
 # <a name="using-visual-studio-to-deploy-and-debug"></a>Como usar o Visual Studio para implantação e depuração
 
@@ -31,8 +31,8 @@ Comece habilitando o **Modo de Desenvolvedor** no dispositivo, para que o Visual
 
 ### <a name="hololens"></a>HoloLens
 1. Ligue o HoloLens e coloque o dispositivo.
-2. Faça o gesto [bloom](system-gesture.md#bloom) para iniciar o menu principal.
-3. Foque o bloco **Configurações** e faça o gesto de [fechar e abrir os dedos indicador e polegar](gaze-and-commit.md#composite-gestures). Faça um segundo air tap para colocar o aplicativo em seu ambiente. O aplicativo Configurações será iniciado depois disso.
+2. Faça o [gesto de início](system-gesture.md) para iniciar o menu principal.
+3. Selecione o bloco **Configurações** para iniciar o aplicativo no ambiente.
 4. Selecione item de menu **Atualização**.
 5. Selecione o item de menu **Para desenvolvedores**.
 6. Habilite o **Modo de Desenvolvedor**. Isso permitirá que você [implante aplicativos do Visual Studio](using-visual-studio.md) no HoloLens.
@@ -84,6 +84,9 @@ Se o endereço IP do HoloLens for alterado, você poderá alterar o endereço IP
 4. Na primeira vez que implantar um aplicativo no HoloLens por meio do computador, você deverá fornecer um PIN. Siga as instruções de **Como emparelhar o dispositivo** abaixo.
 
 ## <a name="deploying-an-app-over-usb---hololens-2"></a>Como implantar um aplicativo via USB – HoloLens 2
+
+>[!VIDEO https://channel9.msdn.com/Shows/Docs-Mixed-Reality/Deploying-your-HoloLens-2-application/player?format=ny]
+
 1. Selecione uma configuração de build **ARM** ou **ARM64** para o aplicativo</br>
 ![Configuração de build ARM64 no Visual Studio](images/arm64setting.png)</br>
 2. Selecione **Dispositivo** no menu suspenso do destino de implantação</br>

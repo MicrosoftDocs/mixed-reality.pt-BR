@@ -8,10 +8,10 @@ ms.topic: article
 ms.localizationpriority: high
 keywords: Realidade misturada, design, conforto, HoloLens 2, HoloLens (1ª geração)
 ms.openlocfilehash: 178044ce8c76de75b7cce5e10664ce65d108f0f8
-ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
+ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "79376063"
 ---
 # <a name="comfort"></a>Conforto
@@ -173,7 +173,7 @@ O ângulo de foco ideal (repouso) é considerado entre 10-20 graus abaixo do hor
 
 A fadiga muscular pode se acumular quando é esperado que os usuários mantenham uma mão levantada durante toda uma experiência. Também pode ser cansativo exigir que o usuário faça gestos de fechar e abrir os dedos indicador e polegar repetidamente por longas durações. Portanto, recomendamos que as experiências evitem a exigência de uma entrada de gesto constante e repetida. Essa meta pode ser alcançada incorporando pequenos intervalos ou oferecendo uma combinação de entrada de gesto e fala para interagir com o aplicativo.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 * [Foco](gaze-and-commit.md)
 * [Estabilidade do holograma](hologram-stability.md)
 * [Interações instinctuais](interaction-fundamentals.md)

@@ -1,5 +1,5 @@
 ---
-title: Tutoriais de recursos multiusuário – 4. Compartilhar movimentações de objeto com vários usuários
+title: Tutoriais de recursos multiusuário – 5. Integrar Âncoras Espaciais do Azure a uma experiência compartilhada
 description: Conclua este curso para aprender a implementar experiências compartilhadas de vários usuários em um aplicativo do HoloLens 2.
 author: jessemcculloch
 ms.author: jemccull
@@ -7,81 +7,101 @@ ms.date: 02/26/2019
 ms.topic: article
 keywords: realidade misturada, unity, tutorial, hololens
 ms.localizationpriority: high
-ms.openlocfilehash: b0ddf0799fd94c29ce8f1221c55073cd77b63703
-ms.sourcegitcommit: 5b2ba01aa2e4a80a3333bfdc850ab213a1b523b9
+ms.openlocfilehash: c27ed7327cfe0a61f2b63e309348bdea1a535ea1
+ms.sourcegitcommit: 92ff5478a5c55b4e2c5cc2f44f1588702f4ec5d1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "79031245"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82604967"
 ---
-# <a name="4-sharing-object-movements-with-multiple-users"></a>4. Compartilhar movimentações de objeto com vários usuários
+# <a name="4-integrating-azure-spatial-anchors-into-a-shared-experience"></a>4. Integrar Âncoras Espaciais do Azure a uma experiência compartilhada
 
-Neste tutorial, você aprenderá a compartilhar os movimentos de objetos para que todos os participantes de uma sessão compartilhada possam colaborar e exibir as interações uns dos outros. Esta lição baseia-se no Iniciador Lunar criado como parte dos [Tutoriais do Módulo Base](mrlearning-base.md).
+Neste tutorial, você aprenderá a integrar a ASA (Âncoras Espaciais do Azure) à experiência compartilhada. A ASA permite que vários dispositivos tenham uma referência comum ao mundo físico, de modo que os usuários vejam uns aos outros na respectiva localização física real e vejam a experiência compartilhada no mesmo lugar.
 
 ## <a name="objectives"></a>Objetivos
 
-- Traga o iniciador lunar como o modelo 3D a ser compartilhado
-- Configurar seu projeto para compartilhar os movimentos do modelo 3D
-- Saiba como criar um aplicativo básico de colaboração de vários usuários
+* Integrar a ASA a uma experiência compartilhada para o alinhamento de vários dispositivos
+* Conhecer os conceitos básicos de como a ASA funciona no contexto de uma experiência compartilhada local
 
-## <a name="instructions"></a>Instruções
+## <a name="preparing-the-scene"></a>Preparando a cena
 
-1. Salve a cena da lição anterior (Control+S). Você pode dar a ela o nome de HLSharedProjectMainPart4.Unity para que seja mais fácil encontrá-la quando precisar.
+Na janela Hierarquia, expanda o objeto **SharedPlayground** e expanda o objeto **TableAnchor** para expor os objetos filho:
 
-2. Na janela Projeto, na pasta Ativos->Scripts, clique duas vezes em GenericNetSync para abri-la no Visual Studio ou no editor de código que você está usando.  
+![mrlearning-sharing](images/mrlearning-sharing/tutorial4-section1-step1-1.png)
 
-    ![module3chapter4updatestep2](images/module3chapter4updatestep2.png)
+Na janela Projeto, navegue até a pasta **Ativos** > **MRTK.Tutorials.MultiUserCapabilities** > **Pré-fabricados** e arraste o pré-fabricado **Buttons** sobre o objeto filho **TableAnchor** na janela Hierarquia para adicioná-lo à cena como um filho do objeto TableAnchor:
 
-3. Nas linhas 34 e 38, remova "//" para ativar o código da tabela que será usada nesta lição. Em seguida, salve o arquivo.
+![mrlearning-sharing](images/mrlearning-sharing/tutorial4-section1-step1-2.png)
 
-    ![module3chapter4updatestep3](images/module3chapter4updatestep3.png)
+## <a name="configuring-the-buttons-to-operate-the-scene"></a>Como configurar os botões para operar a cena
 
-4. Na janela Projeto, clique duas vezes no arquivo PhotonRoom.cs na pasta Ativos->Scripts para abri-lo no Visual Studio.
+Nesta seção, você vai configurar uma série de eventos de botão que demonstram os conceitos básicos de como as Âncoras Espaciais do Azure podem ser usadas para obter o alinhamento espacial em uma experiência compartilhada.
 
-    ![module3chapter4updatestep4](images/module3chapter4updatestep4.png)
+Na janela Hierarquia, expanda o objeto **Button** e selecione o primeiro objeto de botão filho chamado **StartAzureSession**:
 
-5. Assim como na Etapa 3, precisamos remover "//" para ativar o código nas linhas 25, 26 e 106.
+![mrlearning-sharing](images/mrlearning-sharing/tutorial4-section2-step1-1.png)
 
-    ![module3chapter4updatestep5a](images/module3chapter4updatestep5a.png)
+Na janela Inspetor, localize o componente **Interativo (Script)** e configure o evento **OnClick ()** da seguinte maneira:
 
-    ![module3chapter4updatestep5b](images/module3chapter4updatestep5b.png)
+* Ao campo **Nenhum (Objeto)** , atribua o objeto **TableAnchor**
+* No menu suspenso **Nenhuma Função**, selecione a função **AnchorModuleScript** > **StartAzureSession ()**
 
-6. Na exibição Hierarquia, selecione o objeto NetworkRoom.
+![mrlearning-sharing](images/mrlearning-sharing/tutorial4-section2-step1-2.png)
 
-    ![module3chapter4updatestep6](images/module3chapter4updatestep6.png)
+Na janela Hierarquia, selecione o segundo objeto de botão filho chamado **CreateAzureAnchor**. Em seguida, na janela Inspetor, localize o componente **Interativo (Script)** e configure o evento **OnClick ()** da seguinte maneira:
 
-7. Na exibição do projeto, navegue até Ativos->Recursos->Pré-Fabricados. Primeiro, arraste e solte o pré-fabricado Tabela para o slot Tableprefab na classe PhotonRoom. Em seguida, arraste e solte o RocketLauncherCompleteVariantprefab para o slot Pré-Fabricado do Módulo na classe PhotonRoom.
+* Ao campo **Nenhum (Objeto)** , atribua o objeto **TableAnchor**
+* No menu suspenso **Nenhuma Função**, selecione a função **AnchorModuleScript** > **CreateAzureAnchor ()**
+* Ao novo campo **Nenhum (Objeto de Jogo)** exibido, atribua o objeto **TableAnchor**
 
-    ![module3chapter4updatestep7](images/module3chapter4updatestep7.png)
+![mrlearning-sharing](images/mrlearning-sharing/tutorial4-section2-step1-3.png)
 
-    >[!NOTE]
-    >Se você clicar em um dos objetos pré-fabricado e soltar, o Inspetor alternará para esse objeto. Clique, arraste, solte e libere cada objeto para seu slot apropriado.
+Na janela Hierarquia, selecione o terceiro objeto de botão filho chamado **ShareAzureAnchor**. Em seguida, na janela Inspetor, localize o componente **Interativo (Script)** e configure o evento **OnClick ()** da seguinte maneira:
 
-8. Clique na seta à esquerda de MixedRealityPlayspace e mova o objeto de jogo filho MainCamera para baixo para o pré-fabricado SharedPlayground. Em seguida, exclua o pré-fabricado MixedRealityPlayspace selecionando o pré-fabricado e toque em "delete" no teclado).
+* Ao campo **Nenhum (Objeto)** , atribua o objeto **TableAnchor**
+* No menu suspenso **Nenhuma Função**, selecione a função **SharingModuleScript** > **ShareAzureAnchor ()**
 
-    ![Module3hapter4step5im](images/module3chapter4step5im.PNG)
+![mrlearning-sharing](images/mrlearning-sharing/tutorial4-section2-step1-4.png)
 
-    >[!NOTE]
-    >Verifique se as posições de SharedPlayground e Câmera Principal estão definidas como 0,0,0.
+Na janela Hierarquia, selecione o quarto objeto de botão filho chamado **GetAzureAnchor**. Em seguida, na janela Inspetor, localize o componente **Interativo (Script)** e configure o evento **OnClick ()** da seguinte maneira:
 
-9. Selecione o objeto "SharedPlayground" e clique com o botão direito do mouse para escolher a opção "criar vazio" para criar um objeto de jogo vazio como um filho do objeto de jogo "SharedPlayground".
+* Ao campo **Nenhum (Objeto)** , atribua o objeto **TableAnchor**
+* No menu suspenso **Nenhuma Função**, selecione a função **SharingModuleScript** > **GetAzureAnchor ()**
 
-   ![Module3chapter4step6im](images/module3chapter4step6im.PNG)
+![mrlearning-sharing](images/mrlearning-sharing/tutorial4-section2-step1-5.png)
 
-10. Com o novo objeto selecionado em sua hierarquia, altere o nome do objeto para TableAnchor no painel de Inspetor. Além disso, clique em Adicionar Componente e pesquise o componente TableAnchor. Selecione-o e adicione-o ao objeto.
+## <a name="connecting-the-scene-to-the-azure-resource"></a>Como conectar a cena ao recurso do Azure
 
-    ![Module3Chapter4step7im](images/module3chapter4step7im.PNG)
+Na janela Hierarquia, expanda o objeto **SharedPlayground** e selecione o objeto **TableAnchor**. Em seguida, na janela Inspetor, localize o componente **Gerenciador de Âncora Espacial (Script)** e configure a seção **Credenciais** com as credenciais da conta das Âncoras Espaciais do Azure criada como parte dos [Pré-requisitos](mrlearning-sharing(photon)-ch1.md#prerequisites) desta série de tutoriais:
 
-11. No painel Projeto na pasta Pré-Fabricados, arraste a tabela Pré-Fabricado para o objeto filho "TableAnchor" que você acabou de criar.
+* No campo **ID da Conta das Âncoras Espaciais**, cole a **ID da Conta** da sua conta das Âncoras Espaciais do Azure
+* No campo **Chave de Conta das Âncoras Espaciais**, cole a **Chave de Acesso** primária ou secundária da sua conta das Âncoras Espaciais do Azure
 
-    ![Module3Chapter4step8im](images/module3chapter4step8im.PNG)
+![mrlearning-sharing](images/mrlearning-sharing/tutorial4-section3-step1-1.png)
+
+Com o objeto **TableAnchor** ainda selecionado, na janela Inspetor, verifique se todos os componentes de script estão habilitados:
+
+* Marque a caixa de seleção ao lado dos componentes **Gerenciador de Âncora Espacial (Script)** para habilitá-los
+* Marque a caixa de seleção ao lado dos componentes **Script do Módulo de Âncora (Script)** para habilitá-los
+* Marque a caixa de seleção ao lado dos componentes **Script do Módulo de Compartilhamento (Script)** para habilitá-los
+
+![mrlearning-sharing](images/mrlearning-sharing/tutorial4-section3-step1-2.png)
+
+## <a name="trying-the-experience-with-spatial-alignment"></a>Como testar a experiência com o alinhamento espacial
+
+> [!NOTE]
+> As Âncoras Espaciais do Azure não podem ser executadas no Unity. Consequentemente, para testar a funcionalidade das Âncoras Espaciais do Azure, você precisará implantar o projeto em um mínimo de dois dispositivos HoloLens.
+
+Se você criar e implantar agora o projeto do Unity em dois dispositivos HoloLens, poderá obter o alinhamento espacial entre os dispositivos compartilhando a ID da Âncora do Azure. Para testá-lo, você pode seguir estas etapas:
+
+1. No dispositivo HoloLens 1: **Inicie o aplicativo** (é criada uma instância do Rocket Launcher, que será colocada na mesa)
+2. No dispositivo HoloLens 2: **Inicie o aplicativo** (os dois usuários veem a mesa com o Rocket Launcher, mas ela não aparece no mesmo lugar, e os avatares do usuário não aparecem no local em que os usuários estão)
+3. No dispositivo HoloLens 1: Selecione o botão **Iniciar Sessão do Azure**
+4. No dispositivo HoloLens 1: Selecione o botão **Criar Âncora do Azure** (cria a âncora na localização do objeto TableAnchor e armazena as informações de âncora no recurso do Azure).
+5. No dispositivo HoloLens 1: Selecione o botão **Compartilhar Âncora do Azure** (compartilha a ID da âncora com os outros usuários em tempo real)
+6. No dispositivo HoloLens 2: Selecione o botão **Iniciar Sessão do Azure**
+7. No dispositivo HoloLens 2: Selecione o botão **Obter Âncora do Azure** (conecta-se ao recurso do Azure para recuperar as informações de âncora da ID da âncora compartilhada e, em seguida, move o objeto TableAnchor para a localização em que a âncora foi criada com o dispositivo HoloLens 1)
 
 ## <a name="congratulations"></a>Parabéns
 
-Quando isso for concluído, procure localizar o módulo lunar. Depois disso, todos os usuários que ingressarem em seu projeto do Unity poderão mover o iniciador lunar.  Todos os movimentos são sincronizados para que cada usuário possa ver as interações das outras pessoas. Esses conceitos servem como os blocos de construção fundamentais para experiências de colaboração compartilhadas com recursos completos.
-
-Embora todos os usuários estejam conectados como parte de uma experiência compartilhada e possam ver os movimentos relativos dos objetos, o aplicativo ainda não consegue alinhar os avatars e os objetos com precisão, de modo que os usuários locais não conseguem ver uns aos outros e os objetos no mesmo local dentro do mundo físico. Para ancorar experiências compartilhadas locais, cada dispositivo requer uma compreensão comum do ambiente físico. Neste módulo, faremos isso usando ASA ([Âncoras Espaciais do Azure](<https://azure.microsoft.com//services/spatial-anchors/>)), que serão implementadas na próxima lição.
-
-Antes de prosseguir para a próxima lição, precisaremos concluir o Módulo de Aprendizagem de ASA que aborda as noções básicas do ASA, a criação de contas e recursos do Azure, bem como outros blocos de construção fundamentais necessários antes que seja possível integrá-los à nossa experiência compartilhada.
-
-[Próxima lição: 5. Integrar Âncoras Espaciais do Azure em uma experiência compartilhada](mrlearning-sharing(photon)-ch5.md)
+Neste tutorial, você aprendeu a integrar as Âncoras Espaciais do Azure avançadas para alinhar dispositivos em uma experiência compartilhada. Isso também conclui esta série de tutoriais em que você aprendeu a configurar uma conta e um aplicativo do Photon, integrar o Photon e o PUN a um aplicativo do Unity, configurar os avatares dos usuários e os objetos compartilhados e, por fim, alinhar vários participantes usando a ASA.

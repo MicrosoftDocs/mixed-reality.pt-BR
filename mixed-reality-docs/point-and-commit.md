@@ -8,10 +8,10 @@ ms.topic: article
 ms.localizationpriority: high
 keywords: Realidade misturada, interação, design, HoloLens, mãos, à distância, apontar e confirmar
 ms.openlocfilehash: d3f886fd8e892fe34116c3a1d601ae3a87d87a9b
-ms.sourcegitcommit: 2bfe9b1af4ee2cc0d668caeccb8ebc3137cbc20b
+ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/11/2020
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "75901525"
 ---
 # <a name="point-and-commit-with-hands"></a>Apontar e confirmar com as mãos
@@ -147,7 +147,7 @@ Os usuários podem usar os raios de mão para apontar e revelar a caixa delimita
     :::column-end:::
     :::column:::
        ![Escala a distância da manipulação de objetos 3D](images/3d-object-manipulation-far-scale.jpg)<br>
-       **Dimensionar**<br>
+       **Escala**<br>
     :::column-end:::
 :::row-end:::
 
@@ -211,7 +211,7 @@ Por padrão, o MRTK fornece um prefab de raio de mão ([DefaultControllerPointer
 
 ---
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 * [Manipulação direta com as mãos](direct-manipulation.md)
 * [Focar e confirmar](gaze-and-commit.md)
 * [Mãos – Manipulação direta](direct-manipulation.md)
