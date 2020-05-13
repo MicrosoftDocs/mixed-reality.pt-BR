@@ -1,19 +1,19 @@
 ---
-title: Referência da API do portal do dispositivo
+title: Referência de API do portal de dispositivos
 description: Referência de API para o portal de dispositivo do Windows no HoloLens
 author: jonmlyons
 ms.author: jlyons
 ms.date: 03/21/2018
 ms.topic: article
 keywords: HoloLens, portal de dispositivos Windows, API
-ms.openlocfilehash: 236de35c2c736fc5a0289b7be1f1548f0a08fa26
-ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
+ms.openlocfilehash: 8c9d60f458cddd3ba258aed0ee82f7aa16c10ba6
+ms.sourcegitcommit: 6d9d01d53137435c787f247f095d5255581695fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81278234"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83227941"
 ---
-# <a name="device-portal-api-reference"></a>Referência da API do portal do dispositivo
+# <a name="device-portal-api-reference"></a>Referência de API do portal de dispositivos
 
 Tudo no [portal de dispositivos do Windows](using-the-windows-device-portal.md) é criado sobre as APIs REST que você pode usar para acessar os dados e controlar seu dispositivo de forma programática.
 
@@ -33,7 +33,7 @@ Instala um aplicativo
 Parâmetros
 * Package: nome do arquivo do pacote a ser instalado.
 
-Carga
+Carga útil
 * corpo http de conformidade de várias partes
 
 **/API/app/PackageManager/Packages (GET)**
@@ -47,7 +47,7 @@ Retornar dados
 
 Obtém o status da instalação do aplicativo em andamento
 
-## <a name="dump-collection"></a>Coleta de despejo
+## <a name="dump-collection"></a>Despejar coleção
 
 **/API/Debug/dump/UserMode/crashcontrol (excluir)**
 
@@ -183,6 +183,10 @@ Abra uma conexão de soquete da Web para um fluxo de controle.
 **/API/Holographic/Simulation/Control/Stream (POST)**
 
 Crie um fluxo de controle (prioridade necessária) ou poste dados em um fluxo criado (streamid necessário). Espera-se que os dados postados sejam do tipo ' application/octet-stream '.
+
+**/API/Holographic/Simulation/display/Stream (obter/WebSocket)**
+
+Solicite um fluxo de vídeo de simulação contendo o conteúdo renderizado para a exibição do sistema quando estiver no modo ' Simulation '.  Um cabeçalho de descritor de formato simples será enviado inicialmente, seguido de texturas codificadas H. 264, cada um precedido por um cabeçalho que indica o índice de olho e o tamanho da textura.
 
 ## <a name="perception-simulation-playback"></a>Reprodução da simulação de percepção
 
@@ -425,7 +429,7 @@ Obtém o estado da bateria atual
 
 Verifica se o sistema está em um estado de baixa energia
 
-## <a name="remote-control"></a>Controle Remoto
+## <a name="remote-control"></a>Controle remoto
 
 **/API/Control/Restart (POST)**
 
@@ -497,7 +501,7 @@ Parâmetros
 
 Carrega um perfil WPR e inicia o rastreamento usando o perfil carregado.
 
-Carga
+Carga útil
 * corpo http de conformidade de várias partes
 
 Retornar dados
@@ -527,6 +531,6 @@ Parâmetros
 Retornar dados
 * Em Iniciar, retorna o status da sessão WPR.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 * [Como usar o Portal de Dispositivos do Windows](using-the-windows-device-portal.md)
 * [Referência da API principal do portal do dispositivo (UWP)](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-api-core)

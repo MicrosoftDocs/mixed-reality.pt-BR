@@ -6,12 +6,12 @@ ms.author: szymons
 ms.date: 07/08/2019
 ms.topic: article
 keywords: Compreensão da cena, mapeamento espacial, realidade do Windows Mixed, Unity
-ms.openlocfilehash: 3eb54f84e30b2354907204895e62accdb9ad54f9
-ms.sourcegitcommit: 92ff5478a5c55b4e2c5cc2f44f1588702f4ec5d1
+ms.openlocfilehash: 2f958d45f72d6c39d4222840615c5b177db7c76f
+ms.sourcegitcommit: 6d9d01d53137435c787f247f095d5255581695fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82604947"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83228011"
 ---
 # <a name="scene-understanding-sdk-overview"></a>Visão geral do SDK de compreensão da cena
 
@@ -119,7 +119,7 @@ SceneObjects pode ter qualquer um dos seguintes:
 <tr>
 <th>SceneObjectKind</th> <th>Descrição</th>
 </tr>
-<tr><td>Segundo plano</td><td>O Sceneobject é conhecido como <b>não</b> um dos outros tipos reconhecidos de objeto de cena. Essa classe não deve ser confundida quando o plano de fundo não for conhecido como parede/piso/teto, etc... Embora desconhecido ainda não esteja categorizado.</b></td></tr>
+<tr><td>Tela de fundo</td><td>O Sceneobject é conhecido como <b>não</b> um dos outros tipos reconhecidos de objeto de cena. Essa classe não deve ser confundida quando o plano de fundo não for conhecido como parede/piso/teto, etc... Embora desconhecido ainda não esteja categorizado.</b></td></tr>
 <tr><td>Meu</td><td>Uma parede física. As paredes são presumidas como estruturas ambientais immovíveis.</td></tr>
 <tr><td>Piso</td><td>Os andares são quaisquer superfícies nas quais um pode ser movimentado. Observação: escadas não são andares. Observe também que os andares assumem qualquer superfície que seja orientada e, portanto, não há nenhuma suposição explícita de um piso singular. Estruturas de vários níveis, rampas, etc... todos devem ser classificados como piso.</td></tr>
 <tr><td>Ceiling</td><td>A superfície superior de uma sala.</td></tr>
@@ -158,7 +158,7 @@ A primeira etapa para trabalhar com SceneUnderstanding é para seu aplicativo ob
 As cenas são computadas usando um SceneObserver. Antes de criar uma cena, seu aplicativo deve consultar seu dispositivo para garantir que ele dê suporte a SceneUnderstanding, bem como solicitar acesso de usuário para obter informações de que o SceneUnderstanding precisa.
 
 ```cs
-if (SceneObserver.IsSupported())
+if (!SceneObserver.IsSupported())
 {
     // Handle the error
 }
@@ -265,7 +265,7 @@ Observe que é o Sceneobject que tem a transformação relativa à origem da cen
 
 A compreensão da cena fez uma tentativa deliberada de se alinhar com as representações tradicionais de cena 3D ao lidar com transformações. Portanto, cada cena é confinada a um único sistema de coordenadas, assim como as representações de ambiente 3D mais comuns. SceneObjects cada um fornece seu local como uma posição e orientação dentro desse sistema de coordenadas. Se seu aplicativo estiver lidando com cenas que ampliam o limite do que uma única origem fornece, ela pode ancorar SceneObjects para SpatialAnchors ou gerar várias cenas e mesclá-las, mas para simplificar, vamos supor que as cenas de Watertight existam em sua própria origem localizada por um NodeId definido por Scene. OriginSpatialGraphNodeId.
 
-O seguinte código de Unity, por exemplo, mostra como usar a percepção do Windows e as APIs do Unity para alinhar os sistemas de coordenadas. Consulte [SpatialCoordinateSystem](https://docs.microsoft.com//uwp/api/windows.perception.spatial.spatialcoordinatesystem) e [SpatialGraphInteropPreview](https://docs.microsoft.com//uwp/api/windows.perception.spatial.preview.spatialgraphinteroppreview) para obter detalhes sobre as APIs de percepção do Windows e [objetos nativos da realidade misturada no Unity](https://docs.microsoft.com//windows/mixed-reality/unity-xrdevice-advanced) para obter detalhes sobre como obter um SpatialCoordinateSystem que corresponde à origem mundial da `.ToUnity()` Unity, bem como o `System.Numerics.Matrix4x4` método `UnityEngine.Matrix4x4`de extensão para converter entre e.
+O seguinte código de Unity, por exemplo, mostra como usar a percepção do Windows e as APIs do Unity para alinhar os sistemas de coordenadas. Consulte [SpatialCoordinateSystem](https://docs.microsoft.com//uwp/api/windows.perception.spatial.spatialcoordinatesystem) e [SpatialGraphInteropPreview](https://docs.microsoft.com//uwp/api/windows.perception.spatial.preview.spatialgraphinteroppreview) para obter detalhes sobre as APIs de percepção do Windows e [objetos nativos da realidade misturada no Unity](https://docs.microsoft.com//windows/mixed-reality/unity-xrdevice-advanced) para obter detalhes sobre como obter um SpatialCoordinateSystem que corresponde à origem mundial da Unity, bem como o `.ToUnity()` método de extensão para converter entre `System.Numerics.Matrix4x4` e `UnityEngine.Matrix4x4` .
 
 ```cs
 public class SceneRootComponent : MonoBehavior
@@ -295,7 +295,7 @@ public class SceneRootComponent : MonoBehavior
 }
 ```
 
-Cada `SceneObject` tem uma `Position` propriedade `Orientation` e que pode ser usada para posicionar o conteúdo correspondente em relação à origem do `Scene`recipiente. Por exemplo, o exemplo a seguir pressupõe que o jogo é filho da raiz da cena e atribui sua posição local e rotação para alinhar a um determinado `SceneObject`:
+Cada `SceneObject` tem uma `Position` `Orientation` propriedade e que pode ser usada para posicionar o conteúdo correspondente em relação à origem do recipiente `Scene` . Por exemplo, o exemplo a seguir pressupõe que o jogo é filho da raiz da cena e atribui sua posição local e rotação para alinhar a um determinado `SceneObject` :
 
 ```cs
 void SetLocalTransformFromSceneObject(GameObject gameObject, SceneObject sceneObject)
@@ -345,7 +345,7 @@ As etapas 1-4 são altamente dependentes de sua estrutura/implementação espec�
 
 ### <a name="mesh"></a>Malha
 
-As malhas representam representações geométricas de objetos ou ambientes. Assim como o [mapeamento espacial](spatial-mapping.md), o índice de malha e os dados de vértice fornecidos com cada malha de superfície espacial usam o mesmo layout familiar que os buffers de vértice e de índice usados para renderizar malhas de triângulo em todas as APIs de renderização modernas. As posições de vértice são fornecidas no sistema de coordenadas `Scene`do. As APIs específicas usadas para fazer referência a esses dados são as seguintes:
+As malhas representam representações geométricas de objetos ou ambientes. Assim como o [mapeamento espacial](spatial-mapping.md), o índice de malha e os dados de vértice fornecidos com cada malha de superfície espacial usam o mesmo layout familiar que os buffers de vértice e de índice usados para renderizar malhas de triângulo em todas as APIs de renderização modernas. As posições de vértice são fornecidas no sistema de coordenadas do `Scene` . As APIs específicas usadas para fazer referência a esses dados são as seguintes:
 
 ```cs
 void GetTriangleIndices(int[] indices);
@@ -380,7 +380,7 @@ Se você não tiver um dispositivo HoloLens2, mas quiser brincar com a compreens
 
 [Cenas de exemplo de compreensão de cena](https://github.com/microsoft/MixedReality-SceneUnderstanding-Samples/tree/master/Assets/Resources/SerializedScenesForPCPath)
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 * [Mapeamento espacial](spatial-mapping.md)
 * [Reconhecimento de cena](scene-understanding.md)
