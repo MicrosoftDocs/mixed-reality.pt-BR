@@ -4,16 +4,16 @@ title: Conheça as ferramentas e a arquitetura
 description: Documentação do desenvolvedor de realidade misturada para HoloLens e headsets imersivos.
 author: grbury
 ms.author: grbury
-ms.date: 08/27/2019
+ms.date: 04/27/2020
 ms.topic: overview
 ms.localizationpriority: high
-keywords: Realidade misturada, desenvolver, desenvolvimento, HoloLens, unity, directx
-ms.openlocfilehash: 3bd5fea55a8dad2982a1a14680169eb51764c1df
-ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
+keywords: Mixed Reality, develop, development, HoloLens, unity, unreal, directx
+ms.openlocfilehash: 97a6e130af45a9444ead5e6ed40168351c4dbbf6
+ms.sourcegitcommit: ba4c8c2a19bd6a9a181b2cec3cb8e0402f8cac62
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "81277714"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82835285"
 ---
 # <a name="learn-the-tools-and-architecture"></a>Conheça as ferramentas e a arquitetura
 
@@ -36,12 +36,12 @@ Quando a Microsoft lançou o HoloLens para um público-alvo de desenvolvedores a
     :::column:::    
        [![Unity](images/unity_logo.png)](development.md#unity)<br>
         **[Unity](development.md#unity)**<br>   
-        O caminho mais rápido para criar um aplicativo de realidade misturada é com o Unity. 
+        Crie um aplicativo de realidade misturada cheio de recursos multiplataforma com o Unity.
     :::column-end:::    
     :::column:::    
         [![Unreal](images/Unreal_logo.png)](development.md#unreal)<br>
-         **[Unreal](development.md#unreal)**<br>    
-        O suporte pronto para produção para HoloLens 2 também será incluído no Unreal Engine 4.23.    
+        **[Unreal](development.md#unreal)**<br> 
+        Crie lindas experiências de realidade misturada prontas para produção no Unreal Engine. 
     :::column-end:::
     :::column:::    
         [![JavaScript](images/web-logo.png)](development.md#javascript)<br>
@@ -95,6 +95,16 @@ Esta página aborda como começar rapidamente a usar o acompanhamento ocular no 
 
 ### <a name="unreal-development-overview"></a>[Visão geral do desenvolvimento do Unreal](unreal-development-overview.md)
 Saiba como criar um aplicativo de realidade misturada usando o Unreal.
+
+<br>
+
+### <a name="microsofts-mixed-reality-toolkit-mrtk-for-unreal"></a>[MRTK (Kit de Ferramentas de Realidade Misturada) da Microsoft para Unreal](https://github.com/microsoft/MixedRealityToolkit-Unreal)
+O MRTK-Unreal (Kit de Ferramentas de Realidade Misturada para Unreal) é um conjunto de componentes, na forma de plug-ins, exemplos e documentação, projetados para acelerar o desenvolvimento de aplicativos de realidade misturada usando o Unreal Engine.
+
+<br>
+
+### <a name="open-source-sample-apps-and-a-step-by-step-tutorial"></a>[Exemplos de aplicativos de software livre e um tutorial passo a passo](unreal-uxt-ch1.md)
+O tutorial para começar no desenvolvimento de realidade misturada no Unreal conduz os desenvolvedores pelo processo de ponta a ponta de criação de um aplicativo do HoloLens 2 usando as [Ferramentas de UX para Unreal v0.8](https://github.com/microsoft/MixedReality-UXTools-Unreal).
 
 <br>
 
