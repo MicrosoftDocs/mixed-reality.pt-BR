@@ -1,42 +1,73 @@
 ---
 title: Visão geral do desenvolvimento com o Unreal
-description: Introdução à criação de aplicativos de realidade misturada no Unreal.
+description: Visão geral do desenvolvimento de realidade misturada usando o Unreal Engine 4
 author: sw5813
 ms.author: suwu
-ms.date: 10/24/2019
+ms.date: 5/5/2020
 ms.topic: article
 ms.localizationpriority: high
-keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, beta, streaming, comunicação remota, realidade misturada, desenvolvimento, introdução, novo projeto, emulador, documentação
-ms.openlocfilehash: 96b0259e4ac567389f999d3a453fb68bb848b266
-ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
+keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, streaming, remoting, mixed reality, development, getting started, features, new project, emulator, documentation, guides, features, holograms
+ms.openlocfilehash: 08ba760acc1a35d8f47de6a7bf6cbc020c8aca3f
+ms.sourcegitcommit: 189a47b8712dd5b620e19815f5cf6d1ac0f29880
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "74491176"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82851560"
 ---
 # <a name="unreal-development-overview"></a>Visão geral do desenvolvimento com o Unreal
 
-Agora o suporte para realidade misturada no Unreal Engine 4 está em beta. Se você está conhecendo o desenvolvimento com o Unreal agora, a <a href="https://docs.unrealengine.com//GettingStarted/index.html" target="_blank">Introdução ao Unreal Engine 4</a> é uma ótima página a ser explorada. Caso você precise de ativos, o Unreal dispõe de um <a href="https://www.unrealengine.com/marketplace//store" target="_blank">Marketplace</a> abrangente. 
+O Unreal Engine 4 agora é totalmente compatível com o desenvolvimento tanto para dispositivos de VR (Windows Mixed Reality) quanto de RA (HoloLens 2)! Se você está conhecendo o desenvolvimento com o Unreal agora, a <a href="https://docs.unrealengine.com//GettingStarted/index.html" target="_blank">Introdução ao Unreal Engine 4</a> é uma ótima página a ser explorada. Caso você precise de ativos, o Unreal dispõe de um <a href="https://www.unrealengine.com/marketplace//store" target="_blank">Marketplace</a> abrangente. 
 
-Depois de obter um entendimento básico do Unreal Engine 4, visite a página do <a href="https://docs.unrealengine.com//Platforms/AR/HoloLens2/index.html" target="_blank">Microsoft HoloLens Development</a> no site de documentação do Unreal Engine para saber como criar e executar seus aplicativos no HoloLens. Não deixe de visitar os <a href="https://forums.unrealengine.com/development-discussion/vr-ar-development" target="_blank">fóruns sobre realidade misturada do Unreal</a> para se envolver com a comunidade que cria aplicativos de realidade misturada no Unreal. É um ótimo lugar para encontrar soluções para problemas que possam ocorrer.
+Depois de obter uma compreensão básica do desenvolvimento no Unreal, confira o tutorial na próxima seção para saber como compilar e executar seus aplicativos no HoloLens. Não deixe de visitar os <a href="https://forums.unrealengine.com/development-discussion/vr-ar-development" target="_blank">fóruns sobre realidade misturada do Unreal</a> e envolva-se com a comunidade de criação de aplicativos de realidade misturada no Unreal. É um ótimo lugar para encontrar soluções para problemas que você se deparar.
 
-## <a name="installing-the-prerequisites"></a>Como instalar os pré-requisitos
+## <a name="tutorial"></a>Tutorial
 
-Para começar a criar um aplicativo do HoloLens 2 no Unreal, você precisará do [Emulador do HoloLens 2](using-the-hololens-emulator.md) ou de um headset do HoloLens. Você também precisará instalar a última versão do Visual Studio com as cargas de trabalho e os componentes listados em <a href="https://docs.unrealengine.com//Platforms/AR/HoloLens2/Prerequisites/index.html" target="_blank">Pré-requisitos do HoloLens 2 para o Unreal</a>.
+Saiba como [criar e implantar um aplicativo de xadrez simples](unreal-uxt-ch1.md) para o HoloLens 2 seguindo nosso tutorial de ponta a ponta. Este tutorial usa o plug-in Ferramentas de UX para acelerar o desenvolvimento de aplicativos com componentes de UX interativos, incluindo um botão e um manipulador. Para obter mais informações sobre o plug-in Ferramentas de UX, consulte a próxima seção sobre MRTK. 
 
-## <a name="building-and-running-your-unreal-app"></a>Como criar e executar seu aplicativo do Unreal
+## <a name="mixed-reality-toolkit-for-unreal"></a>Kit de Ferramentas de Realidade Misturada para Unreal
 
-Primeiro, <a href="https://docs.unrealengine.com//Platforms/AR/HoloLens2/HowTo/PackageApp/index.html" target="_blank">empacote o aplicativo para o HoloLens 2</a>. Em seguida, escolha em que local deseja implantar o pacote:
-* <a href="https://docs.unrealengine.com//Platforms/AR/HoloLens2/QuickStartEmulator/index.html" target="_blank">Implantação no Emulador do HoloLens 2</a>
-* <a href="https://docs.unrealengine.com//Platforms/AR/HoloLens2/QuickStartDevice/index.html" target="_blank">Implantação em um headset do HoloLens 2</a>
+O [Kit de Ferramentas de Realidade Misturada para Unreal](https://github.com/microsoft/MixedRealityToolkit-Unreal) é um conjunto de componentes, na forma de plug-ins, exemplos e documentação, projetados para acelerar o desenvolvimento de aplicativos de realidade misturada usando o Unreal Engine. O primeiro componente lançado como parte desse kit de ferramentas é o [Ferramentas de UX para Unreal](https://github.com/microsoft/MixedReality-UXTools-Unreal), um plug-in que pode ser adicionado ao seu projeto do HoloLens 2 para fornecer recursos de UX para aplicativos do HoloLens 2. A documentação para o Kit de Ferramentas de Realidade Misturada e para as Ferramentas de UX para Unreal pode ser encontrada nos respectivos repositórios GitHub. 
 
-## <a name="streaming-your-app-to-a-headset-via-the-holographic-remoting-player"></a>Como transmitir seu aplicativo para um headset por meio do Holographic Remoting Player
+## <a name="performance"></a>Desempenho
 
-Transmitir seu aplicativo da área de trabalho para o aplicativo Holographic Remoting Player em um headset do HoloLens oferece duas vantagens principais: 
-* Acelera o desenvolvimento, não havendo, portanto, a necessidade de reempacotar e carregar o aplicativo todas as vezes que você faz uma alteração
-* Aproveita o poder da área de trabalho, de modo que você possa renderizar o máximo de polígonos que a GPU da área de trabalho permitir, sem as limitações impostas pelo computador disponível no headset
+Um aplicativo do HoloLens 2 deve ser executado em 60 quadros por segundo para que os hologramas pareçam estáveis e dinâmicos. Para conseguir isso em seu aplicativo, é altamente recomendável seguir nossas [recomendações de desempenho de para Unreal](performance-recommendations-for-unreal.md). 
 
-Para começar a usar o streaming, confira o <a href="https://docs.unrealengine.com//Platforms/AR/HoloLens2/QuickStartStreaming/index.html" target="_blank">Início Rápido de streaming do HoloLens 2</a>[]().
+## <a name="guides-to-specific-features"></a>Guias para recursos específicos
+
+Para saber como usar recursos específicos no Unreal, confira os guias a seguir: 
+* [Acompanhamento da mão](unreal-hand-tracking.md)
+* [Acompanhamento ocular](unreal-gaze-input.md)
+* [Mapeamento espacial](unreal-spatial-mapping.md)
+* [Âncoras espaciais](unreal-spatial-anchors.md)
+* [Entrada de voz](unreal-voice-input.md)
+* [Câmera do HoloLens](unreal-hololens-camera.md)
+* [Códigos QR](unreal-qr-codes.md)
+
+## <a name="supported-features"></a>Recursos compatíveis
+
+| Recurso do HoloLens 2 | Versão do Unreal Engine compatível mais antiga |
+| ----------- | ----------- |
+| Compatibilidade com ARM64 | 4.23 |
+| Streaming de um PC | 4.23 |
+| mapeamento espacial | 4.23 |
+| Controle de mão e junta | 4.23 |
+| Acompanhamento ocular | 4.23 |
+| Entrada de voz | 4.23 |
+| Âncoras espaciais | 4.23 |
+| Acesso à câmera | 4.23 |
+| Códigos QR | 4.23 |
+| Áudio espacial | 4.23 |
+| Compatibilidade com tela Espectador para streaming | 4.24 |
+| LSR Planar por streaming | 4.24 |
+| Aplicativos de exemplo ([HoloLens2Example](https://github.com/microsoft/MixedReality-Unreal-Samples) e [Mission AR](https://docs.unrealengine.com/en-US/Resources/Showcases/MissionAR/index.html)) | 4.24 |
+| Exibição múltipla em dispositivos móveis: Desempenho alcança 60 quadros/s | 4.25 |
+| Renderização de 3ª câmera | 4.25 |
+| Streaming de um aplicativo da área de trabalho empacotado | 4.25 |
+| Âncoras Espaciais do Azure para o HoloLens 2 (beta) | 4.25 |
+| Compatibilidade com OpenXR (beta) | 4.25 |
+| Compatibilidade com Ferramentas de UX (0.8) | 4.25 |
+| Documentos do desenvolvedor e tutoriais | 4.25 |
 
 ## <a name="see-also"></a>Veja também
+* <a href="https://docs.unrealengine.com//Platforms/AR/HoloLens2/index.html" target="_blank">Documentos do Unreal para streaming, implantação em emulador e em dispositivo</a>
 * <a href="https://docs.unrealengine.com//Platforms/Mobile/Performance/index.html" target="_blank">Diretrizes de desempenho do Unreal para dispositivos móveis</a>
