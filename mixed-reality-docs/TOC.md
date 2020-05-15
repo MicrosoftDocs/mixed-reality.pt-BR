@@ -100,6 +100,7 @@
 ## [Conheça as ferramentas e a arquitetura](development.md)
 ## [Instalar as ferramentas](install-the-tools.md)
 ## Serviços de nuvem de realidade misturada
+### [Azure Remote Rendering](https://docs.microsoft.com/azure/remote-rendering)
 ### [Âncoras Espaciais do Azure](https://docs.microsoft.com/azure/spatial-anchors)
 ## [Aplicativos de exemplo e tutoriais](tutorials.md)
 ### Unity
