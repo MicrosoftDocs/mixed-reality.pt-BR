@@ -7,12 +7,12 @@ ms.date: 04/02/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Realidade Misturada, foco, direcionamento do foco, interação, design, mãos nas proximidades, HoloLens
-ms.openlocfilehash: 6811fe0b09ecff1ddc76d9df9ddc440f9c934ce3
-ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
+ms.openlocfilehash: 40a8441177582a55b58acbfbd15c7b506853e4da
+ms.sourcegitcommit: 6d9d01d53137435c787f247f095d5255581695fc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "75723245"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83227991"
 ---
 # <a name="direct-manipulation-with-hands"></a>Manipulação direta com as mãos
 
@@ -41,7 +41,7 @@ A manipulação direta é baseada em funcionalidade, o que significa que é amig
      <td>Manipulação direta com as mãos</td>
      <td>❌ Sem suporte</td>
      <td>✔️ Recomendado</td>
-     <td>➕ Uma alternativa, <a href="point-and-commit.md">apontar e confirmar com as mãos</a> é recomendado.</td>
+     <td>➕ Com suporte.  Para a interface do usuário, recomendamos <a href="point-and-commit.md">apontar e confirmar com as mãos</a>.</td>
     
 </tr>
 </table>
