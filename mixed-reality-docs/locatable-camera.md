@@ -6,12 +6,12 @@ ms.author: wguyman
 ms.date: 06/12/2019
 ms.topic: article
 keywords: câmera, hololens, câmera colorida, frente, hololens 2, CV, pesquisa Visual computacional, fiducial, marcadores, código QR, QR, foto, vídeo
-ms.openlocfilehash: f4c62a1c2ad7cf4de569e815ffc405fbcb06744a
-ms.sourcegitcommit: d0da0214fdd2bbac5a91a5d895bf0e87413b29b2
+ms.openlocfilehash: b8e9d926db09d277b3fde7572dd68257599c8d5e
+ms.sourcegitcommit: 09d9fa153cd9072f60e33a5f83ced8167496fcd7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75597619"
+ms.lasthandoff: 05/18/2020
+ms.locfileid: "83520011"
 ---
 # <a name="locatable-camera"></a>Câmera localizável
 
@@ -25,7 +25,7 @@ O HoloLens inclui uma câmera voltada para o mundo montada na frente do disposit
 * O LED de privacidade branco enfrentado pelo mundo se acenderá sempre que a câmera estiver ativa
 * A câmera dá suporte aos seguintes modos (todos os modos são 16:9 taxa de proporção) a 30, 24, 20, 15 e 5 fps:
 
-  |  Vídeo  |  Preview  |  Também  |  Campo de exibição horizontal (H-FOV) |  Uso sugerido | 
+  |  Vídeo  |  Versão Prévia  |  Também  |  Campo de exibição horizontal (H-FOV) |  Uso sugerido | 
   |----------|----------|----------|----------|----------|
   |  1280x720 |  1280x720 |  1280x720 |  45deg  |  (modo padrão com estabilização de vídeo) | 
   |  N/D |  N/D |  2048x1152 |  67deg |  Imagem da resolução mais alta ainda | 
@@ -40,7 +40,7 @@ O HoloLens inclui uma câmera voltada para o mundo montada na frente do disposit
 * O HoloLens 2 dá suporte a perfis de câmera diferentes. Saiba como [descobrir e selecionar recursos de câmera](https://docs.microsoft.com//windows/uwp/audio-video-camera/camera-profiles).
 * A câmera dá suporte aos seguintes perfis e resoluções (todos os modos de vídeo são taxa de proporção de 16:9):
   
-  | Perfil                                         | Vídeo     | Preview   | Também     | Taxas de quadros | Campo de exibição horizontal (H-FOV) | Uso sugerido                             |
+  | Perfil                                         | Vídeo     | Versão Prévia   | Também     | Taxas de quadros | Campo de exibição horizontal (H-FOV) | Uso sugerido                             |
   |-------------------------------------------------|-----------|-----------|-----------|-------------|----------------------------------|---------------------------------------------|
   | Herdado, 0 BalancedVideoAndPhoto, 100             | 2272x1278 | 2272x1278 |           | 15, 30       | 64,69                            | Gravação de vídeo de alta qualidade                |
   | Herdado, 0 BalancedVideoAndPhoto, 100             | 896x504   | 896x504   |           | 15, 30       | 64,69                            | Fluxo de visualização para captura de foto de alta qualidade |
@@ -49,7 +49,7 @@ O HoloLens inclui uma câmera voltada para o mundo montada na frente do disposit
   | BalancedVideoAndPhoto, 120                       | 1504x846  | 1504x846  |           | 15, 30       | 64,69                            | Cenários de duração longa                     |
   | Videoconferência, 100                           | 1952x1100 | 1952x1100 | 1952x1100 | 15, 30, 60    | 64,69                            | Videoconferência, cenários de longa duração |
   | Videoconferência, 100                           | 1504x846  | 1504x846  |           | 5, 15, 30, 60  | 64,69                            | Videoconferência, cenários de longa duração |
-  | Videoconferência, 100 BalancedVideoAndPhoto, 120 | 1920x1080 | 1920x1080 | 1920x1080 | 15, 30       | 64,69                            | Videoconferência, cenários de longa duração |
+  | Videoconferência, 100 BalancedVideoAndPhoto, 120 | 1920 x 1080 | 1920 x 1080 | 1920 x 1080 | 15, 30       | 64,69                            | Videoconferência, cenários de longa duração |
   | Videoconferência, 100 BalancedVideoAndPhoto, 120 | 1280x720  | 1280x720  | 1280x720  | 15, 30       | 64,69                            | Videoconferência, cenários de longa duração |
   | Videoconferência, 100 BalancedVideoAndPhoto, 120 | 1128x636  |           |           | 15, 30       | 64,69                            | Videoconferência, cenários de longa duração |
   | Videoconferência, 100 BalancedVideoAndPhoto, 120 | 960 x 540   |           |           | 15, 30       | 64,69                            | Videoconferência, cenários de longa duração |
@@ -69,28 +69,131 @@ Quando o HoloLens usa fotos e vídeos, os quadros capturados incluem o local da 
 
 A "câmera" em outro lugar na documentação do HoloLens pode se referir à "câmera do jogo virtual" (o frustum ao qual o aplicativo é renderizado). A menos que seja indicado de outra forma, "câmera" nesta página refere-se à câmera de cores RGB do mundo real.
 
-Os detalhes nesta página abrangem o uso da classe [MediaFrameReference](https://docs.microsoft.com//uwp/api/windows.media.capture.frames.mediaframereference) . No entanto, também há APIs para efetuar pull de intrínsecos e locais de câmera usando [atributos de Media Foundation](https://msdn.microsoft.com/library/windows/desktop/mt740395(v=vs.85).aspx). Consulte o [exemplo de acompanhamento facial do Holographic](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/HolographicFaceTracking) para obter mais informações.
+### <a name="using-unity"></a>Usando o Unity
 
-### <a name="images-with-coordinate-systems"></a>Imagens com sistemas de coordenadas
+Para ir do ' CameraIntrinsics ' e ' CameraCoordinateSystem ' para seu sistema/coordenado do mundo, siga as instruções no artigo da [câmera localizável no Unity](locatable-camera-in-unity.md) .  O CameraToWorldMatrix é fornecido automaticamente pela classe PhotoCaptureFrame e, portanto, você não precisa se preocupar com as transformações CameraCoordinateSystem discutidas abaixo.
+
+### <a name="using-mediaframereference"></a>Usando MediaFrameReference
+
+Essas instruções se aplicam se você estiver usando a classe [MediaFrameReference](https://docs.microsoft.com//uwp/api/windows.media.capture.frames.mediaframereference) para ler quadros de imagem da câmera.
 
 Cada quadro de imagem (seja foto ou vídeo) inclui um [SpatialCoordinateSystem](https://docs.microsoft.com//uwp/api/windows.perception.spatial.spatialcoordinatesystem) com raiz na câmera no momento da captura, que pode ser acessado usando a propriedade [CoordinateSystem](https://docs.microsoft.com//uwp/api/windows.media.capture.frames.mediaframereference.coordinatesystem#Windows_Media_Capture_Frames_MediaFrameReference_CoordinateSystem) de seu [MediaFrameReference](https://docs.microsoft.com//uwp/api/Windows.Media.Capture.Frames.MediaFrameReference). Além disso, cada quadro contém uma descrição do modelo de lente da câmera, que pode ser encontrado na propriedade [CameraIntrinsics](https://docs.microsoft.com//uwp/api/windows.media.capture.frames.videomediaframe.cameraintrinsics#Windows_Media_Capture_Frames_VideoMediaFrame_CameraIntrinsics) . Juntas, essas transformações definem para cada pixel um raio em um espaço 3D que representa o caminho usado pelo fótons que produziu o pixel. Esses raios podem estar relacionados a outro conteúdo no aplicativo por meio da obtenção da transformação do sistema de coordenadas do quadro para outro sistema de coordenadas (por exemplo, de um [quadro estacionário de referência](coordinate-systems.md#stationary-frame-of-reference)). Para resumir, cada quadro de imagem fornece o seguinte:
 * Dados de pixel (em formato RGB/NV12/JPEG/etc.)
 * Um [SpatialCoordinateSystem](https://docs.microsoft.com//uwp/api/windows.perception.spatial.spatialcoordinatesystem) do local da captura
 * Uma classe [CameraIntrinsics](https://docs.microsoft.com//uwp/api/windows.media.capture.frames.videomediaframe.cameraintrinsics#Windows_Media_Capture_Frames_VideoMediaFrame_CameraIntrinsics) que contém o modo de lente da câmera
 
-### <a name="camera-to-application-specified-coordinate-system"></a>Câmera para o sistema de coordenadas especificado pelo aplicativo
+O [exemplo HolographicFaceTracking](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/HolographicFaceTracking) mostra a maneira bastante simples de consultar a transformação entre o sistema de coordenadas da câmera e seus próprios sistemas de coordenadas do aplicativo.
 
-Para ir do ' CameraIntrinsics ' e ' CameraCoordinateSystem ' para seu sistema/coordenado do mundo, você precisará do seguinte:
+### <a name="using-media-foundation"></a>Usando Media Foundation
 
-A [câmera localizável no Unity](locatable-camera-in-unity.md): CameraToWorldMatrix é fornecida automaticamente pela classe PhotoCaptureFrame (portanto, você não precisa se preocupar com as transformações CameraCoordinateSystem).
+Se você estiver usando Media Foundation diretamente para ler quadros de imagem da câmera, poderá usar o [atributo MFSampleExtension_CameraExtrinsics](https://docs.microsoft.com/windows/win32/medfound/mfsampleextension-cameraextrinsics) de cada quadro e [MFSampleExtension_PinholeCameraIntrinsics atributo](https://docs.microsoft.com/windows/win32/medfound/mfsampleextension-pinholecameraintrinsics) para localizar quadros de câmera relativos aos outros sistemas de coordenadas do seu aplicativo, conforme mostrado neste código de exemplo:
 
-[Câmera localizável no DirectX](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/HolographicFaceTracking): o exemplo de acompanhamento facial Holographic mostra a maneira bastante simples de consultar a transformação entre o sistema de coordenadas da câmera e seu próprio sistema de coordenadas do aplicativo.
+```cpp
+#include <winrt/windows.perception.spatial.preview.h>
+#include <mfapi.h>
+#include <mfidl.h>
+ 
+using namespace winrt::Windows::Foundation;
+using namespace winrt::Windows::Foundation::Numerics;
+using namespace winrt::Windows::Perception;
+using namespace winrt::Windows::Perception::Spatial;
+using namespace winrt::Windows::Perception::Spatial::Preview;
+ 
+class CameraFrameLocator
+{
+public:
+    struct CameraFrameLocation
+    {
+        SpatialCoordinateSystem CoordinateSystem;
+        float4x4 CameraViewToCoordinateSytemTransform;
+        MFPinholeCameraIntrinsics Intrinsics;
+    };
+ 
+    std::optional<CameraFrameLocation> TryLocateCameraFrame(IMFSample* pSample)
+    {
+        MFCameraExtrinsics cameraExtrinsics;
+        MFPinholeCameraIntrinsics cameraIntrinsics;
+        UINT32 sizeCameraExtrinsics = 0;
+        UINT32 sizeCameraIntrinsics = 0;
+        UINT64 sampleTimeQpc = 0;
+ 
+        // query sample for calibration and validate
+        if (FAILED(pSample->GetUINT64(MFSampleExtension_DeviceTimestamp, &sampleTimeQpc)) ||
+            FAILED(pSample->GetBlob(MFSampleExtension_CameraExtrinsics, (UINT8*)& cameraExtrinsics, sizeof(cameraExtrinsics), &sizeCameraExtrinsics)) ||
+            FAILED(pSample->GetBlob(MFSampleExtension_PinholeCameraIntrinsics, (UINT8*)& cameraIntrinsics, sizeof(cameraIntrinsics), &sizeCameraIntrinsics)) ||
+            (sizeCameraExtrinsics != sizeof(cameraExtrinsics)) ||
+            (sizeCameraIntrinsics != sizeof(cameraIntrinsics)) ||
+            (cameraExtrinsics.TransformCount == 0))
+        {
+            return std::nullopt;
+        }
+ 
+        // compute extrinsic transform
+        const auto& calibratedTransform = cameraExtrinsics.CalibratedTransforms[0];
+        const GUID& dynamicNodeId = calibratedTransform.CalibrationId;
+        const float4x4 cameraToDynamicNode =
+            make_float4x4_from_quaternion(quaternion{ calibratedTransform.Orientation.x, calibratedTransform.Orientation.y, calibratedTransform.Orientation.z, calibratedTransform.Orientation.w }) *
+            make_float4x4_translation(calibratedTransform.Position.x, calibratedTransform.Position.y, calibratedTransform.Position.z);
+ 
+        // update locator cache for dynamic node
+        if (dynamicNodeId != m_currentDynamicNodeId || !m_locator)
+        {
+            m_locator = SpatialGraphInteropPreview::CreateLocatorForNode(dynamicNodeId);
+            if (!m_locator)
+            {
+                return std::nullopt;
+            }
+ 
+            m_frameOfReference = m_locator.CreateAttachedFrameOfReferenceAtCurrentHeading();
+            m_currentDynamicNodeId = dynamicNodeId;
+        }
+ 
+        // locate dynamic node
+        auto timestamp = PerceptionTimestampHelper::FromSystemRelativeTargetTime(TimeSpanFrodmQpcTicks(sampleTimeQpc));
+        auto coordinateSystem = m_frameOfReference.GetStationaryCoordinateSystemAtTimestamp(timestamp);
+        auto location = m_locator.TryLocateAtTimestamp(timestamp, coordinateSystem);
+        if (!location)
+        {
+            return std::nullopt;
+        }
+ 
+        const float4x4 dynamicNodeToCoordinateSystem = make_float4x4_from_quaternion(location.Orientation()) * make_float4x4_translation(location.Position());
+ 
+        return CameraFrameLocation{ coordinateSystem, cameraToDynamicNode * dynamicNodeToCoordinateSystem, cameraIntrinsics };
+    }
+ 
+private:
+    GUID m_currentDynamicNodeId{ GUID_NULL };
+    SpatialLocator m_locator{ nullptr };
+    SpatialLocatorAttachedFrameOfReference m_frameOfReference{ nullptr };
+ 
+    // Convert a duration value from a source tick frequency to a destination tick frequency.
+    static inline int64_t SourceDurationTicksToDestDurationTicks(int64_t sourceDurationInTicks, int64_t sourceTicksPerSecond, int64_t destTicksPerSecond)
+    {
+        int64_t whole = (sourceDurationInTicks / sourceTicksPerSecond) * destTicksPerSecond;                          // 'whole' is rounded down in the target time units.
+        int64_t part = (sourceDurationInTicks % sourceTicksPerSecond) * destTicksPerSecond / sourceTicksPerSecond;    // 'part' is the remainder in the target time units.
+        return whole + part;
+    }
+ 
+    static inline TimeSpan TimeSpanFromQpcTicks(int64_t qpcTicks)
+    {
+        static const int64_t qpcFrequency = []
+        {
+            LARGE_INTEGER frequency;
+            QueryPerformanceFrequency(&frequency);
+            return frequency.QuadPart;
+        }();
+ 
+        return TimeSpan{ SourceDurationTicksToDestDurationTicks(qpcTicks, qpcFrequency, winrt::clock::period::den) / winrt::clock::period::num };
+    }
+};
+```
 
 ### <a name="distortion-error"></a>Erro de distorção
 
 No HoloLens, os fluxos de vídeo e de imagem ainda não são distorcidos no pipeline de processamento de imagens do sistema antes que os quadros sejam disponibilizados para o aplicativo (o fluxo de visualização contém os quadros originais distorcidos). Como somente os CameraIntrinsics são disponibilizados, os aplicativos devem assumir que os quadros de imagem representam uma câmera pinhole perfeita.
 
-No HoloLens (primeira geração), a função de distorção no processador de imagem ainda pode deixar um erro de até 10 pixels ao usar o CameraIntrinsics nos metadados do quadro. Em muitos casos de uso, esse erro não importa, mas se você estiver alinhando hologramas a pôsteres/marcadores do mundo real, por exemplo, e observar um deslocamento de < 10px (aproximadamente 11mm para hologramas posicionados 2 metros de distância), esse erro de distorção poderá ser a causa. 
+No HoloLens (primeira geração), a função de distorção no processador de imagem ainda pode deixar um erro de até 10 pixels ao usar o CameraIntrinsics nos metadados do quadro. Em muitos casos de uso, esse erro não importa, mas se você estiver alinhando hologramas a pôsteres/marcadores do mundo real, por exemplo, e observar um deslocamento de <10px (aproximadamente 11mm para hologramas posicionados 2 metros de distância), esse erro de distorção poderá ser a causa. 
 
 ## <a name="locatable-camera-usage-scenarios"></a>Cenários de uso de câmera localizável
 
