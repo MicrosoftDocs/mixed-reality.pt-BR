@@ -7,12 +7,12 @@ ms.date: 5/5/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, mixed reality, tutorial, getting started, mrtk, uxt, UX Tools, documentation
-ms.openlocfilehash: df5ea22e7097fdd3b788ec298bc1cd78c315b585
-ms.sourcegitcommit: ba4c8c2a19bd6a9a181b2cec3cb8e0402f8cac62
+ms.openlocfilehash: 77fe2b59db970a2ac4b531d69efec6794478f7d5
+ms.sourcegitcommit: 09d9fa153cd9072f60e33a5f83ced8167496fcd7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82840395"
+ms.lasthandoff: 05/18/2020
+ms.locfileid: "83519988"
 ---
 # <a name="5-adding-a-button--resetting-piece-locations"></a>5. Como adicionar um botão e redefinir locais de peças
 
@@ -46,13 +46,13 @@ Esta seção continua a demonstração das funcionalidades do plug-in Ferramenta
 
 ![Criar uma variável](images/unreal-uxt/5-var.PNG)
 
-4.  Arraste a variável WhiteKing de **Meu Blueprint > Variáveis** até o Grafo de Eventos do Botão Simples. Escolha **Obter WhiteKing**. 
+4.  Arraste a variável WhiteKing de **Meu Blueprint > Variáveis** até o Grafo de Eventos do Botão Redefinir. Escolha **Obter WhiteKing**. 
 
 5.  Arraste o pino da saída WhiteKing e solte para posicionar um novo nó. Selecione a função **Reset Location**. Por fim, arraste o pino de execução de saída de **On Button Pressed** até o pino de execução de entrada em **Reset Location**. **Compile** e **Salve** o Blueprint ResetButton e, em seguida, retorne à Janela principal. 
 
 ![Chamar função Reset Location de On Button Pressed](images/unreal-uxt/5-callresetloc.PNG)
 
-6.  Arraste **SimpleButton** até o visor e defina seu local como X = 50, Y = -25, Z = 10. Em **Padrão**, defina o valor da variável WhiteKing como **WhiteKing**.
+6.  Arraste **ResetButton** até o visor e defina seu local como X = 50, Y = -25, Z = 10. Em **Padrão**, defina o valor da variável WhiteKing como **WhiteKing**.
 
 ![Definir a variável](images/unreal-uxt/5-buttonlevel.PNG)
 

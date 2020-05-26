@@ -7,12 +7,12 @@ ms.date: 5/5/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, mixed reality, tutorial, getting started, mrtk, uxt, UX Tools, documentation
-ms.openlocfilehash: 35b18e4bb289438f94433827846e94d1014385db
-ms.sourcegitcommit: ba4c8c2a19bd6a9a181b2cec3cb8e0402f8cac62
+ms.openlocfilehash: b3f0b5f9ca5347c337091539b1cc0e214515c989
+ms.sourcegitcommit: 09d9fa153cd9072f60e33a5f83ced8167496fcd7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82840375"
+ms.lasthandoff: 05/18/2020
+ms.locfileid: "83519958"
 ---
 # <a name="6-packaging--deploying-to-device-or-emulator"></a>6. Como empacotar e implantar no dispositivo ou emulador
 
@@ -34,6 +34,10 @@ Esta seção orienta nas etapas de preparação de seu aplicativo para ser execu
 4.  Quando estiver conectado, no editor do UE4, clique na seta suspensa à direita do botão Reproduzir e selecione a visualização VR.
 
 ## <a name="package-and-deploy-your-app"></a>Empacotar e implantar seu aplicativo 
+
+>[!NOTE]
+>Se esta for a primeira vez que você empacota um aplicativo Unreal para o HoloLens, precisará baixar os arquivos de suporte do Epic Launcher. Para fazer isso, acesse a guia **Biblioteca** no Epic Games Launcher. Selecione a seta suspensa ao lado de **Iniciar** e clique em **Opções**. Em **Plataformas de Destino**, selecione **HoloLens 2** e clique em **Aplicar**. 
+>![Configurações do projeto – Descrição](images/unreal-uxt/6-installationoptions.PNG)
 
 1.  Acesse **Editar > Configurações do Projeto**. Em **Projeto > Descrição > Sobre > Nome do Projeto**, dê um nome ao seu projeto. Em **Projeto > Descrição > Publicador > Nome Diferenciado da Empresa**, coloque “CN={INSERT COMPANY NAME}”. Deixar qualquer um desses campos em branco resultará em um erro. 
 
