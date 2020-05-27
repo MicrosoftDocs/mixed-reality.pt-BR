@@ -1,19 +1,19 @@
 ---
-title: Olhar e confirmar
+title: Focar e confirmar
 description: Visão geral do modelo de entrada "olhar e Commit"-usando a entrada de olho ou de cabeçalho.
 author: sostel
 ms.author: sostel
 ms.date: 10/31/2019
 ms.topic: article
 keywords: Realidade misturada, olhar, direcionamento de olhar, interação, design, acompanhamento de cabeça, acompanhamento de cabeçalho
-ms.openlocfilehash: df152f6a3a6e4ae2d6c32a0c56fbb615bcfa7aa8
-ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
+ms.openlocfilehash: c44c1a75e831869a3ed4d12bb6c9e87c478daf56
+ms.sourcegitcommit: e65f1463aec3c040a1cd042e61fc2bd156a42ff8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79375843"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83866886"
 ---
-# <a name="gaze-and-commit"></a>Olhar e confirmar
+# <a name="gaze-and-commit"></a>Focar e confirmar
 
 _Olhar e commit_ é um modelo de entrada fundamental que está fortemente relacionado com a maneira como estamos interagindo com nossos computadores usando o mouse: _Point & clique_.
 Nesta página, apresentamos dois tipos de entrada olhar (cabeça e olho-olhar) e tipos diferentes de ações de confirmação. 
@@ -56,9 +56,9 @@ Abaixo estão alguns exemplos de como um desenvolvedor de realidade misturada po
     </tr>
          <tr>
         <td>Focar com o olhar e confirmar</td>
-        <td>❌ não disponível</td>
+        <td>❌Não disponível</td>
         <td>✔️ Recomendado (terceira opção – <a href="interaction-fundamentals.md">confira as outras opções</a>)</td>
-        <td>❌ não disponível</td>
+        <td>❌Não disponível</td>
     </tr>
 </table>
 
@@ -80,7 +80,7 @@ Compilamos alguns dos nossos profissionais e contratados na tabela abaixo para c
     </colgroup>
    <tr>
         <td><strong>Direcionamento de olhar de olho</strong></td>
-        <td><strong>Direcionamento de olhar de cabeça</strong></td>
+        <td><strong>Direcionamento de foco com a cabeça</strong></td>
     </tr>
     <tr>
         <td>Rápida!</td>
@@ -123,7 +123,7 @@ Se você usar Head-olhar ou olho-olhar para seu modelo de entrada de olhar e con
         Para olhar de olho, geralmente recomendamos *não* mostrar um cursor, pois isso pode rapidamente se tornar confuso e irritante para o usuário. Em vez disso, destaque sutilmente os destinos visuais ou use um cursor de olho muito fraco para fornecer confiança sobre o que o usuário está prestes a interagir. Para obter mais informações, confira nossas [diretrizes de design para entrada baseada em olhos](eye-tracking.md) no HoloLens 2.
     :::column-end:::
         :::column:::
-       ![um cursor visual de exemplo para mostrar olhar](images/cursor.jpg)<br>
+       ![Um cursor visual de exemplo para mostrar olhar](images/cursor.jpg)<br>
        *Imagem: um cursor visual de exemplo para mostrar olhar*
     :::column-end:::
 :::row-end:::
@@ -132,14 +132,14 @@ Se você usar Head-olhar ou olho-olhar para seu modelo de entrada de olhar e con
 
 ---
 
-## <a name="commit"></a>Confirmação
+## <a name="commit"></a>Commit
 Depois de falar sobre diferentes maneiras de _olhar_ em um alvo, vamos falar um pouco mais sobre a parte de _confirmação_ em _olhar e commit_.
 Depois de direcionar um objeto ou elemento de interface do usuário, o usuário pode interagir ou clicar nele usando uma entrada secundária. Isso é conhecido como a etapa de confirmação do modelo de entrada. 
 
 Os seguintes métodos de confirmação são compatíveis:
 - Gesto de toque do ar à mão (ou seja, levante sua mão na frente e reúna o dedo e o polegar)
 - Diga _"Select"_ ou um dos comandos de voz de destino
-- Pressione um único botão em um [clicador de HoloLens](hardware-accessories.md#hololens-clicker)
+- Pressione um único botão em um [clicador de HoloLens](https://docs.microsoft.com/hololens/hololens1-clicker)
 - Pressione o botão ' A ' em um gamepad do Xbox
 - Pressione o botão ' A ' em um controlador adaptável do Xbox
 
@@ -149,11 +149,11 @@ Fechar e abrir dedos indicador e polegar é um gesto de tocar feito com a mão l
 
 :::row:::
     :::column:::
-       ![dedo na posição pronta](images/readyandpress-ready.jpg)<br>
+       ![Dedo na posição pronta](images/readyandpress-ready.jpg)<br>
        **Dedo na posição pronta**<br>
     :::column-end:::
     :::column:::
-       ![pressione dedo para baixo para tocar ou clique em](images/readyandpress-press.jpg)<br>
+       ![Pressione dedo para baixo para tocar ou clique](images/readyandpress-press.jpg)<br>
         **Pressione dedo para baixo para tocar ou clique**<br>
     :::column-end:::
 :::row-end:::
@@ -192,7 +192,7 @@ Para obter mais detalhes, bem como uma lista abrangente de comandos de voz dispo
         *Imagem: clicador de HoloLens*
     :::column-end:::
         :::column:::
-       ![Clicador de HoloLens](images/hololens-clicker-500px.jpg)<br>
+       ![HoloLens Clicker](images/hololens-clicker-500px.jpg)<br>
     :::column-end:::
 :::row-end:::
 
@@ -212,7 +212,7 @@ Para obter mais detalhes, bem como uma lista abrangente de comandos de voz dispo
         *Imagem: controlador sem fio do Xbox*
     :::column-end:::
         :::column:::
-       ![Controlador sem fio do Xbox](images/xboxcontroller.jpg)<br>
+       ![Controle sem Fio Xbox](images/xboxcontroller.jpg)<br>
     :::column-end:::
 :::row-end:::
 
@@ -253,7 +253,7 @@ O gesto de toque do Air (bem como os outros gestos abaixo) reage apenas a um toq
 Manter é simplesmente manter a posição do dedo para baixo no gesto de fechar e abrir dedos indicador e polegar. A combinação de toque e espera de ar permite uma variedade de interações mais complexas de "clicar e arrastar" quando combinadas com a movimentação do ARM, como a seleção de um objeto, em vez de ativá-lo ou interações de secundários de MouseDown, como mostrar um menu de contexto.
 No entanto, tenha cuidado ao projetar o uso desse gesto, pois os usuários podem estar propensos a relaxar suas posturas de mão no decorrer de qualquer gesto estendido.
 
-### <a name="manipulation"></a>Manipulação
+### <a name="manipulation"></a>manipulação
 Os gestos de manipulação podem ser usados para mover, redimensionar ou girar um holograma quando você quiser que o holograma reaja 1:1 aos movimentos da mão do usuário. Um uso para essas movimentações de 1:1 é permitir que o usuário desenhe ou pinte no mundo.
 O direcionamento inicial de um gesto de manipulação deve ser feito pelo foco ou apontando. Quando o toque e a suspensão são iniciados, qualquer manipulação do objeto é tratada por movimentos de mão, liberando o usuário para examinar enquanto eles manipulam.
 
@@ -263,7 +263,7 @@ A navegação pode ser usada para criar gestos de rolagem ou zoom contínuo base
 
 A navegação com Rails refere-se à capacidade de reconhecer movimentos em determinado eixo até que um determinado limite seja atingido nesse eixo. Isso só é útil quando a movimentação em mais de um eixo está habilitada em um aplicativo pelo desenvolvedor, como se um aplicativo estiver configurado para reconhecer gestos de navegação no eixo X, Y, mas também especificado eixo X com Rails. Nesse caso, o sistema reconhecerá movimentos de mão no eixo X, desde que eles permaneçam dentro de um trilho imaginário (guia) no eixo X, se a movimentação à mão também ocorrer no eixo Y.
 
-Em aplicativos 2D, os usuários podem usar gestos de navegação vertical para rolagem, zoom ou operações de arrastar dentro do aplicativo. Isso injeta toques de dedo virtuais no aplicativo para simular gestos de toque do mesmo tipo. Os usuários podem selecionar quais dessas ações ocorrem alternando entre as ferramentas na barra acima do aplicativo, seja selecionando o botão ou dizendo ' < rolar/arrastar/aplicar zoom na ferramenta de > '.
+Em aplicativos 2D, os usuários podem usar gestos de navegação vertical para rolagem, zoom ou operações de arrastar dentro do aplicativo. Isso injeta toques de dedo virtuais no aplicativo para simular gestos de toque do mesmo tipo. Os usuários podem selecionar quais dessas ações ocorrem alternando entre as ferramentas na barra acima do aplicativo, seja selecionando o botão ou dizendo ' <rolar/arrastar/aplicar zoom na ferramenta de> '.
 
 [Mais informações sobre gestos compostos](gaze-and-commit.md#composite-gestures)
 
@@ -290,7 +290,7 @@ Há três coisas que você deve considerar:
 
 
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 * [Interação ocular](eye-gaze-interaction.md)
 * [Acompanhamento ocular no HoloLens 2](eye-tracking.md)
 * [Focar e esperar](gaze-and-dwell.md)

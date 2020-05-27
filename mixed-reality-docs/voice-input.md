@@ -6,12 +6,12 @@ ms.author: hakons
 ms.date: 10/03/2019
 ms.topic: article
 keywords: ggv, voz, Cortana, fala, entrada
-ms.openlocfilehash: 6cf94e6bc828c6f07ee81cb121cb64601df41c4e
-ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
+ms.openlocfilehash: a5411c338a854660652cfc89aa2d48d85ee89778
+ms.sourcegitcommit: e65f1463aec3c040a1cd042e61fc2bd156a42ff8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81277974"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83866916"
 ---
 # <a name="voice-input"></a>Entrada de voz
 
@@ -25,7 +25,7 @@ A entrada de voz é alimentada pelo [mesmo mecanismo](https://msdn.microsoft.com
 
 ## <a name="voice-and-gaze"></a>Voz e olhar
 
-Ao usar comandos de voz, o olhar normalmente é usado como o mecanismo de direcionamento, seja com um cursor ("Select") ou para canalizar implicitamente o comando para um aplicativo que você está vendo. Para isso, talvez nem seja necessário mostrar qualquer cursor olhar _("vê-lo, digamos")_ . É claro que alguns comandos de voz não exigem um destino, como "ir para iniciar" ou "Ei Cortana".
+Ao usar comandos de voz, o olhar normalmente é usado como o mecanismo de direcionamento, seja com um cursor ("Select") ou para canalizar implicitamente o comando para um aplicativo que você está vendo. Para isso, talvez nem seja necessário mostrar qualquer cursor olhar _("vê-lo, digamos")_. É claro que alguns comandos de voz não exigem um destino, como "ir para iniciar" ou "Ei Cortana".
 
 <br>
 
@@ -59,7 +59,7 @@ Ao usar comandos de voz, o olhar normalmente é usado como o mecanismo de direci
 
 **HoloLens (1ª geração)**
 
-Mesmo sem adicionar especificamente suporte de voz ao seu aplicativo, os usuários podem ativar os hologramas simplesmente dizendo o comando de voz do sistema "Select". Isso se comporta da mesma forma que um [toque de ar](gaze-and-commit.md#composite-gestures) no HoloLens, pressionando o botão Selecionar no [clicador de HoloLens](hardware-accessories.md#hololens-clicker)ou pressionando o gatilho em um [controlador de movimento de realidade mista do Windows](motion-controllers.md). Você ouvirá um som e verá uma dica de ferramenta com "Select" aparecer como confirmação. "Selecionar" é habilitado por um algoritmo de detecção de palavra-chave de baixo consumo de energia para que ele esteja sempre disponível para você, a qualquer momento, com impacto mínimo na vida útil da bateria, mesmo com suas mãos no seu lado.
+Mesmo sem adicionar especificamente suporte de voz ao seu aplicativo, os usuários podem ativar os hologramas simplesmente dizendo o comando de voz do sistema "Select". Isso se comporta da mesma forma que um [toque de ar](gaze-and-commit.md#composite-gestures) no HoloLens, pressionando o botão Selecionar no [clicador de HoloLens](https://docs.microsoft.com/hololens/hololens1-clicker)ou pressionando o gatilho em um [controlador de movimento de realidade mista do Windows](motion-controllers.md). Você ouvirá um som e verá uma dica de ferramenta com "Select" aparecer como confirmação. "Selecionar" é habilitado por um algoritmo de detecção de palavra-chave de baixo consumo de energia para que ele esteja sempre disponível para você, a qualquer momento, com impacto mínimo na vida útil da bateria, mesmo com suas mãos no seu lado.
 
 <br>
 
@@ -91,7 +91,7 @@ Você também pode dizer "Ei Cortana" para abrir a Cortana a qualquer momento. V
 **Comandos específicos do HoloLens**
 * "O que posso falar?"
 * "Ir para o início"-em vez de [cair](system-gesture.md#bloom) para chegar ao [menu iniciar](navigating-the-windows-mixed-reality-home.md#start-menu)
-* "Iniciar <app>"
+* "Iniciar <app> "
 * "Mover <app> aqui"
 * "Tirar uma foto"
 * "Iniciar gravação"
@@ -121,8 +121,8 @@ Você também pode dizer "Ei Cortana" para abrir a Cortana a qualquer momento. V
         *Imagem: um usuário pode dizer o comando "ajustar" que vê na barra de aplicativos para ajustar a posição do aplicativo*
     :::column-end:::
         :::column:::
-        ![de espaço](images/spacer-20x582.png)<br>
-        ![ao examinar uma janela de aplicativo ou um holograma, um usuário pode dizer o comando "ajustar" que vê na barra de aplicativos para ajustar a posição do aplicativo no mundo](images/microphone-600px.png)<br>
+        ![space](images/spacer-20x582.png)<br>
+        ![Ao examinar uma janela de aplicativo ou um holograma, um usuário pode dizer o comando "ajustar" que vê na barra de aplicativos para ajustar a posição do aplicativo no mundo](images/microphone-600px.png)<br>
     :::column-end:::
 :::row-end:::
 
@@ -173,7 +173,7 @@ Se você quiser uma lista completa, basta dizer "Mostrar todos os comandos" a qu
 
 Em vez de digitar com [toques de ar](gaze-and-commit.md#composite-gestures), o ditado de voz pode ser mais eficiente para inserir texto em um aplicativo. Isso pode acelerar muito a entrada com menos esforço para o usuário.
 
-![ditado de voz começa selecionando o botão de microfone](images/micbuttonfordictation.png)<br>
+![O ditado de voz começa selecionando o botão de microfone](images/micbuttonfordictation.png)<br>
 *O ditado de voz começa selecionando o botão de microfone no teclado*
 
 Sempre que o teclado Holographic estiver ativo, você poderá alternar para o modo de ditado em vez de digitar. Selecione o microfone no lado da caixa de entrada de texto para começar.
@@ -240,15 +240,15 @@ Quando a voz é aplicada corretamente, o usuário sabe **o que pode dizer e obt�
 
 :::row:::
     :::column:::
-       ![1. Estado de cursor regular](images/voicefeedbackstates-regular.jpg)<br>
+       ![1. Estado regular do cursor](images/voicefeedbackstates-regular.jpg)<br>
        **1. Estado regular do cursor**<br>
     :::column-end:::
     :::column:::
-       ![2. Comunica os comentários de voz e, em seguida, desaparece](images/voicefeedbackstates-voice.jpg)<br>
+       ![2. comunica os comentários de voz e, em seguida, desaparece](images/voicefeedbackstates-voice.jpg)<br>
         **2. comunica os comentários de voz e, em seguida, desaparece**<br>
     :::column-end:::
     :::column:::
-       ![* 3. Estado de cursor regular](images/voicefeedbackstates-regular.jpg)<br>
+       ![Beta. Estado de cursor regular](images/voicefeedbackstates-regular.jpg)<br>
        **3. retorna ao Estado regular do cursor**<br>
     :::column-end:::
 :::row-end:::
@@ -282,7 +282,7 @@ Para aplicativos que desejam aproveitar as opções de processamento de entrada 
 
 Todo esse processamento de áudio é acelerado por hardware, o que significa que os recursos esgotam muito menos energia do que se o mesmo processamento foi feito na CPU do HoloLens. Evite executar outro processamento de entrada de áudio na CPU para maximizar a vida útil da bateria do sistema e aproveitar o processamento de entrada de áudio descarregado interno.
 
-## <a name="languages"></a>Linguagens
+## <a name="languages"></a>Idiomas
 
 O HoloLens 2 também dá suporte a idiomas adicionais. Tenha em mente que os comandos de fala sempre serão executados no idioma de exibição do sistema, mesmo se vários teclados estiverem instalados ou se os aplicativos tentarem criar um reconhecedor de fala em um idioma diferente.
 
@@ -297,16 +297,16 @@ Para o Windows Mixed Reality Developer Edition versão 2017, a lógica de gerenc
 ---
 
 ## <a name="voice-input-in-mrtk-mixed-reality-toolkit-for-unity"></a>Entrada de voz em MRTK (Kit de ferramentas de realidade misturada) para Unity
-Com o **[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** , você pode atribuir facilmente o comando de voz em qualquer objeto. Use o **perfil de entrada de fala** do MRTK para definir suas palavras-chave. Ao atribuir o script **SpeechInputHandler** , você pode fazer com que qualquer objeto responda às palavras-chave definidas no perfil de entrada de fala. O SpeechInputHandler também fornece um rótulo de confirmação de fala para melhorar a confiança do usuário.
+Com o **[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)**, você pode atribuir facilmente o comando de voz em qualquer objeto. Use o **perfil de entrada de fala** do MRTK para definir suas palavras-chave. Ao atribuir o script **SpeechInputHandler** , você pode fazer com que qualquer objeto responda às palavras-chave definidas no perfil de entrada de fala. O SpeechInputHandler também fornece um rótulo de confirmação de fala para melhorar a confiança do usuário.
 
 * [MRTK-comando de voz](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Input/Speech.html)
 
 
 ---
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 * [Focar e confirmar](gaze-and-commit.md)
 * [Interações instinctuais](interaction-fundamentals.md)
-* [Entrada MR 212: voz](holograms-212.md)
+* [Entrada do MR 212: voz](holograms-212.md)
 * [Entrada de voz no DirectX](voice-input-in-directx.md)
 * [Entrada de voz no Unity](voice-input-in-unity.md)
