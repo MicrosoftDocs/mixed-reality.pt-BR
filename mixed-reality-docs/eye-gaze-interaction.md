@@ -1,17 +1,17 @@
 ---
-title: Interação com base nos olhos olhar
+title: Interação com base no foco com o olhar
 description: O HoloLens 2 permite um nível novo de contexto e entendimento humano dentro da experiência holográfica, fornecendo aos desenvolvedores a capacidade de usar as informações sobre o que os usuários estão vendo. Esta página aborda as recomendações de design para os desenvolvedores que desejam usar olhar como uma entrada.
 author: sostel
 ms.author: sostel
 ms.date: 10/29/2019
 ms.topic: article
 keywords: Acompanhamento de olho, realidade misturada, entrada, olho-olhar
-ms.openlocfilehash: 93d2cfd82b5aa2a410268c5594b5772bcc0b21c7
-ms.sourcegitcommit: a5dc182da237f63f0487d40a2e11894027208b6c
+ms.openlocfilehash: 2ae7723f116771986edc757f1c9d4f454b0a256f
+ms.sourcegitcommit: b0d15083ec1095e08c9d776e5bae66b4449383bb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73441106"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84111034"
 ---
 # <a name="eye-gaze-based-interaction-on-hololens-2"></a>Interação baseada em olhar no HoloLens 2
 
@@ -19,7 +19,7 @@ ms.locfileid: "73441106"
 
 Um dos nossos novos recursos empolgantes no HoloLens 2 é o acompanhamento dos olhos.
 Em nossa página de [acompanhamento de olho no HoloLens 2](eye-tracking.md) , mencionamos a necessidade de cada usuário passar por uma [calibração](https://docs.microsoft.com/hololens/hololens-calibration), fornecemos algumas diretrizes para desenvolvedores e casos de uso destacados para acompanhamento de olho.
-Olho – a entrada olhar ainda é um tipo bem novo de entrada de usuário e há muito a aprender. Embora a entrada olhar seja usada de forma muito sutil em nossa experiência de shell Holographic (a interface do usuário que você vê ao iniciar o seu HoloLens 2), vários aplicativos, como o ["Sr playground"](https://www.microsoft.com/p/mr-playground/9nb31lh723s2), demonstram ótimos exemplos de como a entrada de olhar de olhos pode ser adicionada à mágica de sua experiência com o Holographic.
+Olho – a entrada olhar ainda é um tipo bem novo de entrada de usuário e há muito a aprender. Embora a entrada olhar seja usada de forma muito sutil em nossa experiência de Shell de Holographic (a interface do usuário que você vê ao iniciar o seu HoloLens 2), vários aplicativos, como o ["HoloLens playground"](https://www.microsoft.com/p/mr-playground/9nb31lh723s2), demonstram ótimos exemplos de como as informações de olhar de entrada podem ser adicionadas à mágica da sua experiência com o Holographic.
 Nesta página, discutiremos as considerações de design para integrar a entrada olhar para interagir com seus aplicativos Holographic.
 Você aprenderá sobre as principais vantagens e também desafios exclusivos que acompanham a entrada olhar.  
 Com base nesses, fornecemos várias recomendações de design para ajudá-lo a criar interfaces de usuário com suporte olhar. 
@@ -105,7 +105,7 @@ No caso de um cursor, isso pode resultar em um efeito de "cursor fleeing" devido
 
     - **Precisa de sincronização de entradas de multimodal:** Combinar movimentos de olhos rápidos com entradas adicionais mais complexas, como comandos de voz longos ou gestos de mão, tem o risco que o usuário já continua a examinar antes que o comando de entrada adicional seja concluído e reconhecido. Portanto, se você criar seus próprios controles de entrada (por exemplo, gestos de mão personalizada), certifique-se de registrar o início dessa entrada ou duração aproximada para correlacioná-lo com o que um usuário examinou no passado.
     
-3. **Comentários sutis para entrada de acompanhamento de olho:** É útil fornecer comentários quando um destino é examinado para indicar que o sistema está funcionando como pretendido, mas deve ser mantido sutil. Isso pode incluir a mistura lenta, a entrada e a saída dos destaques visuais ou a execução de outros comportamentos de destino sutis, como movimentos lentos, como aumentar ligeiramente o tamanho do destino, para indicar que o sistema detectou corretamente que o usuário está olhando para um destino sem interromper desnecessariamente o fluxo de trabalho atual do usuário. 
+3. **Comentários sutis para entrada de acompanhamento de olho:** É útil fornecer comentários quando um destino é examinado para indicar que o sistema está funcionando como pretendido, mas deve ser mantido sutil. Isso pode incluir a mistura lenta, a entrada e a saída dos destaques visuais ou a execução de outros comportamentos de destino sutis, como movimentos lentos, como o aumento ligeiramente do tamanho de destino, para indicar que o sistema detectou corretamente que o usuário está olhando para um destino sem interromper desnecessariamente o fluxo de trabalho atual do usuário. 
 
 4. **Evite impor movimentos de olho não naturais como entrada:** Não force os usuários a executar movimentos de olho específicos (gestos de olhar) para disparar ações em seu aplicativo.
 
@@ -121,7 +121,7 @@ Esta página forneceu uma boa visão geral para ajudá-lo a começar a entender 
 * [Conforto](comfort.md)
 * [Olho-olhar no DirectX](gaze-in-directx.md)
 * [Olho-olhar no Unity (Kit de ferramentas de realidade misturada)](https://aka.ms/mrtk-eyes)
-* [Acompanhamento de olho no HoloLens 2](eye-tracking.md)
-* [Olhar e confirmar](gaze-and-commit.md)
+* [Acompanhamento ocular no HoloLens 2](eye-tracking.md)
+* [Focar e confirmar](gaze-and-commit.md)
 * [Focar e esperar](gaze-and-dwell.md)
 * [Entrada de voz](voice-design.md)

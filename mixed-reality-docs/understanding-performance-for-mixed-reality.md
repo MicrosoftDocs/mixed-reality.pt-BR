@@ -6,20 +6,20 @@ ms.author: trferrel
 ms.date: 3/26/2019
 ms.topic: article
 keywords: Realidade mista do Windows, realidade misturada, realidade virtual, VR, Sr, desempenho, otimização, CPU, GPU
-ms.openlocfilehash: 54e1eec5445fe655a0b498be5c18f08efe2270f0
-ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
+ms.openlocfilehash: 4a0f4cd9caea5dd601ad663801e760261980c429
+ms.sourcegitcommit: b0d15083ec1095e08c9d776e5bae66b4449383bb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81277474"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84111021"
 ---
-# <a name="understanding-performance-for-mixed-reality"></a>Entendendo o desempenho da realidade misturada
+# <a name="understanding-performance-for-mixed-reality"></a>Noções básicas sobre desempenho para realidade misturada
 
 Este artigo é uma introdução ao entendimento do significado do desempenho para seu aplicativo de realidade misturada.  A experiência do usuário pode ser bastante degradada se seu aplicativo não for executado em uma taxa de quadros ideal. Os hologramas aparecerão instáveis e o controle de cabeça do ambiente será impreciso, levando a uma experiência ruim para o usuário. O desempenho deve ser considerado um recurso de primeira classe para o desenvolvimento de realidade misturada e não uma tarefa em polonês.
 
 Os valores de taxa de quadros de alto desempenho para cada plataforma de destino são listados abaixo.
 
-| Platform | Taxa de quadros de destino |
+| Plataforma | Taxa de quadros de destino |
 |----------|-------------------|
 | [HoloLens](hololens-hardware-details.md) | 60 FPS |
 | [Windows Mixed Reality ultra PCs](immersive-headset-hardware-details.md) | 90 FPS |
@@ -75,14 +75,14 @@ Em geral, a maior parte do trabalho em um aplicativo de realidade misturada na C
 - Alocações de memória
 - Algoritmos complexos (ou seja, cinemática inversa, localização de caminho)
 
-### <a name="gpu-performance-recommendations"></a>Recomendações de desempenho da GPU
+### <a name="gpu-performance-recommendations"></a>Recomendações de desempenho de GPU
 
 #### <a name="understanding-bandwidth-vs-fill-rate"></a>Compreendendo a largura de banda versus a taxa de preenchimento
 Ao renderizar um quadro na GPU, um aplicativo é geralmente ligado pela largura de banda da memória ou pela taxa de preenchimento.
 
 - **Largura de banda de memória** é a taxa de leituras e gravações que a GPU pode executar da memória
     - Para identificar as limitações de largura de banda, reduza a qualidade da textura e verifique se a taxa de quadros foi aprimorada.
-    - No Unity, isso pode ser feito alterando a **qualidade da textura** em **Editar** **configurações do projeto** >  > configurações de **[qualidade](https://docs.unity3d.com/Manual/class-QualitySettings.html)** .
+    - No Unity, isso pode ser feito alterando a **qualidade da textura** em **Editar**  >  **configurações do projeto**configurações de  >  **[qualidade](https://docs.unity3d.com/Manual/class-QualitySettings.html)**.
 - A **taxa de preenchimento** refere-se aos pixels que podem ser desenhados por segundo pela GPU.
     - Para identificar as limitações da taxa de preenchimento, diminua a resolução de vídeo e verifique se a taxa de quadros foi aprimorada. 
     - No Unity, isso pode ser feito por meio da propriedade *[XRSettings. renderViewportScale](https://docs.unity3d.com/ScriptReference/XR.XRSettings-renderViewportScale.html)*
@@ -101,7 +101,7 @@ A taxa de preenchimento concentra-se na redução do número de operações que 
 
 Contagens de polígono mais altas resultam em mais operações para a GPU; [reduzir o número de polígonos](https://docs.microsoft.com/dynamics365/mixed-reality/import-tool/optimize-models#performance-targets) em sua cena reduzirá o tempo de renderização. Há outros fatores envolvidos no sombreamento da geometria que pode ser cara, mas a contagem de polígonos é a métrica mais simples para determinar o quão caro será a renderização de uma cena.
 
-#### <a name="limit-overdraw"></a>Limitar a sobreposição
+#### <a name="limit-overdraw"></a>Limite de extração
 
 O alto sobreempate ocorre quando vários objetos são renderizados, mas não são mostrados na tela, pois ficam ocultos por um objeto occluding. Imagine examinar uma parede que contém objetos por trás dela. Toda a geometria seria processada para renderização, mas apenas a parede opaca precisa ser renderizada. Isso resulta em operações desnecessárias.
 
@@ -131,9 +131,9 @@ Os efeitos de pós-processamento podem ser muito caros e aumentar a taxa de pree
 
 As operações de alocação e desalocação de memória excessivas podem resultar em desempenho inconsistente, quadros congelados e outros comportamentos prejudiciais. É especialmente importante entender as considerações de memória ao desenvolver no Unity, pois o gerenciamento de memória é controlado pelo coletor de lixo.
 
-#### <a name="object-pooling"></a>Pool de objetos
+#### <a name="object-pooling"></a>Pooling de objetos
 
-O pool de objetos é uma técnica popular para reduzir o custo de alocações e desalocações contínuas de objetos. Isso é feito pela alocação de um grande pool de objetos idênticos e pela reutilização das instâncias disponíveis inativas desse pool em vez da criação e da destruição constantes de objetos ao longo do tempo. Os pools de objetos são ótimos para componentes reutilizados que têm um tempo de vida variável durante um aplicativo.
+O pool de objetos é uma técnica popular para reduzir o custo de alocações e desalocações contínuas de objetos. Isso é feito alocando um grande pool de objetos idênticos e reutilizando instâncias disponíveis inativas desse pool em vez de constantemente gerar e destruir objetos ao longo do tempo. Os pools de objetos são ótimos para componentes reutilizados que têm tempo de vida variável durante um aplicativo.
 
 ## <a name="see-also"></a>Consulte também
 - [Recomendações de desempenho para Unity](performance-recommendations-for-unity.md)
