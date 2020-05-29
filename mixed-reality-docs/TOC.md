@@ -20,6 +20,7 @@
 ### [Como navegar na página inicial do Windows Mixed Reality](navigating-the-windows-mixed-reality-home.md)
 ### [Guia do entusiasta](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide)
 ### [Entretenimento baseado na localização](location-based-experiences.md)
+## [Acessórios de hardware](hardware-accessories.md)
 ## [Recursos da comunidade](community.md)
 # Design
 ## [Comece a projetar e a criar protótipos](design.md)
@@ -117,6 +118,7 @@
 ###### [1. Introdução às Âncoras Espaciais do Azure](mrlearning-asa-ch1.md)
 ###### [2. Salvar, recuperar e compartilhar Âncoras Espaciais do Azure](mrlearning-asa-ch2.md)
 ###### [3. Exibir comentários da Âncora Espacial do Azure](mrlearning-asa-ch3.md)
+###### [4. Âncoras Espaciais do Azure para o Android e o iOS](mrlearning-asa-ch4.md)
 ##### Tutoriais de Serviços de Fala do Azure
 ###### [1. Integrar e usar a transcrição e o reconhecimento de fala](mrlearning-speechSDK-ch1.md)
 ###### [2. Adicionar um modo offline para tradução de fala em texto local](mrlearning-speechSDK-ch2.md)
