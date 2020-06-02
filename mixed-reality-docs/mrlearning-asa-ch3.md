@@ -7,12 +7,12 @@ ms.date: 02/26/2019
 ms.topic: article
 keywords: realidade misturada, unity, tutorial, hololens
 ms.localizationpriority: high
-ms.openlocfilehash: 11342bada65e963db6393d35c99e2c2fbffe8ff1
-ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
+ms.openlocfilehash: 62ce1151837a345dea1bea4a8bea275cc851b9bd
+ms.sourcegitcommit: e65f1463aec3c040a1cd042e61fc2bd156a42ff8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "79031260"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83866896"
 ---
 # <a name="3-displaying-azure-spatial-anchor-feedback"></a>3. Exibir os comentários da Âncora Espacial do Azure
 
@@ -57,3 +57,5 @@ Atribua o objeto **Feedback** ao campo **Texto do Feedback** do componente **Scr
 ## <a name="congratulations"></a>Parabéns
 
 Neste tutorial, você aprendeu a criar um painel da interface do usuário para exibir o status atual da experiência de Âncora Espacial do Azure para fornecer aos usuários feedback em tempo real.
+
+[Próxima lição: 4. Âncoras Espaciais do Azure para o Android e o iOS](mrlearning-asa-ch4.md)
