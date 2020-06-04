@@ -7,24 +7,26 @@ ms.date: 02/26/2019
 ms.topic: article
 keywords: realidade misturada, unity, tutorial, hololens
 ms.localizationpriority: high
-ms.openlocfilehash: d0fd22ad6fbefc6889373b00847721cfc0655ce3
-ms.sourcegitcommit: 92ff5478a5c55b4e2c5cc2f44f1588702f4ec5d1
+ms.openlocfilehash: 2a171d601d094375a56734e8d7890c9d3e17c887
+ms.sourcegitcommit: e65f1463aec3c040a1cd042e61fc2bd156a42ff8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82604997"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83866906"
 ---
 # <a name="1-getting-started-with-azure-spatial-anchors"></a>1. Introdução às Âncoras Espaciais do Azure
 
 ## <a name="overview"></a>Visão geral
 
-Bem-vindo à segunda série de tutoriais do HoloLens 2. Nesta série de tutoriais de três partes, você aprenderá os conceitos básicos das Âncoras Espaciais do Azure.
+Bem-vindo à segunda série de tutoriais do HoloLens 2. Nesta série de tutoriais em quatro partes, você aprenderá os conceitos básicos das Âncoras Espaciais do Azure.
 
 Neste primeiro tutorial, [Introdução às Âncoras Espaciais do Azure](mrlearning-asa-ch1.md), você vai explorar as várias etapas necessárias para iniciar e parar uma sessão do Azure e criar, carregar e baixar âncoras do Azure em um dispositivo.
 
 No segundo tutorial, [Salvar, recuperar e compartilhar Âncoras Espaciais do Azure](mrlearning-asa-ch2.md), você aprenderá a salvar Âncoras Espaciais do Azure em várias sessões de aplicativo salvando informações de âncora no armazenamento do HoloLens 2 e como compartilhar essas informações de âncora para outros dispositivos para um alinhamento de âncora de vários dispositivos.
 
 No terceiro tutorial, [Exibir feedback de Âncora Espacial do Azure](mrlearning-asa-ch3.md), você aprenderá a fornecer aos usuários comentários sobre eventos de âncora e status ao usar Âncoras Espaciais do Azure.
+
+No quarto tutorial, [Âncoras Espaciais do Azure para Android e iOS](mrlearning-asa-ch4.md), você aprenderá a compilar e implantar seu projeto em dispositivos Android e iOS.
 
 ## <a name="objectives"></a>Objetivos
 
@@ -41,7 +43,14 @@ No terceiro tutorial, [Exibir feedback de Âncora Espacial do Azure](mrlearning-
 * Alguma habilidade básica de programação em C#
 * Um dispositivo HoloLens 2 [configurado para desenvolvimento](using-visual-studio.md#enabling-developer-mode)
 * <a href="https://docs.unity3d.com/Manual/GettingStartedInstallingHub.html" target="_blank">Hub do Unity</a> com o Unity 2019.2.X instalado e o módulo de suporte de Build da Plataforma Universal do Windows adicionado
-* Conclua a seção [Criar um recurso de Âncoras Espaciais](https://docs.microsoft.com/azure/spatial-anchors/quickstarts/get-started-unity-hololens#create-a-spatial-anchors-resource) do tutorial [Guia de início rápido: criar um aplicativo HoloLens do Unity que usa Âncoras Espaciais do Azure](https://docs.microsoft.com/azure/spatial-anchors/quickstarts/get-started-unity-hololens).
+* Conclua a seção [Criar um recurso de Âncoras Espaciais](https://docs.microsoft.com/azure/spatial-anchors/quickstarts/get-started-unity-hololens#create-a-spatial-anchors-resource) do tutorial [Guia de início rápido: Criar um aplicativo HoloLens do Unity que usa Âncoras Espaciais do Azure](https://docs.microsoft.com/azure/spatial-anchors/quickstarts/get-started-unity-hololens).
+* Caso você pretenda implantar no Android
+    * Um <a href="https://developer.android.com/studio/debug/dev-options" target="_blank">desenvolvedor habilitado</a> e um dispositivo Android <a href="https://developers.google.com/ar/discover/supported-devices" target="_blank">com capacidade para ARCore</a> com conexão USB para o seu computador com Windows ou macOS
+    * <a href="https://docs.unity3d.com/Manual/GettingStartedInstallingHub.html" target="_blank">Hub do Unity</a> com o Unity 2019.2.X instalado e o módulo de suporte de Build do Android adicionado
+* Caso você pretenda implantar no iOS
+    * Um computador macOS com a versão mais recente do <a href="https://geo.itunes.apple.com/us/app/xcode/id497799835?mt=12" target="_blank">Xcode</a> e do <a href="https://cocoapods.org" target="_blank">CocoaPods</a> instaladas
+    * Um dispositivo iOS <a href="https://developer.apple.com/documentation/arkit/verifying_device_support_and_user_permission" target="_blank">compatível com ARKit</a> com conexão USB para seu computador macOS
+    * <a href="https://docs.unity3d.com/Manual/GettingStartedInstallingHub.html" target="_blank">Hub do Unity</a> com o Unity 2019.2.X instalado e o módulo de suporte de Build do iOS adicionado
 
 > [!IMPORTANT]
 > A versão recomendada do Unity para esta série de tutoriais é o Unity 2019.2.X. Ela substitui todos os requisitos de versão do Unity ou as recomendações indicadas nos pré-requisitos vinculados acima.
