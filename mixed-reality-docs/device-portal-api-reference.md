@@ -6,12 +6,12 @@ ms.author: jlyons
 ms.date: 03/21/2018
 ms.topic: article
 keywords: HoloLens, portal de dispositivos Windows, API
-ms.openlocfilehash: 8c9d60f458cddd3ba258aed0ee82f7aa16c10ba6
-ms.sourcegitcommit: 6d9d01d53137435c787f247f095d5255581695fc
+ms.openlocfilehash: 17268c9a20d3da0ee90e5d6cead4342d3badf800
+ms.sourcegitcommit: f24ac845e184c2f90e8b15adab9addb913f5cb83
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83227941"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84451321"
 ---
 # <a name="device-portal-api-reference"></a>Referência de API do portal de dispositivos
 
@@ -320,7 +320,15 @@ Define as configurações padrão de captura de realidade misturada.  Algumas de
 
 **/API/Holographic/MRC/status (GET)**
 
-Obtém o status da realidade misturada registrada (em execução, parada)
+Obtém o estado da captura de realidade misturada no portal do dispositivo Windows.
+
+***Resposta***
+
+A resposta contém uma propriedade JSON que indica se o portal do dispositivo Windows está gravando vídeo ou não.
+
+``` javascript
+{"IsRecording" : boolean}
+```
 
 **/API/Holographic/MRC/Thumbnail (GET)**
 
@@ -531,6 +539,6 @@ Parâmetros
 Retornar dados
 * Em Iniciar, retorna o status da sessão WPR.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 * [Como usar o Portal de Dispositivos do Windows](using-the-windows-device-portal.md)
 * [Referência da API principal do portal do dispositivo (UWP)](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-api-core)
