@@ -6,31 +6,23 @@ ms.author: v-haferr
 ms.date: 04/08/2020
 ms.topic: article
 keywords: Realidade mista do Windows, inreal, Engine 4, UE4, HoloLens 2, voz, entrada de voz, reconhecimento de fala, realidade misturada, desenvolvimento, recursos, documentação, guias, hologramas, desenvolvimento de jogos
-ms.openlocfilehash: c5de0cd912674ccd681fd398fb6fe5fd345ab6f2
-ms.sourcegitcommit: 1b8090ba6aed9ff128e4f32d40c96fac2e6a220b
+ms.openlocfilehash: 134a8c5bbeb700a973d3732d24fa9078feb568ef
+ms.sourcegitcommit: 7f50210b71a65631fd1bc3fdb215064e0db34333
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84330628"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84551782"
 ---
 # <a name="voice-input-in-unreal"></a>Entrada de voz em não real
 
 ## <a name="overview"></a>Visão geral
-A entrada de voz permite interagir com um holograma sem a necessidade de usar gestos de mão e tem suporte no HoloLens (1º gen) e no HoloLens 2. Ele é alimentado pelo mesmo mecanismo que dá suporte à fala em todos os outros aplicativos universais do Windows e pode adicionar uma sensação natural à maneira como você interage em realidade misturada. 
-
-Os recursos de voz com suporte incluem:
-- O [comando SELECT](https://docs.microsoft.com/windows/mixed-reality/voice-input#the-select-command)
-- [Ei, Cortana](https://docs.microsoft.com/windows/mixed-reality/voice-input#hey-cortana)
-- "Vê-lo, digamos" para interação entre botões e rótulos
-- Ditado
-
-Para obter mais informações, confira a documentação principal de [entrada de voz](voice-input.md) .
+A entrada de voz em forma inreal permite que você interaja com um holograma sem precisar usar gestos de mão e só tem suporte para o HoloLens 2. Embora a entrada de voz no HoloLens 2 seja alimentada pelo mesmo mecanismo que dá suporte à fala em todos os outros aplicativos universais do Windows, o não real usa um mecanismo mais limitado próprio para processar a entrada de voz. Isso limita os recursos de entrada de voz em mapeamentos de fala inreais para predefinidos, que é abordado nas seções a seguir. 
 
 ## <a name="enabling-speech-recognition"></a>Habilitando o reconhecimento de fala
 
 Para habilitar o reconhecimento de fala no HoloLens:
 1. Selecione **configurações do projeto > plataforma > recursos de > do HoloLens** e habilite o **microfone**. 
-2. Habilitado Recogniztion de fala em **configurações > privacidade > fala** e selecione **Inglês**.
+2. Habilitado o reconhecimento de fala em **configurações > privacidade > fala** e selecione **Inglês**.
 
 > [!NOTE]
 > O reconhecimento de fala sempre funciona no idioma de exibição do Windows configurado no aplicativo **configurações** . É recomendável que você também habilite o **reconhecimento de fala online** para a melhor qualidade de serviço.
@@ -67,7 +59,9 @@ Os mapeamentos de fala podem ser usados como componentes de entrada como mapeame
 
 Essa é toda a configuração que você precisará para começar a adicionar entrada de voz aos seus aplicativos de HoloLens em um não real. Você pode encontrar mais informações sobre a fala e a interatividade nos links abaixo e certifique-se de pensar sobre a experiência que está criando para seus usuários.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
+* [Entrada de voz](voice-input.md)
 * [Focar e confirmar](gaze-and-commit.md)
 * [Interações instinctuais](interaction-fundamentals.md)
 * [Entrada do MR 212: voz](holograms-212.md)
+

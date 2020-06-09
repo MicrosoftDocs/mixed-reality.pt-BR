@@ -6,12 +6,12 @@ ms.author: v-haferr
 ms.date: 04/08/2020
 ms.topic: article
 keywords: Realidade mista do Windows, hologramas, HoloLens 2, controle de olho, entrada olhar, tela de montagem de cabeça, mecanismo inreal
-ms.openlocfilehash: c77e33df2a1dfffdb5ea55e685d30af3fc2a22da
-ms.sourcegitcommit: 1b8090ba6aed9ff128e4f32d40c96fac2e6a220b
+ms.openlocfilehash: 0bc8b83a2e840b066eb5e30665584e1c68f7b021
+ms.sourcegitcommit: 7f50210b71a65631fd1bc3fdb215064e0db34333
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84330618"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84551802"
 ---
 # <a name="gaze-input"></a>Entrada olhar
 
@@ -25,12 +25,12 @@ O [plug-in do Windows Mixed Reality](https://docs.unrealengine.com/Platforms/VR/
 - Painéis de recorte
 - Informações de rastreamento e dados do olhar
 
-Você pode encontrar a lista completa de recursos na documentação de exibição e [controle de olho](https://docs.unrealengine.com/BlueprintAPI/EyeTracking/index.html) do [rumo](https://docs.unrealengine.com/BlueprintAPI/Input/HeadMountedDisplay/index.html) . 
+Você pode encontrar a lista completa de recursos na documentação de exibição e [controle de olho](https://docs.unrealengine.com/BlueprintAPI/EyeTracking/index.html) do [rumo](https://docs.unrealengine.com/BlueprintAPI/Input/HeadMountedDisplay/index.html) .
 
 Além das APIs inreais, confira a documentação sobre a [interação baseada em olhar](eye-gaze-interaction.md) para o hololens 2 e leia como o [controle de olhos no hololens 2](https://docs.microsoft.com/windows/mixed-reality/eye-tracking) funciona.
 
 > [!IMPORTANT]
-> Só há suporte para acompanhamento de olho no HoloLens 2. 
+> Só há suporte para acompanhamento de olho no HoloLens 2.
 
 ## <a name="enabling-eye-tracking"></a>Habilitando o acompanhamento de olho
 A entrada olhar precisa ser habilitada nas configurações do projeto do HoloLens antes que você possa usar qualquer uma das APIs inreais. Quando o aplicativo for iniciado, você verá um prompt de consentimento mostrado na captura de tela abaixo.
@@ -42,9 +42,9 @@ A entrada olhar precisa ser habilitada nas configurações do projeto do HoloLen
 > [!NOTE] 
 > O controle de olhos do HoloLens em tempo inreal tem apenas um único olhar Ray para ambos os olhos, em vez dos dois raios necessários para o acompanhamento do estereoscópico, o que não é suportado.
 
-Essa é a configuração que você precisará para começar a adicionar a entrada olhar aos seus aplicativos do HoloLens 2 em um não real. Mais informações sobre a entrada do olhar e como isso afeta os usuários em realidade misturada podem ser encontradas nos links abaixo. Lembre-se de pensar nisso ao criar suas experiências interativas. 
+Essa é a configuração que você precisará para começar a adicionar a entrada olhar aos seus aplicativos do HoloLens 2 em um não real. Mais informações sobre a entrada do olhar e como isso afeta os usuários em realidade misturada podem ser encontradas nos links abaixo. Lembre-se de pensar nisso ao criar suas experiências interativas.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 * [Calibragem](calibration.md)
 * [Conforto](comfort.md)
 * [Focar e confirmar](gaze-and-commit.md)
