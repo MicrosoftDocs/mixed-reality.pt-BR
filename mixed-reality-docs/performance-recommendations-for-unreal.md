@@ -1,26 +1,41 @@
 ---
 title: Recomendações de desempenho para o Unreal
 description: Recomendações para um desempenho ideal para aplicativos de realidade misturada no Unreal
-author: sw5813
-ms.author: suwu
+author: hferrone
+ms.author: v-haferr
 ms.date: 5/5/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, mixed reality, performance, optimization, settings, documentation
-ms.openlocfilehash: 1fab2f714628f61a518d89795cf644e90130200a
-ms.sourcegitcommit: ba4c8c2a19bd6a9a181b2cec3cb8e0402f8cac62
+ms.openlocfilehash: 3c65eb519b57457e6c9e9747af0ad75e6a5e1b4d
+ms.sourcegitcommit: 1b8090ba6aed9ff128e4f32d40c96fac2e6a220b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82840195"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84330173"
 ---
-# <a name="performance-recommendations-for-unreal"></a><span data-ttu-id="5c47e-104">Recomendações de desempenho para o Unreal</span><span class="sxs-lookup"><span data-stu-id="5c47e-104">Performance recommendations for Unreal</span></span>
+# <a name="performance-recommendations-for-unreal"></a><span data-ttu-id="ecd08-104">Recomendações de desempenho para o Unreal</span><span class="sxs-lookup"><span data-stu-id="ecd08-104">Performance recommendations for Unreal</span></span>
 
-<span data-ttu-id="5c47e-105">Este artigo se baseia na discussão descrita em [Recomendações de desempenho para realidade misturada](understanding-performance-for-mixed-reality.md), mas se concentra em aprendizados específicos do ambiente do Unreal Engine.</span><span class="sxs-lookup"><span data-stu-id="5c47e-105">This article builds on the discussion outlined in [performance recommendations for mixed reality](understanding-performance-for-mixed-reality.md) but focuses on learnings specific to the Unreal Engine environment.</span></span>
+## <a name="overview"></a><span data-ttu-id="ecd08-105">Visão geral</span><span class="sxs-lookup"><span data-stu-id="ecd08-105">Overview</span></span>
 
-## <a name="recommended-unreal-project-settings"></a><span data-ttu-id="5c47e-106">Configurações recomendadas de projetos do Unreal</span><span class="sxs-lookup"><span data-stu-id="5c47e-106">Recommended Unreal project settings</span></span>
+<span data-ttu-id="ecd08-106">Este artigo se baseia na discussão descrita em [recomendações de desempenho para realidade misturada](understanding-performance-for-mixed-reality.md), mas se concentra em recursos específicos do Unreal Engine.</span><span class="sxs-lookup"><span data-stu-id="ecd08-106">This article builds on the discussion outlined in [performance recommendations for mixed reality](understanding-performance-for-mixed-reality.md), but focuses on features specific to Unreal Engine.</span></span> <span data-ttu-id="ecd08-107">Você é incentivado a detectar os gargalos do aplicativo, analisar e criar o perfil de aplicativos de realidade misturada e correções de desempenho gerais antes de continuar.</span><span class="sxs-lookup"><span data-stu-id="ecd08-107">You're encouraged to read up on application bottlenecks, analyzing and profiling mixed reality apps, and general performance fixes before continuing.</span></span>
 
-- <span data-ttu-id="5c47e-107">Usar o renderizador de VR para dispositivos móveis – nas configurações do seu projeto, verifique se a plataforma de destino está definida como "Dispositivos Móveis/Tablet" em "Projeto – Hardware de Destino"</span><span class="sxs-lookup"><span data-stu-id="5c47e-107">Use the mobile VR renderer- in your project settings, ensure your target platform is set to "Mobile/Tablet" under "Project – Target Hardware"</span></span>
-- <span data-ttu-id="5c47e-108">Desabilite o refugo de oclusão – em "Mecanismo – Renderização" na seção "Refugo", desmarque "Refugo de Oclusão"</span><span class="sxs-lookup"><span data-stu-id="5c47e-108">Disable occlusion culling- under "Engine – Rendering" in the "Culling" section, uncheck "Occlusion Culling"</span></span>
-    + <span data-ttu-id="5c47e-109">Se o refugo de oclusão for necessário porque uma cena muito detalhada tem que ser renderizada, é recomendável que "Suporte ao Refugo de Oclusão por Software" esteja habilitado em "Mecanismo – Renderização".</span><span class="sxs-lookup"><span data-stu-id="5c47e-109">If occlusion culling is required because a very detailed scene needs to be rendered, it is recommended that "Support Software Occlusion Culling" is enabled Under "Engine – Rendering".</span></span> <span data-ttu-id="5c47e-110">Isso permite que o Unreal faça o refugo de oclusão na CPU e evite consultas de oclusão de GPU, que têm mau desempenho no HoloLens 2.</span><span class="sxs-lookup"><span data-stu-id="5c47e-110">This allows Unreal to do occlusion culling on the CPU and avoid GPU occlusion queries, which perform poorly on HoloLens 2.</span></span>
-- <span data-ttu-id="5c47e-111">Habilite "Estéreo em Instância" e "Exibição Múltipla em Dispositivos Móveis" em "Mecanismo – Renderização" na categoria "VR".</span><span class="sxs-lookup"><span data-stu-id="5c47e-111">Enable both "Instanced Stereo" and "Mobile Multi-View" under "Engine – Rendering" in the "VR" category.</span></span> <span data-ttu-id="5c47e-112">Talvez seja necessário desmarcar "Pós-processamento em Dispositivos Móveis" para poder marcar "Exibição Múltipla em Dispositivos Móveis"</span><span class="sxs-lookup"><span data-stu-id="5c47e-112">You may need to uncheck "Mobile Post-Processing" in order to be able to check "Mobile Multi-View"</span></span>
+## <a name="recommended-unreal-project-settings"></a><span data-ttu-id="ecd08-108">Configurações recomendadas de projetos do Unreal</span><span class="sxs-lookup"><span data-stu-id="ecd08-108">Recommended Unreal project settings</span></span>
+<span data-ttu-id="ecd08-109">Você pode encontrar cada uma das configurações a seguir em **Editar > Configurações do Projeto**.</span><span class="sxs-lookup"><span data-stu-id="ecd08-109">You can find each of the following settings in **Edit > Project Settings**.</span></span>
+
+1. <span data-ttu-id="ecd08-110">Como usar o renderizador de VR para dispositivos móveis:</span><span class="sxs-lookup"><span data-stu-id="ecd08-110">Using the mobile VR renderer:</span></span>
+    * <span data-ttu-id="ecd08-111">Role até a seção **Projeto**, selecione **Hardware de Destino** e defina a plataforma de destino como **Celular/Tablet**</span><span class="sxs-lookup"><span data-stu-id="ecd08-111">Scroll to the **Project** section, select **Target Hardware**, and set the target platform to **Mobile/Tablet**</span></span>
+
+![Configuração de destino para dispositivos móveis](images/unreal/performance-recommendations-img-01.png)
+
+2. <span data-ttu-id="ecd08-113">Desabilitando a remoção por oclusão:</span><span class="sxs-lookup"><span data-stu-id="ecd08-113">Disabling occlusion culling:</span></span>
+    * <span data-ttu-id="ecd08-114">Role até a seção **Mecanismo**, selecione **Renderização**, expanda a seção **Remoção** e desmarque **Remoção por Oclusão**.</span><span class="sxs-lookup"><span data-stu-id="ecd08-114">Scroll to the **Engine** section, select **Rendering**, expand the **Culling** section, and uncheck **Occlusion Culling**.</span></span>
+        + <span data-ttu-id="ecd08-115">Se você precisa de remoção por oclusão para uma cena detalhada sendo renderizada, é recomendável que você habilite **Suporte a Remoção por Oclusão de Software** em **Mecanismo > Renderização**.</span><span class="sxs-lookup"><span data-stu-id="ecd08-115">If you need occlusion culling for a detailed scene being rendered, it's recommended that you enable **Support Software Occlusion Cullin** in **Engine > Rendering**.</span></span> <span data-ttu-id="ecd08-116">Isso permite que o Unreal faça o trabalho na CPU e evite consultas de oclusão de GPU, que têm mau desempenho no HoloLens 2.</span><span class="sxs-lookup"><span data-stu-id="ecd08-116">This lets Unreal to do the work on the CPU and avoid GPU occlusion queries, which perform poorly on HoloLens 2.</span></span>
+
+![Configuração de destino para dispositivos móveis](images/unreal/performance-recommendations-img-02.png)
+
+3. <span data-ttu-id="ecd08-118">Como atualizar renderização de VR:</span><span class="sxs-lookup"><span data-stu-id="ecd08-118">Updating VR rendering:</span></span>
+    * <span data-ttu-id="ecd08-119">Role a página até a seção **Mecanismo**, selecione **Renderização**, expanda a seção **VR** e habilite **Estéreo Instanciado** e **Exibição Múltipla em Dispositivos Móveis**.</span><span class="sxs-lookup"><span data-stu-id="ecd08-119">Scroll to the **Engine** section, select **Rendering**, expand the **VR** section, and enable both **Instanced Stereo** and **Mobile Multi-View**.</span></span>
+        + <span data-ttu-id="ecd08-120">Talvez seja necessário desmarcar **Pós-processamento em Dispositivos Móveis** para poder marcar **Exibição Múltipla em Dispositivos Móveis**</span><span class="sxs-lookup"><span data-stu-id="ecd08-120">You may need to uncheck **Mobile Post-Processing** in order to be able to check **Mobile Multi-View**</span></span>
+
+![Configuração de destino para dispositivos móveis](images/unreal/performance-recommendations-img-03.png)

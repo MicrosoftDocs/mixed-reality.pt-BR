@@ -8,12 +8,12 @@ ms.date: 10/22/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit-unity, academy, tutorial
-ms.openlocfilehash: db60ff35156ea20aadd1ba04f9304aa27a2488cb
-ms.sourcegitcommit: ba4c8c2a19bd6a9a181b2cec3cb8e0402f8cac62
+ms.openlocfilehash: e5961a178d571d2f71e98ff4c3c729d6feb0fd40
+ms.sourcegitcommit: 7011ac6fde80e5c45f04192fa1db6e1eb559e3b0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82835645"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327956"
 ---
 # <a name="tutorials-and-sample-apps"></a>Tutoriais e aplicativos de exemplo
 
@@ -28,7 +28,7 @@ Os tutoriais do HoloLens 2 foram projetados para ajudar os desenvolvedores a apr
 * Tutoriais de introdução
     * Unity – [1 de 7 Visão geral e objetivos](mrlearning-base.md)
     * Unreal – [1 de 6 Introdução](unreal-uxt-ch1.md)
-* Tutoriais sobre as Âncoras Espaciais do Azure – [1 de 3 Introdução às Âncoras Espaciais do Azure](mrlearning-asa-ch1.md)
+* Tutoriais sobre as Âncoras Espaciais do Azure – [1 de 4: Introdução às Âncoras Espaciais do Azure](mrlearning-asa-ch1.md)
 * Tutoriais sobre os Serviços de Fala do Azure – [1 de 4 Como integrar e usar a transcrição e o reconhecimento de fala](mrlearning-speechSDK-ch1.md)
 * Tutoriais sobre funcionalidades multiusuário – [1 de 5 Como configurar o Photon Unity Networking](mrlearning-sharing(photon)-ch1.md)
 
