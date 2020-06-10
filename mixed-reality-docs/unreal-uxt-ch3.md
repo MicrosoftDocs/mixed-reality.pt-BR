@@ -1,67 +1,92 @@
 ---
 title: 3. Como configurar seu projeto para a realidade misturada
-description: Parte 3 de um tutorial para criar um aplicativo de xadrez simples usando o Unreal Engine 4 e o plug-in Ferramentas de UX do Kit de Ferramentas de Realidade Misturada
-author: sw5813
-ms.author: suwu
+description: Parte 3 de 6 em uma série de tutoriais para criar um aplicativo de xadrez simples usando o Unreal Engine 4 e o plug-in Ferramentas de UX do Kit de Ferramentas de Realidade Misturada
+author: hferrone
+ms.author: v-haferr
 ms.date: 5/5/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, mixed reality, tutorial, getting started, mrtk, uxt, UX Tools, documentation
-ms.openlocfilehash: b5b5e2de787279602341e60f2bfa29aa05ea9b31
-ms.sourcegitcommit: ba4c8c2a19bd6a9a181b2cec3cb8e0402f8cac62
+ms.openlocfilehash: d22c3d8c9048f53171298642768877d7bcdcb972
+ms.sourcegitcommit: 1b8090ba6aed9ff128e4f32d40c96fac2e6a220b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82840615"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84330273"
 ---
 # <a name="3-setting-up-your-project-for-mixed-reality"></a>3. Como configurar seu projeto para a realidade misturada
 
-Esta seção orienta você no processo de configuração de seu aplicativo para o desenvolvimento da realidade misturada. 
+## <a name="overview"></a>Visão geral
+
+No tutorial anterior, você passou tempo configurando o projeto de aplicativo de xadrez. Esta seção vai orientá-lo pela configuração do aplicativo para o desenvolvimento de realidade misturada, o que significa adicionar uma sessão de RA. Para essa tarefa, você usará um ativo de dados ARSessionConfig que tem muitas configurações úteis de RA, como mapeamento espacial e oclusão. Se você quiser se aprofundar, a documentação do Unreal Engine tem mais detalhes sobre o ativo [ARSessionConfig](https://docs.unrealengine.com/en-US/PythonAPI/class/ARSessionConfig.html) e a classe [UARSessionConfig](https://docs.unrealengine.com/en-US/API/Runtime/AugmentedReality/UARSessionConfig/index.html).
 
 ## <a name="objectives"></a>Objetivos
+* Como trabalhar com configurações de RA do Unreal Engine 
+* Como usar um ativo de dados do ARSessionConfig
+* Como configurar um peão e um modo de jogo
 
-* Entender como configurar um projeto de realidade misturada com ARSessionConfig, Peão e GameMode
+## <a name="adding-the-session-asset"></a>Como adicionar o ativo de sessão
+As sessões de RA no Unreal não acontecem espontaneamente. Para usar uma sessão, você precisa de um ativo de dados do ARSessionConfig com o qual trabalhar, que é sua próxima tarefa:
 
-## <a name="configure-the-session"></a>Configurar a sessão
-
-1. No Navegador de Conteúdo, navegue de volta para a pasta **Conteúdo**. Clique em **Adicionar Novo > Diversos > Ativos de Dados**. 
-
-2. Escolha **ARSessionConfig** como a classe e clique em **Selecionar**. Nomeie o ativo como "ARSessionConfig".
+1. Clique em **Adicionar Novo > Diversos > Ativo de Dados** no **Navegador de Conteúdo**. Verifique se você está no nível raiz da pasta **Conteúdo**. 
+    * Selecione **ARSessionConfig**, clique em **Selecionar** e nomeie o ativo **ARSessionConfig**.
 
 ![Criar um ativo de dados](images/unreal-uxt/3-createasset.PNG)
 
-3. Clique duas vezes em ARSessionConfig para abri-lo. Um ativo de dados ARSessionConfig contém uma série de configurações úteis de RA, incluindo mapeamento espacial e oclusão. Para obter mais detalhes sobre o ARSessionConfig, dê uma olhada na documentação do Unreal Engine em [UARSessionConfig](https://docs.unrealengine.com/en-US/API/Runtime/AugmentedReality/UARSessionConfig/index.html). Para nosso aplicativo de xadrez, não precisaremos modificar nenhuma configuração, portanto, basta clicar em **Salvar** e retornar à Janela principal. 
+3. Clique duas vezes em **ARSessionConfig** para abri-lo, deixe todas as configurações padrão e clique em **Salvar**. Volte para a Janela principal. 
 
 ![Configuração de sessão de RA](images/unreal-uxt/3-arsessionconfig.PNG)
 
-4. Na barra de ferramentas acima do visor, clique em **Blueprints > Abrir Blueprint de Nível**. O Blueprint de Nível é um blueprint especial que atua como um grafo de eventos global de nível geral. Vamos iniciar uma sessão RA aqui, para que nossa configuração de sessão RA seja aplicada no início do nível.  
+Com isso feito, a próxima etapa é verificar se a sessão de RA começa quando o nível é carregado. O Unreal tem um tipo especial de blueprint chamado **Blueprint de Nível**, que atua como um grafo de eventos global em todo esse nível. Conectar o ativo ARSessionConfig no **Blueprint de Nível** garante que a sessão de RA será disparada exatamente quando o jogo começar.
 
-5. Arraste o nó de execução saindo de **Evento BeginPlay** e solte-o. Pesquise o nó **Iniciar Sessão de RA**. Clique em **Configuração de Sessão** e selecione o ativo **ARSessionConfig** criado recentemente. Clique **Compilar** e, em seguida, **Salvar**. Volte para a Janela principal.
+1. Clique em **Blueprints > Abrir Blueprint de Nível** na barra de ferramentas do editor: 
 
-![Iniciar Sessão de RA](images/unreal-uxt/3-startarsession.PNG)
+![Abrir Blueprint de Nível](images/unreal-uxt/3-level-blueprint.PNG)
+
+5. Arraste o nó de execução (ícone de seta para a esquerda) saindo de **Evento BeginPlay** e solte-o. Pesquise por **Iniciar Sessão de RA** e pressione enter.  
+    * Clique na lista suspensa **Selecionar Ativo** em **Configuração de Sessão** e escolha o ativo **ARSessionConfig**. 
+    * Escolha **Compilar**, depois **Salvar** e retorne para a Janela principal.
+
+![Iniciar Sessão de RA](images/unreal-uxt/3-start-ar-session.PNG)
 
 ## <a name="create-a-pawn"></a>Criar um Peão
+Neste ponto, o projeto ainda precisa de um objeto de jogador. No Unreal, um **Peão** representa o usuário no jogo, mas neste caso, será a experiência do HoloLens 2.
 
-1.  Na pasta Conteúdo, crie um Blueprint que herde de **DefaultPawn**. No Unreal, um Peão representa o usuário no jogo ou, nesse caso, a experiência do HoloLens 2. Renomeie o novo Peão como "MRPawn" e clique duas vezes no MRPawn para abri-lo. 
+1. Clique em **Adicionar Novo > Classe de Blueprint** na pasta **Conteúdo** e expanda a seção **Todas as Classes** na parte inferior. 
+    * Pesquise por **DefaultPawn**, clique em **Selecionar** e clique duas vezes no ativo para abrir. 
 
 ![Criar um Peão herdando de DefaultPawn](images/unreal-uxt/3-defaultpawn.PNG)
 
-2.  Por padrão, o Peão tem um componente de malha e um componente de colisão, já que, na maioria dos projetos do Unreal, os Peões controlados pelo usuário são objetos sólidos que colidem com outros componentes. Nessa situação, como o usuário é o Peão, queremos atravessar hologramas sem gerar colisões. No painel Componentes, selecione o **CollisionComponent**. No painel Detalhes, role para baixo até a seção Colisão e clique na lista suspensa ao lado de Predefinições de Colisão. Altere esse Peão para **NoCollision**. Faça o mesmo para o **MeshComponent**. **Compile** e, em seguida, **Salve** Blueprint. Volte para a Janela principal. 
+> [!NOTE]
+> Por padrão, os Peões têm componentes de malha e colisão. Na maioria dos projetos do Unreal, os Peões são objetos sólidos que podem colidir com outros componentes. Já que o peão e o usuário são a mesma coisa em realidade misturada, você deseja ser capaz de passar pelos hologramas sem nenhuma colisão. 
+
+2. Selecione **CollisionComponent** no painel **Componentes** e role para baixo até a seção **Colisão** do painel **Detalhes**. 
+    * Clique na lista suspensa de **Predefinições de Colisão** e altere o valor para **NoCollision**. 
+    * Faça o mesmo para o **MeshComponent** e, em seguida, escolha **Compilar** e **Salvar** o Blueprint. 
 
 ![Ajustar as Predefinições de Colisão do Peão](images/unreal-uxt/3-nocollision.PNG)
 
-## <a name="create-a-game-mode"></a>Criar um Modo de Jogo
+Com seu trabalho aqui terminado, retorne para a Janela principal.
 
-1.  Na pasta Conteúdo do Navegador de Conteúdo, crie um Blueprint com a **Base Modo de Jogo** pai. Nomeie-o como MRGameMode e clique duas vezes para abri-lo. No Unreal, o Modo de Jogo determina um diversas configurações para o jogo ou a experiência, incluindo o peão padrão a ser usado. 
+## <a name="create-a-game-mode"></a>Criar um Modo de Jogo
+A última peça do quebra-cabeça da configuração da realidade misturada é o Modo de Jogo. O Modo de Jogo determina um diversas configurações para o jogo ou a experiência, incluindo o peão padrão a ser usado.
+
+1.  Clique em **Adicionar Novo > Classe de Blueprint** na pasta **Conteúdo** e expanda a seção **Todas as Classes** na parte inferior. 
+    * Pesquise por **Base do Modo de Jogo**, nomeie-a como **MRGameMode** e clique duas vezes para abri-la. 
 
 ![MRGameMode no Navegador de Conteúdo](images/unreal-uxt/3-gamemode.PNG)
 
-2.  No painel Detalhes, localize a seção Classes. Altere a Classe Peão Padrão de DefaultPawn para **MRPawn** que você acabou de criar. Clique **Compilar** e, em seguida, **Salvar**. Volte para a Janela principal. 
+2.  Vá para a seção **Classes** no painel **Detalhes** e altere a **Classe de Peão Padrão** para **MRPawn**. 
+    * Escolha **Compilar**, depois **Salvar** e retorne para a Janela principal. 
 
 ![Definir a Classe Peão Padrão](images/unreal-uxt/3-setpawn.PNG)
 
-3.  A última etapa na configuração de seu projeto é informar ao Unreal para tornar MRGameMode padrão. Vá para **Editar > Configurações de Projetos > Mapas e Modos** na seção (Projetos). Na seção Modos Padrão, clique na lista suspensa e escolha **MRGameMode**. Na seção Mapas Padrão logo abaixo, altere **EditorStartupMap** e **GameDefaultMap** to **Principal**. Dessa forma, quando você fechar o editor e abri-lo novamente, o mapa Principal será selecionado por padrão. Da mesma forma, quando você jogar o jogo, o mapa Principal será o nível que é iniciado. 
+3.  Selecione **Editar > Configurações de Projetos** e clique em **Mapas e Modos** na lista à esquerda. 
+    * Expanda **Modos Padrão** e altere **Modo de Jogo Padrão** para **MRGameMode**. 
+    * Expanda **Mapas Padrão** e altere **EditorStartupMap** e **GameDefaultMap** para **Principal**. Dessa forma, quando você fechar o editor e abri-lo novamente ou jogar o jogo, o mapa Principal estará selecionado por padrão.
 
 ![Configurações do projeto – Mapas e Modos](images/unreal-uxt/3-mapsandmodes.PNG)
+
+Com o projeto totalmente configurado para realidade misturada, você está pronto para passar para o próximo tutorial e começar a adicionar a entrada do usuário ao cenário. 
 
 [Próxima seção: 4. Como tornar sua cena interativa](unreal-uxt-ch4.md)
