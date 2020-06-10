@@ -3,22 +3,24 @@ title: Arquivo de emulador do HoloLens
 description: Lista de compilações liberadas do emulador Microsoft HoloLens.
 author: pbarnettms
 ms.author: pbarnett
-ms.date: 5/12/2020
+ms.date: 6/8/2020
 ms.topic: article
 keywords: HoloLens, emulador, compilações, versões
-ms.openlocfilehash: e01f58783645bccd473418639d5fa495bbc7817f
-ms.sourcegitcommit: 6d9d01d53137435c787f247f095d5255581695fc
+ms.openlocfilehash: 7fe48203a3670490a2ac78040ea9f0ac8e811bd5
+ms.sourcegitcommit: dc60c6ca075e7086b87478f1d7e87ebe02160c0c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83227931"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84631489"
 ---
 # <a name="hololens-2-emulator-archive"></a>Arquivo de emulador do HoloLens 2
 
 O emulador do HoloLens (1º gen) e o do HoloLens 2 compilam a instalação lado a lado. Geralmente, é recomendável usar a compilação mais recente disponível, mas pode haver casos em que você deseja ou precisa testar um aplicativo em um emulador antigo. Esta página inclui links para versões lançadas.
 
-|  Build |  Data de lançamento |  Observações | 
+|  Build |  Data de lançamento |  Anotações | 
 |----------|----------|----------|
+|  [10.0.19041.1106 de Build do emulador do HoloLens 2](https://go.microsoft.com/fwlink/?linkid=2132415) | 9 de junho de 2020 | Windows Holographic, versão 2004 de junho 2020 atualização.  Resolve problemas com aplicativos DirectX 12 que não são renderizados, o teclado na tela não está aparecendo, segurando objetos com mãos não funcionando conforme o esperado e o emulador falha ao iniciar com um erro sobre a virtualização aninhada em sistemas baseados em AMD.  Para ver as notas de versão gerais do HoloLens 2, consultehttps://docs.microsoft.com/hololens/hololens-release-notes |
+|  [10.0.18362.1064 de Build do emulador do HoloLens 2](https://go.microsoft.com/fwlink/?linkid=2132601) | 9 de junho de 2020 | Windows Holographic, versão 1903 de junho 2020 atualização.  Resolve problemas com aplicativos DirectX 12 que não são renderizados, o teclado na tela não está aparecendo e segurando objetos com mãos que não funcionam conforme o esperado.  Para ver as notas de versão gerais do HoloLens 2, consultehttps://docs.microsoft.com/hololens/hololens-release-notes |
 |  [10.0.19041.1103 de Build do emulador do HoloLens 2](https://go.microsoft.com/fwlink/?linkid=2129088) | 12 de maio de 2020 | Windows Holographic, versão 2004.  Os headsets e os controladores de movimento do Windows Mixed Reality podem ser usados para controlar e exibir o emulador do HoloLens 2 no estéreo.  Para ver as notas de versão gerais do HoloLens 2, consultehttps://docs.microsoft.com/hololens/hololens-release-notes |
 |  [10.0.18362.1061 de Build do emulador do HoloLens 2](https://go.microsoft.com/fwlink/?linkid=2129833) | 12 de maio de 2020 | Windows Holographic, versão 1903 pode ser 2020 atualização.  Para ver as notas de versão gerais do HoloLens 2, consultehttps://docs.microsoft.com/hololens/hololens-release-notes |
 |  [10.0.18362.1059 de Build do emulador do HoloLens 2](https://go.microsoft.com/fwlink/?linkid=2126826) | 13 de abril de 2020 | Windows Holographic, versão 1903 de abril de 2020 atualização.  Para ver as notas de versão gerais do HoloLens 2, consultehttps://docs.microsoft.com/hololens/hololens-release-notes |
@@ -35,7 +37,7 @@ O emulador do HoloLens (1º gen) e o do HoloLens 2 compilam a instalação lado 
 
 ## <a name="hololens-emulator-1st-gen-archive"></a>Arquivo de emulador do HoloLens (1ª gen)
 
-|  Build |  Data de lançamento |  Observações | 
+|  Build |  Data de lançamento |  Anotações | 
 |----------|----------|----------|
 |  [10.0.17763.134 de Build do emulador do HoloLens](https://go.microsoft.com/fwlink/?linkid=2065980) | 19 de novembro de 2018 | Compilação mais recente do HoloLens (1ª gen). Atualização do Windows 10 de outubro de 2018. |
 |  [10.0.17134.80 de Build do emulador do HoloLens](https://go.microsoft.com/fwlink/?linkid=874531) | 21 de maio de 2018 | 
@@ -44,7 +46,7 @@ O emulador do HoloLens (1º gen) e o do HoloLens 2 compilam a instalação lado 
 |  [10.0.14342.1018 de Build do emulador do HoloLens](https://go.microsoft.com/fwlink/?LinkID=823018) |  31 de maio de 2016 |
 |  [10.0.11082.1033 de Build do emulador do HoloLens](https://go.microsoft.com/fwlink/?LinkID=724053) |  30 de março de 2016 |
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 * [Instalar as ferramentas](install-the-tools.md)
 * [Usando o emulador do HoloLens](using-the-hololens-emulator.md)
 * [Entrada do emulador de HoloLens avançado e do simulador de realidade misturada](advanced-hololens-emulator-and-mixed-reality-simulator-input.md)

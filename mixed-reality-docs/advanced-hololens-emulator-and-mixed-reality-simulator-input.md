@@ -3,15 +3,15 @@ title: Entrada avançada do Emulador do HoloLens e do Simulador de Realidade Mis
 description: Instruções detalhadas para usar o teclado, o mouse e o controlador Xbox para simular a entrada para o emulador do HoloLens e o simulador de realidade mista do Windows.
 author: pbarnettms
 ms.author: pbarnett
-ms.date: 05/12/2020
+ms.date: 06/8/2020
 ms.topic: article
 keywords: HoloLens, emulador, simulação, realidade misturada do Windows
-ms.openlocfilehash: e9051ae9e7853924f583b6c38f6177f2f967d9f0
-ms.sourcegitcommit: 6d9d01d53137435c787f247f095d5255581695fc
+ms.openlocfilehash: 0812b1d498ea557e84eecc44142b38d86099f832
+ms.sourcegitcommit: dc60c6ca075e7086b87478f1d7e87ebe02160c0c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83227943"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84631473"
 ---
 # <a name="advanced-hololens-emulator-and-mixed-reality-simulator-input"></a>Entrada avançada do Emulador do HoloLens e do Simulador de Realidade Misturada
 
@@ -51,17 +51,17 @@ Você também pode controlar o estado da entrada simulada do sensor:
 
 A tabela a seguir mostra como cada tipo de entrada é mapeada para o teclado, o mouse e o controlador Xbox. Cada tipo tem um mapeamento diferente, dependendo do modo de controle de entrada; mais informações sobre modos de controle de entrada são fornecidas posteriormente neste documento.
 
-|  |  Keyboard |  Mouse |  Controlador Xbox | 
+|  |  Teclado |  Mouse |  Controlador Xbox | 
 |----------|----------|----------|----------|
 |  Yaw |  Setas à esquerda/direita |  Arrastar para a esquerda/direita |  Direita Thumbstick esquerda/direita | 
 |  Densidade |  Setas para cima/para baixo |  Arrastar para cima/para baixo |  Thumbstick direita/para baixo | 
 |  Roll |  P/E |  |  DPad esquerda/direita | 
 |  X |  A/D |  |  Esquerda Thumbstick esquerda/direita | 
-|  Y |  Page up/Page Down |  |  DPad para cima/para baixo | 
+|  S |  Page up/Page Down |  |  DPad para cima/para baixo | 
 |  Z |  W/S |  |  Esquerda Thumbstick para cima/para baixo | 
 |  Ação |  Inserir ou espaço |  Botão direito |  Um botão ou um gatilho | 
 |  Flor/sistema |  F2 ou tecla do Windows |  |  Botão B | 
-|  Botão de alça do controlador |  G  |  |  | 
+|  Botão de alça do controlador/mão |  G  |  |  | 
 |  Botão de menu do controlador |  M  |  |  | 
 |  Touch Touch do controlador |  U  |  |  | 
 |  Pressione o controlador Touchpad |  P  |  |  | 
@@ -100,7 +100,7 @@ A tabela a seguir mostra como cada modificador de destino mapeia cada um dos con
 |  Densidade |  Girar para cima/para baixo |  Mover para cima/para baixo |  Girar para cima/para baixo | Olho olhar pesquisa | 
 |  Roll |  Rolar cabeçalho para a esquerda/direita |  |  Rolar cabeçalho para a esquerda/direita | (Nenhuma ação) |
 |  X |  Corpo do slide à esquerda/direita |  Mover mão/controlador para a esquerda/direita |  Transformar cabeçalho à esquerda/direita | (Nenhuma ação) |
-|  Y |  Mover corpo para cima/para baixo |  Mover mão/controlador para cima/para baixo |  Girar para cima/para baixo | (Nenhuma ação) |
+|  S |  Mover corpo para cima/para baixo |  Mover mão/controlador para cima/para baixo |  Girar para cima/para baixo | (Nenhuma ação) |
 |  Z |  Mover corpo para frente/para trás |  Mover mão/avançar/voltar do controlador |  Girar para cima/para baixo | (Nenhuma ação) |
  
  
@@ -131,13 +131,13 @@ O seguinte conjunto de controles é sugerido para uso do dia a dia:
 |  Mover/girar mais rápido | Tecla SHIFT esquerda ou direita | Pressione e segure a Thumbstick correta |
 |  Mover/girar lentamente | Tecla CTRL esquerda ou direita | Pressionar e manter o Thumbstick esquerdo |
 
-## <a name="using-a-windows-mixed-reality-immersive-headset-and-motion-controllers-with-the-hololens-2-emulator"></a>Usando um headset de imersão e controladores de movimento do Windows Mixed Reality com o emulador do HoloLens 2
+## <a name="using-a-windows-mixed-reality-immersive-headset-and-motion-controllers-with-the-hololens-2-emulator"></a>Usando controladores de movimentos e o headset imersivo do Windows Mixed Reality com o Emulador do HoloLens 2
 
 Ao usar um headset de imersão de realidade mista do Windows com o emulador do HoloLens 2, a movimentação e a rotação são mapeadas automaticamente para movimento e rotação do headset.  A posição e a orientação do controlador de movimento são mapeadas automaticamente para a posição e orientação da mão no emulador.  A tabela a seguir lista as ações adicionais disponíveis ao usar um controlador de movimento.
 
 Observe que, ao usar um headset, os controles teclado padrão, mouse e gamepad são ignorados automaticamente.
 
-|  Operação |  Ação |  Observações | 
+|  Operação |  Ação |  Anotações | 
 |----------|----------|----------|
 |  Corpo X |  Thumbstick esquerda/direita |   | 
 |  Corpo Z |  Avançar/voltar Thumbstick |   | 
@@ -162,7 +162,7 @@ Os atalhos de teclado a seguir estão disponíveis para acessar o painel de cont
 | Definir o foco do teclado para o painel de controle | F8 | Se o painel não estiver visível no momento, ele será mostrado primeiro. |
 | Encaixar ou desencaixar o painel de/para o emulador ou a janela do portal da realidade misturada | F9 | Se a janela for fechada quando desencaixada, ela será encaixada e ocultada. |
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 * [Instalar as ferramentas](install-the-tools.md)
 * [Usando o emulador do HoloLens](using-the-hololens-emulator.md)
 * [Como usar o simulador do Windows Mixed Reality](using-the-windows-mixed-reality-simulator.md)
