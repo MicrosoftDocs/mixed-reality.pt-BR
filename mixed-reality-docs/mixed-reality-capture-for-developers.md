@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 02/24/2019
 ms.topic: article
 keywords: MRC, foto, vídeo, captura, câmera
-ms.openlocfilehash: 0d51945444a411563b67af8569fee7ffe3449957
-ms.sourcegitcommit: f24ac845e184c2f90e8b15adab9addb913f5cb83
+ms.openlocfilehash: 1116e9a0923129aa2b18d838917eebf12adae694
+ms.sourcegitcommit: 45da0a056fa42088ff81ccdd11232830fbe8430f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84451341"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84720412"
 ---
 # <a name="mixed-reality-capture-for-developers"></a>Captura de realidade misturada para desenvolvedores
 
@@ -97,12 +97,12 @@ Isso é feito para você automaticamente pelo Unity.
 ##### <a name="enable-the-photovideocamera-holographicviewconfiguration-in-unreal"></a>Habilitar o PhotoVideoCamera HolographicViewConfiguration em um não real
 
 > [!NOTE]
-> Isso requer um **mecanismo inreal 4,25** ou mais recente.
+> Isso requer o **Unreal Engine 4.25** ou posterior.
 
-Para aceitar a renderização da câmera PV:
+Para aceitar a renderização da câmera de PV:
 
 1. Chamar **SetEnabledMixedRealityCamera** e **ResizeMixedRealityCamera**
-    * Use os valores de **tamanho X** e **Y** para definir as dimensões de vídeo.
+    * Use os valores de **Tamanho X** e **Tamanho Y** para definir as dimensões do vídeo.
 
 ![Terceira câmera](images/unreal-camera-3rd.PNG)
 
@@ -232,15 +232,25 @@ Efeito de vídeo da MRC (**Windows. Media. MixedRealityCapture. MixedRealityCapt
 |  BlankOnProtectedContent  |  booleano  |  FALSO  |  Sinalizador para habilitar ou desabilitar o retorno de um quadro vazio se houver um aplicativo UWP 2D mostrando o conteúdo protegido. Se esse sinalizador for false e um aplicativo UWP 2D estiver mostrando o conteúdo protegido, o aplicativo UWP 2D será substituído por uma textura de conteúdo protegida no headset e na captura da realidade misturada. |
 |  ShowHiddenMesh  |  booleano  |  FALSO  |  Sinalizador para habilitar ou desabilitar mostrando a malha da área oculta da câmera Holographic e o conteúdo vizinho. |
 | Sobrecolocações | Tamanho | 0, 0 | Defina o tamanho de saída desejado após o corte para estabilização de vídeo. Um tamanho de corte padrão será escolhido se 0 ou um tamanho de saída inválido for especificado. |
-| PreferredHologramPerspective | UINT32 | 0 (Exibir) | Enum usado para indicar qual configuração de exibição de câmera Holographic deve ser capturada: 0 (display) significa que o aplicativo não será solicitado a renderizar da câmera de foto/vídeo, 1 (PhotoVideoCamera) solicitará que o aplicativo seja renderizado da câmera de foto/vídeo (se o aplicativo oferecer suporte a ele) |
+| PreferredHologramPerspective | UINT32 | **Renderizar da** configuração da câmera no portal do dispositivo Windows | Enum usado para indicar qual configuração de exibição de câmera Holographic deve ser capturada: 0 (display) significa que o aplicativo não será solicitado a renderizar da câmera de foto/vídeo, 1 (PhotoVideoCamera) solicitará que o aplicativo seja renderizado da câmera de foto/vídeo (se o aplicativo oferecer suporte a ele). Somente com suporte no HoloLens 2 |
+
+>[!NOTE]
+> Você pode alterar o valor padrão de **PreferredHologramPerspective** no portal do dispositivo Windows acessando a [página de captura da realidade misturada](using-the-windows-device-portal.md#mixed-reality-capture) e desmarcando **renderizar da câmera**. A configuração padrão é **1 (PhotoVideoCamera)**, mas pode ser desmarcada para defini-la como **0 (exibição)**.
+>
+> O valor padrão de **PreferredHologramPerspective** era **0 (display)** antes da atualização de junho de 2020 (Windows Holographic, versão 2004 Build 19041,1106 e Windows Holographic, versão 1903 Build 18362,1064).
 
 Efeito de áudio da MRC (**Windows. Media. MixedRealityCapture. MixedRealityCaptureAudioEffect**)
 
 | Nome da propriedade | Digite | Valor padrão | Descrição |
 |----------|----------|----------|----------|
 | Mixermode | UINT32 | 2 (MIC e áudio do sistema) | Enum usado para indicar quais fontes de áudio devem ser usadas: 0 (somente áudio do MIC), 1 (somente áudio do sistema), 2 (áudio do sistema e MIC) |
-| LoopbackGain | FLOAT | 1.0 | Obter para aplicar ao volume de áudio do sistema. Varia de 0,0 a 5,0. Somente com suporte no HoloLens 2 |
-| MicrophoneGain | FLOAT | 1.0 | Obter para aplicar ao volume do MIC. Varia de 0,0 a 5,0. Somente com suporte no HoloLens 2 |
+| LoopbackGain | FLOAT | Configuração de **aproveitamento de áudio do aplicativo** no portal do dispositivo Windows | Obter para aplicar ao volume de áudio do sistema. Varia de 0,0 a 5,0. Somente com suporte no HoloLens 2 |
+| MicrophoneGain | FLOAT | Configuração de **lucro de áudio do MIC** no portal do dispositivo Windows | Obter para aplicar ao volume do MIC. Varia de 0,0 a 5,0. Somente com suporte no HoloLens 2 |
+
+>[!NOTE]
+> Você pode alterar o valor padrão de **LoopbackGain** ou **MicrophoneGain** no portal do dispositivo Windows acessando a [página de captura da realidade misturada](using-the-windows-device-portal.md#mixed-reality-capture) e ajustando o controle deslizante ao lado de suas respectivas configurações. Ambas as configurações assumem como padrão **1,0**, mas podem ser definidas como qualquer valor entre **0,0** e **5,0**.
+>
+> O uso do portal de dispositivos do Windows para configurar os valores de obter padrão foi adicionado com a atualização de junho de 2020 (Windows Holographic, versão 2004 Build 19041,1106 e Windows Holographic, versão 1903 Build 18362,1064).
 
 ### <a name="simultaneous-mrc-limitations"></a>Limitações de MRC simultâneas
 
@@ -276,7 +286,7 @@ Com a atualização do Windows 10 de abril de 2018, não há mais uma limitaçã
 
 Anterior à atualização de abril de 2018 do Windows, o gravador da MRC personalizada de um aplicativo era mutuamente exclusivo com o sistema da MRC (capturando fotos, capturando vídeos ou transmitindo do portal de dispositivos do Windows).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 * [Captura de realidade misturada](mixed-reality-capture.md)
 * [Modo de exibição Espectador](spectator-view.md)

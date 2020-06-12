@@ -3,15 +3,15 @@ title: Modo de pesquisa do HoloLens
 description: Usando o modo de pesquisa no HoloLens, um aplicativo pode acessar fluxos de sensor de dispositivo de chave (profundidade, acompanhamento de ambiente e IR-reflectivity).
 author: hferrone
 ms.author: v-haferr
-ms.date: 05/03/2018
+ms.date: 06/10/2020
 ms.topic: article
 keywords: modo de pesquisa, CV, RS4, pesquisa Visual computacional, Research, HoloLens, HoloLens 2
-ms.openlocfilehash: ec6f7b73a1f25932f10c10a7f0daaf78e536c0c4
-ms.sourcegitcommit: 7f50210b71a65631fd1bc3fdb215064e0db34333
+ms.openlocfilehash: 62b82e3a36452d4b104bf04999e556ec19d2a5e3
+ms.sourcegitcommit: 45da0a056fa42088ff81ccdd11232830fbe8430f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84533098"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84720392"
 ---
 # <a name="hololens-research-mode"></a>Modo de pesquisa do HoloLens
 
@@ -97,7 +97,7 @@ O modo de pesquisa é uma extensão do modo de desenvolvedor. Antes de iniciar, 
 
 * Abra o **menu iniciar > configurações** e selecione **atualizações**.
 * Selecione **para desenvolvedores** e habilite o **modo de desenvolvedor**.
-* Role para baixo e habilite o **portal do dispositivo**.
+* Role para baixo e habilite o **Portal de Dispositivos**.
 
 Depois que os recursos do desenvolvedor estiverem habilitados, [Conecte-se ao portal do dispositivo](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-hololens) para habilitar os recursos do modo de pesquisa.
 
@@ -129,7 +129,7 @@ Você pode encontrar aplicativos de exemplo sobre como acessar os vários fluxos
 
 Você pode usar o Issue [Tracker](https://github.com/Microsoft/HololensForCV/issues) no repositório HoloLensForCV para seguir os problemas conhecidos.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 * [Microsoft Media Foundation](https://msdn.microsoft.com/library/windows/desktop/ms694197)
 * [Repositório GitHub HoloLensForCV](https://github.com/Microsoft/HoloLensForCV)
