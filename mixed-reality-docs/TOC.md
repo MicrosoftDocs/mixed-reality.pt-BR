@@ -214,6 +214,7 @@
 ### [Entrada de voz no Unreal](unreal-voice-input.md)
 ### [Câmera do HoloLens no Unreal](unreal-hololens-camera.md)
 ### [Códigos QR no Unreal](unreal-qr-codes.md)
+### [Streaming no Unreal](unreal-streaming.md)
 ### [Recomendações de desempenho para o Unreal](performance-recommendations-for-unreal.md)
 ## JavaScript
 ### [Visão geral do desenvolvimento em JavaScript](javascript-development-overview.md)
