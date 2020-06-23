@@ -6,12 +6,12 @@ ms.author: wguyman
 ms.date: 06/12/2019
 ms.topic: article
 keywords: câmera, hololens, câmera colorida, frente, hololens 2, CV, pesquisa Visual computacional, fiducial, marcadores, código QR, QR, foto, vídeo
-ms.openlocfilehash: b8e9d926db09d277b3fde7572dd68257599c8d5e
-ms.sourcegitcommit: 09d9fa153cd9072f60e33a5f83ced8167496fcd7
+ms.openlocfilehash: e158eb2e708164cbd68620f3f46d3039c2eaa730
+ms.sourcegitcommit: 4282d92e93869e4829338bdf7d981c3ee0260bfd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/18/2020
-ms.locfileid: "83520011"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85216217"
 ---
 # <a name="locatable-camera"></a>Câmera localizável
 
@@ -25,7 +25,7 @@ O HoloLens inclui uma câmera voltada para o mundo montada na frente do disposit
 * O LED de privacidade branco enfrentado pelo mundo se acenderá sempre que a câmera estiver ativa
 * A câmera dá suporte aos seguintes modos (todos os modos são 16:9 taxa de proporção) a 30, 24, 20, 15 e 5 fps:
 
-  |  Vídeo  |  Versão Prévia  |  Também  |  Campo de exibição horizontal (H-FOV) |  Uso sugerido | 
+  |  Vídeo  |  Visualização  |  Também  |  Campo de exibição horizontal (H-FOV) |  Uso sugerido | 
   |----------|----------|----------|----------|----------|
   |  1280x720 |  1280x720 |  1280x720 |  45deg  |  (modo padrão com estabilização de vídeo) | 
   |  N/D |  N/D |  2048x1152 |  67deg |  Imagem da resolução mais alta ainda | 
@@ -40,7 +40,7 @@ O HoloLens inclui uma câmera voltada para o mundo montada na frente do disposit
 * O HoloLens 2 dá suporte a perfis de câmera diferentes. Saiba como [descobrir e selecionar recursos de câmera](https://docs.microsoft.com//windows/uwp/audio-video-camera/camera-profiles).
 * A câmera dá suporte aos seguintes perfis e resoluções (todos os modos de vídeo são taxa de proporção de 16:9):
   
-  | Perfil                                         | Vídeo     | Versão Prévia   | Também     | Taxas de quadros | Campo de exibição horizontal (H-FOV) | Uso sugerido                             |
+  | Perfil                                         | Vídeo     | Visualização   | Também     | Taxas de quadros | Campo de exibição horizontal (H-FOV) | Uso sugerido                             |
   |-------------------------------------------------|-----------|-----------|-----------|-------------|----------------------------------|---------------------------------------------|
   | Herdado, 0 BalancedVideoAndPhoto, 100             | 2272x1278 | 2272x1278 |           | 15, 30       | 64,69                            | Gravação de vídeo de alta qualidade                |
   | Herdado, 0 BalancedVideoAndPhoto, 100             | 896x504   | 896x504   |           | 15, 30       | 64,69                            | Fluxo de visualização para captura de foto de alta qualidade |
@@ -115,10 +115,10 @@ public:
         MFPinholeCameraIntrinsics cameraIntrinsics;
         UINT32 sizeCameraExtrinsics = 0;
         UINT32 sizeCameraIntrinsics = 0;
-        UINT64 sampleTimeQpc = 0;
+        UINT64 sampleTimeHns = 0;
  
         // query sample for calibration and validate
-        if (FAILED(pSample->GetUINT64(MFSampleExtension_DeviceTimestamp, &sampleTimeQpc)) ||
+        if (FAILED(pSample->GetUINT64(MFSampleExtension_DeviceTimestamp, &sampleTimeHns)) ||
             FAILED(pSample->GetBlob(MFSampleExtension_CameraExtrinsics, (UINT8*)& cameraExtrinsics, sizeof(cameraExtrinsics), &sizeCameraExtrinsics)) ||
             FAILED(pSample->GetBlob(MFSampleExtension_PinholeCameraIntrinsics, (UINT8*)& cameraIntrinsics, sizeof(cameraIntrinsics), &sizeCameraIntrinsics)) ||
             (sizeCameraExtrinsics != sizeof(cameraExtrinsics)) ||
@@ -149,7 +149,7 @@ public:
         }
  
         // locate dynamic node
-        auto timestamp = PerceptionTimestampHelper::FromSystemRelativeTargetTime(TimeSpanFrodmQpcTicks(sampleTimeQpc));
+        auto timestamp = PerceptionTimestampHelper::FromSystemRelativeTargetTime(TimeSpan{ sampleTimeHns });
         auto coordinateSystem = m_frameOfReference.GetStationaryCoordinateSystemAtTimestamp(timestamp);
         auto location = m_locator.TryLocateAtTimestamp(timestamp, coordinateSystem);
         if (!location)
@@ -161,31 +161,11 @@ public:
  
         return CameraFrameLocation{ coordinateSystem, cameraToDynamicNode * dynamicNodeToCoordinateSystem, cameraIntrinsics };
     }
- 
+
 private:
     GUID m_currentDynamicNodeId{ GUID_NULL };
     SpatialLocator m_locator{ nullptr };
     SpatialLocatorAttachedFrameOfReference m_frameOfReference{ nullptr };
- 
-    // Convert a duration value from a source tick frequency to a destination tick frequency.
-    static inline int64_t SourceDurationTicksToDestDurationTicks(int64_t sourceDurationInTicks, int64_t sourceTicksPerSecond, int64_t destTicksPerSecond)
-    {
-        int64_t whole = (sourceDurationInTicks / sourceTicksPerSecond) * destTicksPerSecond;                          // 'whole' is rounded down in the target time units.
-        int64_t part = (sourceDurationInTicks % sourceTicksPerSecond) * destTicksPerSecond / sourceTicksPerSecond;    // 'part' is the remainder in the target time units.
-        return whole + part;
-    }
- 
-    static inline TimeSpan TimeSpanFromQpcTicks(int64_t qpcTicks)
-    {
-        static const int64_t qpcFrequency = []
-        {
-            LARGE_INTEGER frequency;
-            QueryPerformanceFrequency(&frequency);
-            return frequency.QuadPart;
-        }();
- 
-        return TimeSpan{ SourceDurationTicksToDestDurationTicks(qpcTicks, qpcFrequency, winrt::clock::period::den) / winrt::clock::period::num };
-    }
 };
 ```
 
@@ -274,7 +254,7 @@ Exemplos:
 * Identificar e reconhecer objetos na sala
 * Identifique e reconheça pessoas na sala (por exemplo, coloque os cartões de contato Holographic em rostos)
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 * [Exemplo de câmera localizável](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/HolographicFaceTracking)
 * [Câmera localizável no Unity](locatable-camera-in-unity.md)
 * [Captura de realidade misturada](mixed-reality-capture.md)

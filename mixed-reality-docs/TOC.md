@@ -94,7 +94,7 @@
 ## Recursos
 ### [Conheça o Unity](https://learn.unity.com/)
 ### [Kit de ferramentas de realidade misturada](https://github.com/Microsoft/MixedRealityToolkit-Unity)
-### [Laboratórios de Design de Realidade Misturada](https://github.com/Microsoft/MRDL_Unity_PeriodicTable)
+### [Laboratórios de Design de Realidade Misturada](https://github.com/microsoft/MixedRealityDesignLabs_Unity)
 ### [Maquete da Microsoft](https://www.maquette.ms)
 ### [Processo de criação do ativo](asset-creation-process.md)
 ### [Projete seus próprios ambientes de imersão](add-custom-home-environments.md)
@@ -136,10 +136,14 @@
 ###### [3. Espacializar áudio de um vídeo](unity-spatial-audio-ch3.md)
 ###### [4. Habilitar e desabilitar o áudio espacial em tempo de execução](unity-spatial-audio-ch4.md)
 ###### [5. Usar o reverb para adicionar distância ao áudio espacial](unity-spatial-audio-ch5.md)
+#### Aplicativos de exemplo de software livre do HoloLens 2
+##### [Surfaces](sampleapp-surfaces.md)
+##### [Tabela periódica dos elementos 2.0](https://medium.com/@dongyoonpark/bringing-the-periodic-table-of-the-elements-app-to-hololens-2-with-mrtk-v2-a6e3d8362158)
+##### [Galaxy Explorer 2.0](galaxy-explorer-update.md)
 #### HoloLens (1º gen) aplicativos de exemplo de software livre
-##### [Tabela periódica dos elementos](periodic-table-of-the-elements.md)
+##### [Tabela periódica dos elementos 1.0](periodic-table-of-the-elements.md)
+##### [Galaxy Explorer 1.0](galaxy-explorer.md)
 ##### [Módulo lunar](lunar-module.md)
-##### [Explorador da galáxia](galaxy-explorer.md)
 #### Tutoriais do HoloLens (1ª geração) e do headset imersivo
 ##### [Noções básicas do MR 100: introdução ao Unity](holograms-100.md)
 ##### [Noções básicas do MR 101: projeto completo com dispositivo](holograms-101.md)

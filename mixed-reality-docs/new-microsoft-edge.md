@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 01/15/2020
 ms.topic: article
 keywords: Edge, novo, imersão Web, Microsoft Edge, navegador, VR
-ms.openlocfilehash: 2576762786c9234377308f226036c830e01d9133
-ms.sourcegitcommit: d73d9012941fa1b13eb7d2f45ccc481d6365827a
+ms.openlocfilehash: d61780045e795850012536a36fde67b9934c76aa
+ms.sourcegitcommit: 4282d92e93869e4829338bdf7d981c3ee0260bfd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76885624"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85216227"
 ---
 # <a name="windows-mixed-reality-and-the-new-microsoft-edge"></a>Realidade mista do Windows e o novo Microsoft Edge
 
@@ -30,7 +30,7 @@ O novo Microsoft Edge [adota o projeto](https://blogs.windows.com/windowsexperie
 
 Os clientes de headset do Windows Mixed Reality VR que desejam usar o novo Microsoft Edge na realidade misturada devem **atualizar para o Windows 10 versão 1903 ou posterior para o suporte nativo de aplicativos Win32 (como o novo Microsoft Edge)** na página inicial misturada de realidade. Verifique Windows Update ou [Instale manualmente a versão mais recente do Windows 10](https://www.microsoft.com/en-us/software-download/windows10).
 
-Para obter a melhor experiência do Microsoft Edge possível no início da realidade misturada, também recomendamos aguardar **algumas otimizações de realidade misturada do Windows para o novo Microsoft Edge chegando com a atualização cumulativa 2020-01 para o Windows 10 versão 1903 (ou posterior)** , que deve estar disponível no Windows Update no final de Janeiro.
+Para obter a melhor experiência do Microsoft Edge possível no início da realidade misturada, também recomendamos aguardar **algumas otimizações de realidade misturada do Windows para o novo Microsoft Edge chegando com a atualização cumulativa 2020-01 para o Windows 10 versão 1903 (ou posterior)**, que deve estar disponível no Windows Update no final de Janeiro.
 
 >[!IMPORTANT]
 >Se você optar por baixar o novo Microsoft Edge antes de realizar essas atualizações, haverá alguns problemas conhecidos com seu comportamento no Windows Mixed Reality (que pode ser lido abaixo).
@@ -49,9 +49,10 @@ Para obter a melhor experiência do Microsoft Edge possível no início da reali
 ### <a name="additional-known-issues"></a>Problemas conhecidos adicionais
 
 -   Os sites abertos no Windows Mixed Realm serão perdidos quando o portal da realidade misturada for fechado, embora as janelas do Microsoft Edge permaneçam onde foram colocadas na casa misturada da realidade.
+- As experiências de WebXR, incluindo a extensão do visualizador 360, podem não ser iniciadas corretamente em PCs com uma configuração de GPU híbrida. Você pode contornar esse problema selecionando sua GPU dedicada como a GPU padrão em seu software de placa gráfica.
 -   O áudio do Microsoft Edge Windows não está espacial.
--   **Corrigido na extensão do visualizador 360 versão 2.3.8**: abrir um vídeo 360 do YouTube no Windows Mixed Reality pode resultar na distorção do vídeo no headset. Reiniciar a borda deve atualizar invisivelmente a extensão do visualizador 360 para resolver esse problema. Você pode confirmar qual versão da extensão você tem inserindo `edge://system/` na barra de endereços e selecionando o botão **expandir** ao lado de "extensões".
--   Durante as sessões de realidade mista do Windows, os monitores virtuais serão exibidos como monitores físicos genéricos em Configurações > sistema > exibição.
+-   **Corrigido na extensão do visualizador 360 versão 2.3.8**: abrir um vídeo 360 do YouTube no Windows Mixed Reality pode resultar na distorção do vídeo no headset. Reiniciar a borda deve atualizar invisivelmente a extensão do visualizador 360 para resolver esse problema. Você pode confirmar qual versão da extensão você tem digitando `edge://system/` na barra de endereços e selecionando o botão **expandir** ao lado de "extensões".
+-   Durante as sessões de realidade mista do Windows, os monitores virtuais serão exibidos como monitores físicos genéricos em configurações > sistema > exibição.
 
 
 
