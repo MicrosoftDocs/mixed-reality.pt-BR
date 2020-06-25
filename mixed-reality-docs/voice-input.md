@@ -6,12 +6,12 @@ ms.author: hakons
 ms.date: 10/03/2019
 ms.topic: article
 keywords: ggv, voz, Cortana, fala, entrada
-ms.openlocfilehash: a5411c338a854660652cfc89aa2d48d85ee89778
-ms.sourcegitcommit: e65f1463aec3c040a1cd042e61fc2bd156a42ff8
+ms.openlocfilehash: 78ff63f2f794bb2b3a4868e38ccaff0582ccca8c
+ms.sourcegitcommit: 7ca383ef1c5dc895ca2a289435f2e9d4c1ee6e65
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83866916"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85345696"
 ---
 # <a name="voice-input"></a>Entrada de voz
 
@@ -219,7 +219,7 @@ Embora a entrada de voz seja ótima para muitos aplicativos diferentes, ela tamb
 A chave é resolver esse desafio em seu aplicativo fornecendo comentários ao usuário quando o sistema está escutando e o que o sistema entendeu para criar uma clareza sobre possíveis problemas no entendimento correto do usuário.  
 
 **Entrada de voz em espaços compartilhados** A voz pode não ser socialmente aceitável em espaços que você compartilha com outras pessoas.
-Veja aqui alguns exemplos:
+Veja alguns exemplos:
 * O usuário pode não querer perturbar outros (por exemplo, em uma biblioteca silenciosa ou em um escritório compartilhado)
 * Os usuários podem se sentir inconvenientes sendo vistos por si mesmos em público,
 * Um usuário pode sentir-se desconfortável ditando uma mensagem pessoal ou confidencial (incluindo senhas) enquanto outras estão ouvindo
@@ -284,7 +284,7 @@ Todo esse processamento de áudio é acelerado por hardware, o que significa que
 
 ## <a name="languages"></a>Idiomas
 
-O HoloLens 2 também dá suporte a idiomas adicionais. Tenha em mente que os comandos de fala sempre serão executados no idioma de exibição do sistema, mesmo se vários teclados estiverem instalados ou se os aplicativos tentarem criar um reconhecedor de fala em um idioma diferente.
+O HoloLens 2 [dá suporte a vários idiomas](https://docs.microsoft.com/hololens/hololens2-language-support). Tenha em mente que os comandos de fala sempre serão executados no idioma de exibição do sistema, mesmo se vários teclados estiverem instalados ou se os aplicativos tentarem criar um reconhecedor de fala em um idioma diferente.
 
 ## <a name="troubleshooting"></a>Solução de problemas
 
@@ -304,7 +304,7 @@ Com o **[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)**, você 
 
 ---
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 * [Focar e confirmar](gaze-and-commit.md)
 * [Interações instinctuais](interaction-fundamentals.md)
 * [Entrada do MR 212: voz](holograms-212.md)
