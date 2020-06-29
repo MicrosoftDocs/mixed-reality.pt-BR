@@ -220,7 +220,7 @@
 ### [Acompanhamento da mão no Unreal](unreal-hand-tracking.md)
 ### [Entrada por foco no Unreal](unreal-gaze-input.md)
 ### [Mapeamento espacial no Unreal](unreal-spatial-mapping.md)
-### [Áudio espacial no Unreal](unreal-spatial-sound.md)
+### [Áudio espacial no Unreal](unreal-spatial-audio.md)
 ### [Âncoras espaciais no Unreal](unreal-spatial-anchors.md)
 ### [Entrada de voz no Unreal](unreal-voice-input.md)
 ### [Câmera do HoloLens no Unreal](unreal-hololens-camera.md)
