@@ -1,19 +1,19 @@
 ---
-title: Quadro Holographic
+title: Quadro holográfico
 description: Os usuários veem o mundo da realidade misturada por meio do quadro Holographic.
 author: cre8ivepark
 ms.author: dongpark
-ms.date: 03/21/2018
+ms.date: 06/25/2020
 ms.topic: article
 keywords: HoloLens, realidade misturada do Windows, quadro Holographic, campo de exibição
-ms.openlocfilehash: 2145ba3b13bbd903299ad342292dfa8f5c05c023
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 0eae511d6dcbe5b379c8368d8878df6114d805aa
+ms.sourcegitcommit: 5612e8bfb9c548eac42182702cec87b160efbbfe
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73434658"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85441763"
 ---
-# <a name="holographic-frame"></a>Quadro Holographic
+# <a name="holographic-frame"></a>Quadro holográfico
 
 Os usuários veem o mundo da realidade misturada por meio de um visor retangular equipado com o headset. No HoloLens, essa área retangular é chamada de quadro holográfico e permite que os usuários vejam o conteúdo digital sobreposto ao mundo real em relação a eles. A criação de experiências otimizadas para o quadro Holographic cria oportunidades, reduz os desafios e aprimora a experiência do usuário de aplicativos de realidade misturada.
 
@@ -37,22 +37,7 @@ Experiências com muitos objetos ou componentes devem considerar o uso de espaç
 
 Uma técnica para conseguir isso é fornecer pontos persistentes (também conhecidos como pontos de referência) na experiência que ancora o conteúdo ao mundo real. Por exemplo, um ponto de referência pode ser um objeto físico no mundo real, como uma tabela em que o conteúdo digital aparece, ou um objeto digital, como um conjunto de telas digitais em que o conteúdo é exibido com frequência. Os objetos também podem ser colocados no periferia do quadro Holographic para incentivar o usuário a procurar o conteúdo da chave, enquanto a descoberta de conteúdo além da periferia pode ser auxiliada por [diretores de atenção](holographic-frame.md#attention-directors).
 
-Colocar objetos no periferia pode encorajar os usuários a olhar para o lado e isso pode ser auxiliado por diretores de atenção, conforme descrito abaixo.
-
-<br>
-
----
-
-## <a name="user-comfort"></a>Conforto do usuário
-
-Para experiências de realidade misturada com objetos grandes ou muitos objetos, é crucial considerar o quanto movimento de cabeça e pescoço é necessário para interagir com o conteúdo. As experiências podem ser divididas em três categorias em termos de movimento de cabeçalho: **horizontal** (lado a lado), **vertical** (para cima e para baixo) ou de **imersão** (horizontal e vertical). Quando possível, limite a maioria das interações a categorias horizontais ou verticais, idealmente com a maioria das experiências ocorrendo no centro do quadro do Holographic, enquanto o cabeçalho do usuário está em uma posição neutra. Evite interações que fazem com que o usuário mova constantemente sua exibição para uma posição de cabeçalho não natural (por exemplo, sempre procurando acessar uma interação de menu de chave).
-
-![região ideal para conteúdo é de 0 a 35 graus abaixo do horizonte](images/optimal-field-of-view-2.png)<br>
-*A região ideal para conteúdo é de 0 a 35 graus abaixo do horizonte*
-
-O movimento de cabeçalho horizontal é mais [confortável](comfort.md) para interações frequentes, enquanto os movimentos verticais devem ser reservados para eventos incomuns. Por exemplo, uma experiência que envolva uma linha de tempo horizontal longa deve limitar o movimento de cabeçalho vertical para interações (como olhar para baixo em um menu).
-
-Considere a possibilidade de incentivar a movimentação de corpo completo, em vez de apenas a movimentação de cabeçalho, colocando objetos em todo o espaço do usuário. Experiências com movimentação de objetos ou objetos grandes devem prestar atenção especial ao movimento de cabeçalho, especialmente onde eles exigem movimento freqüente ao longo dos eixos horizontal e vertical.
+Colocar objetos no periferia pode encorajar os usuários a olhar para o lado e isso pode ser auxiliado por diretores de atenção, conforme descrito abaixo. Consulte [conforto](comfort.md#holographic-frame-considerations) para obter informações mais detalhadas sobre as considerações de quadro Holographic.
 
 <br>
 
@@ -76,7 +61,7 @@ Como alternativa, considere colocar elementos de interface diretamente no conte�
 
 ### <a name="gaze-and-gaze-targeting"></a>Direcionamento de olhar e olhar
 
-O quadro Holographic apresenta uma ferramenta para o desenvolvedor disparar interações, bem como avaliar onde a atenção de um usuário faz as comparações. [Olhar](gaze-and-commit.md) é uma das [principais interações no HoloLens](interaction-fundamentals.md), em que olhar pode ser emparelhado com [gestos](gaze-and-commit.md#composite-gestures) (como com toque de ar) ou [voz](voice-input.md) (permitindo interações mais curtas e naturais baseadas em voz). Dessa forma, isso torna o quadro Holographic um espaço para observar o conteúdo digital, bem como interagir com ele. Se a experiência chamar a interação com vários objetos em todo o espaço do usuário (por exemplo, várias seleções de objetos em todo o espaço do usuário com olhar + gesto), considere colocar esses objetos na exibição do usuário ou limitar a quantidade de cabeçalho necessária movimento para promover o [conforto do usuário](comfort.md).
+O quadro Holographic apresenta uma ferramenta para o desenvolvedor disparar interações, bem como avaliar onde a atenção de um usuário faz as comparações. [Olhar](gaze-and-commit.md) é uma das [principais interações no HoloLens](interaction-fundamentals.md), em que olhar pode ser emparelhado com [gestos](gaze-and-commit.md#composite-gestures) (como com toque de ar) ou [voz](voice-input.md) (permitindo interações mais curtas e naturais baseadas em voz). Dessa forma, isso torna o quadro Holographic um espaço para observar o conteúdo digital, bem como interagir com ele. Se a experiência chamar a interação com vários objetos em todo o espaço do usuário (por exemplo, várias seleções de objetos em todo o espaço do usuário com olhar + gesto), considere colocar esses objetos na exibição do usuário ou limitar a quantidade de movimento de cabeçalho necessário para promover o [conforto do usuário](comfort.md).
 
 O olhar também pode ser usado para controlar a atenção do usuário por meio de uma experiência e ver quais objetos ou partes da cena o usuário pagou mais atenção. Isso pode ser usado especialmente para depurar uma experiência, permitindo que ferramentas analíticas como o calor vejam onde os usuários estão gastando mais tempo ou faltam determinados objetos ou interação. O acompanhamento de olhar também pode fornecer uma ferramenta poderosa para os facilitadores em experiências (consulte o exemplo de [cozinha do Lowe](holographic-frame.md#lowes-kitchen) ).
 
@@ -114,7 +99,7 @@ Uma experiência de armazenamento do Lowe convida os clientes em uma modelo em e
 
 As superfícies físicas atuam como pontos de referência estáticos para que o usuário se baseie na experiência, uma vez que o associado de um Lowe orienta o usuário por meio de diferentes opções de produtos e é concluído. Dessa forma, a associação pode direcionar verbalmente a atenção do usuário para o ' refrigerador ' ou ' centro da cozinha ' para demonstrar o conteúdo digital.
 
-![A Associação de um Lowe usa um tablet para guiar os clientes por meio da experiência do HoloLens.](images/loweskitchen-750px.jpg)<br>
+![A associação de um Lowe usa um tablet para guiar os clientes por meio da experiência do HoloLens.](images/loweskitchen-750px.jpg)<br>
 *A associação de um Lowe usa um tablet para guiar os clientes por meio da experiência do HoloLens.*
 
 A experiência do usuário é gerenciada, em parte, por uma experiência do Tablet controlada pela associação do Lowe. Parte da função do associado, nesse caso, também seria limitar a movimentação de cabeçalho excessiva, direcionando sua atenção tranqüilamente em todos os pontos de interesse na cozinha. A experiência do Tablet também fornece a associação do Lowe com os dados do olhar na forma de uma exibição calor da cozinha, ajudando a entender onde o usuário está acessando a pesquisa (por exemplo, em uma área específica do gabinete) para fornecê-las com mais precisão com as diretrizes de reforma.
@@ -129,7 +114,7 @@ Para obter uma análise mais profunda da experiência de cozinha do Lowe, consul
 
 Nos fragmentos de jogos do HoloLens, a sala de vida é transformada em uma cena de crimes virtuais mostrando pistas e evidências, bem como em uma sala de reunião virtual, na qual você conversa com caracteres que ficam em suas cadeiras e que se fala em suas paredes.
 
-![fragmentos foram projetados para ocorrer na casa de um usuário, com caracteres que interagem com objetos e superfícies do mundo real.](images/fragments-750px.jpg)<br>
+![Os fragmentos foram projetados para ocorrer na casa de um usuário, com caracteres que interagem com objetos e superfícies do mundo real.](images/fragments-750px.jpg)<br>
 *Os fragmentos foram projetados para ocorrer na casa de um usuário, com caracteres que interagem com objetos e superfícies do mundo real.*
 
 Quando os usuários iniciam inicialmente a experiência, eles recebem um curto período de ajuste, onde muito pouca interação é necessária, em vez disso, incentivando-os a examinar. Isso também ajuda a garantir que a sala seja mapeada corretamente para o conteúdo interativo do jogo.
@@ -144,17 +129,17 @@ Durante toda a experiência, os caracteres se tornam pontos focal e atuam como d
 
 Na experiência de destino: Mars em destaque no [centro de espaço Kennedy da NASA](https://blogs.windows.com/devices/2016/09/19/hololens-experience-destination-mars-now-open-at-kennedy-space-center-visitor-complex/), os visitantes foram convidados em uma corrida de imersão para a superfície do Mars, guiado pela representação virtual de lendárias Astronaut de repercussão Aldrin.
 
-![um Aldrin de repercussão virtual se torna o ponto focal para os usuários no destino: Mars.](images/destinationmars-750px.png)<br>
+![Um Aldrin de repercussão virtual se torna o ponto focal para os usuários no destino: Mars.](images/destinationmars-750px.png)<br>
 *Um Aldrin de repercussão virtual se torna o ponto focal para os usuários no destino: Mars.*
 
 Como uma experiência de imersão, esses usuários foram incentivados a examinar, mudando seu rumo em todas as direções para ver o cenário de Martian virtual. Embora seja possível garantir o conforto dos usuários, a presença virtual e a narração de Aldrin de repercussão forneceu um ponto focal durante toda a experiência. Esse registro virtual de repercussão (criado pela [estúdios de captura da realidade misturada da Microsoft) foi](https://www.microsoft.com/mixed-reality/capture-studios)orientado a real, de tamanho humano, no canto da sala, permitindo que os usuários o vejam no modo de exibição quase completo. A narração de repercussão direcionou os usuários a se concentrarem em diferentes pontos no ambiente (por exemplo, um conjunto de Martian Rocks no chão ou um intervalo de montanhas na distância) com alterações de cena específicas ou objetos introduzidos por ele.
 
-![os narradores virtuais terão que seguir o movimento de um usuário, criando um poderoso ponto focal em toda a experiência.](images/gazereset-750px.png)<br>
+![Os narradores virtuais mudarão o movimento de um usuário, criando um ponto focal poderoso em toda a experiência.](images/gazereset-750px.png)<br>
 *Os narradores virtuais mudarão o movimento de um usuário, criando um ponto focal poderoso em toda a experiência.*
 
 A representação realista de repercussão proporcionou um poderoso ponto focal, completo com técnicas sutis a serem revisadas para que o usuário se sinta como se estivesse lá, falando com você. À medida que o usuário se move sobre a experiência, a repercussão mudará para você até um limite antes de retornar a um estado neutro se o usuário se movimentar muito além de seu periferia. Se o usuário se parecer totalmente (por exemplo, para examinar algo em outro lugar na cena) e voltar para repercussão, a posição direcional do narrador se concentrará novamente no usuário. Técnicas como essa fornecem uma noção poderosa de imersão e criam um ponto focal dentro do quadro Holographic, reduzindo a movimentação de cabeça excessiva e promovendo o [conforto do usuário](comfort.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 * [Interações instinctuais](interaction-fundamentals.md)
 * [Conforto](comfort.md)
 * [Escala](scale.md)

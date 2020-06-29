@@ -1,17 +1,17 @@
 ---
 title: Referência de API do portal de dispositivos
 description: Referência de API para o portal de dispositivo do Windows no HoloLens
-author: jonmlyons
-ms.author: jlyons
+author: hamalawi
+ms.author: moelhama
 ms.date: 03/21/2018
 ms.topic: article
 keywords: HoloLens, portal de dispositivos Windows, API
-ms.openlocfilehash: 17268c9a20d3da0ee90e5d6cead4342d3badf800
-ms.sourcegitcommit: f24ac845e184c2f90e8b15adab9addb913f5cb83
+ms.openlocfilehash: b9b9ada49b4f9810dc97c9da2873d4ccb60df424
+ms.sourcegitcommit: 5612e8bfb9c548eac42182702cec87b160efbbfe
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84451321"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85441793"
 ---
 # <a name="device-portal-api-reference"></a>Referência de API do portal de dispositivos
 
@@ -372,19 +372,19 @@ Parâmetros opcionais (somente HoloLens 2)
 * Vstab: habilitar estabilização de vídeo: true ou false (o padrão é false)
 * vstabbuffer: latência de buffer de estabilização de vídeo: 0 a 30 quadros (o padrão é 15 quadros)
 
-**/API/Holographic/Stream/Live.MP4 (GET)**
+**/API/Holographic/Stream/live.mp4 (GET)**
 
 1280x720p 30fps 5Mbit Stream.
 
-**/API/Holographic/Stream/live_high. MP4 (GET)**
+**/API/Holographic/Stream/live_high.mp4 (GET)**
 
 1280x720p 30fps 5Mbit Stream.
 
-**/API/Holographic/Stream/live_med. MP4 (GET)**
+**/API/Holographic/Stream/live_med.mp4 (GET)**
 
 Um fluxo 854x480p 30fps 2.5 Mbit.
 
-**/API/Holographic/Stream/live_low. MP4 (GET)**
+**/API/Holographic/Stream/live_low.mp4 (GET)**
 
 Um fluxo 428x240p 15fps 0,6 Mbit.
 
@@ -534,11 +534,11 @@ Retornar dados
 Inicia uma sessão de rastreamento WPR (desempenho)
 
 Parâmetros
-* Perfil: nome do perfil. Os perfis disponíveis são armazenados em perfprofiles/Profiles. JSON
+* Perfil: nome do perfil. Os perfis disponíveis são armazenados em perfprofiles/profiles.jsem
 
 Retornar dados
 * Em Iniciar, retorna o status da sessão WPR.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 * [Como usar o Portal de Dispositivos do Windows](using-the-windows-device-portal.md)
 * [Referência da API principal do portal do dispositivo (UWP)](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-api-core)

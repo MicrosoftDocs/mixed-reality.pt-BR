@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
 keywords: sistema de coordenadas, sistema de coordenadas espaciais, dimensionamento do mundo, mundo, escala, posição, orientação, âncora, âncora espacial, bloqueado pelo mundo, bloqueio de mundo, persistência, compartilhamento
-ms.openlocfilehash: f65cf582db43399814737d581ece4694646a144c
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 8d270f96add795fdb54e0a91ebc9d38a34640da1
+ms.sourcegitcommit: 5612e8bfb9c548eac42182702cec87b160efbbfe
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438023"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85441783"
 ---
 # <a name="spatial-anchors"></a>Âncoras espaciais
 
@@ -22,7 +22,7 @@ Você também pode persistir e compartilhar âncoras espaciais entre sessões de
 * Usando <a href="https://docs.microsoft.com/azure/spatial-anchors/overview" target="_blank">âncoras espaciais do Azure</a> para criar uma âncora de nuvem, seu aplicativo pode compartilhar uma âncora espacial entre vários dispositivos HoloLens, Ios e Android. Ao fazer com que cada dispositivo processe um holograma usando a mesma âncora espacial, os usuários verão que o holograma aparecerá no mesmo lugar do mundo real. Isso permite experiências compartilhadas em tempo real.
 * Você também pode usar <a href="https://docs.microsoft.com/azure/spatial-anchors/overview" target="_blank">Âncoras Espaciais do Azure</a> para persistência assíncrona de holograma em dispositivos HoloLens, iOS e Android. Ao compartilhar uma âncora espacial em nuvem durável, vários dispositivos podem observar o mesmo holograma persistente ao longo do tempo, mesmo que os dispositivos não estejam presentes ao mesmo tempo.
 
-Para experiências em escala de pé ou de sala para headsets de área de trabalho que permanecerão dentro de um diâmetro de 5 metros, você normalmente pode usar o [quadro de referência](coordinate-systems.md#stage-frame-of-reference) em vez de âncoras espaciais, que fornece um único sistema de coordenadas no qual renderiza todo o conteúdo. No entanto, se seu aplicativo pretende permitir que os usuários perfrentem mais de 5 metros no HoloLens, talvez operando em todo um andar de um edifício, você precisará de âncoras espaciais para manter o conteúdo estável.
+Para experiências em escala de pé ou em escala de sala para headsets de área de trabalho que permanecerão dentro de um diâmetro de 5 metros, você normalmente pode usar o [quadro de referência](coordinate-systems.md#stage-frame-of-reference) em vez de âncoras espaciais, que fornece um único sistema de coordenadas no qual processar todo o conteúdo. No entanto, se seu aplicativo pretende permitir que os usuários perfrentem mais de 5 metros no HoloLens, talvez operando em todo um andar de um edifício, você precisará de âncoras espaciais para manter o conteúdo estável.
 
 Ainda que as âncoras espaciais sejam excelentes para hologramas que devam permanecer fixos no mundo, quando uma âncora é colocada, ela não pode ser movida. Há alternativas para âncoras que são mais apropriadas para hologramas dinâmicos que marcam junto com o usuário. É melhor posicionar os hologramas dinâmicos usando um quadro de referência fixo (a base das coordenadas do mundo Unity) ou um quadro de referência anexado.
 
@@ -52,7 +52,7 @@ A principal advertência para manter a estabilidade do holograma é seguir a reg
 
 ### <a name="render-highly-dynamic-holograms-using-the-stationary-frame-of-reference-instead-of-a-local-spatial-anchor"></a>Renderizar hologramas altamente dinâmicos usando o quadro fixo de referência em vez de uma âncora espacial local
 
-Se você tiver um holograma altamente dinâmico, como um caractere percorrendo uma sala ou uma interface do usuário flutuante que segue ao longo da parede, é melhor ignorar âncoras espaciais locais e renderizar esses hologramas diretamente no sistema de coordenadas fornecido pelo [ quadro estacionário de referência](coordinate-systems.md#stationary-frame-of-reference). I Unity, você consegue fazer isso colocando os hologramas diretamente em coordenadas mundiais sem um WorldAnchor. Os hologramas em um quadro estacionário de referência podem apresentar descompasso quando o usuário estiver longe do holograma. Mas isso é menos provável de ser perceptível para hologramas dinâmicos: ou o holograma está constantemente se movendo de forma constante ou seu movimento o mantém constantemente perto do usuário onde a descompasso será minimizada.
+Se você tiver um holograma altamente dinâmico, como um caractere percorrendo uma sala ou uma interface de usuário flutuante que segue ao longo do usuário, é melhor ignorar âncoras espaciais locais e renderizar esses hologramas diretamente no sistema de coordenadas fornecido pelo [quadro estacionário de referência](coordinate-systems.md#stationary-frame-of-reference). No Unity, você consegue fazer isso colocando os hologramas diretamente em coordenadas mundiais sem um WorldAnchor. Os hologramas em um quadro estacionário de referência podem apresentar descompasso quando o usuário estiver longe do holograma. Mas isso é menos provável de ser perceptível para hologramas dinâmicos: ou o holograma está constantemente se movendo de forma constante ou seu movimento o mantém constantemente perto do usuário onde a descompasso será minimizada.
 
 Um caso interessante de hologramas dinâmicos é o de um objeto que é animado de um sistema de coordenadas ancorado para outro. Por exemplo, você pode ter dois castelos 10 metros de distância, cada um em sua própria âncora espacial com um Castle acionando um Cannonball no outro Castle. No momento em que o Cannonball é acionado, você pode renderizá-lo no local apropriado no quadro estacionário de referência para coincidir com o Cannon no sistema de coordenadas ancorado do primeiro Castle. Ele pode seguir sua trajetória no quadro de referência fixo, já que voa por 10 metros pelo ar. Como o Cannonball atinge o outro Castle, você pode optar por movê-lo para o sistema de coordenadas ancorado da segunda Castle para permitir cálculos de física com os corpos rígidos de Castle.
 
@@ -71,7 +71,7 @@ Isso é especialmente importante para âncoras locais que você tenha mantido no
 
 Nas âncoras espaciais de nuvem, o armazenamento pode ser dimensionado conforme seu cenário exigir. Você pode armazenar quantas âncoras de nuvem forem necessárias, liberando-as somente quando souber que os usuários não precisarão localizar os hologramas nessa âncora novamente.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 * [Sistemas de coordenadas](coordinate-systems.md)
 * [Experiências compartilhadas em realidade misturada](shared-experiences-in-mixed-reality.md)
 * <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">Âncoras Espaciais do Azure</a>
