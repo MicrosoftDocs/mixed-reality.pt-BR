@@ -3,16 +3,16 @@ title: Mapeamento espacial no Unreal
 description: Guia para usar o mapeamento espacial no Unreal
 author: hferrone
 ms.author: v-haferr
-ms.date: 5/5/2020
+ms.date: 06/10/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, mixed reality, development, features, documentation, guides, holograms, spatial mapping
-ms.openlocfilehash: 2bbfc3972acdb9dc7d5ebd23c85ab0ef5532cfb9
-ms.sourcegitcommit: ee7f04148d3608b0284c59e33b394a67f0934255
+ms.openlocfilehash: ffa57749cd96e240ac4812f950f4e13a6dbc68bd
+ms.sourcegitcommit: 45da0a056fa42088ff81ccdd11232830fbe8430f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84428775"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84720402"
 ---
 # <a name="spatial-mapping-in-unreal"></a>Mapeamento espacial no Unreal
 
