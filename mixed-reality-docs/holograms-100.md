@@ -6,19 +6,17 @@ ms.author: kurtie
 ms.date: 10/22/2019
 ms.topic: article
 keywords: realidade misturada, realidade do Windows Mixed, HoloLens, imersão, VR, Sr, introdução, holograma, Academia, tutorial
-ms.openlocfilehash: fe0fb256e5aed7aa83f8bb9b1e8ba7bb873a0613
-ms.sourcegitcommit: ee8c7e821cb337cbccd8af64b13ee5f50109a776
+ms.openlocfilehash: 58a1785ef74872c633cf65d6a32e24d517367359
+ms.sourcegitcommit: f523b74a549721b6bec69cb5d2eca5b7673a793c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80082058"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85570310"
 ---
->[!NOTE]
+# <a name="mr-basics-100-getting-started-with-unity"></a>Noções básicas do MR 100: introdução ao Unity
+
+>[!IMPORTANT]
 >Os tutoriais do Mixed Reality Academy foram projetados com o HoloLens (1ª geração) e os headsets imersivos de realidade misturada em mente.  Dessa forma, achamos que é importante continuar disponibilizando esses tutoriais para os desenvolvedores que ainda buscam obter diretrizes para o desenvolvimento visando esses dispositivos.  Esses tutoriais **_não_** serão atualizados com os conjuntos de ferramentas mais recentes nem com as interações usadas para o HoloLens 2.  Eles serão mantidos para continuar funcionando nos dispositivos compatíveis. [Uma nova série de tutoriais](mrlearning-base.md) foi postada para o HoloLens 2.
-
-<br>
-
-# <a name="mr-basics-100-getting-started-with-unity"></a>Sr noções básicas 100: introdução ao Unity
 
 Este tutorial orientará você na criação de um aplicativo básico de realidade misturada criado com o Unity.
 
@@ -28,11 +26,11 @@ Este tutorial orientará você na criação de um aplicativo básico de realidad
 <tr>
 <th>Curso</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Headsets imersivos</a></th>
 </tr><tr>
-<td>Sr noções básicas 100: introdução ao Unity</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
+<td>Noções básicas do MR 100: introdução ao Unity</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
 </tr>
 </table>
 
-## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
+## <a name="prerequisites"></a>Pré-requisitos
 
 * Um PC com Windows 10 configurado com as [ferramentas corretas instaladas](install-the-tools.md).
 
@@ -40,7 +38,7 @@ Este tutorial orientará você na criação de um aplicativo básico de realidad
 
 >[!VIDEO https://www.youtube.com/embed/2L5IFO0hnYA]
 
-Para criar um aplicativo com o Unity, primeiro você precisa criar um projeto. Esse projeto é organizado em algumas pastas, o mais importante deles é sua pasta de ativos. Essa é a pasta que contém todos os ativos que você importa das ferramentas de criação de conteúdo digital, como Maya, Max cinema 4D ou Photoshop, todo o código que você cria com o Visual Studio ou seu editor de código favorito e qualquer quantidade de arquivos de conteúdo que o Unity cria conforme as cenas de composição , animações e outros tipos de ativos de Unity no editor.
+Para criar um aplicativo com o Unity, primeiro você precisa criar um projeto. Esse projeto é organizado em algumas pastas, o mais importante deles é sua pasta de ativos. Essa é a pasta que contém todos os ativos que você importa das ferramentas de criação de conteúdo digital, como Maya, Max cinema 4D ou Photoshop, todo o código criado com o Visual Studio ou seu editor de código favorito, e qualquer quantidade de arquivos de conteúdo que o Unity cria à medida que você compõe cenas, animações e outros tipos de ativos de Unity no editor.
 
 Para compilar e implantar aplicativos UWP, o Unity pode exportar o projeto como uma solução do Visual Studio que conterá todos os arquivos de ativos e de código necessários.
 
@@ -93,7 +91,7 @@ Por fim, vamos salvar nosso progresso até o momento. Para salvar as alteraçõe
 
 >[!VIDEO https://www.youtube.com/embed/ItRoiXccC0g]
 
-Neste capítulo, definiremos algumas configurações de projeto do Unity que nos ajudam a direcionar o SDK do Windows Holographic para desenvolvimento. Também definiremos algumas configurações de qualidade para nosso aplicativo. Por fim, garantiremos que nossos destinos de compilação estejam definidos como Windows Store.
+Neste capítulo, definiremos algumas configurações de projeto do Unity que nos ajudam a direcionar o SDK do Windows Holographic para desenvolvimento. Também definiremos algumas configurações de qualidade para nosso aplicativo. Por fim, garantiremos que nossos destinos de compilação sejam definidos como Plataforma Universal do Windows.
 
 ### <a name="unity-performance-and-quality-settings"></a>Configurações de desempenho e qualidade do Unity
 
@@ -104,7 +102,7 @@ Neste capítulo, definiremos algumas configurações de projeto do Unity que nos
 Como a manutenção da alta taxa de quadros no HoloLens é tão importante, queremos que as configurações de qualidade sejam ajustadas para um desempenho mais rápido. Para obter informações de desempenho mais detalhadas, [recomendações de desempenho para o Unity](performance-recommendations-for-unity.md).
 
 1. Selecione **Editar configurações do projeto > > qualidade**
-2. Selecione o **menu suspenso** sob o logotipo da **Windows Store** e selecione **muito baixo**. Você saberá que a configuração é aplicada corretamente quando a caixa na coluna da Windows Store e a linha **muito baixa** estiverem verdes.
+2. Selecione o **menu suspenso** sob o logotipo **plataforma universal do Windows** e selecione **muito baixo**. Você saberá que a configuração é aplicada corretamente quando a caixa na coluna Plataforma Universal do Windows e a linha **muito baixa** estiver verde.
 
 **Para aplicativos de realidade misturados direcionados a exibições do obstruído**, você pode deixar as configurações de qualidade com seus valores padrão.
 
@@ -117,21 +115,13 @@ Como a manutenção da alta taxa de quadros no HoloLens é tão importante, quer
 Precisamos deixar que o Unity saiba que o aplicativo que estamos tentando exportar deve criar uma [exibição imersiva](app-views.md) em vez de uma exibição 2D. Fazemos isso habilitando o suporte de realidade virtual no Unity direcionando o SDK do Windows 10.
 
 1. Vá para **Editar configurações de projeto > > Player**.
-2. No **painel Inspetor** para configurações do Player, selecione o ícone **Windows Store** .
-3. Expanda o grupo de **configurações XR** .
+2. No **painel Inspetor** para configurações do Player, selecione o ícone de **plataforma universal do Windows** .
+3. Expanda o grupo **Configurações de XR**.
 4. Na seção **renderização** , marque a caixa de seleção **suporte à realidade virtual** para adicionar uma nova lista de **SDKs de realidade virtual** .
-5. Verifique se a **realidade mista do Windows** aparece na lista. Caso contrário, selecione o botão **+** na parte inferior da lista e escolha **realidade mista do Windows**.
+5. Verifique se **Windows Mixed Reality** aparece na lista. Se não aparecer, selecione o botão **+** na parte inferior da lista e escolha **Windows Mixed Reality**.
 
 >[!NOTE]
->Se você não vir o ícone **Windows Store** , verifique se selecionou o back-end de script do .NET da Windows Store antes da instalação. Caso contrário, talvez seja necessário reinstalar o Unity com a instalação correta do Windows.
-
-**Verificar configuração do .NET**
-
-![Verificar configuração do .NET](images/configoptions-375px.png)
-
-1. Vá para **Editar configurações de projeto > > Player** (talvez você ainda tenha isso na etapa anterior).
-2. No **painel Inspetor** para configurações do Player, selecione o ícone **Windows Store** .
-3. Na seção configuração de **outras configurações** , verifique se o **back-end de script** está definido como **.net**
+>Se você não vir o ícone de **plataforma universal do Windows** , verifique se selecionou o suporte de plataforma universal do Windows Build durante a instalação. Caso contrário, talvez seja necessário reinstalar o Unity com a instalação correta do Windows.
 
 Trabalho incrível ao obter todas as configurações de projeto aplicadas. Em seguida, vamos adicionar um holograma!
 
@@ -153,7 +143,7 @@ Criar um cubo em seu projeto de Unity é como criar qualquer outro objeto no Uni
 
 Agora que criamos nosso cubo, é hora de fazer um check-in rápido no dispositivo. Você pode fazer isso diretamente de dentro do editor do Unity.
 
-### <a name="initial-setup"></a>Configuração inicial
+### <a name="initial-setup"></a>Instalação inicial
 
 1. No seu PC de desenvolvimento, no Unity, abra o **arquivo > janela configurações de Build** .
 2. Altere a **plataforma** para **plataforma universal do Windows** e clique em **alternar plataforma**
@@ -186,20 +176,19 @@ Agora estamos prontos para compilar nosso projeto no Visual Studio e implantá-l
 
 ### <a name="export-to-the-visual-studio-solution"></a>Exportar para a solução do Visual Studio
 
-1.  Abra o **arquivo > janela configurações de Build** .
-2.  Clique em **Adicionar abrir cenas** para adicionar a cena.
-3.  Altere a **plataforma** para **plataforma universal do Windows** e clique em **alternar plataforma**.
-4.  Nas configurações da **Windows Store** , verifique se o **SDK** é **Universal 10**.
-5.  Para o dispositivo de destino, deixe para **qualquer dispositivo** para o obstruído exibir ou alternar para o **HoloLens**.
-6.  O **tipo de compilação UWP** deve ser **D3D**.
-7.  O **SDK do UWP** pode ser deixado no **mais recente instalado**.
-8.  Verifique **os C# projetos do Unity** em depuração.
-9.  Clique em **Compilar**.
-10. No explorador de arquivos, clique em **nova pasta** e nomeie a pasta como **"aplicativo"** .
-11. Com a pasta do **aplicativo** selecionada, clique no botão **Selecionar pasta** .
-12. Quando o Unity terminar a compilação, uma janela do explorador de arquivos do Windows será exibida.
-13. Abra a pasta do **aplicativo** no explorador de arquivos.
-14. Abrir a solução do Visual Studio gerada (MixedRealityIntroduction. sln neste exemplo)
+1. Abra o **arquivo > janela configurações de Build** .
+1. Clique em **Adicionar abrir cenas** para adicionar a cena.
+1. Altere a **plataforma** para **plataforma universal do Windows** e clique em **alternar plataforma**.
+1. Em configurações de **plataforma universal do Windows** , verifique se o **SDK** é **Universal 10**.
+1. Para o dispositivo de destino, deixe para **qualquer dispositivo** para o obstruído exibir ou alternar para o **HoloLens**.
+1. O **tipo de compilação UWP** deve ser **D3D**.
+1. O **SDK do UWP** pode ser deixado no **mais recente instalado**.
+1. Clique em **Compilar**.
+1. No explorador de arquivos, clique em **nova pasta** e nomeie a pasta como **"aplicativo"**.
+1. Com a pasta do **aplicativo** selecionada, clique no botão **Selecionar pasta** .
+1. Quando o Unity terminar a compilação, uma janela do explorador de arquivos do Windows será exibida.
+1. Abra a pasta do **aplicativo** no explorador de arquivos.
+1. Abrir a solução do Visual Studio gerada (MixedRealityIntroduction. sln neste exemplo)
 
 ### <a name="compile-the-visual-studio-solution"></a>Compilar a solução do Visual Studio
 
@@ -234,9 +223,9 @@ Verifique se o dispositivo está conectado via cabo USB.
 
 Agora que seu aplicativo está implantado, tente mover tudo em todo o cubo e observe que ele permanece no mundo inteiro.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 * [Visão geral do desenvolvimento do Unity](unity-development-overview.md)
 * [Melhores práticas para trabalhar com o Unity e o Visual Studio](best-practices-for-working-with-unity-and-visual-studio.md)
-* [Informações básicas do Sr 101](holograms-101.md)
-* [101E noções básicas do Sr](holograms-101e.md)
+* [Noções básicas do MR 101](holograms-101.md)
+* [Noções básicas do MR 101E](holograms-101e.md)

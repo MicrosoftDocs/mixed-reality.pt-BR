@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 10/02/2018
 ms.topic: article
 keywords: porta, portabilidade, Unity, middleware, mecanismo, UWP
-ms.openlocfilehash: 06501742d4b5c30036982deef2ec2a88171912bf
-ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
+ms.openlocfilehash: 73126ae90ed12988177cc9192b7db41bae30fcc2
+ms.sourcegitcommit: f523b74a549721b6bec69cb5d2eca5b7673a793c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81278034"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85570319"
 ---
 # <a name="porting-guides"></a>Guias de portabilidade
 
@@ -70,9 +70,10 @@ Com qualquer atualização do Unity, há uma boa chance de que você precise atu
 ### <a name="unity-step-4-target-your-application-to-run-on-universal-windows-platform-uwp"></a>Etapa 4 do Unity: direcionar seu aplicativo para ser executado em Plataforma Universal do Windows (UWP)
 
 Depois de instalar as ferramentas, você precisará fazer seu aplicativo ser executado como um aplicativo universal do Windows.
+
 * Siga as instruções passo a passo [detalhadas](https://unity3d.com/partners/microsoft/porting-guides) fornecidas pelo Unity. Observe que você deve permanecer na versão mais recente do LTS (qualquer versão do 20xx. 4) para o Windows Sr.
 * Para obter mais recursos de desenvolvimento de UWP, confira o [Guia de desenvolvimento de jogos do Windows 10](https://docs.microsoft.com/windows/uwp/gaming/e2e).
-* Observe que o Unity continua a melhorar o suporte do IL2CPP; O IL2CPP torna algumas portas UWP significativamente mais fáceis. Se, no momento, você estiver direcionando para o back-end de script do .net, considere a possibilidade de converter para aproveitar o back-end IL2CPP.
+* Observe que o Unity continua a melhorar o suporte do IL2CPP; O IL2CPP torna algumas portas UWP significativamente mais fáceis. Se, no momento, você estiver direcionando para o back-end de script do .NET, considere a possibilidade de converter para aproveitar o back-end IL2CPP.
 
 Observação: se seu aplicativo tiver qualquer dependência dos serviços específicos do dispositivo, como a realização de correspondência do fluxo, será necessário desabilitá-los nesta etapa. Em um momento posterior, você pode conectar-se aos serviços equivalentes que o Windows oferece.
 
@@ -104,7 +105,7 @@ XRDevice.SetTrackingSpaceType(TrackingSpaceType.Stationary);
 
 Isso define o sistema de coordenadas mundiais do Unity para acompanhar o [quadro estacionário de referência](coordinate-systems.md#spatial-coordinate-systems). No modo de rastreamento estacionário, o conteúdo colocado no editor apenas na frente do local padrão da câmera (Forward is-Z) aparecerá na frente do usuário quando o aplicativo for iniciado. Para recentralizar a origem colocada do usuário, você pode chamar o XR da Unity [. Método InputTracking. recenter](https://docs.unity3d.com/ScriptReference/XR.InputTracking.Recenter.html) .
 
-Se você estiver portando uma experiência de **escala em pé** ou uma **experiência em escala de sala**, colocará o conteúdo em relação ao chão. Você se deparar com o andar do usuário usando o **[estágio espacial](coordinate-systems.md#spatial-coordinate-systems)** , que representa a origem definida do nível de chão do usuário e o limite de sala opcional, configurado durante a primeira execução. Para essas experiências, você deve garantir que o Unity esteja definido como o tipo de espaço de rastreamento **RoomScale** . Embora RoomScale seja o padrão, você desejará defini-lo explicitamente e garantir que você se torne verdadeiro, para detectar situações em que o usuário moveu o computador para fora da sala que eles calibraram:
+Se você estiver portando uma experiência de **escala em pé** ou uma **experiência em escala de sala**, colocará o conteúdo em relação ao chão. Você se deparar com o andar do usuário usando o **[estágio espacial](coordinate-systems.md#spatial-coordinate-systems)**, que representa a origem definida do nível de chão do usuário e o limite de sala opcional, configurado durante a primeira execução. Para essas experiências, você deve garantir que o Unity esteja definido como o tipo de espaço de rastreamento **RoomScale** . Embora RoomScale seja o padrão, você desejará defini-lo explicitamente e garantir que você se torne verdadeiro, para detectar situações em que o usuário moveu o computador para fora da sala que eles calibraram:
 
 ```cs
 if (XRDevice.SetTrackingSpaceType(TrackingSpaceType.RoomScale))
@@ -152,7 +153,7 @@ A realidade mista do Windows estará disponível em uma ampla classe de disposit
 
 O [Unity](https://docs.unity3d.com/Manual/Profiler.html) e o [Visual Studio](https://docs.microsoft.com/visualstudio/profiling/index) incluem os infileres de desempenho e as diretrizes de publicação da [Microsoft](understanding-performance-for-mixed-reality.md) e da [Intel](https://software.intel.com/articles/vr-content-developer-guide) sobre a criação de perfil de desempenho e otimização. Há uma ampla discussão sobre o desempenho disponível em [noções básicas sobre o desempenho para realidade misturada](understanding-performance-for-mixed-reality.md). Além disso, há detalhes específicos para o Unity em [recomendações de desempenho para o Unity](performance-recommendations-for-unity.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 * [Guia de portabilidade de entrada para Unity](input-porting-guide-for-unity.md)
 * [Diretrizes mínimas de compatibilidade de hardware do PC do Windows Mixed Reality](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/windows-mixed-reality-minimum-pc-hardware-compatibility-guidelines)
 * [Entendendo o desempenho da realidade misturada](understanding-performance-for-mixed-reality.md)
