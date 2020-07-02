@@ -8,12 +8,12 @@ ms.date: 08/24/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Realidade Misturada, descobrir, distribuir, indexar, página de aterrissagem desenvolvimento, tutoriais, aplicativos de exemplo, conceitos básicos, estudos de caso, recursos, instruções sobre o HoloLens, projetos de software livre, principais conceitos, interação
-ms.openlocfilehash: 9ef408e1551e9f6c52a6c5fcf7df3123cc099c8c
-ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
+ms.openlocfilehash: d011a00b55a6b78332233b21535a129774f99c9f
+ms.sourcegitcommit: 7ca383ef1c5dc895ca2a289435f2e9d4c1ee6e65
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "75334109"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85345646"
 ---
 # <a name="start-designing-and-prototyping"></a>Comece a projetar e a criar protótipos
 
@@ -60,7 +60,7 @@ O mapeamento espacial torna possível posicionar objetos em superfícies reais. 
 
 <br>
 
-![Fatores de design de interação](images/MRTK_BoundingBox_Main.png)
+![Fatores de design de interação](images/UX/UX_Hero_Manipulation.jpg)
 
 ## <a name="interaction-design-factors-to-consider"></a>Fatores de design de interação a serem considerados
 
@@ -85,6 +85,17 @@ O HoloLens 2 permite um nível novo de contexto e entendimento humano dentro da 
 
 <br>
 
+
+---
+
+<br>
+
+
+![Elementos de UX](images/UX/UX_Hero_BoundingBox.jpg)
+
+## <a name="user-experience-elements-for-mixed-reality"></a>Elementos de experiência do usuário para realidade misturada
+
+
 ### <a name="color-light-and-materials"></a>[Cor, luz e materiais](color,-light-and-materials.md)
 A criação de conteúdo para realidade misturada requer uma consideração cuidadosa de cor, iluminação e materiais para cada um dos ativos visuais usados em sua experiência.
 
@@ -100,8 +111,11 @@ Assim como a tipografia em telas 2D, a meta é ser claro e legível. Com o aspec
 
 <br>
 
-### <a name="ux-elements-for-the-mixed-reality"></a>[Elementos de experiência do usuário para realidade misturada](app-patterns-landingpage.md)
-Saiba mais sobre os blocos de construção de interações espaciais e interface do usuário em realidade misturada.
+### <a name="common-controls-and-behaviors"></a>[Controles e comportamentos comuns](app-patterns-landingpage.md)
+Saiba mais sobre interações espaciais comuns usadas com frequência e blocos de construção de interface do usuário para experiências de realidade misturada.
+
+
+
 <br>
 
 
