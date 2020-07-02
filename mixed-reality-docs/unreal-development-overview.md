@@ -3,16 +3,16 @@ title: Visão geral do desenvolvimento com o Unreal
 description: Visão geral do desenvolvimento de realidade misturada usando o Unreal Engine 4
 author: hferrone
 ms.author: v-haferr
-ms.date: 5/5/2020
+ms.date: 06/10/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, streaming, remoting, mixed reality, development, getting started, features, new project, emulator, documentation, guides, features, holograms, game development
-ms.openlocfilehash: 3e3862bd701d6e873f623abc9f9cda0b3085e753
-ms.sourcegitcommit: 1b8090ba6aed9ff128e4f32d40c96fac2e6a220b
+ms.openlocfilehash: 0e3f40c7aa05a9c5f93d7eb9dc9793b6daeb8b90
+ms.sourcegitcommit: 45da0a056fa42088ff81ccdd11232830fbe8430f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84330153"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84720362"
 ---
 # <a name="unreal-development-overview"></a>Visão geral do desenvolvimento com o Unreal
 
@@ -33,11 +33,14 @@ O [Kit de Ferramentas de Realidade Misturada para Unreal](https://github.com/mic
 As [Ferramentas de UX para Unreal](https://github.com/microsoft/MixedReality-UXTools-Unreal) são o primeiro componente a ser lançado e atualmente só são compatíveis com o HoloLens 2. O plug-in do componente inclui código, blueprints e ativos de exemplo de recursos comuns de UX, incluindo:
 * Simulação de entrada
 * Ator de interação à mão
-* Componente de botão pressionável
+* Componente do botão de pressão
 * Componente de manipulador
 * Componente de comportamento de acompanhamento
 
 Você pode se aprofundar no repositório do GitHub das [Ferramentas de UX para Unreal](https://github.com/microsoft/MixedReality-UXTools-Unreal) para obter detalhes de recursos e informações sobre como configurar seu projeto.
+
+## <a name="additional-files"></a>Arquivos adicionais
+Se esta é a primeira vez que você cria ou implanta um aplicativo do Unreal para o HoloLens, [baixe os arquivos de suporte](https://docs.microsoft.com/windows/mixed-reality/unreal-uxt-ch6#packaging-and-deploying-the-app) do Epic Launcher.
 
 ## <a name="tutorial"></a>Tutorial
 

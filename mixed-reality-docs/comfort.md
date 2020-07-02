@@ -3,18 +3,20 @@ title: Conforto
 description: Durante a visualização natural, o sistema visual humano conta com várias fontes de informações, ou “indicações”, para interpretar formas 3D e a posição relativa de objetos.
 author: erickjpaul
 ms.author: erpau
-ms.date: 04/5/2019
+ms.date: 06/25/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Realidade misturada, design, conforto, HoloLens 2, HoloLens (1ª geração)
-ms.openlocfilehash: 178044ce8c76de75b7cce5e10664ce65d108f0f8
-ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
+ms.openlocfilehash: 12dc632e4cba925abb1c4ac9e17364f94a6804c9
+ms.sourcegitcommit: 5612e8bfb9c548eac42182702cec87b160efbbfe
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "79376063"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85441813"
 ---
 # <a name="comfort"></a>Conforto
+
+## <a name="overview"></a>Visão geral
 
 Durante a visualização natural, o sistema visual humano conta com várias fontes de informações, ou “indicações”, para interpretar formas 3D e as posições relativas de objetos. Algumas indicações só dependem de um único olho (indicações monoculares), incluindo [perspectiva linear](https://en.wikipedia.org/wiki/Perspective_(graphical)), [tamanho familiar](https://en.wikipedia.org/wiki/Size#Perception_of_size), oclusão, [desfoque de profundidade do campo](https://en.wikipedia.org/wiki/Depth_of_field) e [acomodação](https://en.wikipedia.org/wiki/Accommodation_(eye)). Outras indicações dependem dos dois olhos (indicações binoculares) e incluem [vergência](https://en.wikipedia.org/wiki/Vergence) (essencialmente, as rotações relativas dos olhos necessárias para observar um objeto) e [disparidade binocular](https://en.wikipedia.org/wiki/Stereopsis) (o padrão de diferenças entre as projeções da cena na parte posterior dos dois olhos). Para garantir o máximo de conforto em capacetes de realidade virtual, é importante que os designers e os desenvolvedores criem e apresentem conteúdo de forma a imitar como essas indicações funcionam no mundo natural. Da perspectiva física, também é importante projetar um conteúdo que não exija movimentos cansativos do pescoço ou dos braços. Neste artigo, abordaremos as principais considerações que você deve ter em mente para atingir essas metas.
 
@@ -125,37 +127,28 @@ Em jogos de tiros em primeira pessoa, os HUDs (painéis transparentes) apresenta
 
 ## <a name="text-legibility"></a>Legibilidade do texto
 
-Uma legibilidade ideal do texto pode ajudar a reduzir o cansaço visual e manter o conforto do usuário, especialmente em aplicativos ou cenários que exigem que os usuários façam leituras com um HMD. A legibilidade do texto depende de uma variedade de fatores, incluindo várias propriedades de vídeo (por exemplo, densidade de pixel, brilho, contraste), propriedades de lente (por exemplo, aberração cromática) e propriedades de texto/fonte (por exemplo, as características da fonte específica, como peso, espaçamento, serifas etc., cor da fonte, cor da tela de fundo).  
+Uma legibilidade ideal do texto pode ajudar a reduzir o cansaço visual e manter o conforto do usuário, especialmente em aplicativos ou cenários que exigem que os usuários façam leituras com um HMD. A legibilidade do texto depende de uma variedade de fatores, incluindo:
+* Propriedades de vídeo, como densidade de pixels, brilho e contraste. 
+* Propriedades de lente, como aberração cromática
+* Propriedades de texto/fonte, como peso, espaçamento, serifas e cor da fonte/da tela de fundo.  
 
-Em geral, recomendamos testar aplicativos específicos quanto à legibilidade e ampliar ao máximo os tamanhos das fontes para uma experiência confortável. Abaixo, oferecemos diretrizes gerais como um ponto de partida para o desenvolvimento. Observe que todos os tamanhos das fontes são relatados em graus de [ângulo visual](https://en.wikipedia.org/wiki/Visual_angle) em vez de tamanhos físicos específicos, o que fornece diretrizes para qualquer distância dentro da zona de posicionamento ideal de holograma, pois leva em conta o tamanho do texto e a distância na qual ele aparece para o visualizador. 
+Em geral, recomendamos testar aplicativos específicos quanto à legibilidade e ampliar o máximo possível os tamanhos das fontes para uma experiência confortável. Encontre diretrizes mais detalhadas para dispositivos holográficos e imersivos nas páginas [Tipografia](typography.md) e [Texto no Unity](text-in-unity.md).
 
-Confira as páginas [Tipografia](typography.md) e [Texto no Unity](text-in-unity.md) para obter diretrizes mais detalhadas.
+## <a name="holographic-frame-considerations"></a>Considerações sobre quadros holográficos
 
-### <a name="guidance-for-holographic-devices"></a>Diretrizes para dispositivos holográficos
+Para experiências de realidade misturada com objetos grandes ou muitos objetos, é crucial considerar a quantidade de movimentos de cabeça e pescoço necessária para interagir com o conteúdo. As experiências podem ser divididas em três categorias em termos de movimento da cabeça: 
+* **Horizontal** (para os lados)
+* **Vertical** (para cima e para baixo)
+* **Imersiva** (horizontal e vertical)
+ 
+Quando possível, limite a maioria das interações a categorias horizontais ou verticais, de preferência, com a maioria das experiências ocorrendo no centro do quadro holográfico, enquanto a cabeça do usuário está em uma posição neutra. Evite interações que façam com que o usuário mova constantemente a visão para posições não naturais da cabeça (por exemplo, sempre olhar para cima para acessar uma interação básica de menu).
 
-Para dispositivos holográficos, a renderização de texto preto/escuro em uma tela de fundo branca/clara fornece a taxa de contraste mais consistente, pois a tela de fundo obstrui a interferência do mundo real por trás da renderização. A renderização de texto branco/claro em uma tela de fundo preta/escura permite que uma maior parte do um ambiente do mundo real apareça, o que pode interferir na legibilidade do texto. 
+![A região ideal para o conteúdo é de 0 a 35 graus abaixo do horizonte](images/optimal-field-of-view-2.png)<br>
+*A região ideal para o conteúdo é de 0 a 35 graus abaixo do horizonte*
 
-#### <a name="hololens-1st-gen"></a>HoloLens (1ª geração)
+O movimento horizontal da cabeça é mais adequado para interações frequentes, enquanto os movimentos verticais devem ser reservados para eventos incomuns. Por exemplo, uma experiência que envolva uma longa linha de tempo horizontal deve limitar o movimento vertical da cabeça para interações (como olhar para baixo em um menu).
 
-O tamanho mínimo legível da fonte (medindo da linha de base da fonte ao ascendente) é de aproximadamente 0,35° e um tamanho da fonte confortável é de, pelo menos, aproximadamente 0,5° para leitura do conteúdo apresentado a uma distância de 2 m até o usuário. 
-
-#### <a name="hololens-2"></a>HoloLens 2
-
-O tamanho mínimo legível da fonte (medindo da linha de base da fonte ao ascendente) é de, pelo menos, aproximadamente: 
-   - 0,4°-0,5° a 45 cm (distância de manipulação direta) 
-   - 0,35°-0,4° a 2,0 m
-   
-O tamanho confortavelmente legível da fonte (medindo da linha de base da fonte ao ascendente) é de, pelo menos, aproximadamente: 
-   - 0,65°-0,8° a 45 cm (distância de manipulação direta)
-   - 0,6°-0,75° a 2,0 m
-
-Observe que os tamanhos das fontes precisam ser um pouco maiores para o texto em distâncias de manipulação direta, devido ao conflito entre vergência e acomodação descrito acima (os olhos dos usuários ficam acomodados a uma distância de 2,0 m no capacete do HoloLens, portanto, o conteúdo renderizado a, por exemplo, 45 cm pode parecer mais desfocado para os usuários). 
-
-### <a name="guidance-for-immersive-devices"></a>Diretrizes para dispositivos imersivos
-
-Os dispositivos imersivos geralmente têm índices de contraste mais altos, devido à oclusão completa do ambiente externo, mas podem ter uma densidade mais baixa de pixel efetivo, em parte devido à ampliação das lentes na frente dos capacetes. 
-
-Para HMDs imersivos do Windows Mixed Reality, o tamanho mínimo legível da fonte vertical (medindo da linha de base da fonte ao ascendente) é de aproximadamente 0,7-0,9° e um tamanho da fonte vertical confortável é de aproximadamente 1,0° para leitura do conteúdo apresentado a uma distância de 2 m até o usuário.
+Considere a possibilidade de incentivar a movimentação de corpo completo, em vez de apenas a movimentação da cabeça, colocando objetos em torno do espaço do usuário. Ao projetar experiências com a movimentação de objetos ou objetos grandes, preste atenção especial ao movimento da cabeça, especialmente quando as experiências exigirem um movimento frequente ao longo dos eixos horizontal e vertical.
 
 ## <a name="gaze-direction"></a>Direção do foco
 
@@ -166,14 +159,11 @@ Para evitar cansaço visual e cervical, o conteúdo deve ser projetado de modo q
 
 O ângulo de foco ideal (repouso) é considerado entre 10-20 graus abaixo do horizonte, pois a cabeça tende a se inclinar ligeiramente para baixo, especialmente durante as atividades.
 
-![FOV (campo de visão) permitido, conforme determinado pela amplitude de movimento do pescoço](images/optimal-field-of-view-2.png)<br>
-*FOV (campo de visão) permitido, conforme determinado pela amplitude de movimento do pescoço*
-
 ## <a name="arm-positions"></a>Posições do braço
 
 A fadiga muscular pode se acumular quando é esperado que os usuários mantenham uma mão levantada durante toda uma experiência. Também pode ser cansativo exigir que o usuário faça gestos de fechar e abrir os dedos indicador e polegar repetidamente por longas durações. Portanto, recomendamos que as experiências evitem a exigência de uma entrada de gesto constante e repetida. Essa meta pode ser alcançada incorporando pequenos intervalos ou oferecendo uma combinação de entrada de gesto e fala para interagir com o aplicativo.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 * [Foco](gaze-and-commit.md)
 * [Estabilidade do holograma](hologram-stability.md)
 * [Interações instinctuais](interaction-fundamentals.md)

@@ -3,16 +3,16 @@ title: Usando o Emulador do HoloLens
 description: Usar o Emulador do HoloLens para testar aplicativos de realidade misturada em seu computador sem um HoloLens físico.
 author: pbarnettms
 ms.author: pbarnett
-ms.date: 5/12/2020
+ms.date: 6/8/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: HoloLens, emulador
-ms.openlocfilehash: f525276d127bc0bbb682d7cea6821028258c6177
-ms.sourcegitcommit: 6d9d01d53137435c787f247f095d5255581695fc
+ms.openlocfilehash: dba0b1a1260c62ac7f26bc80678439d12183d77f
+ms.sourcegitcommit: dc60c6ca075e7086b87478f1d7e87ebe02160c0c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83227981"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84631510"
 ---
 # <a name="using-the-hololens-emulator"></a>Usando o Emulador do HoloLens
 
@@ -28,7 +28,7 @@ Se você pretende desenvolver aplicativos de headset imersivo do Windows Mixed R
 Baixar o Emulador do HoloLens.
 
 Versões: 
-* [Emulador do HoloLens 2 (Windows Holographic, versão 2004)](https://go.microsoft.com/fwlink/?linkid=2129088).
+* [Emulador do HoloLens 2 (Windows Holographic, versão 2004, atualização de junho de 2020)](https://go.microsoft.com/fwlink/?linkid=2132415).
 * [Emulador do HoloLens (1ª geração) e modelos de projeto holográfico](https://go.microsoft.com/fwlink/?linkid=2065980).
 
 É possível encontrar notas de versão e builds mais antigos do Emulador do HoloLens na página [Arquivo do Emulador do HoloLens](hololens-emulator-archive.md).
@@ -251,7 +251,7 @@ No emulador, você verá apenas os hologramas que renderizar. Mas você não ver
 
 ## <a name="known-issues"></a>Problemas conhecidos
 
-* Ao desinstalar o Emulador do HoloLens 2, a imagem do disco rígido (Flash.vhdx) pode ser deixada no disco rígido na pasta Windows Kits\10\Emulation\HoloLens\<número do build.  É seguro excluir esse arquivo.
+* Ao desinstalar o Emulador do HoloLens 2, é possível que a imagem do disco rígido (Flash.vhdx) seja deixada no disco rígido na pasta Windows Kits\10\Emulation\HoloLens\<build number>.  É seguro excluir esse arquivo.
 * A aceleração de gráficos de hardware pode fazer com que os aplicativos do Holographic falhem em alguns sistemas com gráficos AMD ou Intel.  Desabilitar a aceleração de gráficos de hardware na janela Ferramentas do emulador é uma solução alternativa para esse problema.
 
 ## <a name="troubleshooting"></a>Solução de problemas

@@ -7,12 +7,12 @@ ms.date: 03/26/2019
 ms.topic: article
 keywords: gráficos, cpu, gpu, renderização, coleta de lixo, hololens
 ms.localizationpriority: high
-ms.openlocfilehash: 28f09986cdb8c562aedfc9deae7b0369214ebc05
-ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
+ms.openlocfilehash: c6c68a6dd6e8ba59bee983e158e210aed27d2b17
+ms.sourcegitcommit: 4282d92e93869e4829338bdf7d981c3ee0260bfd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "81277564"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85216237"
 ---
 # <a name="performance-recommendations-for-unity"></a>Recomendações de desempenho para o Unity
 
@@ -41,7 +41,7 @@ O conteúdo abaixo aborda mais práticas de desempenho aprofundadas, especialmen
 
 #### <a name="cache-references"></a>Referências de cache
 
-É uma melhor prática armazenar em cache as referências a todos os componentes relevantes e GameObjects na inicialização. Isso porque as chamadas de função repetitivas, como *[GetComponent\<T>()](https://docs.unity3d.com/ScriptReference/GameObject.GetComponent.html)* , são significativamente mais caras em relação ao custo de memória necessário para armazenar um ponteiro. Isso também se aplica ao [Camera.main](https://docs.unity3d.com/ScriptReference/Camera-main.html) usado com muita frequência. Na verdade, o *Camera.main* usa apenas *[FindGameObjectsWithTag()](https://docs.unity3d.com/ScriptReference/GameObject.FindGameObjectsWithTag.html)* abaixo dele, que pesquisa com alto custo o grafo de cena em busca de um objeto da câmera com a marca *"MainCamera"* .
+É uma melhor prática armazenar em cache as referências a todos os componentes relevantes e GameObjects na inicialização. Isso porque as chamadas de função repetitivas como *[GetComponent\<T>()](https://docs.unity3d.com/ScriptReference/GameObject.GetComponent.html)* são significativamente mais caras em relação ao custo de memória necessário para armazenar um ponteiro. Isso também se aplica ao [Camera.main](https://docs.unity3d.com/ScriptReference/Camera-main.html) usado com muita frequência. Na verdade, o *Camera.main* usa apenas *[FindGameObjectsWithTag()](https://docs.unity3d.com/ScriptReference/GameObject.FindGameObjectsWithTag.html)* abaixo dele, que pesquisa com alto custo o grafo de cena em busca de um objeto da câmera com a marca *"MainCamera"* .
 
 ```CS
 using UnityEngine;
@@ -282,6 +282,8 @@ Além disso, é recomendável desabilitar toda a conversão de sombra, pois ela 
 
 **Editar** > **Configurações do Projeto** e, em seguida, selecione a categoria **Qualidade** > selecione **Baixa Qualidade** para a plataforma UWP. Também é possível definir apenas a propriedade **Shadows** como **Desabilitar Sombras**.
 
+Recomendamos usar a iluminação integrada com seus modelos no Unity.
+
 ### <a name="reduce-poly-count"></a>Reduzir a contagem de polígonos
 
 A contagem de polígonos geralmente é reduzida por meio dos métodos a seguir
@@ -344,7 +346,7 @@ Uma das práticas mais comuns que leva ao excesso de coleta de lixo não é arma
 Outras dicas rápidas:
 - Use a classe C# [StringBuilder](https://docs.microsoft.com/dotnet/api/system.text.stringbuilder?view=netframework-4.7.2) para criar dinamicamente cadeias de caracteres complexas em runtime
 - Remova as chamadas a Debug.Log() quando não for mais necessário, pois elas ainda são executadas em todas as versões de build de um aplicativo
-- Se o aplicativo holográfico geralmente exige muita memória, considere a possibilidade de chamar [ _**System.GC.Collect()**_ ](https://docs.microsoft.com/dotnet/api/system.gc.collect?view=netframework-4.7.2) durante o carregamento de fases, como ao apresentar uma tela de carregamento ou de transição
+- Se o aplicativo holográfico geralmente exige muita memória, considere a possibilidade de chamar [_**System.GC.Collect()**_](https://docs.microsoft.com/dotnet/api/system.gc.collect?view=netframework-4.7.2) durante o carregamento de fases, como ao apresentar uma tela de carregamento ou de transição
 
 #### <a name="object-pooling"></a>Pool de objetos
 

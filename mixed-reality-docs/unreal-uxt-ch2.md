@@ -3,16 +3,16 @@ title: 2. Inicializar o projeto e seu primeiro aplicativo
 description: Parte 2 de 6 em uma série de tutoriais para criar um aplicativo de xadrez simples usando o Unreal Engine 4 e o plug-in Ferramentas de UX do Kit de Ferramentas de Realidade Misturada
 author: hferrone
 ms.author: v-haferr
-ms.date: 5/5/2020
+ms.date: 06/10/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, mixed reality, tutorial, getting started, mrtk, uxt, UX Tools, documentation
-ms.openlocfilehash: e8f03a87ec6b92e4c62cf3f88f519146254e7387
-ms.sourcegitcommit: 1b8090ba6aed9ff128e4f32d40c96fac2e6a220b
+ms.openlocfilehash: 150fee721bb9cd72d287737aca4262bd87dccba8
+ms.sourcegitcommit: 7ca383ef1c5dc895ca2a289435f2e9d4c1ee6e65
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84330313"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85345726"
 ---
 # <a name="2-initializing-your-project-and-first-application"></a>2. Inicializar o projeto e seu primeiro aplicativo
 
@@ -20,15 +20,15 @@ ms.locfileid: "84330313"
 
 Neste primeiro tutorial, você começará com um novo aplicativo do Unreal para o HoloLens 2. Isso incluirá adicionar o plug-in do HoloLens, criar e iluminar um nível e populá-lo com um jogo de tabuleiro e uma peça de xadrez. Você usará ativos pré-criados para a peça de xadrez 3D e materiais de objeto, então não será necessário fazer a modelagem de nada do zero. No final deste tutorial, você terá uma tela em branco que está pronta para a realidade misturada.
 
-Antes de continuar, verifique se você cumpre todos os pré-requisitos da página [Introdução](https://docs.microsoft.com/windows/mixed-reality/unreal-uxt-ch1).
+Antes de continuar, verifique se você atende a todos os pré-requisitos da página [Introdução](https://docs.microsoft.com/windows/mixed-reality/unreal-uxt-ch1).
 
 ## <a name="objectives"></a>Objetivos
-* Como configurar um projeto do Unreal para desenvolvimento para o HoloLens
+* Como configurar um projeto do Unreal para desenvolvimento no HoloLens
 * Como importar ativos e configurar um cenário
 * Como criar Atores e eventos em nível de script com blueprints
 
 ## <a name="creating-a-new-unreal-project"></a>Como criar um projeto do Unreal
-A primeira coisa que você precisa é de um projeto com o qual trabalhar.
+A primeira coisa que você precisa é de um projeto com o qual trabalhar. Se esta é a primeira vez que você empacota um aplicativo do Unreal para o HoloLens, [baixe os arquivos de suporte](https://docs.microsoft.com/windows/mixed-reality/unreal-uxt-ch6#packaging-and-deploying-the-app) do Epic Launcher.
 
 1. Iniciar Unreal Engine
 
@@ -43,6 +43,9 @@ A primeira coisa que você precisa é de um projeto com o qual trabalhar.
 4. Defina **C++** , **3D ou 2D escalonável, Mobile/Tablet** e **Nenhum Conteúdo Inicial** como suas **Configurações de Projeto**. 
     * Escolha um local para salvar e clique em **Criar Projeto**. 
 
+> [!NOTE]
+> Você precisará selecionar um projeto C++ em vez de um projeto Blueprint para criar o plug-in das Ferramentas de UX, que você vai configurar mais adiante na seção 4.
+
 ![Configurações iniciais do projeto](images/unreal-uxt/2-project-settings.PNG)
 
 O projeto deve ser aberto automaticamente no editor Unreal, o que significa que você está pronto para a próxima seção.
@@ -56,14 +59,14 @@ Antes de começar a adicionar objetos à cena, você precisará habilitar dois p
 ![Como habilitar plugins do HoloLens](images/unreal-uxt/2-plugins.PNG)
 
 2. Selecione **Realidade Virtual** na lista de opções internas. 
-    * Role para baixo até **Microsoft Windows Mixed Reality**, marque **Habilitado** e reinicie o editor. 
+    * Role a página para baixo até **Microsoft Windows Mixed Reality**, marque a opção **Habilitado** e reinicie o editor. 
 
 ![Como habilitar o plug-in do Windows Mixed Reality](images/unreal-uxt/2-virtual-reality-plugin.PNG)
 
 > [!NOTE]
 > Os dois plug-ins são necessários para o desenvolvimento no HoloLens 2.
 
-Quando isso tiver sido feito, o seu nível vazio estará pronto para ter companhia.
+Com isso feito, o nível vazio estará pronto para ter companhia.
 
 ## <a name="creating-a-level"></a>Criar um nível
 A sua próxima tarefa é criar uma configuração de jogador simples com um ponto de partida e um cubo para referência e escala.

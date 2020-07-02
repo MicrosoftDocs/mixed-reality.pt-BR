@@ -7,12 +7,12 @@ ms.date: 02/26/2019
 ms.topic: article
 keywords: realidade misturada, unity, tutorial, hololens
 ms.localizationpriority: high
-ms.openlocfilehash: ec078015304e1cddc9b042fb5e94cf1904a302cb
-ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
+ms.openlocfilehash: 9a19ad59e520a2743aafd954910f43c6f51d6c8a
+ms.sourcegitcommit: 5612e8bfb9c548eac42182702cec87b160efbbfe
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "79376083"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85441853"
 ---
 # <a name="6-exploring-advanced-input-options"></a>6. Explorar as opções avançadas de entrada
 
@@ -38,10 +38,15 @@ As principais etapas que você seguirá para conseguir isso são:
 5. Implementar o evento de Resposta para o comando de fala
 
 ### <a name="1-clone-the-default-input-system-profile"></a>1. Clonar o Perfil do Sistema de Entrada padrão
-
 Na janela Hierarquia, selecione o objeto **MixedRealityToolkit** e, em seguida, na janela Inspetor, selecione a guia **Entrada** e clone o **DefaultHoloLens2InputSystemProfile** para substituí-lo por seu **Perfil do Sistema de Entrada** personalizável:
 
 ![mrlearning-base](images/mrlearning-base/tutorial5-section1-step1-1.png)
+
+> [!NOTE]
+> Se você estiver usando o MRTK 2.4.0 ou posterior:
+> * Selecione o objeto **MixedRealityToolkit** na guia Hierarquia, clique na guia **Entrada** na janela Inspetor e expanda a seção **Ponteiros**. 
+> * Clone o **DefaultMixedRealityInputPointerProfile** e substitua-o por um **Perfil de Ponteiro de Entrada Personalizável** próprio.
+> * Verifique se a opção **Está com o Rastreamento Ocular Habilitado** é verdadeira na seção **Configurações de Foco**. 
 
 > [!TIP]
 > Para obter um lembrete de como clonar perfis MRTK, você pode consultar as instruções de [Como configurar os perfis do Mixed Reality Toolkit](mrlearning-base-ch2.md#how-to-configure-the-mixed-reality-toolkit-profiles-change-spatial-awareness-display-option).

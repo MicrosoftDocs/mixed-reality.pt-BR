@@ -3,16 +3,16 @@ title: Códigos QR no Unreal
 description: Um guia para usar códigos QR no Unreal
 author: hferrone
 ms.author: v-haferr
-ms.date: 5/5/2020
+ms.date: 06/10/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, mixed reality, development, features, documentation, guides, holograms, qr codes
-ms.openlocfilehash: 90a51227ae455389168fb3262e83f34b64a7bfb5
-ms.sourcegitcommit: ee7f04148d3608b0284c59e33b394a67f0934255
+ms.openlocfilehash: cf6c113f6bf4a13a96f46d6420a3093966455c3b
+ms.sourcegitcommit: 45da0a056fa42088ff81ccdd11232830fbe8430f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84428740"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84720382"
 ---
 # <a name="qr-codes-in-unreal"></a>Códigos QR no Unreal
 
@@ -54,7 +54,7 @@ O Grafo de Eventos na imagem a seguir mostra o evento **OnUpdateTrackedImage** q
 
 ![Exemplo de renderização de QR](images/unreal-qr-render.PNG)
 
-Veja o que está acontecendo:
+Isto é o que está acontecendo:
 1. Primeiro, a imagem rastreada é convertida em um **ARTrackedQRCode** para verificar se a imagem atualizada atual é um código QR.  
 2. Os dados codificados são recuperados da variável **QRCode**. Com o local de **GetLocalToWorldTransform**, é possível obter as coordenadas do canto superior esquerdo do código QR; já com **GetEstimateSize**, é possível obter as dimensões desse código. 
 

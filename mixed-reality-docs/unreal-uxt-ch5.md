@@ -3,16 +3,16 @@ title: 5. Como adicionar um botão e redefinir locais de peças
 description: Parte 5 de 6 em uma série de tutoriais para criar um aplicativo de xadrez simples usando o Unreal Engine 4 e o plug-in Ferramentas de UX do Kit de Ferramentas de Realidade Misturada
 author: hferrone
 ms.author: v-haferr
-ms.date: 5/5/2020
+ms.date: 06/10/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, mixed reality, tutorial, getting started, mrtk, uxt, UX Tools, documentation
-ms.openlocfilehash: 49cab5c5a8c6736b800b5ba05de2c88edf008008
-ms.sourcegitcommit: 1b8090ba6aed9ff128e4f32d40c96fac2e6a220b
+ms.openlocfilehash: 473f47884bbc492451007436f80e8d9762cf1ab7
+ms.sourcegitcommit: 45da0a056fa42088ff81ccdd11232830fbe8430f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84330263"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84720252"
 ---
 # <a name="5-adding-a-button--resetting-piece-locations"></a>5. Como adicionar um botão e redefinir locais de peças
 
@@ -54,7 +54,7 @@ Agora que a função está configurada corretamente, a próxima tarefa é criar 
 
 ![Subclasse do novo Blueprint de SimpleButton](images/unreal-uxt/5-subclass.PNG)
 
-2. Clique em **PressableButton (Herdado)** no painel **Componentes** e role o conteúdo do painel **Detalhes** para baixo até a seção **Eventos**. 
+2. Clique em **Botão de Pressão (Herdado)** no painel **Componentes** e role o conteúdo do painel **Detalhes** para baixo até a seção **Eventos**. 
     * Clique no botão **+** verde próximo de **On Button Pressed** para adicionar um evento Grafo de Eventos, que será chamado quando o botão for pressionado. 
     
 Deste ponto em diante, será conveniente que você chame a função **Redefinir Localização** do **WhiteKing**, que precisa de uma referência para o Ator **WhiteKing** no Nível. 

@@ -3,16 +3,16 @@ title: 3. Como configurar seu projeto para a realidade misturada
 description: Parte 3 de 6 em uma série de tutoriais para criar um aplicativo de xadrez simples usando o Unreal Engine 4 e o plug-in Ferramentas de UX do Kit de Ferramentas de Realidade Misturada
 author: hferrone
 ms.author: v-haferr
-ms.date: 5/5/2020
+ms.date: 06/10/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, mixed reality, tutorial, getting started, mrtk, uxt, UX Tools, documentation
-ms.openlocfilehash: d22c3d8c9048f53171298642768877d7bcdcb972
-ms.sourcegitcommit: 1b8090ba6aed9ff128e4f32d40c96fac2e6a220b
+ms.openlocfilehash: f79985b2ce9e26971c23acf36a3538bf7f3c166e
+ms.sourcegitcommit: ff0e89b07d0b4a945967d64c5b8845a21dc5f476
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84330273"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84879552"
 ---
 # <a name="3-setting-up-your-project-for-mixed-reality"></a>3. Como configurar seu projeto para a realidade misturada
 
@@ -37,17 +37,21 @@ As sessões de RA no Unreal não acontecem espontaneamente. Para usar uma sessã
 
 ![Configuração de sessão de RA](images/unreal-uxt/3-arsessionconfig.PNG)
 
-Com isso feito, a próxima etapa é verificar se a sessão de RA começa quando o nível é carregado. O Unreal tem um tipo especial de blueprint chamado **Blueprint de Nível**, que atua como um grafo de eventos global em todo esse nível. Conectar o ativo ARSessionConfig no **Blueprint de Nível** garante que a sessão de RA será disparada exatamente quando o jogo começar.
+Com isso feito, a próxima etapa será verificar se a sessão de RA começa quando o nível é carregado e se ela é interrompida quando o nível é encerrado. O Unreal tem um tipo especial de blueprint chamado **Blueprint de Nível**, que atua como um grafo de eventos global em todo esse nível. Conectar o ativo ARSessionConfig no **Blueprint de Nível** garante que a sessão de RA será disparada exatamente quando o jogo começar.
 
 1. Clique em **Blueprints > Abrir Blueprint de Nível** na barra de ferramentas do editor: 
 
 ![Abrir Blueprint de Nível](images/unreal-uxt/3-level-blueprint.PNG)
 
-5. Arraste o nó de execução (ícone de seta para a esquerda) saindo de **Evento BeginPlay** e solte-o. Pesquise por **Iniciar Sessão de RA** e pressione enter.  
+5. Arraste o nó de execução (ícone de seta para a esquerda) saindo de **Evento BeginPlay** e solte-o. Procure o nó **Iniciar Sessão de RA** e pressione ENTER.  
     * Clique na lista suspensa **Selecionar Ativo** em **Configuração de Sessão** e escolha o ativo **ARSessionConfig**. 
-    * Escolha **Compilar**, depois **Salvar** e retorne para a Janela principal.
 
 ![Iniciar Sessão de RA](images/unreal-uxt/3-start-ar-session.PNG)
+
+6. Clique com o botão direito do mouse em qualquer lugar do EventGraph e crie um nó **EndPlay de Evento**. Arraste o pino de execução e solte-o. Procure um nó **Interromper Sessão de RA** e pressione ENTER. Se a sessão de RA não for interrompida quando o nível for encerrado, alguns recursos poderão parar de funcionar se você reiniciar o aplicativo durante o streaming para um headset. 
+    * Escolha **Compilar**, depois **Salvar** e retorne para a Janela principal.
+
+![Interromper Sessão de RA](images/unreal-uxt/3-stoparsession.PNG)
 
 ## <a name="create-a-pawn"></a>Criar um Peão
 Neste ponto, o projeto ainda precisa de um objeto de jogador. No Unreal, um **Peão** representa o usuário no jogo, mas neste caso, será a experiência do HoloLens 2.

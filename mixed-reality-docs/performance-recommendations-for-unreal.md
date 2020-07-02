@@ -7,12 +7,12 @@ ms.date: 5/5/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, mixed reality, performance, optimization, settings, documentation
-ms.openlocfilehash: 3c65eb519b57457e6c9e9747af0ad75e6a5e1b4d
-ms.sourcegitcommit: 1b8090ba6aed9ff128e4f32d40c96fac2e6a220b
+ms.openlocfilehash: 9f128a3ef09f29fc745c21b09b7ec97f5db33605
+ms.sourcegitcommit: 7f50210b71a65631fd1bc3fdb215064e0db34333
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84330173"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84533118"
 ---
 # <a name="performance-recommendations-for-unreal"></a>Recomendações de desempenho para o Unreal
 
@@ -30,7 +30,7 @@ Você pode encontrar cada uma das configurações a seguir em **Editar > Configu
 
 2. Desabilitando a remoção por oclusão:
     * Role até a seção **Mecanismo**, selecione **Renderização**, expanda a seção **Remoção** e desmarque **Remoção por Oclusão**.
-        + Se você precisa de remoção por oclusão para uma cena detalhada sendo renderizada, é recomendável que você habilite **Suporte a Remoção por Oclusão de Software** em **Mecanismo > Renderização**. Isso permite que o Unreal faça o trabalho na CPU e evite consultas de oclusão de GPU, que têm mau desempenho no HoloLens 2.
+        + Se você precisa usar a remoção por oclusão em uma cena detalhada que está sendo renderizada, recomendamos habilitar o **Suporte a Remoção por Oclusão de Software** em **Mecanismo > Renderização**. Isso permite que o Unreal faça o trabalho na CPU e evite consultas de oclusão de GPU, que têm mau desempenho no HoloLens 2.
 
 ![Configuração de destino para dispositivos móveis](images/unreal/performance-recommendations-img-02.png)
 
