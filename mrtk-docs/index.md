@@ -1,0 +1,1 @@
+# <a name="welcome-to-mrtk-docs"></a><span data-ttu-id="6f0c6-101">Bem-vindo(a) ao mrtk-docs!</span><span class="sxs-lookup"><span data-stu-id="6f0c6-101">Welcome to mrtk-docs!</span></span>
