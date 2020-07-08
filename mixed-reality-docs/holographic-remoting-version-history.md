@@ -6,21 +6,32 @@ ms.author: flbagar
 ms.date: 03/11/2020
 ms.topic: article
 keywords: HoloLens, comunicação remota e comunicação remota Holographic
-ms.openlocfilehash: 319e76efbbe1085fc9d60251a6f0f38133de6505
-ms.sourcegitcommit: 7011ac6fde80e5c45f04192fa1db6e1eb559e3b0
+ms.openlocfilehash: 131c5237801c381a371b197a5b7d8e0ec64fa2d6
+ms.sourcegitcommit: fef42e2908e49822f2d13b05d2f9260bf0d72158
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84327896"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86061119"
 ---
 # <a name="holographic-remoting-version-history"></a>Histórico de versões de comunicação remota do Holographic
 
 > [!IMPORTANT]
 > Estas diretrizes são específicas para a comunicação remota do Holographic no HoloLens 2.
 
+## <a name="version-221-july-6-2020"></a>Versão 2.2.1 (6 de julho de 2020)<a name="v2.2.1"></a>
+> [!IMPORTANT]
+> A validação do [Kit de certificação de aplicativos para Windows](https://developer.microsoft.com/windows/downloads/app-certification-kit/) com a versão [2.2.0](holographic-remoting-version-history.md#v2.2.0) falhará. Caso você esteja na versão [2.2.0](holographic-remoting-version-history.md#v2.2.0) e queira enviar seu aplicativo para a Microsoft Store, atualizado para pelo menos a versão 2.2.1.
+* Correção dos problemas de conformidade do [Kit de certificação de aplicativos do Windows](https://developer.microsoft.com/windows/downloads/app-certification-kit/) .
+
+## <a name="version-220-july-1-2020"></a>Versão 2.2.0 (1º de julho de 2020)<a name="v2.2.0"></a>
+* O Holographic Remoting Player agora pode ser instalado em computadores que executam a [realidade mista do Windows](navigating-the-windows-mixed-reality-home.md), tornando possível transmitir para headsets de imersão.
+* Os [controladores de movimento](motion-controllers.md) agora têm suporte da comunicação remota Holographic e os dados específicos do controlador podem ser recuperados por meio de [SpatialInteractionSource. Controller](https://docs.microsoft.com/uwp/api/windows.ui.input.spatial.spatialinteractionsource.controller#Windows_UI_Input_Spatial_SpatialInteractionSource_Controller).
+* Agora há suporte para [SpatialStageFrameOfReference](https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatialstageframeofreference) e o estágio atual pode ser recuperado por meio de [SpatialStageFrameOfReference. Current](https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatialstageframeofreference.current). Além disso, um novo estágio pode ser solicitado por meio de [SpatialStageFrameOfReference. RequestNewStageAsync](https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatialstageframeofreference.requestnewstageasync).
+* Em versões anteriores, a previsão de pose foi completamente manipulada no lado do jogador pelo Holographic Remoting Player. A partir da versão 2.2.0, a comunicação remota do Holographic tem sincronização de tempo e a previsão é totalmente feita pelo aplicativo remoto. Os usuários também devem esperar uma melhoria na estabilidade do holograma em situações de rede difíceis.
+
 ## <a name="version-213-may-25-2020"></a>Versão 2.1.3 (25 de maio de 2020)<a name="v2.1.3"></a>
 * Comportamento alterado do evento [HolographicSpace. CameraAdded](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicspace.cameraadded?view=winrt-18362) . Nas versões anteriores, **não** era garantido que um [HolographicCamera](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamera?view=winrt-18362) adicional também tenha um [HolographicCameraPose](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamerapose?view=winrt-18362) válido ao criar o próximo quadro via [HolographicSpace. CreateNextFrame](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicspace.createnextframe?view=winrt-18362#Windows_Graphics_Holographic_HolographicSpace_CreateNextFrame). A partir da versão 2.1.3 [HolographicSpace. CameraAdded](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicspace.cameraadded?view=winrt-18362) é sincronizada com dados de pose provenientes do player de comunicação remota do Holographic e os usuários podem esperar que, quando uma câmera for adicionada, também haja uma [HolographicCameraPose](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamerapose?view=winrt-18362) válida disponível para essa câmera no próximo quadro.
-* Adicionado **desabilitado** a DepthBufferStreamResolution, que pode ser usado para desabilitar o streaming de buffer de profundidade por meio de RemoteContext. ConfigureDepthVideoStream. Observe que, se for usado, [HolographicCameraRenderingParameters. CommitDirect3D11DepthBuffer](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamerarenderingparameters.commitdirect3d11depthbuffer?view=winrt-18362#Windows_Graphics_Holographic_HolographicCameraRenderingParameters_CommitDirect3D11DepthBuffer_Windows_Graphics_DirectX_Direct3D11_IDirect3DSurface_) falhará com *E_ILLEGAL_METHOD_CALL*.
+* Adicionado **desabilitado** a DepthBufferStreamResolution, que pode ser usado para desabilitar o streaming de buffer de profundidade por meio de RemoteContext.ConfigureDepthVideoStream. Observe que, se for usado, [HolographicCameraRenderingParameters. CommitDirect3D11DepthBuffer](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamerarenderingparameters.commitdirect3d11depthbuffer?view=winrt-18362#Windows_Graphics_Holographic_HolographicCameraRenderingParameters_CommitDirect3D11DepthBuffer_Windows_Graphics_DirectX_Direct3D11_IDirect3DSurface_) falhará com *E_ILLEGAL_METHOD_CALL*.
 * A tela de inicialização do Holographic Remoting Player foi recriada e agora não bloqueia a exibição dos usuários.
 * Melhorias de estabilidade e correções de bugs.
 
@@ -76,7 +87,7 @@ ms.locfileid: "84327896"
 * Primeira versão pública da comunicação remota do Holographic para o HoloLens 2.
 
 ## <a name="see-also"></a>Consulte Também
-* [Escrevendo um aplicativo de player de comunicação remota do Holographic personalizado](holographic-remoting-create-player.md)
+* [Como escrever um aplicativo personalizado do Holographic Remoting Player](holographic-remoting-create-player.md)
 * [Escrevendo um aplicativo de host de comunicação remota do Holographic](holographic-remoting-create-host.md)
 * [Solução de problemas e limitações de comunicação remota do Holographic](holographic-remoting-troubleshooting.md)
 * [Termos de licença de software de comunicação remota holográfica](https://docs.microsoft.com/legal/mixed-reality/microsoft-holographic-remoting-software-license-terms)

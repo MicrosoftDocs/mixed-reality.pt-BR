@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 02/24/2019
 ms.topic: article
 keywords: MRC, foto, vídeo, captura, câmera
-ms.openlocfilehash: 1116e9a0923129aa2b18d838917eebf12adae694
-ms.sourcegitcommit: 45da0a056fa42088ff81ccdd11232830fbe8430f
+ms.openlocfilehash: 44b853e96ab956e5ea6c03d8c23a61e91ac733d4
+ms.sourcegitcommit: fef42e2908e49822f2d13b05d2f9260bf0d72158
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84720412"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86061139"
 ---
 # <a name="mixed-reality-capture-for-developers"></a>Captura de realidade misturada para desenvolvedores
 
@@ -64,10 +64,10 @@ Há três etapas para habilitar a renderização da câmera PV:
 Para aceitar a renderização da câmera PV, um aplicativo simplesmente habilita o [HolographicViewConfiguration](https://docs.microsoft.com/uwp/api/Windows.Graphics.Holographic.HolographicViewConfiguration)do PhotoVideoCamera:
 ```csharp
 var display = Windows.Graphics.Holographic.HolographicDisplay.GetDefault();
-var view = display.TryGetViewConfiguration(Windows.Graphics.Holographic.HolographicViewConfiguration.PhotoVideoCamera);
+var view = display.TryGetViewConfiguration(Windows.Graphics.Holographic.HolographicViewConfigurationKind.PhotoVideoCamera);
 if (view != null)
 {
-   view.IsEnabled = true;
+    view.IsEnabled = true;
 }
 ```
 
@@ -286,7 +286,7 @@ Com a atualização do Windows 10 de abril de 2018, não há mais uma limitaçã
 
 Anterior à atualização de abril de 2018 do Windows, o gravador da MRC personalizada de um aplicativo era mutuamente exclusivo com o sistema da MRC (capturando fotos, capturando vídeos ou transmitindo do portal de dispositivos do Windows).
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 * [Captura de realidade misturada](mixed-reality-capture.md)
 * [Modo de exibição Espectador](spectator-view.md)

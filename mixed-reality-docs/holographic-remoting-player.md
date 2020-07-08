@@ -1,19 +1,19 @@
 ---
-title: Player de comunicação remota do Holographic
+title: Player de Comunicação Remota Holográfica
 description: O Holographic Remoting Player é um aplicativo complementar que se conecta a aplicativos de PC e jogos que dão suporte à comunicação remota do Holographic. O Holographicing Remoting transmite o conteúdo do Holographic de um PC para o Microsoft HoloLens em tempo real, usando uma conexão Wi-Fi.
 author: florianbagarmicrosoft
 ms.author: flbagar
 ms.date: 03/11/2020
 ms.topic: article
 keywords: HoloLens, comunicação remota e comunicação remota Holographic
-ms.openlocfilehash: e5255fb5537201058c491f5e4c682bb1c22d0edb
-ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
+ms.openlocfilehash: 8b1d58b2c2ce8f379a87059bb5add0f85f507259
+ms.sourcegitcommit: fef42e2908e49822f2d13b05d2f9260bf0d72158
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81278204"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86061129"
 ---
-# <a name="holographic-remoting-player"></a>Player de comunicação remota do Holographic
+# <a name="holographic-remoting-player"></a>Player de Comunicação Remota Holográfica
 
 >[!IMPORTANT]
 >A comunicação remota do Holographic para o HoloLens 2 é uma alteração de versão principal. [Os aplicativos remotos para o **hololens (1ª gen)** ](add-holographic-remoting.md) devem usar o pacote NuGet versão **1. x.** x e [os aplicativos remotos para o **HoloLens 2** ](holographic-remoting-create-host.md) devem usar **2. x. x**. Isso significa que os aplicativos remotos escritos para o HoloLens 2 não são compatíveis com o HoloLens (1º gen) e vice-versa.
@@ -24,11 +24,14 @@ O player de comunicação remota do Holographic só pode ser usado com aplicativ
 
 O player de comunicação remota do Holographic está disponível para o HoloLens (1º gen) e o HoloLens 2.  Aplicativos de PC com suporte para comunicação remota Holographic com o HoloLens precisam ser atualizados para dar suporte a comunicação remota Holographic com o HoloLens 2. Entre em contato com seu provedor de aplicativos se tiver dúvidas sobre quais versões têm suporte.
 
+>[!TIP]
+>A partir da versão [2.2.0](holographic-remoting-version-history.md#v2.2.0) , o Holographic Remoting Player também está disponível para computadores Windows que executam [realidade mista do Windows](navigating-the-windows-mixed-reality-home.md).
+
 ## <a name="connecting-to-the-holographic-remoting-player"></a>Conectando-se ao Player de comunicação remota do Holographic
 
 Siga as instruções do aplicativo para se conectar ao Player de comunicação remota do Holographic. Você precisará inserir o endereço IP do seu dispositivo HoloLens, que pode ser visto na tela principal do reprodutor de comunicação remota, da seguinte maneira:
 
-![Player de comunicação remota do Holographic](images/holographicremotingplayer.png)
+![Player de Comunicação Remota Holográfica](images/holographicremotingplayer.png)
 
 Sempre que vir a tela principal, você saberá que não tem um aplicativo conectado.
 
@@ -41,7 +44,7 @@ A qualidade e o desempenho da sua experiência variam com base em três fatores:
 * **Hardware do seu PC** -seu PC precisa ser capaz de executar e codificar sua experiência com o holographic em 60 quadros por segundo. Para uma placa gráfica, geralmente recomendamos um GeForce GTX 970 ou o AMD Radeon R9 290 ou superior. Novamente, sua experiência específica pode exigir um cartão maior ou menor.
 * **Sua conexão Wi-Fi** -sua experiência com o Holographic é transmitida por Wi-Fi. Use uma rede rápida com baixo congestionamento para maximizar a qualidade. Usar um computador conectado por um cabo Ethernet, em vez de Wi-Fi, também pode melhorar a qualidade.
 
-## <a name="diagnostics"></a>Diagnóstico
+## <a name="diagnostics"></a>Diagnósticos
 
 Para medir a qualidade de sua conexão, diga **"habilitar o diagnóstico"** enquanto estiver na tela principal do Holographic Remoting Player. Quando os diagnósticos estão habilitados, no **HoloLens (1º gen)** , o aplicativo mostrará:
 
@@ -55,9 +58,9 @@ No **HoloLens 2** , o aplicativo mostrará:
 * **Render** -o número de quadros processados pelo Player de comunicação remota durante o último segundo. Observe que isso é independente do número de quadros que chegaram pela rede (consulte quadros de **vídeo**). Além disso, o tempo de Delta médio/máximo de renderização em milissegundos no último segundo entre os quadros renderizados é exibido.
 
 * **Quadros de vídeo** -o primeiro número exibido são os quadros de vídeo ignorados, o segundo são quadros de vídeo reutilizados e o terceiro recebe quadros de vídeo. Todos os números representam a contagem no último segundo.
-    * ```Received frames``` é o número de quadros de vídeo que chegaram no último segundo. Em condições normais, isso deve ser 60, mas se não for, um indicador de que os quadros serão descartados devido a problemas de rede ou o lado remoto/remoto não produzirá quadros com a taxa esperada.
-    * ```Reused frames``` é a contagem de quadros de vídeo usados mais de uma vez no último segundo. Por exemplo, se os quadros de vídeo chegarem atrasados, o loop de renderização do Player ainda renderizará um quadro, mas precisará *reutilizar* o quadro de vídeo que já foi usado para o quadro anterior.
-    * ```Skipped frames``` é a contagem de quadros de vídeo que não foram usados pelo loop de renderização do Player. Por exemplo, a tremulação de rede pode ter o efeito de que os quadros de vídeo recebidos não são mais distribuídos uniformemente. Por exemplo, se alguns estiverem atrasados e outros chegarem no tempo, com o resultado, eles não terão mais um Delta de 16,66 milissegundos ao serem executados em 60Hz. Pode ocorrer que mais de um quadro chega entre dois tiques do loop de renderização do Player. Nesse caso, o Player *ignora* um ou mais quadros, pois ele deve sempre exibir o quadro de vídeo mais recente recebido.
+    * ```Received frames```é o número de quadros de vídeo que chegaram no último segundo. Em condições normais, isso deve ser 60, mas se não for, um indicador de que os quadros serão descartados devido a problemas de rede ou o lado remoto/remoto não produzirá quadros com a taxa esperada.
+    * ```Reused frames```é a contagem de quadros de vídeo usados mais de uma vez no último segundo. Por exemplo, se os quadros de vídeo chegarem atrasados, o loop de renderização do Player ainda renderizará um quadro, mas precisará *reutilizar* o quadro de vídeo que já foi usado para o quadro anterior.
+    * ```Skipped frames```é a contagem de quadros de vídeo que não foram usados pelo loop de renderização do Player. Por exemplo, a tremulação de rede pode ter o efeito de que os quadros de vídeo recebidos não são mais distribuídos uniformemente. Por exemplo, se alguns estiverem atrasados e outros chegarem no tempo, com o resultado, eles não terão mais um Delta de 16,66 milissegundos ao serem executados em 60Hz. Pode ocorrer que mais de um quadro chega entre dois tiques do loop de renderização do Player. Nesse caso, o Player *ignora* um ou mais quadros, pois ele deve sempre exibir o quadro de vídeo mais recente recebido.
 
     >[!NOTE]
     >Quando voltada para a variação da rede, os quadros ignorados e reutilizados geralmente são aproximadamente os mesmos. Por outro lado, se você ver apenas os quadros ignorados, esse é um indicador de que o Player não atingiu sua taxa de quadros de destino. Nesse caso, você deve ficar atento ao tempo máximo de processamento Delta ao diagnosticar problemas.
@@ -75,8 +78,8 @@ Na tela principal, você pode dizer **"desabilitar o diagnóstico"** para desati
 * Recomendamos uma placa gráfica GeForce GTX 970 ou AMD Radeon R9 290 ou superior.
 * Recomendamos que você conecte seu PC à sua rede por meio de Ethernet para reduzir o número de saltos sem fio.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte Também
 * [HoloLens (1º gen): Adicionar comunicação remota do Holographic](add-holographic-remoting.md)
 * [HoloLens 2: escrevendo um aplicativo remoto de comunicação remota do Holographic](holographic-remoting-create-host.md)
 * [Termos de licença de software de comunicação remota holográfica](https://docs.microsoft.com//legal/mixed-reality/microsoft-holographic-remoting-software-license-terms)
-* [Política de privacidade da Microsoft](https://go.microsoft.com/fwlink/?LinkId=521839)
+* [Política de Privacidade da Microsoft](https://go.microsoft.com/fwlink/?LinkId=521839)
