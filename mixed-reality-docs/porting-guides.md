@@ -5,19 +5,19 @@ author: JBrentJ
 ms.author: alexturn
 ms.date: 07/07/2020
 ms.topic: article
-keywords: porta, portabilidade, Unity, middleware, mecanismo, UWP
-ms.openlocfilehash: 5cf66ce857806ab6fcf8c94b94c7a9a540339b97
-ms.sourcegitcommit: fef42e2908e49822f2d13b05d2f9260bf0d72158
+keywords: porta, portabilidade, Unity, middleware, mecanismo, UWP, Win32
+ms.openlocfilehash: a1e3cd47096d728091d62d6c038bf6b2eb6bab16
+ms.sourcegitcommit: 0eb99fae933d4374af2c032af4e9ceda1807e532
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86061149"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86156767"
 ---
 # <a name="porting-guides"></a>Guias de portabilidade
 
 ## <a name="overview"></a>Visão geral
 
-O Windows 10 inclui suporte direto para headsets de imersão e Holographic. Se você tiver criado conteúdo para outros dispositivos, como o Oculus Rift ou o HTC Naopak, eles têm dependências em bibliotecas que existem acima da API de plataforma do sistema operacional. Trazer conteúdo existente para a realidade mista do Windows envolve redirecionar o uso desses outros SDKs para as APIs do Windows. As [APIs da plataforma Windows para realidade misturada](https://docs.microsoft.com/uwp/api/Windows.Perception) funcionam com o modelo de aplicativo do Windows x86 e do plataforma universal do Windows (UWP). Se seu aplicativo ainda não estiver compilado para UWP, mudar para UWP fará parte da experiência de portagem.
+O Windows 10 inclui suporte direto para headsets de imersão e Holographic. Se você tiver criado conteúdo para outros dispositivos, como o Oculus Rift ou o HTC Naopak, eles têm dependências em bibliotecas que existem acima da API de plataforma do sistema operacional. Trazer conteúdo existente para a realidade mista do Windows envolve redirecionar o uso desses outros SDKs para as APIs do Windows. As [APIs da plataforma Windows para realidade misturada](https://docs.microsoft.com/uwp/api/Windows.Perception) funcionam com o modelo de aplicativo do Win32 e do plataforma universal do Windows (UWP). Se seu aplicativo ainda não estiver compilado para UWP, mudar para UWP fará parte da experiência de portagem.
 
 ## <a name="porting-overview"></a>Visão geral de portabilidade
 
@@ -74,7 +74,7 @@ Com qualquer atualização do Unity, há uma boa chance de que você precise atu
 
 ### <a name="unity-step-4-target-your-application-to-run-on-universal-windows-platform-uwp"></a>Etapa 4 do Unity: direcionar seu aplicativo para ser executado em Plataforma Universal do Windows (UWP)
 
-Se você estiver direcionando o Windows x86, poderá ignorar esta etapa e continuar na etapa 5.
+Se você estiver direcionando o Win32, poderá ignorar esta etapa e continuar na etapa 5.
 
 Depois de instalar as ferramentas, você precisará fazer seu aplicativo ser executado como um aplicativo universal do Windows.
 
@@ -84,12 +84,12 @@ Depois de instalar as ferramentas, você precisará fazer seu aplicativo ser exe
 > [!NOTE]
 > O Unity continua a melhorar o suporte a IL2CPP; O IL2CPP torna algumas portas UWP mais fáceis. Se, no momento, você estiver direcionando para o back-end de script do .NET, considere a possibilidade de converter para aproveitar o back-end IL2CPP.
 
-* Você pode ignorar a "etapa 5 do Unity", pois você está direcionando para UWP em vez de x86.
+* Você pode ignorar a "etapa 5 do Unity", pois você está direcionando para UWP em vez do Win32.
 
 > [!NOTE] 
 > Se seu aplicativo tiver quaisquer dependências de serviços específicos do dispositivo, como a realização de correspondência do fluxo, você precisará desabilitá-los nesta etapa. Você pode conectar-se aos serviços equivalentes que o Windows fornece posteriormente.
 
-### <a name="unity-step-5-target-your-application-to-run-on-windows-x86"></a>Etapa 5 do Unity: direcionar seu aplicativo para ser executado no Windows x86
+### <a name="unity-step-5-target-your-application-to-run-on-win32"></a>Etapa 5 do Unity: direcionar seu aplicativo para ser executado no Win32
 
 De dentro de seu aplicativo de Unity:
 
@@ -171,7 +171,7 @@ A realidade mista do Windows estará disponível em uma ampla classe de disposit
 
 O [Unity](https://docs.unity3d.com/Manual/Profiler.html) e o [Visual Studio](https://docs.microsoft.com/visualstudio/profiling/index) incluem os infileres de desempenho e as diretrizes de publicação da [Microsoft](understanding-performance-for-mixed-reality.md) e da [Intel](https://software.intel.com/articles/vr-content-developer-guide) sobre a criação de perfil de desempenho e otimização. Há uma ampla discussão sobre o desempenho disponível em [noções básicas sobre o desempenho para realidade misturada](understanding-performance-for-mixed-reality.md). Além disso, há detalhes específicos para o Unity em [recomendações de desempenho para o Unity](performance-recommendations-for-unity.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 * [Guia de portabilidade de entrada para Unity](input-porting-guide-for-unity.md)
 * [Diretrizes mínimas de compatibilidade de hardware do PC do Windows Mixed Reality](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/windows-mixed-reality-minimum-pc-hardware-compatibility-guidelines)
 * [Entendendo o desempenho da realidade misturada](understanding-performance-for-mixed-reality.md)
