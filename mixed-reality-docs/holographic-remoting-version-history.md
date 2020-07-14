@@ -6,17 +6,21 @@ ms.author: flbagar
 ms.date: 03/11/2020
 ms.topic: article
 keywords: HoloLens, comunicação remota e comunicação remota Holographic
-ms.openlocfilehash: 131c5237801c381a371b197a5b7d8e0ec64fa2d6
-ms.sourcegitcommit: fef42e2908e49822f2d13b05d2f9260bf0d72158
+ms.openlocfilehash: 1f4d463ab734cbb627f251486b0058fbf295d2ed
+ms.sourcegitcommit: b392847529961ac36bbff154ce0830f8b2dbd766
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86061119"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86300508"
 ---
 # <a name="holographic-remoting-version-history"></a>Histórico de versões de comunicação remota do Holographic
 
 > [!IMPORTANT]
 > Estas diretrizes são específicas para a comunicação remota do Holographic no HoloLens 2.
+
+## <a name="version-222-july-10-2020"></a>Versão 2.2.2 (10 de julho de 2020)<a name="v2.2.2"></a>
+* Corrigido o problema com [HolographicCamera. LeftViewportParameters](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamera.leftviewportparameters?view=winrt-19041#Windows_Graphics_Holographic_HolographicCamera_LeftViewportParameters) e [HolographicCamera. RightViewportParameters](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamera.rightviewportparameters?view=winrt-19041#Windows_Graphics_Holographic_HolographicCamera_RightViewportParameters) não retornando nenhum vértice de malha da área oculta ao transmitir de um headset de realidade mista do Windows.
+* Correção de falha que pode ocorrer com uma conexão de rede ruim.
 
 ## <a name="version-221-july-6-2020"></a>Versão 2.2.1 (6 de julho de 2020)<a name="v2.2.1"></a>
 > [!IMPORTANT]
