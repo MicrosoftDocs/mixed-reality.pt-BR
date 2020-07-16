@@ -5,13 +5,13 @@ author: alfred-msft
 ms.author: yuripek
 ms.date: 05/16/2019
 ms.topic: article
-keywords: LBE, MixedRealitySpatialDataPackager. exe, MixedRealitySpatialDataPackager
-ms.openlocfilehash: 3beb8f9168bfb6fd921d6d5c1eb6d250c70a714d
-ms.sourcegitcommit: 83698638b93c5ba77b3ffc399f1706482539f27b
+keywords: LBE, MixedRealitySpatialDataPackager.exe, MixedRealitySpatialDataPackager
+ms.openlocfilehash: 4a285cbd7423d7cacaf52370e6e19acf42672289
+ms.sourcegitcommit: cfca6cb016d8683fa2c611a97d493a4947935dbb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74539686"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86402735"
 ---
 # <a name="mixed-reality-spatial-data-packager-documentation"></a>Documentação do pacote de dados espaciais da realidade misturada
 
@@ -44,7 +44,7 @@ ms.locfileid: "74539686"
     </tr>
 </table>
 
-## <a name="quickstart"></a>TUTORIAIS
+## <a name="quickstart"></a>Início Rápido
 
 A ferramenta de pacote de dados espaciais da realidade misturada copia os dados espaciais de um aplicativo de destino de um PC para outro por meio de um processo de exportação e importação de duas etapas. A ferramenta deve ser executada com privilégios de administrador e exclui os dados espaciais existentes na importação. A exportação deixa os dados espaciais existentes intactos.
 
@@ -60,7 +60,7 @@ Principais requisitos e limitações:
 
 ## <a name="mapping-best-practices"></a>Práticas recomendadas de mapeamento
 
-1. Limpe os mapas existentes no painel de controle (Configurações-> realidade misturada-> ambiente-> limpar dados do ambiente)
+1. Limpe os mapas existentes no painel de controle (configurações-> realidade misturada-> ambiente-> limpar dados do ambiente)
 2. Garanta uma iluminação suficiente para um bom acompanhamento e, se estiver executando o modo de mapa bloqueado, tente manter a mesma iluminação
 3. Quando possível, mantenha o intervalo dinâmico de iluminação baixo, evitando áreas de alta iluminação ao lado de áreas sombreadas e escuras
 4. Minimize as superfícies em branco e não texturas, por exemplo, colocar uma variedade de pôsteres diferentes em paredes brancas
@@ -71,7 +71,7 @@ Principais requisitos e limitações:
 
 ## <a name="running-mixed-reality-spatial-data-packager-with-companion-script"></a>Executando o Gerenciador de dados espaciais da realidade misturada com o script complementar
 
-Fornecemos o MRSpatialPackagerHelperScript. ps1 que executa o MAP Packager das ferramentas. 
+Fornecemos MRSpatialPackagerHelperScript.ps1 que executa o MAP Packager das ferramentas. 
 
 
 Os parâmetros de script são definidos abaixo:
@@ -102,7 +102,7 @@ Os parâmetros de script são definidos abaixo:
 
 ### <a name="powershell-script-example-usage-and-output"></a>Uso e saída de exemplo de script do PowerShell
 
-.\MRSpatialPackagerHelperScript.ps1-AppName holoshell-UserName modo de administrador Export-MapxPath D:\Temp\-LockMap 0
+.\MRSpatialPackagerHelperScript.ps1-AppName holoshell-nome do administrador Export-MapxPath D:\Temp\-LockMap 0
 ```
 Package Family Name for holoshell: HoloShell_cw5n1h2txyewy
 User SID for Administrator: S-1-5-21-1279937937-3984375698-1043392598-499
@@ -135,14 +135,14 @@ Started SPECTRUM
 IMPORT SUCCESS
 ```
 
-### <a name="how-to-export-using-mixedrealitypackagerexe"></a>Como exportar usando o MixedRealityPackager. exe
+### <a name="how-to-export-using-mixedrealityspatialdatapackagerexe"></a>Como exportar usando MixedRealitySpatialDataPackager.exe
 ```
 MixedRealitySpatialDataPackager.exe export <folderpath to mapx files> <source package family name>    
 ```
 
 A exportação de mapas fora do dispositivo gera dois arquivos MapX, Het. MapX e SA. MapX. Durante o processo de exportação, todas as âncoras espaciais são removidas, exceto o aplicativo especificado e o limite criado pelo usuário (se existir). O nome da família do pacote de origem deve corresponder a um aplicativo instalado existente, ou o exe falhará.
 
-### <a name="how-to-import-using-mixedrealitypackagerexe"></a>Como importar usando o MixedRealityPackager. exe
+### <a name="how-to-import-using-mixedrealityspatialdatapackagerexe"></a>Como importar usando MixedRealitySpatialDataPackager.exe
 ```
 MixedRealitySpatialDataPackager.exe import <folderpath to mapx files> <target package family name> <user SID>
 ```
