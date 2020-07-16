@@ -230,18 +230,21 @@
 
 ## Unreal
 ### [Visão geral do desenvolvimento do Unreal](unreal-development-overview.md)
-### [Entrada por foco no Unreal](unreal-gaze-input.md)
-### [Acompanhamento da mão no Unreal](unreal-hand-tracking.md)
-### [Câmera do HoloLens no Unreal](unreal-hololens-camera.md)
-### [Códigos QR no Unreal](unreal-qr-codes.md)
-### [Mapeamento espacial no Unreal](unreal-spatial-mapping.md)
-### [Áudio espacial no Unreal](unreal-spatial-audio.md)
-### [Âncoras espaciais no Unreal](unreal-spatial-anchors.md)
-### [Streaming no Unreal](unreal-streaming.md)
-### [Implantar no dispositivo no Unreal](unreal-deploying.md)
-### [Entrada de voz no Unreal](unreal-voice-input.md)
-### [WinRT no Unreal](unreal-winrt.md)
-### [Recomendações de desempenho para o Unreal](performance-recommendations-for-unreal.md)
+### Blocos principais de construção
+#### [Entrada por foco no Unreal](unreal-gaze-input.md)
+#### [Acompanhamento da mão no Unreal](unreal-hand-tracking.md)
+#### [Mapeamento espacial no Unreal](unreal-spatial-mapping.md)
+#### [Áudio espacial no Unreal](unreal-spatial-audio.md)
+#### [Âncoras espaciais no Unreal](unreal-spatial-anchors.md)
+#### [Entrada de voz no Unreal](unreal-voice-input.md)
+### Funcionalidades de plataforma e APIs
+#### [Câmera do HoloLens no Unreal](unreal-hololens-camera.md)
+#### [Códigos QR no Unreal](unreal-qr-codes.md)
+#### [WinRT no Unreal](unreal-winrt.md)
+### Implantação e desempenho
+#### [Implantar no dispositivo no Unreal](unreal-deploying.md)
+#### [Recomendações de desempenho para o Unreal](performance-recommendations-for-unreal.md)
+#### [Streaming no Unreal](unreal-streaming.md)
 
 ## JavaScript
 ### [Visão geral do desenvolvimento em JavaScript](javascript-development-overview.md)
