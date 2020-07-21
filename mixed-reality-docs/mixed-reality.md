@@ -7,12 +7,12 @@ ms.date: 03/21/2018
 ms.topic: article
 keywords: realidade misturada, holográfico, ra, vr, mr, xr, realidade aumentada, realidade virtual, explicação
 ms.localizationpriority: high
-ms.openlocfilehash: 7b0dcbdb88f880d4c1632fae874ba6a610f023fb
-ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
+ms.openlocfilehash: 541752ef32149f64f9b85616883c284b33bb8fed
+ms.sourcegitcommit: 8daefb763d1f23fe02b95b766b00b373f04c5c2d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "81278044"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86447902"
 ---
 # <a name="what-is-mixed-reality"></a>O que é realidade misturada?
 
@@ -117,7 +117,7 @@ Geralmente, é melhor considerar qual tipo de experiência um desenvolvedor de a
 ## <a name="see-also"></a>Veja também
 
 * [O que é um holograma?](hologram.md)
-* [Noções básicas da realidade misturada](index.md#understand-the-basics)
+* [Noções básicas da realidade misturada](get-started-with-mr.md#understand-the-basics)
 * [Comece a projetar e a criar protótipos](design.md)
 * [Conheça as ferramentas e a arquitetura](development.md)
 
