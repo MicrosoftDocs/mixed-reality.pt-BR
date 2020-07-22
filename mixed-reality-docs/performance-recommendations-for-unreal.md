@@ -7,12 +7,12 @@ ms.date: 5/5/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, mixed reality, performance, optimization, settings, documentation
-ms.openlocfilehash: 9f128a3ef09f29fc745c21b09b7ec97f5db33605
-ms.sourcegitcommit: 7f50210b71a65631fd1bc3fdb215064e0db34333
+ms.openlocfilehash: a7972962eeb2b1480a7da38210b5ee77104f508b
+ms.sourcegitcommit: 96ae8258539b2f3edc104dd0dce8bc66f3647cdd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84533118"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86303627"
 ---
 # <a name="performance-recommendations-for-unreal"></a>Recomendações de desempenho para o Unreal
 
@@ -32,10 +32,11 @@ Você pode encontrar cada uma das configurações a seguir em **Editar > Configu
     * Role até a seção **Mecanismo**, selecione **Renderização**, expanda a seção **Remoção** e desmarque **Remoção por Oclusão**.
         + Se você precisa usar a remoção por oclusão em uma cena detalhada que está sendo renderizada, recomendamos habilitar o **Suporte a Remoção por Oclusão de Software** em **Mecanismo > Renderização**. Isso permite que o Unreal faça o trabalho na CPU e evite consultas de oclusão de GPU, que têm mau desempenho no HoloLens 2.
 
-![Configuração de destino para dispositivos móveis](images/unreal/performance-recommendations-img-02.png)
+![Desabilitar a remoção de oclusão](images/unreal/performance-recommendations-img-02.png)
 
-3. Como atualizar renderização de VR:
-    * Role a página até a seção **Mecanismo**, selecione **Renderização**, expanda a seção **VR** e habilite **Estéreo Instanciado** e **Exibição Múltipla em Dispositivos Móveis**.
-        + Talvez seja necessário desmarcar **Pós-processamento em Dispositivos Móveis** para poder marcar **Exibição Múltipla em Dispositivos Móveis**
+3. Uso da exibição múltipla em dispositivos móveis:
+    * Role a página até a seção **Mecanismo**, selecione **Renderização**, expanda a seção **VR** e habilite **Estéreo Instanciado** e **Exibição Múltipla em Dispositivos Móveis**. O HDR móvel deve estar desmarcado.
 
-![Configuração de destino para dispositivos móveis](images/unreal/performance-recommendations-img-03.png)
+![Configurações de renderização de VR](images/unreal/performance-recommendations-img-03.png)
+
+4. Definir o **Número máximo de cascatas de CSM para renderizar** como **1** e **Luzes de spot/ponto máximas** como **0**. 

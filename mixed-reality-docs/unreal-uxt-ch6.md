@@ -7,12 +7,12 @@ ms.date: 06/10/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, mixed reality, tutorial, getting started, mrtk, uxt, UX Tools, documentation
-ms.openlocfilehash: 99407a4069f914bf077e6323dde3e12978f6b765
-ms.sourcegitcommit: 7ca383ef1c5dc895ca2a289435f2e9d4c1ee6e65
+ms.openlocfilehash: c49e2a69cb97a996da4bf601a105c2176ccf267f
+ms.sourcegitcommit: 96ae8258539b2f3edc104dd0dce8bc66f3647cdd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85345686"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86303537"
 ---
 # <a name="6-packaging--deploying-to-device-or-emulator"></a>6. Como empacotar e implantar no dispositivo ou emulador
 
@@ -30,15 +30,15 @@ A [comunicação remota holográfica](https://docs.microsoft.com/windows/mixed-r
 
 Se você estiver seguindo por esse caminho com o aplicativo de xadrez, precisará fazer algumas coisas:
 
-1.  Instale o **Player de Comunicação Remota Holográfica** por meio da Microsoft Store no seu HoloLens 2 e execute o aplicativo.
+1.  Instale o **Player de Comunicação Remota Holográfica** por meio da Microsoft Store no seu HoloLens 2 e execute o aplicativo. Anote o endereço IP exibido no aplicativo.
 
-2.  Acesse **Editar > Configurações do Projeto** e marque **habilitar a comunicação remota** na seção **Comunicação Remota Holográfica**.
+2.  De volta no editor do Unreal, acesse **Editar > Configurações do Projeto** e marque **Habilitar a Comunicação Remota** na seção **Comunicação Remota Holográfica**.
 
-3.  Reinicie o editor, [encontre o endereço IP do dispositivo](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-hololens#connect-over-wi-fi), insira-o e clique em **Conectar**.
+3.  Reinicie o editor e insira o endereço IP do dispositivo (conforme exibido no aplicativo Player de Comunicação Remota do Holographic) e clique em **Conectar**.
 
-Quando estiver conectado, clique na seta suspensa à direita do botão **Jogar** e selecione a **Visualização de VR**. Isso executará o aplicativo na Janela de Visualização de VR, que é transmitida para o headset do HoloLens. 
+Quando estiver conectado, clique na seta suspensa à direita do botão **Jogar** e selecione a **Visualização de VR**. Isso executará o aplicativo na janela de Visualização de VR, que é transmitida para o headset do HoloLens. 
 
-## <a name="packaging-and-deploying-the-app"></a>Como empacotar e implantar o aplicativo 
+## <a name="packaging-and-deploying-the-app-via-device-portal"></a>Empacotar e implantar o aplicativo por meio do portal do dispositivo
 
 >[!NOTE]
 >Se esta for a primeira vez que você empacota um aplicativo Unreal para o HoloLens, precisará baixar os arquivos de suporte do Epic Launcher. 

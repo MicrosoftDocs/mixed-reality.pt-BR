@@ -7,12 +7,12 @@ ms.date: 04/02/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Realidade Misturada, foco, direcionamento do foco, interação, design, mãos nas proximidades, HoloLens
-ms.openlocfilehash: 40a8441177582a55b58acbfbd15c7b506853e4da
-ms.sourcegitcommit: 6d9d01d53137435c787f247f095d5255581695fc
+ms.openlocfilehash: 2a63f53464e354ae49f8c63fafbf592508bd5e3b
+ms.sourcegitcommit: 0eb99fae933d4374af2c032af4e9ceda1807e532
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83227991"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86156777"
 ---
 # <a name="direct-manipulation-with-hands"></a>Manipulação direta com as mãos
 
@@ -327,9 +327,9 @@ Ao fazer isso, você move acidentalmente sua mão sobre alguns botões holográf
 ---
 
 ## <a name="manipulation-in-mrtk-mixed-reality-toolkit-for-unity"></a>Manipulação no MRTK (Kit de Ferramentas de Realidade Misturada) para o Unity
-Com o **[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** , você pode alcançar facilmente o comportamento de manipulação comum usando o script **ManipulationHandler**. Com o ManipulationHandler, você pode pegar e mover objetos diretamente com mãos ou com o raio de mão. Ele também dá suporte à manipulação com as duas mãos para dimensionar e girar um objeto.
+Com o **[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** , você pode alcançar facilmente o comportamento de manipulação comum usando o script **ObjectManipulator**. Com o ObjectManipulator, você pode pegar e mover objetos diretamente com mãos ou com o raio de mão. Ele também dá suporte à manipulação com as duas mãos para dimensionar e girar um objeto.
 
-* [MRTK – Manipulação](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_ManipulationHandler.html)
+* [MRTK – Manipulação](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_ObjectManipulator.html)
 
 
 ---
