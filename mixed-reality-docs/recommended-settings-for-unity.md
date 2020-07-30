@@ -3,15 +3,15 @@ title: Configurações recomendadas do Unity
 description: O Unity oferece alguns comportamentos específicos para a realidade misturada que pode ser alternada por meio de configurações do projeto.
 author: troy-ferrell
 ms.author: trferrel
-ms.date: 03/26/2019
+ms.date: 07/07/2020
 ms.topic: article
 keywords: Unity, configurações, realidade misturada
-ms.openlocfilehash: e7628a8653fffbab9c792161ac8ff1666b47fa62
-ms.sourcegitcommit: f523b74a549721b6bec69cb5d2eca5b7673a793c
+ms.openlocfilehash: d2cc79ba0818985795c49f8812d33eba77b92b74
+ms.sourcegitcommit: 161f3c5a80f6988a9c4af26e29481fee06840e0f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/30/2020
-ms.locfileid: "85570331"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87390113"
 ---
 # <a name="recommended-settings-for-unity"></a>Configurações recomendadas do Unity
 
@@ -23,9 +23,7 @@ O Unity fornece um conjunto de opções padrão que geralmente são o caso médi
 
 É importante modificar as configurações de **qualidade do Unity** para o seu ambiente para **muito baixo**. Isso ajudará a garantir que seu aplicativo esteja executando o forma definitiva na taxa de quadros apropriada. Isso é extremamente significativo para o desenvolvimento de HoloLens. Para o desenvolvimento de headsets de imersão, dependendo das especificações do desktop capacitando a experiência VR, ainda é possível obter uma taxa de quadros sem os parâmetros de qualidade mais baixos.
 
-No Unity 2018 LTS +, o nível de qualidade do projeto pode ser definido por:
-
-Em **Editar**  >  **configurações do projeto**  >  **qualidade** > defina o **padrão** clicando na seta para baixo para o nível de qualidade **muito baixo**
+No Unity 2019 LTS +, o nível de qualidade do projeto pode ser definido indo para **Editar**  >  **configurações do projeto**  >  **qualidade** e definindo o **padrão** clicando na seta para baixo para o nível de qualidade **muito baixo** .
 
 ### <a name="lighting-settings"></a>Configurações de iluminação
 
@@ -42,28 +40,28 @@ Leia a [iluminação global do Unity](https://docs.unity3d.com/Manual/GIIntro.ht
 
 Em aplicativos de realidade misturada, a cena é renderizada duas vezes, uma vez para cada olho para o usuário. Em comparação com o desenvolvimento 3D tradicional, isso efetivamente dobra a quantidade de trabalho que precisa ser computada. Portanto, é importante selecionar o caminho de renderização mais eficiente no Unity para economizar tanto na CPU quanto no tempo da GPU. A renderização de passagem única em instância otimiza o pipeline de renderização do Unity para aplicativos de realidade misturada e, portanto, é recomendável habilitar essa configuração por padrão para cada projeto.
 
-Para habilitar esse recurso em seu projeto do Unity
+Como habilitar esse recurso no seu projeto do Unity
 
-1)  Abra **as configurações do Player XR** (vá para **Editar**  >  **configurações do projeto**configurações do  >  **Player**  >  **XR**)
-2) Selecione **passagem única instância** no menu suspenso **método de renderização estéreo** (a caixa de seleção**com suporte da realidade virtual** deve estar marcada)
+1)  Abra **Configurações de XR do Player** (acesse **Editar** > **Configurações do Projeto** > **Player** > **Configurações de XR**)
+2) Selecione **Instância de Passagem Única** no menu suspenso **Método de Renderização de Estéreo** (a caixa de seleção **Realidade Virtual Compatível** precisa estar marcada)
 
 Leia os artigos a seguir do Unity para obter mais detalhes com essa abordagem de renderização.
 
-- [Como maximizar o desempenho de AR e VR com renderização avançada de estéreo](https://blogs.unity3d.com/2017/11/21/how-to-maximize-ar-and-vr-performance-with-advanced-stereo-rendering/)
+- [Como maximizar o desempenho de RA e VR com a renderização avançada de estéreo](https://blogs.unity3d.com/2017/11/21/how-to-maximize-ar-and-vr-performance-with-advanced-stereo-rendering/)
 - [Instância de passagem única](https://docs.unity3d.com/Manual/SinglePassInstancing.html)
 
 >[!NOTE]
-> Um problema comum com a renderização de passagem única ocorrerá se os desenvolvedores já tiverem sombreadores personalizados existentes não escritos para instanciação. Depois de habilitar esse recurso, os desenvolvedores podem perceber que alguns GameObjects são renderizados apenas de um olho. Isso ocorre porque os sombreadores personalizados associados não têm as propriedades apropriadas para instanciação.
+> Um problema comum na renderização com uma instância de passagem única ocorre se os desenvolvedores já têm sombreadores personalizados existentes não escritos para a criação de instância. Depois de habilitar esse recurso, os desenvolvedores poderão perceber que alguns GameObjects são renderizados apenas em um olho. Isso ocorre porque os sombreadores personalizados associados não têm as propriedades apropriadas para a criação de instância.
 >
-> Consulte [renderização de estéreo de passagem única para o HoloLens](https://docs.unity3d.com/Manual/SinglePassStereoRenderingHoloLens.html) do Unity para saber como resolver esse problema
+> Confira [Renderização de estéreo de passagem única para o HoloLens](https://docs.unity3d.com/Manual/SinglePassStereoRenderingHoloLens.html) do Unity para saber como resolver esse problema
 
 ### <a name="enable-depth-buffer-sharing"></a>Habilitar compartilhamento de buffer de profundidade
 
 Para obter uma melhor estabilidade de holograma da percepção do usuário, é recomendável habilitar a propriedade de **compartilhamento de buffer de profundidade** no Unity. Ao ativar essa ação, o Unity compartilhará o mapa de profundidade produzido por seu aplicativo com a plataforma Windows Mixed Reality. A plataforma então será capaz de otimizar melhor a estabilidade do holograma especificamente para sua cena para qualquer determinado quadro que esteja sendo renderizado pelo seu aplicativo.
 
-Para habilitar esse recurso em seu projeto do Unity
+Como habilitar esse recurso no seu projeto do Unity
 
-1) Abra **as configurações do Player XR** (vá para **Editar**  >  **configurações do projeto**configurações do  >  **Player**  >  **XR**)
+1) Abra **Configurações de XR do Player** (acesse **Editar** > **Configurações do Projeto** > **Player** > **Configurações de XR**)
 2) Marque a caixa de seleção para **habilitar o compartilhamento de buffer de profundidade** em SDKs da **realidade virtual**  >  **Windows misto** expansão de realidade (a caixa de seleção**com suporte da realidade virtual** deve estar marcada)
 
 Além disso, é recomendável selecionar **profundidade de 16 bits** na configuração de **formato de profundidade** neste painel, especialmente para o desenvolvimento de HoloLens. A seleção de 16 bits em comparação a 24 bits reduzirá significativamente os requisitos de largura de banda, pois menos dados precisarão ser movidos/processados.
@@ -161,7 +159,7 @@ Os recursos podem ser habilitados para um aplicativo de realidade misturada:
 Os recursos aplicáveis para habilitar as APIs comumente usadas para aplicativos Holographic são:
 <br>
 
-|  Recurso  |  APIs que exigem capacidade |
+|  Funcionalidade  |  APIs que exigem capacidade |
 |----------|----------|
 |  SpatialPerception  |  SurfaceObserver |
 |  Integrada  |  VideoCapture e fotocaptura |
@@ -172,5 +170,5 @@ Os recursos aplicáveis para habilitar as APIs comumente usadas para aplicativos
 ## <a name="see-also"></a>Confira também
 
 * [Visão geral do desenvolvimento do Unity](unity-development-overview.md)
-* [Entendendo o desempenho da realidade misturada](understanding-performance-for-mixed-reality.md)
+* [Noções básicas sobre o desempenho da Realidade Misturada](understanding-performance-for-mixed-reality.md)
 * [Recomendações de desempenho para Unity](performance-recommendations-for-unity.md)

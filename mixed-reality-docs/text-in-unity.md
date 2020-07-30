@@ -6,12 +6,12 @@ ms.author: dongpark
 ms.date: 06/03/2019
 ms.topic: article
 keywords: Windows Mixed Reality, design, controles, fonte, tipografia, interface do usuário, UX
-ms.openlocfilehash: 8662ff8a8e1e99455354392d7dc852feb1fe1589
-ms.sourcegitcommit: 7ca383ef1c5dc895ca2a289435f2e9d4c1ee6e65
+ms.openlocfilehash: 6aa03eedf717fb73877db8660526e13444c43fe9
+ms.sourcegitcommit: 2f5f95a9ca1b02d94eb9163f0f4ff6b1e4126de2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85345706"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87376568"
 ---
 # <a name="text-in-unity"></a>Texto no Unity
 
@@ -98,8 +98,8 @@ O material de fonte padrão do Unity não oferece suporte a oclusão. Por isso, 
 *Sombreador com suporte a oclusão*
 
 
-## <a name="see-also"></a>Veja também
-* [Pré-fabricado de texto no MRTK](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MixedRealityToolkit.SDK/StandardAssets/Prefabs/Text)
+## <a name="see-also"></a>Confira também
+* [Pré-fabricado de texto no MRTK](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MRTK/SDK/StandardAssets/Prefabs/Text)
 * [Tipografia](typography.md)
 
  
