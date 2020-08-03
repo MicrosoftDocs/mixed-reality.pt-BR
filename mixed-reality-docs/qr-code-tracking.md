@@ -1,19 +1,19 @@
 ---
-title: Controle de código QR
+title: Acompanhamento de código QR
 description: Saiba como detectar códigos QR no HoloLens 2.
 author: dorreneb
 ms.author: dobrown
 ms.date: 05/15/2019
 ms.topic: article
 keywords: VR, LBE, entretenimento baseado na localização, VR de los, de los, de imersão, QR, QR Code, hololens2
-ms.openlocfilehash: e14fe14fd76bceaf506dd7b85a57825c3f18d223
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 6d3dc442c28e498cc00e14325398de2026261a17
+ms.sourcegitcommit: ef0bf03833eda826ed0b884859b4573775112aba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438113"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87476758"
 ---
-# <a name="qr-code-tracking"></a>Controle de código QR
+# <a name="qr-code-tracking"></a>Acompanhamento de código QR
 
 O HoloLens 2 pode detectar códigos QR no ambiente em todo o headset, estabelecendo um sistema de coordenadas na localização do mundo real de cada código.
 
@@ -23,12 +23,12 @@ O HoloLens 2 pode detectar códigos QR no ambiente em todo o headset, estabelece
 <tr>
 <th>Recurso</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens (1ª geração)</a></th><th style="width:150px">HoloLens 2</th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Headsets imersivos</a></th>
 </tr><tr>
-<td> Detecção de código QR</td><td style="text-align: center;">‎</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;">Consulte a observação</td>
+<td> Detecção de código QR</td><td style="text-align: center;">️</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;">✔️</td>
 </tr>
 </table>
 
 >[!NOTE]
->No momento, não há suporte para o suporte a headsets de imersão misturadas do Windows em computadores desktop com o pacote NuGet abaixo.  Fique atento para obter mais atualizações sobre o suporte a desktops.
+>O controle de código QR com alto-se com o Windows Mixed Realm headsets em computadores desktop tem suporte no Windows 10 versão 2004 e superior. Use a API Microsoft. MixedReality. QRCodeWatcher. IsSupported () para determinar se o recurso tem suporte no dispositivo atual.
 
 ## <a name="getting-the-qr-package"></a>Obtendo o pacote QR
 Você pode baixar o pacote NuGet para detecção de código QR [aqui](https://nuget.org/Packages/Microsoft.MixedReality.QR).
@@ -36,31 +36,31 @@ Você pode baixar o pacote NuGet para detecção de código QR [aqui](https://nu
 ## <a name="detecting-qr-codes"></a>Detectando códigos QR
 
 ### <a name="adding-the-webcam-capability"></a>Adicionando o recurso de webcam
-Será necessário adicionar o recurso `webcam` ao seu manifesto para detectar códigos QR. Esse recurso é necessário, pois os dados dentro de códigos detectados no ambiente do usuário podem conter informações confidenciais.
+Você precisará adicionar a capacidade `webcam` ao seu manifesto para detectar códigos QR. Esse recurso é necessário, pois os dados dentro de códigos detectados no ambiente do usuário podem conter informações confidenciais.
 
-A permissão pode ser solicitada chamando `QRCodeWatcher.RequestAccessAsync()`:
+A permissão pode ser solicitada chamando `QRCodeWatcher.RequestAccessAsync()` :
 
-_C#:_
+_C#_
 ```cs
 await QRCodeWatcher.RequestAccessAsync();
 ```
 
-_C++:_
+_C_
 ```cpp
 co_await QRCodeWatcher.RequestAccessAsync();
 ```
 
 A permissão deve ser solicitada antes de construir um objeto QRCodeWatcher.
 
-Embora a detecção de código QR exija o recurso `webcam`, a detecção ocorre usando as câmeras de rastreamento do dispositivo. Isso fornece uma FOV de detecção mais ampla e uma melhor vida útil da bateria em comparação com a detecção com a câmera de foto/vídeo (PV) do dispositivo.
+Embora a detecção de código QR exija o `webcam` recurso, a detecção ocorre usando as câmeras de rastreamento do dispositivo. Isso fornece uma FOV de detecção mais ampla e uma melhor vida útil da bateria em comparação com a detecção com a câmera de foto/vídeo (PV) do dispositivo.
 
 ### <a name="detecting-qr-codes-in-unity"></a>Detectando códigos QR no Unity
 
 Você pode usar a API de detecção de código QR no Unity sem usar uma dependência no MRTK. Para fazer isso, você deve instalar o pacote NuGet usando o [NuGet para Unity](https://github.com/GlitchEnzo/NuGetForUnity).
 
-Há um aplicativo do Unity de exemplo que exibe um quadrado Holographic sobre códigos QR, juntamente com os dados associados, como GUID, tamanho físico, carimbo de data/hora e dados decodificados. Esse aplicativo pode estar localizado em https://github.com/chgatla-microsoft/QRTracking/tree/master/SampleQRCodes.
+Há um aplicativo do Unity de exemplo que exibe um quadrado Holographic sobre códigos QR, juntamente com os dados associados, como GUID, tamanho físico, carimbo de data/hora e dados decodificados. Esse aplicativo pode ser localizado em https://github.com/chgatla-microsoft/QRTracking/tree/master/SampleQRCodes .
 
-### <a name="detecting-qr-codes-in-c"></a>Detectando códigos QR noC++
+### <a name="detecting-qr-codes-in-c"></a>Detectando códigos QR em C++
 
 ```cpp
 using namespace winrt::Windows::Foundation;
