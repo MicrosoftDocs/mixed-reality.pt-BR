@@ -6,12 +6,12 @@ ms.author: dongpark
 ms.date: 06/03/2019
 ms.topic: article
 keywords: Windows Mixed Reality, design, controles, fonte, tipografia, interface do usuário, UX
-ms.openlocfilehash: 6aa03eedf717fb73877db8660526e13444c43fe9
-ms.sourcegitcommit: 2f5f95a9ca1b02d94eb9163f0f4ff6b1e4126de2
+ms.openlocfilehash: 63f0992a4623cf91c1b9c62c4ebf30de12529515
+ms.sourcegitcommit: ef0bf03833eda826ed0b884859b4573775112aba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87376568"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87476938"
 ---
 # <a name="text-in-unity"></a>Texto no Unity
 
@@ -83,22 +83,24 @@ Segoe UI (a fonte padrão do Windows) funciona bem na maioria dos casos. No enta
 ![Exibindo ângulo ](images/Text_In_Unity_ViewingAngle.jpg)
  *exibindo a distância, o ângulo e a altura do texto*
 
-## <a name="sharp-text-rendering-quality-with-proper-dimension"></a>Qualidade de renderização de texto nítido com dimensão adequada
+## <a name="text-with-mixed-reality-toolkit-v2"></a>Texto com o kit de ferramentas de realidade misturada v2
+
+### <a name="sharp-text-rendering-quality-with-proper-dimension"></a>Qualidade de renderização de texto nítido com dimensão adequada
 
 Com base nesses fatores de dimensionamento, criamos [texto pré-fabricados com o texto da interface do usuário e a malha de texto 3D](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MRTK/SDK/StandardAssets/Prefabs/Text). Os desenvolvedores podem usar esses pré-fabricados para obter texto nítido e tamanho de fonte consistente.
 
 ![Qualidade de renderização de texto nítido com dimensão adequada](images/hug-text-06-1000px.png)<br>
 *Qualidade de renderização de texto nítido com dimensão adequada*
 
-## <a name="shader-with-occlusion-support"></a>Sombreador com suporte a oclusão
+### <a name="shader-with-occlusion-support"></a>Sombreador com suporte a oclusão
 
-O material de fonte padrão do Unity não oferece suporte a oclusão. Por isso, você verá o texto por trás dos objetos por padrão. Incluímos um [sombreador simples que dá suporte ao oclusão](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_release/Assets/MixedRealityToolkit/StandardAssets/Shaders/Text3DShader.shader). A imagem abaixo mostra o texto com material de fonte padrão (esquerda) e o texto com oclusão apropriado (direita).
+O material de fonte padrão do Unity não oferece suporte a oclusão. Por isso, você verá o texto por trás dos objetos por padrão. Incluímos um [sombreador simples que dá suporte ao oclusão](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_release/Assets/MRTK/Core/StandardAssets/Shaders/Text3DShader.shader). A imagem abaixo mostra o texto com material de fonte padrão (esquerda) e o texto com oclusão apropriado (direita).
 
 ![Sombreador com suporte a oclusão](images/hug-text-07-1000px.png)<br>
 *Sombreador com suporte a oclusão*
 
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 * [Pré-fabricado de texto no MRTK](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MRTK/SDK/StandardAssets/Prefabs/Text)
 * [Tipografia](typography.md)
 

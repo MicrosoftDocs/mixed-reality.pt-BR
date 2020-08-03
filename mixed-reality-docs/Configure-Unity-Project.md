@@ -3,15 +3,15 @@ title: Configurar um novo projeto do Unity para a realidade mista do Windows
 description: Instruções sobre como configurar um projeto do Unity para o Windows Mixed Reality
 author: thetuvix
 ms.author: alexturn
-ms.date: 04/15/2018
+ms.date: 07/29/2020
 ms.topic: article
 keywords: Unity, realidade mista, desenvolvimento, introdução, novo projeto
-ms.openlocfilehash: 64f7006bf212f49ab1c478d5dbb1fc1f5ab15497
-ms.sourcegitcommit: 161f3c5a80f6988a9c4af26e29481fee06840e0f
+ms.openlocfilehash: 877bdb803dc69e519a274eedabb8e51fe0197689
+ms.sourcegitcommit: ef0bf03833eda826ed0b884859b4573775112aba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87390093"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87476768"
 ---
 # <a name="configure-a-new-unity-project-for-windows-mixed-reality"></a>Configurar um novo projeto do Unity para a realidade mista do Windows 
 
@@ -90,6 +90,6 @@ Se seu aplicativo estiver direcionando para o HoloLens especificamente, você pr
 > [!IMPORTANT]
 > Se você excluir e criar uma nova câmera, verifique se a nova câmera está marcada como **MainCamera**.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 * [Kit de Ferramentas de Realidade Misturada v2](mrtk-getting-started.md)
 * [Visão geral do desenvolvimento do Unity](unity-development-overview.md)
