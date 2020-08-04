@@ -102,7 +102,7 @@
 
 <!-- Develop top level folder -->
 # Desenvolver
-## [Conheça as ferramentas e a arquitetura](development.md)
+## [Introdução ao desenvolvimento de Realidade Misturada](development.md)
 ## [Instalar as ferramentas](install-the-tools.md)
 ## [Visão geral dos serviços de nuvem](mixed-reality-cloud-services.md)
 
@@ -221,7 +221,8 @@
 #### [Objetos nativos de realidade misturada no Unity](unity-xrdevice-advanced.md)
 #### [Como usar o Vuforia com o Unity](vuforia-development-overview.md)
 
-### Aplicativos de exemplo
+### Exemplos de aplicativos
+#### [Visão geral](samples.md)
 #### HoloLens 2
 ##### [Surfaces](sampleapp-surfaces.md)
 ##### [Tabela periódica dos elementos 2.0](https://medium.com/@dongyoonpark/bringing-the-periodic-table-of-the-elements-app-to-hololens-2-with-mrtk-v2-a6e3d8362158)
