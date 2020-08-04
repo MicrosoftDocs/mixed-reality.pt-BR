@@ -3,16 +3,16 @@ title: Tutoriais de Âncoras Espaciais do Azure – 5. Âncoras Espaciais do Azu
 description: Conclua este curso para aprender a implantar um projeto do Unity com o Kit de Ferramentas de Realidade Misturada e Âncoras Espaciais do Azure para Android e iOS.
 author: jessemcculloch
 ms.author: jemccull
-ms.date: 02/26/2019
+ms.date: 07/01/2020
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens, android, ios
 ms.localizationpriority: high
-ms.openlocfilehash: e95b659eed3bfb406dcc41d5b3ad6e5e18c764a5
-ms.sourcegitcommit: 96ae8258539b2f3edc104dd0dce8bc66f3647cdd
+ms.openlocfilehash: 8c63204948b3e4aa3d25e5b2ca948798726f0838
+ms.sourcegitcommit: 2f5f95a9ca1b02d94eb9163f0f4ff6b1e4126de2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86303920"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87376538"
 ---
 # <a name="5-azure-spatial-anchors-for-android-and-ios"></a>5. Âncoras Espaciais do Azure para o Android e o iOS
 

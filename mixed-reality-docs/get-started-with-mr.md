@@ -3,16 +3,16 @@ title: Introdução à Realidade Misturada
 description: Para ajudar alguém novo na realidade misturada a saber o que ela é e entender suas funcionalidades.
 author: grbury
 ms.author: grbury
-ms.date: 08/24/2019
+ms.date: 07/29/2020
 ms.topic: overview
 ms.localizationpriority: high
 keywords: Mixed Reality, discover, distribute, index, landing page, design, development, tutorials, sample apps, fundamentals, case studies, resources, HoloLens how-to, Open source projects
-ms.openlocfilehash: 720261164a4b2eedc47c1054f19edfb109ed3f83
-ms.sourcegitcommit: 8daefb763d1f23fe02b95b766b00b373f04c5c2d
+ms.openlocfilehash: 010e0b9d73b5537d480a28ee510fe2ae1bde3b10
+ms.sourcegitcommit: ef0bf03833eda826ed0b884859b4573775112aba
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86451347"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87476918"
 ---
 # <a name="get-started-with-mixed-reality"></a>Introdução à Realidade Misturada
 
@@ -184,7 +184,7 @@ Para exibir conteúdo com aparência realista no formulário holográfico é fun
     :::column:::
        [![Experimente](images/icon-hololensuser.jpg)](https://www.microsoft.com//windows/windows-mixed-reality?icid=SSM_Search_Promo_XCat_WindowsMixedReality_CTA1#storelocator)<br>
         **[Experimente a realidade misturada](https://www.microsoft.com//windows/windows-mixed-reality?icid=SSM_Search_Promo_XCat_WindowsMixedReality_CTA1#storelocator)**<br>
-        Obtenha uma demonstração da Realidade Misturada e do HoloLens na Microsoft Store local. 
+        Obtenha uma demonstração da Realidade Misturada e do HoloLens na Microsoft Store local.
     :::column-end:::
     :::column:::
         [![Torne-se um criador](images/icon-design.jpg)](design.md)<br>
@@ -211,4 +211,4 @@ Para exibir conteúdo com aparência realista no formulário holográfico é fun
 
 
 >[!IMPORTANT]
->Todos os materiais de desenvolvimento de realidade misturada são fornecidos neste site somente para referência. Seu aplicativo, seu uso e seu efeito sobre os usuários finais é de sua responsabilidade exclusiva como o desenvolvedor do aplicativo, incluindo a garantia de que o aplicativo não causará desconforto, lesão ou nenhum outro dano ao usuário final, incluindo avisos e isenções de responsabilidade apropriados. É necessário sempre seguir as etapas apropriadas no desenvolvimento e na publicação do seu aplicativo para garantir que ele seja seguro e atenda a todas as obrigações do [Contrato de Desenvolvedor de Aplicativos com a Microsoft](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement). 
+>Todos os materiais de desenvolvimento de realidade misturada são fornecidos neste site somente para referência. Seu aplicativo, seu uso e seu efeito sobre os usuários finais é de sua responsabilidade exclusiva como o desenvolvedor do aplicativo, incluindo a garantia de que o aplicativo não causará desconforto, lesão ou nenhum outro dano ao usuário final, incluindo avisos e isenções de responsabilidade apropriados. É necessário sempre seguir as etapas apropriadas no desenvolvimento e na publicação do seu aplicativo para garantir que ele seja seguro e atenda a todas as obrigações do [Contrato de Desenvolvedor de Aplicativos com a Microsoft](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement).

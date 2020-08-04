@@ -3,16 +3,16 @@ title: Tutoriais de Nuvem do Azure – 2. Integrar o armazenamento do Azure
 description: Conclua este curso para aprender a implementar o Armazenamento de Tabelas do Azure e o Armazenamento de Blobs do Azure em um aplicativo do HoloLens 2.
 author: jessemcculloch
 ms.author: jemccull
-ms.date: 02/26/2019
+ms.date: 07/01/2020
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens, hololens 2, azure storage
 ms.localizationpriority: high
-ms.openlocfilehash: 847e7a93717951af48157f0af32397d686cbbb84
-ms.sourcegitcommit: 96ae8258539b2f3edc104dd0dce8bc66f3647cdd
+ms.openlocfilehash: a8d91bc55b3ce73d6e1fb46e5d696d853adcf871
+ms.sourcegitcommit: 2f5f95a9ca1b02d94eb9163f0f4ff6b1e4126de2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86303911"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87376468"
 ---
 # <a name="2-integrating-azure-storage"></a>2. Integrar o armazenamento do Azure
 

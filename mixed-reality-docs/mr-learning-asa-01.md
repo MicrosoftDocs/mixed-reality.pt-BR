@@ -3,16 +3,16 @@ title: Tutoriais de Âncoras Espaciais do Azure – 1. Introdução
 description: Conclua este curso para saber como implementar as Âncoras Espaciais do Azure em um aplicativo de realidade misturada.
 author: jessemcculloch
 ms.author: jemccull
-ms.date: 02/26/2019
+ms.date: 07/01/2020
 ms.topic: article
 keywords: realidade misturada, unity, tutorial, hololens
 ms.localizationpriority: high
-ms.openlocfilehash: 6a015b4c9f6a5c1a92697ef9909443234a98ab09
-ms.sourcegitcommit: 96ae8258539b2f3edc104dd0dce8bc66f3647cdd
+ms.openlocfilehash: f273c573d40b1e65e325bd31b5dd9e14c1ee66ec
+ms.sourcegitcommit: 2f5f95a9ca1b02d94eb9163f0f4ff6b1e4126de2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86303931"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87376548"
 ---
 # <a name="1-introduction"></a>1. Introdução
 
