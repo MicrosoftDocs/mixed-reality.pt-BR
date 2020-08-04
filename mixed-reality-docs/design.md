@@ -8,17 +8,17 @@ ms.date: 08/24/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Realidade Misturada, descobrir, distribuir, indexar, página de aterrissagem desenvolvimento, tutoriais, aplicativos de exemplo, conceitos básicos, estudos de caso, recursos, instruções sobre o HoloLens, projetos de software livre, principais conceitos, interação
-ms.openlocfilehash: 708a6f83c2de149be9c221130b83f5d787f8f56a
-ms.sourcegitcommit: 8daefb763d1f23fe02b95b766b00b373f04c5c2d
+ms.openlocfilehash: a95de2020e4020db86e7e226a81fcad8a12e7427
+ms.sourcegitcommit: ef0bf03833eda826ed0b884859b4573775112aba
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86447912"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87476858"
 ---
 # <a name="start-designing-and-prototyping"></a>Comece a projetar e a criar protótipos
 
 
-![resumo do design de realidade misturada](images/03_Design.png)
+![resumo do design de realidade misturada](images/design-hero-image.png)
 
 ## <a name="expand-your-design-process"></a>[Expanda seu processo de design](case-study-expanding-the-design-process-for-mixed-reality.md)
 
