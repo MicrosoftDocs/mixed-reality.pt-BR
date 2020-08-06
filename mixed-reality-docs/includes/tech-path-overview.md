@@ -1,0 +1,127 @@
+# <a name="unity"></a>[<span data-ttu-id="2c3c9-101">Unity</span><span class="sxs-lookup"><span data-stu-id="2c3c9-101">Unity</span></span>](#tab/unity)
+
+![Unity](../images/unity_logo_banner.png)<br>
+
+<span data-ttu-id="2c3c9-103">Crie um aplicativo de realidade misturada cheio de recursos multiplataforma com o Unity.</span><span class="sxs-lookup"><span data-stu-id="2c3c9-103">Build a cross-platform, full-featured mixed reality app with Unity.</span></span> <span data-ttu-id="2c3c9-104">Confira a [visão geral de desenvolvimento no Unity](../unity-development-overview.md) para começar a usá-lo para o HoloLens ou os headsets imersivos do Windows Mixed Reality.</span><span class="sxs-lookup"><span data-stu-id="2c3c9-104">See the [Unity development overview](../unity-development-overview.md) to get started with Unity development for HoloLens or Windows Mixed Reality immersive headsets.</span></span>
+
+## <a name="what-does-unity-offer"></a><span data-ttu-id="2c3c9-105">O que o Unity oferece?</span><span class="sxs-lookup"><span data-stu-id="2c3c9-105">What does Unity offer?</span></span>
+
+<span data-ttu-id="2c3c9-106">O Unity é uma das principais plataformas de desenvolvimento em tempo real do mercado, oferecendo um ecossistema com uma [plataforma dedicada de aprendizado](https://unity.com/products/learn-premium), um [repositório de ativos](https://assetstore.unity.com/) e [documentação completa](https://docs.unity3d.com/Manual/index.html), bem uma comunidade ativa.</span><span class="sxs-lookup"><span data-stu-id="2c3c9-106">Unity is one of the leading real-time development platforms on the market, boasting an ecosystem with a dedicated [learning platform](https://unity.com/products/learn-premium), [asset store](https://assetstore.unity.com/), [full documentation](https://docs.unity3d.com/Manual/index.html), and a thriving community.</span></span> <span data-ttu-id="2c3c9-107">O código de runtime subjacente do Unity é escrito em C++, mas todo o script de desenvolvimento é feito em C#.</span><span class="sxs-lookup"><span data-stu-id="2c3c9-107">Unity's underlying runtime code is written in C++, but all development scripting is done in C#.</span></span> <span data-ttu-id="2c3c9-108">Se você está buscando criar jogos, filmes e cinemática de animação ou, até mesmo, renderizar conceitos de arquitetura ou engenharia em um mundo virtual, o Unity tem a infraestrutura certa para ajudar você.</span><span class="sxs-lookup"><span data-stu-id="2c3c9-108">Whether you're looking to build games, movies and animation cinematics, or even render architectural or engineering concepts in a virtual world, Unity has the infrastructure to support you.</span></span>
+
+## <a name="available-hardware-platforms"></a><span data-ttu-id="2c3c9-109">Plataformas de hardware disponíveis</span><span class="sxs-lookup"><span data-stu-id="2c3c9-109">Available hardware platforms</span></span>
+
+<span data-ttu-id="2c3c9-110">Há várias opções de hardware e emulador disponíveis para a criação de aplicativos de Realidade Misturada com o Unity.</span><span class="sxs-lookup"><span data-stu-id="2c3c9-110">You have several hardware and emulator options when building Mixed Reality apps with Unity.</span></span> <span data-ttu-id="2c3c9-111">Embora o foco da nossa documentação para desenvolvedores esteja nos dispositivos HoloLens, você encontrará seções de suporte a dispositivos com detalhes sobre a implantação de headsets imersivos, quando aplicável.</span><span class="sxs-lookup"><span data-stu-id="2c3c9-111">While our developer documentation focuses on HoloLens devices, you'll find device support sections with details on immersive headset deployment when applicable.</span></span>
+
+<span data-ttu-id="2c3c9-112">**Dispositivos de realidade aumentada**</span><span class="sxs-lookup"><span data-stu-id="2c3c9-112">**Augmented reality devices**</span></span>
+* [<span data-ttu-id="2c3c9-113">HoloLens (1ª geração)</span><span class="sxs-lookup"><span data-stu-id="2c3c9-113">HoloLens (1st Gen)</span></span>](https://docs.microsoft.com/hololens/hololens1-hardware)
+* [<span data-ttu-id="2c3c9-114">HoloLens 2</span><span class="sxs-lookup"><span data-stu-id="2c3c9-114">HoloLens 2</span></span>](https://docs.microsoft.com/hololens/hololens2-hardware)
+
+<span data-ttu-id="2c3c9-115">**Headsets imersivos de VR**</span><span class="sxs-lookup"><span data-stu-id="2c3c9-115">**Immersive VR headsets**</span></span>
+* <span data-ttu-id="2c3c9-116">HP Reverb e Reverb G2</span><span class="sxs-lookup"><span data-stu-id="2c3c9-116">HP Reverb and Reverb G2</span></span>
+* <span data-ttu-id="2c3c9-117">Samsung Odyssey e Odyssey+</span><span class="sxs-lookup"><span data-stu-id="2c3c9-117">Samsung Odyssey and Odyssey+</span></span>
+* <span data-ttu-id="2c3c9-118">Headset do HP Windows Mixed Reality</span><span class="sxs-lookup"><span data-stu-id="2c3c9-118">HP Windows Mixed Reality headset</span></span>
+* <span data-ttu-id="2c3c9-119">Lenovo Explorer</span><span class="sxs-lookup"><span data-stu-id="2c3c9-119">Lenovo Explorer</span></span>
+* <span data-ttu-id="2c3c9-120">Acer AH101</span><span class="sxs-lookup"><span data-stu-id="2c3c9-120">Acer AH101</span></span>
+* <span data-ttu-id="2c3c9-121">Dell Visor</span><span class="sxs-lookup"><span data-stu-id="2c3c9-121">Dell Visor</span></span>
+* <span data-ttu-id="2c3c9-122">Asus HC102</span><span class="sxs-lookup"><span data-stu-id="2c3c9-122">Asus HC102</span></span>
+* <span data-ttu-id="2c3c9-123">Acer OJO 500</span><span class="sxs-lookup"><span data-stu-id="2c3c9-123">Acer OJO 500</span></span>
+
+## <a name="available-tools-and-sdks"></a><span data-ttu-id="2c3c9-124">Ferramentas e SDKs disponíveis</span><span class="sxs-lookup"><span data-stu-id="2c3c9-124">Available tools and SDKs</span></span>
+
+|  <span data-ttu-id="2c3c9-125">Ferramenta/SDK</span><span class="sxs-lookup"><span data-stu-id="2c3c9-125">Tool/SDK</span></span>  |  <span data-ttu-id="2c3c9-126">Descrição</span><span class="sxs-lookup"><span data-stu-id="2c3c9-126">Description</span></span>  |
+| --- | --- |
+| [<span data-ttu-id="2c3c9-127">Kit de Ferramentas de Realidade Misturada para Unity</span><span class="sxs-lookup"><span data-stu-id="2c3c9-127">Mixed Reality Toolkit for Unity</span></span>](../mrtk-getting-started.md) | <span data-ttu-id="2c3c9-128">O Kit de Ferramentas de Realidade Misturada para Unity é um kit de desenvolvimento multiplataforma de software livre criado para acelerar o desenvolvimento de aplicativos destinados ao Microsoft HoloLens, a headsets imersivos (VR) do Windows Mixed Reality e à plataforma OpenVR.</span><span class="sxs-lookup"><span data-stu-id="2c3c9-128">The Mixed Reality Toolkit for Unity is an open source cross-platform development kit built to accelerate development of applications targeting Microsoft HoloLens, Windows Mixed Reality immersive (VR) headsets and OpenVR platform.</span></span> |
+
+## <a name="examples"></a><span data-ttu-id="2c3c9-129">Exemplos</span><span class="sxs-lookup"><span data-stu-id="2c3c9-129">Examples</span></span>
+
+<span data-ttu-id="2c3c9-130">Temos vários [aplicativos de exemplo](../samples.md) de software livre para você baixar e experimentar e ter uma ideia de um produto final de Realidade Misturada no Unity.</span><span class="sxs-lookup"><span data-stu-id="2c3c9-130">We have several open source [sample apps](../samples.md) for you to download and play around with to get a feel for a Mixed Reality end product in Unity.</span></span> <span data-ttu-id="2c3c9-131">Também há cenas de exemplo do MRTK disponíveis para você testar recursos específicos:</span><span class="sxs-lookup"><span data-stu-id="2c3c9-131">There are also MRTK example scenes available for you to test out specific features:</span></span>
+* <span data-ttu-id="2c3c9-132">[Cena de exemplo de interação das mãos (MRTK) para Unity](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/GettingStartedWithTheMRTK.html#open-and-run-the-handinteractionexamples-scene-in-editor): a cena de exemplo HandInteractionExamples.unity contém vários tipos de interações e controles de interface do usuário que realçam a entrada de mão articulada.</span><span class="sxs-lookup"><span data-stu-id="2c3c9-132">[Hand interaction examples scene (MRTK) for Unity](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/GettingStartedWithTheMRTK.html#open-and-run-the-handinteractionexamples-scene-in-editor) - The HandInteractionExamples.unity example scene contains various types of interactions and UI controls that highlight articulated hand input.</span></span>
+
+* <span data-ttu-id="2c3c9-133">[Exemplos de acompanhamento ocular (MRTK) para Unity](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_ExamplesOverview.html): essa página mostra como começar a usar rapidamente o acompanhamento ocular no MRTK tendo como base os exemplos fornecidos de acompanhamento ocular do MRTK.</span><span class="sxs-lookup"><span data-stu-id="2c3c9-133">[Eye tracking examples (MRTK) for Unity](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_ExamplesOverview.html) - This page covers how to get quickly started with using eye tracking in MRTK by building on our provided MRTK eye tracking examples.</span></span>
+
+>[!NOTE]
+><span data-ttu-id="2c3c9-134">As duas cenas de exemplo do MRTK exigem a instalação dos pacotes do MRTK Foundation e do Unity de exemplo.</span><span class="sxs-lookup"><span data-stu-id="2c3c9-134">Both of the MRTK example scenes require MRTK Foundation and Example Unity packages to be installed.</span></span>
+
+# <a name="unreal"></a>[<span data-ttu-id="2c3c9-135">Unreal</span><span class="sxs-lookup"><span data-stu-id="2c3c9-135">Unreal</span></span>](#tab/unreal)
+
+![Unreal](../images/unreal_logo_banner.png)
+
+<span data-ttu-id="2c3c9-137">Crie um aplicativo de realidade misturada completo multiplataforma com o Unreal.</span><span class="sxs-lookup"><span data-stu-id="2c3c9-137">Build a cross-platform, full-featured mixed reality app with Unreal.</span></span> <span data-ttu-id="2c3c9-138">Confira a [visão geral do desenvolvimento no Unreal](../unreal-development-overview.md) para começar a usá-lo para o HoloLens.</span><span class="sxs-lookup"><span data-stu-id="2c3c9-138">See the [Unreal development overview](../unreal-development-overview.md) to get started with Unreal development for HoloLens.</span></span>
+
+## <a name="what-does-unreal-offer"></a><span data-ttu-id="2c3c9-139">O que o Unreal oferece?</span><span class="sxs-lookup"><span data-stu-id="2c3c9-139">What does Unreal offer?</span></span>
+
+<span data-ttu-id="2c3c9-140">O Unreal Engine 4 é um mecanismo de criação avançado e de software livre com suporte completo para realidade misturada em C++ e Blueprints.</span><span class="sxs-lookup"><span data-stu-id="2c3c9-140">Unreal Engine 4 is a powerful, open source creation engine with full support for mixed reality in both C++ and Blueprints.</span></span> <span data-ttu-id="2c3c9-141">Desde o Unreal Engine 4.25, o suporte ao HoloLens é completo e pronto para produção.</span><span class="sxs-lookup"><span data-stu-id="2c3c9-141">As of Unreal Engine 4.25, HoloLens support is full-featured and production-ready.</span></span>
+
+## <a name="available-hardware-platforms"></a><span data-ttu-id="2c3c9-142">Plataformas de hardware disponíveis</span><span class="sxs-lookup"><span data-stu-id="2c3c9-142">Available hardware platforms</span></span>
+
+<span data-ttu-id="2c3c9-143">Há várias opções de hardware, emulador e streaming disponíveis para a criação de aplicativos de Realidade Misturada com o Unreal Engine.</span><span class="sxs-lookup"><span data-stu-id="2c3c9-143">You have several hardware, emulator, and streaming options when building Mixed Reality apps with Unreal Engine.</span></span> <span data-ttu-id="2c3c9-144">Embora o foco da nossa documentação para desenvolvedores esteja nos dispositivos HoloLens, você poderá empacotar nossos projetos do Unreal como aplicativos da área de trabalho x64 e executá-los perfeitamente em headsets imersivos.</span><span class="sxs-lookup"><span data-stu-id="2c3c9-144">While our developer documentation focuses on HoloLens devices, you can package your Unreal projects as x64 desktop apps and run them on immersive headsets just fine.</span></span>
+
+<span data-ttu-id="2c3c9-145">**Dispositivos de realidade aumentada**</span><span class="sxs-lookup"><span data-stu-id="2c3c9-145">**Augmented reality devices**</span></span>
+* [<span data-ttu-id="2c3c9-146">HoloLens (1ª geração)</span><span class="sxs-lookup"><span data-stu-id="2c3c9-146">HoloLens (1st Gen)</span></span>](https://docs.microsoft.com/hololens/hololens1-hardware)
+* [<span data-ttu-id="2c3c9-147">HoloLens 2</span><span class="sxs-lookup"><span data-stu-id="2c3c9-147">HoloLens 2</span></span>](https://docs.microsoft.com/hololens/hololens2-hardware)
+
+<span data-ttu-id="2c3c9-148">**Headsets imersivos de VR**</span><span class="sxs-lookup"><span data-stu-id="2c3c9-148">**Immersive VR headsets**</span></span>
+* <span data-ttu-id="2c3c9-149">HP Reverb e Reverb G2</span><span class="sxs-lookup"><span data-stu-id="2c3c9-149">HP Reverb and Reverb G2</span></span>
+* <span data-ttu-id="2c3c9-150">Samsung Odyssey e Odyssey+</span><span class="sxs-lookup"><span data-stu-id="2c3c9-150">Samsung Odyssey and Odyssey+</span></span>
+* <span data-ttu-id="2c3c9-151">Headset do HP Windows Mixed Reality</span><span class="sxs-lookup"><span data-stu-id="2c3c9-151">HP Windows Mixed Reality headset</span></span>
+* <span data-ttu-id="2c3c9-152">Lenovo Explorer</span><span class="sxs-lookup"><span data-stu-id="2c3c9-152">Lenovo Explorer</span></span>
+* <span data-ttu-id="2c3c9-153">Acer AH101</span><span class="sxs-lookup"><span data-stu-id="2c3c9-153">Acer AH101</span></span>
+* <span data-ttu-id="2c3c9-154">Dell Visor</span><span class="sxs-lookup"><span data-stu-id="2c3c9-154">Dell Visor</span></span>
+* <span data-ttu-id="2c3c9-155">Asus HC102</span><span class="sxs-lookup"><span data-stu-id="2c3c9-155">Asus HC102</span></span>
+* <span data-ttu-id="2c3c9-156">Acer OJO 500</span><span class="sxs-lookup"><span data-stu-id="2c3c9-156">Acer OJO 500</span></span>
+
+## <a name="available-tools-and-sdks"></a><span data-ttu-id="2c3c9-157">Ferramentas e SDKs disponíveis</span><span class="sxs-lookup"><span data-stu-id="2c3c9-157">Available tools and SDKs</span></span>
+
+|  <span data-ttu-id="2c3c9-158">Ferramenta/SDK</span><span class="sxs-lookup"><span data-stu-id="2c3c9-158">Tool/SDK</span></span>  |  <span data-ttu-id="2c3c9-159">Descrição</span><span class="sxs-lookup"><span data-stu-id="2c3c9-159">Description</span></span>  |
+| --- | --- |
+| [<span data-ttu-id="2c3c9-160">Kit de Ferramentas de Realidade Misturada para Unreal</span><span class="sxs-lookup"><span data-stu-id="2c3c9-160">Mixed Reality Toolkit for Unreal</span></span>](https://github.com/microsoft/MixedRealityToolkit-Unreal) | <span data-ttu-id="2c3c9-161">O MRTK-Unreal (Kit de Ferramentas de Realidade Misturada para Unreal) é um conjunto de componentes, na forma de plug-ins, exemplos e documentação, projetados para acelerar o desenvolvimento de aplicativos de realidade misturada usando o Unreal Engine.</span><span class="sxs-lookup"><span data-stu-id="2c3c9-161">The Mixed Reality Toolkit for Unreal (MRTK-Unreal) is a set of components, in the form of plugins, samples and documentation, designed to accelerate development of mixed reality applications using the Unreal Engine.</span></span> |
+
+
+# <a name="web"></a>[<span data-ttu-id="2c3c9-162">Web</span><span class="sxs-lookup"><span data-stu-id="2c3c9-162">Web</span></span>](#tab/web)
+
+![Web](../images/javascript_logo_banner.png)
+
+<span data-ttu-id="2c3c9-164">A API de Dispositivo WebXR é uma especificação aberta que permite que você experimente aplicativos de Realidade Misturada no navegador em qualquer plataforma.</span><span class="sxs-lookup"><span data-stu-id="2c3c9-164">The WebXR Device API is an open specification that allows you to experience Mixed Reality apps in your browser on any platform.</span></span> <span data-ttu-id="2c3c9-165">Confira a [visão geral de desenvolvimento no JavaScript](../javascript-development-overview.md) para começar a criar aplicativos de Realidade Misturada para qualquer plataforma.</span><span class="sxs-lookup"><span data-stu-id="2c3c9-165">See the [Javascript development overview](../javascript-development-overview.md) to get started building Mixed Reality apps for any platform.</span></span>
+
+
+# <a name="native-openxr"></a>[<span data-ttu-id="2c3c9-166">Nativo (OpenXR)</span><span class="sxs-lookup"><span data-stu-id="2c3c9-166">Native (OpenXR)</span></span>](#tab/native)
+
+ ![Nativo](../images/native_logo_banner.png)
+
+<span data-ttu-id="2c3c9-168">Crie aplicativos de realidade misturada com uma Direct Line nas APIs do Windows Mixed Reality.</span><span class="sxs-lookup"><span data-stu-id="2c3c9-168">Create mixed reality apps with a direct line to the Windows Mixed Reality APIs.</span></span> <span data-ttu-id="2c3c9-169">Confira a [visão geral do desenvolvimento nativo](../directx-development-overview.md) para começar a usar o desenvolvimento nativo de aplicativos usando o OpenXR, o WinRT herdado para HoloLens 2 ou os headsets imersivos do Windows Mixed Reality.</span><span class="sxs-lookup"><span data-stu-id="2c3c9-169">See the [Native development overview](../directx-development-overview.md) to get started with native app development using OpenXR or legacy WinRT for HoloLens 2 or Windows Mixed Reality immersive headsets.</span></span> <span data-ttu-id="2c3c9-170">A API do Windows Mixed Reality dá suporte a aplicativos escritos em C++ e C#, permitindo que você crie um estrutura ou um middleware próprio em qualquer linguagem.</span><span class="sxs-lookup"><span data-stu-id="2c3c9-170">The Windows Mixed Reality API supports applications written in C++ and C#, allowing you to build your own framework or middleware in either language.</span></span>
+
+## <a name="what-does-openxr-offer"></a><span data-ttu-id="2c3c9-171">O que o OpenXR oferece?</span><span class="sxs-lookup"><span data-stu-id="2c3c9-171">What does OpenXR offer?</span></span>
+
+<span data-ttu-id="2c3c9-172">O OpenXR é um padrão aberto de API isento de royalties da Khronos, que fornece aos mecanismos o acesso nativo a uma ampla variedade de dispositivos de fornecedores em toda a gama de realidade misturada.</span><span class="sxs-lookup"><span data-stu-id="2c3c9-172">OpenXR is an open royalty-free API standard from Khronos that provides engines native access to a wide range of devices from vendors across the mixed reality spectrum.</span></span> <span data-ttu-id="2c3c9-173">Faça o desenvolvimento com o OpenXR em um headset imersivo do HoloLens 2 ou do Windows Mixed Reality na área de trabalho.</span><span class="sxs-lookup"><span data-stu-id="2c3c9-173">You can develop using OpenXR on a HoloLens 2 or Windows Mixed Reality immersive headset on the desktop.</span></span> <span data-ttu-id="2c3c9-174">Se você não tem acesso a um headset, os emuladores para o HoloLens 2 e os headsets do Windows Mixed Reality estão disponíveis.</span><span class="sxs-lookup"><span data-stu-id="2c3c9-174">If you don't have access to a headset, emulators for HoloLens 2 and Windows Mixed Reality headsets are available.</span></span>
+
+## <a name="available-hardware-platforms"></a><span data-ttu-id="2c3c9-175">Plataformas de hardware disponíveis</span><span class="sxs-lookup"><span data-stu-id="2c3c9-175">Available hardware platforms</span></span>
+
+<span data-ttu-id="2c3c9-176">Há várias opções de hardware, emulador e streaming disponíveis para a criação de aplicativos de Realidade Misturada com o desenvolvimento no OpenXR.</span><span class="sxs-lookup"><span data-stu-id="2c3c9-176">You have several hardware, emulator, and streaming options when building Mixed Reality apps with OpenXR development.</span></span> 
+
+<span data-ttu-id="2c3c9-177">**Dispositivos de realidade aumentada**</span><span class="sxs-lookup"><span data-stu-id="2c3c9-177">**Augmented reality devices**</span></span>
+* [<span data-ttu-id="2c3c9-178">HoloLens 2</span><span class="sxs-lookup"><span data-stu-id="2c3c9-178">HoloLens 2</span></span>](https://docs.microsoft.com/hololens/hololens2-hardware)
+
+<span data-ttu-id="2c3c9-179">**Headsets imersivos de VR**</span><span class="sxs-lookup"><span data-stu-id="2c3c9-179">**Immersive VR headsets**</span></span>
+* <span data-ttu-id="2c3c9-180">HP Reverb e Reverb G2</span><span class="sxs-lookup"><span data-stu-id="2c3c9-180">HP Reverb and Reverb G2</span></span>
+* <span data-ttu-id="2c3c9-181">Samsung Odyssey e Odyssey+</span><span class="sxs-lookup"><span data-stu-id="2c3c9-181">Samsung Odyssey and Odyssey+</span></span>
+* <span data-ttu-id="2c3c9-182">Headset do HP Windows Mixed Reality</span><span class="sxs-lookup"><span data-stu-id="2c3c9-182">HP Windows Mixed Reality headset</span></span>
+* <span data-ttu-id="2c3c9-183">Lenovo Explorer</span><span class="sxs-lookup"><span data-stu-id="2c3c9-183">Lenovo Explorer</span></span>
+* <span data-ttu-id="2c3c9-184">Acer AH101</span><span class="sxs-lookup"><span data-stu-id="2c3c9-184">Acer AH101</span></span>
+* <span data-ttu-id="2c3c9-185">Dell Visor</span><span class="sxs-lookup"><span data-stu-id="2c3c9-185">Dell Visor</span></span>
+* <span data-ttu-id="2c3c9-186">Asus HC102</span><span class="sxs-lookup"><span data-stu-id="2c3c9-186">Asus HC102</span></span>
+* <span data-ttu-id="2c3c9-187">Acer OJO 500</span><span class="sxs-lookup"><span data-stu-id="2c3c9-187">Acer OJO 500</span></span>
+
+## <a name="available-tools-and-sdks"></a><span data-ttu-id="2c3c9-188">Ferramentas e SDKs disponíveis</span><span class="sxs-lookup"><span data-stu-id="2c3c9-188">Available tools and SDKs</span></span>
+
+|  <span data-ttu-id="2c3c9-189">Ferramenta/SDK</span><span class="sxs-lookup"><span data-stu-id="2c3c9-189">Tool/SDK</span></span>  |  <span data-ttu-id="2c3c9-190">Descrição</span><span class="sxs-lookup"><span data-stu-id="2c3c9-190">Description</span></span>  |
+| --- | --- |
+| [<span data-ttu-id="2c3c9-191">Ferramentas para Desenvolvedores do OpenXR</span><span class="sxs-lookup"><span data-stu-id="2c3c9-191">OpenXR Developer Tools</span></span>](../openxr-getting-started.md#getting-the-windows-mixed-reality-openxr-developer-tools) | <span data-ttu-id="2c3c9-192">Fornece uma cena de demonstração que aplica vários recursos do OpenXR, juntamente com uma página Status do Sistema que fornece informações básicas sobre o runtime ativo e o headset atual.</span><span class="sxs-lookup"><span data-stu-id="2c3c9-192">Provides a demo scene that exercises various features of OpenXR, along with a System Status page that provides key information about the active runtime and the current headset.</span></span> |
+| [<span data-ttu-id="2c3c9-193">Especificação do OpenXR</span><span class="sxs-lookup"><span data-stu-id="2c3c9-193">OpenXR Spec</span></span>](https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html) |  <span data-ttu-id="2c3c9-194">Descreve o que é o OpenXR, quais funcionalidades e recursos ele oferece e como implementá-los nos próprios projetos.</span><span class="sxs-lookup"><span data-stu-id="2c3c9-194">Describes what OpenXR is, what capabilities and features it offers, and how to implement it into your own projects.</span></span> |
+| [<span data-ttu-id="2c3c9-195">Carregador do OpenXR</span><span class="sxs-lookup"><span data-stu-id="2c3c9-195">OpenXR Loader</span></span>](../openxr-getting-started.md#integrate-the-openxr-loader-into-a-project) | <span data-ttu-id="2c3c9-196">Descobre o runtime ativo do OpenXR no dispositivo e fornece acesso às principais funções e às funções de extensão implementadas por ele.</span><span class="sxs-lookup"><span data-stu-id="2c3c9-196">Discovers the active OpenXR runtime on the device and provides access to the core functions and extension functions that it implements.</span></span> |
+
+## <a name="examples"></a><span data-ttu-id="2c3c9-197">Exemplos</span><span class="sxs-lookup"><span data-stu-id="2c3c9-197">Examples</span></span>
+
+<span data-ttu-id="2c3c9-198">Fique à vontade para fazer experimentos com o aplicativo de exemplo para ter uma ideia do que é possível fazer com o desenvolvimento nativo e a Realidade Misturada.</span><span class="sxs-lookup"><span data-stu-id="2c3c9-198">Feel free to play around with the sample app to get a feel for what's possible with Native development and Mixed Reality.</span></span>
+
+<!-- Go to actual GH link for more samples -->
+* <span data-ttu-id="2c3c9-199">[BasicXrApp](https://github.com/microsoft/OpenXR-MixedReality/tree/master/samples/BasicXrApp): apresenta uma amostra simples do OpenXR com dois arquivos de projeto do Visual Studio: um para um aplicativo da área de trabalho Win32 e outro para um aplicativo HoloLens 2 da UWP.</span><span class="sxs-lookup"><span data-stu-id="2c3c9-199">[BasicXrApp](https://github.com/microsoft/OpenXR-MixedReality/tree/master/samples/BasicXrApp) - Demonstrates a simple OpenXR sample with two Visual Studio project files, one for both a Win32 desktop app and one for a UWP HoloLens 2 app.</span></span>

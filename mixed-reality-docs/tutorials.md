@@ -1,27 +1,27 @@
 ---
 layout: LandingPage
-title: Tutoriais e aplicativos de exemplo
-description: Fornece exemplos de código e tutoriais sobre o desenvolvimento de realidade misturada.
+title: Tutoriais
+description: Fornece tutoriais sobre o desenvolvimento de realidade misturada.
 author: keveleigh
 ms.author: kurtie
-ms.date: 10/22/2019
+ms.date: 07/30/2020
 ms.topic: article
 ms.localizationpriority: high
-keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit-unity, academy, tutorial
-ms.openlocfilehash: b1c448e7a5289c6d099d73c3bcf18d0f552dbc51
-ms.sourcegitcommit: 96ae8258539b2f3edc104dd0dce8bc66f3647cdd
+keywords: mixedrealitytoolkit, mixedrealitytoolkit-unity, academy, tutorial
+ms.openlocfilehash: dc446be531e2a2fa1b27cdaefbf3adfeb7814740
+ms.sourcegitcommit: ef0bf03833eda826ed0b884859b4573775112aba
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86303647"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87476998"
 ---
-# <a name="tutorials-and-sample-apps"></a>Tutoriais e aplicativos de exemplo
+# <a name="tutorials"></a>Tutoriais 
 
 ![Usuário do HoloLens 2](images/08_Tutorials.png)
 
 Atualmente, todos os tutoriais e aplicativos de exemplo são baseados no Unity ou no Unreal. À medida que desenvolvermos conteúdo para outros mecanismos e outras plataformas, você os encontrará sob o título relevante no sumário.
 
-## <a name="hololens-2-tutorials"></a>Tutoriais do HoloLens 2
+## <a name="hololens-2"></a>HoloLens 2 
 
 Os tutoriais do HoloLens 2 foram projetados para ajudar os desenvolvedores a aprender técnicas e melhores práticas para o desenvolvimento de aplicativos de realidade misturada. Os tutoriais do Unity se baseiam no [MRTK 2.0 (Kit de Ferramentas de Realidade Misturada 2.0)](https://github.com/microsoft/MixedRealityToolkit-Unity) e o tutorial Unreal é baseado nas [Ferramentas de UX para Unreal Engine 0.8](https://github.com/microsoft/MixedReality-UXTools-Unreal).
 
@@ -32,21 +32,7 @@ Os tutoriais do HoloLens 2 foram projetados para ajudar os desenvolvedores a apr
 * Tutoriais de recursos multiusuário – [1 de 5 Introdução](mr-learning-sharing-01.md)
 * Tutoriais sobre os Serviços de Fala do Azure – [1 de 4 Como integrar e usar a transcrição e o reconhecimento de fala](mrlearning-speechSDK-ch1.md)
 
-## <a name="open-source-sample-apps"></a>Exemplos de aplicativos de software livre
-
-Os aplicativos de exemplo de software livre são aplicativos que foram criados por nossas equipes e dos quais fornecemos o código-fonte, de modo que os desenvolvedores possam examiná-lo e aprender com nossos projetos.
-
-### <a name="hololens-2-open-source-sample-apps"></a>Aplicativos de exemplo de software livre do HoloLens 2
-* [Surfaces](sampleapp-surfaces.md)
-* [Tabela periódica dos elementos 2.0](https://medium.com/@dongyoonpark/bringing-the-periodic-table-of-the-elements-app-to-hololens-2-with-mrtk-v2-a6e3d8362158)
-* [Galaxy Explorer 2.0](galaxy-explorer-update.md)
-
-### <a name="hololens-1st-gen-open-source-sample-apps"></a>HoloLens (1º gen) aplicativos de exemplo de software livre
-* [Tabela periódica dos elementos 1.0](periodic-table-of-the-elements.md)
-* [Galaxy Explorer 1.0](galaxy-explorer.md)
-* [Módulo lunar](lunar-module.md)
-
-## <a name="mixed-reality-academy-tutorials"></a>Tutoriais do Mixed Reality Academy
+## <a name="mixed-reality-academy"></a>Mixed Reality Academy 
 
 O Mixed Reality Academy é um conjunto de tutoriais passo a passo online com arquivos de projeto correspondentes:
 
