@@ -7,12 +7,12 @@ ms.date: 06/10/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, mixed reality, development, features, documentation, guides, holograms, qr codes
-ms.openlocfilehash: cf6c113f6bf4a13a96f46d6420a3093966455c3b
-ms.sourcegitcommit: 45da0a056fa42088ff81ccdd11232830fbe8430f
+ms.openlocfilehash: a53fad14ab76136f1da419379dd39eca3a29701a
+ms.sourcegitcommit: 2f5f95a9ca1b02d94eb9163f0f4ff6b1e4126de2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84720382"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87376098"
 ---
 # <a name="qr-codes-in-unreal"></a>Códigos QR no Unreal
 
@@ -32,6 +32,8 @@ Como o HoloLens 2 precisa usar a webcam para ver os códigos QR, você precisar�
     + Expanda a seção **Funcionalidades** e marque **Webcam**.  
 
 Você também precisará aceitar o controle de código QR [adicionando um ativo ARSessionConfig](https://docs.microsoft.com/windows/mixed-reality/unreal-uxt-ch3#adding-the-session-asset).
+
+Logo antes do uso, habilite manualmente o rastreamento chamando `UHoloLensARFunctionLibrary::StartQRCodeCapture()`. Depois de encerrar o rastreamento do código QR, desabilite-o com `UHoloLensARFunctionLibrary::StopCameraCapture()` para salvar os recursos do dispositivo. 
 
 ## <a name="setting-up-a-tracked-image"></a>Configurar uma imagem rastreada
 

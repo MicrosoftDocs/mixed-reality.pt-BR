@@ -7,12 +7,12 @@ ms.date: 06/10/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, mixed reality, tutorial, getting started, mrtk, uxt, UX Tools, documentation
-ms.openlocfilehash: f79985b2ce9e26971c23acf36a3538bf7f3c166e
-ms.sourcegitcommit: ff0e89b07d0b4a945967d64c5b8845a21dc5f476
+ms.openlocfilehash: 105e817e54f7de12afdcab9fde1dfce0c38ff4a7
+ms.sourcegitcommit: 2f5f95a9ca1b02d94eb9163f0f4ff6b1e4126de2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84879552"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87376378"
 ---
 # <a name="3-setting-up-your-project-for-mixed-reality"></a>3. Como configurar seu projeto para a realidade misturada
 
@@ -57,7 +57,7 @@ Com isso feito, a próxima etapa será verificar se a sessão de RA começa quan
 Neste ponto, o projeto ainda precisa de um objeto de jogador. No Unreal, um **Peão** representa o usuário no jogo, mas neste caso, será a experiência do HoloLens 2.
 
 1. Clique em **Adicionar Novo > Classe de Blueprint** na pasta **Conteúdo** e expanda a seção **Todas as Classes** na parte inferior. 
-    * Pesquise por **DefaultPawn**, clique em **Selecionar** e clique duas vezes no ativo para abrir. 
+    * Pesquise **DefaultPawn**, clique em **Selecionar**, nomeie-o **MRPawn** e clique duas vezes no ativo para abri-lo. 
 
 ![Criar um Peão herdando de DefaultPawn](images/unreal-uxt/3-defaultpawn.PNG)
 
@@ -66,9 +66,13 @@ Neste ponto, o projeto ainda precisa de um objeto de jogador. No Unreal, um **Pe
 
 2. Selecione **CollisionComponent** no painel **Componentes** e role para baixo até a seção **Colisão** do painel **Detalhes**. 
     * Clique na lista suspensa de **Predefinições de Colisão** e altere o valor para **NoCollision**. 
-    * Faça o mesmo para o **MeshComponent** e, em seguida, escolha **Compilar** e **Salvar** o Blueprint. 
+    * Faça o mesmo para o **MeshComponent**
 
 ![Ajustar as Predefinições de Colisão do Peão](images/unreal-uxt/3-nocollision.PNG)
+
+3. Clique em **Adicionar Componente > Câmera** no painel **Componentes** e nomeie-o como **Câmera**. Isso permite que a câmera do player se mova com o dispositivo HoloLens 2.
+
+4. **Compile** e **salve** o blueprint.
 
 Com seu trabalho aqui terminado, retorne para a Janela principal.
 

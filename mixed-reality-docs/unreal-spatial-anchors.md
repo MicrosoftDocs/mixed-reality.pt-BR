@@ -1,5 +1,5 @@
 ---
-title: Âncoras espaciais no Unreal
+title: Âncoras Espaciais locais no Unreal
 description: Guia para uso de âncoras espaciais em Unreal
 author: hferrone
 ms.author: v-haferr
@@ -7,18 +7,21 @@ ms.date: 06/10/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, mixed reality, development, features, documentation, guides, holograms, spatial anchors
-ms.openlocfilehash: 58394f4e27aff5070d55ed5f0d62cd81ff579d1f
-ms.sourcegitcommit: 45da0a056fa42088ff81ccdd11232830fbe8430f
+ms.openlocfilehash: b102d506b1d670291c3b97ca34d277e2597af043
+ms.sourcegitcommit: 2f5f95a9ca1b02d94eb9163f0f4ff6b1e4126de2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84720312"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87376039"
 ---
-# <a name="spatial-anchors-in-unreal"></a>Âncoras espaciais no Unreal
+# <a name="local-spatial-anchors-in-unreal"></a>Âncoras Espaciais locais no Unreal
 
 ## <a name="overview"></a>Visão geral
 
-As âncoras espaciais são usadas para salvar os hologramas no espaço do mundo real entre as sessões do aplicativo.  Elas são exibidas por meio do Unreal como **ARPin**s e são salvas no repositório de âncoras do HoloLens, que é carregado em sessões futuras. 
+As âncoras espaciais são usadas para salvar os hologramas no espaço do mundo real entre as sessões do aplicativo. Elas são exibidas por meio do Unreal como **ARPin**s e são salvas no repositório de âncoras do HoloLens, que é carregado em sessões futuras. As âncoras locais são ideais como fallback quando não há nenhuma conectividade com a Internet.
+
+> [!IMPORTANT]
+> Elas são armazenadas no dispositivo, enquanto as Âncoras Espaciais do Azure são armazenadas na nuvem. Se você pretende usar os serviços de nuvem do Azure para armazenar suas âncoras, temos um documento que pode orientar você na integração das [Âncoras Espaciais do Azure](unreal-azure-spatial-anchors.md). Você pode ter âncoras locais e do Azure no mesmo projeto sem conflitos.
 
 ## <a name="checking-the-anchor-store"></a>Como verificar o repositório de âncoras
 
@@ -65,5 +68,6 @@ Quando você terminar de usar uma âncora, poderá limpar âncoras individuais o
 > Tenha em mente que as Âncoras Espaciais ainda estão na versão beta, portanto, lembre-se de conferir este material novamente para obter informações e recursos atualizados.
 
 ## <a name="see-also"></a>Veja também
+* [Âncoras Espaciais do Azure](unreal-azure-spatial-anchors.md)
 * [Âncoras espaciais](spatial-anchors.md)
 * [Sistemas de coordenadas](coordinate-systems.md)

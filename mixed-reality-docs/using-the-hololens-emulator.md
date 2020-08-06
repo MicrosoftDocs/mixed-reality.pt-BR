@@ -7,12 +7,12 @@ ms.date: 7/13/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: HoloLens, emulador
-ms.openlocfilehash: e7c89cc2d839edc46a73a765acad603341b52716
-ms.sourcegitcommit: 3c867622e99c07f95db92e88551d2b904ceb8def
+ms.openlocfilehash: 597a0a9103f8313d26449b996c1e7af6f5619b2c
+ms.sourcegitcommit: 2f5f95a9ca1b02d94eb9163f0f4ff6b1e4126de2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86383068"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87376658"
 ---
 # <a name="using-the-hololens-emulator"></a>Usando o Emulador do HoloLens
 
@@ -253,6 +253,8 @@ No emulador, você verá apenas os hologramas que renderizar. Mas você não ver
 
 * Ao desinstalar o Emulador do HoloLens 2, é possível que a imagem do disco rígido (Flash.vhdx) seja deixada no disco rígido na pasta Windows Kits\10\Emulation\HoloLens\<build number>.  É seguro excluir esse arquivo.
 * A aceleração de gráficos de hardware pode fazer com que os aplicativos do Holographic falhem em alguns sistemas com gráficos AMD ou Intel.  Desabilitar a aceleração de gráficos de hardware na janela Ferramentas do emulador é uma solução alternativa para esse problema.
+* Após a instalação as últimas atualizações do Windows de julho de 2020, é possível que a aceleração de elementos gráficos de hardware no Emulador HoloLens (1ª geração) não esteja mais disponível.
+O componente do RemoteFX necessário para a aceleração de elementos gráficos de hardware foi preterido e será removido em uma versão futura do Windows.  Para habilitar novamente a aceleração de elementos gráficos de hardware, use o cmdlet [Enable-VMRemoteFXPhysicalVideoAdapter PowerShell cmdlet](https://docs.microsoft.com/powershell/module/hyper-v/enable-vmremotefxphysicalvideoadapter?view=win10-ps).  Veja a [documentação sobre a reprovação e a remoção do suporte do RemoteFX no Windows](https://support.microsoft.com/help/4570006/update-to-disable-and-remove-the-remotefx-vgpu-component) para obter mais informações. 
 
 ## <a name="troubleshooting"></a>Solução de problemas
 
